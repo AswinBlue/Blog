@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dev on AsWindBlew</title>
+    <link>/categories/dev/</link>
+    <description>Recent content in dev on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Sun, 10 May 2020 12:23:13 +0900</lastBuildDate>
+    
+        <atom:link href="/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo 환경세팅</title>
+      <link>/post/hugo_dev/</link>
+      <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
+      
+      <guid>/post/hugo_dev/</guid>
+      <description>Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다. 게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 H</description>
+      
+    </item>
+    
+  </channel>
+</rss>
