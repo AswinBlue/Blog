@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Linux_apt&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Linux_apt" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Linux_apt</h1><p class="article date">May 25, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.</p>
+<p>하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.</p>
+<p>본 해프닝에 대해 서술하자면 아래와 같다.</p>
+<h2 id="원인">원인</h2>
+<p>/bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.</p>
+<p>환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.</p>
+<h2 id="현상">현상</h2>
+<p>apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.</p>
+<p>apt 명령을 수행하면</p>
+<pre><code>/usr/bin/dpkg return an errorcode(1) 
+</code></pre><p>오류가 발생하며 정상 동작하지 않는다.</p>
+<p>install -f 명령도 먹히지 않았다.</p>
+<h2 id="해결">해결</h2>
+<p>python bin파일이 없어졌고, python이 없다는 내용이 떴으므로 python을 다시 설치해 봤다.</p>
+<p>apt가 제대로 동작하지 않았으므로 git에서 python을 받아 빌드하여 설치했다.</p>
+<p>dpkg return an errorcode(1) 을 검색해보니 dpkg에 문제가 있을 수 있다는 내용이 많았다.</p>
+<p>dpkg를 재설정 해보라는 글들이 많아 내용대로 따라가 보았다.</p>
+<p><code>/var/lib/dpkg/info</code> 에는 설치된 프로그램의 목록들이 저장되어 있는듯 하다.</p>
+<p>apt 명령을 수행할 때 오류가 발생하는 프로그램들을 찾아 rm 명령으로 해당 프로그램의 내용을 삭제한다.</p>
+<p>삭제 후 <code>dpkg --config -a</code> 명령을 사용하여 dpkg를 재설정 해준다.</p>
+<p>그 후 apt 명령을 사용하여 설치, 삭제를 해 보니 dpkg를 리셋한 내용들은 오류에 뜨지 않았다.</p>
+<p>오류가 나지 않을 때 까지 dpkg를 계속 재설정 해주니 정상 동작하게 되었다.</p>
+<h2 id="결론">결론</h2>
+<p><code>/bin</code> 안의 파일들을 강제로 삭제하면 apt가 충돌이 일어나 동작하지 않을 수 있으므로 주의한다.</p>
+<p><code>/var/lib/dpkg/info</code> 에서 설치된 패키지의 내용들을 확인 가능하다.</p>
+<p><code>dpkg --config -a</code> 명령으로 dpkg를 리셋할 수 있다.</p>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/linux/>linux</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/hugo_dev/"><span class="li iconfont icon-article"></span>Hugo 환경세팅</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

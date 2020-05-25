@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on AsWindBlew</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on AsWindBlew</description>
+    <title>linux on AsWindBlew</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on AsWindBlew</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
     <lastBuildDate>Mon, 25 May 2020 18:30:15 +0900</lastBuildDate>
     
-        <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>/post/linux_apt/</guid>
       <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다. 하지만 그 사람이 리눅스에 익숙하지 않았는지,</description>
-      
-    </item>
-    
-    <item>
-      <title>Hugo 환경세팅</title>
-      <link>/post/hugo_dev/</link>
-      <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
-      
-      <guid>/post/hugo_dev/</guid>
-      <description>Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다. 게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 H</description>
       
     </item>
     
