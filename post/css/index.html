@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Css&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Css" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Css</h1><p class="article date">Jun 23, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="css">CSS</h1>
+<ul>
+<li>특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다.</li>
+<li>중복의 제거 가능, 유지보수 수월, 가독성 증가</li>
+<li>위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐</li>
+<li>tag 선택자 &lt; calss 선택자 &lt; id 선택자 로 우선 순위가 높다.</li>
+</ul>
+<ol>
+<li>
+<p>html 문서 안에 <code>&lt;style&gt;</code> 태그 안에 작성 가능</p>
+<p>ex ) <code>&lt;style&gt; a { color:black; } &lt;/style&gt;</code></p>
+</li>
+</ol>
+<ul>
+<li>
+<p>태그의 종류별로 속성 설정 가능</p>
+</li>
+<li>
+<p>여기서 태그 a 는 선택자(selector)라고 한다.</p>
+</li>
+<li>
+<p>선택자는 ,로 구별하여 함께 사용 가능</p>
+<p>ex ) <code>&lt;style&gt; a, h1 { color:black; } &lt;/style&gt;</code></p>
+</li>
+<li>
+<p>특정 태그의 자식태그 중 하나의 속성을 지정하고 싶다면 띄워쓰기로 구분한다.
+ex ) <style> #grid ol { padding-left:3px; } </style></p>
+</li>
+<li>
+<p>중괄호{} 안에 declaration을 작성한다.</p>
+</li>
+<li>
+<p>하나의 declaration은 ;로 끝나서 다음 declaration과 구분된다.</p>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>특정 태그 안에 style 속성을 넣어 작성 가능</p>
+<p>ex ) <code>&lt;a style=&quot;color:black&quot;&gt; &lt;/a&gt;</code></p>
+</li>
+<li>
+<p>다른 파일로 만들어 사용 가능</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>재사용이 가능해 가장 효율적인 방법</p>
+</li>
+<li>
+<p>웹페이지 안에 직접 css를 넣는 것이 트래픽적 관점에서는 더 효율적이지만, 재사용성과 캐싱 기법에 의해 본 기법이 더 효율적이다.</p>
+<p>ex ) <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; </code></p>
+</li>
+<li>
+<p>특정 태그(element)를 지정해 효과 설정이 가능하다.</p>
+<p>ex ) <code>&lt;style&gt; a { color:black; } &lt;/style&gt;</code></p>
+</li>
+<li>
+<p>특정 class를 지정해 효과 설정이 가능하다. class를 지칭할 때에는 이름 앞에 . 을 찍는다. 태그 선택자 보다 우선 순위가 높다.</p>
+<p>ex ) <code>&lt;style&gt; .saw{color:gray;} &lt;/style&gt;</code></p>
+</li>
+<li>
+<p>특정 id를 지정해 효과 설정이 가능하다. id를 지정할 때에는 이름 앞에 # 을 찍는다. class보다 우선 순위가 높다.</p>
+<p>ex ) <code>&lt;style&gt; #active{color:red;} &lt;/style&gt;</code></p>
+</li>
+</ul>
+<h2 id="스타일">스타일</h2>
+<ul>
+<li>PROPERTY:PROPERTY_VALUE; 형태로 존재한다.</li>
+<li>color:red : 색깔 변경(빨강)</li>
+<li>text-decoration:none : 꾸미기 없음</li>
+<li>text-decoration:underline : 밑줄</li>
+<li>font-size:45px : 글자 크기 설정</li>
+<li>text-align:center : 글자 정렬 설정(가운데 정렬)</li>
+<li>border-width:5px : 테두리 굵기 설정</li>
+<li>border-color:red : 테두리 색상 설정</li>
+<li>border-style:solid : 테두리 모양 설정(직선)
+<ul>
+<li>
+<p>border 스타일 및 일부 스타일은 축약해서 사용 가능하다.</p>
+<p>ex) <code>&lt;style&gt; a{ border: 5px red solid;} &lt;/style&gt;</code></p>
+</li>
+</ul>
+</li>
+<li>border-bottom: 1px solid gray : 아래쪽 테두리에만 설정 적용</li>
+<li>display:inline : 태그의 레벨 속성(inline element - block element)을 변경</li>
+<li>display:none : 화면에 표시 안함</li>
+<li>display:grid : grid 형태로 표시</li>
+<li>grid-template-colums: 150px 1fr : 그리드 형태를 열로 하고, 첫 열은 150, 둘째 열은 남은 공간을 사용하도록 설정</li>
+<li>padding:20px : 테두리와 내용 사이의 버퍼 설정</li>
+<li>margin:10px : 테두리 바깥과 다른 element 사이의 버퍼 설정</li>
+<li>width:100px : element 폭 설정</li>
+</ul>
+<h2 id="단위">단위</h2>
+<ul>
+<li>px : 픽셀</li>
+<li>fr : 남은 자유공간으로 그 크기는 ((현재 fr 수치 / &lt;총 사용된 fr&gt;) * 남은 공간) 으로 계산된다.</li>
+</ul>
+<h2 id="미디어-쿼리">미디어 쿼리</h2>
+<ul>
+<li>
+<p>반응형 웹(responsive web) 을 위한 내용</p>
+</li>
+<li>
+<p>@media() {} 와 같이 표현되며, () 안에는 조건문이 들어가고, {} 안에는 적용 할 내용이 들어간다.</p>
+<p>ex ) <code>&lt;style&gt; @media(min-width:800px) {div {display:none;}} &lt;/style&gt;</code></p>
+</li>
+<li>
+<p><a href="http://caniuse.com">http://caniuse.com</a> : 특정 스타일을 사용했을 때 몇 %의 브라우저가 해당 스타일을 지원하는지 확인 가능한 사이트</p>
+</li>
+</ul>
+</article><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/javascript/"><span class="li iconfont icon-article"></span>JavaScript</a></p><p><a class="link" href="/post/html/"><span class="li iconfont icon-article"></span>Html</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

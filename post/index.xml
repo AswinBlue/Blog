@@ -7,10 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 25 May 2020 18:30:15 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 20:38:45 +0900</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript</title>
+      <link>/post/javascript/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
+      
+      <guid>/post/javascript/</guid>
+      <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성 document를 호출하고, .으로 함수를 호출한다. querySelector(&#39;</description>
+      
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>/post/css/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
+      
+      <guid>/post/css/</guid>
+      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대</description>
+      
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>/post/html/</link>
+      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      
+      <guid>/post/html/</guid>
+      <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하</description>
+      
+    </item>
     
     <item>
       <title>Linux_apt</title>
@@ -29,6 +59,16 @@
       
       <guid>/post/hugo_dev/</guid>
       <description>Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다. 게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 H</description>
+      
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>/post/sample/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/sample/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
       
     </item>
     
