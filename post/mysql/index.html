@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Mysql&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Mysql" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Mysql</h1><p class="article date">Jul 02, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><h1 id="mysql">mysql</h1>
+<h2 id="명령어">명령어</h2>
+<ul>
+<li>
+<p><code>$ mysql -p DB_NAME -u USER_NAME</code>
+사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행
+USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도
+-u DB_NAME 옵션은 로그인 후 <code>$use DB_NAME</code> 과 같은 효과</p>
+</li>
+<li>
+<p>DB 목록확인
+<code>show databases</code></p>
+</li>
+<li>
+<p>DB 선택
+<code>use DB_NAME</code></p>
+</li>
+<li>
+<p>현재 사용자 정보 확인
+<code>select user()</code></p>
+</li>
+<li>
+<p>현재 DB 정보 확인
+<code>select databases()</code></p>
+</li>
+<li>
+<p>TABLE_NAME 테이블의 스키마 확인
+<code>desc TABLE_NAME</code></p>
+</li>
+<li>
+<p>CSV파일 DB에 적용
+<code>LOAD DATA FROM LOCAL INFILE '</code><strong>FILE_NAME</strong><code>' INTO TABLE </code><strong>TABLE_NAME</strong><code> FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '&quot;' LINES TERMINATED BY '\n';</code></p>
+<ul>
+<li>FILE_NAME 파일을 TABLE_NAME 테이블에 넣는다.
+필드는 &lsquo;,&lsquo;로 구분되어 있고, 줄바꿈은 &lsquo;\n&rsquo;로 구분되어 있고, &lsquo;&quot;&lsquo;로 싸인 내용은 한 덩어리로 인식한다.</li>
+</ul>
+</li>
+<li>
+<p>경고문 확인
+<code>SHOW WARNINGS\G</code></p>
+</li>
+<li>
+<p>테이블 생성 명령</p>
+</li>
+</ul>
+<pre><code>  CREATE  TABLE 테이블이름 ( 
+    id  INT  NOT  NULL AUTO_INCREMENT, 
+    항목1 VARCHAR(255) NOT  NULL, 
+    항목2 DATE  NOT  NULL, 
+    항목3 DECIMAL(10 , 2 ) NULL, 
+    PRIMARY KEY (id) 
+  );
+</code></pre><hr>
+<p>문법 참조 : <a href="http://tcpschool.com/mysql/mysql_basic_syntax"target="_blank">http://tcpschool.com/mysql/mysql_basic_syntax</a></p>
+<ul>
+<li>
+<p>SELECT
+<code>SELECT 필드 [,필드2 ...] FROM 테이블 [WHERE 조건]</code></p>
+<ul>
+<li>필드를 &lsquo;,&lsquo;로 다중 선택</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>DELETE
+<code>DELETE FROM 테이블 [WHERE 조건]</code></p>
+<ul>
+<li>조건을 생략하면 테이블의 모든 데이터 삭제</li>
+</ul>
+</li>
+<li>
+<p>DROP
+<code> DROP DATABASE 데이터베이스</code>
+<code> DROP TABLE 테이블</code></p>
+</li>
+<li>
+<p>INSERT
+<code> INSERT INTO 테이블(필드1, 필드2, ... ) VALUES (데이터1, 데이터2, ... )</code>
+<code> INSERT INTO 테이블 VALUES (데이터1, 데이터2, ... )</code></p>
+</li>
+<li>
+<p>JOIN</p>
+<ol>
+<li>
+<p>내부Join</p>
+<ul>
+<li><code>SELECT 테이블1.*, 테이블2.* FROM 테이블1, 테이블2 WHERE 조건</code></li>
+<li><code>SELECT 테이블1.*, 테이블2.* FROM 테이블1 INNER JOIN 테이블2 ON 조건</code></li>
+</ul>
+</li>
+<li>
+<p>외부Join</p>
+<ul>
+<li>LEFT Join
+<ul>
+<li><code>SELECT * FROM 테이블1 LEFT JOIN 테이블2 ON 조건</code></li>
+<li>조건이 맞지 않으면 테이블2의 필드 값이 모두 null 상태로 표시된다.</li>
+</ul>
+</li>
+<li>RIGHT Join
+<ul>
+<li><code>SELECT * FROM 테이블1 LEFT JOIN 테이블2 ON 조건</code></li>
+<li>조건이 맞지 않으면 테이블1의 필드값이 모두 null 상태로 표시된다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="데이터-타입">데이터 타입</h2>
+<ol>
+<li>문자형 데이터타입</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>데이터 타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAR(n)</td>
+<td>고정 길이 데이터 타입(최대 255byte)- 지정된 길이보다 짦은 데이터 입력될 시 나머지 공간 공백으로 채워진다.</td>
+</tr>
+<tr>
+<td>VARCHAR(n)</td>
+<td>가변 길이 데이터 타입(최대 65535byte)- 지정된 길이보다 짦은 데이터 입력될 시 나머지 공간은 채우지 않는다.</td>
+</tr>
+<tr>
+<td>TINYTEXT(n)</td>
+<td>문자열 데이터 타입(최대 255byte)</td>
+</tr>
+<tr>
+<td>TEXT(n)</td>
+<td>문자열 데이터 타입(최대 65535byte)</td>
+</tr>
+<tr>
+<td>MEDIUMTEXT(n)</td>
+<td>문자열 데이터 타입(최대 16777215byte)</td>
+</tr>
+<tr>
+<td>LONGTEXT(n)</td>
+<td>문자열 데이터 타입(최대 4294967295byte)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ol start="2">
+<li>숫자형 데이터 타입</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>데이터 타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TINYINT(n)</td>
+<td>정수형 데이터 타입(1byte) -128 ~ +127 또는 0 ~ 255수 표현 가능하다.</td>
+</tr>
+<tr>
+<td>SMALLINT(n)</td>
+<td>정수형 데이터 타입(2byte) -32768 ~ 32767 또는 0 ~ 65536수 표현 가능하다.</td>
+</tr>
+<tr>
+<td>MEDIUMINT(n)</td>
+<td>정수형 데이터 타입(3byte) -8388608 ~ +8388607 또는 0 ~ 16777215수 표현 가능하다.</td>
+</tr>
+<tr>
+<td>INT(n)</td>
+<td>정수형 데이터 타입(4byte) -2147483648 ~ +2147483647 또는 0 ~ 4294967295수 표현 가능하다.</td>
+</tr>
+<tr>
+<td>BIGINT(n)</td>
+<td>정수형 데이터 타입(8byte) - 무제한 수 표현 가능하다.</td>
+</tr>
+<tr>
+<td>FLOAT(길이,소수)</td>
+<td>부동 소수형 데이터 타입(4byte) -고정 소수점을 사용 형태이다.</td>
+</tr>
+<tr>
+<td>DECIMAL(길이,소수)</td>
+<td>고정 소수형 데이터 타입고정(길이+1byte) -소수점을 사용 형태이다.</td>
+</tr>
+<tr>
+<td>DOUBLE(길이,소수)</td>
+<td>부동 소수형 데이터 타입(8byte) -DOUBLE을 문자열로 저장한다.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ol start="3">
+<li>날짜형 데이터 타입</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>데이터 타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DATE</td>
+<td>날짜(년도, 월, 일) 형태의 기간 표현 데이터 타입(3byte)</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>시간(시, 분, 초) 형태의 기간 표현 데이터 타입(3byte)</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>날짜와 시간 형태의 기간 표현 데이터 타입(8byte)</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>날짜와 시간 형태의 기간 표현 데이터 타입(4byte) -시스템 변경 시 자동으로 그 날짜와 시간이 저장된다.</td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td>년도 표현 데이터 타입(1byte)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ol start="4">
+<li>이진 데이터 타입</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>데이터 타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BINARY(n) &amp; BYTE(n)</td>
+<td>CHAR의 형태의 이진 데이터 타입 (최대 255byte)</td>
+</tr>
+<tr>
+<td>VARBINARY(n)</td>
+<td>VARCHAR의 형태의 이진 데이터 타입 (최대 65535byte)</td>
+</tr>
+<tr>
+<td>TINYBLOB(n)</td>
+<td>이진 데이터 타입 (최대 255byte)</td>
+</tr>
+<tr>
+<td>BLOB(n)</td>
+<td>이진 데이터 타입 (최대 65535byte)</td>
+</tr>
+<tr>
+<td>MEDIUMBLOB(n)</td>
+<td>이진 데이터 타입 (최대 16777215byte)</td>
+</tr>
+<tr>
+<td>LONGBLOB(n)</td>
+<td>이진 데이터 타입 (최대 4294967295byte)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="참조">참조</h2>
+<p><a href="https://3months.tistory.com/193"target="_blank">데이터베이스 정규화 1NF, 2NF, 3NF, BCNF :: Deep Play</a>
+<a href="https://moonlighting.tistory.com/140"target="_blank">[MySQL] csv 파일을 직접 MySQL 테이블로 Import 하는 방법 (대용량 파일 import 팁) 주경야근</a>
+<a href="https://www.mysqltutorial.org/import-csv-file-mysql-table/"target="_blank">Import CSV File Into MySQL Table</a>
+<a href="http://www.incodom.kr/DB_-_%EB%8D%B0%EC%9D%B4%ED%84%B0_%ED%83%80%EC%9E%85/MYSQL"target="_blank">DB - 데이터 타입/MYSQL</a>
+<a href="http://blog.devez.net/277"target="_blank">[MySQL] Warnings 발생 했을 때 경고 내용 보기 - Blog Goooood.net</a>
+<a href="https://stackoverflow.com/questions/31599622/how-to-import-csv-into-mysql-if-values-contains-comma"target="_blank">How to import CSV into mysql if values contains comma - Stack Overflow</a>
+<a href="https://blog.naver.com/PostView.nhn?blogId=horajjan&amp;logNo=220465143567&amp;parentCategoryNo=&amp;categoryNo=10&amp;viewDate=&amp;isShowPopularPosts=true&amp;from=search"target="_blank">[SQL] 테이블 합치기 (JOIN / UNION) : 네이버 블로그</a>
+<a href="https://2dubbing.tistory.com/13"target="_blank">MySQL 계정 생성 관리 및 권한설정 :: 비실이의 개발공간</a>
+<a href="https://blog.naver.com/maestrois/220486269515"target="_blank">[MySQL] ERROR 1044 (42000.. : 네이버블로그</a>
+<a href="https://stackoverflow.com/questions/8376420/how-can-i-make-a-key-pair-primary"target="_blank">php - How can I make a key pair primary? - Stack Overflow</a>
+<a href="https://m.blog.naver.com/PostView.nhn?blogId=athena1028&amp;logNo=20060725715&amp;proxyReferer=https:%2F%2Fwww.google.com%2F"target="_blank">MySQL 계정 변경 및 간단한 사용법 : 네이버 블로그</a>
+<a href="https://opentutorials.org/course/2136/12020"target="_blank">MySQL 소개 및 기본 사용법 - 생활코딩</a>
+<a href="https://nexthops.tistory.com/2"target="_blank">MySQL ALTER TABLE 테이블 변경하기</a></p>
+</article><section class="article labels"><a class="tag" href=/tags/db/>DB</a><a class="tag" href=/tags/mysql/>mysql</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/pythoncgi/"><span class="li iconfont icon-article"></span>PythonCGI</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

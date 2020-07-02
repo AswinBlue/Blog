@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mysql on AsWindBlew</title>
+    <link>/tags/mysql/</link>
+    <description>Recent content in mysql on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mysql</title>
+      <link>/post/mysql/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>/post/mysql/</guid>
+      <description>mysql 명령어 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인</description>
+      
+    </item>
+    
+  </channel>
+</rss>

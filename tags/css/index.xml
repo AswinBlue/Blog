@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 20:38:05 +0900</lastBuildDate>
     
         <atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Css</title>
+      <link>/post/css/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
+      
+      <guid>/post/css/</guid>
+      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대</description>
+      
+    </item>
     
     <item>
       <title>Markdown Syntax Guide</title>

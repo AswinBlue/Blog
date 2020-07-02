@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Tue, 23 Jun 2020 20:38:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql</title>
+      <link>/post/mysql/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>/post/mysql/</guid>
+      <description>mysql 명령어 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인</description>
+      
+    </item>
+    
+    <item>
+      <title>PythonCGI</title>
+      <link>/post/pythoncgi/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>/post/pythoncgi/</guid>
+      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신</description>
+      
+    </item>
     
     <item>
       <title>JavaScript</title>

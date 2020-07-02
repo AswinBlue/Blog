@@ -7,27 +7,87 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Tue, 23 Jun 2020 19:13:17 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>HTML</title>
-      <link>/tags/html/</link>
-      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      <title>DB</title>
+      <link>/tags/db/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
-      <guid>/tags/html/</guid>
+      <guid>/tags/db/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>WebServer</title>
+      <title>mysql</title>
+      <link>/tags/mysql/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>/tags/mysql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CGI</title>
+      <link>/tags/cgi/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>/tags/cgi/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>webServer</title>
       <link>/tags/webserver/</link>
-      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
       <guid>/tags/webserver/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>javaScript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
+      
+      <guid>/tags/javascript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>/tags/css/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
+      
+      <guid>/tags/css/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>/tags/html/</link>
+      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      
+      <guid>/tags/html/</guid>
       <description></description>
       
     </item>
@@ -48,16 +108,6 @@
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
       <guid>/tags/hugo/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>/tags/css/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/css/</guid>
       <description></description>
       
     </item>

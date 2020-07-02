@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>PythonCGI&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="PythonCGI" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">PythonCGI</h1><p class="article date">Jul 02, 2020<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><h1 id="python-cgi">python CGI</h1>
+<ul>
+<li>CGI는 Common Gateway Interface의 약자다.</li>
+<li>web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다.</li>
+<li>web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다.</li>
+<li>apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자.</li>
+<li><code>$ a2enmod CGI</code> 명령으로 apache의 CGI를 켜 주고, <code>sudo service apache2 restart</code> 로 설정 적용</li>
+<li><code>/var/log/apache2/error.log</code> 안에 apache 실행시 발생한 에러 로그가 담겨있다.</li>
+<li>웹 브라우저가 웹 서버에 요청할 때 웹 서버는 응답으로 웹 페이지의 데이터 타입(헤더)와 함께 웹 페이지를 전송한다.
+python CGI로는 <code>print(&quot;content-type:text/html; charset=UTF-8\n&quot;)</code> 와 같이 헤더를 표기낸다.</li>
+<li>헤더를 출력한 다음 부터는 body 부분이 출력된다.</li>
+<li>특정 주소로 Redirection을 할 때에는 <code>print(&quot;location : index.py?id=title&quot;)</code>을 이용한다. ( &lsquo;:&rsquo; 이후 부터 &lsquo;&quot;&rsquo; 까지는 원하는대로 작성)</li>
+</ul>
+<h2 id="formatting">formatting</h2>
+<ul>
+<li>string에서 특정 문자열을 다른 문자로 치환하는 기능
+ex) <code>'{} {}'.format('one','tow')</code>
+ex) <code>'{a} {b}'.format(a='hello', b='world')</code></li>
+<li>python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.</li>
+</ul>
+<h2 id="cgi-모듈">CGI 모듈</h2>
+<ul>
+<li><code>import cgi</code> 로 모듈을 로드해 사용한다.</li>
+<li><code>form = cgi.FieldStorage()</code> form은 jQuery와 같은 역할을 한다.
+ex) <code>pageId = form['id'].value</code> : page의 id를 가져온다.</li>
+</ul>
+<h2 id="html-연동">HTML 연동</h2>
+<ul>
+<li>
+<p>input 태그의 name 속성 : input 태그를 특정 이름으로 CGI에 전달함
+ex)</p>
+<pre><code>&lt;p&gt; &lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;title&quot;&gt; &lt;/p&gt;
+&lt;p&gt; &lt;textarea rows=&quot;4&quot; name=&quot;description&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+&lt;p&gt; &lt;input type=&quot;submit&quot;&gt;&lt;/p&gt;
+</code></pre></li>
+<li>
+<p>form 태그 : 특정 파일로 form 태그 안의 태그들을 전송</p>
+<ul>
+<li>
+<p>action 속성 : form 안의 내용을 처리할 파일(목적지)를 설정한다.
+ex)</p>
+<pre><code>&lt;form action=&quot;create.py&quot;&gt;
+   &lt;p&gt; &lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;title&quot;&gt; &lt;/p&gt;
+   &lt;p&gt; &lt;textarea rows=&quot;4&quot; name=&quot;description&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+   &lt;p&gt; &lt;input type=&quot;submit&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code></pre></li>
+<li>
+<p>url 쿼리 스트링 생성자 역할을 한다.</p>
+</li>
+<li>
+<p>url 쿼리 스트링은 form 안의 input 태그의 name 속성들과 목적지(처리할 파일)를 포함하고 있다.</p>
+</li>
+<li>
+<p>get 방식은 쿼리 스트링을 url에 넣어서 사용하는 것이 맞다. 하지만 post 방식은 url이 아닌 다른 곳에 내용을 담아 전송하게 된다.</p>
+</li>
+<li>
+<p>method 속성은 get과 post 방식을 설정할 수 있다.
+ex)</p>
+<pre><code>&lt;form action=&quot;create.py&quot; method=&quot;post&quot;&gt;
+  &lt;p&gt; &lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;title&quot;&gt; &lt;/p&gt;
+  &lt;p&gt; &lt;textarea rows=&quot;4&quot; name=&quot;description&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+  &lt;p&gt; &lt;input type=&quot;submit&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code></pre></li>
+<li>
+<p>action 속성으로 연결한 python 파일에서 form 안의 내용들을 사용하려면 <code>cgi.FieldStorage()</code>을 사용한다.
+ex)</p>
+</li>
+</ul>
+<pre><code>import cgi
+form = cgi.FieldStorage()
+title = form[&quot;title&quot;].value
+description = form[&quot;description&quot;].value
+</code></pre><ul>
+<li>form 안의 내용 중 사용자에게 노출이필요 없는 input 태그는 type=&quot;hidden&rdquo; 속성을 주어 숨긴다.
+ex) <code>&lt;input type=&quot;hidden&quot; name=&quot;pageId&quot; value={}&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>이벤트를 이용하여 form 안의 내용들을 특정 python 파일로 전송시키면 python 파일에서 내용을 처리하고 다른 html로 redirection 시키는 방식으로 웹 구성이 가능하다.</p>
+</li>
+</ul>
+<h2 id="cross-site-scripting-xss">cross site scripting (xss)</h2>
+<ul>
+<li>
+<p>웹 페이지의 script란을 임의로 작성하여 의도되지 않은 동작을 하도록 하는 행위</p>
+</li>
+<li>
+<p>컴퓨터가 html 파일을 해석할 때, <code>&lt;script&gt;</code>를 만나면 출력 대상이 아닌, javascript로 처리해야 할 태그로 인식한다. xml 문법에 사용되는 특수문자를 대체하여 이를 막을 수 있다.</p>
+<ul>
+<li><code>'&lt;' : &amp;lt;</code></li>
+<li><code>'&gt;' : &amp;gt;</code>
+ex) <code>''.replace('&lt;','&amp;lt;')</code></li>
+</ul>
+</li>
+<li>
+<p>&ldquo;python html sanitizer&rdquo; 로 검색하면 관련 패키지 검색이 가능하다.</p>
+</li>
+</ul>
+<h2 id="정리">정리</h2>
+<ul>
+<li>python package Index (PyPI): python 패키지들의 목록이 저장되어 있는 곳, 필요한 패키지를 활용하자.</li>
+<li>CGI는 느려서 최근에는 잘 쓰이지 않고, FastCGI, 파이썬 전용 WSGI 등이 쓰인다.</li>
+<li>web framework : 웹에서 사용되는 공통적 작업들만 잘 추려서 만든 APIdjango, flask 가 이에 해당.</li>
+<li>Database 연동</li>
+<li>Crawling: 웹페이지를 다운로드, 분석이 필요 (urllib, beautiful Soup 패키지 활용 가능)</li>
+<li>github의 trending 탭을 보면 현재 가장 인기 있는 패키지를 볼 수 있다.</li>
+</ul>
+</article><section class="article labels"><a class="tag" href=/tags/python/>python</a><a class="tag" href=/tags/cgi/>CGI</a><a class="tag" href=/tags/webserver/>webServer</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/pythoncgi/"><span class="li iconfont icon-article"></span>PythonCGI</a></p><p><a class="link" href="/post/javascript/"><span class="li iconfont icon-article"></span>JavaScript</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>
