@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nodejs</title>
+      <link>/tags/nodejs/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>/tags/nodejs/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>webServer</title>
+      <link>/tags/webserver/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>/tags/webserver/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>DB</title>
@@ -48,16 +68,6 @@
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
       <guid>/tags/python/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>webServer</title>
-      <link>/tags/webserver/</link>
-      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
-      
-      <guid>/tags/webserver/</guid>
       <description></description>
       
     </item>

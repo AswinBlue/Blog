@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2020 19:15:21 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate>
     
         <atom:link href="/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nodejs</title>
+      <link>/post/nodejs/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>/post/nodejs/</guid>
+      <description>Nodejs 패키지 생성 npm init 라이브러리 설치 npm install 실행(main.js) node main.js main.js nodejs 실행시 실행할 메인 파일 모듈 사용 var express = require(&#39;express&#39;); var session = require(&#39;express-session&#39;); var bodyParser = require(&#39;body-parser&#39;); var app = express(); static 설정 app.use(&#39;/static&#39;, express.static(__dirname + &#39;/static&#39;)); &amp;lsquo;/static&amp;rsquo;</description>
+      
+    </item>
     
     <item>
       <title>PythonCGI</title>

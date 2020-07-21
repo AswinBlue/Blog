@@ -36,7 +36,7 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 </li>
 <li>
 <p>CSV파일 DB에 적용
-<code>LOAD DATA FROM LOCAL INFILE '</code><strong>FILE_NAME</strong><code>' INTO TABLE </code><strong>TABLE_NAME</strong><code> FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '&quot;' LINES TERMINATED BY '\n';</code></p>
+<code>LOAD DATA LOCAL INFILE '</code><strong>FILE_NAME</strong><code>' INTO TABLE </code><strong>TABLE_NAME</strong><code> FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '&quot;' LINES TERMINATED BY '\n';</code></p>
 <ul>
 <li>FILE_NAME 파일을 TABLE_NAME 테이블에 넣는다.
 필드는 &lsquo;,&lsquo;로 구분되어 있고, 줄바꿈은 &lsquo;\n&rsquo;로 구분되어 있고, &lsquo;&quot;&lsquo;로 싸인 내용은 한 덩어리로 인식한다.</li>
@@ -273,22 +273,22 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 </table>
 <hr>
 <h2 id="참조">참조</h2>
-<p><a href="https://3months.tistory.com/193"target="_blank">데이터베이스 정규화 1NF, 2NF, 3NF, BCNF :: Deep Play</a>
-<a href="https://moonlighting.tistory.com/140"target="_blank">[MySQL] csv 파일을 직접 MySQL 테이블로 Import 하는 방법 (대용량 파일 import 팁) 주경야근</a>
-<a href="https://www.mysqltutorial.org/import-csv-file-mysql-table/"target="_blank">Import CSV File Into MySQL Table</a>
-<a href="http://www.incodom.kr/DB_-_%EB%8D%B0%EC%9D%B4%ED%84%B0_%ED%83%80%EC%9E%85/MYSQL"target="_blank">DB - 데이터 타입/MYSQL</a>
-<a href="http://blog.devez.net/277"target="_blank">[MySQL] Warnings 발생 했을 때 경고 내용 보기 - Blog Goooood.net</a>
-<a href="https://stackoverflow.com/questions/31599622/how-to-import-csv-into-mysql-if-values-contains-comma"target="_blank">How to import CSV into mysql if values contains comma - Stack Overflow</a>
-<a href="https://blog.naver.com/PostView.nhn?blogId=horajjan&amp;logNo=220465143567&amp;parentCategoryNo=&amp;categoryNo=10&amp;viewDate=&amp;isShowPopularPosts=true&amp;from=search"target="_blank">[SQL] 테이블 합치기 (JOIN / UNION) : 네이버 블로그</a>
-<a href="https://2dubbing.tistory.com/13"target="_blank">MySQL 계정 생성 관리 및 권한설정 :: 비실이의 개발공간</a>
-<a href="https://blog.naver.com/maestrois/220486269515"target="_blank">[MySQL] ERROR 1044 (42000.. : 네이버블로그</a>
-<a href="https://stackoverflow.com/questions/8376420/how-can-i-make-a-key-pair-primary"target="_blank">php - How can I make a key pair primary? - Stack Overflow</a>
-<a href="https://m.blog.naver.com/PostView.nhn?blogId=athena1028&amp;logNo=20060725715&amp;proxyReferer=https:%2F%2Fwww.google.com%2F"target="_blank">MySQL 계정 변경 및 간단한 사용법 : 네이버 블로그</a>
-<a href="https://opentutorials.org/course/2136/12020"target="_blank">MySQL 소개 및 기본 사용법 - 생활코딩</a>
-<a href="https://nexthops.tistory.com/2"target="_blank">MySQL ALTER TABLE 테이블 변경하기</a></p>
-</article><section class="article labels"><a class="tag" href=/tags/db/>DB</a><a class="tag" href=/tags/mysql/>mysql</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+<p><a href="https://3months.tistory.com/193"target="_blank">데이터베이스 정규화 1NF, 2NF, 3NF, BCNF :: Deep Play</a></p>
+<p><a href="https://moonlighting.tistory.com/140"target="_blank">[MySQL] csv 파일을 직접 MySQL 테이블로 Import 하는 방법 (대용량 파일 import 팁) 주경야근</a></p>
+<p><a href="https://www.mysqltutorial.org/import-csv-file-mysql-table/"target="_blank">Import CSV File Into MySQL Table</a></p>
+<p><a href="http://www.incodom.kr/DB_-_%EB%8D%B0%EC%9D%B4%ED%84%B0_%ED%83%80%EC%9E%85/MYSQL"target="_blank">DB - 데이터 타입/MYSQL</a></p>
+<p><a href="http://blog.devez.net/277"target="_blank">[MySQL] Warnings 발생 했을 때 경고 내용 보기 - Blog Goooood.net</a></p>
+<p><a href="https://stackoverflow.com/questions/31599622/how-to-import-csv-into-mysql-if-values-contains-comma"target="_blank">How to import CSV into mysql if values contains comma - Stack Overflow</a></p>
+<p><a href="https://blog.naver.com/PostView.nhn?blogId=horajjan&amp;logNo=220465143567&amp;parentCategoryNo=&amp;categoryNo=10&amp;viewDate=&amp;isShowPopularPosts=true&amp;from=search"target="_blank">[SQL] 테이블 합치기 (JOIN / UNION) : 네이버 블로그</a></p>
+<p><a href="https://2dubbing.tistory.com/13"target="_blank">MySQL 계정 생성 관리 및 권한설정 :: 비실이의 개발공간</a></p>
+<p><a href="https://blog.naver.com/maestrois/220486269515"target="_blank">[MySQL] ERROR 1044 (42000.. : 네이버블로그</a></p>
+<p><a href="https://stackoverflow.com/questions/8376420/how-can-i-make-a-key-pair-primary"target="_blank">php - How can I make a key pair primary? - Stack Overflow</a></p>
+<p><a href="https://m.blog.naver.com/PostView.nhn?blogId=athena1028&amp;logNo=20060725715&amp;proxyReferer=https:%2F%2Fwww.google.com%2F"target="_blank">MySQL 계정 변경 및 간단한 사용법 : 네이버 블로그</a></p>
+<p><a href="https://opentutorials.org/course/2136/12020"target="_blank">MySQL 소개 및 기본 사용법 - 생활코딩</a></p>
+<p><a href="https://nexthops.tistory.com/2"target="_blank">MySQL ALTER TABLE 테이블 변경하기</a></p>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/db/>DB</a><a class="tag" href=/tags/mysql/>mysql</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/pythoncgi/"><span class="li iconfont icon-article"></span>PythonCGI</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/nodejs/"><span class="li iconfont icon-article"></span>Nodejs</a></p><p><a class="link" href="/post/pythoncgi/"><span class="li iconfont icon-article"></span>PythonCGI</a></p></section></div></section><section id="footer"><div class="footer-wrap">
     <p class="copyright">©2020 Notepadium.</p>
     <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
         target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 

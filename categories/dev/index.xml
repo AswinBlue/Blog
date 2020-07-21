@@ -7,10 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 25 May 2020 18:30:15 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate>
     
         <atom:link href="/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nodejs</title>
+      <link>/post/nodejs/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>/post/nodejs/</guid>
+      <description>Nodejs 패키지 생성 npm init 라이브러리 설치 npm install 실행(main.js) node main.js main.js nodejs 실행시 실행할 메인 파일 모듈 사용 var express = require(&#39;express&#39;); var session = require(&#39;express-session&#39;); var bodyParser = require(&#39;body-parser&#39;); var app = express(); static 설정 app.use(&#39;/static&#39;, express.static(__dirname + &#39;/static&#39;)); &amp;lsquo;/static&amp;rsquo;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>/post/mysql/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>/post/mysql/</guid>
+      <description>mysql 명령어 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인</description>
+      
+    </item>
+    
+    <item>
+      <title>PythonCGI</title>
+      <link>/post/pythoncgi/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>/post/pythoncgi/</guid>
+      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신</description>
+      
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>/post/javascript/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
+      
+      <guid>/post/javascript/</guid>
+      <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성 document를 호출하고, .으로 함수를 호출한다. querySelector(&#39;</description>
+      
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>/post/css/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
+      
+      <guid>/post/css/</guid>
+      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대</description>
+      
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>/post/html/</link>
+      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      
+      <guid>/post/html/</guid>
+      <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하</description>
+      
+    </item>
     
     <item>
       <title>Linux_apt</title>

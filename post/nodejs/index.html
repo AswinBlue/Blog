@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Nodejs&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Nodejs" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Nodejs</h1><p class="article date">Jul 20, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><h1 id="nodejs">Nodejs</h1>
+<ul>
+<li>패키지 생성</li>
+</ul>
+<p><code>npm init</code></p>
+<ul>
+<li>라이브러리 설치</li>
+</ul>
+<p><code>npm install</code></p>
+<ul>
+<li>실행(main.js)</li>
+</ul>
+<p><code>node main.js</code></p>
+<h2 id="mainjs">main.js</h2>
+<ul>
+<li>nodejs 실행시 실행할 메인 파일</li>
+</ul>
+<h3 id="모듈-사용">모듈 사용</h3>
+<p><code>var express = require('express');</code></p>
+<p><code>var session = require('express-session');</code></p>
+<p><code>var bodyParser = require('body-parser');</code></p>
+<p><code>var app = express();</code></p>
+<h3 id="static-설정">static 설정</h3>
+<p><code>app.use('/static', express.static(__dirname + '/static'));</code></p>
+<ul>
+<li>&lsquo;/static&rsquo; 이라는 경로로 &lsquo;현재경로/static&rsquo; 폴더를 연결시킴, 즉 &lsquo;/static/file&rsquo; 을 호출하면 &lsquo;현재경로/static/file&rsquo; 이 호출됨</li>
+</ul>
+<h3 id="session-설정">session 설정</h3>
+<p><code>app.use(session({</code> -&gt; session 사용 설정</p>
+<p><code>    secret:&quot;SECRET_CODE&quot;,</code> -&gt; 세션을 암호화 할 시드 설정</p>
+<p><code>    resave:false,</code></p>
+<p><code>    saveUninitialized:true</code></p>
+<p><code>}));</code></p>
+<h3 id="body-parser">body parser</h3>
+<p><code>app.use(bodyParser.urlencoded({extended: false}));</code></p>
+<ul>
+<li>html의 body의 내용을 express의 js파일에서 불러와 사용할 수 있도록 하는 모듈</li>
+</ul>
+<h3 id="routing">routing</h3>
+<p><code>r_edit = require('./route/edit.js');</code> -&gt; &lsquo;/edit&rsquo; 경로로 요청이 오면  &lsquo;./route/edit.js&rsquo; 파일로 연결, 라우팅 처리함</p>
+<p><code>app.use('/edit', r_edit);</code></p>
+<p><code>r_login = require('./route/login.js');</code></p>
+<p><code>app.use('/login', r_login);</code></p>
+<p><code>r_default = require('./route/default.js');</code></p>
+<p><code>app.use('/', r_default);</code></p>
+<h3 id="ejs">ejs</h3>
+<p><code>app.set('views', './views');</code> -&gt; &lsquo;./view&rsquo; 경로를 view로 사용, view 폴더 안에는 html파일들을 넣으면 됨</p>
+<p><code>app.set('view engine', 'html');</code> -&gt; view 를 html로 구성함</p>
+<p><code>app.engine('.html', require('ejs').renderFile);</code></p>
+<h3 id="server">Server</h3>
+<p><code>var server = app.listen(80, function() {</code> -&gt; 80번 포트로 서버 오픈</p>
+<p><code>    var host = server.address().address</code> -&gt; 호스팅한 서버의 주소</p>
+<p><code>    var port = server.address().port</code> -&gt; 호스팅한 서버의 포트</p>
+<p><code>    console.log(&quot;App listening at http://%s:%s&quot;, host, port)</code> -&gt; 로그</p>
+<p><code>});</code></p>
+<h2 id="editjs">edit.js</h2>
+<ul>
+<li>main 파일에서 라우팅을 위해 r_edit 변수에 연결시켜 사용하는 파일, ./route 폴더에 정리되어 있다.</li>
+</ul>
+<p><code>var express = require('express');</code> -&gt; express 모듈 사용</p>
+<p><code>var router = express.Router();</code> -&gt; express의 routing 모듈 사용</p>
+<h3 id="함수-사용">함수 사용</h3>
+<p><code>function stringToInt(x, base) {</code> -&gt; js 파일 안에서도 함수 정의, 사용 가능</p>
+<p><code>  const parsed = parseInt(x, base);</code> -&gt; string을 int로 변환</p>
+<p><code>  if (isNaN(parsed)) { return 0; }</code> -&gt; string이 '&rsquo; 인 경우, NAN을 반환하는데, NAN을 0으로 치환</p>
+<p><code>  return parsed;</code> -&gt; 치환한 결과를 반환</p>
+<p><code>}</code></p>
+<h3 id="routing-설정">routing 설정</h3>
+<p><code>router.post('/:category/:product', function(req, res, next) {</code></p>
+<ul>
+<li>post 명령으로 / &hellip; / &hellip; 주소로 명령이 내려올 경우 function을 수행한다.</li>
+<li>main.js에서 r_edit을 &lsquo;SERVER_ADDRESS/edit&rsquo; 주소로 왔을 때 실행하도록 매핑해 놓았으므로, &lsquo;SERVER_ADDRESS/edit/AAA/BBB&rsquo; 주소로 명령이 내려오면 해당 함수가 동작한다.</li>
+<li>AAA 자리에 들어가는 값은 req.params.category 로 참조 가능하며, BBB는 req.params.product로 참조 가능하다.</li>
+</ul>
+<p><code>router.get('/:TLV', function(req, res, next) {</code> -&gt; get 명령은 router.get으로 설정 가능하다.</p>
+<p><code>module.exports = router;</code> -&gt; 마지막에 router를 exports 해야 적용이 된다.</p>
+<h3 id="session-설정-1">session 설정</h3>
+<p><code>    if (req.session.user) {</code></p>
+<ul>
+<li>main.js에서 session을 사용하였으므로 req.session으로 session에 담긴 변수들을 참조 가능하다.</li>
+<li>req.session.user 값이 있으면 아래 내용을 수행한다는 코드이다.</li>
+<li>값을 집어넣을 때에도 <code>req.session.val = 1</code> 과 같이 사용 가능하다.</li>
+</ul>
+<h3 id="db-사용">DB 사용</h3>
+<p><code>       var mysql = require('mysql');</code> -&gt; mysql 모듈을 사용한다.</p>
+<p><code>        var db_config = require('../config/db_config.json');</code> -&gt; config 폴더 안에 db 접속에 필요한 내용을 저장해 놓았다. js 파일과 해당 내용을 분리하여 보안을 강화시킬 수 있다. db_config.json파일은 json 데이터를 담고 있다.</p>
+<p><code>        var connection = mysql.createConnection({</code> -&gt; mysql 연결 설정</p>
+<p><code>            host : db_config.host,</code> -&gt; db_config_json 파일의 key를 참조하여 value를 대입한다.</p>
+<p><code>            user : db_config.user,</code></p>
+<p><code>            password : db_config.password,</code></p>
+<p><code>            database : db_config.database</code> -&gt; 사용할 DB 이름</p>
+<p><code>        connection.connect();</code> -&gt; 연결을 수행한다.</p>
+<p><code>        });</code></p>
+<p><code>            connection.query('UPDATE mytable SET name = ?, description = ?, price = ? where number = ?',[inputs.name, inputs.description, inputs.price, req.params.category], function (error, results, fields) {</code> -&gt; 연결된 DB에 query를 날린다.  error는 오류정보, results는 DB 결과(row)를 array형태로 반환한다.</p>
+<ul>
+<li>query 안에 query를 넣으면 오류가 난다. 완료 후 다음 query를 진행하도록 하자.</li>
+</ul>
+<p><code>                console.log(this.sql);</code> -&gt; 함수 안에서 this.sql을 호출하면 query 내용을 참조할 수 있다.</p>
+<p><code>                if (error) {</code> -&gt; 에러가 발생한 경우</p>
+<p><code>                    console.log(error);</code></p>
+<p><code>                    res.status(500).json({&quot;Error&quot;: &quot;DB Error&quot;});</code> -&gt; 결과 response에 status 500을 주고, json 메시지를 함께 던진다.(화면에는 Json 메시지가 출력 됨)</p>
+<p><code>                }</code></p>
+<p><code>            });</code></p>
+<p><code>        connection.end();</code>-&gt; DB 사용을 끝내고 연결을 해제한다.</p>
+<p><code>    connection.query(&quot;SELECT * FROM user WHERE User=? AND authentication_string=PASSWORD(?)&quot;, [id, pswd], function (error, results, fields) {</code></p>
+<ul>
+<li>PASSWORD() 함수는 mysql의 user DB에서 사용자의 비밀번호를 인코딩하여 authentication_string 컬럼에 해당하는 값으로 만드는 함수이다. 비밀번호를 넣으면 authentication_string값을 반환한다.</li>
+</ul>
+<h3 id="html-페이지-연결">html 페이지 연결</h3>
+<ul>
+<li>routing 함수에서 받은 요청에 대해 redirect를 할 수도 있고, render로 파일을 열 수도 있다.</li>
+</ul>
+<p><code>res.redirect('/edit/' + req.params.TLV);</code> -&gt; 설정한 주소로 페이지를 리다이렉트 한다.</p>
+<p><code>res.render('login.html', {url: target});</code> -&gt; url이란 키로 target 이라는 변수에 담긴 data를 login.html에 전달한다. html 파일에서는 url 이란 변수로 target값을 사용 가능하다.</p>
+<h3 id="html-페이지-연동">html 페이지 연동</h3>
+<ul>
+<li>html 페이지에서 form에 넣어서 보낸 내용은 bodyParser 모듈로 파싱하면 &lsquo;req.body.변수이름&rsquo; 으로 참조 가능하다.</li>
+</ul>
+<p><code>           var inputs = {</code> -&gt; 내용을 받아 json 형태로 저장</p>
+<p><code>                &quot;relation&quot;: req.body.relation,</code> -&gt; html파일의 form 태그의 input 태그중 name=&quot;relation&quot;인 태그의 value 값을 참조</p>
+<p><code>                &quot;number&quot;: req.body.name}</code></p>
+<h2 id="indexhtml">index.html</h2>
+<ul>
+<li>ejs모듈을 사용하여 설정한 대로 view 폴더 내에 생성한다.</li>
+<li>static 설정을 마쳤기 때문에 js 파일이나 css 파일들은 미리 설정해둔 &lsquo;/static&rsquo; 폴더 내에서 참조 가능하다.</li>
+</ul>
+<p><code>       &lt;script type=&quot;text/javascript&quot; src=&quot;/static/edit_func.js&quot;&gt;&lt;/script&gt;</code> -&gt; static 파일 호출 방법</p>
+<ul>
+<li>html 안에서 nodejs 문법을 사용하려면 &lt;% %&gt; 안에서 사용하면 된다. 변수 값을 바로 반환하려면 &lt;%= %&gt; 를 사용한다.</li>
+</ul>
+<p><code>            &lt;% var ptr = 10 %&gt;</code>  -&gt; 변수 ptr 선언</p>
+<p><code>            &lt;% dataList.forEach(function(item, index) { %&gt;</code>-&gt; dataList의 항목들에 대해 수행, dataList는 routing function(route/index.js 안의 routing 함수)에서 <code>res.render('index.html', {dataList: data});</code> 로 전해준 데이터이다.</p>
+<p><code>                &lt;% if (dataList[ptr].number != item.number) { %&gt;</code> -&gt; if 함수 사용 가능, if문이 false라면 아래 내용은 출력되지 않음</p>
+<p><code>                &lt;tr id=&quot;lineTr&quot;&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;a href=&quot;edit/&lt;%=item.number%&gt;&quot;&gt;&lt;%= item.number %&gt;&lt;/a&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.name %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.description %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.superSet %&gt;&lt;/td&gt;</code></p>
+<p><code>                &lt;% ptr = index %&gt;</code></p>
+<p><code>                &lt;% } else { %&gt;</code></p>
+<p><code>                &lt;tr&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;/td&gt;</code></p>
+<p><code>                &lt;% } %&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.relation %&gt;&lt;/td&gt;</code> -&gt; item.relation의 값을 반환, 즉 해당 값의 내용이 <td></td> 안에 출력된다.</p>
+<p><code>                    &lt;td&gt;&lt;%= item.etc %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.bit %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.byte %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.value %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.meaning %&gt;&lt;/td&gt;</code></p>
+<p><code>                    &lt;td&gt;&lt;%= item.history %&gt;&lt;/td&gt;</code></p>
+<p><code>                &lt;/tr&gt;</code></p>
+<p><code>            &lt;% }); %&gt;</code></p>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/nodejs/>nodejs</a><a class="tag" href=/tags/webserver/>webServer</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/mysql/"><span class="li iconfont icon-article"></span>Mysql</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>
