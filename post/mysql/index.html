@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Mysql&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="supported-color-schemes" content="light dark"><title>Mysql&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Mysql" /><body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Mysql</h1><p class="article date">Jul 02, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><h1 id="mysql">mysql</h1>
+    <h1 class="article title">Mysql</h1><p class="article date">Jul 02, 2020<span class="lastmod"> • edited Aug 16, 2021</span><span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><h1 id="mysql">mysql</h1>
 <h2 id="명령어">명령어</h2>
 <ul>
 <li>
@@ -13,6 +13,10 @@
 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행
 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도
 -u DB_NAME 옵션은 로그인 후 <code>$use DB_NAME</code> 과 같은 효과</p>
+</li>
+<li>
+<p>종료
+<code>EXIT</code></p>
 </li>
 <li>
 <p>DB 목록확인
@@ -50,22 +54,31 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 <p>테이블 생성 명령</p>
 </li>
 </ul>
-<pre><code>  CREATE  TABLE 테이블이름 ( 
-    id  INT  NOT  NULL AUTO_INCREMENT, 
-    항목1 VARCHAR(255) NOT  NULL, 
-    항목2 DATE  NOT  NULL, 
-    항목3 DECIMAL(10 , 2 ) NULL, 
-    PRIMARY KEY (id) 
+<pre><code>  CREATE  TABLE 테이블이름 (
+    id  INT  NOT  NULL AUTO_INCREMENT,
+    항목1 VARCHAR(255) NOT  NULL,
+    항목2 DATE  NOT  NULL,
+    항목3 DECIMAL(10 , 2 ) NULL,
+    PRIMARY KEY (id)
   );
 </code></pre><hr>
 <p>문법 참조 : <a href="http://tcpschool.com/mysql/mysql_basic_syntax"target="_blank">http://tcpschool.com/mysql/mysql_basic_syntax</a></p>
 <ul>
 <li>
-<p>SELECT
-<code>SELECT 필드 [,필드2 ...] FROM 테이블 [WHERE 조건]</code></p>
+<p>SELECT : 테이블 검색
+<code>SELECT 필드 [,필드2 ...] FROM 테이블 [WHERE 조건] [ORDER BY 필드]</code></p>
 <ul>
 <li>필드를 &lsquo;,&lsquo;로 다중 선택</li>
-<li></li>
+<li>WHERE 문으로 특정 조건에 해당하는 레코드만 추출
+<ul>
+<li>LIKE : 뒤에 와일드 카드 사용</li>
+<li>_ : 와일드카드로, &lsquo;한 자리의 어떤 문자&rsquo;를 의미한다.</li>
+<li>% : 와일드카드로, 정규식의 *과 같은 의미이다.</li>
+<li>NOT : 부정의 의미, !과 동일</li>
+<li>&lt;&gt; : !=와 같은 의미</li>
+</ul>
+</li>
+<li>ORDER BY 문으로 검색 결과를 필드에 맞게 정렬</li>
 </ul>
 </li>
 <li>
@@ -76,7 +89,7 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 </ul>
 </li>
 <li>
-<p>DROP
+<p>DROP : 테이블 삭제
 <code> DROP DATABASE 데이터베이스</code>
 <code> DROP TABLE 테이블</code></p>
 </li>
@@ -86,7 +99,7 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 <code> INSERT INTO 테이블 VALUES (데이터1, 데이터2, ... )</code></p>
 </li>
 <li>
-<p>JOIN</p>
+<p>JOIN : 테이블 융합</p>
 <ol>
 <li>
 <p>내부Join</p>
@@ -114,7 +127,26 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 </li>
 </ol>
 </li>
+<li>
+<p>GRANT : 권한 부여</p>
+<ul>
+<li>
+<p><code>GRANT ALL PRIVILEGES ON my_db.* TO new_user@localhost IDENTIFIED BY 'pswd';</code></p>
+<ul>
+<li><code>ALL PRIVILEGES</code> : 모든 권한</li>
+<li><code>my_db.*</code> : my_db의 모든 테이블</li>
+<li><code>new_user</code> : 사용권한을 받을 유저(없을시 자동생성),</li>
+<li><code>@localhost</code> : 로컬환경에서만 접속 가능</li>
+<li><code>IDENTIFIED BY 'pswd'</code> : 비밀번호 pswd</li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>flush privileges</code> 권한 즉시 적용</p>
+</li>
+</ul>
+<hr>
 <h2 id="데이터-타입">데이터 타입</h2>
 <ol>
 <li>문자형 데이터타입</li>
@@ -272,6 +304,15 @@ USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으�
 </tbody>
 </table>
 <hr>
+<h2 id="c연동-sdk">C++연동 SDK</h2>
+<ul>
+<li>mysql cpp connector 라 불리는, C++ 코드로 mysql을 사용할 수 있는 SDK가 제공된다.</li>
+<li>mysql과 mysqlx가 있는데, 전자는 RDB, 후자는 NoSQL이다.</li>
+<li>표준 docmument
+<a href="https://dev.mysql.com/doc/connector-cpp/8.0/en/connector-cpp-installation-source-distribution.html"target="_blank">https://dev.mysql.com/doc/connector-cpp/8.0/en/connector-cpp-installation-source-distribution.html</a></li>
+<li>guthub
+<a href="https://github.com/mysql/mysql-connector-cpp"target="_blank">https://github.com/mysql/mysql-connector-cpp</a></li>
+</ul>
 <h2 id="참조">참조</h2>
 <p><a href="https://3months.tistory.com/193"target="_blank">데이터베이스 정규화 1NF, 2NF, 3NF, BCNF :: Deep Play</a></p>
 <p><a href="https://moonlighting.tistory.com/140"target="_blank">[MySQL] csv 파일을 직접 MySQL 테이블로 Import 하는 방법 (대용량 파일 import 팁) 주경야근</a></p>

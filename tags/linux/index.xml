@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 25 May 2020 18:30:15 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate>
     
         <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux commands</title>
+      <link>/post/linux_command/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/linux_command/</guid>
+      <description>sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트</description>
+      
+    </item>
     
     <item>
       <title>Linux_apt</title>

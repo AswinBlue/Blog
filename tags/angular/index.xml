@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>angular on AsWindBlew</title>
+    <link>/tags/angular/</link>
+    <description>Recent content in angular on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular</title>
+      <link>/post/angular/</link>
+      <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
+      
+      <guid>/post/angular/</guid>
+      <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기</description>
+      
+    </item>
+    
+  </channel>
+</rss>

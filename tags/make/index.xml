@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>make on AsWindBlew</title>
+    <link>/tags/make/</link>
+    <description>Recent content in make on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CMake</title>
+      <link>/post/cmake/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/cmake/</guid>
+      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Linux commands&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Linux commands" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Linux commands</h1><p class="article date">Aug 12, 2021<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="sed">sed</h1>
+<ul>
+<li>기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다.</li>
+<li>ed는 대화형 편집기이며, sed는 스트리밍 편집기</li>
+<li>\n 을 개행문자로 사용하는 스트리밍 에디터</li>
+</ul>
+<p><code>sed [-e script][-f script-file][file...]</code></p>
+<h2 id="찾기출력">찾기/출력</h2>
+<ul>
+<li><code>sed -n '/abd/p' list.txt : list.txt</code> : 파일을 한줄씩 읽으면서(-n : 읽은 것을 출력하지 않음) abd 문자를 찾으면 그 줄을 출력(p)한다.</li>
+</ul>
+<h2 id="치환">치환</h2>
+<ul>
+<li><code>sed 's/addrass/address/' list.txt</code> : list.txt파일에서 addrass를 address로 바꾼다. 단, 원본파일을 바꾸지 않고 출력을 바꿔서 한다.</li>
+<li><code>sed 's/□□*/□/' list.txt</code> : ( *표시: □ 는 공백 문자를 표시한다. ) 위의 구문은 한개이상의 공백문자열을 하나의 공백으로 바꾼다.</li>
+</ul>
+<h2 id="삭제">삭제</h2>
+<ul>
+<li><code>sed '/TD/d' list.txt</code> : TD 문자가 포함된 줄을 삭제하여 출력한다.</li>
+<li><code>sed '/Src/!d' list.txt</code> : Src 문자가 있는 줄만 지우지 않는다.</li>
+<li><code>sed '1,2d' list.txt</code> : 처음 1줄, 2줄을 지운다.</li>
+<li><code>sed '/^$/d list.txt</code> : 공백라인을 삭제하는 명령이다</li>
+</ul>
+<h2 id="참조">참조</h2>
+<p><a href="http://m.egloos.zum.com/slog2/v/3689816"target="_blank">http://m.egloos.zum.com/slog2/v/3689816</a></p>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/linux/>linux</a><a class="tag" href=/tags/sed/>sed</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/json_c&#43;&#43;/"><span class="li iconfont icon-article"></span>Json in C++</a></p><p><a class="link" href="/post/log_c&#43;&#43;/"><span class="li iconfont icon-article"></span>spdlog C++</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>GDB&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="GDB" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">GDB</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="gdb">GDB</h1>
+<h2 id="컴파일">컴파일</h2>
+<ul>
+<li>컴파일 옵션에 <code>-g</code> 를 붙여야 디버깅이 가능</li>
+</ul>
+<h2 id="시작">시작</h2>
+<ul>
+<li><code>gdb [파일이름]</code></li>
+<li><code>gdb</code> 실행 후 <code>file [파일이름]</code></li>
+</ul>
+<h2 id="디버깅-중-명령어">디버깅 중 명령어</h2>
+<p>▷breakpoint</p>
+<ul>
+<li>b [라인] : 해당 라인에 breakpoint 설정</li>
+<li>b [함수명] : 해당 함수 시작점에 breakpoint 설정</li>
+<li>b [파일명]:[라인] : 특정 파일 해당 라인에 breakpoin (ex : <code>b test.cpp:10</code>)</li>
+<li>tb : 임시 중단점 설정, 일회성</li>
+<li>info b : breakpoint 확인</li>
+<li>delete : 모든 brekapoint 삭제</li>
+<li>delete [index] : 특정 breakpoint 삭제</li>
+<li>cl [라인] : 해당 라인의 brekapoint 삭제</li>
+<li>cl [함수] : 해당 함수의 breakpoint 삭제</li>
+<li>cl : 모든 breakpoint 삭제</li>
+<li>enable [index] : 해당 brekapoint 활성화</li>
+<li>disable [index] : 해당 breakpoint 비활성화</li>
+<li>condition [index] [조건] : 해당 breakpoint는 조건을 만족할 때에만 동작 (ex : <code>condition 2 var_a == 0</code>)</li>
+</ul>
+<p>▷ 실행</p>
+<ul>
+<li>run 지정된 파일을 실행</li>
+<li>c : continue, 다음 breakpoint로 진행</li>
+<li>n [숫자]: next, 해당 숫자만큼 다음 라인으로 진행. 숫자 생략가능</li>
+<li>s [숫자]: step, 다음 라인이 함수라면 함수 내부로 이동. 해당 숫자만큼 진행. 숫자 생략 가능</li>
+<li>k : 실행중인 프로그램 종료</li>
+</ul>
+<p>▷ 확인</p>
+<ul>
+<li>l : main을 기점으로 소스 출력</li>
+<li>l [라인] : 해당 라인을 기점으로 소스 출력</li>
+<li>l [함수] : 해당 함수를 기점으로 수스 출력</li>
+<li>info locals : 지역변수들 확인</li>
+<li>info variables : 전역변수 확인</li>
+<li>p [변수] : 변수 값 확인</li>
+<li>p *[배열]@[숫자] : 해당 숫자만큼 배열의 값 출력</li>
+<li>p [구조체] : 구조체 주소 확인</li>
+<li>p *[구조체] : 구조체 값 확인</li>
+<li>p/t var : var 변수를 2진수로 출력</li>
+<li>p/o var : var 변수를 8진수로 출력</li>
+<li>p/d var : var 변수를 부호가 있는 10진수로 출력 (int)</li>
+<li>p/u var : var 변수를 부호가 없는 10진수로 출력 (unsigned int)</li>
+<li>p/x var : var 변수를 16진수로 출력</li>
+<li>p/c var : var 변수를 최초 1바이트 값을 문자형으로 출력</li>
+<li>p/f var : var 변수를 부동 소수점 값 형식으로 출력</li>
+<li>p/a addr : addr주소와 가장 가까운 심볼의 오프셋을 출력</li>
+<li>info registers : 레지스트 값 모두 확인</li>
+<li>display [변수명]  : 변수 값을 매번 화면에 디스플레이</li>
+<li>display/[출력형식] [변수명] : 변수 값을 출력 형식으로 디스플레이</li>
+<li>undisplay [디스플레이번호] : 디스플레이 설정을 없앤다</li>
+<li>disable display [디스플레이번호] : 디스플레이를 일시 중단한다.</li>
+<li>enable display [디스플레이번호] : 디스플레이를 다시 활성화한다.</li>
+</ul>
+<h2 id="기타">기타</h2>
+<ul>
+<li>q : 종료</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/gdb/>gdb</a><a class="tag" href=/tags/c/>c</a><a class="tag" href=/tags/c&#43;&#43;/>c&#43;&#43;</a><a class="tag" href=/tags/debug/>debug</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/web_scrapping/"><span class="li iconfont icon-article"></span>Web_scrapping</a></p><p><a class="link" href="/post/react/"><span class="li iconfont icon-article"></span>React basic</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

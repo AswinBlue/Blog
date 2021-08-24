@@ -18,7 +18,7 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>/post/nodejs/</guid>
-      <description>Nodejs 패키지 생성 npm init 라이브러리 설치 npm install 실행(main.js) node main.js main.js nodejs 실행시 실행할 메인 파일 모듈 사용 var express = require(&#39;express&#39;); var session = require(&#39;express-session&#39;); var bodyParser = require(&#39;body-parser&#39;); var app = express(); static 설정 app.use(&#39;/static&#39;, express.static(__dirname + &#39;/static&#39;)); &amp;lsquo;/static&amp;rsquo;</description>
+      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일)</description>
       
     </item>
     

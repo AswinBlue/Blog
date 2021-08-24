@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>scrapping on AsWindBlew</title>
+    <link>/tags/scrapping/</link>
+    <description>Recent content in scrapping on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Mon, 23 Aug 2021 19:00:44 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/scrapping/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web_scrapping</title>
+      <link>/post/web_scrapping/</link>
+      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
+      
+      <guid>/post/web_scrapping/</guid>
+      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이</description>
+      
+    </item>
+    
+  </channel>
+</rss>

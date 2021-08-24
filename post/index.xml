@@ -7,10 +7,130 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular</title>
+      <link>/post/angular/</link>
+      <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
+      
+      <guid>/post/angular/</guid>
+      <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기</description>
+      
+    </item>
+    
+    <item>
+      <title>Spring basic</title>
+      <link>/post/spring/</link>
+      <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
+      
+      <guid>/post/spring/</guid>
+      <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다. 참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring</description>
+      
+    </item>
+    
+    <item>
+      <title>Jython</title>
+      <link>/post/jython/</link>
+      <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
+      
+      <guid>/post/jython/</guid>
+      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대</description>
+      
+    </item>
+    
+    <item>
+      <title>Web_scrapping</title>
+      <link>/post/web_scrapping/</link>
+      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
+      
+      <guid>/post/web_scrapping/</guid>
+      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이</description>
+      
+    </item>
+    
+    <item>
+      <title>GDB</title>
+      <link>/post/gdb/</link>
+      <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
+      
+      <guid>/post/gdb/</guid>
+      <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint b [라인] : 해당 라인에</description>
+      
+    </item>
+    
+    <item>
+      <title>React basic</title>
+      <link>/post/react/</link>
+      <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
+      
+      <guid>/post/react/</guid>
+      <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행한다. npm install -g create-react-app 원하는 경로에 들어가 프</description>
+      
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; basic</title>
+      <link>/post/c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/c&#43;&#43;/</guid>
+      <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;quot;%d&amp;quot;, X);\ printf(&amp;quot;%d&amp;quot;, (X) + 1);\ printf(&amp;quot;%d&amp;quot;, (X) + 2); 매크로 합성 : #define A 1 #define B 1 #define</description>
+      
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>/post/cmake/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/cmake/</guid>
+      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파</description>
+      
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/post/docker/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/docker/</guid>
+      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 O</description>
+      
+    </item>
+    
+    <item>
+      <title>Json in C&#43;&#43;</title>
+      <link>/post/json_c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/json_c&#43;&#43;/</guid>
+      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/</description>
+      
+    </item>
+    
+    <item>
+      <title>Linux commands</title>
+      <link>/post/linux_command/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/linux_command/</guid>
+      <description>sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트</description>
+      
+    </item>
+    
+    <item>
+      <title>spdlog C&#43;&#43;</title>
+      <link>/post/log_c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/log_c&#43;&#43;/</guid>
+      <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
+      
+    </item>
     
     <item>
       <title>Nodejs</title>
@@ -18,7 +138,7 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>/post/nodejs/</guid>
-      <description>Nodejs 패키지 생성 npm init 라이브러리 설치 npm install 실행(main.js) node main.js main.js nodejs 실행시 실행할 메인 파일 모듈 사용 var express = require(&#39;express&#39;); var session = require(&#39;express-session&#39;); var bodyParser = require(&#39;body-parser&#39;); var app = express(); static 설정 app.use(&#39;/static&#39;, express.static(__dirname + &#39;/static&#39;)); &amp;lsquo;/static&amp;rsquo;</description>
+      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일)</description>
       
     </item>
     
@@ -88,7 +208,7 @@
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
       <guid>/post/hugo_dev/</guid>
-      <description>Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다. 게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 H</description>
+      <description>Hugo를 이용해 블로그 만들기 Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다. 게다가 UI를 보기 좋게 꾸며줄</description>
       
     </item>
     

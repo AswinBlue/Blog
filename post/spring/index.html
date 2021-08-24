@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Spring basic&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Spring basic" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Spring basic</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="spring-basic">Spring basic</h1>
+<h2 id="설치">설치</h2>
+<ul>
+<li>spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.<br>
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-installing-the-cli"target="_blank">참조</a></li>
+</ul>
+<h2 id="프로젝트-생성">프로젝트 생성</h2>
+<ul>
+<li>CLI로 프로젝트를 생성해 보자.
+<code>spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location]</code></li>
+<li><code>--build=gradle</code> 기본으로 maven을 사용하지만 gradle로 설정 가능하다.</li>
+<li><code>-d=web</code> dependency를 web으로 설정</li>
+<li><code>-a=myApp</code> artifactId, 즉 project명을 설정한다.</li>
+<li><code>-g=com.aswin.blue</code> 그룹 명을 설정한다.</li>
+<li><code>[location]</code> 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다.</li>
+</ul>
+<h2 id="설정">설정</h2>
+<ul>
+<li>maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.</li>
+<li>각종 라이브러리를 플러그인 형태로 사용하려면 dependency와 repository 설정을해 줘야 한다.</li>
+<li>&ldquo;<a href="https://mvnrepository.com/%22"target="_blank">https://mvnrepository.com/"</a> 주소처럼 maven repository를 정리해 놓은 사이트에서 원하는 repository를 찾아서 dependency를 작성한다.</li>
+<li>repository 추가시 compile dependency를 확인하고 추가로 pom.xml을 작성한다.</li>
+<li>maven 사이트보다는 github의 readme를 더 신용하자, maven 사이트 업데이트가 안돼서 잘 동작하지 않는 것도 있다.</li>
+</ul>
+<h2 id="실행">실행</h2>
+<ul>
+<li>maven 프로젝트의 실행에도 maven이 사용된다.</li>
+<li><code>mvn -X clean install exec:java -Dexec.args=&quot;&quot;</code> 로 실행이 가능하다.</li>
+</ul>
+<p><code>-X</code> 는 디버깅 로그 출력을 의미한다.
+<code>-Dexec.args=</code> 는 main 함수의 argv를 설정한다.</p>
+<ul>
+<li>spring 프로젝트는 <code>mvn spring-boot:run</code> 으로 실행시킬 수 있다.</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="category" href=/categories/basic/>basic</a><a class="tag" href=/tags/spring/>spring</a><a class="tag" href=/tags/java/>java</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/angular/"><span class="li iconfont icon-article"></span>Angular</a></p><p><a class="link" href="/post/jython/"><span class="li iconfont icon-article"></span>Jython</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

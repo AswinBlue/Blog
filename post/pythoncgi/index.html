@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.71.0-DEV" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>PythonCGI&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.172440dadff3b0541f66212c426eb882bf8d702a8668d6ce1a8d8e4f8d39cda8e8631458b3cad67c551357741f39b3eb.css" integrity="sha384-FyRA2t/zsFQfZiEsQm64gr&#43;NcCqGaNbOGo2OT405zajoYxRYs8rWfFUTV3QfObPr"><meta name="twitter:card" content="summary" />
+<meta name="supported-color-schemes" content="light dark"><title>PythonCGI&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="PythonCGI" /><body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
@@ -21,14 +21,14 @@ python CGI로는 <code>print(&quot;content-type:text/html; charset=UTF-8\n&quot;
 <h2 id="formatting">formatting</h2>
 <ul>
 <li>string에서 특정 문자열을 다른 문자로 치환하는 기능
-ex) <code>'{} {}'.format('one','tow')</code>
+ex) <code>'{} {}'.format('one','tow')</code> 
 ex) <code>'{a} {b}'.format(a='hello', b='world')</code></li>
 <li>python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.</li>
 </ul>
 <h2 id="cgi-모듈">CGI 모듈</h2>
 <ul>
 <li><code>import cgi</code> 로 모듈을 로드해 사용한다.</li>
-<li><code>form = cgi.FieldStorage()</code> form은 jQuery와 같은 역할을 한다.
+<li><code>form = cgi.FieldStorage()</code> form은 jQuery와 같은 역할을 한다. 
 ex) <code>pageId = form['id'].value</code> : page의 id를 가져온다.</li>
 </ul>
 <h2 id="html-연동">HTML 연동</h2>
@@ -44,7 +44,7 @@ ex)</p>
 <p>form 태그 : 특정 파일로 form 태그 안의 태그들을 전송</p>
 <ul>
 <li>
-<p>action 속성 : form 안의 내용을 처리할 파일(목적지)를 설정한다.
+<p>action 속성 : form 안의 내용을 처리할 파일(목적지)를 설정한다. 
 ex)</p>
 <pre><code>&lt;form action=&quot;create.py&quot;&gt;
    &lt;p&gt; &lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;title&quot;&gt; &lt;/p&gt;
@@ -62,7 +62,7 @@ ex)</p>
 <p>get 방식은 쿼리 스트링을 url에 넣어서 사용하는 것이 맞다. 하지만 post 방식은 url이 아닌 다른 곳에 내용을 담아 전송하게 된다.</p>
 </li>
 <li>
-<p>method 속성은 get과 post 방식을 설정할 수 있다.
+<p>method 속성은 get과 post 방식을 설정할 수 있다. 
 ex)</p>
 <pre><code>&lt;form action=&quot;create.py&quot; method=&quot;post&quot;&gt;
   &lt;p&gt; &lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;title&quot;&gt; &lt;/p&gt;
@@ -71,7 +71,7 @@ ex)</p>
 &lt;/form&gt;
 </code></pre></li>
 <li>
-<p>action 속성으로 연결한 python 파일에서 form 안의 내용들을 사용하려면 <code>cgi.FieldStorage()</code>을 사용한다.
+<p>action 속성으로 연결한 python 파일에서 form 안의 내용들을 사용하려면 <code>cgi.FieldStorage()</code>을 사용한다. 
 ex)</p>
 </li>
 </ul>
@@ -80,7 +80,7 @@ form = cgi.FieldStorage()
 title = form[&quot;title&quot;].value
 description = form[&quot;description&quot;].value
 </code></pre><ul>
-<li>form 안의 내용 중 사용자에게 노출이필요 없는 input 태그는 type=&quot;hidden&rdquo; 속성을 주어 숨긴다.
+<li>form 안의 내용 중 사용자에게 노출이필요 없는 input 태그는 type=&ldquo;hidden&rdquo; 속성을 주어 숨긴다. 
 ex) <code>&lt;input type=&quot;hidden&quot; name=&quot;pageId&quot; value={}&gt;</code></li>
 </ul>
 </li>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>c&#43;&#43; on AsWindBlew</title>
+    <link>/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GDB</title>
+      <link>/post/gdb/</link>
+      <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
+      
+      <guid>/post/gdb/</guid>
+      <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint b [라인] : 해당 라인에</description>
+      
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; basic</title>
+      <link>/post/c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/c&#43;&#43;/</guid>
+      <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;quot;%d&amp;quot;, X);\ printf(&amp;quot;%d&amp;quot;, (X) + 1);\ printf(&amp;quot;%d&amp;quot;, (X) + 2); 매크로 합성 : #define A 1 #define B 1 #define</description>
+      
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>/post/cmake/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/cmake/</guid>
+      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파</description>
+      
+    </item>
+    
+    <item>
+      <title>Json in C&#43;&#43;</title>
+      <link>/post/json_c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/json_c&#43;&#43;/</guid>
+      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/</description>
+      
+    </item>
+    
+    <item>
+      <title>spdlog C&#43;&#43;</title>
+      <link>/post/log_c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>/post/log_c&#43;&#43;/</guid>
+      <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
+      
+    </item>
+    
+  </channel>
+</rss>

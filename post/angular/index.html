@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Angular&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Angular" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Angular</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><h1 id="angular">Angular</h1>
+<ul>
+<li>Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다.</li>
+<li>javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다.</li>
+</ul>
+<h2 id="개발환경-세팅">개발환경 세팅</h2>
+<ol>
+<li>nodejs 설치</li>
+</ol>
+<ul>
+<li><code>$ sudo apt install npm</code> :nodejs와 npm 동시에 설치</li>
+</ul>
+<ol start="2">
+<li>angular client 설치</li>
+</ol>
+<ul>
+<li><code>$ npm install -g @angular/cli</code> 명령어를 이용하여 설치</li>
+</ul>
+<ol start="3">
+<li>workspace 생성</li>
+</ol>
+<ul>
+<li>
+<p>client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.</p>
+</li>
+<li>
+<p><code>$ ng new &lt;application_name&gt;</code> 명령어를 이용하여 설치한다.</p>
+</li>
+<li>
+<p>nodejs 버전이 낮다고 한다.  github에서 받아서 빌드하여 써 보자.</p>
+</li>
+<li>
+<p>공식 사이트는 <a href="https://github.com/nodejs"target="_blank">https://github.com/nodejs</a> 이다.</p>
+</li>
+<li>
+<p>소스코드를 받아 빌드하는 내용은 없고, 바로 바이너리를 다운받기를 권장하는 듯 하다.</p>
+</li>
+<li>
+<p><a href="https://nodejs.org/en/download/"target="_blank">https://nodejs.org/en/download/</a> 로 가서 리눅스용 바이너리를 받아보자.</p>
+</li>
+<li>
+<p>.xz 형태의 파일이다. <code>$ tar -xvf &lt;file_name&gt;</code> 로 압축을 푼다.</p>
+</li>
+<li>
+<p>압축을 푸니 안의 내용들이 /usr/lib/ 경로에 어울릴 것 같다. mv 명령으로 옮겨준다.</p>
+</li>
+<li>
+<p>bin 폴더 안의 내용은 링크로 /usr/local/lib/ 에 넣어준다.<br>
+<code>ln -s /usr/lib/&lt;file&gt;/bin/&lt;binary&gt; /usr/local/lib/bin/&lt;binary&gt;</code></p>
+</li>
+<li>
+<p>다시 돌아와서 명령어를 수행하여 application을 생성한다. stylesheet format을 선택하라고 하는데, 가장 위에있는 CSS로 선택해 본다.</p>
+</li>
+</ul>
+<ol start="4">
+<li>application 실행</li>
+</ol>
+<ul>
+<li>application을 생성하면 현재 경로에 &lt;application_name&gt;에 해당하는 폴더가 생성된다.</li>
+<li>테스트용으로 application을 실행해 보자.
+<code>$ng serve --open</code></li>
+<li>4200 포트로 서버 접속이 가능함을 알 수 있다.</li>
+</ul>
+<ol start="5">
+<li>방화벽 설정</li>
+</ol>
+<ul>
+<li>방화벽이 아직 열려있지 않은 것 같다. 방화벽을 열어보자.</li>
+<li>iptables -I INPUT 1 -p tcp &ndash;dport 12345 -j ACCEPT</li>
+<li><code>$sudo ufw allow 4200/tcp</code></li>
+</ul>
+<h2 id="프로젝트-구조">프로젝트 구조</h2>
+<ul>
+<li>WORKSPACE
+<ul>
+<li>src
+<ul>
+<li>app : 화면을 구성하는 요소들의 root component, WORKSPACE와 같은 이름</li>
+<li>&lt;COMPONENT&gt; : root component의 일부를 구성하는 component, 원하는만큼 추가 가능, [css, html, ts] 항목들이 기본 세트로 생성됨</li>
+<li>COMPONENT.component.css : 기본적으로 비어있다.</li>
+<li>COMPONENT.component.html</li>
+<li>COMPONENT.component.ts : type script로 짜여진 코드, class들이 정의되어 있다.</li>
+<li>app.component.css</li>
+<li>app.component.html</li>
+<li>app.component.ts</li>
+<li>app.module.ts</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="component">component</h3>
+<ul>
+<li>view라는 단위의 화면을 구성하는 모듈</li>
+<li><code>ng generate component COMPONENT_NAME</code> 명령으로 workspace에 component 생성 가능</li>
+<li>component를 생성하면 css, html, ts파일을 기본적으로 갖는다.</li>
+<li>component는 다른 component를 가질 수 있다. 최상위 component를 root component라고 한다.</li>
+</ul>
+<h4 id="ts-파일">ts 파일</h4>
+<ul>
+<li>angular에서 제공하는 모듈을 import할 수 있다.</li>
+<li>class를 선언하고, component에서 사용할 기능(함수)을 구현한 후 export한다.</li>
+<li>component가 생성될 때 상위 component로 부터 input을 받을 수 있다.</li>
+</ul>
+<h5 id="ts파일-문법">ts파일 문법</h5>
+<ul>
+<li><code>Component</code> : Component를 사용하기 위한 기본 모듈</li>
+<li><code>OnInit</code> : Component 시작시 동작 정의, constructor 와 유사한 동작을 하지만 OnInit은 angular가 관할하고, constructor은 js가 관할하여 초기화하는 차이가 있다.</li>
+<li><code>Input</code> : Component 생성시 상위 Component로 부터 받을 변수를 선언, 상위 Component에서는 해당 변수로 값을 집어넣어 줄 수 있다.</li>
+<li><code>Output</code> : 상위 Component에서 사용할 수 있는 변수를 정의, Component에서 변수를 선언하면 상위 Component에서 해당 변수를 사용할 수 있다.</li>
+<li><code>@component</code> 로 다음 class가 컴퍼넌트임을 표시한다.
+selector : 해당 component가 view에서 어떤 이름으로 표시될지 명명한다. (Tag 이름이 된다.)</li>
+<li><code>templateUrl</code> : html 파일의 이름을 지정한다</li>
+<li><code>styleUrls</code> : css파일의 리스트를 나열한다.</li>
+</ul>
+<pre><code> @Input() product;                        // product라는 변수로 input을 받겠다는 선언
+ @Output() notify = new EventEmitter();   // notify 라는 변수를 상위 Component에서 사용 가능하게 하겠다고 선언
+ // 한 component에서 다른 component를 호출할 때에는 ts 파일에서 정의한 이름을 태그로 생성한다.
+ &lt;app-product-alerts                      // 태그 이름이 곧 component 이름(selector에 정의한)이다.
+   [product]=&quot;product&quot;                    // product라는 변수에 &quot;product&quot;라는 내용을 을 넣을 때 사용한다.
+ (notify)=&quot;onNotify()&quot;&gt;                   // notify라는 변수에서 이벤트가 들어오면 onNotify() 함수를 실행, (onNotify() 함수는 class 안에 정의되어 있어야 함)
+ &lt;/app-product-alerts&gt;
+</code></pre><h3 id="routing">Routing</h3>
+<ul>
+<li>app.modules.ts(main component의 ts파일) 파일에서 routing 설정이 가능하다.</li>
+</ul>
+<pre><code>import { RouterModule } from '@angular/router';                                     // Routing을 위해 필요한 모듈
+import { ProductListComponent } from './product-list/product-list.component';`      // ProductListComponent라는 변수에 './product-list/product-list.component파일을 대응
+import { ProudctDetailsComponent } from './product-detail/product-detail.component';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([                            // Router 모듈로 Routing 세팅
+      { path: '', component: ProductListComponent },  // root 경로 '/' 에 위에서 ProductListComponent 변수에 대응시킨 파일을 매칭
+      { path: 'products/:productId', component: ProductDetailsComponent },          // 마찬가지로 '/products/{productId}' 에 ProudctDetailsComponent를 매칭
+    ])
+  ],
+</code></pre><ul>
+<li>./product-detail/product-detail.component.ts 에서 아래와 같은 설정을 추가로 해주어야 한다.</li>
+</ul>
+<pre><code>import { ActivatedRoute } from '@angular/router';           // routing을 당하는 곳에서 필요한 모듈
+export class ProductDetailsComponent implements OnInit {    // component 를 정의할 class 선언
+  product; -&gt; product 변수 선언
+constructor(private route: ActivatedRoute,)                 //  라우팅 관련 정보를 route라는 변수에 받았다.
+  { } -&gt; constructor 뒤에 붙여주는 형식, 비어있는 채로 둔다.
+}
+
+ngOnInit() {                                                // view 생성시 동작을 정의
+  this.route.paramMap.subscribe(params =&gt; {                 // constructor에서 정의한 route를 참조하여
+    this.product = products[+params.get('productId')];      // this.product는 products[index] 값을 가진다. 이때 index는 app.modules.ts에서 설정한 값이다. (url 경로에서 'products/' 다음에 들어간 숫자값)
+  });
+}
+</code></pre><ul>
+<li>./product-detail/product-detail.component.html 에서 아래와 같이 설정한다.</li>
+</ul>
+<pre><code>&lt;h2&gt;Product Details&lt;/h2&gt;
+&lt;div *ngIf=&quot;product&quot;&gt;                 // product에 값이 들어가 있다면 아래 수행. 즉, ts파일에서 대입시킨 products[idx] 값이 존재하면 아래 동작 수행
+&lt;h3&gt;{{ product.name }}&lt;/h3&gt;           // json 형태의 값을 참조해 대입한다.
+&lt;h4&gt;{{ product.price | currency }}&lt;/h4&gt;
+  &lt;p&gt;{{ product.description }}&lt;/p&gt;
+&lt;/div&gt;
+</code></pre><h2 id="문법">문법</h2>
+<ul>
+<li>반복, 출력, 링크</li>
+</ul>
+<pre><code>&lt;div *ngFor=&quot;let product of products; index as productId&quot;&gt;
+/*
+ *ngFor 은 반복을 뜻하는 예약어다. products 안의 원소를 하나씩 꺼내서 product 라 칭한다. 마치 java나 python의 ``for item in array`` 와 같다.
+ ';' 로 구문을 구분할 수 있다.
+ productId 변수에 index를 대입한다.
+*/
+　　&lt;a [title]=&quot;product.name + ' details'&quot; [routerLink]=&quot;['/products', productId]&quot;&gt;
+/*
+ [title] 은 마우스를 올릴 때 나오는 텍스트를 뜻한다.
+ routerLink는 클릭시 넘어갈 링크이다. 링크를 []로 설정하면 []안의 내용을 appepnd 한 값을 의미한다. 즉 &quot;/product/:productId&quot; 의 주소를 나타낸다.
+ &quot;&quot;안의 내용은 ts문법이고, 단순 텍스트는 '' 사이에 집어넣으면 된다.
+*/
+　　　　&lt;h3&gt;
+　　　　　　{{ product.name }}       // product 객체의 name 필드를 출력한다.
+　　　　&lt;/h3&gt;
+　　&lt;/a&gt;
+&lt;/div&gt;
+</code></pre><ul>
+<li>조건</li>
+</ul>
+<pre><code>&lt;p *ngIf=&quot;product.description&quot;&gt;         // *ngIf는 조건문을 뜻하는 예약어다. product 객체에 description 필드가 존재하면 아래를 실행한다.
+  Description: {{ product.description }}
+&lt;/p&gt;
+</code></pre><ul>
+<li>버튼</li>
+</ul>
+<p><code>&lt;button (click)=&quot;share()&quot;&gt;</code> (click)은 클릭 event 발생시 실행할 내용을 적는다. share()라는 함수를 실행하도록 연결한다.</p>
+<p>-&gt; 요점
+*ngFor
+*ngIf
+Interpolation {{ }}
+Property binding [ ]
+Event binding ( )</p>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/angular/>angular</a><a class="tag" href=/tags/typescript/>typescript</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/spring/"><span class="li iconfont icon-article"></span>Spring basic</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

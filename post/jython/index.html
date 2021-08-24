@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Jython&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Jython" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Jython</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="jython">Jython</h1>
+<ul>
+<li>Java 환경에서 python을 실행하게 하는 방법 중 하나</li>
+<li>역으로 Jython 환경에서 java를 실행 가능하기도 하다.</li>
+<li>spring에서 jython을 사용하는 방법에 대해 묘사하겠다.</li>
+</ul>
+<h2 id="설치">설치</h2>
+<ul>
+<li>pom.xml에 의존성을 작성한다.</li>
+<li>pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다.</li>
+</ul>
+<pre><code>&lt;!-- https://mvnrepository.com/artifact/org.python/jython --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.python&lt;/groupId&gt;
+    &lt;artifactId&gt;jython&lt;/artifactId&gt;
+    &lt;version&gt;2.7.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><h2 id="실행">실행</h2>
+<ul>
+<li>PythonInterpreter 을 선언한다.</li>
+<li>이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다.</li>
+</ul>
+<pre><code>PythonInterpreter jython;
+jython.execfile(PYTHON);
+jython.exec(&quot;print(1+1)&quot;);
+</code></pre><ul>
+<li>execfile로 특정 함수를 정의하였다면 그 아래에 있는 exec함수에서 함수를 호출할 수도 있다.</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/jython/>jython</a><a class="tag" href=/tags/python/>python</a><a class="tag" href=/tags/java/>java</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/spring/"><span class="li iconfont icon-article"></span>Spring basic</a></p><p><a class="link" href="/post/web_scrapping/"><span class="li iconfont icon-article"></span>Web_scrapping</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

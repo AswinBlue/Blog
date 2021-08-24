@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>CMake&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CMake" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">CMake</h1><p class="article date">Aug 12, 2021<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="cmake">CMake</h1>
+<p>Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구</p>
+<h2 id="명령어">명령어</h2>
+<ul>
+<li>
+<p><code>cmake CMakeList.txt</code> : CMakeList.txt파일 안의 내용을 수행한다.</p>
+</li>
+<li>
+<p><code>cmake .</code> : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.</p>
+</li>
+<li>
+<p><code>make</code> : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일</p>
+<ul>
+<li>cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다.</li>
+</ul>
+<pre><code>1. mkdir build
+2. vi CMakeList.txt 후 내용 작성
+3. cd build
+4. cmake ..
+5. make
+</code></pre><ul>
+<li>CmakeLists.txt 작성은 쉘 프로그래밍과 유사하다. cmake 문법을 사용하여 작성해 주면 된다. 미리 지정된 변수들도 있는데, 해당 변수들에 주의하며 작성한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="문법">문법</h2>
+<ul>
+<li>
+<p><code>ADD_EXECUTABLE</code> : 실행파일 생성
+ex) <code>ADD_EXECUTABLE(main.exe main.cpp function.cpp)</code> : main.cpp와 function.cpp를 사용해 main.exe를 생성한다. 헤더 파일은 자동으로 적용된다.</p>
+</li>
+<li>
+<p><code>TARGET</code> : 목표 생성물, 생성할 실행 파일을 의미한다. <code>add_executable()</code>, <code>add_library()</code>, <code>add_custom_target()</code> 등의 함수로 수정 가능하다.</p>
+</li>
+<li>
+<p><code>add_subdirectory</code> : 하위 디렉터리를 빌드 환경에 추가한다.</p>
+</li>
+<li>
+<p><code>add_subdirectory</code>를 사용한 경우 find_package를 사용하지 않는다.</p>
+</li>
+<li>
+<p><code>add_dependencies</code> : subdirectory 이름을 사용하지 않고, add_library 혹은 add_executable로 생성한 이름을 첫번째 인자로 사용해야 한다.<br>
+ex) <code>add_dependencies(&lt;생성한 객체이름&gt; &lt;모듈1&gt; &lt;모듈2&gt; ...)</code></p>
+</li>
+</ul>
+<h2 id="참조">참조</h2>
+<p><a href="https://nowonbun.tistory.com/712"target="_blank">https://nowonbun.tistory.com/712</a></p>
+<h1 id="make">make</h1>
+<h2 id="명령어-1">명령어</h2>
+<ul>
+<li><code>make install</code> : 해당 경로의 소스를 컴파일하여 /usr/local/lib, /usr/local/bin 폴더로 .so파일과 .bin파일 복사</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/cmake/>cmake</a><a class="tag" href=/tags/make/>make</a><a class="tag" href=/tags/c&#43;&#43;/>c&#43;&#43;</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/c&#43;&#43;/"><span class="li iconfont icon-article"></span>C++ basic</a></p><p><a class="link" href="/post/docker/"><span class="li iconfont icon-article"></span>Docker</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>
