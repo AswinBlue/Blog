@@ -64,7 +64,8 @@
 <li>git 레퍼지토리를 2개 생성한다.</li>
 </ol>
 <ul>
-<li>한개는 글 작성용, 한개는 publish용이다.</li>
+<li>한개는 글 작성용, 한개는 publish용이다. (이 경우, <code>&lt;GITHUB_ID&gt;.github.io</code> 이름으로 repository를 생성한다. 그렇지 않으면 정상동작하지 않는다.)<br>
+<code>ex) github.com/AswinBlue/AswinBlue.github.io</code></li>
 <li>작성용은 소스코드에 해당하며 publish용은 컴파일된 바이너리에 해당한다고 보면 된다.</li>
 </ul>
 <ol start="4">
@@ -95,7 +96,7 @@ ex) hugo new post/hugo.md
 </code></pre><p>본인은 hugo-notepadium 테마를 사용했다. 문서 최상단에 +++로 둘러쌓인 부분은 설정 부분이다. draft=false로 설정을 해야 화면에 표시된다. (이걸 몰라서 한참을 헤맸다.)</p>
 <p>public 폴더에 생성한 내용을 push 하기 전 테스트 해 본다.</p>
 <pre><code>hugo server [--theme &lt;THEME_PATH&gt;]
-</code></pre><p>내용이 마음에 든다면 git push를 하면</p>
+</code></pre><p>내용이 완벽하다면 public 폴더 안의 git을 push 하면 <code>&lt;GIT_ID&gt;.github.io</code> 주소에서 방금 본 내용을 볼 수 있다. <code>ex : aswinblue.github.io</code></p>
 <p>Go와 Hugo의 설치만 잘 하면 사용 가이드는 인터넷에 잘 정리된 글들이 많다. 참조하면 활용에 문제는 없을 것이다.</p>
 </article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/hugo/>Hugo</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
