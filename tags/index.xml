@@ -7,10 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>gui</title>
+      <link>/tags/gui/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>/tags/gui/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>kivy</title>
+      <link>/tags/kivy/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>/tags/kivy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>angular</title>
@@ -58,16 +88,6 @@
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
       <guid>/tags/jython/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
-      
-      <guid>/tags/python/</guid>
       <description></description>
       
     </item>

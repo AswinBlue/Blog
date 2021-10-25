@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kivy</title>
+      <link>/post/kivy/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>/post/kivy/</guid>
+      <description>#kivy Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의</description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/post/python/</link>
+      <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
+      
+      <guid>/post/python/</guid>
+      <description>Python numpy 기본 구문 numpy.where(조건, 값1, 값2): 조건문이 참이면 값1, 거짓이면 값2를 반환. 3항연산자와 동일</description>
+      
+    </item>
     
     <item>
       <title>Angular</title>
@@ -68,7 +88,7 @@
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
       <guid>/post/react_basic/</guid>
-      <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행한다. npm install -g create-react-app 원하는 경로에 들어가 프</description>
+      <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-ap</description>
       
     </item>
     

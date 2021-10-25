@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kivy on AsWindBlew</title>
+    <link>/tags/kivy/</link>
+    <description>Recent content in kivy on AsWindBlew</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/kivy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kivy</title>
+      <link>/post/kivy/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>/post/kivy/</guid>
+      <description>#kivy Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의</description>
+      
+    </item>
+    
+  </channel>
+</rss>
