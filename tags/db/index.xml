@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate>
     
         <atom:link href="/tags/db/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Firebase</title>
+      <link>/post/firebase/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/post/firebase/</guid>
+      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정</description>
+      
+    </item>
     
     <item>
       <title>Mysql</title>

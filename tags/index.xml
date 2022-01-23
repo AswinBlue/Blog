@@ -7,10 +7,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DB</title>
+      <link>/tags/db/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/tags/db/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>firebase</title>
+      <link>/tags/firebase/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/tags/firebase/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>/tags/deep-learning/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/tags/deep-learning/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>/tags/tensorflow/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/tags/tensorflow/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>gui</title>
@@ -33,11 +83,31 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      <title>javaScript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Tue, 24 Aug 2021 19:50:51 +0900</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>/tags/javascript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>/tags/react/</link>
+      <pubDate>Tue, 24 Aug 2021 19:50:51 +0900</pubDate>
+      
+      <guid>/tags/react/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>web application</title>
+      <link>/tags/web-application/</link>
+      <pubDate>Tue, 24 Aug 2021 19:50:51 +0900</pubDate>
+      
+      <guid>/tags/web-application/</guid>
       <description></description>
       
     </item>
@@ -163,36 +233,6 @@
     </item>
     
     <item>
-      <title>javaScript</title>
-      <link>/tags/javascript/</link>
-      <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
-      
-      <guid>/tags/javascript/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>/tags/react/</link>
-      <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
-      
-      <guid>/tags/react/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>web application</title>
-      <link>/tags/web-application/</link>
-      <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
-      
-      <guid>/tags/web-application/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>basic</title>
       <link>/tags/basic/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
@@ -298,16 +338,6 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>/tags/webserver/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>DB</title>
-      <link>/tags/db/</link>
-      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
-      
-      <guid>/tags/db/</guid>
       <description></description>
       
     </item>

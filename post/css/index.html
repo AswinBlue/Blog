@@ -7,68 +7,43 @@
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
     <h1 class="article title">Css</h1><p class="article date">Jun 23, 2020<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="css">CSS</h1>
 <ul>
-<li>특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다.</li>
-<li>중복의 제거 가능, 유지보수 수월, 가독성 증가</li>
-<li>위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐</li>
-<li>tag 선택자 &lt; calss 선택자 &lt; id 선택자 로 우선 순위가 높다.</li>
+<li>CSS란 특정 개체에 효과를 부여(declaration)하는 언어이다.</li>
+<li>위에서 부터 아래로 읽어가며 효과가 적용되며, 중복 불가능한 효과에 대해서는 이전 효과가 덮어써져 사라진다.</li>
+<li>tag 선택자 &lt; calss 선택자 &lt; id 선택자 순으로 우선 순위가 높다.</li>
 </ul>
 <ol>
-<li>
-<p>html 문서 안에 <code>&lt;style&gt;</code> 태그 안에 작성 가능</p>
-<p>ex ) <code>&lt;style&gt; a { color:black; } &lt;/style&gt;</code></p>
-</li>
+<li>html 문서 안에 <code>&lt;style&gt;</code> 태그 안에 작성 가능<br>
+ex ) <code>&lt;style&gt; a { color:black; } &lt;/style&gt;</code></li>
 </ol>
 <ul>
-<li>
-<p>태그의 종류별로 속성 설정 가능</p>
-</li>
-<li>
-<p>여기서 태그 a 는 선택자(selector)라고 한다.</p>
-</li>
-<li>
-<p>선택자는 ,로 구별하여 함께 사용 가능</p>
-<p>ex ) <code>&lt;style&gt; a, h1 { color:black; } &lt;/style&gt;</code></p>
-</li>
-<li>
-<p>특정 태그의 자식태그 중 하나의 속성을 지정하고 싶다면 띄워쓰기로 구분한다. 
-ex ) <style> #grid ol { padding-left:3px; } </style></p>
-</li>
-<li>
-<p>중괄호{} 안에 declaration을 작성한다.</p>
-</li>
-<li>
-<p>하나의 declaration은 ;로 끝나서 다음 declaration과 구분된다.</p>
-</li>
+<li>태그의 종류별로 속성 설정 가능</li>
+<li>여기서 태그 a 는 선택자(selector)라고 한다.</li>
+<li>선택자는 ,로 구별하여 함께 사용 가능<br>
+ex ) <code>&lt;style&gt; a, h1 { color:black; } &lt;/style&gt;</code></li>
+<li>특정 태그의 자식태그 중 하나의 속성을 지정하고 싶다면 띄어쓰기로 구분한다.<br>
+ex ) <code>&lt;style&gt; #grid ol { padding-left:3px; } &lt;/style&gt;</code></li>
+<li>중괄호{} 안에 declaration 을 작성한다.</li>
+<li>하나의 declaration은 ;로 끝나서 다음 declaration 과 구분된다.</li>
 </ul>
 <ol start="2">
 <li>
-<p>특정 태그 안에 style 속성을 넣어 작성 가능</p>
-<p>ex ) <code>&lt;a style=&quot;color:black&quot;&gt; &lt;/a&gt;</code></p>
+<p>특정 태그 안에 style 속성을 넣어 작성 가능<br>
+ex ) <code>&lt;a style=&quot;color:black&quot;&gt; &lt;/a&gt;</code></p>
 </li>
 <li>
 <p>다른 파일로 만들어 사용 가능</p>
 </li>
 </ol>
 <ul>
-<li>
-<p>재사용이 가능해 가장 효율적인 방법</p>
-</li>
-<li>
-<p>웹페이지 안에 직접 css를 넣는 것이 트래픽적 관점에서는 더 효율적이지만, 재사용성과 캐싱 기법에 의해 본 기법이 더 효율적이다.</p>
-<p>ex ) <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; </code></p>
-</li>
-<li>
-<p>특정 태그(element)를 지정해 효과 설정이 가능하다.</p>
-<p>ex ) <code>&lt;style&gt; a { color:black; } &lt;/style&gt;</code></p>
-</li>
-<li>
-<p>특정 class를 지정해 효과 설정이 가능하다. class를 지칭할 때에는 이름 앞에 . 을 찍는다. 태그 선택자 보다 우선 순위가 높다.</p>
-<p>ex ) <code>&lt;style&gt; .saw{color:gray;} &lt;/style&gt;</code></p>
-</li>
-<li>
-<p>특정 id를 지정해 효과 설정이 가능하다. id를 지정할 때에는 이름 앞에 # 을 찍는다. class보다 우선 순위가 높다.</p>
-<p>ex ) <code>&lt;style&gt; #active{color:red;} &lt;/style&gt;</code></p>
-</li>
+<li>재사용이 가능하고, 유지보수가 수월하며 가독성이 증가해 가장 효율적인 방법</li>
+<li>웹페이지 안에 직접 css를 넣는 것이 트래픽적 관점에서는 더 효율적이지만, 재사용성과 캐싱 기법에 의해 본 기법이 더 효율적이다.<br>
+ex ) <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></li>
+<li>특정 태그(element)를 지정해 효과 설정이 가능하다.<br>
+ex ) <code>&lt;style&gt; a { color:black; } &lt;/style&gt;</code></li>
+<li>특정 class를 지정해 효과 설정이 가능하다. class를 지칭할 때에는 이름 앞에 <code>.</code> 을 찍는다. 태그 선택자 보다 우선 순위가 높다.<br>
+ex ) <code>&lt;style&gt; .saw{color:gray;} &lt;/style&gt;</code></li>
+<li>특정 id를 지정해 효과 설정이 가능하다. id를 지정할 때에는 이름 앞에 <code>#</code> 을 찍는다. class보다 우선 순위가 높다.<br>
+ex ) <code>&lt;style&gt; #active{color:red;} &lt;/style&gt;</code></li>
 </ul>
 <h2 id="스타일">스타일</h2>
 <ul>
@@ -82,10 +57,8 @@ ex ) <style> #grid ol { padding-left:3px; } </style></p>
 <li>border-color:red : 테두리 색상 설정</li>
 <li>border-style:solid : 테두리 모양 설정(직선)
 <ul>
-<li>
-<p>border 스타일 및 일부 스타일은 축약해서 사용 가능하다.</p>
-<p>ex) <code>&lt;style&gt; a{ border: 5px red solid;} &lt;/style&gt;</code></p>
-</li>
+<li>border 스타일 및 일부 스타일은 축약해서 사용 가능하다.<br>
+ex) <code>&lt;style&gt; a{ border: 5px red solid;} &lt;/style&gt;</code></li>
 </ul>
 </li>
 <li>border-bottom: 1px solid gray : 아래쪽 테두리에만 설정 적용</li>

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate>
     
         <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>/post/tensorflow/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/post/tensorflow/</guid>
+      <description>#Tensorflow 설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이</description>
+      
+    </item>
     
     <item>
       <title>Kivy</title>
@@ -28,7 +38,7 @@
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>/post/python/</guid>
-      <description>Python numpy 기본 구문 numpy.where(조건, 값1, 값2): 조건문이 참이면 값1, 거짓이면 값2를 반환. 3항연산자와 동일</description>
+      <description>Python 기본 문법 import import module : &amp;lsquo;module.py&amp;rsquo; 파일의 내용을 사용할 수 있다. a = module.class() : &amp;lsquo;module.py&amp;rsquo;의 &amp;lsquo;class&amp;rsquo;</description>
       
     </item>
     

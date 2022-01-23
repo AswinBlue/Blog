@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate>
     
         <atom:link href="/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Firebase</title>
+      <link>/post/firebase/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/post/firebase/</guid>
+      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정</description>
+      
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>/post/tensorflow/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/post/tensorflow/</guid>
+      <description>#Tensorflow 설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이</description>
+      
+    </item>
     
     <item>
       <title>Kivy</title>
@@ -28,7 +48,17 @@
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>/post/python/</guid>
-      <description>Python numpy 기본 구문 numpy.where(조건, 값1, 값2): 조건문이 참이면 값1, 거짓이면 값2를 반환. 3항연산자와 동일</description>
+      <description>Python 기본 문법 import import module : &amp;lsquo;module.py&amp;rsquo; 파일의 내용을 사용할 수 있다. a = module.class() : &amp;lsquo;module.py&amp;rsquo;의 &amp;lsquo;class&amp;rsquo;</description>
+      
+    </item>
+    
+    <item>
+      <title>React_adv</title>
+      <link>/post/react_adv/</link>
+      <pubDate>Tue, 24 Aug 2021 19:50:51 +0900</pubDate>
+      
+      <guid>/post/react_adv/</guid>
+      <description>React Advanced 라이프사이클 컴퍼넌트는 &amp;lsquo;마운트 -&amp;gt; 업데이트 -&amp;gt; 언마운트&amp;rsquo; 생명주기를 갖는다. 마운트 마운트 단계 메서드로는 다음이 존재한다.</description>
       
     </item>
     
@@ -198,7 +228,7 @@
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
       <guid>/post/css/</guid>
-      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대</description>
+      <description>CSS CSS란 특정 개체에 효과를 부여(declaration)하는 언어이다. 위에서 부터 아래로 읽어가며 효과가 적용되며, 중복 불가능한 효과에 대해서는 이전</description>
       
     </item>
     
