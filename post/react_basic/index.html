@@ -5,7 +5,7 @@
 <meta name="twitter:title" content="React basic" /><body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">React basic</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 12 minutes to read</span></p></section><article class="article markdown-body"><h1 id="react-basic">React basic</h1>
+    <h1 class="article title">React basic</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 10 minutes to read</span></p></section><article class="article markdown-body"><h1 id="react-basic">React basic</h1>
 <h2 id="개발환경-설치-및-실행">개발환경 설치 및 실행</h2>
 <ol>
 <li>node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.</li>
@@ -93,8 +93,7 @@
 <li>package.json파일 수정 ({username}은 github 계정 이름)</li>
 </ol>
 <ul>
-<li><del>&ldquo;homepage&rdquo; : &ldquo;http://{username}.github.io/{repo-name}&quot;</del></li>
-<li>&ldquo;homepage&rdquo; : &ldquo;.&rdquo; // homepage를 위와같이 주소로 설정하면 github에 배포시 경로 참조 에러가 발생한다. 상대주소를 적어주도록 한다.</li>
+<li>&ldquo;homepage&rdquo; : &ldquo;http://{username}.github.io/{repo-name}&rdquo;</li>
 <li>&ldquo;scripts&rdquo;: {&ldquo;predeploy&rdquo;: &ldquo;npm run build&rdquo;, &ldquo;deploy&rdquo;: &ldquo;gh-pages -d build&rdquo;}</li>
 </ul>
 <ol start="5">
@@ -111,12 +110,12 @@
 <ul>
 <li>javascript와 동일하게 선언 가능하다.</li>
 </ul>
-<pre><code>function Subject(props) {
+<pre><code>function Subject() {
     return (
 	    &lt;div&gt;
         &lt;a href=&quot;/&quot; onClick={ function(e) {
           e.preventDefault();
-          props.onChangePage();  // 상위 컴퍼넌트로 부터 받은 함수 실행
+          this.props.onChangePage();  // 상위 컴퍼넌트로 부터 받은 함수 실행
         }
 		&lt;/div&gt;
 	);
@@ -128,9 +127,9 @@
 <li>VARIABLES는 &lsquo;,&lsquo;로 나누어져 두개 이상의 인자를 선언할 수 있고, BODY에서 사용될 수 있다.</li>
 <li>위 함수를 호출하려면 <code>FUNCTION_NAME(VARIABLES)</code> 형태로 호출 가능하다.</li>
 </ul>
-<pre><code>highlightSquares = (props, i) =&gt; {
-  if (props.winningSquares.length &gt; 0) {
-    if (props.winningSquares.indexOf(i) &gt; -1) {
+<pre><code>highlightSquares = i =&gt; {
+  if (this.props.winningSquares.length &gt; 0) {
+    if (this.props.winningSquares.indexOf(i) &gt; -1) {
       return &quot;square winningSquares&quot;;
     } else {
       return &quot;square&quot;;
@@ -256,7 +255,6 @@ var b = a.filter(i =&gt; i &lt; 4); // b = [1,2,3]
 <li>다른 key를 사용하고싶다면 다음과 같이 수행한다. <code>var {a:one, b:two} = {a:10, b:20, c:30} // one==10, two==20, c==30</code></li>
 <li>key값으로 사용불가능한 값이 올 경우 다음과 같이 비구조화 한다. <code>var {'a-b-c':a_b_c, [key]:A_B_C} = {'a-b-c':10, 'A B C':20} // a_b_c = 10, A_B_C = 20</code></li>
 <li>재구조화시 전개 연산자를 사용할 수 있지만, 전개연산자는 재정의할 수 없다. <code>{a:A, ...rest} = {a:10, b:20, c:30} // rest:B 는 불가능</code></li>
-<li>react에서 객체는 한번 생성하면 수정이 되지 않는다. javascript에서 <code>Object.preventExtensions()</code> 를 적용한 것과 같다.</li>
 </ul>
 <h3 id="복사">복사</h3>
 <ul>
@@ -311,22 +309,21 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
 <ul>
 <li>props를 활용하여 js파일에서 컴포넌트 태그 생성시 속성을 설정 가능하다.<br>
 <code>&lt;Subject title=&quot;TITLE&quot;, content=&quot;CONTENT&quot;&gt;</code> : title 값으로 &ldquo;TITLE&rdquo;, content 값으로 &ldquo;CONTENT&rdquo; 설정</li>
-<li>class형 컴퍼넌트에서는 Subject 객체 생성시 <code>{this.props.title}</code>, <code>{this.props.content}</code>와 같이 참조하여 사용한다.</li>
-<li>함수형 컴퍼넌트에서는 Subject 객체 생성시 첫번째 인자로 {title=&ldquo;TITLE&rdquo;, content=&ldquo;CONTENT&rdquo;} 를 받아서 사용하게 된다.</li>
+<li>Subject 객체 생성시 <code>{this.prop.title}</code>, <code>{this.prop.content}</code>와 같이 참조하여 사용한다.</li>
 </ul>
-<pre><code>function Subject(props) {
+<pre><code>function Subject() {
     return (
 	    &lt;div&gt;
-		    &lt;h1&gt;{props.title}&lt;/h1&gt;
-        &lt;h2&gt;{props.content}&lt;/h2&gt;
+		    &lt;h1&gt;{this.prop.title}&lt;/h1&gt;
+        &lt;h2&gt;{this.prop.content}&lt;/h2&gt;
 		&lt;/div&gt;
 	);
 }
 </code></pre><ul>
 <li>응용하여 아래와 같은 활용도 가능하다.</li>
 </ul>
-<pre><code>function Subject(props) {
-    {title, content} = props
+<pre><code>function Subject() {
+    {title, content} = {this.prop}
     return (
 	    &lt;div&gt;
 		    &lt;h1&gt;{title}&lt;/h1&gt;
@@ -437,11 +434,7 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
       );
     }
   }
-</code></pre><h3 id="element">element</h3>
-<ul>
-<li><code>&lt;&gt;</code> 태그로 표현된 객체들을 element라고 부른다. css의 태그와 동일하며, 이름 없는 태그는 &lsquo;fragment&rsquo;라 부른다.</li>
-</ul>
-<ol start="4">
+</code></pre><ol start="4">
 <li>이벤트</li>
 </ol>
 <ol>
@@ -515,12 +508,12 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
       );
     }
   }
-  function Subject(props) {
+  function Subject() {
       return (
   	    &lt;div&gt;
           &lt;a href=&quot;/&quot; onClick={ function(e) {
             e.preventDefault();
-            props.onChangePage();  // 상위 컴퍼넌트로 부터 받은 함수 실행
+            this.props.onChangePage();  // 상위 컴퍼넌트로 부터 받은 함수 실행
           }
   		&lt;/div&gt;
   	);
@@ -542,45 +535,18 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
 </ol>
 <ul>
 <li>react에서 다른 파일을 참조할 때에는 &lsquo;import&rsquo;를 사용하며, 확장자가 없으면 &lsquo;.js&rsquo;가 생략된 것으로 본다.<br>
-ex) <code>import React, { Component } from &quot;react&quot;</code>는 기본으로 필요하다.
-ex) <code>import {AAA, BBB} from app</code></li>
-<li>절대경로로 파일을 참조하고 싶다면, root 경로에 <code>jsonconfig.json</code> 파일을 생성하고, 다음 내용을 붙여넣는다.</li>
+<code>import React, { Component } from &quot;react&quot;</code>는 기본으로 필요하다.</li>
 </ul>
-<pre><code> {
-   &quot;compilerOptions&quot; : {
-     &quot;basicUrl&quot; : &quot;src&quot;
-   },
-   &quot;include&quot;:[&quot;src&quot;]
- }
-</code></pre><ol start="3">
+<ol start="3">
 <li>html에서 예약어로 사용하는 태그들은 &lsquo;synamtic tag&rsquo;라 한다.</li>
 </ol>
 <ul>
 <li>&lsquo;h1&rsquo;, &lsquo;header&rsquo;, &lsquo;nav&rsquo;, &lsquo;article&rsquo; 등이 있다.</li>
 </ul>
 <ol start="4">
-<li><code>export</code> : 특정 객체를 다른 파일에서 import할 수 있도록 한다.</li>
+<li><code>export</code> : 특정 객체를 다른 파일에서 import할 수 있도록 한다.<br>
+ex) <code>export App</code></li>
 </ol>
-<ul>
-<li><code>export default</code> 와 <code>export</code> 로 전달 가능하다.</li>
-<li><code>export default</code>는 파일에서 가장 처음 정의된 것만 설정된다.
-ex1) App.js 파일에서 객체 &lsquo;App&rsquo;을 default로 전달하는 경우
--&gt; <code>export default App</code>
-&lt;- <code>import App from &quot;./App&quot;</code>
-ex2) 객체 App을 그냥 전달하는 경우
--&gt; <code>export const App</code>
-&lt;- <code>import { App } from &quot;./App&quot;</code></li>
-</ul>
-<ol start="5">
-<li>외부 파일 참조</li>
-</ol>
-<ul>
-<li>js파일 외에 데이터를 담을 파일을 별도로 두고싶은 경우가 있다.</li>
-<li>create-react-app으로 프로젝트를 생성한 경우,  <code>.env</code> 파일을 생성하여 변수를 선언할 수 있는데, 변수명을 반드시 <code>REACT_APP_???</code> 형태로 선언해야 한다.</li>
-<li>.env파일의 위치는 src와 동일 레벨이어야 한다.</li>
-<li>이후 참조는 <code>process.env.REACT_APP_???</code> 형태로 js파일에서 참조가 가능하다.</li>
-<li>다만, 이러한 작업들이 client로부터 정보를 숨기기 위함은 아니라는것을 인지하라. client는 이렇게 파일을 나눠도 내용을 결국 확인할 수 있다.</li>
-</ul>
 <h2 id="참조">참조</h2>
 <p><a href="https://yuddomack.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%AC%B8%EB%B2%95-%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9"target="_blank">자바스크립트 문법</a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring"target="_blank">문법 Document</a></p>

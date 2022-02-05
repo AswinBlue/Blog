@@ -64,7 +64,7 @@
 <li>git 레퍼지토리를 2개 생성한다.</li>
 </ol>
 <ul>
-<li>한개는 글 작성용, 한개는 publish용이다. (이 경우, <code>&lt;GITHUB_ID&gt;.github.io</code> 이름으로 repository를 생성한다. 그렇지 않으면 정상동작하지 않는다.)<br>
+<li>한개는 글 작성용(아무 이름이나 사용 가능), 한개는 publish용(<code>&lt;GITHUB_ID&gt;.github.io</code> 이름으로 repository를 생성한다. 그렇지 않으면 정상동작하지 않는다.)<br>
 <code>ex) github.com/AswinBlue/AswinBlue.github.io</code></li>
 <li>작성용은 소스코드에 해당하며 publish용은 컴파일된 바이너리에 해당한다고 보면 된다.</li>
 </ul>
@@ -81,7 +81,7 @@
 <li>프로젝트 root디렉터리에 (3)에서 만든 소스용 git을 연동시킨다.</li>
 <li>/public 디렉터리에 (3)에서 만든 publish용 git을 연동시킨다.
 <ul>
-<li>git 폴더 안에 git을 연동하려면 <code>git submodule add &lt;URL&gt;</code>명령어를 이용한다.</li>
+<li>git 폴더 안에 git을 연동하려면 <code>git submodule add &lt;URL&gt; public</code>명령어를 이용하여 public 폴더 안에 submodule을 생성한다.</li>
 </ul>
 </li>
 </ul>

@@ -7,28 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Feb 2022 13:22:27 +0900</lastBuildDate>
     
         <atom:link href="/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Firebase</title>
-      <link>/post/firebase/</link>
-      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      <title>Cryptocurrency</title>
+      <link>/post/cryptocurrency/</link>
+      <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>/post/firebase/</guid>
-      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정</description>
+      <guid>/post/cryptocurrency/</guid>
+      <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoi</description>
       
     </item>
     
     <item>
-      <title>Tensorflow</title>
-      <link>/post/tensorflow/</link>
-      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      <title>Golang</title>
+      <link>/post/golang/</link>
+      <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
-      <guid>/post/tensorflow/</guid>
-      <description>#Tensorflow 설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이</description>
+      <guid>/post/golang/</guid>
+      <description>Go 설치 및 프로젝트 생성 구글 검색을 통해 설치파일을 다운받는다. root 디렉터리 설정이 필요하다.(&amp;lsquo;C:\Go, &amp;lsquo;/usr/local/go/bin/&#39;) 이후 생성할 프로젝트는 이 root 디렉</description>
       
     </item>
     
@@ -48,17 +48,7 @@
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>/post/python/</guid>
-      <description>Python 기본 문법 import import module : &amp;lsquo;module.py&amp;rsquo; 파일의 내용을 사용할 수 있다. a = module.class() : &amp;lsquo;module.py&amp;rsquo;의 &amp;lsquo;class&amp;rsquo;</description>
-      
-    </item>
-    
-    <item>
-      <title>React_adv</title>
-      <link>/post/react_adv/</link>
-      <pubDate>Tue, 24 Aug 2021 19:50:51 +0900</pubDate>
-      
-      <guid>/post/react_adv/</guid>
-      <description>React Advanced 라이프사이클 컴퍼넌트는 &amp;lsquo;마운트 -&amp;gt; 업데이트 -&amp;gt; 언마운트&amp;rsquo; 생명주기를 갖는다. 마운트 마운트 단계 메서드로는 다음이 존재한다.</description>
+      <description>Python numpy 기본 구문 numpy.where(조건, 값1, 값2): 조건문이 참이면 값1, 거짓이면 값2를 반환. 3항연산자와 동일</description>
       
     </item>
     
@@ -198,7 +188,7 @@
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
       <guid>/post/mysql/</guid>
-      <description>mysql 명령어 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인</description>
+      <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax 명령어에서 대소문자는 상관없다. mysql에서 주석은 &amp;lsquo;#&amp;lsquo;을 사용한다. 실행 및 로그인 mysql mysql 실행, 기본으</description>
       
     </item>
     
@@ -228,7 +218,7 @@
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
       <guid>/post/css/</guid>
-      <description>CSS CSS란 특정 개체에 효과를 부여(declaration)하는 언어이다. 위에서 부터 아래로 읽어가며 효과가 적용되며, 중복 불가능한 효과에 대해서는 이전</description>
+      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대</description>
       
     </item>
     

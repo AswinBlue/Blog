@@ -18,7 +18,7 @@
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
       <guid>/post/mysql/</guid>
-      <description>mysql 명령어 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인</description>
+      <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax 명령어에서 대소문자는 상관없다. mysql에서 주석은 &amp;lsquo;#&amp;lsquo;을 사용한다. 실행 및 로그인 mysql mysql 실행, 기본으</description>
       
     </item>
     
