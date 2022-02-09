@@ -23,12 +23,32 @@
     </item>
     
     <item>
+      <title>Firebase</title>
+      <link>/post/firebase/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/post/firebase/</guid>
+      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정</description>
+      
+    </item>
+    
+    <item>
       <title>Golang</title>
       <link>/post/golang/</link>
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
       <guid>/post/golang/</guid>
       <description>Go 설치 및 프로젝트 생성 구글 검색을 통해 설치파일을 다운받는다. root 디렉터리 설정이 필요하다.(&amp;lsquo;C:\Go, &amp;lsquo;/usr/local/go/bin/&#39;) 이후 생성할 프로젝트는 이 root 디렉</description>
+      
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>/post/tensorflow/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/post/tensorflow/</guid>
+      <description>#Tensorflow 설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이</description>
       
     </item>
     

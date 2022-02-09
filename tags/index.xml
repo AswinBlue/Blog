@@ -43,11 +43,61 @@
     </item>
     
     <item>
+      <title>DB</title>
+      <link>/tags/db/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/tags/db/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>firebase</title>
+      <link>/tags/firebase/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>/tags/firebase/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>go</title>
       <link>/tags/go/</link>
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
       <guid>/tags/go/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>/tags/deep-learning/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/tags/deep-learning/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>/tags/tensorflow/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>/tags/tensorflow/</guid>
       <description></description>
       
     </item>
@@ -68,16 +118,6 @@
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
       <guid>/tags/kivy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
-      
-      <guid>/tags/python/</guid>
       <description></description>
       
     </item>
@@ -338,16 +378,6 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>/tags/webserver/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>DB</title>
-      <link>/tags/db/</link>
-      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
-      
-      <guid>/tags/db/</guid>
       <description></description>
       
     </item>
