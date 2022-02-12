@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 18:46:22 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate>
     
         <atom:link href="/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Firebase_react</title>
+      <link>/post/firebase_react/</link>
+      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      
+      <guid>/post/firebase_react/</guid>
+      <description>Firebase with React react에서 firebase를 활용하는 방법 firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조 인증 (Auth) firebase 로 계정 생성 및 로그인 firebase</description>
+      
+    </item>
     
     <item>
       <title>React basic</title>

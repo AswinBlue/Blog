@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Wed, 02 Feb 2022 13:22:27 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>firebase</title>
+      <link>/tags/firebase/</link>
+      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      
+      <guid>/tags/firebase/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>/tags/react/</link>
+      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      
+      <guid>/tags/react/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>bitcoin</title>
@@ -48,16 +68,6 @@
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
       <guid>/tags/db/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>firebase</title>
-      <link>/tags/firebase/</link>
-      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
-      
-      <guid>/tags/firebase/</guid>
       <description></description>
       
     </item>
@@ -248,16 +258,6 @@
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
       <guid>/tags/javascript/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>/tags/react/</link>
-      <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
-      
-      <guid>/tags/react/</guid>
       <description></description>
       
     </item>

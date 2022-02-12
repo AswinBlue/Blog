@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Firebase_react&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Firebase_react" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+     crossorigin="anonymous"></script>
+<body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Firebase_react</h1><p class="article date">Feb 12, 2022<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="firebase-with-react">Firebase with React</h1>
+<ul>
+<li>react에서 firebase를 활용하는 방법</li>
+<li>firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조</li>
+</ul>
+<h2 id="인증-auth">인증 (Auth)</h2>
+<ul>
+<li>firebase 로 계정 생성 및 로그인</li>
+</ul>
+<ol>
+<li>firebase API를 import하여 사용</li>
+</ol>
+<ul>
+<li>&lt;AppFirebase.js&gt;</li>
+</ul>
+<pre><code>import firebase from &quot;firebase/compat/app&quot;;
+import &quot;firebase/compat/auth&quot;;
+
+const firebaseConfig = {
+apiKey: process.env.REACT_APP_API_KEY,
+authDomain: process.env.REACT_APP_AUTHDOMAIN,
+projectId: process.env.REACT_APP_PROJECTID,
+storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+appId: process.env.REACT_APP_APPID
+};
+
+export default firebase.initializeApp(firebaseConfig);
+export const authService = firebase.auth();
+</code></pre><ol>
+<li>AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현
+&lt;Auth.js&gt;</li>
+</ol>
+<pre><code>import { authService } from &quot;../components/AppFirebase&quot;;
+
+const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
+const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
+</code></pre><ul>
+<li>createUserWithEmailAndPassword / signInWithEmailAndPassword 실행 이후 authService.currentUser를 참조하면 user 정보를 받아올 수 있다.</li>
+<li>하지만, authService.currentUser 정보를 갱신하는데는 시간이 걸린다. firebase API에서는 observer를 등록하여 currentUser의 변경 시점을 확인할 수 있다.</li>
+</ul>
+<ol>
+<li>currentUser 변경시점에 특정함수 동작</li>
+</ol>
+<ul>
+<li>user 정보가 갱신된 시점에 특정 동작을 원한다면, 아래와 같이 onAuthStateChanged 함수를 사용하면 된다.</li>
+</ul>
+<pre><code>authService.onAuthStateChanged((user) =&gt; { /* something to do */ }});
+</code></pre><ol>
+<li>로그아웃</li>
+</ol>
+<ul>
+<li>개발시 강제로 로그아웃을 하고 싶다면, 크롬 웹 디버깅 화면에서 &lsquo;Application&rsquo;탭에 들어가서 IndexedDB -&gt; firebaseLocalDb 안의 내용을 🚫버튼으로 삭제해 주면 로그인 정보가 사라진다.</li>
+</ul>
+<ol>
+<li>에러</li>
+</ol>
+<ul>
+<li><code>authService</code>의 함수(<code>createUserWithEmailAndPassword</code>, <code>signInWithEmailAndPassword</code>, &hellip;) 사용시 에러가 발생할 수 있으므로, try, catch문으로 묶어서 사용한다.</li>
+</ul>
+<pre><code>try {
+  let data
+  data = await authService.createUserWithEmailAndPassword(email, password)
+} catch(error) {
+  console.log(error) // 에러의 원인이 메시지 형태로 출력된다.
+}
+</code></pre><p>ref) 오류발생 원인</p>
+<ul>
+<li>6자리 이하로 비밀번호 생성시</li>
+<li>동일한 e-mail로 계정 생성시</li>
+</ul>
+<ol>
+<li>Google 계정으로 로그인</li>
+</ol>
+<ul>
+<li>firebase에서는 google, facebook 등 계정으로 로그인 할 수 있도록 기능을 제공한다.</li>
+<li>팝업으로 로그인을 유도하는 방식과, redirect로 로그인하는 방식이 있다.</li>
+</ul>
+<pre><code>import { authService, firebaseModule } from &quot;../components/AppFirebase&quot;;
+
+const onSocialClick = async (event) =&gt; {
+  try {
+    let provider;
+    provider = new firebaseModule.auth.GoogleAuthProvider();  //
+  } catch (error) {
+    console.log(error);
+  }
+  await authService.signInWithPopup(provider); // 팝업으로 로그인
+}
+</code></pre></article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/react/>react</a><a class="tag" href=/tags/firebase/>firebase</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/cryptocurrency/"><span class="li iconfont icon-article"></span>Cryptocurrency</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

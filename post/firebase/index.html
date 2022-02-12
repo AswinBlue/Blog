@@ -7,7 +7,7 @@
 <body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Firebase</h1><p class="article date">Jan 19, 2022<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="firebase">firebase</h1>
+    <h1 class="article title">Firebase</h1><p class="article date">Jan 19, 2022<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><h1 id="firebase">firebase</h1>
 <ul>
 <li>firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다.</li>
 <li>Amazon의 Amplify가 firebase와 유사하다.</li>
@@ -15,19 +15,69 @@
 </ul>
 <h2 id="설치-및-사용">설치 및 사용</h2>
 <ul>
-<li>다양한 운영체제에서 사용 가능하며, 각각의 설치 방법을 따르면 된다.</li>
-<li>웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.</li>
-<li>버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</li>
-<li>firebase link: <a href="https://firebase.google.com"target="_blank">https://firebase.google.com</a></li>
-<li>firebase docs : <a href="https://firebase.google.com/docs"target="_blank">https://firebase.google.com/docs</a></li>
+<li>온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다.</li>
+<li>firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다.
+(웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.)</li>
 </ul>
-<h2 id="기능">기능</h2>
+<blockquote>
+<blockquote>
+<p>버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>
+<p>firebase link: <a href="https://firebase.google.com"target="_blank">https://firebase.google.com</a></p>
+</li>
+<li>
+<p>firebase docs : <a href="https://firebase.google.com/docs"target="_blank">https://firebase.google.com/docs</a></p>
+</li>
+<li>
+<p>firebase를 코드에 적용하려면 config 데이터를 작성해야 한다.</p>
+<ul>
+<li>firebase 콘솔에서 앱을 생성하고, 내 소스를 firebase의 내 프로젝트와 연동에 필요한 config 정보들을 복사하여 소스에 적용한다.
+ex) AppFirebase.js</li>
+</ul>
+</li>
+</ul>
+<pre><code>import firebase from &quot;firebase/compat/app&quot;;
+import &quot;firebase/compat/auth&quot;;
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID
+};
+
+export default firebase.initializeApp(firebaseConfig);
+
+export const authService = firebase.auth();
+
+</code></pre><h2 id="기능">기능</h2>
+<ul>
+<li>firebase 콘솔에 로그인 하고, 프로젝트를 생성한다. 생성된 프로젝트에 진입하여 원하는 기능을 사용할 수 있다.</li>
+</ul>
 <h3 id="인증-auth">인증 (Auth)</h3>
 <ul>
-<li>firebase로 인증을 수행할 수 있다.</li>
+<li>&lsquo;Authentication&rsquo; 탭을 선택하여 사용 가능하다.</li>
 <li>email, phone, google account, facebook account 등 다양한 인증 방법을 제공한다.</li>
 <li>다만, 주의할 점은 firebase API를 이용해 인증 서비스를 이용하면, 이후 확보된 사용자층을 다른 플랫폼으로 옮길 수 없다는 점이다.</li>
+<li>로그인에 사용된 계정들은 콘솔창에서 관리할 수 있으며, 비밀번호 재설정 등을 위한 메일도 커스텀할 수 있도록 환경이 제공된다.</li>
 </ul>
+<h4 id="react-code">React code</h4>
+<pre><code>import { authService } from &quot;../components/AppFirebase&quot;;
+
+const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
+const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
+
+</code></pre><h4 id="email-인증">email 인증</h4>
+<ul>
+<li>Authentication 탭에서 signed-in method를 선택한다.</li>
+<li>원하는 &lsquo;로그인 제공업체&rsquo; 를 선택하여 추가한다.</li>
+</ul>
+<h5 id="heading"></h5>
 </article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/firebase/>firebase</a><a class="tag" href=/tags/db/>DB</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
 <div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/cryptocurrency/"><span class="li iconfont icon-article"></span>Cryptocurrency</a></p><p><a class="link" href="/post/golang/"><span class="li iconfont icon-article"></span>Golang</a></p></section></div></section><section id="footer"><div class="footer-wrap">
