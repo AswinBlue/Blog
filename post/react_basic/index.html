@@ -283,10 +283,9 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
 </li>
 </ul>
 <h2 id="component">Component</h2>
-<ol>
-<li>js파일에서 컴포넌트를 생성하여 html에 적용</li>
-</ol>
 <ul>
+<li>React는 js파일에서 정의한 컴포넌트를 html로 컴파일 한다.
+ex)</li>
 <li>&lsquo;Subject&rsquo;라는 이름의 component를 생성해 본다.</li>
 <li>생성된 &lsquo;Subject&rsquo;는 custom tag가 된다. HTML에서 tag를 호출하듯 사용 가능하다.</li>
 </ul>
@@ -373,7 +372,7 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
 <ul>
 <li>index.js -&gt; App.js -&gt; Subject.js 순으로 호출이 이루어지는데, index.js에서는 App.js의 상태값을 알지 못한다. 즉, 부모에게 자신의 정보를 노출하지 않고 은닉한다.</li>
 </ul>
-<ol start="2">
+<ol>
 <li>state로 배열 사용</li>
 </ol>
 <pre><code>  class App extends Component {
@@ -420,11 +419,11 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
     }
   }
 </code></pre><p>※ react에서는 props나 state가 바뀌면, 이를 사용하는 하위 컴퍼넌트들의 <code>render()</code> 함수가 모두 다시 호출된다. 즉, 화면이 재구성된다.</p>
-<ol start="3">
-<li>조건문</li>
-</ol>
+<h3 id="render">render</h3>
 <ul>
-<li><code>render()</code> 함수 안에서 javascript로 조건문 설정 가능</li>
+<li>component 안의 <code>render()</code> 함수는 실제로 랜더링할 때 사용할 로직 및 html 형태를 반환한다.</li>
+<li><code>render()</code> 함수 안에서 javascript로 로직 구현이 가능하다.
+ex) 조건문</li>
 </ul>
 <pre><code>  class App extends Component {
     constructor(props) {
@@ -446,9 +445,24 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
       );
     }
   }
-</code></pre><ol start="4">
-<li>이벤트</li>
+</code></pre><h4 id="return">return</h4>
+<ul>
+<li><code>render()</code> 함수의 return 값은 html 형태가 되어야 한다.</li>
+<li>하지만 return 안에서도 <code>{}</code> 구문 안에서 간단한 문법은 사용 가능하다.</li>
+</ul>
+<ol>
+<li>조건문</li>
 </ol>
+<ul>
+<li>3항 연산자 : C, java의 3항 연산자와 동일
+<code>&lt;span&gt;{A ? &quot;True&quot; : &quot;False&quot;}&lt;/span&gt;</code></li>
+<li>&amp;&amp; : 앞의 내용이 참이면 뒤의 내용 수행
+<code>&lt;span&gt;{A &amp;&amp; &quot;True&quot;}&lt;/span&gt;</code></li>
+</ul>
+<h3 id="이벤트">이벤트</h3>
+<ul>
+<li>버튼 클릭, 내용 변경 등 사건이 발생했을 때, 이벤트 함수가 호출된다.</li>
+</ul>
 <ol>
 <li>onClick</li>
 </ol>

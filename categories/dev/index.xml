@@ -58,7 +58,7 @@
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
       <guid>/post/tensorflow/</guid>
-      <description>#Tensorflow 설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이</description>
+      <description>#Tensorflow TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. n</description>
       
     </item>
     
