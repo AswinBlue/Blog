@@ -7,7 +7,7 @@
 <body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Tensorflow</h1><p class="article date">Nov 27, 2021<span class="reading-time"> • 6 minutes to read</span></p></section><article class="article markdown-body"><p>#Tensorflow</p>
+    <h1 class="article title">Tensorflow</h1><p class="article date">Nov 27, 2021<span class="reading-time"> • 10 minutes to read</span></p></section><article class="article markdown-body"><p>#Tensorflow</p>
 <ul>
 <li>TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다.</li>
 </ul>
@@ -44,7 +44,7 @@
 <hr>
 <h2 id="기본-문법">기본 문법</h2>
 <ol>
-<li>상수 선언
+<li>상수 선언<br>
 <code>val = tf.constant(value, dtype=None, shape=None, name='Conts', verify_shape=False)</code></li>
 </ol>
 <ul>
@@ -62,39 +62,53 @@
 <li>배열 생성</li>
 </ol>
 <ul>
-<li><code>arr = tf.range(5)</code>
--&gt; output : <code>tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)</code></li>
-<li>&lsquo;tf.zeros([2,3])&rsquo;
--&gt; output : <code>[[0, 0, 0], [0, 0, 0]]</code></li>
-<li>&lsquo;tf.ones([2,3])&rsquo;
--&gt; output : <code>[[1, 1, 1], [1, 1, 1]]</code></li>
-<li>&lsquo;tf.fill([2,3], 5)&rsquo;
--&gt; output : <code>[[5, 5, 5], [5, 5, 5]]</code></li>
+<li><code>arr = tf.range(5)</code></li>
 </ul>
+<blockquote>
+<p>output : <code>tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)</code></p>
+</blockquote>
+<ul>
+<li>&lsquo;tf.zeros([2,3])&rsquo;</li>
+</ul>
+<blockquote>
+<p>output : <code>[[0, 0, 0], [0, 0, 0]]</code></p>
+</blockquote>
+<ul>
+<li>&lsquo;tf.ones([2,3])&rsquo;</li>
+</ul>
+<blockquote>
+<p>output : <code>[[1, 1, 1], [1, 1, 1]]</code></p>
+</blockquote>
+<ul>
+<li>&lsquo;tf.fill([2,3], 5)&rsquo;</li>
+</ul>
+<blockquote>
+<p>output : <code>[[5, 5, 5], [5, 5, 5]]</code></p>
+</blockquote>
 <ol>
 <li>연산자
-<code>tf.add(x,y)</code> : x + y
-<code>tf.subtract(x,y)</code> : x - y
-<code>tf.multiply(x,y)</code> : x * y
-<code>tf.div(x,y)</code> : x / y
-<code>tf.floordiv(x,y)</code> : x // y
-<code>tf.mod(x,y)</code> : x % y
-<code>tf.pow(x,y)</code> : x ** y
-<code>tf.less(x,y)</code> : x &lt; y
-<code>tf.less_equal(x,y)</code> : x &lt;= y
-<code>tf.greater(x,y)</code> : x &gt; y
-<code>tf.greater_equal(x,y)</code> : x &gt;= y
-<code>tf.logical_and(x,y)</code> : x &amp; y
-<code>tf.logical_or(x,y)</code> : x | y
-<code>tf.logical_xor(x,y)</code> : x ^ y
-<code>tf.maximum(x,y)</code> : max(x,y)
-<code>tf.reduce_sum(a)</code> : 배열 a에서 같은 index 위치의 값을 모두 더한 스칼라 값을 반환
+<code>tf.add(x,y)</code> : x + y<br>
+<code>tf.subtract(x,y)</code> : x - y<br>
+<code>tf.multiply(x,y)</code> : x * y<br>
+<code>tf.div(x,y)</code> : x / y<br>
+<code>tf.floordiv(x,y)</code> : x // y<br>
+<code>tf.mod(x,y)</code> : x % y<br>
+<code>tf.pow(x,y)</code> : x ** y<br>
+<code>tf.less(x,y)</code> : x &lt; y<br>
+<code>tf.less_equal(x,y)</code> : x &lt;= y<br>
+<code>tf.greater(x,y)</code> : x &gt; y<br>
+<code>tf.greater_equal(x,y)</code> : x &gt;= y<br>
+<code>tf.logical_and(x,y)</code> : x &amp; y<br>
+<code>tf.logical_or(x,y)</code> : x | y<br>
+<code>tf.logical_xor(x,y)</code> : x ^ y<br>
+<code>tf.maximum(x,y)</code> : max(x,y)<br>
+<code>tf.reduce_sum(a)</code> : 배열 a에서 같은 index 위치의 값을 모두 더한 스칼라 값을 반환<br>
 <code>tf.reduce_mean(a)</code> : 배열 a에서 같은 index 위치의 값을 평균낸 스칼라 값을 반환</li>
 </ol>
 <ul>
-<li>x,y가 배열인 경우, 연산자는 같은 index에 위치한 값끼리 연산한다.
-ex) tf.add(x,y) = [(x[0] + y[0]), (x[1] + y[1]), (x[2] + y[2]), &hellip;]</li>
-<li>&lsquo;reduce&rsquo; 가 들어간 연산은 axis 파라미터를 설정하여 어느 축을 기준으로 연산을 수행할지 설정 가능
+<li>x,y가 배열인 경우, 연산자는 같은 index에 위치한 값끼리 연산한다.<br>
+ex) <code>tf.add(x,y) = [(x[0] + y[0]), (x[1] + y[1]), (x[2] + y[2]), ...]</code></li>
+<li>&lsquo;reduce&rsquo; 가 들어간 연산은 axis 파라미터를 설정하여 어느 축을 기준으로 연산을 수행할지 설정 가능<br>
 ex)</li>
 </ul>
 <pre><code>a = [[1,2,3],[4,5,6]]
@@ -104,26 +118,49 @@ tf.reduce_sum(a, axis=1) = [6, 15]
 <li>변수</li>
 </ol>
 <ul>
-<li>tensorflow에서 변수는 node를 만들고, 그 안의 값을 참조하는 방식이다.</li>
-</ul>
+<li>
+<p>tensorflow에서 변수는 node를 만들고, 그 안의 값을 참조하는 방식이다.</p>
 <p><code>var = tf.Variable(value, dtype=type)</code></p>
 <ul>
 <li>value : 변수에 담을 값</li>
 <li>dtype : 변수 타입</li>
 <li>2.x 버전에서는 위와같이 선언과 동시에 초기화가 가능하다.</li>
-<li>node를 생성하고 var은 그 node의 주소를 가리킨다.</li>
 </ul>
+</li>
+<li>
+<p>node를 생성하고 var은 그 node의 주소를 가리킨다.</p>
 <p><code>var.assign(value)</code></p>
-<ul>
-<li>var이 가리키는 node에 value 값을 적용</li>
-</ul>
+</li>
+<li>
+<p>var이 가리키는 node에 value 값을 적용</p>
 <p><code>var.assign_add(value)</code></p>
-<ul>
-<li>var이 가리키는 node에 value 값을 더함</li>
+</li>
+<li>
+<p>var이 가리키는 node에 value 값을 더함</p>
+<p><code>var.assign_add(value)</code></p>
+</li>
+<li>
+<p>var이 가리키는 node에 value 값을 뺌</p>
+<p><code>tf.cast()</code></p>
+</li>
+<li>
+<p>변수를 특정 값, 특정 형태로 치환해주는 함수</p>
+</li>
 </ul>
 <ol>
-<li>출력
-<code>val.numpy()</code> : &lsquo;val&rsquo; tensor를 numpy 배열 형태로 출력</li>
+<li>
+<p>출력<br>
+<code>val.numpy()</code> : &lsquo;val&rsquo; tensor를 numpy 배열 형태로 출력</p>
+</li>
+<li>
+<p>비교
+<code>tf.equal()</code> : tensorflow 변수를 비교하는 함수</p>
+</li>
+<li>
+<p>랜덤
+<code>tf.random.set_seed()</code> : 정수를 이용해 랜덤값 시드 설정
+<code>tf.random.normal([2, 1], mean=0.0))</code> : 정규분포에 기반한 랜덤값, 인자로 행렬 shape와 평균이 들어간다.</p>
+</li>
 </ol>
 <hr>
 <h2 id="심화-내용">심화 내용</h2>
@@ -155,7 +192,7 @@ a[4,1] + b[1,3] : 가능</li>
 <ul>
 <li>tensorflow 1.x 버전은 placeholder를 통해 입력을 받는 객체를 생성하고, 실행시 session을 통해 feed 값을 전달한다. 즉 명시적으로 입력 형태를 구성해야 했다.</li>
 <li>tensorflow는 2.x 버전부터 python 프로그램처럼 라이브러리를 사용할 수 있도록 연산에 함수를 제공하고 있다. 함수를 사용하면 placeholder를 생략하고 사용할 수 있다.</li>
-<li>tensorflow 함수는 파이썬 함수처럼 정의하여 사용 가능하며, 컴파일시 속도 향상을 원한다면 <code>@tf.function</code> 데코레이터를 적용하면 된다.
+<li>tensorflow 함수는 파이썬 함수처럼 정의하여 사용 가능하며, 컴파일시 속도 향상을 원한다면 <code>@tf.function</code> 데코레이터를 적용하면 된다.<br>
 ex)</li>
 </ul>
 <pre><code>@tf.function
@@ -212,7 +249,7 @@ gradients3 = tape.gradient(y,a)
 <h4 id="선형-회귀-정의">선형 회귀 정의</h4>
 <ul>
 <li>
-<p>종속변수 y와 한개 이상으 ㅣ독립변수 x와의 선형 상관관계를 모델링하는 회귀분석 기법</p>
+<p>종속변수 y와 한개 이상의 독립변수 x와의 선형 상관관계를 모델링하는 회귀분석 기법</p>
 <ul>
 <li>단순 선형회귀 : 하나의 변수에 기반하여 동작</li>
 <li>다중 선형 회귀 : 둘 이상의 변수에 기반하여 동작</li>
@@ -234,6 +271,13 @@ gradients3 = tape.gradient(y,a)
 <p>일반적으로 최소제곱을 사용해 선형 회귀 모델을 구할 수 있다. (y = ax + b 형태)</p>
 <ul>
 <li>독립변수(x)가 증가하면 최소 제곱법으로 처리가 불가능하다.</li>
+</ul>
+</li>
+<li>
+<p>딥러닝에서는 y = wx + b 형태로 표현하는데, w 는 weight, b는 bias 를 뜻한다.</p>
+<ul>
+<li>weight : 가중치, 입력값 x의 영향도를 표현하는 상수</li>
+<li>bias : 기준점, 판단의 근거가 되는 식의 기준점을 표현하는 상수</li>
 </ul>
 </li>
 </ul>
@@ -301,6 +345,164 @@ with tf.GradleTape() as tape:
   hypothesis = W * x_data
   cost = tf.reduce_mean(tf.square)
 </code></pre><hr>
+<h3 id="로지스틱-회귀">로지스틱 회귀</h3>
+<ul>
+<li>
+<p>선형회귀와 함께 대표적인 딥러닝 알고리즘이다.</p>
+</li>
+<li>
+<p>독립변수의 선형 결합을 이용하여 사건 발생의 가능성을 예측하는데 사용되는 &lsquo;통계 기법&rsquo; 이다. (확률 계산)</p>
+</li>
+<li>
+<p>로지스틱 회귀는 종속변수와 독립변수 간의 관계를 함수로 나타내어 향후 예측모델에서 사용하므로, 독립변수의 선형 결합으 종속변수를 설명한다는 관점에서 선형 회귀분석과 유사하다.</p>
+</li>
+<li>
+<p>하지만, 로지스틱 회귀는 데이터의 결과가 특정 분류로 나뉘어 지기 때문에 classification 기법으로 볼 수 있다.</p>
+</li>
+<li>
+<p>이진 분류 문제, 즉 0과 1 중 하나를 판별하는 문제는 로지스틱 회귀를 이용하여 풀 수 있다.</p>
+</li>
+<li>
+<p>step function 혹은 sigmoid를 사용하는데, 보통 0과 1 사이의 확률값을 표현할 수 있는 sigmoid를 사용한다.</p>
+</li>
+</ul>
+<h4 id="시그모이드">시그모이드</h4>
+<ul>
+<li>
+<p>시그모이드 방정식은 아래와 같다.<br>
+<code>y = 1 / (1 + e &lt;sup&gt;-x&lt;/sup&gt;)</code></p>
+</li>
+<li>
+<p>e는 자연상수이며, 자연상수를 사용하였기 때문에 확률값으로 사용 가능하다.</p>
+</li>
+<li>
+<p>sigmoid 함수에 선형 회귀 함수를 대입하면 아래와 같이 된다.<br>
+<code>y = 1 / (1 + e &lt;sup&gt;(-wx+b)&lt;/sup&gt;)</code></p>
+</li>
+<li>
+<p>이 함수에 경사하강법을 이용하여 w와 b를 찾아낼 수 있다.</p>
+</li>
+<li>
+<p>w값이 증가하면 sigmoid 함수는 step function에 유사하게 경사가 가팔라 진다.</p>
+</li>
+<li>
+<p>b값이 증가하면 그래프가 우측 방향으로 이동한다.</p>
+</li>
+</ul>
+<h4 id="오차함수">오차함수</h4>
+<ul>
+<li>
+<p>로지스틱 회귀는 target이 0 또는 1 두가지라는 점에서 선형 회귀와 다르다.</p>
+</li>
+<li>
+<p>때문에 로지스틱 회귀는 오차함수도 두가지가 있다.</p>
+<ul>
+<li>정답이 0일 경우 -log(l-h) 그래프 형태이다.</li>
+<li>정답이 1일 경우 -log(h) 그래프 형태이다.</li>
+</ul>
+</li>
+<li>
+<p>정답값 0 혹은 1을 대입하면 원하는 오차함수가 나오는 식을 binary cross entropy 라 하고, 그 식은 다음과 같다.<br>
+<code>Y = -(Y * LOG(H) + (1-Y)*LOG(1-H))</code></p>
+</li>
+<li>
+<p>로지스틱 회귀법을 tensorflow 함수로 구현하면 아래와 같다.</p>
+</li>
+</ul>
+<pre><code># 6 by 2 형태의 x 데이터 학습값
+x_train = np.array([[1., 1.],
+                   [1., 2.],
+                   [2., 1.],
+                   [3., 2.],
+                   [3., 3.],
+                   [2., 3.]],
+                   dtype=np.float32)
+# 6 by 1 형태의 y 데이터 학습값
+y_train = np.array([[0.],
+                   [0.],
+                   [0.],
+                   [1.],
+                   [1.],
+                   [1.]],
+                   dtype=np.float32)
+
+# 이 학습값을 이용해 W와 b를 찾아본다.
+
+
+# 랜덤값을 위한 설정
+tf.random.set_seed(12345)
+# W와 b의 초기값을 랜덤하게 설정, x값이 [6, 2] 이므로 W 형태를 [2, 1] 로 해야 y 값인 [6, 1] 에 맞게 matmul이 가능하다.
+W = tf.Variable(tf.random.normal([2, 1], mean=0.0))
+b = tf.Variable(tf.random.normal([1], mean=0.0))
+
+print('weights: \n', W.numpy(), '\n\nbias: \n', b.numpy())
+
+# x값을 sigmoid 함수에 대입하여 y값을 반환하는 함수
+# x값의 shape가 [,2] 형태이므로 z = -(w1*x1 + w2*x2 + b) 가 된다.
+def predict(X):
+    z = tf.matmul(X, W) + b
+    hypothesis = 1 / (1 + tf.exp(-z))
+    return hypothesis
+
+# 반복 학습
+for i in range(2001):
+    with tf.GradientTape() as tape:
+        hypothesis = predict(x_train)
+        # cost : binary cross entropy 식으로 loss 값을 계산
+        cost = tf.reduce_mean(-tf.reduce_sum(y_train*tf.math.log(hypothesis) + (1-y_train)*tf.math.log(1-hypothesis)))
+
+        # w와 b로 편미분하여 오차값 계산
+        W_grad, b_grad = tape.gradient(cost, [W, b])
+
+        # 오차값에 learning rate를 적용한 결과값으로 w와 b를 재설정
+        W.assign_sub(learning_rate * W_grad)
+        b.assign_sub(learning_rate * b_grad)
+
+# 계산된 w,b를 사용하여 x, y에 대해 정상적으로 예측값이 나오는지 확인
+def acc(hypo, label):
+    # 0.5 이상이면 0, 이하이면 1의 확률이 더 높으므로, 0.5를 기준으로 0 또는 1로 치환해 준다.
+    predicted = tf.cast(hypo &gt; 0.5, dtype=tf.float32)
+    # 정확도 = 계산값과 정답을 비교하여 맞으면 1점, 틀리면 0점으로 판단한 후 전체 점수를 평균 낸 값
+    accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, label), dtype=tf.float32))
+    return accuracy
+
+# 결과 계산
+accuracy = acc(predict(x_train), y_train).numpy()
+</code></pre><h3 id="퍼셉트론">퍼셉트론</h3>
+<ul>
+<li>퍼셉트론은 뉴럴 네트워크의 기본이 되는 개념으로, 인간의 신경망을 본따 프랑크 로젠블라트가 1957년에 고안한 알고리즘이다.</li>
+<li>인간의 신경망은 외부 자극을 입력으로 받아 뉴런을 타고 신호가 전달된다. 뉴런과 뉴런 사이의 시냅스에서 신호를 전달하려면 역치값을 넘겨야 신호가 전달된다.</li>
+<li>퍼셉트론은 입력을 받아 가중합(w1<em>x1 + w2+x2 + &hellip; + wi</em>xi+ b)을 취하고, 활성화 함수(sigmoid)를 거쳐 출력값을 생성한다.</li>
+</ul>
+<h4 id="다층-퍼셉트론">다층 퍼셉트론</h4>
+<ul>
+<li>
+<p>한 개의 퍼셉트론은 여러 문제를 해결할수 있다.</p>
+<ul>
+<li>좌표 평면에서 선 하나로 그룹을 구분지을 수 있는 경우에 해당한다.</li>
+<li>대표적인 모델로는 AND모델, OR 모델이 있다.</li>
+</ul>
+</li>
+<li>
+<p>하지만 단일 퍼셉트론으로 풀지 못하는 문제도 존재한다.</p>
+<ul>
+<li>XOR 모델이 대표적이다. 선 하나를 그어서 그룹을 분류할 수 없다.</li>
+</ul>
+</li>
+<li>
+<p>XOR 모델은 OR 퍼셉트론과 NAND 퍼셉트론을 1차적으로 수행하고, 두 수행에 대한 결과를 AND 연산하면 구할 수 있다. 이를 그래프로 표현하면 아래와 같다.</p>
+</li>
+</ul>
+<pre><code>0층     1층     2층
+x1   →   s1  ↘  
+   ↘ ↗         y
+   ↗ ↘         
+x2   →   s2  ↗  
+</code></pre><ul>
+<li>다중 퍼셉트론은 여러 layer를 두고 연산을 한다는 의미이며, layer가 증가하면 더 많이 분석된다는 뜻.</li>
+<li>0층(가장 처음)은 input layer, 2층(가장 마지막)은 output layer, 그 사이의 layer는 hidden layer라 칭한다.</li>
+<li>hidden layer를 많이 만들면 대체로 데이터를 많이 분석하여 더 좋은 결과를 낼 수 있다고 할 수 있다.</li>
+</ul>
 <h2 id="모델">모델</h2>
 <ul>
 <li>딥 러닝을 위한 신경망 구조를 모델이라 한다</li>
