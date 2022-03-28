@@ -7,7 +7,7 @@
 <body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Tensorflow</h1><p class="article date">Nov 27, 2021<span class="reading-time"> • 10 minutes to read</span></p></section><article class="article markdown-body"><p>#Tensorflow</p>
+    <h1 class="article title">Tensorflow</h1><p class="article date">Nov 27, 2021<span class="reading-time"> • 23 minutes to read</span></p></section><article class="article markdown-body"><p>#Tensorflow</p>
 <ul>
 <li>TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다.</li>
 </ul>
@@ -39,9 +39,28 @@
 <ol>
 <li>matplotlib</li>
 <li>numpy</li>
-<li>keras (tensorflow 설치시 자동성치된다)</li>
 </ol>
-<hr>
+<ul>
+<li><code>data = np.loadtxt(FILE_NAME, delimiter=',')</code> : ,를 기준으로 데이터를 나누는 csv 파일을 읽어들임. 숫자 데이터를 읽을 때 사용</li>
+</ul>
+<ol>
+<li>keras (tensorflow 설치시 자동성치된다)
+<code>y_encoded = to_categorical(y_data)</code> : y_data 를 one-hot-encoding 하는 함수  (tensorflow.keras.utils.to_categorical)</li>
+<li>pandas</li>
+</ol>
+<ul>
+<li><code>df = pd.read_csv(FILE_NAME)</code> : csv 파일을 읽어서 dataframe을 구성한다. 숫자 및 문자열 데이터를 읽을 때 사용 가능</li>
+</ul>
+<ol>
+<li>sklearn</li>
+</ol>
+<ul>
+<li>데이터 전처리</li>
+</ul>
+<pre><code>e = sklearn.preprocessing.LabelEncoder()
+e.fit(data)  # data 에 들어있는 값 중 unique한 값을 뽑아(중복 제거) 특정 string에 번호를 매기는(indexing) 함수
+data = e.transform(data)  # indexing 된 정보를 바탕으로 실제 data값을 index로 치환
+</code></pre><hr>
 <h2 id="기본-문법">기본 문법</h2>
 <ol>
 <li>상수 선언<br>
@@ -296,7 +315,7 @@ gradients3 = tape.gradient(y,a)
 <p>즉,  y = ax + b 에서 (x,y)를 입력으로 받고 a,b를 추론한다. 이러한 계산 식을 오차방정식이라 한다.</p>
 </li>
 <li>
-<p>오차의 합 = sum(예측값 - 정답)^2</p>
+<p>오차의 합 = ∑ (예측값 - 정답)²</p>
 </li>
 <li>
 <p>MSE : Mean Squared Error, 평균제곱오차 = (오차의 합) / n</p>
@@ -468,7 +487,8 @@ def acc(hypo, label):
 
 # 결과 계산
 accuracy = acc(predict(x_train), y_train).numpy()
-</code></pre><h3 id="퍼셉트론">퍼셉트론</h3>
+</code></pre><hr>
+<h3 id="퍼셉트론">퍼셉트론</h3>
 <ul>
 <li>퍼셉트론은 뉴럴 네트워크의 기본이 되는 개념으로, 인간의 신경망을 본따 프랑크 로젠블라트가 1957년에 고안한 알고리즘이다.</li>
 <li>인간의 신경망은 외부 자극을 입력으로 받아 뉴런을 타고 신호가 전달된다. 뉴런과 뉴런 사이의 시냅스에서 신호를 전달하려면 역치값을 넘겨야 신호가 전달된다.</li>
@@ -503,16 +523,359 @@ x2   →   s2  ↗
 <li>0층(가장 처음)은 input layer, 2층(가장 마지막)은 output layer, 그 사이의 layer는 hidden layer라 칭한다.</li>
 <li>hidden layer를 많이 만들면 대체로 데이터를 많이 분석하여 더 좋은 결과를 낼 수 있다고 할 수 있다.</li>
 </ul>
+<h3 id="오차-역전파">오차 역전파</h3>
+<ul>
+<li>
+<p>은닉층에 있는 각각의 w와 b를 구하는 방법이다.</p>
+</li>
+<li>
+<p>다층 퍼셉트론을 구성하면 각 layer마다 w와 b값이 구성되는데, 이때 오차를 구하기 위해 미분값을 구하는 것이 쉽지 않다.</p>
+<ul>
+<li>미분 안에 연결된 식이 많기 때문</li>
+<li>layer의 개수는 변동될 수 있기 때문에 계산이 복잡하다</li>
+</ul>
+</li>
+<li>
+<p>이 문제를 해결하기 위해 1980년도 오차 역전파 알고리즘이 발명된다. 이전에도 w와 b를 구할수는 있었지만, 구하는 방법에 대해 규칙성을 찾지는 못했다.</p>
+</li>
+</ul>
+<h4 id="오차-역전파-개요">오차 역전파 개요</h4>
+<ul>
+<li>최적화의 계산 방향이 output layer 에서 input layer 방향으로 진행된다. 이 떄문에 이 알고리즘을 back propagation 이라 부른다.</li>
+<li>퍼셉트론에서 w와 b값을 찾기 위해 오차가 작아지는 방향으로(기울기가 0이 되는 방향으로) 업데이트 해 나갔는데, 다층 퍼셉트론에서는 다음 식으로 가중치를 변화시켜 나간다.
+<ul>
+<li><code>W(t+1) = W * t - (∂오차) / (∂w)</code>: 새 가중치는 현 가중치에서 가중치에 대한 기울기를 뺀 값</li>
+</ul>
+</li>
+</ul>
+<h4 id="출력층-오차">출력층 오차</h4>
+<ul>
+<li>다층 퍼셉트론의 각 노드는 (1)입력값을 이용해 가중합을 만들고, (2) 가중합을 활성화 함수를 적용해 출력하는 두 단계를 수행한다.</li>
+<li>3개 layer를 가지는 형태를 표현하면 아래와 같다.
+<ul>
+<li>yh1, yh2 : hidden layer의 출력값</li>
+<li>y_out1, y_out2 : output layer의 출력값, 예측값</li>
+</ul>
+</li>
+</ul>
+<pre><code>0층               1층                                       2층
+x1 (w11)→ [가중합1 -&gt; 활성화함수1]  →    yh1 (w31)→ [가중합3 -&gt; 활성화함수3]  → y_out1
+ (w21)↘  ↗                              (w41)↘  ↗
+ (w12)↗  ↘                              (w32)↗  ↘
+x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합4 -&gt; 활성화함수4]  → y_out2
+</code></pre><ul>
+<li>
+<p>오차 역전파는 y_out 값에서 반대로 진행하여 가중치 w를 업데이트 한다.</p>
+</li>
+<li>
+<p><code>w31(t+1) = w31 * t - (∂오차 y_out)/(∂w31)</code> : 현재 weight에 미분값을 빼주면 다음 weight가 된다.</p>
+</li>
+<li>
+<p>오차 y_out 안에는 여러개의 출력값이 존재할 수 있다. (output layer의 node 개수만큼)</p>
+</li>
+<li>
+<p>y_out 안의 각각의 예측값에 대한 오차는 MSE를 이용해 구한다.</p>
+<ul>
+<li>output layer의 node가 n개라고 하면, k번째 오차는 다음과 같다. <code>오차_y_out_k = (y_target_k - y_out_k)² / n</code></li>
+</ul>
+</li>
+<li>
+<p>오차 역전파로, y_out1 값의 오차로 w31을 업데이트 해 보자.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>오차의 값은 <code>∂오차y_out / ∂w31</code> 이다.</p>
+</li>
+<li>
+<p>chain rule에 의해 <code>∂오차y_out / ∂w31 = (∂오차y_out / ∂y_out1) * (∂y_out1 / ∂가중합3) * (∂가중합3 / ∂w31)</code> 가 성립한다. 이 식의 우항을 각각 나누어 계산하여 보자.
+2-1) <code>(∂오차y_out / ∂y_out1)</code>을 y_out1에 의해 편미분을 하면 y_out1과 관계없는 y_out2는 상수가 되어 사라진다. <code>y_out = y_out1 + y_out2 = (y_target1 - y_out1)² / 2 + (y_target2 - y_out2)² / 2</code> 이기때문에 최종 식은 <code>(∂오차y_out / ∂y_out1) = 1/2 * ∂(y_target1 - y_out1)² / ∂y_out1 = y_out1 - y_target1</code> 가 된다.
+2-2) <code>(∂y_out1 / ∂가중합3)</code> 은 &lsquo;활성화함수3&rsquo;을 미분 해 주는것과 같다.<br>
+우리는 활성함수로 시그모이드를 사용했고, 시그모이드의 미분은 <code>∂σ(x) / ∂x = σ(x) * (1 - σ(x))</code> 이다.<br>
+따라서 <code>∂y_out1 / ∂가중합3 = y_out1 * (1 - y_out1)</code> 이 된다.
+2-3) <code>가중합3 = w31 * yh1 + w41 * yh2 + 1(bias)</code> 형태인데, <code>(∂가중합3 / ∂w31)</code> 식에 첫 식을 대입하면 <code>(∂가중합3 / ∂w31 = yh1</code> 이 된다.</p>
+</li>
+<li>
+<p>(2)에서 구한 세 식을 합하면 <code>(y_out1 - y_target1) * (y_out1 * (1 - y_out1)) * (yh1)</code> 형태이다. 이때,<br>
+<code>y_out1 - y_target1</code> 은 출력값, <code>y_out1 * (1 - y_out1)</code> 은 활성화함수의 미분 값이다. 이를 활용하여 델타 식으로 표현하면<br>
+<code>w31(t + 1) = w31 * t - δ * y * yh1</code> 이 된다. (<code>δ * y = (y_out1 - y_target1) * (y_out1 * (1 - y_out1))</code>)</p>
+</li>
+</ol>
+<h4 id="은닉층-오차">은닉층 오차</h4>
+<ul>
+<li>
+<p>위에서 w31을 구했고, 이제 w11을 구해보자</p>
+</li>
+<li>
+<p>w31은 y_out1에만 영향을 주고, y_out2에는 영향을 주지 않았다. 하지만 w11은 y_out1과 y_out2에 모두 영향을 주어서 식의 복잡도가 높다.</p>
+</li>
+<li>
+<p>점화식을 표현하면 <code>w11(t+1) = w11 * t - (∂오차 y_out) / ∂w11</code> 가 된다.</p>
+<ol>
+<li><code>(∂오차 y_out) / ∂w11 = (∂오차 y_out) / ∂yh1 * (∂yh1/∂가중합1) * (∂가중합1/∂w11)</code> 형태로 chain rule을 사용할 수 있다.</li>
+<li><code>(∂yh1/∂가중합1)</code> 은 activation 함수의 미분값이므로, <code>(∂yh1/∂가중합1) = yh1(1 - yh1)</code> 이 된다.</li>
+<li>가중합을 w에 의해 미분하면 입력값이 된다. 따라서 <code>(∂가중합1/∂w11) = x1</code></li>
+<li><code>(∂오차 y_out) / ∂yh1 = ∂(오차y_out1 + 오차y_out2)/∂yh1 = ∂오차y_out1/∂yh1 + ∂오차y_out2/∂yh1</code><br>
+5-1) 4 식을 나눠서 계산해보자. 먼저  <code>∂오차y_out1/∂yh1 = ∂오차y_out1 / ∂가중합3 * ∂가중합3 / ∂yh1'   5-1-1) 이때 </code>∂가중합3 / ∂yh1 = ∂(w31 * yh1 + w32 * yh2)/∂yh1 = w31<code>5-1-2) </code>∂오차y_out1 / ∂가중합 = (∂오차y_out1 / ∂y_out1) * (∂y_out1 / ∂가중합3) = ( y_out1 - y_target1) * w31  * (1-y_out1) * y_out1<code> (</code>∂오차y_out1 / ∂y_out1<code>는 오차를 의미하고,</code>∂y_out1 / ∂가중합3<code>는 활성함수의 미분값을 의미하기 때문)   5-1-3) 최종적으로</code>∂오차y_out1 / ∂yh1 = (y_out1 - y_target1) * w31 * (1 - y_out1) * y_out1 = δy_out1 * w31<code>형태로 델타식을 만들 수 있다.   5-2)  다음</code>∂오차y_out2/∂yh1<code>도 5-1 에서 사용한 방식으로 계산하면 </code>∂오차y_out2/∂yh1 = δy_out2 * w41<code>형태가 된다.   5-3) 위 값들로 4 에서 봤던 식을 구성하면 </code>(∂오차 y_out) / ∂yh1 = δy_out1 * w31 + δy_out2 * w41` 이 된다.</li>
+<li>2, 3, 5-3 에서 나온 값으로 1식을 재구성해보면 <code>(∂오차 y_out) / ∂w11 = (δy_out1 * w31 + δy_out2 * w41) * yh1(1 - yh1) * x1</code> 이다.</li>
+</ol>
+</li>
+<li>
+<p>출력층의 오차 업데이트 : <code>(y_out1 - y_target1) * y_out1 * (1 - y_out1) * yh1</code></p>
+<ul>
+<li><code>(y_out1 - y_target1)</code> : 오차</li>
+</ul>
+</li>
+<li>
+<p>은닉층의 오차 업데이트 : <code>(y_out1 * w31 + y_out2 * w41) * yh1 * (1-yh1) * x1</code></p>
+<ul>
+<li><code>(y_out1 * w31 + y_out2 * w41)</code> : hidden layer를 통해 출력값을 미분한 값</li>
+</ul>
+</li>
+<li>
+<p>&lsquo;출력층의 오차 업데이트&rsquo;와 &lsquo;은닉층의 오차 업데이트&rsquo;는 공통적으로 <code>y_out(1 - y_out) * x</code> 의 형태(sigmoid function 미분 * 입력값)를 지니고 있다.</p>
+</li>
+<li>
+<p>은닉층의 가중치 업데이트를 델타식으로 표현하면  <code>w11(t+1) = w11 * t - δh * x1</code> 이다.</p>
+</li>
+<li>
+<p>델타식으로 표현하면 generic 한 형태로 식을 가져갈 수 있어 꼭 필요하다.</p>
+</li>
+</ul>
+<hr>
+<h3 id="그래디언트-소실gradient-vanishing">그래디언트 소실(gradient vanishing)</h3>
+<ul>
+<li>다층 퍼셉트론을 사용할 때, 층이 많을 수록 데이터 분석 능력이 높아지지만, 실제로는 분석 증가량이 미미하다. 이는 활성화 함수 때문이다.
+<ul>
+<li>가중치를 수정할 때, 오차 값을 미분한 값을 사용하였다.</li>
+<li>각 층의 activation function 으로 sigmoid를 사용했는데, sigmoid 함수는 미분시 최대치가 0.3 밖에 되지 않는다.</li>
+<li>층을 지날수록 activation function을 여러번 거치는데, sigmoid의 미분값을 여러번 거치게 되면 미분값이 중간에 0이 되어버리는 현상(vanishing gradient) 문제가 발생한다.</li>
+<li>층을 거쳐 갈수록 기울기가 사라져 가중치를 수정할 값이 소실되어 뒤쪽 layer는 더이상 학습이 되어지지 않는다.</li>
+</ul>
+</li>
+<li>그래디언트 소실 문제를 해결하기 위해 sigmoid를 대체할 다른 활성화함수들이 만들어 졌다.
+<ul>
+<li>하이퍼볼릭 탄젠트 : 미분 최대값 1, 소실문제를 약화시킬 순 있지만 해결되진 않는다.</li>
+<li>렐루 : 0미만은 미분값 0, 0이상은 미분값 1. 많은 층을 사용할 때는 relu를 많이 사용한다.</li>
+<li>소프트플러스</li>
+</ul>
+</li>
+</ul>
+<h4 id="xavier와--he-초기화">xavier와  he 초기화</h4>
+<ul>
+<li>초기 w와 b 할당시 표준편차가 1이고, 평균이 0인 정규분포를 사용하였다.</li>
+<li>이렇게 되면 node를 통과한 결과값이 0과 1에 치중되어 있는 형태를 볼 수 있다.</li>
+<li>표준편차를 0.01을 주면 결과값이 0.5로 치중되게 된다. 이렇게 되면 layer를 몇개를 쓰던 layer가 하나인 경우와 동일한 효과가 나온다. 이를 표현력의 제한이라 한다.</li>
+<li>이러한 문제점을 xavier 방법을 사용하면 해결할수 있다.
+<ul>
+<li>가중치 초기화를 설정하는 방법으로, 결과값의 분포를 더 광범위하게 설정할 수 있게 하는 방법이다.</li>
+<li><code>√(2/n_in + n_out)</code> 형태로 최초 사용하는 분포를 만들게 되면 더 광범위한 형태로 만들 수 있다. (n_in : layer의 입력node 개수, n_out : layer의 출력node 개수)</li>
+<li>우리는 입력,출력 값이 같은 hidden layer를 사용하므로 <code>√(1/n)</code> 형태를 가진다.</li>
+</ul>
+</li>
+<li>단, xavier 방식은 좌우 대칭인 activation function 에서는 효과적이지만, relu와 같은 좌우 비대칭 형태의 activation function에서는 한쪽으로 치우친 결과값이 얻어진다.</li>
+<li>이때는 &lsquo;카밍 히&rsquo;의 이름을 따서 he 초기값을 사용한다.
+<ul>
+<li><code>√2/n</code> 의 정규분포 값을 사용한다. (분포 범위를 더 넓게 잡는다)</li>
+</ul>
+</li>
+</ul>
+<h3 id="고속-옵티마이저">고속 옵티마이저</h3>
+<ul>
+<li>옵티마이저란 경사하강법을 뜻한다. 고속 옵티마이저란 경사 하강법을 더 효율적으로 하는 방법이다.</li>
+<li>경사 하강법은 대체로 학습 속도와 정확도 문제를 갖고 있다. (learning rate 혹은 data에 의해 발생)
+<ul>
+<li>경사 하강법은 업데이트 시마다 전체 데이터에 대해 미분을 계산하여야 하여 속도가 매우 느리다.</li>
+<li>학습률이 너무 크면 더이상 최적값으로 수렴하지 못하는 경우가 있다.</li>
+</ul>
+</li>
+<li>경사 하강법은 구현하기 쉽고 단순하다는 장점이 이 있지만, 비등방성 함수에서는 탐색 경로가 비효율적이다. (ex: <code>f(x,y) = 1/20x^2 + y^2</code> 와 같은 타원형 형태)
+<ul>
+<li>y축은 가파르지만, x축 변동은 거의 없다. 최적값은 (0,0) 이지만 미분으로 기울기 값을 구하면 (0,0) 이 아닌 다른 방향을 가리킬 확률이 매우 높다.</li>
+<li>정상적으로 도달하더라도 지그재그 형태로 비효율적인 방식으로 이동하게 된다.</li>
+</ul>
+</li>
+<li>경사 하강법은 무작정 기울어진 방향으로 진행하기 때문에 간단하지만 위와같은 문제점을 야기한다.</li>
+<li>경사 하강법의 문제점을 개선해 주는 모델들로는 &lsquo;모멘텀&rsquo;, &lsquo;adagrad&rsquo;, &lsquo;adam&rsquo; 등이 있다.</li>
+</ul>
+<h4 id="모멘텀">모멘텀</h4>
+<ul>
+<li>모멘텀 알고리즘은 물리 현상의 운동량에 착안하여 만들어 졌다.</li>
+<li>이전 회차의 미분값 중 일정 비율을 반영하여 현재 weight 값 설정에 영향을 주도록 하여 더 빠르게 최적점을 찾을 수 있도록 하는 방식이다.
+<ul>
+<li>기존에는 현재 미분값 * 학습률을 현재 w에 빼주었지만, 모멘텀에서는 (일정 비율) * (이전 미분값) - (학습률) * (현재 미분값) 을 현재 w에 더해준다.</li>
+<li>이 값은 <code>V(t) = γ*v(t-1) - η*∂오차/∂w(t)</code> 로 표현한다.</li>
+<li>즉, <code>W(t+1) = W(t) + V(t)</code> 와 같은 식이 된다.</li>
+<li>이전의 미분값을 일부 적용함으로써 현재 미분값을 상충하는 효과를 얻을 수 있다. 이를 통해 학습 속도를 높일 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="네스테로프-모멘텀">네스테로프 모멘텀</h4>
+<ul>
+<li>네스테로프 모멘텀에서는 w를 업데이트 할 때 <code>γ*v(t-1) - η*∂오차/∂w(t)</code> 값 대신 <code>γ*v(t-1) - η*∂오차/∂(w(t) + γ*v(t-1))</code> 를 사용한다.</li>
+<li>모멘텀 방법으로 이동될 방향을 미리 예측하여 해당 방향으로 한단계 미리 이동한 그래디언트 값을 사용함으로써 불필요한 이동을 줄일 수 있다. 속도는 그대로이지만 단계를 절약할 수 있다.</li>
+</ul>
+<h4 id="아다그리드">아다그리드</h4>
+<ul>
+<li>학습률을 조절하여 효율을 높인 모멘텀이다.</li>
+<li>아다그라드는 weight값이 업데이트 될 때 마다 점점 최적점을 찾아간다고 가정하고, 학습을 시킬때 마다 일정량의 learning rate를 떨어뜨린다.</li>
+<li>학습률을 변화시키기 위해 G(t)값을 <code>G(t) = G(t-1) + [∂오차/∂w(t)]^2</code> 형태로 가져가며, 최종적으로 <code>W(t+1) = W(t) + η * (1/√G(t) + ε) * ∂오차/∂w(t)</code> 형태가 된다. (ε 는 0이 되는것을 방지하기 위해 더해주는 아주 작은 상수값)</li>
+</ul>
+<h4 id="rmsprop">RMSprop</h4>
+<ul>
+<li>아다그라드에서 G(t)는 무한히 커지게 되는 문제점이 있다.</li>
+<li>이를 해결하기 위해 <code>G(t) = γ * G(t-1) + (1-γ) * [∂오차/∂w(t)]^2</code> 형태를 취한다.</li>
+<li>&lsquo;γ&rsquo; 값을 이용해 G(t) 값을 조절할 수 있도록 하였다.</li>
+</ul>
+<h4 id="adam">Adam</h4>
+<ul>
+<li>
+<p>RMSprop의 정확도, 모멘텀 방식의 속도 장점을 모두 취하는 방식이다.</p>
+</li>
+<li>
+<p>RMSprop의 G(t) 값과 모멘텀의 V(t) 값을 유사하게 구하여 사용한다.</p>
+<ul>
+<li><code>V(t) = γ_1 * G(t) + (1 - γ_1) * ∂오차/∂w(t)</code></li>
+<li><code>G(t) = γ_2 * G(t) + (1 - γ_2) * [∂오차/∂w(t)]^2</code></li>
+</ul>
+</li>
+<li>
+<p>V(t)와 G(t) 값을 조절하여 V&rsquo;(t), G&rsquo;(t) 를 만들어 W(t+1) 을 구한다.</p>
+<ul>
+<li><code>V'(t) = V(t) / (1-r_1^t)</code></li>
+<li><code>G'(t) = G(t) / (1-r_2^t)</code></li>
+<li><code>W(t+1) = W(t) - η * (G'(t) / √(V'(t) + ε))</code></li>
+</ul>
+</li>
+<li>
+<p>이때까지 내용을 모두 분석해 보면 전반적으로 adam 옵티마이저가 좋은 성능을 내기는 한다.</p>
+</li>
+<li>
+<p>하지만 항상 adam이 최적의 효율을 내지는 않는다. 이는 데이터 형태가 다르기 때문이다.</p>
+</li>
+<li>
+<p>데이터 형태에 따라 취해지는 패턴과 오차 그래프의 모양이 다르기 때문이다.</p>
+</li>
+<li>
+<p>gradient descent, momentum, adagrid, adam, RMSprop 중 어느것이 효과가 좋은지 확인이 필요하다.</p>
+</li>
+</ul>
+<h3 id="다중-분류">다중 분류</h3>
+<ul>
+<li>입력값을 기준으로 단순 0 또는 1을 판단하는게 아니라, 여러 class 중 하나로 분류하는 모델을 알아보자</li>
+<li>출력 node 개수를 분류되는 항목 개수로 설정한다.</li>
+<li>활성화 함수를 적용하려면 Y값이 0과 1로 이루어져 있어야 한다. (100% 혹은 0%)
+<ul>
+<li>출력 node가 하나라면 Y값은 0 또는 1이면 되지만, 2개 이상이라면 배열이 되어야 한다.</li>
+<li>1 =&gt; [1,0,0], 2 =&gt; [0,1,0], 3 =&gt; [0,0,1] 형태로 변형해서 사용해야 한다.</li>
+<li>이렇게 Y값을 0 또는 1로만 이루어진 형태로 바꾸어주는 기법을 one-hot-encoding 이라 한다.</li>
+<li>텐서플로에서 <code>one_hot()</code> 함수를 지원한다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="softmax">softMax</h4>
+<ul>
+<li>classification 문제를 풀 때 점수 벡터를 클래스 별 확률로 변환하기 위해 사용하는 함수이다.</li>
+<li>각 점수 벡터에 지수를 취한 후 정규화 상수로 나누어 총합이 1이 되도록 계산한다.
+<ul>
+<li>exponential을 취하는 이유는 값이 클 수록 훨씬 더 높은 점수를 갖게 하기 위함이다.</li>
+<li><code>y_k = exp(a_k) / ∑&lt;i=1,n&gt; exp(a_i)</code></li>
+</ul>
+</li>
+<li>softMax는 exponential을 사용하기 때문에 큰 값의 나눗셈을 수행해야 하여 overflow가 발생하기 쉽다.</li>
+<li>수식을 개선하여 다음과 같이 사용한다. (keras에서도 개선된 수식을 사용함)</li>
+</ul>
+<pre><code>y_k = exp(a_k) / ∑&lt;i=1,n&gt; exp(a_i)
+    = C * exp(a_k) / C * ∑&lt;i=1,n&gt; exp(a_i)
+    = exp(a_k + log C) / ∑&lt;i=1,n&gt; exp(a_i + log C)
+    = exp(a_k + C') / ∑&lt;i=1,n&gt; exp(a_i + C')
+</code></pre><h4 id="cross-entropy">Cross Entropy</h4>
+<ul>
+<li>softmax 에서 사용하는 오차방정식</li>
+<li>cross entrpoy는 서로 다른 두 값의 확률 차이를 나타낼 수 있다.</li>
+<li><code>E = - ∑&lt;k&gt; t_k * log y_k</code> 형태를 가진다.
+<ul>
+<li>ex) 정답이 [0, 1] 이고, 결과가 [1, 0] 인 경우, <code>E = 0 * log1 + 1 * log0 = ∞</code></li>
+<li>ex) 정답이 [0, 1] 이고, 결과가 [0, 1] 인 경우, <code>E = 1 * log1 + 0 * log0 = 0</code></li>
+</ul>
+</li>
+</ul>
 <h2 id="모델">모델</h2>
 <ul>
 <li>딥 러닝을 위한 신경망 구조를 모델이라 한다</li>
 </ul>
+<h3 id="모델-정의-방법과-최적화">모델 정의 방법과 최적화</h3>
+<ul>
+<li>x 데이터는 attribute, y 데이터는 class라 칭한다.</li>
+</ul>
+<ol>
+<li>입력층, 은닉층, 출력층 구성</li>
+</ol>
+<ul>
+<li>아래 내용들은 일반적인 경우에 해당하는 경우이므로, 실제 모델 정의시에는 직접 확인해볼 필요가 있다.</li>
+</ul>
+<ol>
+<li>데이터에 맞게 입력층의 node 개수를 결정한다.</li>
+<li>얕은 신경망보다 심층 신경망이 효율적인 파라미터를 구성한다. (하나씩 layer를 늘려가 본다.)</li>
+<li>은닉층의 노드 개수를 입력 노드 개수보다 많이 편성한다. (무조건은 아니므로 확인 필요)</li>
+<li>결정할 수 있는 데이터를 조금씩 줄여 깔때기 모양으로 은닉층을 설정하는게 좋다. (갈수록 node 개수를 줄여감)</li>
+<li>첫 은닉층의 노드 개수는 과대적합(over fitting)이 시작되기 전까지 뉴런 수를 점진적으로 늘리는 것이 좋다.</li>
+<li>은닉층이 많아질수록 ReLU 함수를 사용하는것이 좋다.(vanishing 현상 방지)</li>
+<li>출력층의 활성화 함수를 결정하고, 출력층의 활성화 함수에 따라 오차함수도 결정한다.</li>
+</ol>
+<ul>
+<li>둘중 하나를 선택한다면 sigmoid 함수와 binary_crossentropy 를 사용한다.</li>
+</ul>
+<ol>
+<li>다중분류 모델링</li>
+</ol>
+<ol>
+<li>데이터의 속성에 맞게 입력 node의 수 구성</li>
+<li>문자열로 된 class 값을 indexing 하고, one-hot-encoding으로 값을 변형해준다.</li>
+<li>class의 개수에 맞게 출력층 node 개수를 설정한다.</li>
+<li>활성화 함수 및 오차방정식으로 softMax와 categorical cross-entropy를 적용한다.</li>
+</ol>
 <h3 id="생성-방법">생성 방법</h3>
 <ol>
 <li>tensorflow.keras.Sequential : Sequential 함수를 이용하는 방법</li>
 <li>functional approach : 직접 함수를 구성하는 방법</li>
 <li>tensorflow.keras.Model : Model 클래스를 상속하고 재정의하여 사용하는 방법</li>
 </ol>
+<h4 id="kerassequential">Keras.Sequential</h4>
+<ul>
+<li>keras를 이용해서 sequential 모델을 생성하는 방법</li>
+<li><code>model = Sequential()</code> : sequential 한 layer 형태를 가진 모델을 생성</li>
+<li><code>model.add(Dense(units =2, activation='sigmoid', input_dim = 2))</code> : layer 추가
+<ul>
+<li>node 수가 2개</li>
+<li>activation function이 sigmoid</li>
+<li>입력값이 2차원 형태</li>
+<li>input 인자는 첫번 째 hidden layer에만 사용해 주면 된다.</li>
+</ul>
+</li>
+<li><code>model.compile(loss='binary_crossentropy', optimizer='sgd', metrics=['accuracy'])</code> : model 객체를 어떤 형태로 학습시킬지 정의
+<ul>
+<li>binary_crossentropy 를 loss function으로 설정</li>
+<li>optimizer로 sdz 설정</li>
+<li>실행될 때 마다 loss 값과 accuracy 값을 출력으로 보여줌</li>
+</ul>
+</li>
+<li><code>model.fit(x_train, y_train, epochs=50000, batch_size = 10)</code> : model에 training 실행
+<ul>
+<li>x_train, y_train : 학습용 x, y 데이터</li>
+<li>epochs : 학습 데이터를 통해 반복 학습시킬 횟수</li>
+<li>batch_size : 입력 데이터를 몇 묶음 단위로 전달할지 설정, 하나씩 학습하는 것 보다 학습률 출렁임이 더 안정적이다.</li>
+</ul>
+</li>
+<li><code>model.layers[0].get_weights()[0]</code> :
+<ul>
+<li>model.layers 는 입력 layer을 0번째 index로 하여 특정 layer를 반환</li>
+<li>get_weights() 는 해당 layer의 [weight, bias] 를 담고 있는 배열을 반환</li>
+</ul>
+</li>
+<li><code>model.predict(x_predict)</code> : 학습된 모델에 x_predict 값을 넣을 시 특정 y 값을 추정하여 반환하는 함수</li>
+<li><code>model.evaluate(x_data, y_data)</code> : 학습된 모델에 입력값(x_data)과 정답(y_data) 를 전달받아 [loss, accuracy] 를 반환하는 함수</li>
+</ul>
 </article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/tensorflow/>tensorflow</a><a class="tag" href=/tags/deep-learning/>deep learning</a><a class="tag" href=/tags/python/>python</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
 <div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/golang/"><span class="li iconfont icon-article"></span>Golang</a></p><p><a class="link" href="/post/kivy/"><span class="li iconfont icon-article"></span>Kivy</a></p></section></div></section><section id="footer"><div class="footer-wrap">
