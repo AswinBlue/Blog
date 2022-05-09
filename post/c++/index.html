@@ -84,6 +84,24 @@ printf(&quot;%d&quot;,MULT(2+2,3+3)) // 예상값 (4 * 6) * 2 = 26
 <li>pragma once 사용</li>
 </ol>
 <pre><code>#pragma once // 일부 컴파일러에서만 지원
+</code></pre><h2 id="입출력-redirection">입출력 redirection</h2>
+<ol>
+<li>입력 재설정</li>
+</ol>
+<ul>
+<li><code>freopen(&quot;in.txt&quot;, &quot;r&quot;, stdin);</code> : &lsquo;in.txt&rsquo; 파일을 표준입력 대신 사용</li>
+</ul>
+<h2 id="cin-cout">cin cout</h2>
+<ol>
+<li>속도 향상</li>
+</ol>
+<ul>
+<li>cin, cout을 사용하면 printf, scanf보다 속도가 느리다.</li>
+<li>아래 코드로 세팅을 해 주면 출력 속도가 빨라진다. 하지만 printf, scanf와 함께 사용하면 순서가 섞이게 되니 설정 후에는 cin, cout만 사용하여야 한다.</li>
+</ul>
+<pre><code>ios_base :: sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
 </code></pre></article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/c&#43;&#43;/>c&#43;&#43;</a><a class="tag" href=/tags/basic/>basic</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
 <div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/react_basic/"><span class="li iconfont icon-article"></span>React basic</a></p><p><a class="link" href="/post/cmake/"><span class="li iconfont icon-article"></span>CMake</a></p></section></div></section><section id="footer"><div class="footer-wrap">

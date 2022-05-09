@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>VsCode&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="VsCode" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+     crossorigin="anonymous"></script>
+<body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">VsCode</h1><p class="article date">Apr 16, 2022<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="vs-code">VS code</h1>
+<ul>
+<li>visual studio code 사용법</li>
+</ul>
+<h2 id="개발환경">개발환경</h2>
+<h3 id="c--c">C / C++</h3>
+<ol>
+<li>컴파일러</li>
+</ol>
+<ul>
+<li>gcc 혹은 mingw 설치가 필요하다. 인터넷에서 설치하도록 한다.</li>
+</ul>
+<ol>
+<li>설정파일</li>
+</ol>
+<ul>
+<li>컴파일 및 실행을 위해서는 launch.json, setting.json, tasks.json 파일이 필요하다.</li>
+<li>vs code에서 알아서 작성해 주지만, 기본 설정으로 부족한 부분은 수정해야 한다.</li>
+</ul>
+<pre><code># settings.json
+{
+  &quot;C_Cpp_Runner.cStandard&quot;: &quot;&quot;,
+  &quot;C_Cpp_Runner.cppStandard&quot;: &quot;&quot;,
+  &quot;C_Cpp_Runner.msvcBatchPath&quot;: &quot;&quot;,
+  &quot;C_Cpp_Runner.warnings&quot;: [
+    &quot;-Wall&quot;,
+    &quot;-Wextra&quot;,
+    &quot;-Wpedantic&quot;
+  ],
+  &quot;C_Cpp_Runner.enableWarnings&quot;: true,
+  &quot;C_Cpp_Runner.warningsAsError&quot;: false,
+  &quot;C_Cpp_Runner.compilerArgs&quot;: [],
+  &quot;C_Cpp_Runner.linkerArgs&quot;: [],
+  &quot;C_Cpp_Runner.includePaths&quot;: [],
+  &quot;C_Cpp_Runner.includeSearch&quot;: [
+    &quot;*&quot;,
+    &quot;**/*&quot;
+  ],
+  &quot;C_Cpp_Runner.excludeSearch&quot;: [
+    &quot;**/build&quot;,
+    &quot;**/build/**&quot;,
+    &quot;**/.*&quot;,
+    &quot;**/.*/**&quot;,
+    &quot;**/.vscode&quot;,
+    &quot;**/.vscode/**&quot;
+  ],
+  &quot;C_Cpp_Runner.cCompilerPath&quot;: &quot;gcc&quot;,
+  &quot;C_Cpp_Runner.cppCompilerPath&quot;: &quot;C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/g++.exe&quot;,
+  &quot;C_Cpp_Runner.debuggerPath&quot;: &quot;C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gdb.exe&quot;,
+  &quot;files.associations&quot;: {
+    &quot;hash_map&quot;: &quot;cpp&quot;
+  }
+}
+</code></pre><pre><code># launch.json
+{
+  &quot;version&quot;: &quot;0.2.0&quot;,
+  &quot;configurations&quot;: [
+    {
+      &quot;name&quot;: &quot;C/C++ Runner: Debug Session&quot;,
+      &quot;type&quot;: &quot;cppdbg&quot;,
+      &quot;request&quot;: &quot;launch&quot;,
+      &quot;args&quot;: [],
+      &quot;stopAtEntry&quot;: false,
+      &quot;cwd&quot;: &quot;f:/Documents/GitHub/acmicpc/15997&quot;,
+      &quot;environment&quot;: [],
+      &quot;program&quot;: &quot;동작시킬 프로그램 경로&quot;,
+      &quot;internalConsoleOptions&quot;: &quot;openOnSessionStart&quot;,
+      &quot;MIMode&quot;: &quot;gdb&quot;,
+      &quot;miDebuggerPath&quot;: &quot;C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gdb.exe&quot;,
+      &quot;externalConsole&quot;: false,
+      &quot;setupCommands&quot;: [
+        {
+          &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+          &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+          &quot;ignoreFailures&quot;: true
+        }
+      ]
+    }
+  ]
+}
+</code></pre><pre><code># tasks.json
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;label&quot;: &quot;execute&quot;,
+            &quot;command&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}.exe&quot;,
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;test&quot;,
+                &quot;isDefault&quot;: true
+            },
+            &quot;problemMatcher&quot;: []
+        },
+        {
+            &quot;type&quot;: &quot;cppbuild&quot;,
+            &quot;label&quot;: &quot;C/C++: g++.exe 활성 파일 빌드&quot;,
+            &quot;command&quot;: &quot;C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe&quot;,
+            &quot;args&quot;: [
+                &quot;-fdiagnostics-color=always&quot;,
+                &quot;-g&quot;,
+                &quot;${file}&quot;,
+                &quot;-o&quot;,
+                &quot;${fileDirname}\\${fileBasenameNoExtension}.exe&quot;
+            ],
+            &quot;options&quot;: {
+                &quot;cwd&quot;: &quot;${fileDirname}&quot;
+            },
+            &quot;problemMatcher&quot;: [
+                &quot;$gcc&quot;
+            ],
+            &quot;group&quot;: &quot;build&quot;,
+            &quot;detail&quot;: &quot;컴파일러: \&quot;C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe\&quot;&quot;
+        }
+    ]
+}
+</code></pre><ol>
+<li>단축키</li>
+</ol>
+<ul>
+<li><code>Ctrl + Shift + P</code> 단축키로 명령을 일일이 수행해도 되지만, 단축키를 설정해 바로 실행하는게 빠르다.</li>
+<li>파일 -&gt; 기본설정 -&gt; 바로가기키 (<code>Ctrl + K &amp; Ctrl + S</code>) 를 누르고, 우측 상단 &lsquo;바로가기 키 열기&rsquo; 를 클릭하여 단축키를 직접 입력한다.</li>
+</ul>
+<pre><code>// 키 바인딩을 이 파일에 넣어서 기본값 재정의
+[
+    {
+        &quot;key&quot;: &quot;ctrl+alt+c&quot;,
+        &quot;command&quot;: &quot;workbench.action.tasks.build&quot;,
+    },
+    {
+        &quot;key&quot;: &quot;ctrl+alt+e&quot;,
+        &quot;command&quot;: &quot;workbench.action.tasks.test&quot;,
+    }
+]
+</code></pre></article><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/algorithm/"><span class="li iconfont icon-article"></span>Algorithm</a></p><p><a class="link" href="/post/c&#43;&#43;_stl/"><span class="li iconfont icon-article"></span>C++_stl</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Algorithm&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Algorithm" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+     crossorigin="anonymous"></script>
+<body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Algorithm</h1><p class="article date">Apr 24, 2022<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><h1 id="algorithm">Algorithm</h1>
+<h2 id="그래프-탐색">그래프 탐색</h2>
+<h3 id="dfs">DFS</h3>
+<ol>
+<li>용도 :</li>
+</ol>
+<ul>
+<li>경로가 있는지 확인할 때 사용 가능</li>
+</ul>
+<ol start="2">
+<li>자로구조 :</li>
+</ol>
+<ul>
+<li>stack</li>
+</ul>
+<ol start="3">
+<li>방법 :</li>
+</ol>
+<ul>
+<li>시작 node를 stack에 넣는다.</li>
+<li>stack이 모두 빌때까지 아래 동작을 반복한다.</li>
+<li>stack의 top을 현재 node로 설정한다.</li>
+<li>현재 node를 &lsquo;visited&rsquo; 처리하고 stack에서 제거한다.</li>
+<li>다음으로 이동할 node가 있는지 확인한다.</li>
+<li>다음으로 이동할 node &lsquo;A&rsquo;가 있다면, 현재 node에서 그다음에 탐색할 방향을 stack에 push하고, node &lsquo;A&rsquo;도 stack에 push한다.</li>
+<li>더이상 갈 곳이 없으면 현재 node의 visited 처리를 복원한다.</li>
+<li>최종 목적지에 도달한 경우를 모아 결과값을 비교한다.</li>
+</ul>
+<ol start="4">
+<li>예시 :</li>
+</ol>
+<h3 id="bfs">BFS</h3>
+<ol>
+<li>용도 :</li>
+</ol>
+<ul>
+<li>최단경로 탐색에 사용 가능</li>
+</ul>
+<ol start="2">
+<li>자로구조 :</li>
+</ol>
+<ul>
+<li>queue</li>
+</ul>
+<ol start="3">
+<li>방법 :</li>
+</ol>
+<ul>
+<li>시작 node를 queue에 넣는다.</li>
+<li>queue가 비거나 목적지에 도달할 때 까지 아래 동작을 반복한다.</li>
+<li>queue의 front를 pop 하여 현재 node로 설정한다.</li>
+<li>현재 node에서 이동 가능한 node가 있는지 확인하고, 이동 가능하다면 모두 queue에 push한다.</li>
+<li>queue에 push하면서 해당 경로는 &lsquo;visited&rsquo; 처리를 한다.
+<ul>
+<li>(주의) queue에 넣으면서 visited 처리를 하고, queue에 넣기전에 방문 여부를 판단해야 메모리 부족을 예방할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="dynamic-programming">Dynamic Programming</h2>
+<h3 id="0-1-knapsack">0 1 knapsack</h3>
+<ol>
+<li>용도 :</li>
+</ol>
+<ul>
+<li>나눌수 없는 물건을 최대 무게 한도로 담고 싶을 때 사용</li>
+<li>최소 단위로 나눌 수 있다면 greedy를 사용하면 된다.</li>
+</ul>
+<ol start="2">
+<li>자료구조:</li>
+</ol>
+<ul>
+<li>2d array</li>
+</ul>
+<ol start="3">
+<li>방법:</li>
+</ol>
+<ul>
+<li>
+<p>2차원 배열 D를 선언한다. 행은 최대한도 k를 뜻하며, 열은 1부터 n번째 물건을 판단했을 때 최선의 값을 의미한다.</p>
+</li>
+<li>
+<p>최대 한도를 0부터 K까지 늘려가고, 모든 물건을 순회하며 가치(v)와 무게(w)를 고려해 아래 식을 체크한다.</p>
+</li>
+<li>
+<p>한도가 k일때 n번째 인자에 대해 <code>D[k][n] = max(D[k - w[n]][n-1] + v[n], D[k - 1])[n-1]</code></p>
+</li>
+<li>
+<p>만약 w[n] &gt; k 라면 그냥 <code>D[k][n] = D[k - 1][n-1]</code></p>
+</li>
+<li>
+<p>2차원배열 대신 1차원 배열을 사용하면, 이미 선택한 인자를 중복해서 선택하게 되므로 오답</p>
+</li>
+<li>
+<p>2차원 배열에서 첫 열과 첫 행의 값은 0으로 세팅해 주어야 한다. (아무것도 담지 않은/못한 상황)</p>
+</li>
+</ul>
+<ol start="4">
+<li>예시:</li>
+</ol>
+<pre><code># https://www.acmicpc.net/submit/12865
+
+if __name__ == '__main__':
+    N, K = map(int, input().split())
+    W = [0]
+    V = [0]
+    for i in range(N):
+        w, v = map(int, input().split())
+        W.append(w)
+        V.append(v)
+
+    result = [[0 for j in range(N+1)] for i in range(K+1)]
+    # 배낭의 한계를 를 1부터 증가시켜가며 dynamic programming을 수행한다.
+    for i in range(1, K+1):
+        # 모든 물건에 대해 물건을 넣었을 때와 넣지 않았을 때를 확인한다.
+        for j in range(1, N+1):
+            if W[j] &lt;= i:
+                # 확인 결과 더 최선의 값을 도출한다.
+                result[i][j] = max(result[i - W[j]][j-1] + V[j], result[i][j-1]) # 넣었을때 vs 넣지 않았을 때
+            else:
+                result[i][j] = result[i][j-1]
+    print(result[K][N])
+</code></pre><h2 id="heading"></h2>
+<h3 id="minheap--maxheap">minHeap + maxHeap</h3>
+<ul>
+<li>maxHeap + minHeap 을 사용하여 &lsquo;상위 n개의 데이터&rsquo; 혹은 &lsquo;중앙 값&rsquo;을 구할 수 있다.</li>
+<li>아래와 같이 top과 top이 마주보는 구조로 minHeap과 maxHeap을 사용한다.</li>
+</ul>
+<pre><code>/*
+ * by using two heap(minH, maxH), always can get middle value at maxH.top()
+ *
+ *                     (maxH)                  (minH)
+ *  input -&gt; [ a1, a2, a3, ... an(top)] [ b1(top), b2, b3, .. bm]
+ *                              ^
+ *                         middle value
+ */
+</code></pre><pre><code>https://www.acmicpc.net/problem/1655
+</code></pre></article><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/vscode/"><span class="li iconfont icon-article"></span>VsCode</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

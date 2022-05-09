@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>C&#43;&#43;_stl&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="C&#43;&#43;_stl" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+     crossorigin="anonymous"></script>
+<body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">C++_stl</h1><p class="article date">Apr 12, 2022<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="c-stl">C++ STL</h1>
+<h2 id="자료구조">자료구조</h2>
+<h3 id="map">map</h3>
+<ul>
+<li>key-value 쌍으로 이루어진 tree형태의 자료구조</li>
+<li>중복을 허용하지 않음</li>
+<li>C++에서는 red black tree로 구현되어 삽입,삭제가 O(log n) 안에 이루어진다.</li>
+<li>내부적으로 key를 기준으로 오름차순으로 자료를 정렬한다.</li>
+</ul>
+<ol>
+<li>
+<p>헤더 :  <code>#include &lt;map&gt;</code></p>
+</li>
+<li>
+<p>선언 : <code>map&lt;int, int&gt; map1;</code></p>
+</li>
+</ol>
+<ul>
+<li>내림차순으로 선언 : <code>map &lt;int, int, greater&gt; map2</code></li>
+</ul>
+<ol>
+<li>삽입 :</li>
+</ol>
+<ul>
+<li>insert : <code>map1.insert({&quot;key&quot;,VALUE})</code></li>
+<li>[] : <code>map1[&quot;key&quot;] = VALUE</code></li>
+</ul>
+<ol>
+<li>삭제 :</li>
+</ol>
+<ul>
+<li>특정 index : <code>map1.erase(map1.begin()+2)</code></li>
+<li>특정 key : <code>map1.erase(KEY)</code></li>
+<li>구간 : <code>map1.erase(map1.begin(), map1.end())</code></li>
+<li>전체 : <code>map1.clear()</code></li>
+</ul>
+<ol>
+<li>검색 :</li>
+</ol>
+<pre><code>map&lt;int, int&gt;::Iterator res;
+
+if ((res = map1.find(KEY)) != m.end()) {
+  res -&gt; first; // key
+  res -&gt; second; // value
+}
+</code></pre><ol>
+<li>반복문 :</li>
+</ol>
+<pre><code>for (auto itr = map1.begin(); itr != map1.end(); itr++) {
+  itr-&gt;first // key
+  itr-&gt;second // value
+}
+</code></pre><h3 id="hash-map">hash map</h3>
+<ul>
+<li>hash table을 이용한 자료구조</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>정렬이 필요없는 비순차적 구조</th>
+</tr>
+</thead>
+</table>
+</li>
+</ul>
+<ol>
+<li>
+<p>헤더 : <code>#include&lt;hash_map&gt;</code></p>
+</li>
+<li>
+<p>선언 : <code>hash_map&lt;int, float&gt; h1</code></p>
+</li>
+<li>
+<p>삽입 :</p>
+</li>
+</ol>
+<ul>
+<li>insert 구문 : <code>h1.insert(hash_map&lt;int, float&gt;::value_type(1,2.0f))</code></li>
+<li>[] 구문 : <code>h1[1] = 2.0f</code></li>
+</ul>
+<ol>
+<li>검색 :</li>
+</ol>
+<pre><code>hash_map&lt;int, float&gt;::Iterator res;
+if ((res = h1.find(10)) != h1.end()) {
+  res-&gt;first;  // key
+  res-&gt;second;  // value
+}
+</code></pre><ol>
+<li>반복문</li>
+</ol>
+<pre><code>for (auto itr = h1.begin(); itr != h1.end(); itr++) {
+  itr-&gt;first;  // key
+  itr-&gt;second;  // value
+}
+</code></pre><ol>
+<li>삭제 :</li>
+</ol>
+<ul>
+<li>특정 index : <code>h1.erase(h1.begin())</code></li>
+<li>특정 key : <code>h1.erase(1)</code></li>
+<li>구간 : <code>h1.erase(h1.begin(), h1.end())</code></li>
+<li>전체 : <code>h1.clear()</code></li>
+</ul>
+<h3 id="heap">Heap</h3>
+<ol>
+<li>헤더: <code>#include&lt;queue&gt;</code></li>
+<li>선언:</li>
+</ol>
+<ul>
+<li>min queue : <code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; Heap</code></li>
+<li>max queue : <code>priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt;&gt; Heap</code></li>
+<li>greater, less가 반대로 되어있음에 주의한다.</li>
+</ul>
+<ol>
+<li>활용:</li>
+</ol>
+<ul>
+<li><code>Heap.push()</code> : 삽입</li>
+<li><code>Heap.top()</code> : 가장 작은/큰 값</li>
+<li><code>Heap.pop()</code> : top 값을 삭제</li>
+<li><code>Heap.size()</code> : 인자 개수</li>
+<li><code>Heap.empty()</code> : size가 1 이상이면 false, 아니면 true</li>
+</ul>
+<h2 id="정렬">정렬</h2>
+<h3 id="stable_sort">stable_sort</h3>
+<ul>
+<li>오름차순 혹은 내림차순으로 정렬하되, 같은 값의 경우 기존의 순서를 유지하는 정렬방식</li>
+</ul>
+<pre><code>int v[10];
+int idx[10];
+// 오름차순 정렬
+stable_sort(idx, idx + 10, [](int a, int b){return a &gt; b;});
+// index를 이용한 정렬
+stable_sort(idx, idx + 10, [&amp;v](int a, int b){return v[a] &gt; v[b];});
+</code></pre></article><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/vscode/"><span class="li iconfont icon-article"></span>VsCode</a></p><p><a class="link" href="/post/window/"><span class="li iconfont icon-article"></span>Window</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>
