@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 19:21:55 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate>
     
         <atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring_boot</title>
+      <link>/post/spring_boot/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>/post/spring_boot/</guid>
+      <description>Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하</description>
+      
+    </item>
     
     <item>
       <title>Spring basic</title>

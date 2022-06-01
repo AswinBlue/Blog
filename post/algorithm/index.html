@@ -128,13 +128,14 @@ if __name__ == '__main__':
             else:
                 result[i][j] = result[i][j-1]
     print(result[K][N])
-</code></pre><h2 id="heading"></h2>
+</code></pre><h2 id="순서-정렬">순서 정렬</h2>
 <h3 id="minheap--maxheap">minHeap + maxHeap</h3>
 <ul>
 <li>maxHeap + minHeap 을 사용하여 &lsquo;상위 n개의 데이터&rsquo; 혹은 &lsquo;중앙 값&rsquo;을 구할 수 있다.</li>
 <li>아래와 같이 top과 top이 마주보는 구조로 minHeap과 maxHeap을 사용한다.</li>
 </ul>
-<pre><code>/*
+<pre><code>https://www.acmicpc.net/problem/1655
+/*
  * by using two heap(minH, maxH), always can get middle value at maxH.top()
  *
  *                     (maxH)                  (minH)
@@ -142,10 +143,9 @@ if __name__ == '__main__':
  *                              ^
  *                         middle value
  */
-</code></pre><pre><code>https://www.acmicpc.net/problem/1655
 </code></pre></article><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/vscode/"><span class="li iconfont icon-article"></span>VsCode</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/spring_boot/"><span class="li iconfont icon-article"></span>Spring_boot</a></p><p><a class="link" href="/post/vscode/"><span class="li iconfont icon-article"></span>VsCode</a></p></section></div></section><section id="footer"><div class="footer-wrap">
     <p class="copyright">©2020 Notepadium.</p>
     <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
         target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Spring_boot&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Spring_boot" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+     crossorigin="anonymous"></script>
+<body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Spring_boot</h1><p class="article date">May 30, 2022<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><h1 id="spring-boot">Spring Boot</h1>
+<ul>
+<li>Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다.</li>
+<li>Java, Kitlin, Groovy 등의 언어로 구현이 가능하다.</li>
+</ul>
+<h2 id="개발환경">개발환경</h2>
+<ol>
+<li>java 기반으로 동작하기에 jdk 설치가 필요하다.</li>
+</ol>
+<ul>
+<li>(22년 기준) 11버전 이상을 다운받는것을 추천한다.</li>
+</ul>
+<ol>
+<li>IDE</li>
+</ol>
+<ul>
+<li>vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다.</li>
+<li>java 개발을 위한 eclips나 intelliJ를 사용해도 된다.</li>
+</ul>
+<ol>
+<li>spring 프로젝트 생성</li>
+</ol>
+<ul>
+<li><code>start.spring.io</code> 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</li>
+</ul>
+<ol>
+<li>gradle 설치</li>
+</ol>
+<ul>
+<li><code>https://gradle.org/releases/</code> 주소에서 gradle 파일을 다운받는다.</li>
+<li>이후 path 설정을 마친 후, 프로젝트 root directory에서 <code>gradle wrapper</code> 명령을 수행해 gradlew파일을 생성한다.</li>
+</ul>
+<h3 id="기본-설정">기본 설정</h3>
+<ol>
+<li>포트 설정</li>
+</ol>
+<ul>
+<li><code>application.properties</code> (혹은 yml)파일을 열고, <code>server.port = 8080</code> 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.</li>
+</ul>
+<ol>
+<li>빌드 설정</li>
+</ol>
+<ul>
+<li>gradle 프로젝트는 <code>./gradlew build</code> 명령으로 프로젝트를 빌드한다.</li>
+<li>이때 <code>build.gralde</code> 파일 설정으로 하위 프로젝트의 빌드까지 함께 정의할 수 있다.</li>
+<li>gradle 파일이 수정되면 <code>./gradlew build</code> 명령을 새로 돌려서 업데이트 해 준다.</li>
+<li>아래는 React 프로젝트의 빌드 세팅이다.</li>
+</ul>
+<pre><code>def reactDir = &quot;$projectDir/src/main/webapp/js&quot;; // react 프로젝트 경로 설정
+sourceSets{
+  main{
+      resources{
+          srcDirs = [&quot;$projectDir/src/main/resources&quot;]
+      }
+  }
+}
+
+// 최초로 수행할 task 지정
+processResources{
+  dependsOn &quot;copyReactBuildFiles&quot;
+}
+
+// $reactDir 위치에서 `npm audit fix` 명령 실행
+task installReact(type:Exec){
+  workingDir &quot;$reactDir&quot;
+  inputs.dir &quot;$reactDir&quot;
+  group = BasePlugin.BUILD_GROUP
+
+  if(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){
+      commandLine &quot;npm.cmd&quot;, &quot;audit&quot;, &quot;fix&quot;
+      commandLine 'npm.cmd', 'install'
+  }else{
+      commandLine &quot;npm&quot;, &quot;audit&quot;, &quot;fix&quot;
+      commandLine 'npm', 'install'
+  }
+}
+
+// installReact task를 호출
+// $reactDir 위치에서 `npm run-script build` 실행
+// react 프로젝트의 `package.json` 파일에 적힌 build 스크립트가 실행됨.
+task buildReact(type:Exec){
+  dependsOn &quot;installReact&quot;
+  workingDir &quot;$reactDir&quot;
+  inputs.dir &quot;$reactDir&quot;
+  group = BasePlugin.BUILD_GROUP
+
+  if(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){
+      commandLine &quot;npm.cmd&quot;, &quot;run-script&quot;, &quot;build&quot;
+  }else{
+      commandLine &quot;npm&quot;, &quot;run-script&quot;, &quot;build&quot;
+  }
+}
+
+// buildReact task를 호출
+// 앞서 지정한 $reactDir 경로의 /build 위치에서 생성된 데이터를 $projectDir/src/main/resources/static 로 복사
+task copyReactBuildFiles(type:Copy) {
+  dependsOn &quot;buildReact&quot;
+  from &quot;$reactDir/build&quot;
+  into &quot;$projectDir/src/main/resources/static&quot;
+}
+</code></pre><h2 id="웹-서비스-개발">웹 서비스 개발</h2>
+<ol>
+<li>tomcat</li>
+</ol>
+<ul>
+<li>spring boot에서 web 패키지를 설치하면 tomcat을 사용하여 web server를 동작시킨다.</li>
+<li>localhost:8080으로 default 주소가 처리되어 있고,</li>
+</ul>
+<h3 id="mvc-모델">MVC 모델</h3>
+<ul>
+<li>model, view, control 을 나누어 개발하는 형태를 MVC 모델이라고 한다.</li>
+</ul>
+<h4 id="view-template">View template</h4>
+<ul>
+<li>view template 은 controller와 model을 합친 개념으로, 화면을 구성하는 역할을 한다.</li>
+<li>mustache 패키지를 설치하여 view template를 만들 수 있다.</li>
+</ul>
+<ol>
+<li>jsp 활용</li>
+</ol>
+<ul>
+<li>Spring boot에는 jsp가 잘 어울리지 않는다고 한다. 대신 Thymleaf, mustache 등을 사용하는걸 권장한다?</li>
+<li>jsp를 사용하여 model을 구성할 수도 있다.</li>
+<li>jsp는 사용하기 전 <code>application.properties</code>(혹은 yml) 파일의 수정이 필요하다. 아래 내용을 추가한다.</li>
+</ul>
+<pre><code>spring.mvc.view.prefix=/myApp/
+spring.mvc.view.suffix=.jsp
+</code></pre><ul>
+<li>위 내용을 적용하면 <code>src/main/webapp/myApp/</code> 경로 내부에서 jsp파일을 찾게 된다. &lsquo;webapp&rsquo; 폴더는 default로 필요하다.</li>
+</ul>
+<ol>
+<li>mustache 활용</li>
+</ol>
+<ul>
+<li>앞서 말헀듯 mustache는 view template용 패키지로 controller와 model을 관장한다.</li>
+<li>controller는 기본 패키지 경로 하위에 배치한다.</li>
+<li>controller는 다음과 같이 구성한다.</li>
+</ul>
+<pre><code>package com.example.firstproject.controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
+
+@Controller  // controller를 정의하는 annotation
+public class FirstController {
+    @GetMapping(&quot;/index&quot;)  // 연결될 url을 지정하는 annotation, /index 로 연결하면
+    public String mainPage(Model model)  // model 을 통해 가변 인자 control
+    {
+        model.addAttribute(&quot;title&quot;, &quot;hello world&quot;); // title 이름으로 hello world 라는 문자열을 설정
+        return &quot;mainPage&quot;;  // mainPage.mustache 파일과 연동
+    }
+}
+</code></pre><ul>
+<li>model(.mustache파일)은 <code>resources/templates</code> 파일 경로 하위에 배치하고, 확장자를 <code>.mustache</code>로 지정한다.</li>
+<li>html 파일은 사실 view에 가깝지만, mustache 파일은 view에 변수를 적용하여 model에 해당한다.</li>
+<li>model은 다음과 같이 구성한다.</li>
+</ul>
+<pre><code>&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;  &lt;!-- controller에서 정의한 title이 {{title}}에 치환됨 --&gt;
+&lt;/body&gt;
+</code></pre><ol>
+<li>Layout
+- model을 만들 때는 layout에 따라 화면에 보여지는 형태를 구성할 수 있다.
+- layout을 template화 하여 사용 가능하다. 재사용 되는 부분을 모듈화 하여 파일로 분리하고, 이를 다른 파일에서 불러올 수 있다.
+- <code>{{&gt;FILE_NAME}}</code> 형태로 다른 파일을 호출해 올 수 있다.</li>
+</ol>
+</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/spring_boot/>spring_boot</a><a class="tag" href=/tags/java/>java</a><a class="tag" href=/tags/server/>server</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/algorithm/"><span class="li iconfont icon-article"></span>Algorithm</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>
