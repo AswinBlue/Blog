@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Tailwind&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tailwind" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+     crossorigin="anonymous"></script>
+<body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Tailwind</h1><p class="article date">Jun 02, 2022<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="tailwind">Tailwind</h1>
+<ul>
+<li>Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다.</li>
+</ul>
+<ol>
+<li>설치</li>
+</ol>
+<ul>
+<li>
+<p><code>npm install tailwind@latest</code> 명령을 사용하여 설치가 가능하다.</p>
+</li>
+<li>
+<p><code>npx tailwind init</code> 명령을 사용하면 tailwind.config.js 파일이 생성되며, 현재 위치에서 tailwind를 적용할 수 있게 된다.</p>
+<ul>
+<li>tailwind.config.js 파일은 다음과 같이 구성된다.</li>
+</ul>
+<pre><code>module.exports = {
+  // 포함할 항목
+  content: ['./src/**/*.{html,js,jsx,ts,tsx, mustache}'],
+  // 제외할 항목
+  purge: [&quot;./src/**/*.html&quot;, &quot;./src/**/*.js&quot;],
+  mode: process.env.NODE_ENV ? 'jit' : undefined,
+  darkMode: 'class', // [false, 'mdeia', 'class']
+  theme: {
+    fontFamily: {
+      display: ['Open Sans', 'sans-serif'],
+      body: ['Open Sans', 'sans-serif'],
+    },
+    extend: {
+      fontSize: {
+        14: '14px',
+      },
+      backgroundColor: {
+        'main-bg': '#FAFBFB',
+        'main-dark-bg': '#20232A',
+        'secondary-dark-bg': '#33373E',
+        'light-gray': '#F7F7F7',
+        'half-transparent': 'rgba(0, 0, 0, 0.5)',
+      },
+      borderWidth: {
+        1: '1px',
+      },
+      borderColor: {
+        color: 'rgba(0, 0, 0, 0.1)',
+      },
+      width: {
+        400: '400px',
+        760: '760px',
+        780: '780px',
+        800: '800px',
+        1000: '1000px',
+        1200: '1200px',
+        1400: '1400px',
+      },
+      height: {
+        80: '80px',
+      },
+      minHeight: {
+        590: '590px',
+      },
+      backgroundImage: {
+        'hero-pattern':
+          &quot;url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')&quot;,
+      },
+    },
+  },
+  plugins: [],
+};
+</code></pre></li>
+<li>
+<p>tailwind는 react와 같은 framework에서는 자동으로 적용이 가능하지만, 그 외의 경우에는 postcss 등과 같은 모듈의 도움이 필요하다.</p>
+</li>
+</ul>
+<ol>
+<li>postcss
+- <code>npm install postcss postcss-cli</code> : postcss 모듈과, 명령어 입력을 위한 postcss-cli를 설치한다. 이후 cmd창에 postcss 명령어가 동작한다.
+- <code>postcss SOURCE_FILE -o OBJECT_FILE</code> : SOURCE_FILE 의 내용을 참조하여 OBJECT_FILE 경로에 파일 생성. SOURCE_FILE의 내용은 아래와 같다.</li>
+</ol>
+<pre><code>```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+- `--watch` 옵션을 붙이면 파일 변경시 다시 빌드하지 않아도 된다.
+</code></pre>
+<ol>
+<li>실행</li>
+</ol>
+<ul>
+<li><code>npx tailwindcss init</code> 명령으로 실행 가능하다. postcss.config.js 파일고가 tailwind.config.js 파일이 생성된다.</li>
+<li>tailwind.config.js 파일을 다음과 같이 설정해 준다.</li>
+</ul>
+<pre><code>module.exports = {
+  mode: ProcessingInstruction.env.NODE_ENV ? 'jit' : undefined,
+  content: [&quot;./src/**/*.html&quot;, &quot;./src/**/*.js&quot;],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+</code></pre></article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/css/>css</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/spring_boot/"><span class="li iconfont icon-article"></span>Spring_boot</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></body>
+
+</html>

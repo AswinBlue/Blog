@@ -7,7 +7,7 @@
 <body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Spring_boot</h1><p class="article date">May 30, 2022<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><h1 id="spring-boot">Spring Boot</h1>
+    <h1 class="article title">Spring_boot</h1><p class="article date">May 30, 2022<span class="reading-time"> • 6 minutes to read</span></p></section><article class="article markdown-body"><h1 id="spring-boot">Spring Boot</h1>
 <ul>
 <li>Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다.</li>
 <li>Java, Kitlin, Groovy 등의 언어로 구현이 가능하다.</li>
@@ -107,15 +107,28 @@ task copyReactBuildFiles(type:Copy) {
   from &quot;$reactDir/build&quot;
   into &quot;$projectDir/src/main/resources/static&quot;
 }
-</code></pre><h2 id="웹-서비스-개발">웹 서비스 개발</h2>
+</code></pre><ol>
+<li>폴더 설정</li>
+</ol>
+<ul>
+<li><code>resources</code> : html, css 등 화면 구성을 위한 파일들의 root 디렉터리
+<ul>
+<li><code>resources/static</code> : html파일에서 href로 참조하면 아래 디렉터리를 root로 경로 설정 가능</li>
+<li><code>resources/template</code> : mustache 파일에서 root 디렉터리로 사용</li>
+</ul>
+</li>
+</ul>
+<h2 id="웹-서비스-개발">웹 서비스 개발</h2>
 <ol>
 <li>tomcat</li>
 </ol>
 <ul>
 <li>spring boot에서 web 패키지를 설치하면 tomcat을 사용하여 web server를 동작시킨다.</li>
-<li>localhost:8080으로 default 주소가 처리되어 있고,</li>
+<li>localhost:8080으로 default 주소가 처리되어 있고, <code>application.yml</code> 파일에서 아래와 같이 수정 가능하다.</li>
 </ul>
-<h3 id="mvc-모델">MVC 모델</h3>
+<pre><code>server:
+  port : 8081
+</code></pre><h3 id="mvc-모델">MVC 모델</h3>
 <ul>
 <li>model, view, control 을 나누어 개발하는 형태를 MVC 모델이라고 한다.</li>
 </ul>
@@ -173,9 +186,129 @@ public class FirstController {
 - layout을 template화 하여 사용 가능하다. 재사용 되는 부분을 모듈화 하여 파일로 분리하고, 이를 다른 파일에서 불러올 수 있다.
 - <code>{{&gt;FILE_NAME}}</code> 형태로 다른 파일을 호출해 올 수 있다.</li>
 </ol>
-</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/spring_boot/>spring_boot</a><a class="tag" href=/tags/java/>java</a><a class="tag" href=/tags/server/>server</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
+<h4 id="controller">controller</h4>
+<ul>
+<li>controller class는 <code>@Controller</code> annotation을 붙여서 선언하며 함수는 <code>@GetMapping</code>, <code>@RequestMapping</code> annotation을 사용할 수 있다.</li>
+</ul>
+<ol>
+<li>에러 화면</li>
+</ol>
+<ul>
+<li>에러 화면도 controller에 의해 유도되며 BasicErrorController가 이를 담당한다.</li>
+<li><code>application.yml</code> 파일에서 따로 설정을 하지 않았다면 <code>server.error.path=/error</code> 가 기본이다.</li>
+</ul>
+<h4 id="데이터-교환">데이터 교환</h4>
+<ul>
+<li>view에서 사용자 입력을 받아 처리하는 과정을 다룬다.</li>
+<li>서버의 Controller에서 이를 처리 가능하며, 사용자 입력을 Java Class로 대응시킨 형태를 DTO라 칭한다.</li>
+</ul>
+<ol>
+<li>view 구현</li>
+</ol>
+<ul>
+<li>view쪽에서는 <code>form</code> 태그를 사용하여 controller에 데이터를 전송할 수 있다.</li>
+<li><code>form</code> 태그의 인자로 <code>action</code>, <code>method</code>를 적용 가능하다.
+<ul>
+<li><code>action</code> : 데이터를 보낼 url을 설정. ex) action=&quot;/data/part1&quot;</li>
+<li><code>method</code> : 전송 방법을 설정한다. post 혹은 get 적용 가능</li>
+</ul>
+</li>
+<li><code>form</code> 태그 안의 <code>input</code>태그를 두고, 인자로 <code>name</code>을 설정한다.</li>
+</ul>
+<ol start="2">
+<li>controller 구현</li>
+</ol>
+<ul>
+<li>DTO로 사용할 class를 선언한다. (ex: DtoSample)</li>
+<li>controller 를 구현한 java 파일에서 <code>@PostMapping</code> annotation을 달고, 인자로 위에서 선언한 DTO를 받는다.</li>
+<li>return 값으로 지정한 이름의 view로 redirect 한다. (ex: returnView)</li>
+</ul>
+<pre><code>@PostMapping(&quot;/data/part1&quot;)
+public String handleForm(DtoSample dto) {
+  return &quot;returnView&quot;;
+}
+</code></pre><h4 id="db">DB</h4>
+<ul>
+<li>spring은 mysql, postgress, M2 등 여러 DB를 적용할 수 있다.</li>
+<li>controller는 Java로 구현되고, DB는 sql로 동작하기 때문에 java로 sql을 조작하기 위한 JPA라는 라이브러리가 필요하다.</li>
+</ul>
+<ol>
+<li>JPA</li>
+</ol>
+<ul>
+<li><code>Entity</code> : java 객체를 DB가 이해할 수 있게 재구성한 데이터</li>
+<li><code>Repository</code> : entity를 DB에 저장하는 역할을 수행하는 객체</li>
+</ul>
+<ol>
+<li>controller 구현</li>
+</ol>
+<ul>
+<li>DTO를 다음과 같이 구현하였다고 하자</li>
+</ul>
+<pre><code>class DtoSample {
+  private String name;
+  public DtoSample(String name) {
+      this.name = name;
+  }
+}
+</code></pre><ul>
+<li>DTO에 해당하는 entity를 정의해야하며, 그 형태는 다음과 같다.
+<ul>
+<li>entity는 <code>@Entity</code> annotation을 붙여야 한다.</li>
+<li>Entity는 primary key를 가져야 하며, 이는 <code>@Id</code> annotation으로 지정한다.</li>
+<li>DB의 column에 해당하는 값들은 <code>@Column</code> annotation을 붙여준다.</li>
+<li><code>@GeneratedValue</code>는 자동으로 생성된 값이 들어가도록 한다.</li>
+</ul>
+</li>
+</ul>
+<pre><code>@Entity
+public class sampleEntity {
+    @Id // 대표값
+    @GeneratedValue // 자동생성
+    private Long id;
+    @Column
+    private String name;
+
+    public sampleEntity(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+}
+</code></pre><ul>
+<li>Entity를 DB에 저장하기 위한 Repository도 생성한다.</li>
+<li>repository는 entity로 DB에 접근하는 방법을 정의하기 위한 객체이다.</li>
+<li>spring에서 기본으로 제공하는 형태를 상속받아 사용도 가능하다.</li>
+</ul>
+<pre><code>// CrudRepository&lt;관리대상, 대표값의 type&gt;
+public interface searchNameRepository extends CrudRepository&lt;sampleEntity, Long&gt; {
+    // CrudRepository 의 기본값을 사용
+}
+</code></pre><ul>
+<li>이전에 만들었던 controller 에 내용을 추가한다.</li>
+</ul>
+<pre><code>@PostMapping(&quot;/data/part1&quot;)
+public String handleForm(DtoSample dto) {
+  sampleEntity name = form.toEntity(); // toEntity 구현 필요
+  name = snr.save(name); // 'save'는 저장 및 저장된 데이터를 반환함
+  return &quot;returnView&quot;;
+}
+</code></pre><ul>
+<li>contorller에서 받은 DTO 데이터를 entity로 변환시켜야 한다.</li>
+<li>DTO 파일을 추가로 수정한다.</li>
+</ul>
+<pre><code>class DtoSample {
+  private String name;
+  public DtoSample(String name) {
+      this.name = name;
+  }
+  public sampleEntity toEntity() {
+      return new sampleEntity(null, this.name); // id에 null을 넣는다. @GeneratedValue에 의해 자동으로 생성된다.
+  }
+}
+</code></pre></article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/spring_boot/>spring_boot</a><a class="tag" href=/tags/java/>java</a><a class="tag" href=/tags/server/>server</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
 </section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/algorithm/"><span class="li iconfont icon-article"></span>Algorithm</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/tailwind/"><span class="li iconfont icon-article"></span>Tailwind</a></p><p><a class="link" href="/post/algorithm/"><span class="li iconfont icon-article"></span>Algorithm</a></p></section></div></section><section id="footer"><div class="footer-wrap">
     <p class="copyright">©2020 Notepadium.</p>
     <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
         target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 

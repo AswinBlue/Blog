@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jun 2022 21:55:38 +0900</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tailwind</title>
+      <link>/post/tailwind/</link>
+      <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
+      
+      <guid>/post/tailwind/</guid>
+      <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. 설치 npm install tailwind@latest 명령을 사용하여 설치가 가능하다. npx tailwind init 명령을 사용하면 tailwind.config.js 파일이 생성되며, 현</description>
+      
+    </item>
     
     <item>
       <title>Spring_boot</title>
@@ -258,7 +268,7 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>/post/nodejs/</guid>
-      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일)</description>
+      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장</description>
       
     </item>
     

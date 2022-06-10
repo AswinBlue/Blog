@@ -7,11 +7,19 @@
 <body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Nodejs</h1><p class="article date">Jul 20, 2020<span class="reading-time"> • 4 minutes to read</span></p></section><article class="article markdown-body"><h1 id="nodejs">Node.js</h1>
+    <h1 class="article title">Nodejs</h1><p class="article date">Jul 20, 2020<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><h1 id="nodejs">Node.js</h1>
 <h2 id="기본-명령">기본 명령</h2>
 <ul>
 <li><code>npm init</code> : 패키지 생성</li>
-<li><code>npm install</code> : 라이브러리 설치</li>
+<li><code>npm install</code> : 라이브러리 설치
+<ul>
+<li><code>-P</code> : package.json에 저장, 기본옵션</li>
+<li><code>-O</code> : optionalDependencies에 저장</li>
+<li><code>-D</code>, <code>--no-save</code> : 기록없이 다운로드</li>
+<li><code>-g</code> : 글로벌 설치, 모든 프로젝트에 적용</li>
+<li><code>MODULE_NAME@VERSION</code> : 버전 설정, latest는 가장 최근 버전을 의미</li>
+</ul>
+</li>
 <li><code>node main.js</code> : 실행(main.js)</li>
 <li><code>npx &lt;package_name&gt;</code> : 설치하지 않고 일회만 실행</li>
 <li><code>node main.js</code> : 패키지 실행 (main.js파일)</li>
@@ -19,6 +27,62 @@
 <h2 id="구조">구조</h2>
 <ul>
 <li><code>main.js</code> : nodejs 실행시 실행할 메인 파일</li>
+<li><code>package.json</code> : root 경로에 존재하며, npm 프로젝트를 관리하는 파일</li>
+</ul>
+<h3 id="packagejson">package.json</h3>
+<ul>
+<li>
+<p>nodejs 설정을 담고있는 파일로, 참조할 내용이 많아 아래에 따로 정리한다.</p>
+<ul>
+<li>
+<p><code>&quot;//&quot; : &quot;comment&quot;</code> : 주석을 넣는 방법, json key를 //로 하고, value에 comment를 작성한다.</p>
+</li>
+<li>
+<p><code>scripts</code> : <code>npm run SCRIPT</code>(SCRIPT는 원하는 명령) 명령으로 특정 command를 수행하게 할 수 있음</p>
+<ul>
+<li>script 명령은 os별로 명령이 상이할 수 있다. 이때는 다음과 같이 설정하여 각 os별로 다르게 동작할 수 있도록 한다. (npm run test 명령시 자동으로 수행해주는것 같지는 않음)</li>
+<li>os에 따라 명령어가 다를 수 있으므로, <code>cross-env</code> 모듈을 설치해서 사용하면 문제를 간단히 해결할 수 있다. ex) <code>cross-env NODE_ENV=production</code></li>
+</ul>
+<pre><code>&quot;scripts&quot;: {
+  &quot;test&quot;: &quot;run-script-os&quot;,
+  &quot;test:darwin:linux&quot;: &quot;export NODE_ENV=test &amp;&amp; mocha&quot;,
+  &quot;test:win32&quot;: &quot;SET NODE_ENV=test&amp;&amp; mocha&quot;
+}
+</code></pre></li>
+<li>
+<p><code>devDependencies</code> : 내부에 필요한 모듈들. <code>npm install -D</code> 명령어로 dependency를 추가 가능하다.</p>
+</li>
+</ul>
+<pre><code>{
+  &quot;name&quot;: &quot;rankingserver&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;//&quot; : &quot;this line is a comment&quot;,
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,
+    &quot;build:postcss&quot;: &quot;NODE_ENV=production postcss src/main/resources/static/css/tailwind.css -o target/classes/static/css/tailwind.css&quot;,
+    &quot;watch:postcss&quot;: &quot;NODE_ENV=development postcss src/main/resources/static/css/tailwind.css -o src/main/resources/static/css/tailwind.css -w&quot;
+  },
+  &quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;git+https://github.com/AswinBlue/RankServer.git&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;bugs&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AswinBlue/RankServer/issues&quot;
+  },
+  &quot;homepage&quot;: &quot;https://github.com/AswinBlue/RankServer#readme&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;autoprefixer&quot;: &quot;^10.4.7&quot;,
+    &quot;postcss&quot;: &quot;^8.4.14&quot;,
+    &quot;postcss-cli&quot;: &quot;^9.1.0&quot;,
+    &quot;tailwindcss&quot;: &quot;^3.0.24&quot;
+  }
+}
+</code></pre></li>
 </ul>
 <h3 id="모듈-사용">모듈 사용</h3>
 <p><code>var express = require('express');</code></p>

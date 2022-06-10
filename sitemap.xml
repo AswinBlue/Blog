@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://AswinBlue.github.io/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
-    <loc>https://AswinBlue.github.io/categories/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
-    <loc>https://AswinBlue.github.io/categories/dev/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/categories/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/tags/css/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/categories/dev/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/post/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/tags/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
+    <loc>https://AswinBlue.github.io/post/tailwind/</loc><lastmod>2022-06-02T21:55:38+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/tags/java/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
-    <loc>https://AswinBlue.github.io/post/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/tags/server/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/spring_boot/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/tags/spring_boot/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
-    <loc>https://AswinBlue.github.io/tags/</loc><lastmod>2022-05-30T19:20:23+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/algorithm/</loc><lastmod>2022-04-24T18:16:23+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/vscode/</loc><lastmod>2022-04-16T09:07:48+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/c&#43;&#43;_stl/</loc><lastmod>2022-04-12T19:17:21+09:00</lastmod></url><url>
@@ -76,7 +78,6 @@
     <loc>https://AswinBlue.github.io/post/pythoncgi/</loc><lastmod>2020-07-02T19:15:21+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/javascript/</loc><lastmod>2020-06-23T20:38:45+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/css/</loc><lastmod>2020-06-23T20:38:05+09:00</lastmod></url><url>
-    <loc>https://AswinBlue.github.io/tags/css/</loc><lastmod>2020-06-23T20:38:05+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/html/</loc><lastmod>2020-06-23T19:13:17+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/tags/html/</loc><lastmod>2020-06-23T19:13:17+09:00</lastmod></url><url>
     <loc>https://AswinBlue.github.io/post/linux_apt/</loc><lastmod>2020-05-25T18:30:15+09:00</lastmod></url><url>
