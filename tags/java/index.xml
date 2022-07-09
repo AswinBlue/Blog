@@ -1,45 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>java on AsWindBlew</title>
-    <link>/tags/java/</link>
-    <description>Recent content in java on AsWindBlew</description>
+    <title>java on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/java/</link>
+    <description>Recent content in java on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring_boot</title>
-      <link>/post/spring_boot/</link>
+      <link>https://AswinBlue.github.io/post/spring_boot/</link>
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
-      <guid>/post/spring_boot/</guid>
-      <description>Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하</description>
-      
+      <guid>https://AswinBlue.github.io/post/spring_boot/</guid>
+      <description>Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &amp;lsquo;Java Extension Pack&amp;rsquo; 과 &amp;lsquo;Spring Boot Extension Pack&amp;rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</description>
     </item>
     
     <item>
       <title>Spring basic</title>
-      <link>/post/spring/</link>
+      <link>https://AswinBlue.github.io/post/spring/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>/post/spring/</guid>
-      <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다. 참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring</description>
-      
+      <guid>https://AswinBlue.github.io/post/spring/</guid>
+      <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
+참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.</description>
     </item>
     
     <item>
       <title>Jython</title>
-      <link>/post/jython/</link>
+      <link>https://AswinBlue.github.io/post/jython/</link>
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
-      <guid>/post/jython/</guid>
-      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대</description>
-      
+      <guid>https://AswinBlue.github.io/post/jython/</guid>
+      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
     </item>
     
   </channel>

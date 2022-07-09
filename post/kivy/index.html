@@ -1,14 +1,255 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Kivy&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Kivy" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kivy | AswinBlue</title>
+<meta name="keywords" content="python, kivy, gui">
+<meta name="description" content="#kivy
+Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &lsquo;TheLabApp&rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &lsquo;TheLab.kv&rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .">
+<meta name="author" content="AswinBlue">
+<link rel="canonical" href="https://AswinBlue.github.io/post/kivy/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0b739a2e2c5e5656e4bcd5f0b2268d063addaf81d89ec3987d6af8f04decdc97.css" integrity="sha256-C3OaLixeVlbkvNXwsiaNBjrdr4HYnsOYfWr48E3s3Jc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AswinBlue.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AswinBlue.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Kivy" />
+<meta property="og:description" content="#kivy
+Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &lsquo;TheLabApp&rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &lsquo;TheLab.kv&rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AswinBlue.github.io/post/kivy/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-09T18:43:28&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-09T18:43:28&#43;09:00" />
+
+
+<meta name="twitter:title" content="Kivy"/>
+<meta name="twitter:description" content="#kivy
+Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &lsquo;TheLabApp&rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &lsquo;TheLab.kv&rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, ."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://AswinBlue.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Kivy",
+      "item": "https://AswinBlue.github.io/post/kivy/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kivy",
+  "name": "Kivy",
+  "description": "#kivy\nBasic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):\rpass\rTheLabApp().run() main.py에서 선언한 class \u0026lsquo;TheLabApp\u0026rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 \u0026lsquo;TheLab.kv\u0026rsquo;파일을 생성한다. /\r|-main.py\r|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .",
+  "keywords": [
+    "python", "kivy", "gui"
+  ],
+  "articleBody": "#kivy\nBasic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):\rpass\rTheLabApp().run() main.py에서 선언한 class ‘TheLabApp’ 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 ‘TheLab.kv’파일을 생성한다. /\r|-main.py\r|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .kv파일에서 바로 작성할 수도 있다. 단, .kv파일에서 객체를 생성하려면 .py파일에 정의된 class를 사용해야 한다. 와 같이 .py파일의 class 선언을 생략하고 default 객체를 사용하는 방법도 있다. ///////// .py /////////\rclass Box(BoxLayout):\rpass\r///////// .kv /////////\r: # .py에서 정의된 Box객체를 사용 가능\rGridLayout: # 이후부터는 kivy에서 제공하는 객체들 사용 가능\rlabel:\rtext:\"lb\"\r: # .py파일에서 아무것도 하지 않는 객체를 선언하기 싫을 때 사용\r/////////////////////// ex) class 안에서 속성 설정 :self.orientation = \"vertical\" ex) kv파일에서 속성 설정 : orientation: \"vertical\" 형태로 선언한 객체는 다른 객체에서 사용할수 있게 된다. :\r...\r:\rButton:\r...\rBox: # 사용자 정의 객체\r... .kv파일은 아래와 같이 구성된다. 화면을 구성하는 내용들의 속성을 정의하고 배치할 수 있다. MainWidget: # 화면에 표기할 객체(widget, layout, …) : # widget 정의 Button: # widget 내부 항목 선언, kivy에서 지원하는 객체의 종류 text:“A” Button: text:“B”\n- .py파일에서도 화면을 구성할 수 있다. class LayoutExample(BoxLayout): # BoxLayout은 기본적으로 가로로 구성된다. def init(self, **kargs):\nsuper().init(**kargs) b1 = Button(text=“A”) # 객체를 생성 b2 = Button(text=“B”) self.add_widget(b1) # 객체를 layout에 추가 self.add_widget(b2)\nUsage layout BoxLayout 가로 혹은 세로로 차곡차곡 쌓아가는 레이아웃 AnchorLayout 화면의 각 모서리, 꼭지점, 정중앙 총 9개의 위치를 지정할 수 있는 레이아웃 GridLayout n행m열의 그리드를 나누고, 내용을 채우는 레이아웃 StackLayout n행m열의 표에 좌측상단부터 차곡차곡 쌓아가는 레이아웃. BoxLayout의 2차원형태 ScrollView 상하 또는 좌우로 스크롤이 가능한 화면 PageLayout 디스플레이간 slide를 통해 이동이 가능한 레이아웃 FloatLayout RelativeLayout ScatterLayout Commons size_hint : 레이아웃 내 객체의 비율 설정 layout 안의 객체는 size 조절이 불가능하다. (size: 설정 해도 적용 안됨) size_hint 값이 default로 설정되어있기 때문이다. size_hint값이 적용된 객체는 화면 크기에 따라 객체 크기도 함께 변경된다. size_hint값은 default 1,1로 설정되어있다. size_hint: None, None으로 설정한다면 size: 값을 설정할 수 있다. (화면 크기에 상관없이 고정된 크기를 가질 수 있게 된다.) ex) spacing:\"10dp\" : layout내부 요소간 간격 설정 BoxLayout orientation: \"vertical\": 세로정렬(가로 : “horizontal”) :\rorientation: \"vertical\"\rButton:\r# 배정받은 크기에 대해 가로비율 50%, 세로비율 60%로 설정.\rtext: \"b1\"\rsize_hint: .5, .6 AnchorLayout ahcnor_x:\"center\": x축 정렬 위치, left, right, center 가능, default center ahcnor_y:\"center\": y축 정렬 위치, top, bottom, center 가능, default center 객체를 순서대로 쌓는것이 아니라 지정한 자리에 그대로 넣는것이므로, 이전 객체는 이후에 나오는 객체에 덮어씌워질 수 있음 :\rButton:\rtext:\"btn\"\rsize_hint: .2, .2\rpos_hint:{\"X\":.1, \"Y\": .1}\rButton:\rtext:\"btn2\"\rsize_hint: .1, .1\rpos_hint:{\"X\":.5, \"Y\": .5} GridLayout rows: Grid의 행 개수를 선언한다. default 1 cols: Grid의 열 개수를 선언한다. default 1 size_hint로 내부 요소의 비율을 조절하고 싶을 때, 같은 행/열에 속한 값들도 모두 같은 값으로 설정해야 적용이 된다. 설정한 Grid를 초과하는 객체를 선언하면 Widget에서 객체를 생성한것으로 취급된다. :\rrows: 2\rcols: 3\rButton: # 0,0\rtext: \"btn\"\rsize_hint: .5, 1 # 비율 조정\rButton: # 0,1\rtext: \"btn\"\rsize_hint: None, 1\rwidth:\"100dp\" # 고정된 크기\rButton: # 0,2\rtext: \"btn\"\rButton: # 1,0\rtext: \"btn\"\rsize_hint: .5, 1\rButton: # 1,1\rtext: \"btn\"\rsize_hint: None, 1\rwidth:\"100dp\" # 고정된 크기\rButton: # 1,2\rtext: \"btn\"\rButton: # out of bound\rtext: \"btn\"\rpos:100, 200 StackLayout 내부 객체들을 가로 한줄로 나열한다. 한 줄에 있는 객체들의 비율이 100%를 넘어가면 다음줄부터 객체를 채워넣는다. 가로 혹은 세로는 가장 큰 크기의 객체에 맞춰져 grid형식으로 정렬된다. :\rButton:\rtext:\"btn\"\rsize_hint: .3, .3\rButton:\rtext:\"btn\"\rsize_hint: .3, .4\rButton:\rtext:\"btn\"\rsize_hint: .3, .5\rButton: # 가로비율이 1을 넘어가기때문에 줄바뀜됨\rtext:\"btn\"\rsize_hint: .3, .5\rButton:\rtext:\"btn\"\rsize_hint: .4, .5\rButton:\rtext:\"btn\"\rsize_hint: .3, .5\rButton: # 세로 비율상으로 1을 넘어가기 때문에 화면 밖으로 나가서 보이지 않음\rtext:\"btn\"\rsize_hint: .3, .5 고정된 크기로 wiwdget을 추가하면 화면 크기가 변함에 따라 widget의 행,열이 변경된다. class로 설정을 할 수도 있다. 이때 class의 __init__에 설정한 내용이 .kv파일에서 설정한 내용보다 우선하여 적용된다. class StackExample(StackLayout):\rdef __init__(self, **kwargs):\rsuper().__init__(**kwargs)\rfor i in range(0, 10):\rsize = dp(100) # dp로 크기 선언법\rb = Button(text=str(i + 1), size_hint=(None, None), size=(size, size)) # 버튼 세팅\rself.add_widget(b) # layout에 widget 추가 Widgets 기본크기 100 X 100, 기본위치 (0,0) 이다. Commons pos_hint: 정렬 위치 size_hint등으로 비율을 조절하면 기본적으로 좌측 상단으로 정렬이 된다. 이때, 다른 방향으로 정렬을 하려면 pos_hint:{\"x\":.5, \"y\":.5}와 같이 설정 가능하다. pos_hint: 다음에는 dictionary가 와야하며, 두 개의 항목이 들어간다. 첫번째 인자는 “x”, “center_x”, “right” 중 하나를 사용하며, 두번째 인자는 “y”, “center_y”, “top” 중 하나를 사용한다. pos_hint:{\"x\":.5} # 좌측부분을 50%위치로 설정\rpos_hint:{\"center_x\":.5} # 중앙을 50%위치로 설정\rpos_hint:{\"right\":.5} # 우측부분을 50%위치로 설정 Button 텍스트, 크기, 위치를 지정한 버튼 아래쪽에 있는 내용이 나중에 그려져 이전 내용을 덮어씌운다. MainWidget:\r:\r# 고정 크기를 가진 버튼\rButton:\rtext: \"Hello\"\rsize: 400, 200\rpos: 100, 200\r# 기기 화면 크기에 따른 크기와 위치를 가진 버튼\rButton:\rtext: \"hello2\"\rsize: \"400dp\", \"200dp\"\rpos: \"100dp\", \"200dp\" lalbel 텍스트, 크기, 위치, 글자색을 지정한 레이블 MainWidget:\r:\rLabel:\rtext: \"Hello\"\rsize: \"100dp\", \"80dp\"\rpos: \"100dp\"\rcolor: 1, 2, 3, 1 # r, g, b, a 기타 .kv파일에서 동일한 이름의 객체를 여러개 정의하면, 하나의 정의로 보고 내용을 이어붙인다. # layout 정의\rButton:\rtext:\"A\"\rsize_hint: \".1\"\r...\r# 동일한 이름의 layout 정의\rButton:\rtext:\"B\" #버튼 B는 버튼 A 다음에 생성됨\rsize_hint: \".1\" .py 에서 class를 선언하고, .kv파일에서 해당 class를 사용한다면, .py의 init() 함수가 먼저 호출된 후 .kv파일에서 세팅한 내용이 적용된다. 참조 유튜브 강의 import:\nfrom kivy.app import App\rfrom kivy.uix.button import Button\rfrom kivy.uix.boxlayout import BoxLayout\rfrom kivy.uix.widget import Widget ",
+  "wordCount" : "900",
+  "inLanguage": "en",
+  "datePublished": "2021-09-09T18:43:28+09:00",
+  "dateModified": "2021-09-09T18:43:28+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "AswinBlue"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AswinBlue.github.io/post/kivy/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AswinBlue",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AswinBlue.github.io/favicon.ico"
+    }
+  }
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
      crossorigin="anonymous"></script>
-<body><section id="header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Kivy</h1><p class="article date">Sep 09, 2021<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><p>#kivy</p>
-<h2 id="basic-concepts">Basic concepts</h2>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a>&nbsp;»&nbsp;<a href="https://AswinBlue.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      Kivy
+    </h1>
+    <div class="post-meta"><span title='2021-09-09 18:43:28 +0900 KST'>September 9, 2021</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href="https://github.com/AswinBlue/HugoBlog/tree/master/content/post/kivy.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#basic-concepts" aria-label="Basic concepts">Basic concepts</a></li>
+                <li>
+                    <a href="#usage" aria-label="Usage">Usage</a><ul>
+                        
+                <li>
+                    <a href="#layout" aria-label="layout">layout</a><ul>
+                        
+                <li>
+                    <a href="#commons" aria-label="Commons">Commons</a></li>
+                <li>
+                    <a href="#boxlayout" aria-label="BoxLayout">BoxLayout</a></li>
+                <li>
+                    <a href="#anchorlayout" aria-label="AnchorLayout">AnchorLayout</a></li>
+                <li>
+                    <a href="#gridlayout" aria-label="GridLayout">GridLayout</a></li>
+                <li>
+                    <a href="#stacklayout" aria-label="StackLayout">StackLayout</a></li></ul>
+                </li>
+                <li>
+                    <a href="#widgets" aria-label="Widgets">Widgets</a><ul>
+                        
+                <li>
+                    <a href="#commons-1" aria-label="Commons">Commons</a></li>
+                <li>
+                    <a href="#button" aria-label="Button">Button</a></li>
+                <li>
+                    <a href="#lalbel" aria-label="lalbel">lalbel</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b8%b0%ed%83%80" aria-label="기타">기타</a></li>
+                <li>
+                    <a href="#%ec%b0%b8%ec%a1%b0" aria-label="참조">참조</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>#kivy</p>
+<h2 id="basic-concepts">Basic concepts<a hidden class="anchor" aria-hidden="true" href="#basic-concepts">#</a></h2>
 <ol>
 <li>Widget</li>
 </ol>
@@ -30,13 +271,13 @@
 <ul>
 <li>main.py에 python으로 내용을 작성한다.</li>
 </ul>
-<pre><code>class TheLabApp(App):
+<pre tabindex="0"><code>class TheLabApp(App):
 pass
 TheLabApp().run()
 </code></pre><ul>
 <li>main.py에서 선언한 class &lsquo;TheLabApp&rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &lsquo;TheLab.kv&rsquo;파일을 생성한다.</li>
 </ul>
-<pre><code>/
+<pre tabindex="0"><code>/
 |-main.py
 |-TheLab.kv
 </code></pre><ul>
@@ -44,14 +285,14 @@ TheLabApp().run()
 <li>단, .kv파일에서 객체를 생성하려면 .py파일에 정의된 class를 사용해야 한다.</li>
 <li><code>&lt;EXAMPLE@BoxLayout&gt;</code> 와 같이 .py파일의 class 선언을 생략하고 default 객체를 사용하는 방법도 있다.</li>
 </ul>
-<pre><code>///////// .py /////////
+<pre tabindex="0"><code>///////// .py /////////
 class Box(BoxLayout):
   pass
 ///////// .kv /////////
 &lt;Box&gt;: # .py에서 정의된 Box객체를 사용 가능
   GridLayout:  # 이후부터는 kivy에서 제공하는 객체들 사용 가능
     label:
-      text:&quot;lb&quot;
+      text:&#34;lb&#34;
 
 &lt;Box2@BoxLayout&gt;: # .py파일에서 아무것도 하지 않는 객체를 선언하기 싫을 때 사용
 ///////////////////////
@@ -60,7 +301,7 @@ class Box(BoxLayout):
 <li>ex) kv파일에서 속성 설정 : <code>orientation: &quot;vertical&quot;</code></li>
 <li><code>&lt;NAME&gt;</code>형태로 선언한 객체는 다른 객체에서 사용할수 있게 된다.</li>
 </ul>
-<pre><code>&lt;Box&gt;:
+<pre tabindex="0"><code>&lt;Box&gt;:
   ...
 &lt;Box2&gt;:
   Button:
@@ -72,7 +313,7 @@ class Box(BoxLayout):
 <li>.kv파일은 아래와 같이 구성된다.</li>
 <li>화면을 구성하는 내용들의 속성을 정의하고 배치할 수 있다.</li>
 </ul>
-<pre><code></code></pre></blockquote>
+<pre tabindex="0"><code></code></pre></blockquote>
 <p>MainWidget:         # 화면에 표기할 객체(widget, layout, &hellip;)
 <MainWidget>:       # widget 정의
 Button:           # widget 내부 항목 선언, kivy에서 지원하는 객체의 종류
@@ -80,7 +321,7 @@ text:&ldquo;A&rdquo;
 Button:
 text:&ldquo;B&rdquo;</p>
 <blockquote>
-<pre><code>- .py파일에서도 화면을 구성할 수 있다.
+<pre tabindex="0"><code>- .py파일에서도 화면을 구성할 수 있다.
 </code></pre></blockquote>
 <p>class LayoutExample(BoxLayout): # BoxLayout은 기본적으로 가로로 구성된다.
 def <strong>init</strong>(self, **kargs):<br>
@@ -90,10 +331,10 @@ b2 = Button(text=&ldquo;B&rdquo;)
 self.add_widget(b1)   # 객체를 layout에 추가
 self.add_widget(b2)</p>
 <blockquote>
-<pre><code></code></pre></blockquote>
+<pre tabindex="0"><code></code></pre></blockquote>
 <hr>
-<h2 id="usage">Usage</h2>
-<h3 id="layout">layout</h3>
+<h2 id="usage">Usage<a hidden class="anchor" aria-hidden="true" href="#usage">#</a></h2>
+<h3 id="layout">layout<a hidden class="anchor" aria-hidden="true" href="#layout">#</a></h3>
 <ol>
 <li>BoxLayout</li>
 </ol>
@@ -135,7 +376,7 @@ self.add_widget(b2)</p>
 <li>RelativeLayout</li>
 <li>ScatterLayout</li>
 </ol>
-<h4 id="commons">Commons</h4>
+<h4 id="commons">Commons<a hidden class="anchor" aria-hidden="true" href="#commons">#</a></h4>
 <ul>
 <li><code>size_hint</code> : 레이아웃 내 객체의 비율 설정</li>
 <li>layout 안의 객체는 size 조절이 불가능하다. (<code>size:</code> 설정 해도 적용 안됨) <code>size_hint</code> 값이 default로 설정되어있기 때문이다.</li>
@@ -145,95 +386,94 @@ self.add_widget(b2)</p>
 ex)</li>
 <li><code>spacing:&quot;10dp&quot;</code> : layout내부 요소간 간격 설정</li>
 </ul>
-<h4 id="boxlayout">BoxLayout</h4>
+<h4 id="boxlayout">BoxLayout<a hidden class="anchor" aria-hidden="true" href="#boxlayout">#</a></h4>
 <ul>
 <li><code>orientation: &quot;vertical&quot;</code>: 세로정렬(가로 : &ldquo;horizontal&rdquo;)</li>
 </ul>
-<pre><code>&lt;BoxLayoutSample&gt;:
-    orientation: &quot;vertical&quot;
+<pre tabindex="0"><code>&lt;BoxLayoutSample&gt;:
+    orientation: &#34;vertical&#34;
     Button:
     # 배정받은 크기에 대해 가로비율 50%, 세로비율 60%로 설정.
-        text: &quot;b1&quot;
+        text: &#34;b1&#34;
         size_hint: .5, .6
-</code></pre><h4 id="anchorlayout">AnchorLayout</h4>
+</code></pre><h4 id="anchorlayout">AnchorLayout<a hidden class="anchor" aria-hidden="true" href="#anchorlayout">#</a></h4>
 <ul>
 <li><code>ahcnor_x:&quot;center&quot;</code>: x축 정렬 위치, <code>left, right, center</code> 가능, default <code>center</code></li>
 <li><code>ahcnor_y:&quot;center&quot;</code>: y축 정렬 위치, <code>top, bottom, center</code> 가능, default <code>center</code></li>
 <li>객체를 순서대로 쌓는것이 아니라 지정한 자리에 그대로 넣는것이므로, 이전 객체는 이후에 나오는 객체에 덮어씌워질 수 있음</li>
 </ul>
-<pre><code>&lt;AnchorExample&gt;:
+<pre tabindex="0"><code>&lt;AnchorExample&gt;:
     Button:
-        text:&quot;btn&quot;
+        text:&#34;btn&#34;
         size_hint: .2, .2
-        pos_hint:{&quot;X&quot;:.1, &quot;Y&quot;: .1}
+        pos_hint:{&#34;X&#34;:.1, &#34;Y&#34;: .1}
     Button:
-        text:&quot;btn2&quot;
+        text:&#34;btn2&#34;
         size_hint: .1, .1
-        pos_hint:{&quot;X&quot;:.5, &quot;Y&quot;: .5}
-
-</code></pre><h4 id="gridlayout">GridLayout</h4>
+        pos_hint:{&#34;X&#34;:.5, &#34;Y&#34;: .5}
+</code></pre><h4 id="gridlayout">GridLayout<a hidden class="anchor" aria-hidden="true" href="#gridlayout">#</a></h4>
 <ul>
 <li><code>rows</code>: Grid의 행 개수를 선언한다. default 1</li>
 <li><code>cols</code>: Grid의 열 개수를 선언한다. default 1</li>
 <li><code>size_hint</code>로 내부 요소의 비율을 조절하고 싶을 때, 같은 행/열에 속한 값들도 모두 같은 값으로 설정해야 적용이 된다.</li>
 <li>설정한 Grid를 초과하는 객체를 선언하면 Widget에서 객체를 생성한것으로 취급된다.</li>
 </ul>
-<pre><code>&lt;GridExample@GridLayout&gt;:
+<pre tabindex="0"><code>&lt;GridExample@GridLayout&gt;:
     rows: 2
     cols: 3
     Button: # 0,0
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
         size_hint: .5, 1  # 비율 조정
     Button: # 0,1
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
         size_hint: None, 1
-        width:&quot;100dp&quot; # 고정된 크기
+        width:&#34;100dp&#34; # 고정된 크기
     Button: # 0,2
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
     Button: # 1,0
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
         size_hint: .5, 1
     Button: # 1,1
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
         size_hint: None, 1
-        width:&quot;100dp&quot; # 고정된 크기
+        width:&#34;100dp&#34; # 고정된 크기
     Button: # 1,2
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
     Button: # out of bound
-        text: &quot;btn&quot;
+        text: &#34;btn&#34;
         pos:100, 200
-</code></pre><h4 id="stacklayout">StackLayout</h4>
+</code></pre><h4 id="stacklayout">StackLayout<a hidden class="anchor" aria-hidden="true" href="#stacklayout">#</a></h4>
 <ul>
 <li>내부 객체들을 가로 한줄로 나열한다. 한 줄에 있는 객체들의 비율이 100%를 넘어가면 다음줄부터 객체를 채워넣는다.</li>
 <li>가로 혹은 세로는 가장 큰 크기의 객체에 맞춰져 grid형식으로 정렬된다.</li>
 </ul>
-<pre><code>&lt;StackExample&gt;:
+<pre tabindex="0"><code>&lt;StackExample&gt;:
 Button:
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .3, .3
 Button:
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .3, .4
 Button:
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .3, .5
 Button:                 # 가로비율이 1을 넘어가기때문에 줄바뀜됨
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .3, .5
 Button:
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .4, .5
 Button:
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .3, .5
 Button:                 # 세로 비율상으로 1을 넘어가기 때문에 화면 밖으로 나가서 보이지 않음
-    text:&quot;btn&quot;
+    text:&#34;btn&#34;
     size_hint: .3, .5
 </code></pre><ul>
 <li>고정된 크기로 wiwdget을 추가하면 화면 크기가 변함에 따라 widget의 행,열이 변경된다.</li>
 <li>class로 설정을 할 수도 있다. 이때 class의 __init__에 설정한 내용이 .kv파일에서 설정한 내용보다 우선하여 적용된다.</li>
 </ul>
-<pre><code>class StackExample(StackLayout):
+<pre tabindex="0"><code>class StackExample(StackLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         for i in range(0, 10):
@@ -241,11 +481,11 @@ Button:                 # 세로 비율상으로 1을 넘어가기 때문에 화
             b = Button(text=str(i + 1), size_hint=(None, None), size=(size, size))  # 버튼 세팅
             self.add_widget(b)  # layout에 widget 추가
 </code></pre><hr>
-<h3 id="widgets">Widgets</h3>
+<h3 id="widgets">Widgets<a hidden class="anchor" aria-hidden="true" href="#widgets">#</a></h3>
 <ul>
 <li>기본크기 100 X 100, 기본위치 (0,0) 이다.</li>
 </ul>
-<h4 id="commons-1">Commons</h4>
+<h4 id="commons-1">Commons<a hidden class="anchor" aria-hidden="true" href="#commons-1">#</a></h4>
 <ul>
 <li><code>pos_hint</code>: 정렬 위치
 <ul>
@@ -257,71 +497,252 @@ Button:                 # 세로 비율상으로 1을 넘어가기 때문에 화
 </ul>
 </li>
 </ul>
-<pre><code>pos_hint:{&quot;x&quot;:.5} # 좌측부분을 50%위치로 설정
-pos_hint:{&quot;center_x&quot;:.5} # 중앙을 50%위치로 설정
-pos_hint:{&quot;right&quot;:.5} # 우측부분을 50%위치로 설정
-</code></pre><h4 id="button">Button</h4>
+<pre tabindex="0"><code>pos_hint:{&#34;x&#34;:.5} # 좌측부분을 50%위치로 설정
+pos_hint:{&#34;center_x&#34;:.5} # 중앙을 50%위치로 설정
+pos_hint:{&#34;right&#34;:.5} # 우측부분을 50%위치로 설정
+</code></pre><h4 id="button">Button<a hidden class="anchor" aria-hidden="true" href="#button">#</a></h4>
 <ul>
 <li>텍스트, 크기, 위치를 지정한 버튼</li>
 <li>아래쪽에 있는 내용이 나중에 그려져 이전 내용을 덮어씌운다.</li>
 </ul>
-<pre><code>MainWidget:
+<pre tabindex="0"><code>MainWidget:
 
 &lt;MainWidget&gt;:
 # 고정 크기를 가진 버튼
   Button:
-    text: &quot;Hello&quot;
+    text: &#34;Hello&#34;
     size: 400, 200
     pos: 100, 200
 # 기기 화면 크기에 따른 크기와 위치를 가진 버튼
   Button:
-    text: &quot;hello2&quot;
-    size: &quot;400dp&quot;, &quot;200dp&quot;
-    pos: &quot;100dp&quot;, &quot;200dp&quot;
-</code></pre><h4 id="lalbel">lalbel</h4>
+    text: &#34;hello2&#34;
+    size: &#34;400dp&#34;, &#34;200dp&#34;
+    pos: &#34;100dp&#34;, &#34;200dp&#34;
+</code></pre><h4 id="lalbel">lalbel<a hidden class="anchor" aria-hidden="true" href="#lalbel">#</a></h4>
 <ul>
 <li>텍스트, 크기, 위치, 글자색을 지정한 레이블</li>
 </ul>
-<pre><code>MainWidget:
+<pre tabindex="0"><code>MainWidget:
 
 &lt;MainWidget&gt;:
   Label:
-    text: &quot;Hello&quot;
-    size: &quot;100dp&quot;, &quot;80dp&quot;
-    pos: &quot;100dp&quot;
+    text: &#34;Hello&#34;
+    size: &#34;100dp&#34;, &#34;80dp&#34;
+    pos: &#34;100dp&#34;
     color: 1, 2, 3, 1 # r, g, b, a
 </code></pre><hr>
-<h2 id="기타">기타</h2>
+<h2 id="기타">기타<a hidden class="anchor" aria-hidden="true" href="#기타">#</a></h2>
 <ul>
 <li>.kv파일에서 동일한 이름의 객체를 여러개 정의하면, 하나의 정의로 보고 내용을 이어붙인다.</li>
 </ul>
-<pre><code>&lt;BoxLayoutSample&gt;   # layout 정의
+<pre tabindex="0"><code>&lt;BoxLayoutSample&gt;   # layout 정의
     Button:
-        text:&quot;A&quot;
-        size_hint: &quot;.1&quot;
+        text:&#34;A&#34;
+        size_hint: &#34;.1&#34;
   ...
 
 &lt;BoxLayoutSample&gt;   # 동일한 이름의 layout 정의
   Button:
-      text:&quot;B&quot;      #버튼 B는 버튼 A 다음에 생성됨
-      size_hint: &quot;.1&quot;
+      text:&#34;B&#34;      #버튼 B는 버튼 A 다음에 생성됨
+      size_hint: &#34;.1&#34;
 </code></pre><ul>
 <li>.py 에서 class를 선언하고, .kv파일에서 해당 class를 사용한다면, .py의 <strong>init</strong>() 함수가 먼저 호출된 후 .kv파일에서 세팅한 내용이 적용된다.</li>
 </ul>
-<h2 id="참조">참조</h2>
-<p><a href="https://youtu.be/l8Imtec4ReQ?list=PLXb1UadfFv1Ff9h4zrbkAaNzPHSc-fb4w"target="_blank">유튜브 강의</a>
+<h2 id="참조">참조<a hidden class="anchor" aria-hidden="true" href="#참조">#</a></h2>
+<p><a href="https://youtu.be/l8Imtec4ReQ?list=PLXb1UadfFv1Ff9h4zrbkAaNzPHSc-fb4w">유튜브 강의</a>
 import:</p>
-<pre><code>from kivy.app import App
+<pre tabindex="0"><code>from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
-</code></pre></article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/python/>python</a><a class="tag" href=/tags/kivy/>kivy</a><a class="tag" href=/tags/gui/>gui</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
-</section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/tensorflow/"><span class="li iconfont icon-article"></span>Tensorflow</a></p><p><a class="link" href="/post/python/"><span class="li iconfont icon-article"></span>Python</a></p></section></div></section><section id="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Notepadium.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section></body>
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AswinBlue.github.io/tags/python/">python</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/kivy/">kivy</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/gui/">gui</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://AswinBlue.github.io/post/tensorflow/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Tensorflow</span>
+  </a>
+  <a class="next" href="https://AswinBlue.github.io/post/python/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Python</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Kivy on twitter"
+        href="https://twitter.com/intent/tweet/?text=Kivy&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f&amp;hashtags=python%2ckivy%2cgui">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Kivy on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f&amp;title=Kivy&amp;summary=Kivy&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Kivy on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f&title=Kivy">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Kivy on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Kivy on whatsapp"
+        href="https://api.whatsapp.com/send?text=Kivy%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Kivy on telegram"
+        href="https://telegram.me/share/url?text=Kivy&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fkivy%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
 
 </html>

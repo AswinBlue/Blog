@@ -1,14 +1,347 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>React basic&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="React basic" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>React basic | AswinBlue</title>
+<meta name="keywords" content="react, javascript, web application">
+<meta name="description" content="React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &lt;NAME&gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &quot;proxy&quot;: &quot;http://localhost:3000/&quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.">
+<meta name="author" content="AswinBlue">
+<link rel="canonical" href="https://AswinBlue.github.io/post/react_basic/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0b739a2e2c5e5656e4bcd5f0b2268d063addaf81d89ec3987d6af8f04decdc97.css" integrity="sha256-C3OaLixeVlbkvNXwsiaNBjrdr4HYnsOYfWr48E3s3Jc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AswinBlue.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AswinBlue.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="React basic" />
+<meta property="og:description" content="React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &lt;NAME&gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &quot;proxy&quot;: &quot;http://localhost:3000/&quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AswinBlue.github.io/post/react_basic/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-23T18:46:22&#43;09:00" />
+<meta property="article:modified_time" content="2021-08-23T18:46:22&#43;09:00" />
+
+
+<meta name="twitter:title" content="React basic"/>
+<meta name="twitter:description" content="React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &lt;NAME&gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &quot;proxy&quot;: &quot;http://localhost:3000/&quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://AswinBlue.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "React basic",
+      "item": "https://AswinBlue.github.io/post/react_basic/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "React basic",
+  "name": "React basic",
+  "description": "React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app \u0026lt;NAME\u0026gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 \u0026quot;proxy\u0026quot;: \u0026quot;http://localhost:3000/\u0026quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.",
+  "keywords": [
+    "react", "javascript", "web application"
+  ],
+  "articleBody": "React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 \"proxy\": \"http://localhost:3000/\" 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다. 기본 구조 /public/index.html 에서 기본 화면 구성 ‘root’ 이름으로 된 division이 있는데, 이 division에 대한 설정은 javascript로 정의되어있다. src 경로에 javascript파일들 구성 ‘index.js’ 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 ‘root’ 인 division에 ‘App’을 적용하겠다는 의미이다. ReactDOM.render(\r,\rdocument.getElementById('root')\r); ‘index.js’에서 라 되어있는 사용자 정의 태그를 생성했는데, App은 ‘App.js’에 정의되어 있고, ‘index.js’에서 ‘App.js’를 참조한다. ‘App.js’에서 선언된 ‘App’ 이라는 이름의 함수가 반환하는 값이 ‘App’태그에 치환된다고 보면 된다. ‘App’이 함수가 아니라 class로 정의되어 있다면 ‘App’ class의 ‘render()’ 함수의 리턴값이 ‘App’태그로 치환된다. 리턴값은 무조건 특정 태그 안에 들어가 있어야 한다. 태그로 감싸주도록 한다. src경로에 css파일 구성 index.css에서 css설정 구성 배포 npm run start로 ‘create-react-app’으로 만든 앱을 실행시킬 수는 있지만, 이는 개발자용 실행 방식이다. 웹 브라우저에서 페이지에 접속하고 다운로드받은 용량을 확인해보면 아무 기능이 없어도 MB단위가 다운받아짐을 확인할 수 있다. 이러한 상태로 배포를 하면 효율 및 보안 관점에서 적합하지 않다. npm run build 명령어를 수행하면 ‘build’라는 새로운 디렉터리와 데이터들이 생성된다. ‘build’ 안에 있는 파일들은 공백 등을 제거하여 용량 및 보안에 최적화된 상태로 제공된다. 배포시에는 ‘build’디렉터리 안의 내용을 사용하면 된다. 웹서버의 최상위 디렉터리를 ‘build’로 설정하면 된다. npm install serve 명령어로 serve 툴을 설치한다. serve는 웹서버를 실행시키는 도구이다. serve -s build 명령어로 ‘build’ 디렉터리를 root 디렉터리로 웹서버를 실행한다. 보통은 이렇게 일일이 작업을 수행하지 않고, npm run deploy 명령으로 package.json 파일에 기록된 설정대로 배포 작업을 자동화시킨다. github에 배포 create-react-app으로 프로젝트 생성 : create-react-app gh-pages 설치(이미 설치시 생략가능) : npm install -g gh-pages git hub에서 원하는 이름으로 repository 생성( 이후 {repo-name} 로 지칭) 생성된 git repository와 react 폴더 연동한다. git init git remote add origin {your-repository-url} package.json파일 수정 ({username}은 github 계정 이름) “homepage” : “http://{username}.github.io/{repo-name}” “scripts”: {“predeploy”: “npm run build”, “deploy”: “gh-pages -d build”} 배포를 실행한다. npm run deploy gh-pages 라는 branch를 자동으로 생성하고, package.json에 설정한 ‘homepage’ 주소에 react 페이지가 업로드된 것을 볼 수 있다. 문법 주석 React 는 react code(typescript)와 JSX(xml) 코드가 있다. typescript에서는 ‘//’ 혹은 ‘/* */’ 로 주석을 사용한다. JSX에서는 ‘{/* */}’ 로 주석을 사용한다. 함수 일반 함수 javascript와 동일하게 선언 가능하다. function Subject() {\rreturn (\r",
+  "wordCount" : "3305",
+  "inLanguage": "en",
+  "datePublished": "2021-08-23T18:46:22+09:00",
+  "dateModified": "2021-08-23T18:46:22+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "AswinBlue"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AswinBlue.github.io/post/react_basic/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AswinBlue",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AswinBlue.github.io/favicon.ico"
+    }
+  }
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
      crossorigin="anonymous"></script>
-<body><section id="header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">React basic</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 18 minutes to read</span></p></section><article class="article markdown-body"><h1 id="react-basic">React basic</h1>
-<h2 id="개발환경-설치-및-실행">개발환경 설치 및 실행</h2>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a>&nbsp;»&nbsp;<a href="https://AswinBlue.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      React basic
+    </h1>
+    <div class="post-meta"><span title='2021-08-23 18:46:22 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;16 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href="https://github.com/AswinBlue/HugoBlog/tree/master/content/post/react_basic.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#react-basic" aria-label="React basic">React basic</a><ul>
+                        
+                <li>
+                    <a href="#%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd-%ec%84%a4%ec%b9%98-%eb%b0%8f-%ec%8b%a4%ed%96%89" aria-label="개발환경 설치 및 실행">개발환경 설치 및 실행</a><ul>
+                        
+                <li>
+                    <a href="#%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95" aria-label="기본 설정">기본 설정</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b8%b0%eb%b3%b8-%ea%b5%ac%ec%a1%b0" aria-label="기본 구조">기본 구조</a></li>
+                <li>
+                    <a href="#%eb%b0%b0%ed%8f%ac" aria-label="배포">배포</a><ul>
+                        
+                <li>
+                    <a href="#github%ec%97%90-%eb%b0%b0%ed%8f%ac" aria-label="github에 배포">github에 배포</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%ac%b8%eb%b2%95" aria-label="문법">문법</a><ul>
+                        
+                <li>
+                    <a href="#%ec%a3%bc%ec%84%9d" aria-label="주석">주석</a></li>
+                <li>
+                    <a href="#%ed%95%a8%ec%88%98" aria-label="함수">함수</a></li>
+                <li>
+                    <a href="#%eb%b3%80%ec%88%98" aria-label="변수">변수</a><ul>
+                        
+                <li>
+                    <a href="#string" aria-label="string">string</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%b0%b0%ec%97%b4" aria-label="배열">배열</a><ul>
+                        
+                <li>
+                    <a href="#%eb%b0%98%eb%b3%b5%ec%88%9c%ed%9a%8c" aria-label="반복(순회)">반복(순회)</a></li>
+                <li>
+                    <a href="#%eb%b9%84%ea%b5%90" aria-label="비교">비교</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b0%9d%ec%b2%b4" aria-label="객체">객체</a><ul>
+                        
+                <li>
+                    <a href="#unpack" aria-label="unpack">unpack</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%b3%b5%ec%82%ac" aria-label="복사">복사</a></li>
+                <li>
+                    <a href="#%ec%a1%b0%ea%b1%b4" aria-label="조건">조건</a></li>
+                <li>
+                    <a href="#promise" aria-label="promise">promise</a></li></ul>
+                </li>
+                <li>
+                    <a href="#component" aria-label="Component">Component</a><ul>
+                        
+                <li>
+                    <a href="#props" aria-label="props">props</a></li>
+                <li>
+                    <a href="#state" aria-label="state">state</a></li>
+                <li>
+                    <a href="#render" aria-label="render">render</a><ul>
+                        
+                <li>
+                    <a href="#return" aria-label="return">return</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%9d%b4%eb%b2%a4%ed%8a%b8" aria-label="이벤트">이벤트</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%9d%bc%ec%9d%b4%ed%94%84%ec%82%ac%ec%9d%b4%ed%81%b4" aria-label="라이프사이클">라이프사이클</a><ul>
+                        
+                <li>
+                    <a href="#%eb%a7%88%ec%9a%b4%ed%8a%b8" aria-label="마운트">마운트</a></li>
+                <li>
+                    <a href="#%ec%97%85%eb%8d%b0%ec%9d%b4%ed%8a%b8" aria-label="업데이트">업데이트</a></li>
+                <li>
+                    <a href="#%ec%96%b8%eb%a7%88%ec%9a%b4%ed%8a%b8" aria-label="언마운트">언마운트</a></li></ul>
+                </li>
+                <li>
+                    <a href="#this" aria-label="this">this</a></li>
+                <li>
+                    <a href="#hook" aria-label="hook">hook</a><ul>
+                        
+                <li>
+                    <a href="#hook%ec%9d%98-%ec%a1%b0%ea%b1%b4" aria-label="hook의 조건">hook의 조건</a></li>
+                <li>
+                    <a href="#hook%ec%9d%98-%ec%a2%85%eb%a5%98" aria-label="hook의 종류">hook의 종류</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b0%81%ec%a2%85-%eb%aa%a8%eb%93%88" aria-label="각종 모듈">각종 모듈</a><ul>
+                        
+                <li>
+                    <a href="#router" aria-label="Router">Router</a></li>
+                <li>
+                    <a href="#link" aria-label="Link">Link</a></li>
+                <li>
+                    <a href="#redirect" aria-label="Redirect">Redirect</a></li>
+                <li>
+                    <a href="#cross-env" aria-label="cross-env">cross-env</a></li>
+                <li>
+                    <a href="#typeof" aria-label="typeof">typeof</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%a0%95%ec%9d%98%eb%90%98%eb%8a%94-%ea%b0%92-%ec%b0%b8%ec%a1%b0httpsdevelopermozillaorgkodocswebjavascriptreferenceoperatorstypeof" aria-label="정의되는 값 참조"><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof">정의되는 값 참조</a></a></li>
+                <li>
+                    <a href="#dom" aria-label="DOM">DOM</a><ul>
+                        
+                <li>
+                    <a href="#script-%ec%b0%b8%ec%a1%b0" aria-label="script 참조">script 참조</a></li>
+                <li>
+                    <a href="#window-%eb%b3%80%ec%88%98" aria-label="window 변수">window 변수</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b8%b0%ed%83%80" aria-label="기타">기타</a></li>
+                <li>
+                    <a href="#%ec%b6%94%ea%b0%80-%ed%99%9c%ec%9a%a9" aria-label="추가 활용">추가 활용</a><ul>
+                        
+                <li>
+                    <a href="#%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%b2%a8%eb%b6%80" aria-label="이미지 첨부">이미지 첨부</a></li>
+                <li>
+                    <a href="#key-%ec%88%a8%ea%b8%b0%ea%b8%b0" aria-label="key 숨기기">key 숨기기</a></li>
+                <li>
+                    <a href="#env-%ed%8c%8c%ec%9d%bc-%ec%82%ac%ec%9a%a9%eb%b2%95" aria-label=".env 파일 사용법">.env 파일 사용법</a></li>
+                <li>
+                    <a href="#custom-tag" aria-label="Custom Tag">Custom Tag</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%b0%b8%ec%a1%b0" aria-label="참조">참조</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="react-basic">React basic<a hidden class="anchor" aria-hidden="true" href="#react-basic">#</a></h1>
+<h2 id="개발환경-설치-및-실행">개발환경 설치 및 실행<a hidden class="anchor" aria-hidden="true" href="#개발환경-설치-및-실행">#</a></h2>
 <ol>
 <li>node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.</li>
 </ol>
@@ -29,14 +362,14 @@
 <ul>
 <li><code>npm run start</code> 를 수행하면 <code>localhost:3000</code>에서 웹페이지를 퍼블리싱한다.</li>
 </ul>
-<h3 id="기본-설정">기본 설정</h3>
+<h3 id="기본-설정">기본 설정<a hidden class="anchor" aria-hidden="true" href="#기본-설정">#</a></h3>
 <ol>
 <li>실행 포트</li>
 </ol>
 <ul>
 <li><code>package.json</code> 파일에서 <code>&quot;proxy&quot;: &quot;http://localhost:3000/&quot;</code> 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.</li>
 </ul>
-<h2 id="기본-구조">기본 구조</h2>
+<h2 id="기본-구조">기본 구조<a hidden class="anchor" aria-hidden="true" href="#기본-구조">#</a></h2>
 <ol>
 <li>/public/index.html 에서 기본 화면 구성</li>
 </ol>
@@ -49,11 +382,11 @@
 <ul>
 <li>&lsquo;index.js&rsquo; 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 &lsquo;root&rsquo; 인 division에 &lsquo;App&rsquo;을 적용하겠다는 의미이다.</li>
 </ul>
-<pre><code>ReactDOM.render(
+<pre tabindex="0"><code>ReactDOM.render(
   &lt;React.StrictMode&gt;
     &lt;App /&gt;
   &lt;/React.StrictMode&gt;,
-  document.getElementById('root')
+  document.getElementById(&#39;root&#39;)
 );
 </code></pre><ul>
 <li>&lsquo;index.js&rsquo;에서 <code>&lt;App/&gt;</code> 라 되어있는 사용자 정의 태그를 생성했는데, <code>App</code>은 &lsquo;App.js&rsquo;에 정의되어 있고, &lsquo;index.js&rsquo;에서 &lsquo;App.js&rsquo;를 참조한다.</li>
@@ -75,7 +408,7 @@
 </table>
 </li>
 </ul>
-<h2 id="배포">배포</h2>
+<h2 id="배포">배포<a hidden class="anchor" aria-hidden="true" href="#배포">#</a></h2>
 <ul>
 <li><code>npm run start</code>로 &lsquo;create-react-app&rsquo;으로 만든 앱을 실행시킬 수는 있지만, 이는 개발자용 실행 방식이다.</li>
 <li>웹 브라우저에서 페이지에 접속하고 다운로드받은 용량을 확인해보면 아무 기능이 없어도 MB단위가 다운받아짐을 확인할 수 있다.</li>
@@ -87,7 +420,7 @@
 <li><code>serve -s build</code> 명령어로 &lsquo;build&rsquo; 디렉터리를 root 디렉터리로 웹서버를 실행한다.</li>
 <li>보통은 이렇게 일일이 작업을 수행하지 않고, <code>npm run deploy</code> 명령으로 package.json 파일에 기록된 설정대로 배포 작업을 자동화시킨다.</li>
 </ul>
-<h3 id="github에-배포">github에 배포</h3>
+<h3 id="github에-배포">github에 배포<a hidden class="anchor" aria-hidden="true" href="#github에-배포">#</a></h3>
 <ol>
 <li>create-react-app으로 프로젝트 생성 : <code>create-react-app &lt;NAME&gt;</code></li>
 <li>gh-pages 설치(이미 설치시 생략가능) : <code>npm install -g gh-pages</code></li>
@@ -111,24 +444,24 @@
 <ul>
 <li>gh-pages 라는 branch를 자동으로 생성하고, package.json에 설정한 &lsquo;homepage&rsquo; 주소에 react 페이지가 업로드된 것을 볼 수 있다.</li>
 </ul>
-<h2 id="문법">문법</h2>
-<h3 id="주석">주석</h3>
+<h2 id="문법">문법<a hidden class="anchor" aria-hidden="true" href="#문법">#</a></h2>
+<h3 id="주석">주석<a hidden class="anchor" aria-hidden="true" href="#주석">#</a></h3>
 <ul>
 <li>React 는 react code(typescript)와 JSX(xml) 코드가 있다.</li>
 <li>typescript에서는 &lsquo;//&rsquo; 혹은 &lsquo;/* */&rsquo; 로 주석을 사용한다.</li>
 <li>JSX에서는 &lsquo;{/* */}&rsquo; 로 주석을 사용한다.</li>
 </ul>
-<h3 id="함수">함수</h3>
+<h3 id="함수">함수<a hidden class="anchor" aria-hidden="true" href="#함수">#</a></h3>
 <ol>
 <li>일반 함수</li>
 </ol>
 <ul>
 <li>javascript와 동일하게 선언 가능하다.</li>
 </ul>
-<pre><code>function Subject() {
+<pre tabindex="0"><code>function Subject() {
     return (
 	    &lt;div&gt;
-        &lt;a href=&quot;/&quot; onClick={ function(e) {
+        &lt;a href=&#34;/&#34; onClick={ function(e) {
           e.preventDefault();
           this.props.onChangePage();  // 상위 컴퍼넌트로 부터 받은 함수 실행
         }
@@ -142,18 +475,18 @@
 <li>VARIABLES는 &lsquo;,&lsquo;로 나누어져 두개 이상의 인자를 선언할 수 있고, BODY에서 사용될 수 있다.</li>
 <li>위 함수를 호출하려면 <code>FUNCTION_NAME(VARIABLES)</code> 형태로 호출 가능하다.</li>
 </ul>
-<pre><code>highlightSquares = i =&gt; {
+<pre tabindex="0"><code>highlightSquares = i =&gt; {
   if (this.props.winningSquares.length &gt; 0) {
     if (this.props.winningSquares.indexOf(i) &gt; -1) {
-      return &quot;square winningSquares&quot;;
+      return &#34;square winningSquares&#34;;
     } else {
-      return &quot;square&quot;;
+      return &#34;square&#34;;
     }
   } else {
-    return &quot;square&quot;;
+    return &#34;square&#34;;
   }
 };
-</code></pre><h3 id="변수">변수</h3>
+</code></pre><h3 id="변수">변수<a hidden class="anchor" aria-hidden="true" href="#변수">#</a></h3>
 <ul>
 <li>hoisting : javascript에서는 변수를 scope(함수 혹은 블록)의 가장 위로 끌어올려서, 먼저 선언된것처럼 인식하는 기능이 있다.</li>
 </ul>
@@ -164,20 +497,20 @@
 <li>var는 function-scoped 변수이다. 함수가 끝나기까지 해당 변수는 유지된다. (hoisting)</li>
 <li>var를 block-scoped로 낮추기 위해서는 IIFE, &lsquo;use strict&rsquo; 등의 방법을 사용할 수도 있지만 let으로 선언하는게 빠르다.</li>
 </ul>
-<pre><code>function TEST() {
+<pre tabindex="0"><code>function TEST() {
   for (var i = 0; i &lt; 10; i++) {
-    console.log('i: ', i); // 정상출력
+    console.log(&#39;i: &#39;, i); // 정상출력
   }
-  console.log('i: ', i); // 정상출력
+  console.log(&#39;i: &#39;, i); // 정상출력
 }
-console.log('i: ', i); // 오류
+console.log(&#39;i: &#39;, i); // 오류
 </code></pre><ul>
 <li>동일한 이름의 변수를 재선언할 수 있고, hoisting에 의해 나중에 선언한 변수를 먼저 사용할수도 있다. (오류를 일으키기 좋은 허용이다)</li>
 </ul>
-<pre><code>var A = 1
+<pre tabindex="0"><code>var A = 1
 var A = 2 // 가능
 
-str='abcd' // 가능
+str=&#39;abcd&#39; // 가능
 var str
 </code></pre><ol start="2">
 <li>let</li>
@@ -187,11 +520,11 @@ var str
 <li>재선언 불가능</li>
 <li>hoisting 동작 안함</li>
 </ul>
-<pre><code>let A = 1
+<pre tabindex="0"><code>let A = 1
 let A = 2 // 불가능
 A = 3 // 가능
 
-str='abcd' // 불가능
+str=&#39;abcd&#39; // 불가능
 let str
 </code></pre><ol start="3">
 <li>const</li>
@@ -201,11 +534,11 @@ let str
 <li>선언과 동시에 값 할당 필요, 재정의 불가능</li>
 <li>hoisting 동작 안함</li>
 </ul>
-<pre><code>const A = 1
+<pre tabindex="0"><code>const A = 1
 const A = 2 // 불가능
 A = 3 // 불가능
 
-str='abcd' // 불가능
+str=&#39;abcd&#39; // 불가능
 const str // 불가능
 </code></pre><ol start="4">
 <li>선언없이 정의</li>
@@ -213,33 +546,33 @@ const str // 불가능
 <ul>
 <li>아무 타입을 붙이지 않고 선언하면 전역변수로 선언된다.</li>
 </ul>
-<pre><code>str='12345'
+<pre tabindex="0"><code>str=&#39;12345&#39;
 A=5
-</code></pre><h4 id="string">string</h4>
+</code></pre><h4 id="string">string<a hidden class="anchor" aria-hidden="true" href="#string">#</a></h4>
 <ul>
 <li>문자열을 담는 변수로, 아래와 같은 함수들을 지원한다.</li>
 <li>contains(str) : 문자열 내에 주어진 문자열(str)이 포함되었는지 확인, 결과를 반환</li>
 </ul>
-<h3 id="배열">배열</h3>
+<h3 id="배열">배열<a hidden class="anchor" aria-hidden="true" href="#배열">#</a></h3>
 <ul>
 <li>배열은 <code>arr=[1, 2, 3]</code> 과 같은 형태로 선언한다. <code>arr=[,,,]</code>과 같이 크기3(쉼표개수)의 배열 선언도 가능하지만, 배열의 요소는 undefined로 정의된다. <code>arr = new Array(1,2,3)</code>로 선언도 가능하다.</li>
 <li>배열의 길이는 <code>arr.length</code> 로 추출 가능하다.</li>
 <li>좌항에 배열 형태를 두어 배열의 요소를 각각 정의할 수 있다. <code> [a, b, c] = [1, 2, 3]</code> 이때, 일부 값을 무시할 수 있다. <code>[a, , c] = [1, 2, 3]</code></li>
-<li>전개 연산자(&rsquo;&hellip;')을 이용하여 나머지 개체들을 통틀어 지정할 수 있다. <code>[a, b, ...c] = [1, 2, 3, 4, 5] // a = 1, b = 2, c = [3, 4, 5]</code></li>
+<li>전개 연산자(&rsquo;&hellip;&rsquo;)을 이용하여 나머지 개체들을 통틀어 지정할 수 있다. <code>[a, b, ...c] = [1, 2, 3, 4, 5] // a = 1, b = 2, c = [3, 4, 5]</code></li>
 <li>전개 연산자 이후 다른 변수가 오면 오류가 난다. <code>[a, b, ...c, d] = [1,2,3,4,5] // 오류</code></li>
 <li>선언된 변수를 전개연산자로 다른 변수에 넣을수도 있다.</li>
 <li><code>ARRAY.indexOf(ITEM)</code> : ARRAY 배열안의 ITEM의 index를 반환한다.</li>
 </ul>
-<pre><code>var A = [1, 2, 3, 4, 5]
+<pre tabindex="0"><code>var A = [1, 2, 3, 4, 5]
 var B = [...A] // B = [1, 2, 3, 4, 5]
-</code></pre><h4 id="반복순회">반복(순회)</h4>
+</code></pre><h4 id="반복순회">반복(순회)<a hidden class="anchor" aria-hidden="true" href="#반복순회">#</a></h4>
 <ul>
 <li>배열 내용을 순회하는 방법은 다음과 같다.</li>
 </ul>
 <ol>
 <li>map 함수</li>
 </ol>
-<pre><code>var A = [1,2,3]
+<pre tabindex="0"><code>var A = [1,2,3]
 A.map((a) =&gt; {
   // 원하는 동작을 입력하면 된다.
 })
@@ -247,27 +580,27 @@ A.map(Math.sqrt) // lambda함수 외 일반함수를 넣어도 된다.
 </code></pre><ol start="2">
 <li>for-of</li>
 </ol>
-<pre><code>var A = [1,2,3]
+<pre tabindex="0"><code>var A = [1,2,3]
 for (var a of A) {
   // java의 for( : ) 와 같다
 }
 </code></pre><ul>
 <li>객체의 배열도 동일한 방법으로 순회가 가능하다. 다만 비구조화(destructing)가 포함된다.</li>
 </ul>
-<pre><code>var B = [{a:1, b:2, c:3}, {a:4, b:5, c:6}]
+<pre tabindex="0"><code>var B = [{a:1, b:2, c:3}, {a:4, b:5, c:6}]
 B.map({a,b,c} =&gt; {
   // 원하는 동작 수행
 })
 for (var {a:aa, b:bb, c:cc} of B) {
   // key가 마음에들지 않으면 재정의도 가능하다.
 }
-</code></pre><h4 id="비교">비교</h4>
+</code></pre><h4 id="비교">비교<a hidden class="anchor" aria-hidden="true" href="#비교">#</a></h4>
 <ul>
 <li>filter 함수를 이용하여 조건에 맞는 요소만 선택 가능하다.</li>
 </ul>
-<pre><code>var a = [1,2,3,4,5,6,7]
+<pre tabindex="0"><code>var a = [1,2,3,4,5,6,7]
 var b = a.filter(i =&gt; i &lt; 4); // b = [1,2,3]
-</code></pre><h3 id="객체">객체</h3>
+</code></pre><h3 id="객체">객체<a hidden class="anchor" aria-hidden="true" href="#객체">#</a></h3>
 <ul>
 <li>Json형태로 이루어져 있다. <code>var obj = {'a':10, b:20}</code> key값은 &lsquo;&lsquo;를 붙여도 되고 안붙여도 된다.</li>
 <li>value를 변수로 추출할때는 다음과 같이 수행한다. 이를 비구조화라 한다. <code>var {a,b,c} = {a:1, b:2, c:3} // a==1, b==2, c==3</code></li>
@@ -276,37 +609,37 @@ var b = a.filter(i =&gt; i &lt; 4); // b = [1,2,3]
 <li>key값으로 사용불가능한 값이 올 경우 다음과 같이 비구조화 한다. <code>var {'a-b-c':a_b_c, [key]:A_B_C} = {'a-b-c':10, 'A B C':20} // a_b_c = 10, A_B_C = 20</code></li>
 <li>재구조화시 전개 연산자를 사용할 수 있지만, 전개연산자를 재정의 할 수는 없다. <code>{a:A, ...rest} = {a:10, b:20, c:30} // rest:B 는 불가능</code></li>
 </ul>
-<h4 id="unpack">unpack</h4>
+<h4 id="unpack">unpack<a hidden class="anchor" aria-hidden="true" href="#unpack">#</a></h4>
 <ul>
 <li>전개 연산자 <code>...</code> 을 사용하여 객체 내용을 나열할 있다.
 ex)</li>
 </ul>
-<pre><code>const obj = () =&gt; {
-  var value = &quot;value&quot;;
-  var onChange = () =&gt; {console.log(&quot;onchange&quot;)}
+<pre tabindex="0"><code>const obj = () =&gt; {
+  var value = &#34;value&#34;;
+  var onChange = () =&gt; {console.log(&#34;onchange&#34;)}
   return {value, onChange};
 }
 
 ...
 
 // 아래 두 줄은 같은 효과를 가진다.
-&lt;input placeholder=&quot;&quot; {...obj}&gt;&lt;input/&gt;
-&lt;input placeholder=&quot;&quot; value = {obj.value} onchange={obj.onChange}&gt;&lt;input/&gt;
-</code></pre><h3 id="복사">복사</h3>
+&lt;input placeholder=&#34;&#34; {...obj}&gt;&lt;input/&gt;
+&lt;input placeholder=&#34;&#34; value = {obj.value} onchange={obj.onChange}&gt;&lt;input/&gt;
+</code></pre><h3 id="복사">복사<a hidden class="anchor" aria-hidden="true" href="#복사">#</a></h3>
 <ul>
 <li>배열</li>
 </ul>
-<pre><code>var a = [1,2,3]
+<pre tabindex="0"><code>var a = [1,2,3]
 var b = [...a] // 깊은복사
 var [...c] = a // 깊은복사
 var d = a // 얕은복사
 </code></pre><ul>
 <li>객체</li>
 </ul>
-<pre><code>var A = {one:1, two:2, three:3}
+<pre tabindex="0"><code>var A = {one:1, two:2, three:3}
 var B = {...A} // 깊은복사 : one==1, two==2, three==3
 var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
-</code></pre><h3 id="조건">조건</h3>
+</code></pre><h3 id="조건">조건<a hidden class="anchor" aria-hidden="true" href="#조건">#</a></h3>
 <ul>
 <li>특정 조건을 만족할 때에만 내용이 출력되도록 한다.<br>
 <code>{CONDITION &amp;&amp; &lt;div&gt; ! &lt;/div&gt;} // CONDITION 이 true일 때만 '!'를 표시한다.</code></li>
@@ -315,7 +648,7 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
 <li>&amp;&amp; : 앞의 내용이 참이면 뒤의 내용 수행<br>
 <code>&lt;span&gt;{A &amp;&amp; &quot;True&quot;}&lt;/span&gt;</code></li>
 </ul>
-<h3 id="promise">promise</h3>
+<h3 id="promise">promise<a hidden class="anchor" aria-hidden="true" href="#promise">#</a></h3>
 <ul>
 <li>비동기 처리시 사용하는 객체</li>
 <li>promise 객체는 async와 wait를 이용한다.
@@ -325,7 +658,7 @@ var C = {...A, three:30} // 깊은복사+값 할당 : one==1, two==2, three==30
 </ul>
 </li>
 </ul>
-<h2 id="component">Component</h2>
+<h2 id="component">Component<a hidden class="anchor" aria-hidden="true" href="#component">#</a></h2>
 <ul>
 <li>React는 js파일에서 정의한 컴포넌트를 html로 컴파일 한다.
 ex)</li>
@@ -335,7 +668,7 @@ ex)</li>
 <ol>
 <li>class형태로 만들기</li>
 </ol>
-<pre><code>class Subject extends Component {
+<pre tabindex="0"><code>class Subject extends Component {
    render() {
 	   return (
 		   &lt;header&gt;
@@ -347,7 +680,7 @@ ex)</li>
 </code></pre><ol start="2">
 <li>함수 형태로 만들기</li>
 </ol>
-<pre><code>function Subject() {
+<pre tabindex="0"><code>function Subject() {
     return (
 	    &lt;div&gt;
 		    &lt;h1&gt;Hello&lt;/h1&gt;
@@ -359,13 +692,13 @@ ex)</li>
 <li>&lsquo;index.js&rsquo;가 default라 가정하고, &lsquo;App.js&rsquo;에서 App 객체 안에 <code>&lt;Subject&gt;&lt;/Subject&gt;</code> 와 같이 태그를 생성한다. (다른 파일에 선언했다면 해당 파일을 &lsquo;App.js&rsquo;에서 참조 필요)<br>
 ※  <em>&lsquo;App.js&rsquo; 파일은 확장자가 js이지만 코드 문법은 javascript가 아니다.</em></li>
 </ul>
-<h3 id="props">props</h3>
+<h3 id="props">props<a hidden class="anchor" aria-hidden="true" href="#props">#</a></h3>
 <ul>
 <li>props를 활용하여 js파일에서 컴포넌트 태그 생성시 속성을 설정 가능하다.<br>
 <code>&lt;Subject title=&quot;TITLE&quot;, content=&quot;CONTENT&quot;&gt;</code> : title 값으로 &ldquo;TITLE&rdquo;, content 값으로 &ldquo;CONTENT&rdquo; 설정</li>
 <li>Subject 객체 생성시 <code>{this.prop.title}</code>, <code>{this.prop.content}</code>와 같이 참조하여 사용한다.</li>
 </ul>
-<pre><code>function Subject() {
+<pre tabindex="0"><code>function Subject() {
     return (
 	    &lt;div&gt;
 		    &lt;h1&gt;{this.prop.title}&lt;/h1&gt;
@@ -376,7 +709,7 @@ ex)</li>
 </code></pre><ul>
 <li>응용하여 아래와 같은 활용도 가능하다.</li>
 </ul>
-<pre><code>function Subject() {
+<pre tabindex="0"><code>function Subject() {
     {title, content} = {this.prop}
     return (
 	    &lt;div&gt;
@@ -385,7 +718,7 @@ ex)</li>
 		&lt;/div&gt;
 	);
 }
-</code></pre><h3 id="state">state</h3>
+</code></pre><h3 id="state">state<a hidden class="anchor" aria-hidden="true" href="#state">#</a></h3>
 <ul>
 <li>props는 부모 컴퍼넌트가 자식에게 설정해 주는 값이라면, state는 컴퍼넌트가 자기 자신을 위해 사용하는 값이다.</li>
 <li>state는 함수형에서는 사용 불가능하고 클래스형에서 사용 가능하다. 대신 함수형에서는 &lsquo;훅&rsquo; 이라는 기능을 이용해 state와 유사한 효과를 낼 수 있다.</li>
@@ -396,17 +729,17 @@ ex)</li>
 <ul>
 <li>constructor : 컴퍼넌트가 생성되었을 때 최초로 실행되는 함수. 초기화를 담당한다.</li>
 </ul>
-<pre><code>class App extends Component {
+<pre tabindex="0"><code>class App extends Component {
   constructor(props) {
     super(props);       // constructor 함수 기본
     this.state : {    // state 초기화
-      subject:{title:&quot;TITLE&quot;, content: &quot;CONTENT&quot;}
+      subject:{title:&#34;TITLE&#34;, content: &#34;CONTENT&#34;}
     }
   }
   render() {
     return (
-      &lt;div ClassName = &quot;APP&quot;&gt;
-        &lt;Subject title={this.state.subject.title} content={this.state.subject.content}&gt;&lt;/Subject&gt;     // html형태의 return값 안에서 javascript문법을 사용하려면 '{}'로 묶어준다.
+      &lt;div ClassName = &#34;APP&#34;&gt;
+        &lt;Subject title={this.state.subject.title} content={this.state.subject.content}&gt;&lt;/Subject&gt;     // html형태의 return값 안에서 javascript문법을 사용하려면 &#39;{}&#39;로 묶어준다.
       &lt;/div&gt;
     );
   }
@@ -418,21 +751,21 @@ ex)</li>
 <ol>
 <li>state로 배열 사용</li>
 </ol>
-<pre><code>  class App extends Component {
+<pre tabindex="0"><code>  class App extends Component {
     constructor(props) {
       super(props);       // constructor 함수 기본
       this.state = {    // state 초기화
-        subject:{title:&quot;TITLE&quot;, content: &quot;CONTENT&quot;},
+        subject:{title:&#34;TITLE&#34;, content: &#34;CONTENT&#34;},
         contents:[
-          {id:1, title:'title1', desc:'desc1'},
-          {id:2, title:'title2', desc:'desc2'},
-          {id:3, title:'title3', desc:'desc3'},
+          {id:1, title:&#39;title1&#39;, desc:&#39;desc1&#39;},
+          {id:2, title:&#39;title2&#39;, desc:&#39;desc2&#39;},
+          {id:3, title:&#39;title3&#39;, desc:&#39;desc3&#39;},
         ]
       }
     }
     render() {
       return (
-        &lt;div ClassName = &quot;APP&quot;&gt;
+        &lt;div ClassName = &#34;APP&#34;&gt;
           &lt;TOC data={this.state.contents}&gt;&lt;/TOC&gt;
         &lt;/div&gt;
       );
@@ -445,9 +778,9 @@ ex)</li>
       var data = this.props.data;
       var i = 0;
       while (i &lt; data.length) {
-        lists.push(&lt;li key={i}&gt;&lt;a href={&quot;/content/&quot; + data[i].id}&gt;{data[i].title}&lt;/a&gt;&lt;/li&gt;)
+        lists.push(&lt;li key={i}&gt;&lt;a href={&#34;/content/&#34; + data[i].id}&gt;{data[i].title}&lt;/a&gt;&lt;/li&gt;)
         /*
-         * 반복문을 통해 여러 객체를 만들 때, react에서는 'key'라는 유니크한 속성을 요구한다.
+         * 반복문을 통해 여러 객체를 만들 때, react에서는 &#39;key&#39;라는 유니크한 속성을 요구한다.
          *
          */
         i = i + 1;
@@ -462,33 +795,33 @@ ex)</li>
     }
   }
 </code></pre><p>※ react에서는 props나 state가 바뀌면, 이를 사용하는 하위 컴퍼넌트들의 <code>render()</code> 함수가 모두 다시 호출된다. 즉, 화면이 재구성된다.</p>
-<h3 id="render">render</h3>
+<h3 id="render">render<a hidden class="anchor" aria-hidden="true" href="#render">#</a></h3>
 <ul>
 <li>component 안의 <code>render()</code> 함수는 실제로 랜더링할 때 사용할 로직 및 html 형태를 반환한다.</li>
 <li><code>render()</code> 함수 안에서 javascript로 로직 구현이 가능하다.
 ex) 조건문</li>
 </ul>
-<pre><code>  class App extends Component {
+<pre tabindex="0"><code>  class App extends Component {
     constructor(props) {
       super(props);       // constructor 함수 기본
       this.state = {    // state 초기화
-        mode: 'read'
+        mode: &#39;read&#39;
     }
     render() {
       var _mode = state.mode;
-      if (_mode == 'read') {    // 조건문
+      if (_mode == &#39;read&#39;) {    // 조건문
 
-      } else if (_mode == 'write') {
+      } else if (_mode == &#39;write&#39;) {
 
       }
       return (
-        &lt;div ClassName = &quot;APP&quot;&gt;
+        &lt;div ClassName = &#34;APP&#34;&gt;
           &lt;TOC data={this.state.contents}&gt;&lt;/TOC&gt;
         &lt;/div&gt;
       );
     }
   }
-</code></pre><h4 id="return">return</h4>
+</code></pre><h4 id="return">return<a hidden class="anchor" aria-hidden="true" href="#return">#</a></h4>
 <ul>
 <li><code>render()</code> 함수의 return 값은 html 형태가 되어야 한다.</li>
 <li>하지만 return 안에서도 <code>{}</code> 구문 안에서 간단한 문법은 사용 가능하다.</li>
@@ -502,7 +835,7 @@ ex) 조건문</li>
 <li>&amp;&amp; : 앞의 내용이 참이면 뒤의 내용 수행
 <code>&lt;span&gt;{A &amp;&amp; &quot;True&quot;}&lt;/span&gt;</code></li>
 </ul>
-<h3 id="이벤트">이벤트</h3>
+<h3 id="이벤트">이벤트<a hidden class="anchor" aria-hidden="true" href="#이벤트">#</a></h3>
 <ul>
 <li>
 <p>버튼 클릭, 내용 변경 등 사건이 발생했을 때, 이벤트 함수가 호출된다.</p>
@@ -513,14 +846,14 @@ ex) 조건문</li>
 <li>html에서 onclick은 &lsquo;C&rsquo;가 소문자이지만, react에서는 대문자이다.</li>
 <li>onClick은 인자로 함수를 받는다.
 <ul>
-<li>인자로 들어가는 함수는 &lsquo;event&rsquo; 객체를 인자로 받는다.</li>
+<li>인자로 들어가는 함수는 &rsquo;event&rsquo; 객체를 인자로 받는다.</li>
 <li>이 함수를 이벤트 함수라 한다.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>      class App extends Component {
+<pre tabindex="0"><code>      class App extends Component {
         constructor(props) {
           super(props);  
           this.state = {}
@@ -528,10 +861,10 @@ ex) 조건문</li>
         render() {
           return (
             &lt;div&gt;
-              &lt;a href=&quot;/&quot; onClick={function(e) {
+              &lt;a href=&#34;/&#34; onClick={function(e) {
                 console.log(e);       // 로그 찍는 방법
                 e.preventDefault();   // 해당 태그의 기본 클릭동작을 수행하지 않도록 한다.
-                // 'a' 태그의 경우 링크로 접속하는 동작을 막는다.
+                // &#39;a&#39; 태그의 경우 링크로 접속하는 동작을 막는다.
                 }
               }&gt;Click_here&lt;/a&gt;        
             &lt;/div&gt;
@@ -549,19 +882,19 @@ ex) 조건문</li>
 <li>&lsquo;input&rsquo; 등 항목에서 내용이 변경되었을 경우</li>
 <li>아래와 같이 사용 가능</li>
 </ul>
-<pre><code>const onChange = (event) =&gt; {
+<pre tabindex="0"><code>const onChange = (event) =&gt; {
   // console.log(event.target.name);
-  const {target: {name, value}} = event;  // get some values from 'event'
+  const {target: {name, value}} = event;  // get some values from &#39;event&#39;
   ...
 </code></pre></li>
 </ul>
 <p>+) bind</p>
 <ul>
-<li>이벤트 함수는 기본적으로 &lsquo;this&rsquo;를 가지지 않는다. 이때 강제로 this를 주입시키는 함수가 bind이다.</li>
-<li>이벤트 함수 안에서는 기본적으로 &lsquo;this&rsquo;를 호출해도 아무것도 bind되어있지 않다.</li>
+<li>이벤트 함수는 기본적으로 &rsquo;this&rsquo;를 가지지 않는다. 이때 강제로 this를 주입시키는 함수가 bind이다.</li>
+<li>이벤트 함수 안에서는 기본적으로 &rsquo;this&rsquo;를 호출해도 아무것도 bind되어있지 않다.</li>
 <li><code>onClick={function(e) { ... }.bind(this)}</code> 와 같이 this를 bind해주면 this를 사용할 수 있게된다.</li>
 </ul>
-<pre><code>  var obj = {name:'obj'};
+<pre tabindex="0"><code>  var obj = {name:&#39;obj&#39;};
   functiotn bindTest() {
     console.log(this.name);
   }
@@ -571,16 +904,16 @@ ex) 조건문</li>
 <ul>
 <li>함수를 하위 컴퍼넌트에 전달해 준다.</li>
 </ul>
-<pre><code>  class App extends Component {
+<pre tabindex="0"><code>  class App extends Component {
     render() {
       return (
-        &lt;div ClassName = &quot;APP&quot;&gt;
+        &lt;div ClassName = &#34;APP&#34;&gt;
           &lt;Subject
             title={this.state.subject.title}
             content={this.state.subject.content}
             onChangePage={
               function(){
-                alert(&quot;page chaged&quot;); // 경고창 출력
+                alert(&#34;page chaged&#34;); // 경고창 출력
               }.bind(this);
             }
           &gt;
@@ -592,7 +925,7 @@ ex) 조건문</li>
   function Subject() {
       return (
   	    &lt;div&gt;
-          &lt;a href=&quot;/&quot; onClick={ function(e) {
+          &lt;a href=&#34;/&#34; onClick={ function(e) {
             e.preventDefault();
             this.props.onChangePage();  // 상위 컴퍼넌트로 부터 받은 함수 실행
           }
@@ -604,11 +937,11 @@ ex) 조건문</li>
 <li>하위 컴퍼넌트에서 상위 컴퍼넌트의 state를 변경할 수 있게 된다.</li>
 </ul>
 <hr>
-<h2 id="라이프사이클">라이프사이클</h2>
+<h2 id="라이프사이클">라이프사이클<a hidden class="anchor" aria-hidden="true" href="#라이프사이클">#</a></h2>
 <ul>
 <li>컴퍼넌트는 &lsquo;마운트 -&gt; 업데이트 -&gt; 언마운트&rsquo; 생명주기를 갖는다.</li>
 </ul>
-<h3 id="마운트">마운트</h3>
+<h3 id="마운트">마운트<a hidden class="anchor" aria-hidden="true" href="#마운트">#</a></h3>
 <ul>
 <li>마운트 단계 메서드로는 다음이 존재한다.
 <ul>
@@ -619,7 +952,7 @@ ex) 조건문</li>
 </ul>
 </li>
 </ul>
-<h3 id="업데이트">업데이트</h3>
+<h3 id="업데이트">업데이트<a hidden class="anchor" aria-hidden="true" href="#업데이트">#</a></h3>
 <ul>
 <li>
 <p>컴퍼넌트가 업데이트 되는 경우는 아래의 경우들이 속한다.</p>
@@ -641,7 +974,7 @@ ex) 조건문</li>
 </ul>
 </li>
 </ul>
-<h3 id="언마운트">언마운트</h3>
+<h3 id="언마운트">언마운트<a hidden class="anchor" aria-hidden="true" href="#언마운트">#</a></h3>
 <ul>
 <li>언마운트 단계의 메서드로는 다음이 존재한다.
 <ul>
@@ -650,32 +983,32 @@ ex) 조건문</li>
 </li>
 </ul>
 <hr>
-<h2 id="this">this</h2>
+<h2 id="this">this<a hidden class="anchor" aria-hidden="true" href="#this">#</a></h2>
 <ul>
 <li>javascript 문법의 this와 동일하게 동작한다.</li>
 <li>class 안에서는 this를 호출하면 class(컴퍼넌트)에 소속된 요소들에 접근할 수 있다.</li>
 <li>일반 function 안에서 this를 호출하면 자신이 종속된 객체에 접근한다.</li>
 <li>arrow function 안에서 this를 호출하면 자신이 종속된 인스턴스(컴퍼넌트)에 접근한다.</li>
 </ul>
-<pre><code>  function func1() {
-    this.name = &quot;func1&quot;
+<pre tabindex="0"><code>  function func1() {
+    this.name = &#34;func1&#34;
     return {
-        name : &quot;return&quot;
+        name : &#34;return&#34;
         arrow : () =&gt; {
-          console.log(this.name) // 'func1' 출력
+          console.log(this.name) // &#39;func1&#39; 출력
         }
         normal : function() {
-          console.log(this.name) // 'return' 출력
+          console.log(this.name) // &#39;return&#39; 출력
         }
     }
   }
 </code></pre><hr>
-<h2 id="hook">hook</h2>
+<h2 id="hook">hook<a hidden class="anchor" aria-hidden="true" href="#hook">#</a></h2>
 <ul>
 <li>class component에는 this.state가 있지만 function component 에서는 this.state가 없다. 대신 hook을 사용하여 동일한 기능을 수행한다.</li>
 <li>React에서는 built-in hook을 지원하고, 사용자가 직접 정의해서 사용할 수도 있다.</li>
 </ul>
-<h3 id="hook의-조건">hook의 조건</h3>
+<h3 id="hook의-조건">hook의 조건<a hidden class="anchor" aria-hidden="true" href="#hook의-조건">#</a></h3>
 <ol>
 <li>hook은 React 함수에서만 호출해야 한다. 일반 javascript 함수에서 호출하면 안된다.</li>
 <li>hook은 반복문, 조건문, nested function에서 호출되면 안된다.</li>
@@ -686,7 +1019,7 @@ React는 컴퍼넌트를 처리할때 hook 함수들을 호출된 순서대로 �
 만약 컴퍼넌트를 업데이트할 때 hook 함수들의 순서가 변경된다면 React는 이를 정상적으로 처리하지 못한다.<br>
 이때문에 hook은 항상 컴퍼넌트의 최상단에서 호출되어야 한다.</p>
 </blockquote>
-<h3 id="hook의-종류">hook의 종류</h3>
+<h3 id="hook의-종류">hook의 종류<a hidden class="anchor" aria-hidden="true" href="#hook의-종류">#</a></h3>
 <ol>
 <li>State Hooks</li>
 </ol>
@@ -710,25 +1043,24 @@ React는 컴퍼넌트를 처리할때 hook 함수들을 호출된 순서대로 �
 </ul>
 </li>
 </ul>
-<pre><code>    // return 없는 함수만 오는 경우
+<pre tabindex="0"><code>    // return 없는 함수만 오는 경우
     useEffect( () =&gt; {
-      console.log(&quot;componentDidUpdate&quot;);
+      console.log(&#34;componentDidUpdate&#34;);
     }
     // return 이 포함된 함수가 오는 경우
     useEffect( () =&gt; {
-      console.log(&quot;componentDidMount&quot;);
+      console.log(&#34;componentDidMount&#34;);
       return (
-        () =&gt; { console.log(&quot;componentWillUnmount&quot;) }
+        () =&gt; { console.log(&#34;componentWillUnmount&#34;) }
       )
     })
     // 두번쨰 인자가 들어간 경우
     useEffect( () =&gt; {
-      console.log(&quot;'value' changed&quot;);
+      console.log(&#34;&#39;value&#39; changed&#34;);
       return (
-        () =&gt; { console.log(&quot;value will be change&quot;)}
+        () =&gt; { console.log(&#34;value will be change&#34;)}
       )
     }, [value])
-
 </code></pre><ul>
 <li>class 의 componentdidMount와 같은 함수에 비해 간단하고 직관적으로 사용할 수 있다.</li>
 </ul>
@@ -753,25 +1085,25 @@ React는 컴퍼넌트를 처리할때 hook 함수들을 호출된 순서대로 �
 <li>호출된 custom hook도 일반 hook과 마찬가지로 중복해서 사용이 가능하며 각 hook들 끼리는 독립적이다.</li>
 </ul>
 <hr>
-<h2 id="각종-모듈">각종 모듈</h2>
+<h2 id="각종-모듈">각종 모듈<a hidden class="anchor" aria-hidden="true" href="#각종-모듈">#</a></h2>
 <ul>
 <li>package.json에 dependency를 기록해놓은 경우, <code>npm install --legacy-peer-deps</code> 명령으로 모든 dependency를 한번에 다운받을 수 있다. package.json에 기록되지 않는 모듈은 지워버리니 주의.</li>
 </ul>
-<h3 id="router">Router</h3>
+<h3 id="router">Router<a hidden class="anchor" aria-hidden="true" href="#router">#</a></h3>
 <ul>
 <li>SPA (Single Page Application) 에서 사용하지 않는 리소스를 로딩하느라 시간이 오래걸리는 것을 방지하기 위해, 소스를 분할처리하여 사용시에만 받을수 있게 하는 모듈</li>
 <li>설치 : <code>npm install react-router-dom</code></li>
 <li>사용 :</li>
 </ul>
-<pre><code>import { HashRouter, Route, Routes, BrowserRouter} from &quot;react-router-dom&quot;;
+<pre tabindex="0"><code>import { HashRouter, Route, Routes, BrowserRouter} from &#34;react-router-dom&#34;;
 const sample = () =&gt; {
     return (
         &lt;HashRouter&gt;
           /* can add any components you want */
           &lt;Routes&gt;
-          /* can only put 'Route' components in 'Routes' */
-          &lt;Route path=&quot;/&quot; element={&lt;Home/&gt;} /&gt;  // '/' 주소 호출시 Home component를 호출
-          &lt;Route path=&quot;/about/*&quot; element={&lt;About/&gt;} /&gt;  // 'about' 및 'about/...' 형태의 주소 호출시 About component 호출
+          /* can only put &#39;Route&#39; components in &#39;Routes&#39; */
+          &lt;Route path=&#34;/&#34; element={&lt;Home/&gt;} /&gt;  // &#39;/&#39; 주소 호출시 Home component를 호출
+          &lt;Route path=&#34;/about/*&#34; element={&lt;About/&gt;} /&gt;  // &#39;about&#39; 및 &#39;about/...&#39; 형태의 주소 호출시 About component 호출
           /* add as you wish */
           &lt;/Routes&gt;
         &lt;/HashRouter&gt;
@@ -782,7 +1114,7 @@ const sample = () =&gt; {
 <li>정규식 wild card <code>*</code>을 사용할 수 있다. (v5에서 exact 옵션 삭제되고 &lsquo;*&lsquo;로대체)</li>
 <li>route 하는 대상에 props을 전달하고 싶다면,</li>
 </ul>
-<h3 id="link">Link</h3>
+<h3 id="link">Link<a hidden class="anchor" aria-hidden="true" href="#link">#</a></h3>
 <ul>
 <li>특정 페이지로 경로를 전환해 주는 기능을 한다.</li>
 <li>react-router-dom 모듈 안에 포함되어있다.</li>
@@ -791,10 +1123,10 @@ const sample = () =&gt; {
 <li>설치 : <code>npm install react-router-dom</code></li>
 <li>사용 :</li>
 </ul>
-<pre><code>import { Link } from &quot;react-router-dom&quot;;
+<pre tabindex="0"><code>import { Link } from &#34;react-router-dom&#34;;
 ...
-&lt;Link to=&quot;/&quot;&gt;Root&lt;/Link&gt; // 클릭하면 '/' 경로로 redirect 되는 Link 생성
-</code></pre><h3 id="redirect">Redirect</h3>
+&lt;Link to=&#34;/&#34;&gt;Root&lt;/Link&gt; // 클릭하면 &#39;/&#39; 경로로 redirect 되는 Link 생성
+</code></pre><h3 id="redirect">Redirect<a hidden class="anchor" aria-hidden="true" href="#redirect">#</a></h3>
 <ul>
 <li>react-router-dom에서 redirect를 지원하는 방법은 여러가지가 있다.</li>
 </ul>
@@ -804,15 +1136,15 @@ const sample = () =&gt; {
 <ul>
 <li>사용 :</li>
 </ul>
-<pre><code>import { HashRouter, Routes, Route, Navigate } from &quot;react-router-dom&quot;;
+<pre tabindex="0"><code>import { HashRouter, Routes, Route, Navigate } from &#34;react-router-dom&#34;;
 ...
 &lt;HashRouter&gt;
   &lt;Routes&gt;
-    &lt;Route path=&quot;/&quot; element={&lt;Home/&gt;}
-    &lt;Route path=&quot;/about&quot; element={&lt;About/&gt;}
+    &lt;Route path=&#34;/&#34; element={&lt;Home/&gt;}
+    &lt;Route path=&#34;/about&#34; element={&lt;About/&gt;}
     /* add as you wish */
-    &lt;Route path=&quot;/index&quot; element={&lt;Navigate replace to=&quot;/&quot; /&gt;} /&gt;  // 'index' 페이지를 '/' 경로로 redirect
-    &lt;Route path=&quot;*&quot; element={&lt;Navigate to=&quot;/&quot; /&gt;} /&gt;  // 위에서 설정되지 않은 경로에 대해서는 모두 '/'로 redirect
+    &lt;Route path=&#34;/index&#34; element={&lt;Navigate replace to=&#34;/&#34; /&gt;} /&gt;  // &#39;index&#39; 페이지를 &#39;/&#39; 경로로 redirect
+    &lt;Route path=&#34;*&#34; element={&lt;Navigate to=&#34;/&#34; /&gt;} /&gt;  // 위에서 설정되지 않은 경로에 대해서는 모두 &#39;/&#39;로 redirect
   &lt;/Routes&gt;
 &lt;/HashRouter&gt;
 </code></pre><ol>
@@ -821,28 +1153,28 @@ const sample = () =&gt; {
 <ul>
 <li>사용 :</li>
 </ul>
-<pre><code>const history = useHistory();
-history.push(&quot;/&quot;);  // '/' 경로로 redirect
+<pre tabindex="0"><code>const history = useHistory();
+history.push(&#34;/&#34;);  // &#39;/&#39; 경로로 redirect
 </code></pre><ol>
 <li>useNavigation</li>
 </ol>
 <ul>
 <li>사용 :</li>
 </ul>
-<pre><code>const navigation = useNavigation()
-navigation(&quot;/&quot;);  // '/' 경로로 redirect
-</code></pre><h3 id="cross-env">cross-env</h3>
+<pre tabindex="0"><code>const navigation = useNavigation()
+navigation(&#34;/&#34;);  // &#39;/&#39; 경로로 redirect
+</code></pre><h3 id="cross-env">cross-env<a hidden class="anchor" aria-hidden="true" href="#cross-env">#</a></h3>
 <ul>
 <li>운영체제마다 환경변수 제공 방식이 달라 절대경로 표시가 어려웠던 점을 해결해주는 모듈</li>
 <li>설치 : <code>npm install cross-env --dev</code></li>
 </ul>
-<h3 id="typeof">typeof</h3>
+<h3 id="typeof">typeof<a hidden class="anchor" aria-hidden="true" href="#typeof">#</a></h3>
 <ul>
 <li>react에서 기본적으로 제공하는 함수이다.
 ex)</li>
 </ul>
-<pre><code>var x = 1;
-if (typeof(x) === 'number') {
+<pre tabindex="0"><code>var x = 1;
+if (typeof(x) === &#39;number&#39;) {
   ...
 }
 </code></pre><ul>
@@ -851,12 +1183,12 @@ if (typeof(x) === 'number') {
 <blockquote>
 <p>undefined, object, number, boolean, bigint, string, symbol, function</p>
 </blockquote>
-<h2 id="정의되는-값-참조httpsdevelopermozillaorgkodocswebjavascriptreferenceoperatorstypeof"><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof"target="_blank">정의되는 값 참조</a></h2>
-<h2 id="dom">DOM</h2>
+<h2 id="정의되는-값-참조httpsdevelopermozillaorgkodocswebjavascriptreferenceoperatorstypeof"><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof">정의되는 값 참조</a><a hidden class="anchor" aria-hidden="true" href="#정의되는-값-참조httpsdevelopermozillaorgkodocswebjavascriptreferenceoperatorstypeof">#</a></h2>
+<h2 id="dom">DOM<a hidden class="anchor" aria-hidden="true" href="#dom">#</a></h2>
 <ul>
 <li>JSX에서 DOM을 조작하는 내용을 살펴보자</li>
 </ul>
-<h3 id="script-참조">script 참조</h3>
+<h3 id="script-참조">script 참조<a hidden class="anchor" aria-hidden="true" href="#script-참조">#</a></h3>
 <ul>
 <li>
 <p>javascript에서 아래와 같이 script를 추가할 수 있다.<br>
@@ -866,20 +1198,20 @@ if (typeof(x) === 'number') {
 <p>react에서는 위 방식 대신, hook과 document 인자를 사용하여 아래와 같이 작성한다.</p>
 </li>
 </ul>
-<pre><code>const [calendarApiLoaded, setCalendarApiLoaded] = useState(false);
+<pre tabindex="0"><code>const [calendarApiLoaded, setCalendarApiLoaded] = useState(false);
 useEffect( ()=&gt; {
   // check api is loaded
-  const existingCheck = document.getElementById('gapi');
+  const existingCheck = document.getElementById(&#39;gapi&#39;);
   // if not loaded, load
   if (!existingCheck) {
-    const gapiScript = document.createElement('script');
-    gapiScript.src = &quot;https://apis.google.com/js/api.js&quot;
-    const gisScrpit = document.createElement('script');
-    gisScrpit.src = &quot;https://accounts.google.com/gsi/client&quot;
+    const gapiScript = document.createElement(&#39;script&#39;);
+    gapiScript.src = &#34;https://apis.google.com/js/api.js&#34;
+    const gisScrpit = document.createElement(&#39;script&#39;);
+    gisScrpit.src = &#34;https://accounts.google.com/gsi/client&#34;
 
     // merge two scripts
     gapiScript.append(gisScrpit);
-    gapiScript.id = 'gapi';
+    gapiScript.id = &#39;gapi&#39;;
 
     // append to body
     document.body.appendChild(gapiScript);
@@ -888,11 +1220,11 @@ useEffect( ()=&gt; {
     setCalendarApiLoaded(true);
   }
 });
-</code></pre><h3 id="window-변수">window 변수</h3>
+</code></pre><h3 id="window-변수">window 변수<a hidden class="anchor" aria-hidden="true" href="#window-변수">#</a></h3>
 <ul>
 <li>window는 전역번수를 attach된 모든 script에서 접근할 수 있는 변수이며, react에서도 마찬가지로 <code>window.value</code> 혹은 <code>window['value']</code> 형태로 접근이 가능하다.</li>
 </ul>
-<h2 id="기타">기타</h2>
+<h2 id="기타">기타<a hidden class="anchor" aria-hidden="true" href="#기타">#</a></h2>
 <ol>
 <li>함수형, 클래스형</li>
 </ol>
@@ -911,7 +1243,7 @@ useEffect( ()=&gt; {
 <li>html에서 예약어로 사용하는 태그들은 &lsquo;synamtic tag&rsquo;라 한다.</li>
 </ol>
 <ul>
-<li>&lsquo;h1&rsquo;, &lsquo;header&rsquo;, &lsquo;nav&rsquo;, &lsquo;article&rsquo; 등이 있다.</li>
+<li>&lsquo;h1&rsquo;, &lsquo;header&rsquo;, &rsquo;nav&rsquo;, &lsquo;article&rsquo; 등이 있다.</li>
 </ul>
 <ol>
 <li><code>export</code> : 특정 객체를 다른 파일에서 import할 수 있도록 한다.<br>
@@ -919,53 +1251,234 @@ ex) <code>export App</code></li>
 <li><code>debugger</code>라는 예약어는, chrome에서 실행할 때 break point역할을 한다. 개발시 코드로 break point를 설정할 수 있다.</li>
 </ol>
 <hr>
-<h2 id="추가-활용">추가 활용</h2>
-<h3 id="이미지-첨부">이미지 첨부</h3>
+<h2 id="추가-활용">추가 활용<a hidden class="anchor" aria-hidden="true" href="#추가-활용">#</a></h2>
+<h3 id="이미지-첨부">이미지 첨부<a hidden class="anchor" aria-hidden="true" href="#이미지-첨부">#</a></h3>
 <ul>
 <li>이미지는 /resources 파일에 첨부하고, import로 가져와 사용할 수 있다.</li>
 <li>확장자가 없으면 js파일로 취급하니 확장자도 꼭 적어주도록 한다.</li>
 </ul>
-<pre><code>import screen_img from '../resources/screen_img.webp'
+<pre tabindex="0"><code>import screen_img from &#39;../resources/screen_img.webp&#39;
 
 ...
 
     // INFO: React JSX에서 style 설정
     var _style = {
-        'top': 0 //- scrollPos
+        &#39;top&#39;: 0 //- scrollPos
     }
     var _style_img = {
-        'background-image': &quot;url(&quot; + screen_img + &quot;)&quot;,
-        'top': -694 - scrollPos * 4/5
+        &#39;background-image&#39;: &#34;url(&#34; + screen_img + &#34;)&#34;,
+        &#39;top&#39;: -694 - scrollPos * 4/5
     };
-</code></pre><h3 id="key-숨기기">key 숨기기</h3>
+</code></pre><h3 id="key-숨기기">key 숨기기<a hidden class="anchor" aria-hidden="true" href="#key-숨기기">#</a></h3>
 <ul>
 <li>API key 등 사용자에게 드러내지 않고싶은 정보들을 react가 아닌 다른 곳에 저장해야 한다. <strong>react app에 저장하게 되면 개발 도구를 사용해 Client에서 어떻게든 내용을 확인할 수 있다.</strong></li>
 <li>다만, .env 파일에 따로 저장하게 되면 git에서는 나타나지 않게 설정할 수 있다.</li>
 </ul>
-<h3 id="env-파일-사용법">.env 파일 사용법</h3>
+<h3 id="env-파일-사용법">.env 파일 사용법<a hidden class="anchor" aria-hidden="true" href="#env-파일-사용법">#</a></h3>
 <ul>
 <li>root 경로에 .env파일을 생성한다.</li>
 <li>.gitignore에 .env파일을 예외처리 한다.</li>
 <li>정의하고 싶은 내용을 <code>REACT_APP_</code> 뒤에 이어붙여 정의한다. (ex: REACT_APP_API_KEY)</li>
 <li>정의한 내용은 react JSX에서 <code>process.env.REACT_APP_API_KEY</code> 형태로 사용 가능하다.</li>
 </ul>
-<h3 id="custom-tag">Custom Tag</h3>
+<h3 id="custom-tag">Custom Tag<a hidden class="anchor" aria-hidden="true" href="#custom-tag">#</a></h3>
 <ul>
 <li>Custom tag &lsquo;CAT&rsquo; 를 새로 만든다고 할때, <code>&lt;CAT name={name}/&gt;</code> 과 같이 생성하였다.</li>
 <li>Custom tag 안에 다른 내용을 집어넣고 싶으면, <code>&lt;CAT name={name}&gt; {props.children} &lt;/CAT&gt;</code> 형태로 사용하면 된다.</li>
 </ul>
-<h2 id="참조">참조</h2>
-<p><a href="https://yuddomack.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%AC%B8%EB%B2%95-%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9"target="_blank">자바스크립트 문법</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring"target="_blank">문법 Document</a>
-<a href="https://devowen.com/307?category=778540"target="_blank">React LifeCycle</a>
-<a href="https://reactjs.org/docs/hooks-intro.html#motivation"target="_blank">What &amp; Why Hook</a></p>
-</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="category" href=/categories/basic/>basic</a><a class="tag" href=/tags/react/>react</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/web-application/>web application</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
-</section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/gdb/"><span class="li iconfont icon-article"></span>GDB</a></p><p><a class="link" href="/post/c&#43;&#43;/"><span class="li iconfont icon-article"></span>C++ basic</a></p></section></div></section><section id="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Notepadium.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section></body>
+<h2 id="참조">참조<a hidden class="anchor" aria-hidden="true" href="#참조">#</a></h2>
+<p><a href="https://yuddomack.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%AC%B8%EB%B2%95-%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9">자바스크립트 문법</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring">문법 Document</a>
+<a href="https://devowen.com/307?category=778540">React LifeCycle</a>
+<a href="https://reactjs.org/docs/hooks-intro.html#motivation">What &amp; Why Hook</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AswinBlue.github.io/tags/react/">react</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/javascript/">javaScript</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/web-application/">web application</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://AswinBlue.github.io/post/gdb/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>GDB</span>
+  </a>
+  <a class="next" href="https://AswinBlue.github.io/post/c&#43;&#43;/">
+    <span class="title">Next »</span>
+    <br>
+    <span>C&#43;&#43; basic</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share React basic on twitter"
+        href="https://twitter.com/intent/tweet/?text=React%20basic&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f&amp;hashtags=react%2cjavascript%2cwebapplication">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share React basic on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f&amp;title=React%20basic&amp;summary=React%20basic&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share React basic on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f&title=React%20basic">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share React basic on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share React basic on whatsapp"
+        href="https://api.whatsapp.com/send?text=React%20basic%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share React basic on telegram"
+        href="https://telegram.me/share/url?text=React%20basic&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2freact_basic%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
 
 </html>

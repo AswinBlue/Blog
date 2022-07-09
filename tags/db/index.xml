@@ -1,35 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>DB on AsWindBlew</title>
-    <link>/tags/db/</link>
-    <description>Recent content in DB on AsWindBlew</description>
+    <title>DB on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/db/</link>
+    <description>Recent content in DB on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/db/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/db/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firebase</title>
-      <link>/post/firebase/</link>
+      <link>https://AswinBlue.github.io/post/firebase/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>/post/firebase/</guid>
-      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정</description>
-      
+      <guid>https://AswinBlue.github.io/post/firebase/</guid>
+      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다. 설치 및 사용 온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다. firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다. (웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.) 버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>/post/mysql/</link>
+      <link>https://AswinBlue.github.io/post/mysql/</link>
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
-      <guid>/post/mysql/</guid>
-      <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax 명령어에서 대소문자는 상관없다. mysql에서 주석은 &amp;lsquo;#&amp;lsquo;을 사용한다. 실행 및 로그인 mysql mysql 실행, 기본으</description>
-      
+      <guid>https://AswinBlue.github.io/post/mysql/</guid>
+      <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax
+명령어에서 대소문자는 상관없다. mysql에서 주석은 &amp;lsquo;#&amp;lsquo;을 사용한다. 실행 및 로그인 mysql mysql 실행, 기본으로 설정된 user로 로그인됨 mysql -u 아이디 -p -u: 특정 아이디로 로그인 -p: 로그인시 비밀번호 입력하도록 데이터베이스 관리 DB 생성 UTF8 로 문자열 저장하기 CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8 DB 목록확인 show databases DB 선택 use DB_NAME 종료 EXIT 로그인 &amp;amp; 데이터베이스 선택 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도 -u DB_NAME 옵션은 로그인 후 $use DB_NAME 과 같은 효과 테이블 생성 및 관리 TABLE_NAME 테이블의 스키마 확인 desc TABLE_NAME</description>
     </item>
     
   </channel>

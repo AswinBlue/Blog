@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>kivy on AsWindBlew</title>
-    <link>/tags/kivy/</link>
-    <description>Recent content in kivy on AsWindBlew</description>
+    <title>kivy on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/kivy/</link>
+    <description>Recent content in kivy on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/kivy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/kivy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kivy</title>
-      <link>/post/kivy/</link>
+      <link>https://AswinBlue.github.io/post/kivy/</link>
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
-      <guid>/post/kivy/</guid>
-      <description>#kivy Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의</description>
-      
+      <guid>https://AswinBlue.github.io/post/kivy/</guid>
+      <description>#kivy
+Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .</description>
     </item>
     
   </channel>

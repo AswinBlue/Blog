@@ -1,25 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>CGI on AsWindBlew</title>
-    <link>/tags/cgi/</link>
-    <description>Recent content in CGI on AsWindBlew</description>
+    <title>CGI on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/cgi/</link>
+    <description>Recent content in CGI on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 02 Jul 2020 19:15:21 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/cgi/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 02 Jul 2020 19:15:21 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/cgi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PythonCGI</title>
-      <link>/post/pythoncgi/</link>
+      <link>https://AswinBlue.github.io/post/pythoncgi/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>/post/pythoncgi/</guid>
-      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신</description>
-      
+      <guid>https://AswinBlue.github.io/post/pythoncgi/</guid>
+      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
     </item>
     
   </channel>

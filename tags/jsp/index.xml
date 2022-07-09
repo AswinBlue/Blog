@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jsp on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/jsp/</link>
+    <description>Recent content in jsp on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Jun 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/jsp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>thymeleaf</title>
+      <link>https://AswinBlue.github.io/post/thymeleaf/</link>
+      <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://AswinBlue.github.io/post/thymeleaf/</guid>
+      <description>Thymeleaf 서버에서 view를 구성할 때 사용하는 라이브러리 태그 형식의 문법을 사용하며 vue와 유사하다. 기본 문법 thymeleaf 공식 튜토리얼 에서 기본적인 문법을 확인할 수 있다. 태그 안에 th:속성=&amp;quot;값&amp;quot; 형태의 속성을 추가하는 형태로 사용한다. text &amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;를 표시한다. utext &amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다. fragment &amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다.</description>
+    </item>
+    
+  </channel>
+</rss>

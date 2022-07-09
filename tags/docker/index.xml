@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>docker on AsWindBlew</title>
-    <link>/tags/docker/</link>
-    <description>Recent content in docker on AsWindBlew</description>
+    <title>docker on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/docker/</link>
+    <description>Recent content in docker on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>/post/docker/</link>
+      <link>https://AswinBlue.github.io/post/docker/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/docker/</guid>
-      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 O</description>
-      
+      <guid>https://AswinBlue.github.io/post/docker/</guid>
+      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 설치 링크 참조
+실행 오류 및 각종 이 is docker daemon running? 에러 service docker status 입력시 docker daemon이 꺼져있는지 확인 service docker start 명령으로 daemon 실행 만약 명령은 수행되나 켜지지 않는다면 systemctl명령 수행 systemctl start docker : docker를 daemon으로 실행 systemctl enable docker : OS실행시 docker daemon을 기본 실행 systemctl 명령도 안된다면 /lib/systemd/system/docker.</description>
     </item>
     
   </channel>

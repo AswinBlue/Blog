@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>typescript on AsWindBlew</title>
-    <link>/tags/typescript/</link>
-    <description>Recent content in typescript on AsWindBlew</description>
+    <title>typescript on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/typescript/</link>
+    <description>Recent content in typescript on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular</title>
-      <link>/post/angular/</link>
+      <link>https://AswinBlue.github.io/post/angular/</link>
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
-      <guid>/post/angular/</guid>
-      <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기</description>
-      
+      <guid>https://AswinBlue.github.io/post/angular/</guid>
+      <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
+$ ng new &amp;lt;application_name&amp;gt; 명령어를 이용하여 설치한다.
+nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.</description>
     </item>
     
   </channel>

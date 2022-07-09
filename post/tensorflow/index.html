@@ -1,17 +1,365 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Tensorflow&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Tensorflow" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tensorflow | AswinBlue</title>
+<meta name="keywords" content="tensorflow, deep learning, python">
+<meta name="description" content="#Tensorflow
+TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
+edge는 학습데이터가 저장되는 다차원 배열이다.
+edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
+edge는 방향성이 있으며(directed), tensor라 불린다.
+archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
+설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &lsquo;client_load_reporting_filter.h&rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.">
+<meta name="author" content="AswinBlue">
+<link rel="canonical" href="https://AswinBlue.github.io/post/tensorflow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0b739a2e2c5e5656e4bcd5f0b2268d063addaf81d89ec3987d6af8f04decdc97.css" integrity="sha256-C3OaLixeVlbkvNXwsiaNBjrdr4HYnsOYfWr48E3s3Jc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AswinBlue.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AswinBlue.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Tensorflow" />
+<meta property="og:description" content="#Tensorflow
+TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
+edge는 학습데이터가 저장되는 다차원 배열이다.
+edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
+edge는 방향성이 있으며(directed), tensor라 불린다.
+archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
+설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &lsquo;client_load_reporting_filter.h&rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AswinBlue.github.io/post/tensorflow/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-27T08:15:42&#43;09:00" />
+<meta property="article:modified_time" content="2021-11-27T08:15:42&#43;09:00" />
+
+
+<meta name="twitter:title" content="Tensorflow"/>
+<meta name="twitter:description" content="#Tensorflow
+TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
+edge는 학습데이터가 저장되는 다차원 배열이다.
+edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
+edge는 방향성이 있으며(directed), tensor라 불린다.
+archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
+설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &lsquo;client_load_reporting_filter.h&rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://AswinBlue.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Tensorflow",
+      "item": "https://AswinBlue.github.io/post/tensorflow/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tensorflow",
+  "name": "Tensorflow",
+  "description": "#Tensorflow\nTensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.\nedge는 학습데이터가 저장되는 다차원 배열이다.\nedge는 node에서 계산된 데이터를 다음 node로 이동시킨다.\nedge는 방향성이 있으며(directed), tensor라 불린다.\narchive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.\n설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 \u0026lsquo;client_load_reporting_filter.h\u0026rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.",
+  "keywords": [
+    "tensorflow", "deep learning", "python"
+  ],
+  "articleBody": "#Tensorflow\nTensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.\nedge는 학습데이터가 저장되는 다차원 배열이다.\nedge는 node에서 계산된 데이터를 다음 node로 이동시킨다.\nedge는 방향성이 있으며(directed), tensor라 불린다.\narchive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.\n설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 ‘client_load_reporting_filter.h’ 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다. 실행에서 regedit을 실행하고, ‘HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem’ 레지스트리를 찾아 값을 1로 세팅해준다. 연관 모듈 함께 쓰면 효율이 좋은 모듈들 matplotlib numpy data = np.loadtxt(FILE_NAME, delimiter=',') : ,를 기준으로 데이터를 나누는 csv 파일을 읽어들임. 숫자 데이터를 읽을 때 사용 keras (tensorflow 설치시 자동성치된다) y_encoded = to_categorical(y_data) : y_data 를 one-hot-encoding 하는 함수 (tensorflow.keras.utils.to_categorical) pandas df = pd.read_csv(FILE_NAME) : csv 파일을 읽어서 dataframe을 구성한다. 숫자 및 문자열 데이터를 읽을 때 사용 가능 sklearn 데이터 전처리 e = sklearn.preprocessing.LabelEncoder()\re.fit(data) # data 에 들어있는 값 중 unique한 값을 뽑아(중복 제거) 특정 string에 번호를 매기는(indexing) 함수\rdata = e.transform(data) # indexing 된 정보를 바탕으로 실제 data값을 index로 치환 기본 문법 상수 선언\nval = tf.constant(value, dtype=None, shape=None, name='Conts', verify_shape=False) value = 값 dtype : 데이터 타입, ex) ’tf.float32’, ’tf.float64’, ’tf.int8’ float(32, 64), int(8, 16, 64),uint(8, 16), string, bool, complex(64, 128 : 복소수) shape : 차원, value 형태에 따라 자동으로 설정 됨, ex) ‘[3,3]’ name : 상수의 이름 verify_shape : tensor의 shape를 바꿀수 있는지 여부 배열 생성 arr = tf.range(5) output : tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)\n’tf.zeros([2,3])’ output : [[0, 0, 0], [0, 0, 0]]\n’tf.ones([2,3])' output : [[1, 1, 1], [1, 1, 1]]\n’tf.fill([2,3], 5)' output : [[5, 5, 5], [5, 5, 5]]\n연산자 tf.add(x,y) : x + y\ntf.subtract(x,y) : x - y\ntf.multiply(x,y) : x * y\ntf.div(x,y) : x / y\ntf.floordiv(x,y) : x // y\ntf.mod(x,y) : x % y\ntf.pow(x,y) : x ** y\ntf.less(x,y) : x \u003c y\ntf.less_equal(x,y) : x \u003c= y\ntf.greater(x,y) : x \u003e y\ntf.greater_equal(x,y) : x \u003e= y\ntf.logical_and(x,y) : x \u0026 y\ntf.logical_or(x,y) : x | y\ntf.logical_xor(x,y) : x ^ y\ntf.maximum(x,y) : max(x,y)\ntf.reduce_sum(a) : 배열 a에서 같은 index 위치의 값을 모두 더한 스칼라 값을 반환\ntf.reduce_mean(a) : 배열 a에서 같은 index 위치의 값을 평균낸 스칼라 값을 반환 x,y가 배열인 경우, 연산자는 같은 index에 위치한 값끼리 연산한다.\nex) tf.add(x,y) = [(x[0] + y[0]), (x[1] + y[1]), (x[2] + y[2]), ...] ‘reduce’ 가 들어간 연산은 axis 파라미터를 설정하여 어느 축을 기준으로 연산을 수행할지 설정 가능\nex) a = [[1,2,3],[4,5,6]]\rtf.reduce_sum(a, axis=0) = [5, 7, 9]\rtf.reduce_sum(a, axis=1) = [6, 15] 변수 tensorflow에서 변수는 node를 만들고, 그 안의 값을 참조하는 방식이다.\nvar = tf.Variable(value, dtype=type)\nvalue : 변수에 담을 값 dtype : 변수 타입 2.x 버전에서는 위와같이 선언과 동시에 초기화가 가능하다. node를 생성하고 var은 그 node의 주소를 가리킨다.\nvar.assign(value)\nvar이 가리키는 node에 value 값을 적용\nvar.assign_add(value)\nvar이 가리키는 node에 value 값을 더함\nvar.assign_add(value)\nvar이 가리키는 node에 value 값을 뺌\ntf.cast()\n변수를 특정 값, 특정 형태로 치환해주는 함수\n출력\nval.numpy() : ‘val’ tensor를 numpy 배열 형태로 출력\n비교 tf.equal() : tensorflow 변수를 비교하는 함수\n랜덤 tf.random.set_seed() : 정수를 이용해 랜덤값 시드 설정 tf.random.normal([2, 1], mean=0.0)) : 정규분포에 기반한 랜덤값, 인자로 행렬 shape와 평균이 들어간다.\n심화 내용 tensorflow와 행렬 TensorFlow에서 배열은 행렬로 표현되며, 행렬은 shape라 불린다. 행렬 계산을 위한 함수를 제공한다. tf.matmul(a, b) : 행렬의 내적(곱) tf.linalg.inv(a) : 역행렬 Broadcasting 행렬을 곱셈 혹은 덧셈을 하기 위해서는 shape에 대한 제약조건이 있고, tensorflow에서도 마찬가지다. tensorflow에서는 행렬 연산에서 차원(shape)이 맞지 않을 때 행렬을 자동으로 늘려서(Stretch) 차원을 맞춰주는 Broadcasting기능이 있다. 연산시 shape는 첫번째 피연산자를 기준으로 한다. stretch 시 새로 생성된 공간에는 기존 내용을 복사하여 채워넣는다. 단, 늘릴 수는 있지만, 줄일수는 없다. ex) a[4,3] + b[1,3] : 가능 a[4,3] + b[1,5] : 불가능 (3 \u003c 5 이므로, 5를 3으로 바꾸려면 축소해야함) a[4,1] + b[1,3] : 가능 tensorflow 함수 tensorflow 1.x 버전은 placeholder를 통해 입력을 받는 객체를 생성하고, 실행시 session을 통해 feed 값을 전달한다. 즉 명시적으로 입력 형태를 구성해야 했다. tensorflow는 2.x 버전부터 python 프로그램처럼 라이브러리를 사용할 수 있도록 연산에 함수를 제공하고 있다. 함수를 사용하면 placeholder를 생략하고 사용할 수 있다. tensorflow 함수는 파이썬 함수처럼 정의하여 사용 가능하며, 컴파일시 속도 향상을 원한다면 @tf.function 데코레이터를 적용하면 된다.\nex) @tf.function\rdef t_func(a,b):\rreturn tf.matmul(a,b)\rx = [[4,5,6],[6,7,8]] # tensorflow 변수가 아님\rw = tf.Variable([2,5],[6,5],[17,10])\rprint(t_func(x,w))\r# tensorflow 2.x 이후부터는 변수 x같은 값들도\r# placeholder를 만들고 feed 값을 주는 복잡한 과정 없이\r# tensorflow 함수를 이용해 연산 가능해졌다. tensorflow 미분 gradient 계산에 미분이 많이 사용고, tensorflow는 미분 함수를 제공한다. tape.gradient(y,x) : 텐서 x에 대한 y의 미분값 tape.watch() : 상수형 텐서를 변수형 텐서로 변환 ex)\nx1 = tf.Variable(tf.constant(1.0)) # 변수 선언\rx2 = tf.Variable(tf.constant(2.0)) # 변수 선언\rwith tf.GradientTape() as tape: # 미분을 위해 GradientTape 객체 생성\ry = tf.multiply(x1, x2) # 미분할 함수값을 GradientTape 객체 안에서 정의\rgradients = tape.gradient(y, [x1, x2]) # x1 미분값과 x2 미분값을 각각 반환\r# y = x1 * x2\r# x1 에 대한 미분값 : 2.0\r# x2 에 대한 미분값 : 1.0\r# gradients = [2.0, 1.0]\ra = tf.constant(2.0)\rgradients2 = tape.gradient(y,a)\r# 상수로 미분하면 None 값이 된다.\r# gradients2 = None\r# 상수를 변수로 변환시켜 미분시킬 수 있다.\rwith tf.GradientTape() as tape:\rtape.watch(a)\ry = tf.multiply(x1, a)\rgradients3 = tape.gradient(y,a)\r# gradients3 = 1.0 선형 회귀 ‘딥러닝’은 데이터를 통해 관계를 학습하고, 학습된 모델을 통해 데이터가 주어지면 예측값을 도출해 내는 기술이다. ‘딥러닝’의 가장 기본적인 계산 원리는 ‘션형 회귀’와 ‘로지스틱 회귀’ 이다. 선형회귀 : 데이터 분포를 통해 데이터들과 가장 근접한 선을 도출해내는 계산법 로지스틱 회귀 : 0과 1 둘 중 하나를 선택하는 계산법 판단의 근거를 마련할 때 사용 sigmoid 함수를 사용하여 확률값으로 사용 선형 회귀 정의 종속변수 y와 한개 이상의 독립변수 x와의 선형 상관관계를 모델링하는 회귀분석 기법\n단순 선형회귀 : 하나의 변수에 기반하여 동작 다중 선형 회귀 : 둘 이상의 변수에 기반하여 동작 선형 예측함수를 통해 회귀식을 모델링하고, 알려지지 않은 파라미터를 데이터로 추정\n회귀식을 선형 모델이라고 한다.\n값을 예측하기 위해 학습 데이터로 적합한 예측 모형을 개발한다.\n종속변수 y와 이에 연관된 독립변수들 x1, x2… 에 대해 x와 y간의 관계를 정량화 할 수 있다.\n일반적으로 최소제곱을 사용해 선형 회귀 모델을 구할 수 있다. (y = ax + b 형태)\n독립변수(x)가 증가하면 최소 제곱법으로 처리가 불가능하다. 딥러닝에서는 y = wx + b 형태로 표현하는데, w 는 weight, b는 bias 를 뜻한다.\nweight : 가중치, 입력값 x의 영향도를 표현하는 상수 bias : 기준점, 판단의 근거가 되는 식의 기준점을 표현하는 상수 오차방정식 선형 회귀에서 입력값이 여러개일 경우, 첫번째 입력으로 임의의 선을 그린다.\n정답과 임의의 선이 맞는지 확인하고 평가한다 (오차 확인)\n확인된 오차 값을 이용해 임의의 선을 수정한다.\n즉, y = ax + b 에서 (x,y)를 입력으로 받고 a,b를 추론한다. 이러한 계산 식을 오차방정식이라 한다.\n오차의 합 = ∑ (예측값 - 정답)²\nMSE : Mean Squared Error, 평균제곱오차 = (오차의 합) / n\nRMSE : Root Mean Squared Error, 평균 제곱근 오차 = root(편균제곱오차)\n경사 하강법 대표적인 ‘최적화 알고리즘’으로, 비용 함수를 최소화하기 위해 반복해서 파라미터를 조정해나가는 방식이다.\ny = a*x 방정식에서 x = [1,2,3] y = [1,2,3] 이라고 한다면 a값은 1이다. 이때 MSE 오차식과 x에 대해 그래프를 그리면 2차원 그래프가 나오게 된다. 이때 기울기가 0인 부분, 즉 꼭짓점의 x 값이 정답이 된다.\n이러한 특성을 이용하여 다음과 같이 정답을 찾는 recursive한 전략을 취할 수 있다.\n임의의 값 x1에서 미분을 구한다. 구해진 기울기의 반대 방향으로 이동하여 그래프와 겹쳐지는 부분의 x좌표를 x2라 한다. 1~2 과정을 반복하면 점차 기울기가 줄어들고, 이를 충분히 수행하면 정답값에 수렴한다. 하지만 오차 그래프의 폭이 좁은 경우, 위 방식을 수행하면 특정 값으로 수렴하지 않고 결과값이 발산한다.\n이를 막기 위해 기울기를 100% 취하지 않고, ‘학습률’ 이라는 상수를 곱해 일정 양만큼만 전략에 반영될 수 있게 한다.\n학습률은 정해진 값이 아니고, 데이터에 따라 적합한 값이 달라지는 상수이다.\n위 전략을 수정하여 다시 적용하면\n임의의 값 x1에서 미분을 구하고, 학습률을 적용하여 값을 조정한다. 구해진 값을 기울기로하여 이동할 때 그래프와 겹쳐지는 부분의 x좌표를 x2라 한다. 1~2 과정을 반복하면 점차 기울기가 줄어들고, 이를 충분히 수행하면 정답값에 수렴한다. learning_rate = 0.1\rwith tf.GradleTape() as tape:\rhypothesis = W * x_data\rcost = tf.reduce_mean(tf.square) 로지스틱 회귀 선형회귀와 함께 대표적인 딥러닝 알고리즘이다.\n독립변수의 선형 결합을 이용하여 사건 발생의 가능성을 예측하는데 사용되는 ‘통계 기법’ 이다. (확률 계산)\n로지스틱 회귀는 종속변수와 독립변수 간의 관계를 함수로 나타내어 향후 예측모델에서 사용하므로, 독립변수의 선형 결합으 종속변수를 설명한다는 관점에서 선형 회귀분석과 유사하다.\n하지만, 로지스틱 회귀는 데이터의 결과가 특정 분류로 나뉘어 지기 때문에 classification 기법으로 볼 수 있다.\n이진 분류 문제, 즉 0과 1 중 하나를 판별하는 문제는 로지스틱 회귀를 이용하여 풀 수 있다.\nstep function 혹은 sigmoid를 사용하는데, 보통 0과 1 사이의 확률값을 표현할 수 있는 sigmoid를 사용한다.\n시그모이드 시그모이드 방정식은 아래와 같다.\ny = 1 / (1 + e -x)\ne는 자연상수이며, 자연상수를 사용하였기 때문에 확률값으로 사용 가능하다.\nsigmoid 함수에 선형 회귀 함수를 대입하면 아래와 같이 된다.\ny = 1 / (1 + e (-wx+b))\n이 함수에 경사하강법을 이용하여 w와 b를 찾아낼 수 있다.\nw값이 증가하면 sigmoid 함수는 step function에 유사하게 경사가 가팔라 진다.\nb값이 증가하면 그래프가 우측 방향으로 이동한다.\n오차함수 로지스틱 회귀는 target이 0 또는 1 두가지라는 점에서 선형 회귀와 다르다.\n때문에 로지스틱 회귀는 오차함수도 두가지가 있다.\n정답이 0일 경우 -log(l-h) 그래프 형태이다. 정답이 1일 경우 -log(h) 그래프 형태이다. 정답값 0 혹은 1을 대입하면 원하는 오차함수가 나오는 식을 binary cross entropy 라 하고, 그 식은 다음과 같다.\nY = -(Y * LOG(H) + (1-Y)*LOG(1-H))\n로지스틱 회귀법을 tensorflow 함수로 구현하면 아래와 같다.\n# 6 by 2 형태의 x 데이터 학습값\rx_train = np.array([[1., 1.],\r[1., 2.],\r[2., 1.],\r[3., 2.],\r[3., 3.],\r[2., 3.]],\rdtype=np.float32)\r# 6 by 1 형태의 y 데이터 학습값\ry_train = np.array([[0.],\r[0.],\r[0.],\r[1.],\r[1.],\r[1.]],\rdtype=np.float32)\r# 이 학습값을 이용해 W와 b를 찾아본다.\r# 랜덤값을 위한 설정\rtf.random.set_seed(12345)\r# W와 b의 초기값을 랜덤하게 설정, x값이 [6, 2] 이므로 W 형태를 [2, 1] 로 해야 y 값인 [6, 1] 에 맞게 matmul이 가능하다.\rW = tf.Variable(tf.random.normal([2, 1], mean=0.0))\rb = tf.Variable(tf.random.normal([1], mean=0.0))\rprint('weights: \\n', W.numpy(), '\\n\\nbias: \\n', b.numpy())\r# x값을 sigmoid 함수에 대입하여 y값을 반환하는 함수\r# x값의 shape가 [,2] 형태이므로 z = -(w1*x1 + w2*x2 + b) 가 된다.\rdef predict(X):\rz = tf.matmul(X, W) + b\rhypothesis = 1 / (1 + tf.exp(-z))\rreturn hypothesis\r# 반복 학습\rfor i in range(2001):\rwith tf.GradientTape() as tape:\rhypothesis = predict(x_train)\r# cost : binary cross entropy 식으로 loss 값을 계산\rcost = tf.reduce_mean(-tf.reduce_sum(y_train*tf.math.log(hypothesis) + (1-y_train)*tf.math.log(1-hypothesis)))\r# w와 b로 편미분하여 오차값 계산\rW_grad, b_grad = tape.gradient(cost, [W, b])\r# 오차값에 learning rate를 적용한 결과값으로 w와 b를 재설정\rW.assign_sub(learning_rate * W_grad)\rb.assign_sub(learning_rate * b_grad)\r# 계산된 w,b를 사용하여 x, y에 대해 정상적으로 예측값이 나오는지 확인\rdef acc(hypo, label):\r# 0.5 이상이면 0, 이하이면 1의 확률이 더 높으므로, 0.5를 기준으로 0 또는 1로 치환해 준다.\rpredicted = tf.cast(hypo \u003e 0.5, dtype=tf.float32)\r# 정확도 = 계산값과 정답을 비교하여 맞으면 1점, 틀리면 0점으로 판단한 후 전체 점수를 평균 낸 값\raccuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, label), dtype=tf.float32))\rreturn accuracy\r# 결과 계산\raccuracy = acc(predict(x_train), y_train).numpy() 퍼셉트론 퍼셉트론은 뉴럴 네트워크의 기본이 되는 개념으로, 인간의 신경망을 본따 프랑크 로젠블라트가 1957년에 고안한 알고리즘이다. 인간의 신경망은 외부 자극을 입력으로 받아 뉴런을 타고 신호가 전달된다. 뉴런과 뉴런 사이의 시냅스에서 신호를 전달하려면 역치값을 넘겨야 신호가 전달된다. 퍼셉트론은 입력을 받아 가중합(w1x1 + w2+x2 + … + wixi+ b)을 취하고, 활성화 함수(sigmoid)를 거쳐 출력값을 생성한다. 다층 퍼셉트론 한 개의 퍼셉트론은 여러 문제를 해결할수 있다.\n좌표 평면에서 선 하나로 그룹을 구분지을 수 있는 경우에 해당한다. 대표적인 모델로는 AND모델, OR 모델이 있다. 하지만 단일 퍼셉트론으로 풀지 못하는 문제도 존재한다.\nXOR 모델이 대표적이다. 선 하나를 그어서 그룹을 분류할 수 없다. XOR 모델은 OR 퍼셉트론과 NAND 퍼셉트론을 1차적으로 수행하고, 두 수행에 대한 결과를 AND 연산하면 구할 수 있다. 이를 그래프로 표현하면 아래와 같다.\n0층 1층 2층\rx1 → s1 ↘ ↘ ↗ y\r↗ ↘ x2 → s2 ↗ 다중 퍼셉트론은 여러 layer를 두고 연산을 한다는 의미이며, layer가 증가하면 더 많이 분석된다는 뜻. 0층(가장 처음)은 input layer, 2층(가장 마지막)은 output layer, 그 사이의 layer는 hidden layer라 칭한다. hidden layer를 많이 만들면 대체로 데이터를 많이 분석하여 더 좋은 결과를 낼 수 있다고 할 수 있다. 오차 역전파 은닉층에 있는 각각의 w와 b를 구하는 방법이다.\n다층 퍼셉트론을 구성하면 각 layer마다 w와 b값이 구성되는데, 이때 오차를 구하기 위해 미분값을 구하는 것이 쉽지 않다.\n미분 안에 연결된 식이 많기 때문 layer의 개수는 변동될 수 있기 때문에 계산이 복잡하다 이 문제를 해결하기 위해 1980년도 오차 역전파 알고리즘이 발명된다. 이전에도 w와 b를 구할수는 있었지만, 구하는 방법에 대해 규칙성을 찾지는 못했다.\n오차 역전파 개요 최적화의 계산 방향이 output layer 에서 input layer 방향으로 진행된다. 이 떄문에 이 알고리즘을 back propagation 이라 부른다. 퍼셉트론에서 w와 b값을 찾기 위해 오차가 작아지는 방향으로(기울기가 0이 되는 방향으로) 업데이트 해 나갔는데, 다층 퍼셉트론에서는 다음 식으로 가중치를 변화시켜 나간다. W(t+1) = W * t - (∂오차) / (∂w): 새 가중치는 현 가중치에서 가중치에 대한 기울기를 뺀 값 출력층 오차 다층 퍼셉트론의 각 노드는 (1)입력값을 이용해 가중합을 만들고, (2) 가중합을 활성화 함수를 적용해 출력하는 두 단계를 수행한다. 3개 layer를 가지는 형태를 표현하면 아래와 같다. yh1, yh2 : hidden layer의 출력값 y_out1, y_out2 : output layer의 출력값, 예측값 0층 1층 2층\rx1 (w11)→ [가중합1 -\u003e 활성화함수1] → yh1 (w31)→ [가중합3 -\u003e 활성화함수3] → y_out1\r(w21)↘ ↗ (w41)↘ ↗\r(w12)↗ ↘ (w32)↗ ↘\rx2 (w22)→ [가중합2 -\u003e 활성화함수2] → yh2 (w42) → [가중합4 -\u003e 활성화함수4] → y_out2 오차 역전파는 y_out 값에서 반대로 진행하여 가중치 w를 업데이트 한다.\nw31(t+1) = w31 * t - (∂오차 y_out)/(∂w31) : 현재 weight에 미분값을 빼주면 다음 weight가 된다.\n오차 y_out 안에는 여러개의 출력값이 존재할 수 있다. (output layer의 node 개수만큼)\ny_out 안의 각각의 예측값에 대한 오차는 MSE를 이용해 구한다.\noutput layer의 node가 n개라고 하면, k번째 오차는 다음과 같다. 오차_y_out_k = (y_target_k - y_out_k)² / n 오차 역전파로, y_out1 값의 오차로 w31을 업데이트 해 보자.\n오차의 값은 ∂오차y_out / ∂w31 이다.\nchain rule에 의해 ∂오차y_out / ∂w31 = (∂오차y_out / ∂y_out1) * (∂y_out1 / ∂가중합3) * (∂가중합3 / ∂w31) 가 성립한다. 이 식의 우항을 각각 나누어 계산하여 보자. 2-1) (∂오차y_out / ∂y_out1)을 y_out1에 의해 편미분을 하면 y_out1과 관계없는 y_out2는 상수가 되어 사라진다. y_out = y_out1 + y_out2 = (y_target1 - y_out1)² / 2 + (y_target2 - y_out2)² / 2 이기때문에 최종 식은 (∂오차y_out / ∂y_out1) = 1/2 * ∂(y_target1 - y_out1)² / ∂y_out1 = y_out1 - y_target1 가 된다. 2-2) (∂y_out1 / ∂가중합3) 은 ‘활성화함수3’을 미분 해 주는것과 같다.\n우리는 활성함수로 시그모이드를 사용했고, 시그모이드의 미분은 ∂σ(x) / ∂x = σ(x) * (1 - σ(x)) 이다.\n따라서 ∂y_out1 / ∂가중합3 = y_out1 * (1 - y_out1) 이 된다. 2-3) 가중합3 = w31 * yh1 + w41 * yh2 + 1(bias) 형태인데, (∂가중합3 / ∂w31) 식에 첫 식을 대입하면 (∂가중합3 / ∂w31 = yh1 이 된다.\n(2)에서 구한 세 식을 합하면 (y_out1 - y_target1) * (y_out1 * (1 - y_out1)) * (yh1) 형태이다. 이때,\ny_out1 - y_target1 은 출력값, y_out1 * (1 - y_out1) 은 활성화함수의 미분 값이다. 이를 활용하여 델타 식으로 표현하면\nw31(t + 1) = w31 * t - δ * y * yh1 이 된다. (δ * y = (y_out1 - y_target1) * (y_out1 * (1 - y_out1)))\n은닉층 오차 위에서 w31을 구했고, 이제 w11을 구해보자\nw31은 y_out1에만 영향을 주고, y_out2에는 영향을 주지 않았다. 하지만 w11은 y_out1과 y_out2에 모두 영향을 주어서 식의 복잡도가 높다.\n점화식을 표현하면 w11(t+1) = w11 * t - (∂오차 y_out) / ∂w11 가 된다.\n(∂오차 y_out) / ∂w11 = (∂오차 y_out) / ∂yh1 * (∂yh1/∂가중합1) * (∂가중합1/∂w11) 형태로 chain rule을 사용할 수 있다. (∂yh1/∂가중합1) 은 activation 함수의 미분값이므로, (∂yh1/∂가중합1) = yh1(1 - yh1) 이 된다. 가중합을 w에 의해 미분하면 입력값이 된다. 따라서 (∂가중합1/∂w11) = x1 (∂오차 y_out) / ∂yh1 = ∂(오차y_out1 + 오차y_out2)/∂yh1 = ∂오차y_out1/∂yh1 + ∂오차y_out2/∂yh1\n5-1) 4 식을 나눠서 계산해보자. 먼저 ∂오차y_out1/∂yh1 = ∂오차y_out1 / ∂가중합3 * ∂가중합3 / ∂yh1' 5-1-1) 이때 ∂가중합3 / ∂yh1 = ∂(w31 * yh1 + w32 * yh2)/∂yh1 = w31 5-1-2)∂오차y_out1 / ∂가중합 = (∂오차y_out1 / ∂y_out1) * (∂y_out1 / ∂가중합3) = ( y_out1 - y_target1) * w31 * (1-y_out1) * y_out1 (∂오차y_out1 / ∂y_out1는 오차를 의미하고,∂y_out1 / ∂가중합3는 활성함수의 미분값을 의미하기 때문) 5-1-3) 최종적으로∂오차y_out1 / ∂yh1 = (y_out1 - y_target1) * w31 * (1 - y_out1) * y_out1 = δy_out1 * w31형태로 델타식을 만들 수 있다. 5-2) 다음∂오차y_out2/∂yh1도 5-1 에서 사용한 방식으로 계산하면 ∂오차y_out2/∂yh1 = δy_out2 * w41형태가 된다. 5-3) 위 값들로 4 에서 봤던 식을 구성하면 (∂오차 y_out) / ∂yh1 = δy_out1 * w31 + δy_out2 * w41` 이 된다. 2, 3, 5-3 에서 나온 값으로 1식을 재구성해보면 (∂오차 y_out) / ∂w11 = (δy_out1 * w31 + δy_out2 * w41) * yh1(1 - yh1) * x1 이다. 출력층의 오차 업데이트 : (y_out1 - y_target1) * y_out1 * (1 - y_out1) * yh1\n(y_out1 - y_target1) : 오차 은닉층의 오차 업데이트 : (y_out1 * w31 + y_out2 * w41) * yh1 * (1-yh1) * x1\n(y_out1 * w31 + y_out2 * w41) : hidden layer를 통해 출력값을 미분한 값 ‘출력층의 오차 업데이트’와 ‘은닉층의 오차 업데이트’는 공통적으로 y_out(1 - y_out) * x 의 형태(sigmoid function 미분 * 입력값)를 지니고 있다.\n은닉층의 가중치 업데이트를 델타식으로 표현하면 w11(t+1) = w11 * t - δh * x1 이다.\n델타식으로 표현하면 generic 한 형태로 식을 가져갈 수 있어 꼭 필요하다.\n그래디언트 소실(gradient vanishing) 다층 퍼셉트론을 사용할 때, 층이 많을 수록 데이터 분석 능력이 높아지지만, 실제로는 분석 증가량이 미미하다. 이는 활성화 함수 때문이다. 가중치를 수정할 때, 오차 값을 미분한 값을 사용하였다. 각 층의 activation function 으로 sigmoid를 사용했는데, sigmoid 함수는 미분시 최대치가 0.3 밖에 되지 않는다. 층을 지날수록 activation function을 여러번 거치는데, sigmoid의 미분값을 여러번 거치게 되면 미분값이 중간에 0이 되어버리는 현상(vanishing gradient) 문제가 발생한다. 층을 거쳐 갈수록 기울기가 사라져 가중치를 수정할 값이 소실되어 뒤쪽 layer는 더이상 학습이 되어지지 않는다. 그래디언트 소실 문제를 해결하기 위해 sigmoid를 대체할 다른 활성화함수들이 만들어 졌다. 하이퍼볼릭 탄젠트 : 미분 최대값 1, 소실문제를 약화시킬 순 있지만 해결되진 않는다. 렐루 : 0미만은 미분값 0, 0이상은 미분값 1. 많은 층을 사용할 때는 relu를 많이 사용한다. 소프트플러스 xavier와 he 초기화 초기 w와 b 할당시 표준편차가 1이고, 평균이 0인 정규분포를 사용하였다. 이렇게 되면 node를 통과한 결과값이 0과 1에 치중되어 있는 형태를 볼 수 있다. 표준편차를 0.01을 주면 결과값이 0.5로 치중되게 된다. 이렇게 되면 layer를 몇개를 쓰던 layer가 하나인 경우와 동일한 효과가 나온다. 이를 표현력의 제한이라 한다. 이러한 문제점을 xavier 방법을 사용하면 해결할수 있다. 가중치 초기화를 설정하는 방법으로, 결과값의 분포를 더 광범위하게 설정할 수 있게 하는 방법이다. √(2/n_in + n_out) 형태로 최초 사용하는 분포를 만들게 되면 더 광범위한 형태로 만들 수 있다. (n_in : layer의 입력node 개수, n_out : layer의 출력node 개수) 우리는 입력,출력 값이 같은 hidden layer를 사용하므로 √(1/n) 형태를 가진다. 단, xavier 방식은 좌우 대칭인 activation function 에서는 효과적이지만, relu와 같은 좌우 비대칭 형태의 activation function에서는 한쪽으로 치우친 결과값이 얻어진다. 이때는 ‘카밍 히’의 이름을 따서 he 초기값을 사용한다. √2/n 의 정규분포 값을 사용한다. (분포 범위를 더 넓게 잡는다) 고속 옵티마이저 옵티마이저란 경사하강법을 뜻한다. 고속 옵티마이저란 경사 하강법을 더 효율적으로 하는 방법이다. 경사 하강법은 대체로 학습 속도와 정확도 문제를 갖고 있다. (learning rate 혹은 data에 의해 발생) 경사 하강법은 업데이트 시마다 전체 데이터에 대해 미분을 계산하여야 하여 속도가 매우 느리다. 학습률이 너무 크면 더이상 최적값으로 수렴하지 못하는 경우가 있다. 경사 하강법은 구현하기 쉽고 단순하다는 장점이 이 있지만, 비등방성 함수에서는 탐색 경로가 비효율적이다. (ex: f(x,y) = 1/20x^2 + y^2 와 같은 타원형 형태) y축은 가파르지만, x축 변동은 거의 없다. 최적값은 (0,0) 이지만 미분으로 기울기 값을 구하면 (0,0) 이 아닌 다른 방향을 가리킬 확률이 매우 높다. 정상적으로 도달하더라도 지그재그 형태로 비효율적인 방식으로 이동하게 된다. 경사 하강법은 무작정 기울어진 방향으로 진행하기 때문에 간단하지만 위와같은 문제점을 야기한다. 경사 하강법의 문제점을 개선해 주는 모델들로는 ‘모멘텀’, ‘adagrad’, ‘adam’ 등이 있다. 모멘텀 모멘텀 알고리즘은 물리 현상의 운동량에 착안하여 만들어 졌다. 이전 회차의 미분값 중 일정 비율을 반영하여 현재 weight 값 설정에 영향을 주도록 하여 더 빠르게 최적점을 찾을 수 있도록 하는 방식이다. 기존에는 현재 미분값 * 학습률을 현재 w에 빼주었지만, 모멘텀에서는 (일정 비율) * (이전 미분값) - (학습률) * (현재 미분값) 을 현재 w에 더해준다. 이 값은 V(t) = γ*v(t-1) - η*∂오차/∂w(t) 로 표현한다. 즉, W(t+1) = W(t) + V(t) 와 같은 식이 된다. 이전의 미분값을 일부 적용함으로써 현재 미분값을 상충하는 효과를 얻을 수 있다. 이를 통해 학습 속도를 높일 수 있다. 네스테로프 모멘텀 네스테로프 모멘텀에서는 w를 업데이트 할 때 γ*v(t-1) - η*∂오차/∂w(t) 값 대신 γ*v(t-1) - η*∂오차/∂(w(t) + γ*v(t-1)) 를 사용한다. 모멘텀 방법으로 이동될 방향을 미리 예측하여 해당 방향으로 한단계 미리 이동한 그래디언트 값을 사용함으로써 불필요한 이동을 줄일 수 있다. 속도는 그대로이지만 단계를 절약할 수 있다. 아다그리드 학습률을 조절하여 효율을 높인 모멘텀이다. 아다그라드는 weight값이 업데이트 될 때 마다 점점 최적점을 찾아간다고 가정하고, 학습을 시킬때 마다 일정량의 learning rate를 떨어뜨린다. 학습률을 변화시키기 위해 G(t)값을 G(t) = G(t-1) + [∂오차/∂w(t)]^2 형태로 가져가며, 최종적으로 W(t+1) = W(t) + η * (1/√G(t) + ε) * ∂오차/∂w(t) 형태가 된다. (ε 는 0이 되는것을 방지하기 위해 더해주는 아주 작은 상수값) RMSprop 아다그라드에서 G(t)는 무한히 커지게 되는 문제점이 있다. 이를 해결하기 위해 G(t) = γ * G(t-1) + (1-γ) * [∂오차/∂w(t)]^2 형태를 취한다. ‘γ’ 값을 이용해 G(t) 값을 조절할 수 있도록 하였다. Adam RMSprop의 정확도, 모멘텀 방식의 속도 장점을 모두 취하는 방식이다.\nRMSprop의 G(t) 값과 모멘텀의 V(t) 값을 유사하게 구하여 사용한다.\nV(t) = γ_1 * G(t) + (1 - γ_1) * ∂오차/∂w(t) G(t) = γ_2 * G(t) + (1 - γ_2) * [∂오차/∂w(t)]^2 V(t)와 G(t) 값을 조절하여 V’(t), G’(t) 를 만들어 W(t+1) 을 구한다.\nV'(t) = V(t) / (1-r_1^t) G'(t) = G(t) / (1-r_2^t) W(t+1) = W(t) - η * (G'(t) / √(V'(t) + ε)) 이때까지 내용을 모두 분석해 보면 전반적으로 adam 옵티마이저가 좋은 성능을 내기는 한다.\n하지만 항상 adam이 최적의 효율을 내지는 않는다. 이는 데이터 형태가 다르기 때문이다.\n데이터 형태에 따라 취해지는 패턴과 오차 그래프의 모양이 다르기 때문이다.\ngradient descent, momentum, adagrid, adam, RMSprop 중 어느것이 효과가 좋은지 확인이 필요하다.\n다중 분류 입력값을 기준으로 단순 0 또는 1을 판단하는게 아니라, 여러 class 중 하나로 분류하는 모델을 알아보자 출력 node 개수를 분류되는 항목 개수로 설정한다. 활성화 함수를 적용하려면 Y값이 0과 1로 이루어져 있어야 한다. (100% 혹은 0%) 출력 node가 하나라면 Y값은 0 또는 1이면 되지만, 2개 이상이라면 배열이 되어야 한다. 1 =\u003e [1,0,0], 2 =\u003e [0,1,0], 3 =\u003e [0,0,1] 형태로 변형해서 사용해야 한다. 이렇게 Y값을 0 또는 1로만 이루어진 형태로 바꾸어주는 기법을 one-hot-encoding 이라 한다. 텐서플로에서 one_hot() 함수를 지원한다. softMax classification 문제를 풀 때 점수 벡터를 클래스 별 확률로 변환하기 위해 사용하는 함수이다. 각 점수 벡터에 지수를 취한 후 정규화 상수로 나누어 총합이 1이 되도록 계산한다. exponential을 취하는 이유는 값이 클 수록 훨씬 더 높은 점수를 갖게 하기 위함이다. y_k = exp(a_k) / ∑",
+  "wordCount" : "5911",
+  "inLanguage": "en",
+  "datePublished": "2021-11-27T08:15:42+09:00",
+  "dateModified": "2021-11-27T08:15:42+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "AswinBlue"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AswinBlue.github.io/post/tensorflow/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AswinBlue",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AswinBlue.github.io/favicon.ico"
+    }
+  }
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
      crossorigin="anonymous"></script>
-<body><section id="header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Tensorflow</h1><p class="article date">Nov 27, 2021<span class="reading-time"> • 33 minutes to read</span></p></section><article class="article markdown-body"><p>#Tensorflow</p>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a>&nbsp;»&nbsp;<a href="https://AswinBlue.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      Tensorflow
+    </h1>
+    <div class="post-meta"><span title='2021-11-27 08:15:42 +0900 KST'>November 27, 2021</span>&nbsp;·&nbsp;28 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href="https://github.com/AswinBlue/HugoBlog/tree/master/content/post/tensorflow.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%ea%b8%b0%eb%b3%b8-%ea%b0%9c%eb%85%90" aria-label="기본 개념">기본 개념</a></li>
+                <li>
+                    <a href="#%ec%84%a4%ec%b9%98" aria-label="설치">설치</a><ul>
+                        
+                <li>
+                    <a href="#%ec%97%b0%ea%b4%80-%eb%aa%a8%eb%93%88" aria-label="연관 모듈">연관 모듈</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b8%b0%eb%b3%b8-%eb%ac%b8%eb%b2%95" aria-label="기본 문법">기본 문법</a></li>
+                <li>
+                    <a href="#%ec%8b%ac%ed%99%94-%eb%82%b4%ec%9a%a9" aria-label="심화 내용">심화 내용</a><ul>
+                        
+                <li>
+                    <a href="#tensorflow%ec%99%80-%ed%96%89%eb%a0%ac" aria-label="tensorflow와 행렬">tensorflow와 행렬</a></li>
+                <li>
+                    <a href="#tensorflow-%ed%95%a8%ec%88%98" aria-label="tensorflow 함수">tensorflow 함수</a></li>
+                <li>
+                    <a href="#tensorflow-%eb%af%b8%eb%b6%84" aria-label="tensorflow 미분">tensorflow 미분</a></li>
+                <li>
+                    <a href="#%ec%84%a0%ed%98%95-%ed%9a%8c%ea%b7%80" aria-label="선형 회귀">선형 회귀</a><ul>
+                        
+                <li>
+                    <a href="#%ec%84%a0%ed%98%95-%ed%9a%8c%ea%b7%80-%ec%a0%95%ec%9d%98" aria-label="선형 회귀 정의">선형 회귀 정의</a></li>
+                <li>
+                    <a href="#%ec%98%a4%ec%b0%a8%eb%b0%a9%ec%a0%95%ec%8b%9d" aria-label="오차방정식">오차방정식</a></li>
+                <li>
+                    <a href="#%ea%b2%bd%ec%82%ac-%ed%95%98%ea%b0%95%eb%b2%95" aria-label="경사 하강법">경사 하강법</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%a1%9c%ec%a7%80%ec%8a%a4%ed%8b%b1-%ed%9a%8c%ea%b7%80" aria-label="로지스틱 회귀">로지스틱 회귀</a><ul>
+                        
+                <li>
+                    <a href="#%ec%8b%9c%ea%b7%b8%eb%aa%a8%ec%9d%b4%eb%93%9c" aria-label="시그모이드">시그모이드</a></li>
+                <li>
+                    <a href="#%ec%98%a4%ec%b0%a8%ed%95%a8%ec%88%98" aria-label="오차함수">오차함수</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ed%8d%bc%ec%85%89%ed%8a%b8%eb%a1%a0" aria-label="퍼셉트론">퍼셉트론</a><ul>
+                        
+                <li>
+                    <a href="#%eb%8b%a4%ec%b8%b5-%ed%8d%bc%ec%85%89%ed%8a%b8%eb%a1%a0" aria-label="다층 퍼셉트론">다층 퍼셉트론</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%98%a4%ec%b0%a8-%ec%97%ad%ec%a0%84%ed%8c%8c" aria-label="오차 역전파">오차 역전파</a><ul>
+                        
+                <li>
+                    <a href="#%ec%98%a4%ec%b0%a8-%ec%97%ad%ec%a0%84%ed%8c%8c-%ea%b0%9c%ec%9a%94" aria-label="오차 역전파 개요">오차 역전파 개요</a></li>
+                <li>
+                    <a href="#%ec%b6%9c%eb%a0%a5%ec%b8%b5-%ec%98%a4%ec%b0%a8" aria-label="출력층 오차">출력층 오차</a></li>
+                <li>
+                    <a href="#%ec%9d%80%eb%8b%89%ec%b8%b5-%ec%98%a4%ec%b0%a8" aria-label="은닉층 오차">은닉층 오차</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b7%b8%eb%9e%98%eb%94%94%ec%96%b8%ed%8a%b8-%ec%86%8c%ec%8b%a4gradient-vanishing" aria-label="그래디언트 소실(gradient vanishing)">그래디언트 소실(gradient vanishing)</a><ul>
+                        
+                <li>
+                    <a href="#xavier%ec%99%80--he-%ec%b4%88%ea%b8%b0%ed%99%94" aria-label="xavier와  he 초기화">xavier와  he 초기화</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ea%b3%a0%ec%86%8d-%ec%98%b5%ed%8b%b0%eb%a7%88%ec%9d%b4%ec%a0%80" aria-label="고속 옵티마이저">고속 옵티마이저</a><ul>
+                        
+                <li>
+                    <a href="#%eb%aa%a8%eb%a9%98%ed%85%80" aria-label="모멘텀">모멘텀</a></li>
+                <li>
+                    <a href="#%eb%84%a4%ec%8a%a4%ed%85%8c%eb%a1%9c%ed%94%84-%eb%aa%a8%eb%a9%98%ed%85%80" aria-label="네스테로프 모멘텀">네스테로프 모멘텀</a></li>
+                <li>
+                    <a href="#%ec%95%84%eb%8b%a4%ea%b7%b8%eb%a6%ac%eb%93%9c" aria-label="아다그리드">아다그리드</a></li>
+                <li>
+                    <a href="#rmsprop" aria-label="RMSprop">RMSprop</a></li>
+                <li>
+                    <a href="#adam" aria-label="Adam">Adam</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%8b%a4%ec%a4%91-%eb%b6%84%eb%a5%98" aria-label="다중 분류">다중 분류</a><ul>
+                        
+                <li>
+                    <a href="#softmax" aria-label="softMax">softMax</a></li>
+                <li>
+                    <a href="#cross-entropy" aria-label="Cross Entropy">Cross Entropy</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%98%a4%eb%b2%84%ed%94%bc%ed%8c%85" aria-label="오버피팅">오버피팅</a><ul>
+                        
+                <li>
+                    <a href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%b2%98%eb%a6%ac-%eb%b0%a9%eb%b2%95" aria-label="데이터 처리 방법">데이터 처리 방법</a></li>
+                <li>
+                    <a href="#k%ea%b2%b9-%ea%b5%90%ec%b0%a8-%ea%b2%80%ec%a6%9d%ec%9d%98-%ec%9d%b4%ed%95%b4" aria-label="K겹 교차 검증의 이해">K겹 교차 검증의 이해</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%9d%b4%eb%af%b8%ec%a7%80-%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%aa%a8%eb%8d%b8%eb%a7%81" aria-label="이미지 데이터 모델링">이미지 데이터 모델링</a></li>
+                <li>
+                    <a href="#cnn" aria-label="CNN">CNN</a><ul>
+                        
+                <li>
+                    <a href="#cnn-%ea%b3%bc-fcnn-%eb%b9%84%ea%b5%90" aria-label="CNN 과 FCNN 비교">CNN 과 FCNN 비교</a></li>
+                <li>
+                    <a href="#cnn-%ec%9d%b4%eb%a1%a0" aria-label="CNN 이론">CNN 이론</a></li></ul>
+                </li>
+                <li>
+                    <a href="#rnn" aria-label="RNN">RNN</a><ul>
+                        
+                <li>
+                    <a href="#rnn-%eb%aa%a8%eb%8d%b8%eb%a7%81" aria-label="RNN 모델링">RNN 모델링</a></li></ul>
+                </li>
+                <li>
+                    <a href="#lstm" aria-label="LSTM">LSTM</a><ul>
+                        
+                <li>
+                    <a href="#gate" aria-label="Gate">Gate</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%aa%a8%eb%8d%b8" aria-label="모델">모델</a><ul>
+                        
+                <li>
+                    <a href="#%eb%aa%a8%eb%8d%b8-%ec%a0%95%ec%9d%98-%eb%b0%a9%eb%b2%95%ea%b3%bc-%ec%b5%9c%ec%a0%81%ed%99%94" aria-label="모델 정의 방법과 최적화">모델 정의 방법과 최적화</a></li>
+                <li>
+                    <a href="#%ec%83%9d%ec%84%b1-%eb%b0%a9%eb%b2%95" aria-label="생성 방법">생성 방법</a><ul>
+                        
+                <li>
+                    <a href="#kerassequential" aria-label="Keras.Sequential">Keras.Sequential</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>#Tensorflow</p>
 <ul>
 <li>TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다.</li>
 </ul>
-<h2 id="기본-개념">기본 개념</h2>
+<h2 id="기본-개념">기본 개념<a hidden class="anchor" aria-hidden="true" href="#기본-개념">#</a></h2>
 <ul>
 <li>node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다.
 <ul>
@@ -34,7 +382,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="설치">설치</h2>
+<h2 id="설치">설치<a hidden class="anchor" aria-hidden="true" href="#설치">#</a></h2>
 <ol>
 <li>python과 pip를 설치한다.</li>
 <li><code>pip install tensorflow</code> 명령을 수행한다.</li>
@@ -43,7 +391,7 @@
 <li>window에서 &lsquo;client_load_reporting_filter.h&rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.</li>
 <li>실행에서 <code>regedit</code>을 실행하고, &lsquo;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&rsquo; 레지스트리를 찾아 값을 1로 세팅해준다.</li>
 </ul>
-<h3 id="연관-모듈">연관 모듈</h3>
+<h3 id="연관-모듈">연관 모듈<a hidden class="anchor" aria-hidden="true" href="#연관-모듈">#</a></h3>
 <ul>
 <li>함께 쓰면 효율이 좋은 모듈들</li>
 </ul>
@@ -68,18 +416,18 @@
 <ul>
 <li>데이터 전처리</li>
 </ul>
-<pre><code>e = sklearn.preprocessing.LabelEncoder()
+<pre tabindex="0"><code>e = sklearn.preprocessing.LabelEncoder()
 e.fit(data)  # data 에 들어있는 값 중 unique한 값을 뽑아(중복 제거) 특정 string에 번호를 매기는(indexing) 함수
 data = e.transform(data)  # indexing 된 정보를 바탕으로 실제 data값을 index로 치환
 </code></pre><hr>
-<h2 id="기본-문법">기본 문법</h2>
+<h2 id="기본-문법">기본 문법<a hidden class="anchor" aria-hidden="true" href="#기본-문법">#</a></h2>
 <ol>
 <li>상수 선언<br>
 <code>val = tf.constant(value, dtype=None, shape=None, name='Conts', verify_shape=False)</code></li>
 </ol>
 <ul>
 <li>value = 값</li>
-<li>dtype : 데이터 타입, ex) &lsquo;tf.float32&rsquo;, &lsquo;tf.float64&rsquo;, &lsquo;tf.int8&rsquo;
+<li>dtype : 데이터 타입, ex) &rsquo;tf.float32&rsquo;, &rsquo;tf.float64&rsquo;, &rsquo;tf.int8&rsquo;
 <ul>
 <li>float(32, 64), int(8, 16, 64),uint(8, 16), string, bool, complex(64, 128 : 복소수)</li>
 </ul>
@@ -98,19 +446,19 @@ data = e.transform(data)  # indexing 된 정보를 바탕으로 실제 data값�
 <p>output : <code>tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)</code></p>
 </blockquote>
 <ul>
-<li>&lsquo;tf.zeros([2,3])&rsquo;</li>
+<li>&rsquo;tf.zeros([2,3])&rsquo;</li>
 </ul>
 <blockquote>
 <p>output : <code>[[0, 0, 0], [0, 0, 0]]</code></p>
 </blockquote>
 <ul>
-<li>&lsquo;tf.ones([2,3])&rsquo;</li>
+<li>&rsquo;tf.ones([2,3])'</li>
 </ul>
 <blockquote>
 <p>output : <code>[[1, 1, 1], [1, 1, 1]]</code></p>
 </blockquote>
 <ul>
-<li>&lsquo;tf.fill([2,3], 5)&rsquo;</li>
+<li>&rsquo;tf.fill([2,3], 5)'</li>
 </ul>
 <blockquote>
 <p>output : <code>[[5, 5, 5], [5, 5, 5]]</code></p>
@@ -141,7 +489,7 @@ ex) <code>tf.add(x,y) = [(x[0] + y[0]), (x[1] + y[1]), (x[2] + y[2]), ...]</code
 <li>&lsquo;reduce&rsquo; 가 들어간 연산은 axis 파라미터를 설정하여 어느 축을 기준으로 연산을 수행할지 설정 가능<br>
 ex)</li>
 </ul>
-<pre><code>a = [[1,2,3],[4,5,6]]
+<pre tabindex="0"><code>a = [[1,2,3],[4,5,6]]
 tf.reduce_sum(a, axis=0) = [5, 7, 9]
 tf.reduce_sum(a, axis=1) = [6, 15]
 </code></pre><ol>
@@ -193,8 +541,8 @@ tf.reduce_sum(a, axis=1) = [6, 15]
 </li>
 </ol>
 <hr>
-<h2 id="심화-내용">심화 내용</h2>
-<h3 id="tensorflow와-행렬">tensorflow와 행렬</h3>
+<h2 id="심화-내용">심화 내용<a hidden class="anchor" aria-hidden="true" href="#심화-내용">#</a></h2>
+<h3 id="tensorflow와-행렬">tensorflow와 행렬<a hidden class="anchor" aria-hidden="true" href="#tensorflow와-행렬">#</a></h3>
 <ul>
 <li>TensorFlow에서 배열은 행렬로 표현되며, 행렬은 shape라 불린다.</li>
 <li>행렬 계산을 위한 함수를 제공한다.
@@ -218,14 +566,14 @@ a[4,1] + b[1,3] : 가능</li>
 </ul>
 </li>
 </ul>
-<h3 id="tensorflow-함수">tensorflow 함수</h3>
+<h3 id="tensorflow-함수">tensorflow 함수<a hidden class="anchor" aria-hidden="true" href="#tensorflow-함수">#</a></h3>
 <ul>
 <li>tensorflow 1.x 버전은 placeholder를 통해 입력을 받는 객체를 생성하고, 실행시 session을 통해 feed 값을 전달한다. 즉 명시적으로 입력 형태를 구성해야 했다.</li>
 <li>tensorflow는 2.x 버전부터 python 프로그램처럼 라이브러리를 사용할 수 있도록 연산에 함수를 제공하고 있다. 함수를 사용하면 placeholder를 생략하고 사용할 수 있다.</li>
 <li>tensorflow 함수는 파이썬 함수처럼 정의하여 사용 가능하며, 컴파일시 속도 향상을 원한다면 <code>@tf.function</code> 데코레이터를 적용하면 된다.<br>
 ex)</li>
 </ul>
-<pre><code>@tf.function
+<pre tabindex="0"><code>@tf.function
 def t_func(a,b):
     return tf.matmul(a,b)
 
@@ -235,14 +583,14 @@ print(t_func(x,w))
 # tensorflow 2.x 이후부터는 변수 x같은 값들도
 # placeholder를 만들고 feed 값을 주는 복잡한 과정 없이
 # tensorflow 함수를 이용해 연산 가능해졌다.
-</code></pre><h3 id="tensorflow-미분">tensorflow 미분</h3>
+</code></pre><h3 id="tensorflow-미분">tensorflow 미분<a hidden class="anchor" aria-hidden="true" href="#tensorflow-미분">#</a></h3>
 <ul>
 <li>gradient 계산에 미분이 많이 사용고, tensorflow는 미분 함수를 제공한다.</li>
 <li><code>tape.gradient(y,x)</code> : 텐서 x에 대한 y의 미분값</li>
 <li><code>tape.watch()</code> : 상수형 텐서를 변수형 텐서로 변환</li>
 </ul>
 <p>ex)</p>
-<pre><code>x1 = tf.Variable(tf.constant(1.0))  # 변수 선언
+<pre tabindex="0"><code>x1 = tf.Variable(tf.constant(1.0))  # 변수 선언
 x2 = tf.Variable(tf.constant(2.0))  # 변수 선언
 with tf.GradientTape() as tape:  # 미분을 위해 GradientTape 객체 생성
     y = tf.multiply(x1, x2)  # 미분할 함수값을 GradientTape 객체 안에서 정의
@@ -263,7 +611,7 @@ with tf.GradientTape() as tape:
     y = tf.multiply(x1, a)
 gradients3 = tape.gradient(y,a)
 # gradients3 = 1.0
-</code></pre><h3 id="선형-회귀">선형 회귀</h3>
+</code></pre><h3 id="선형-회귀">선형 회귀<a hidden class="anchor" aria-hidden="true" href="#선형-회귀">#</a></h3>
 <ul>
 <li>&lsquo;딥러닝&rsquo;은 데이터를 통해 관계를 학습하고, 학습된 모델을 통해 데이터가 주어지면 예측값을 도출해 내는 기술이다.</li>
 <li>&lsquo;딥러닝&rsquo;의 가장 기본적인 계산 원리는 &lsquo;션형 회귀&rsquo;와 &lsquo;로지스틱 회귀&rsquo; 이다.</li>
@@ -276,7 +624,7 @@ gradients3 = tape.gradient(y,a)
 <li>판단의 근거를 마련할 때 사용</li>
 <li>sigmoid 함수를 사용하여 확률값으로 사용</li>
 </ul>
-<h4 id="선형-회귀-정의">선형 회귀 정의</h4>
+<h4 id="선형-회귀-정의">선형 회귀 정의<a hidden class="anchor" aria-hidden="true" href="#선형-회귀-정의">#</a></h4>
 <ul>
 <li>
 <p>종속변수 y와 한개 이상의 독립변수 x와의 선형 상관관계를 모델링하는 회귀분석 기법</p>
@@ -311,7 +659,7 @@ gradients3 = tape.gradient(y,a)
 </ul>
 </li>
 </ul>
-<h4 id="오차방정식">오차방정식</h4>
+<h4 id="오차방정식">오차방정식<a hidden class="anchor" aria-hidden="true" href="#오차방정식">#</a></h4>
 <ul>
 <li>
 <p>선형 회귀에서 입력값이 여러개일 경우, 첫번째 입력으로 임의의 선을 그린다.</p>
@@ -335,7 +683,7 @@ gradients3 = tape.gradient(y,a)
 <p>RMSE : Root Mean Squared Error, 평균 제곱근 오차 = root(편균제곱오차)</p>
 </li>
 </ul>
-<h4 id="경사-하강법">경사 하강법</h4>
+<h4 id="경사-하강법">경사 하강법<a hidden class="anchor" aria-hidden="true" href="#경사-하강법">#</a></h4>
 <ul>
 <li>
 <p>대표적인 &lsquo;최적화 알고리즘&rsquo;으로, 비용 함수를 최소화하기 위해 반복해서 파라미터를 조정해나가는 방식이다.</p>
@@ -370,12 +718,12 @@ gradients3 = tape.gradient(y,a)
 <li>구해진 값을 기울기로하여 이동할 때 그래프와 겹쳐지는 부분의 x좌표를 x2라 한다.</li>
 <li>1~2 과정을 반복하면 점차 기울기가 줄어들고, 이를 충분히 수행하면 정답값에 수렴한다.</li>
 </ol>
-<pre><code>learning_rate = 0.1
+<pre tabindex="0"><code>learning_rate = 0.1
 with tf.GradleTape() as tape:
   hypothesis = W * x_data
   cost = tf.reduce_mean(tf.square)
 </code></pre><hr>
-<h3 id="로지스틱-회귀">로지스틱 회귀</h3>
+<h3 id="로지스틱-회귀">로지스틱 회귀<a hidden class="anchor" aria-hidden="true" href="#로지스틱-회귀">#</a></h3>
 <ul>
 <li>
 <p>선형회귀와 함께 대표적인 딥러닝 알고리즘이다.</p>
@@ -396,7 +744,7 @@ with tf.GradleTape() as tape:
 <p>step function 혹은 sigmoid를 사용하는데, 보통 0과 1 사이의 확률값을 표현할 수 있는 sigmoid를 사용한다.</p>
 </li>
 </ul>
-<h4 id="시그모이드">시그모이드</h4>
+<h4 id="시그모이드">시그모이드<a hidden class="anchor" aria-hidden="true" href="#시그모이드">#</a></h4>
 <ul>
 <li>
 <p>시그모이드 방정식은 아래와 같다.<br>
@@ -419,7 +767,7 @@ with tf.GradleTape() as tape:
 <p>b값이 증가하면 그래프가 우측 방향으로 이동한다.</p>
 </li>
 </ul>
-<h4 id="오차함수">오차함수</h4>
+<h4 id="오차함수">오차함수<a hidden class="anchor" aria-hidden="true" href="#오차함수">#</a></h4>
 <ul>
 <li>
 <p>로지스틱 회귀는 target이 0 또는 1 두가지라는 점에서 선형 회귀와 다르다.</p>
@@ -439,7 +787,7 @@ with tf.GradleTape() as tape:
 <p>로지스틱 회귀법을 tensorflow 함수로 구현하면 아래와 같다.</p>
 </li>
 </ul>
-<pre><code># 6 by 2 형태의 x 데이터 학습값
+<pre tabindex="0"><code># 6 by 2 형태의 x 데이터 학습값
 x_train = np.array([[1., 1.],
                    [1., 2.],
                    [2., 1.],
@@ -465,7 +813,7 @@ tf.random.set_seed(12345)
 W = tf.Variable(tf.random.normal([2, 1], mean=0.0))
 b = tf.Variable(tf.random.normal([1], mean=0.0))
 
-print('weights: \n', W.numpy(), '\n\nbias: \n', b.numpy())
+print(&#39;weights: \n&#39;, W.numpy(), &#39;\n\nbias: \n&#39;, b.numpy())
 
 # x값을 sigmoid 함수에 대입하여 y값을 반환하는 함수
 # x값의 shape가 [,2] 형태이므로 z = -(w1*x1 + w2*x2 + b) 가 된다.
@@ -499,13 +847,13 @@ def acc(hypo, label):
 # 결과 계산
 accuracy = acc(predict(x_train), y_train).numpy()
 </code></pre><hr>
-<h3 id="퍼셉트론">퍼셉트론</h3>
+<h3 id="퍼셉트론">퍼셉트론<a hidden class="anchor" aria-hidden="true" href="#퍼셉트론">#</a></h3>
 <ul>
 <li>퍼셉트론은 뉴럴 네트워크의 기본이 되는 개념으로, 인간의 신경망을 본따 프랑크 로젠블라트가 1957년에 고안한 알고리즘이다.</li>
 <li>인간의 신경망은 외부 자극을 입력으로 받아 뉴런을 타고 신호가 전달된다. 뉴런과 뉴런 사이의 시냅스에서 신호를 전달하려면 역치값을 넘겨야 신호가 전달된다.</li>
 <li>퍼셉트론은 입력을 받아 가중합(w1<em>x1 + w2+x2 + &hellip; + wi</em>xi+ b)을 취하고, 활성화 함수(sigmoid)를 거쳐 출력값을 생성한다.</li>
 </ul>
-<h4 id="다층-퍼셉트론">다층 퍼셉트론</h4>
+<h4 id="다층-퍼셉트론">다층 퍼셉트론<a hidden class="anchor" aria-hidden="true" href="#다층-퍼셉트론">#</a></h4>
 <ul>
 <li>
 <p>한 개의 퍼셉트론은 여러 문제를 해결할수 있다.</p>
@@ -524,7 +872,7 @@ accuracy = acc(predict(x_train), y_train).numpy()
 <p>XOR 모델은 OR 퍼셉트론과 NAND 퍼셉트론을 1차적으로 수행하고, 두 수행에 대한 결과를 AND 연산하면 구할 수 있다. 이를 그래프로 표현하면 아래와 같다.</p>
 </li>
 </ul>
-<pre><code>0층     1층     2층
+<pre tabindex="0"><code>0층     1층     2층
 x1   →   s1  ↘  
    ↘ ↗         y
    ↗ ↘         
@@ -534,7 +882,7 @@ x2   →   s2  ↗
 <li>0층(가장 처음)은 input layer, 2층(가장 마지막)은 output layer, 그 사이의 layer는 hidden layer라 칭한다.</li>
 <li>hidden layer를 많이 만들면 대체로 데이터를 많이 분석하여 더 좋은 결과를 낼 수 있다고 할 수 있다.</li>
 </ul>
-<h3 id="오차-역전파">오차 역전파</h3>
+<h3 id="오차-역전파">오차 역전파<a hidden class="anchor" aria-hidden="true" href="#오차-역전파">#</a></h3>
 <ul>
 <li>
 <p>은닉층에 있는 각각의 w와 b를 구하는 방법이다.</p>
@@ -550,7 +898,7 @@ x2   →   s2  ↗
 <p>이 문제를 해결하기 위해 1980년도 오차 역전파 알고리즘이 발명된다. 이전에도 w와 b를 구할수는 있었지만, 구하는 방법에 대해 규칙성을 찾지는 못했다.</p>
 </li>
 </ul>
-<h4 id="오차-역전파-개요">오차 역전파 개요</h4>
+<h4 id="오차-역전파-개요">오차 역전파 개요<a hidden class="anchor" aria-hidden="true" href="#오차-역전파-개요">#</a></h4>
 <ul>
 <li>최적화의 계산 방향이 output layer 에서 input layer 방향으로 진행된다. 이 떄문에 이 알고리즘을 back propagation 이라 부른다.</li>
 <li>퍼셉트론에서 w와 b값을 찾기 위해 오차가 작아지는 방향으로(기울기가 0이 되는 방향으로) 업데이트 해 나갔는데, 다층 퍼셉트론에서는 다음 식으로 가중치를 변화시켜 나간다.
@@ -559,7 +907,7 @@ x2   →   s2  ↗
 </ul>
 </li>
 </ul>
-<h4 id="출력층-오차">출력층 오차</h4>
+<h4 id="출력층-오차">출력층 오차<a hidden class="anchor" aria-hidden="true" href="#출력층-오차">#</a></h4>
 <ul>
 <li>다층 퍼셉트론의 각 노드는 (1)입력값을 이용해 가중합을 만들고, (2) 가중합을 활성화 함수를 적용해 출력하는 두 단계를 수행한다.</li>
 <li>3개 layer를 가지는 형태를 표현하면 아래와 같다.
@@ -569,7 +917,7 @@ x2   →   s2  ↗
 </ul>
 </li>
 </ul>
-<pre><code>0층               1층                                       2층
+<pre tabindex="0"><code>0층               1층                                       2층
 x1 (w11)→ [가중합1 -&gt; 활성화함수1]  →    yh1 (w31)→ [가중합3 -&gt; 활성화함수3]  → y_out1
  (w21)↘  ↗                              (w41)↘  ↗
  (w12)↗  ↘                              (w32)↗  ↘
@@ -612,7 +960,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 <code>w31(t + 1) = w31 * t - δ * y * yh1</code> 이 된다. (<code>δ * y = (y_out1 - y_target1) * (y_out1 * (1 - y_out1))</code>)</p>
 </li>
 </ol>
-<h4 id="은닉층-오차">은닉층 오차</h4>
+<h4 id="은닉층-오차">은닉층 오차<a hidden class="anchor" aria-hidden="true" href="#은닉층-오차">#</a></h4>
 <ul>
 <li>
 <p>위에서 w31을 구했고, 이제 w11을 구해보자</p>
@@ -627,7 +975,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 <li><code>(∂yh1/∂가중합1)</code> 은 activation 함수의 미분값이므로, <code>(∂yh1/∂가중합1) = yh1(1 - yh1)</code> 이 된다.</li>
 <li>가중합을 w에 의해 미분하면 입력값이 된다. 따라서 <code>(∂가중합1/∂w11) = x1</code></li>
 <li><code>(∂오차 y_out) / ∂yh1 = ∂(오차y_out1 + 오차y_out2)/∂yh1 = ∂오차y_out1/∂yh1 + ∂오차y_out2/∂yh1</code><br>
-5-1) 4 식을 나눠서 계산해보자. 먼저  <code>∂오차y_out1/∂yh1 = ∂오차y_out1 / ∂가중합3 * ∂가중합3 / ∂yh1'   5-1-1) 이때 </code>∂가중합3 / ∂yh1 = ∂(w31 * yh1 + w32 * yh2)/∂yh1 = w31<code>5-1-2) </code>∂오차y_out1 / ∂가중합 = (∂오차y_out1 / ∂y_out1) * (∂y_out1 / ∂가중합3) = ( y_out1 - y_target1) * w31  * (1-y_out1) * y_out1<code> (</code>∂오차y_out1 / ∂y_out1<code>는 오차를 의미하고,</code>∂y_out1 / ∂가중합3<code>는 활성함수의 미분값을 의미하기 때문)   5-1-3) 최종적으로</code>∂오차y_out1 / ∂yh1 = (y_out1 - y_target1) * w31 * (1 - y_out1) * y_out1 = δy_out1 * w31<code>형태로 델타식을 만들 수 있다.   5-2)  다음</code>∂오차y_out2/∂yh1<code>도 5-1 에서 사용한 방식으로 계산하면 </code>∂오차y_out2/∂yh1 = δy_out2 * w41<code>형태가 된다.   5-3) 위 값들로 4 에서 봤던 식을 구성하면 </code>(∂오차 y_out) / ∂yh1 = δy_out1 * w31 + δy_out2 * w41` 이 된다.</li>
+5-1) 4 식을 나눠서 계산해보자. 먼저  <code>∂오차y_out1/∂yh1 = ∂오차y_out1 / ∂가중합3 * ∂가중합3 / ∂yh1'   5-1-1) 이때 </code>∂가중합3 / ∂yh1 = ∂(w31 * yh1 + w32 * yh2)/∂yh1 = w31<code>  5-1-2)</code>∂오차y_out1 / ∂가중합 = (∂오차y_out1 / ∂y_out1) * (∂y_out1 / ∂가중합3) = ( y_out1 - y_target1) * w31  * (1-y_out1) * y_out1<code> (</code>∂오차y_out1 / ∂y_out1<code>는 오차를 의미하고,</code>∂y_out1 / ∂가중합3<code>는 활성함수의 미분값을 의미하기 때문)   5-1-3) 최종적으로</code>∂오차y_out1 / ∂yh1 = (y_out1 - y_target1) * w31 * (1 - y_out1) * y_out1 = δy_out1 * w31<code>형태로 델타식을 만들 수 있다.   5-2)  다음</code>∂오차y_out2/∂yh1<code>도 5-1 에서 사용한 방식으로 계산하면 </code>∂오차y_out2/∂yh1 = δy_out2 * w41<code>형태가 된다.   5-3) 위 값들로 4 에서 봤던 식을 구성하면 </code>(∂오차 y_out) / ∂yh1 = δy_out1 * w31 + δy_out2 * w41` 이 된다.</li>
 <li>2, 3, 5-3 에서 나온 값으로 1식을 재구성해보면 <code>(∂오차 y_out) / ∂w11 = (δy_out1 * w31 + δy_out2 * w41) * yh1(1 - yh1) * x1</code> 이다.</li>
 </ol>
 </li>
@@ -654,7 +1002,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </li>
 </ul>
 <hr>
-<h3 id="그래디언트-소실gradient-vanishing">그래디언트 소실(gradient vanishing)</h3>
+<h3 id="그래디언트-소실gradient-vanishing">그래디언트 소실(gradient vanishing)<a hidden class="anchor" aria-hidden="true" href="#그래디언트-소실gradient-vanishing">#</a></h3>
 <ul>
 <li>다층 퍼셉트론을 사용할 때, 층이 많을 수록 데이터 분석 능력이 높아지지만, 실제로는 분석 증가량이 미미하다. 이는 활성화 함수 때문이다.
 <ul>
@@ -672,7 +1020,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </ul>
 </li>
 </ul>
-<h4 id="xavier와--he-초기화">xavier와  he 초기화</h4>
+<h4 id="xavier와--he-초기화">xavier와  he 초기화<a hidden class="anchor" aria-hidden="true" href="#xavier와--he-초기화">#</a></h4>
 <ul>
 <li>초기 w와 b 할당시 표준편차가 1이고, 평균이 0인 정규분포를 사용하였다.</li>
 <li>이렇게 되면 node를 통과한 결과값이 0과 1에 치중되어 있는 형태를 볼 수 있다.</li>
@@ -692,7 +1040,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </li>
 </ul>
 <hr>
-<h3 id="고속-옵티마이저">고속 옵티마이저</h3>
+<h3 id="고속-옵티마이저">고속 옵티마이저<a hidden class="anchor" aria-hidden="true" href="#고속-옵티마이저">#</a></h3>
 <ul>
 <li>옵티마이저란 경사하강법을 뜻한다. 고속 옵티마이저란 경사 하강법을 더 효율적으로 하는 방법이다.</li>
 <li>경사 하강법은 대체로 학습 속도와 정확도 문제를 갖고 있다. (learning rate 혹은 data에 의해 발생)
@@ -710,7 +1058,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 <li>경사 하강법은 무작정 기울어진 방향으로 진행하기 때문에 간단하지만 위와같은 문제점을 야기한다.</li>
 <li>경사 하강법의 문제점을 개선해 주는 모델들로는 &lsquo;모멘텀&rsquo;, &lsquo;adagrad&rsquo;, &lsquo;adam&rsquo; 등이 있다.</li>
 </ul>
-<h4 id="모멘텀">모멘텀</h4>
+<h4 id="모멘텀">모멘텀<a hidden class="anchor" aria-hidden="true" href="#모멘텀">#</a></h4>
 <ul>
 <li>모멘텀 알고리즘은 물리 현상의 운동량에 착안하여 만들어 졌다.</li>
 <li>이전 회차의 미분값 중 일정 비율을 반영하여 현재 weight 값 설정에 영향을 주도록 하여 더 빠르게 최적점을 찾을 수 있도록 하는 방식이다.
@@ -722,24 +1070,24 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </ul>
 </li>
 </ul>
-<h4 id="네스테로프-모멘텀">네스테로프 모멘텀</h4>
+<h4 id="네스테로프-모멘텀">네스테로프 모멘텀<a hidden class="anchor" aria-hidden="true" href="#네스테로프-모멘텀">#</a></h4>
 <ul>
 <li>네스테로프 모멘텀에서는 w를 업데이트 할 때 <code>γ*v(t-1) - η*∂오차/∂w(t)</code> 값 대신 <code>γ*v(t-1) - η*∂오차/∂(w(t) + γ*v(t-1))</code> 를 사용한다.</li>
 <li>모멘텀 방법으로 이동될 방향을 미리 예측하여 해당 방향으로 한단계 미리 이동한 그래디언트 값을 사용함으로써 불필요한 이동을 줄일 수 있다. 속도는 그대로이지만 단계를 절약할 수 있다.</li>
 </ul>
-<h4 id="아다그리드">아다그리드</h4>
+<h4 id="아다그리드">아다그리드<a hidden class="anchor" aria-hidden="true" href="#아다그리드">#</a></h4>
 <ul>
 <li>학습률을 조절하여 효율을 높인 모멘텀이다.</li>
 <li>아다그라드는 weight값이 업데이트 될 때 마다 점점 최적점을 찾아간다고 가정하고, 학습을 시킬때 마다 일정량의 learning rate를 떨어뜨린다.</li>
 <li>학습률을 변화시키기 위해 G(t)값을 <code>G(t) = G(t-1) + [∂오차/∂w(t)]^2</code> 형태로 가져가며, 최종적으로 <code>W(t+1) = W(t) + η * (1/√G(t) + ε) * ∂오차/∂w(t)</code> 형태가 된다. (ε 는 0이 되는것을 방지하기 위해 더해주는 아주 작은 상수값)</li>
 </ul>
-<h4 id="rmsprop">RMSprop</h4>
+<h4 id="rmsprop">RMSprop<a hidden class="anchor" aria-hidden="true" href="#rmsprop">#</a></h4>
 <ul>
 <li>아다그라드에서 G(t)는 무한히 커지게 되는 문제점이 있다.</li>
 <li>이를 해결하기 위해 <code>G(t) = γ * G(t-1) + (1-γ) * [∂오차/∂w(t)]^2</code> 형태를 취한다.</li>
 <li>&lsquo;γ&rsquo; 값을 이용해 G(t) 값을 조절할 수 있도록 하였다.</li>
 </ul>
-<h4 id="adam">Adam</h4>
+<h4 id="adam">Adam<a hidden class="anchor" aria-hidden="true" href="#adam">#</a></h4>
 <ul>
 <li>
 <p>RMSprop의 정확도, 모멘텀 방식의 속도 장점을 모두 취하는 방식이다.</p>
@@ -773,7 +1121,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </li>
 </ul>
 <hr>
-<h3 id="다중-분류">다중 분류</h3>
+<h3 id="다중-분류">다중 분류<a hidden class="anchor" aria-hidden="true" href="#다중-분류">#</a></h3>
 <ul>
 <li>입력값을 기준으로 단순 0 또는 1을 판단하는게 아니라, 여러 class 중 하나로 분류하는 모델을 알아보자</li>
 <li>출력 node 개수를 분류되는 항목 개수로 설정한다.</li>
@@ -786,7 +1134,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </ul>
 </li>
 </ul>
-<h4 id="softmax">softMax</h4>
+<h4 id="softmax">softMax<a hidden class="anchor" aria-hidden="true" href="#softmax">#</a></h4>
 <ul>
 <li>classification 문제를 풀 때 점수 벡터를 클래스 별 확률로 변환하기 위해 사용하는 함수이다.</li>
 <li>각 점수 벡터에 지수를 취한 후 정규화 상수로 나누어 총합이 1이 되도록 계산한다.
@@ -798,11 +1146,11 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 <li>softMax는 exponential을 사용하기 때문에 큰 값의 나눗셈을 수행해야 하여 overflow가 발생하기 쉽다.</li>
 <li>수식을 개선하여 다음과 같이 사용한다. (keras에서도 개선된 수식을 사용함)</li>
 </ul>
-<pre><code>y_k = exp(a_k) / ∑&lt;i=1,n&gt; exp(a_i)
+<pre tabindex="0"><code>y_k = exp(a_k) / ∑&lt;i=1,n&gt; exp(a_i)
     = C * exp(a_k) / C * ∑&lt;i=1,n&gt; exp(a_i)
     = exp(a_k + log C) / ∑&lt;i=1,n&gt; exp(a_i + log C)
-    = exp(a_k + C') / ∑&lt;i=1,n&gt; exp(a_i + C')
-</code></pre><h4 id="cross-entropy">Cross Entropy</h4>
+    = exp(a_k + C&#39;) / ∑&lt;i=1,n&gt; exp(a_i + C&#39;)
+</code></pre><h4 id="cross-entropy">Cross Entropy<a hidden class="anchor" aria-hidden="true" href="#cross-entropy">#</a></h4>
 <ul>
 <li>softmax 에서 사용하는 오차방정식</li>
 <li>cross entrpoy는 서로 다른 두 값의 확률 차이를 나타낼 수 있다.</li>
@@ -814,7 +1162,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 </li>
 </ul>
 <hr>
-<h3 id="오버피팅">오버피팅</h3>
+<h3 id="오버피팅">오버피팅<a hidden class="anchor" aria-hidden="true" href="#오버피팅">#</a></h3>
 <ul>
 <li>훈련 데이터에 지나치게 적응하여 훈련 그 외의 데이터에 대해서는 제대로 평가를 하지 못하는 경우를 일컫는다.</li>
 <li>학습 데이터를 통해 경향성만 추출해 내는 것이 가장 바람직한 학습 목표이다.</li>
@@ -826,7 +1174,7 @@ x2 (w22)→ [가중합2 -&gt; 활성화함수2]  →    yh2 (w42) → [가중합
 <li>은닉층이 너무 많거나 각 층의 노드 수가 많아 변수가 복잡해지면 발생할 수 있다.</li>
 <li>테스트 셋과 학습 셋이 중복될 때 생기기도 한다.</li>
 </ul>
-<h4 id="데이터-처리-방법">데이터 처리 방법</h4>
+<h4 id="데이터-처리-방법">데이터 처리 방법<a hidden class="anchor" aria-hidden="true" href="#데이터-처리-방법">#</a></h4>
 <ul>
 <li>오버피팅을 줄이기 위해서 데이터를 조작하는 방법을 사용할 수 있다.</li>
 </ul>
@@ -867,7 +1215,7 @@ ex) node = {n1, n2, n3, n4} 가 있다면, step 1에서는 n1, n2만 있는 것 
 </li>
 <li>데이터 증식은 이미지 데이터를 처리할 때 매우 유용하다. 이미지는 확대, 축소, 이동, 회전, 반전 등을 통해 하나의 이미지로 여러 데이터를 만들 수 있다.</li>
 </ul>
-<h4 id="k겹-교차-검증의-이해">K겹 교차 검증의 이해</h4>
+<h4 id="k겹-교차-검증의-이해">K겹 교차 검증의 이해<a hidden class="anchor" aria-hidden="true" href="#k겹-교차-검증의-이해">#</a></h4>
 <ul>
 <li>데이터 셋을 학습용과 테스트용으로 나누었을 경우, 테스트에 사용되는 데이터는 극히 일부밖에 되지 않는다</li>
 <li>데이터 셋을 k등분 하여, 테스트 셋과 학습 셋을 돌려가며 사용하는 방법을 k겹 교차검증이라 한다.
@@ -881,7 +1229,7 @@ ex) node = {n1, n2, n3, n4} 가 있다면, step 1에서는 n1, n2만 있는 것 
 </ul>
 </li>
 </ul>
-<pre><code>from tensorflow.keras.models import Sequential
+<pre tabindex="0"><code>from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import StratifiedKFold
@@ -893,7 +1241,7 @@ import tensorflow as tf
 numpy.random.seed(777)
 tf.random.set_seed(777)
 
-df = pd.read_csv('sonar.csv', header=None)
+df = pd.read_csv(&#39;sonar.csv&#39;, header=None)
 
 dataset = df.values
 x_data = dataset[:,0:60].astype(float)
@@ -921,21 +1269,21 @@ for train, test in skf.split(x_data, y_data):
     # 모델을 구성한다.
     # 활성함수로 sigmoid, 오차함수로 binary-crossentropy를 사용할 것이다.
     model = Sequential()
-    model.add(Dense(30, input_dim=60, activation='relu'))
-    model.add(Dense(10, activation='relu'))
-    model.add(Dense(1, activation='sigmoid'))
-    model.compile(loss='binary_crossentropy',
-                  optimizer='adam',
-                  metrics=['accuracy'])
+    model.add(Dense(30, input_dim=60, activation=&#39;relu&#39;))
+    model.add(Dense(10, activation=&#39;relu&#39;))
+    model.add(Dense(1, activation=&#39;sigmoid&#39;))
+    model.compile(loss=&#39;binary_crossentropy&#39;,
+                  optimizer=&#39;adam&#39;,
+                  metrics=[&#39;accuracy&#39;])
     model.fit(x_data[train], y_data[train], epochs=100, batch_size=5)
-    k_accuracy = &quot;%.3f&quot; % (model.evaluate(x_data[test], y_data[test])[1])
+    k_accuracy = &#34;%.3f&#34; % (model.evaluate(x_data[test], y_data[test])[1])
     accuracy.append(k_accuracy)
 
-print(&quot;\n %.f fold accuracy:&quot; % n_fold, accuracy)
+print(&#34;\n %.f fold accuracy:&#34; % n_fold, accuracy)
 # 결과값은 데이터에 따라 달라질 수 있다. 학습에 사용된 데이터가 편향되어 있는 경우 평가 결과가 떨어지는 모습을 볼 수 있다.
 # k-fold 알고리즘을 사용하면 이러한 경우를 예방할 수 있다.
 </code></pre><hr>
-<h3 id="이미지-데이터-모델링">이미지 데이터 모델링</h3>
+<h3 id="이미지-데이터-모델링">이미지 데이터 모델링<a hidden class="anchor" aria-hidden="true" href="#이미지-데이터-모델링">#</a></h3>
 <ul>
 <li>
 <p>MNIST 는 대표적인 이미지 모델링 데이터로, 70,000개의 글자 이미지에 각각 0부터 9까지 정답이 포함되어있는 데이터 셋이다.</p>
@@ -969,14 +1317,14 @@ print(&quot;\n %.f fold accuracy:&quot; % n_fold, accuracy)
 <ol start="3">
 <li>결과 값이 0~9의 class로 나뉘기 때문에 one-hot encoding을 통해 y 값을 전처리 해준다.</li>
 </ol>
-<h3 id="cnn">CNN</h3>
+<h3 id="cnn">CNN<a hidden class="anchor" aria-hidden="true" href="#cnn">#</a></h3>
 <ul>
 <li>연속하는 layer 상의 모든 node들이 서로 연결되어있는 형태를 &lsquo;fully connected layer&rsquo;(FC layer) 라고 한다.</li>
 <li>한 장의 컬러 사진은 3차원 데이터이다. 이를 FC 신경망을 이용하여 학습할 시 제약이 많다.</li>
 <li>이러한 다차원 데이터 학습을 손실 없이 사용할 수 있도록 만든 모델이 Neural Network이다.</li>
 <li>그 중 Convolution Neural Network를 사용하면 이미지의 공간 정보를 유지한 채로 학습이 가능하다.</li>
 </ul>
-<h4 id="cnn-과-fcnn-비교">CNN 과 FCNN 비교</h4>
+<h4 id="cnn-과-fcnn-비교">CNN 과 FCNN 비교<a hidden class="anchor" aria-hidden="true" href="#cnn-과-fcnn-비교">#</a></h4>
 <ul>
 <li>Fully Connected Neural Network는 2차원 그림을 1차원으로 재구성하여 학습시켰다.</li>
 <li>CNN은 2차원 배열을 특정 그룹(Kernal, filter)으로 나누어 특징을 추출하는 형태로 학습시키기 때문에 입출력 데이터에 대한 형상 유지가 가능하다.</li>
@@ -984,7 +1332,7 @@ print(&quot;\n %.f fold accuracy:&quot; % n_fold, accuracy)
 <li>여러개의 filter(kernal)을 사용함으로써 다양한 특징을 추출하여 학습할 수 있다.</li>
 <li>filter를 공유 파라미터로 사용하기 때문에 FCNN 보다 학습 파라미터가 적다.</li>
 </ul>
-<h4 id="cnn-이론">CNN 이론</h4>
+<h4 id="cnn-이론">CNN 이론<a hidden class="anchor" aria-hidden="true" href="#cnn-이론">#</a></h4>
 <ul>
 <li>CNN 은 이미지의 특징을 추춣해 내는 부분과, 클래스를 분류하는 부분으로 구성된다.
 <ul>
@@ -1040,7 +1388,7 @@ print(&quot;\n %.f fold accuracy:&quot; % n_fold, accuracy)
 <li>출력 데이터의 크기를 줄이거나 데이터를 강조하는 용도로 사용한다.</li>
 <li>방법에 따라 max pooling, average pooling, min pooling 등이 있다.</li>
 </ul>
-<pre><code>from tensorflow.keras.datasets import mnist
+<pre tabindex="0"><code>from tensorflow.keras.datasets import mnist
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
@@ -1055,8 +1403,8 @@ tf.random.set_seed(3)
 
 # 4차원형태 데이터 구성
 # [batch, x size, y size, channel]
-x_train = x_train.reshape(x_train.shape[0], 28, 28, 1).astype('float32')/255
-x_test = x_test.reshape(x_test.shape[0], 28, 28, 1).astype('float32')/255
+x_train = x_train.reshape(x_train.shape[0], 28, 28, 1).astype(&#39;float32&#39;)/255
+x_test = x_test.reshape(x_test.shape[0], 28, 28, 1).astype(&#39;float32&#39;)/255
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
 
@@ -1069,11 +1417,11 @@ model = Sequential()
 # stride 는 설정 하지 않으면 (1,1) 이 기본
 # padding은 설정하지 않으면 없음.
 # padding이 없고 stride가 (1,1) 이기 때문에 결과값은 (26,26) 크기가 될 것
-model.add(Conv2D(32, kernel_size=(3, 3), input_shape=(28, 28, 1), activation='relu'))
+model.add(Conv2D(32, kernel_size=(3, 3), input_shape=(28, 28, 1), activation=&#39;relu&#39;))
 
 # 커널 62개, 3 by 3
 # relu 사용
-model.add(Conv2D(64, (3,3), activation='relu'))
+model.add(Conv2D(64, (3,3), activation=&#39;relu&#39;))
 # pooling 사용
 # max pooling 방법, pool_size = 2 이므로, stride는 자동으로 (2,2) 가 된다. (pooling은 중복되게 필터를 설정하지 않음)
 # 결과값은 절반의 크기(12,12) 가 될 것
@@ -1086,40 +1434,40 @@ model.add(Dropout(0.25))
 # 입력값이 (12,12,64) 이다. 이를 직렬화(1차원 배열화) 시켜 준다.
 model.add(Flatten())
 # 128 node를 가진 hidden layer
-model.add(Dense(128, activation='relu'))
+model.add(Dense(128, activation=&#39;relu&#39;))
 # FC에서 over-fitting이 두드러지기 때문에 더 높은 값으로 dropout을 설정하였다.
 model.add(Dropout(0.5))
 # MNIST는 10개중 하나를 선택하므로, 출력 layer의 node는 10개로 설정, softmax 사용
-model.add(Dense(10, activation='softmax'))
+model.add(Dense(10, activation=&#39;softmax&#39;))
 
 # 모델 구조 확인
 model.summary()
 
 
 # 모델 학습 및 평가
-model.compile(loss='categorical_crossentropy',
-              optimizer='adam',
-              metrics=['accuracy'])
+model.compile(loss=&#39;categorical_crossentropy&#39;,
+              optimizer=&#39;adam&#39;,
+              metrics=[&#39;accuracy&#39;])
 
 result = model.fit(x_train, y_train,
                    validation_data=(x_test, y_test),  # split 대신 직접 평가용 데이터를 지정하는 방법
                    epochs=30,
                    batch_size=200)
 
-print('loss &amp; accuracy:',model.evaluate(x_test, y_test))
-y_vloss = result.history['val_loss']
-y_loss = result.history['loss']
+print(&#39;loss &amp; accuracy:&#39;,model.evaluate(x_test, y_test))
+y_vloss = result.history[&#39;val_loss&#39;]
+y_loss = result.history[&#39;loss&#39;]
 x_len = np.arange((len(y_loss)))
-plt.plot(x_len, y_vloss, '.', c='red', label='validation loss')
-plt.plot(x_len, y_loss, '.', c='blue', label='train loss')
-plt.legend(loc='best')
+plt.plot(x_len, y_vloss, &#39;.&#39;, c=&#39;red&#39;, label=&#39;validation loss&#39;)
+plt.plot(x_len, y_loss, &#39;.&#39;, c=&#39;blue&#39;, label=&#39;train loss&#39;)
+plt.legend(loc=&#39;best&#39;)
 plt.show()
 </code></pre><ul>
 <li>FC layer를 사용하여 이미지 학습을 한 것 보다 CNN을 활용하여 학습을 한 것이 over-fitting 및 오차가 더 적음을 확인할 수 있다.</li>
 <li>CNN으로 이미지를 학습시키는게 더 효율적이다.</li>
 </ul>
 <hr>
-<h3 id="rnn">RNN</h3>
+<h3 id="rnn">RNN<a hidden class="anchor" aria-hidden="true" href="#rnn">#</a></h3>
 <ul>
 <li>
 <p>Recurrent Neural Network 로, 시계열 데이터를 처리하기 위한 모델이다.</p>
@@ -1133,7 +1481,7 @@ plt.show()
 <li>하나의 layer의 node간 연결되는 edge가 생긴다. 한 layer안 node들을 cell이라 칭한다.</li>
 <li>cell간 연결된 edge에는 &lsquo;hidden_state&rsquo; 데이터가 전달된다.</li>
 </ul>
-<pre><code>x1   →   [A1]  →  h1
+<pre tabindex="0"><code>x1   →   [A1]  →  h1
         Whh ↓ h1
 x2 -Wxh→ [A2]  →  h2
            ↓ h2
@@ -1144,7 +1492,7 @@ x3   →   [A3]  →  h3
 <code>h_t = f(h_t-1, x_t) = tanh(x) = tanh(W_hh * h_t-1 + W_xh * x_t)</code></p>
 </li>
 </ul>
-<h4 id="rnn-모델링">RNN 모델링</h4>
+<h4 id="rnn-모델링">RNN 모델링<a hidden class="anchor" aria-hidden="true" href="#rnn-모델링">#</a></h4>
 <ul>
 <li>RNN 모델은 &lsquo;3 tensor&rsquo;를 사용한다. 3 tensor의 각 요소는 아래와 같다.
 <ul>
@@ -1163,7 +1511,7 @@ x3   →   [A3]  →  h3
 </ul>
 </li>
 </ul>
-<h3 id="lstm">LSTM</h3>
+<h3 id="lstm">LSTM<a hidden class="anchor" aria-hidden="true" href="#lstm">#</a></h3>
 <ul>
 <li>RNN은 gradient에 의한 vanishing 문제가 크다. 이를 개선하기 위한 모델이 LSTM 이다.</li>
 <li>Long Short Term Memory, 중요한 데이터는 길게 기억하고 중요하지 않은 데이터는 짧게 기억한다.
@@ -1186,7 +1534,7 @@ x3   →   [A3]  →  h3
 <li>총 3개(forget, input, output)의 gate가 있다.</li>
 <li>각각 데이터를 얼마나 잊을지, 입출력으로 들어온 데이터 양 조절을 관장한다.</li>
 </ul>
-<h4 id="gate">Gate</h4>
+<h4 id="gate">Gate<a hidden class="anchor" aria-hidden="true" href="#gate">#</a></h4>
 <ol>
 <li>Input Gate</li>
 </ol>
@@ -1229,11 +1577,11 @@ x3   →   [A3]  →  h3
 </li>
 </ul>
 <hr>
-<h2 id="모델">모델</h2>
+<h2 id="모델">모델<a hidden class="anchor" aria-hidden="true" href="#모델">#</a></h2>
 <ul>
 <li>딥 러닝을 위한 신경망 구조를 모델이라 한다</li>
 </ul>
-<h3 id="모델-정의-방법과-최적화">모델 정의 방법과 최적화</h3>
+<h3 id="모델-정의-방법과-최적화">모델 정의 방법과 최적화<a hidden class="anchor" aria-hidden="true" href="#모델-정의-방법과-최적화">#</a></h3>
 <ul>
 <li>x 데이터는 attribute, y 데이터는 class라 칭한다.</li>
 </ul>
@@ -1264,13 +1612,13 @@ x3   →   [A3]  →  h3
 <li>class의 개수에 맞게 출력층 node 개수를 설정한다.</li>
 <li>활성화 함수 및 오차방정식으로 softMax와 categorical cross-entropy를 적용한다.</li>
 </ol>
-<h3 id="생성-방법">생성 방법</h3>
+<h3 id="생성-방법">생성 방법<a hidden class="anchor" aria-hidden="true" href="#생성-방법">#</a></h3>
 <ol>
 <li>tensorflow.keras.Sequential : Sequential 함수를 이용하는 방법</li>
 <li>functional approach : 직접 함수를 구성하는 방법</li>
 <li>tensorflow.keras.Model : Model 클래스를 상속하고 재정의하여 사용하는 방법</li>
 </ol>
-<h4 id="kerassequential">Keras.Sequential</h4>
+<h4 id="kerassequential">Keras.Sequential<a hidden class="anchor" aria-hidden="true" href="#kerassequential">#</a></h4>
 <ul>
 <li>keras를 이용해서 sequential 모델을 생성하는 방법</li>
 <li><code>model = Sequential()</code> : sequential 한 layer 형태를 가진 모델을 생성</li>
@@ -1295,7 +1643,7 @@ x3   →   [A3]  →  h3
 <li>epochs : 학습 데이터를 통해 반복 학습시킬 횟수</li>
 <li>batch_size : 입력 데이터를 몇 묶음 단위로 전달할지 설정, 하나씩 학습하는 것 보다 학습률 출렁임이 더 안정적이다.</li>
 <li>validation_split : 데이터중 0.3%는 검증용으로 사용, &lsquo;validation_data&rsquo; 로 직접 데이터를 전달할 수도 있음</li>
-<li>result : result.history 에서 &lsquo;loss&rsquo;, &lsquo;val_loss&rsquo;, &lsquo;accuracy&rsquo;, &lsquo;val_accuracy&rsquo; 키워드로 loss, accuracy 값 확인 가능</li>
+<li>result : result.history 에서 &rsquo;loss&rsquo;, &lsquo;val_loss&rsquo;, &lsquo;accuracy&rsquo;, &lsquo;val_accuracy&rsquo; 키워드로 loss, accuracy 값 확인 가능</li>
 </ul>
 </li>
 <li><code>model.layers[0].get_weights()[0]</code> :
@@ -1307,13 +1655,194 @@ x3   →   [A3]  →  h3
 <li><code>model.predict(x_predict)</code> : 학습된 모델에 x_predict 값을 넣을 시 특정 y 값을 추정하여 반환하는 함수</li>
 <li><code>model.evaluate(x_data, y_data)</code> : 학습된 모델에 입력값(x_data)과 정답(y_data) 를 전달받아 [loss, accuracy] 를 반환하는 함수</li>
 </ul>
-</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/tensorflow/>tensorflow</a><a class="tag" href=/tags/deep-learning/>deep learning</a><a class="tag" href=/tags/python/>python</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
-</section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/golang/"><span class="li iconfont icon-article"></span>Golang</a></p><p><a class="link" href="/post/kivy/"><span class="li iconfont icon-article"></span>Kivy</a></p></section></div></section><section id="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Notepadium.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section></body>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AswinBlue.github.io/tags/tensorflow/">tensorflow</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/deep-learning/">deep learning</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/python/">python</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://AswinBlue.github.io/post/golang/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Golang</span>
+  </a>
+  <a class="next" href="https://AswinBlue.github.io/post/kivy/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Kivy</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Tensorflow on twitter"
+        href="https://twitter.com/intent/tweet/?text=Tensorflow&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f&amp;hashtags=tensorflow%2cdeeplearning%2cpython">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Tensorflow on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f&amp;title=Tensorflow&amp;summary=Tensorflow&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Tensorflow on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f&title=Tensorflow">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Tensorflow on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Tensorflow on whatsapp"
+        href="https://api.whatsapp.com/send?text=Tensorflow%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Tensorflow on telegram"
+        href="https://telegram.me/share/url?text=Tensorflow&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2ftensorflow%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
 
 </html>

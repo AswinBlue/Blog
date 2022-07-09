@@ -1,25 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tensorflow on AsWindBlew</title>
-    <link>/tags/tensorflow/</link>
-    <description>Recent content in tensorflow on AsWindBlew</description>
+    <title>tensorflow on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/tensorflow/</link>
+    <description>Recent content in tensorflow on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tensorflow</title>
-      <link>/post/tensorflow/</link>
+      <link>https://AswinBlue.github.io/post/tensorflow/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>/post/tensorflow/</guid>
-      <description>#Tensorflow TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. n</description>
-      
+      <guid>https://AswinBlue.github.io/post/tensorflow/</guid>
+      <description>#Tensorflow
+TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
+edge는 학습데이터가 저장되는 다차원 배열이다.
+edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
+edge는 방향성이 있으며(directed), tensor라 불린다.
+archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
+설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.</description>
     </item>
     
   </channel>

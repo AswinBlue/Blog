@@ -1,35 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>linux on AsWindBlew</title>
-    <link>/tags/linux/</link>
-    <description>Recent content in linux on AsWindBlew</description>
+    <title>linux on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/linux/</link>
+    <description>Recent content in linux on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux commands</title>
-      <link>/post/linux_command/</link>
+      <link>https://AswinBlue.github.io/post/linux_command/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/linux_command/</guid>
-      <description>sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트</description>
-      
+      <guid>https://AswinBlue.github.io/post/linux_command/</guid>
+      <description>sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트리밍 에디터 sed [-e script][-f script-file][file...]
+찾기/출력 sed -n &#39;/abd/p&#39; list.txt : list.txt : 파일을 한줄씩 읽으면서(-n : 읽은 것을 출력하지 않음) abd 문자를 찾으면 그 줄을 출력(p)한다. 치환 sed &#39;s/addrass/address/&#39; list.txt : list.txt파일에서 addrass를 address로 바꾼다. 단, 원본파일을 바꾸지 않고 출력을 바꿔서 한다. sed &#39;s/□□*/□/&#39; list.txt : ( *표시: □ 는 공백 문자를 표시한다.</description>
     </item>
     
     <item>
       <title>Linux_apt</title>
-      <link>/post/linux_apt/</link>
+      <link>https://AswinBlue.github.io/post/linux_apt/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>/post/linux_apt/</guid>
-      <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다. 하지만 그 사람이 리눅스에 익숙하지 않았는지,</description>
-      
+      <guid>https://AswinBlue.github.io/post/linux_apt/</guid>
+      <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
+하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
+본 해프닝에 대해 서술하자면 아래와 같다.
+원인 /bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.
+환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.
+현상 apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.</description>
     </item>
     
   </channel>

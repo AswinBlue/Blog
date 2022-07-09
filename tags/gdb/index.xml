@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>gdb on AsWindBlew</title>
-    <link>/tags/gdb/</link>
-    <description>Recent content in gdb on AsWindBlew</description>
+    <title>gdb on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/gdb/</link>
+    <description>Recent content in gdb on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GDB</title>
-      <link>/post/gdb/</link>
+      <link>https://AswinBlue.github.io/post/gdb/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>/post/gdb/</guid>
-      <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint b [라인] : 해당 라인에</description>
-      
+      <guid>https://AswinBlue.github.io/post/gdb/</guid>
+      <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint
+b [라인] : 해당 라인에 breakpoint 설정 b [함수명] : 해당 함수 시작점에 breakpoint 설정 b [파일명]:[라인] : 특정 파일 해당 라인에 breakpoin (ex : b test.cpp:10) tb : 임시 중단점 설정, 일회성 info b : breakpoint 확인 delete : 모든 brekapoint 삭제 delete [index] : 특정 breakpoint 삭제 cl [라인] : 해당 라인의 brekapoint 삭제 cl [함수] : 해당 함수의 breakpoint 삭제 cl : 모든 breakpoint 삭제 enable [index] : 해당 brekapoint 활성화 disable [index] : 해당 breakpoint 비활성화 condition [index] [조건] : 해당 breakpoint는 조건을 만족할 때에만 동작 (ex : condition 2 var_a == 0) ▷ 실행</description>
     </item>
     
   </channel>

@@ -1,18 +1,253 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Angular&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Angular" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Angular | AswinBlue</title>
+<meta name="keywords" content="angular, typescript">
+<meta name="description" content="Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
+$ ng new &lt;application_name&gt; 명령어를 이용하여 설치한다.
+nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.">
+<meta name="author" content="AswinBlue">
+<link rel="canonical" href="https://AswinBlue.github.io/post/angular/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0b739a2e2c5e5656e4bcd5f0b2268d063addaf81d89ec3987d6af8f04decdc97.css" integrity="sha256-C3OaLixeVlbkvNXwsiaNBjrdr4HYnsOYfWr48E3s3Jc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AswinBlue.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AswinBlue.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Angular" />
+<meta property="og:description" content="Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
+$ ng new &lt;application_name&gt; 명령어를 이용하여 설치한다.
+nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AswinBlue.github.io/post/angular/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-23T19:46:09&#43;09:00" />
+<meta property="article:modified_time" content="2021-08-23T19:46:09&#43;09:00" />
+
+
+<meta name="twitter:title" content="Angular"/>
+<meta name="twitter:description" content="Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
+$ ng new &lt;application_name&gt; 명령어를 이용하여 설치한다.
+nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://AswinBlue.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Angular",
+      "item": "https://AswinBlue.github.io/post/angular/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Angular",
+  "name": "Angular",
+  "description": "Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.\n$ ng new \u0026lt;application_name\u0026gt; 명령어를 이용하여 설치한다.\nnodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.",
+  "keywords": [
+    "angular", "typescript"
+  ],
+  "articleBody": "Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.\n$ ng new 명령어를 이용하여 설치한다.\nnodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.\n공식 사이트는 https://github.com/nodejs 이다.\n소스코드를 받아 빌드하는 내용은 없고, 바로 바이너리를 다운받기를 권장하는 듯 하다.\nhttps://nodejs.org/en/download/ 로 가서 리눅스용 바이너리를 받아보자.\n.xz 형태의 파일이다. $ tar -xvf 로 압축을 푼다.\n압축을 푸니 안의 내용들이 /usr/lib/ 경로에 어울릴 것 같다. mv 명령으로 옮겨준다.\nbin 폴더 안의 내용은 링크로 /usr/local/lib/ 에 넣어준다.\nln -s /usr/lib//bin/ /usr/local/lib/bin/\n다시 돌아와서 명령어를 수행하여 application을 생성한다. stylesheet format을 선택하라고 하는데, 가장 위에있는 CSS로 선택해 본다.\napplication 실행 application을 생성하면 현재 경로에 에 해당하는 폴더가 생성된다. 테스트용으로 application을 실행해 보자. $ng serve --open 4200 포트로 서버 접속이 가능함을 알 수 있다. 방화벽 설정 방화벽이 아직 열려있지 않은 것 같다. 방화벽을 열어보자. iptables -I INPUT 1 -p tcp –dport 12345 -j ACCEPT $sudo ufw allow 4200/tcp 프로젝트 구조 WORKSPACE src app : 화면을 구성하는 요소들의 root component, WORKSPACE와 같은 이름 : root component의 일부를 구성하는 component, 원하는만큼 추가 가능, [css, html, ts] 항목들이 기본 세트로 생성됨 COMPONENT.component.css : 기본적으로 비어있다. COMPONENT.component.html COMPONENT.component.ts : type script로 짜여진 코드, class들이 정의되어 있다. app.component.css app.component.html app.component.ts app.module.ts component view라는 단위의 화면을 구성하는 모듈 ng generate component COMPONENT_NAME 명령으로 workspace에 component 생성 가능 component를 생성하면 css, html, ts파일을 기본적으로 갖는다. component는 다른 component를 가질 수 있다. 최상위 component를 root component라고 한다. ts 파일 angular에서 제공하는 모듈을 import할 수 있다. class를 선언하고, component에서 사용할 기능(함수)을 구현한 후 export한다. component가 생성될 때 상위 component로 부터 input을 받을 수 있다. ts파일 문법 Component : Component를 사용하기 위한 기본 모듈 OnInit : Component 시작시 동작 정의, constructor 와 유사한 동작을 하지만 OnInit은 angular가 관할하고, constructor은 js가 관할하여 초기화하는 차이가 있다. Input : Component 생성시 상위 Component로 부터 받을 변수를 선언, 상위 Component에서는 해당 변수로 값을 집어넣어 줄 수 있다. Output : 상위 Component에서 사용할 수 있는 변수를 정의, Component에서 변수를 선언하면 상위 Component에서 해당 변수를 사용할 수 있다. @component 로 다음 class가 컴퍼넌트임을 표시한다. selector : 해당 component가 view에서 어떤 이름으로 표시될지 명명한다. (Tag 이름이 된다.) templateUrl : html 파일의 이름을 지정한다 styleUrls : css파일의 리스트를 나열한다. @Input() product; // product라는 변수로 input을 받겠다는 선언\r@Output() notify = new EventEmitter(); // notify 라는 변수를 상위 Component에서 사용 가능하게 하겠다고 선언\r// 한 component에서 다른 component를 호출할 때에는 ts 파일에서 정의한 이름을 태그로 생성한다.\r",
+  "wordCount" : "832",
+  "inLanguage": "en",
+  "datePublished": "2021-08-23T19:46:09+09:00",
+  "dateModified": "2021-08-23T19:46:09+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "AswinBlue"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AswinBlue.github.io/post/angular/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AswinBlue",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AswinBlue.github.io/favicon.ico"
+    }
+  }
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
      crossorigin="anonymous"></script>
-<body><section id="header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Angular</h1><p class="article date">Aug 23, 2021<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><h1 id="angular">Angular</h1>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a>&nbsp;»&nbsp;<a href="https://AswinBlue.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      Angular
+    </h1>
+    <div class="post-meta"><span title='2021-08-23 19:46:09 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href="https://github.com/AswinBlue/HugoBlog/tree/master/content/post/angular.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#angular" aria-label="Angular">Angular</a><ul>
+                        
+                <li>
+                    <a href="#%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd-%ec%84%b8%ed%8c%85" aria-label="개발환경 세팅">개발환경 세팅</a></li>
+                <li>
+                    <a href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0" aria-label="프로젝트 구조">프로젝트 구조</a><ul>
+                        
+                <li>
+                    <a href="#component" aria-label="component">component</a><ul>
+                        
+                <li>
+                    <a href="#ts-%ed%8c%8c%ec%9d%bc" aria-label="ts 파일">ts 파일</a><ul>
+                        
+                <li>
+                    <a href="#ts%ed%8c%8c%ec%9d%bc-%eb%ac%b8%eb%b2%95" aria-label="ts파일 문법">ts파일 문법</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#routing" aria-label="Routing">Routing</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%eb%ac%b8%eb%b2%95" aria-label="문법">문법</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="angular">Angular<a hidden class="anchor" aria-hidden="true" href="#angular">#</a></h1>
 <ul>
 <li>Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다.</li>
 <li>javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다.</li>
 </ul>
-<h2 id="개발환경-세팅">개발환경 세팅</h2>
+<h2 id="개발환경-세팅">개발환경 세팅<a hidden class="anchor" aria-hidden="true" href="#개발환경-세팅">#</a></h2>
 <ol>
 <li>nodejs 설치</li>
 </ol>
@@ -39,13 +274,13 @@
 <p>nodejs 버전이 낮다고 한다.  github에서 받아서 빌드하여 써 보자.</p>
 </li>
 <li>
-<p>공식 사이트는 <a href="https://github.com/nodejs"target="_blank">https://github.com/nodejs</a> 이다.</p>
+<p>공식 사이트는 <a href="https://github.com/nodejs">https://github.com/nodejs</a> 이다.</p>
 </li>
 <li>
 <p>소스코드를 받아 빌드하는 내용은 없고, 바로 바이너리를 다운받기를 권장하는 듯 하다.</p>
 </li>
 <li>
-<p><a href="https://nodejs.org/en/download/"target="_blank">https://nodejs.org/en/download/</a> 로 가서 리눅스용 바이너리를 받아보자.</p>
+<p><a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a> 로 가서 리눅스용 바이너리를 받아보자.</p>
 </li>
 <li>
 <p>.xz 형태의 파일이다. <code>$ tar -xvf &lt;file_name&gt;</code> 로 압축을 푼다.</p>
@@ -78,7 +313,7 @@
 <li>iptables -I INPUT 1 -p tcp &ndash;dport 12345 -j ACCEPT</li>
 <li><code>$sudo ufw allow 4200/tcp</code></li>
 </ul>
-<h2 id="프로젝트-구조">프로젝트 구조</h2>
+<h2 id="프로젝트-구조">프로젝트 구조<a hidden class="anchor" aria-hidden="true" href="#프로젝트-구조">#</a></h2>
 <ul>
 <li>WORKSPACE
 <ul>
@@ -98,20 +333,20 @@
 </ul>
 </li>
 </ul>
-<h3 id="component">component</h3>
+<h3 id="component">component<a hidden class="anchor" aria-hidden="true" href="#component">#</a></h3>
 <ul>
 <li>view라는 단위의 화면을 구성하는 모듈</li>
 <li><code>ng generate component COMPONENT_NAME</code> 명령으로 workspace에 component 생성 가능</li>
 <li>component를 생성하면 css, html, ts파일을 기본적으로 갖는다.</li>
 <li>component는 다른 component를 가질 수 있다. 최상위 component를 root component라고 한다.</li>
 </ul>
-<h4 id="ts-파일">ts 파일</h4>
+<h4 id="ts-파일">ts 파일<a hidden class="anchor" aria-hidden="true" href="#ts-파일">#</a></h4>
 <ul>
 <li>angular에서 제공하는 모듈을 import할 수 있다.</li>
 <li>class를 선언하고, component에서 사용할 기능(함수)을 구현한 후 export한다.</li>
 <li>component가 생성될 때 상위 component로 부터 input을 받을 수 있다.</li>
 </ul>
-<h5 id="ts파일-문법">ts파일 문법</h5>
+<h5 id="ts파일-문법">ts파일 문법<a hidden class="anchor" aria-hidden="true" href="#ts파일-문법">#</a></h5>
 <ul>
 <li><code>Component</code> : Component를 사용하기 위한 기본 모듈</li>
 <li><code>OnInit</code> : Component 시작시 동작 정의, constructor 와 유사한 동작을 하지만 OnInit은 angular가 관할하고, constructor은 js가 관할하여 초기화하는 차이가 있다.</li>
@@ -122,34 +357,34 @@ selector : 해당 component가 view에서 어떤 이름으로 표시될지 명�
 <li><code>templateUrl</code> : html 파일의 이름을 지정한다</li>
 <li><code>styleUrls</code> : css파일의 리스트를 나열한다.</li>
 </ul>
-<pre><code> @Input() product;                        // product라는 변수로 input을 받겠다는 선언
+<pre tabindex="0"><code> @Input() product;                        // product라는 변수로 input을 받겠다는 선언
  @Output() notify = new EventEmitter();   // notify 라는 변수를 상위 Component에서 사용 가능하게 하겠다고 선언
  // 한 component에서 다른 component를 호출할 때에는 ts 파일에서 정의한 이름을 태그로 생성한다.
  &lt;app-product-alerts                      // 태그 이름이 곧 component 이름(selector에 정의한)이다.
-   [product]=&quot;product&quot;                    // product라는 변수에 &quot;product&quot;라는 내용을 을 넣을 때 사용한다.
- (notify)=&quot;onNotify()&quot;&gt;                   // notify라는 변수에서 이벤트가 들어오면 onNotify() 함수를 실행, (onNotify() 함수는 class 안에 정의되어 있어야 함)
+   [product]=&#34;product&#34;                    // product라는 변수에 &#34;product&#34;라는 내용을 을 넣을 때 사용한다.
+ (notify)=&#34;onNotify()&#34;&gt;                   // notify라는 변수에서 이벤트가 들어오면 onNotify() 함수를 실행, (onNotify() 함수는 class 안에 정의되어 있어야 함)
  &lt;/app-product-alerts&gt;
-</code></pre><h3 id="routing">Routing</h3>
+</code></pre><h3 id="routing">Routing<a hidden class="anchor" aria-hidden="true" href="#routing">#</a></h3>
 <ul>
 <li>app.modules.ts(main component의 ts파일) 파일에서 routing 설정이 가능하다.</li>
 </ul>
-<pre><code>import { RouterModule } from '@angular/router';                                     // Routing을 위해 필요한 모듈
-import { ProductListComponent } from './product-list/product-list.component';`      // ProductListComponent라는 변수에 './product-list/product-list.component파일을 대응
-import { ProudctDetailsComponent } from './product-detail/product-detail.component';
+<pre tabindex="0"><code>import { RouterModule } from &#39;@angular/router&#39;;                                     // Routing을 위해 필요한 모듈
+import { ProductListComponent } from &#39;./product-list/product-list.component&#39;;`      // ProductListComponent라는 변수에 &#39;./product-list/product-list.component파일을 대응
+import { ProudctDetailsComponent } from &#39;./product-detail/product-detail.component&#39;;
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([                            // Router 모듈로 Routing 세팅
-      { path: '', component: ProductListComponent },  // root 경로 '/' 에 위에서 ProductListComponent 변수에 대응시킨 파일을 매칭
-      { path: 'products/:productId', component: ProductDetailsComponent },          // 마찬가지로 '/products/{productId}' 에 ProudctDetailsComponent를 매칭
+      { path: &#39;&#39;, component: ProductListComponent },  // root 경로 &#39;/&#39; 에 위에서 ProductListComponent 변수에 대응시킨 파일을 매칭
+      { path: &#39;products/:productId&#39;, component: ProductDetailsComponent },          // 마찬가지로 &#39;/products/{productId}&#39; 에 ProudctDetailsComponent를 매칭
     ])
   ],
 </code></pre><ul>
 <li>./product-detail/product-detail.component.ts 에서 아래와 같은 설정을 추가로 해주어야 한다.</li>
 </ul>
-<pre><code>import { ActivatedRoute } from '@angular/router';           // routing을 당하는 곳에서 필요한 모듈
+<pre tabindex="0"><code>import { ActivatedRoute } from &#39;@angular/router&#39;;           // routing을 당하는 곳에서 필요한 모듈
 export class ProductDetailsComponent implements OnInit {    // component 를 정의할 class 선언
   product; -&gt; product 변수 선언
 constructor(private route: ActivatedRoute,)                 //  라우팅 관련 정보를 route라는 변수에 받았다.
@@ -158,33 +393,33 @@ constructor(private route: ActivatedRoute,)                 //  라우팅 관련
 
 ngOnInit() {                                                // view 생성시 동작을 정의
   this.route.paramMap.subscribe(params =&gt; {                 // constructor에서 정의한 route를 참조하여
-    this.product = products[+params.get('productId')];      // this.product는 products[index] 값을 가진다. 이때 index는 app.modules.ts에서 설정한 값이다. (url 경로에서 'products/' 다음에 들어간 숫자값)
+    this.product = products[+params.get(&#39;productId&#39;)];      // this.product는 products[index] 값을 가진다. 이때 index는 app.modules.ts에서 설정한 값이다. (url 경로에서 &#39;products/&#39; 다음에 들어간 숫자값)
   });
 }
 </code></pre><ul>
 <li>./product-detail/product-detail.component.html 에서 아래와 같이 설정한다.</li>
 </ul>
-<pre><code>&lt;h2&gt;Product Details&lt;/h2&gt;
-&lt;div *ngIf=&quot;product&quot;&gt;                 // product에 값이 들어가 있다면 아래 수행. 즉, ts파일에서 대입시킨 products[idx] 값이 존재하면 아래 동작 수행
+<pre tabindex="0"><code>&lt;h2&gt;Product Details&lt;/h2&gt;
+&lt;div *ngIf=&#34;product&#34;&gt;                 // product에 값이 들어가 있다면 아래 수행. 즉, ts파일에서 대입시킨 products[idx] 값이 존재하면 아래 동작 수행
 &lt;h3&gt;{{ product.name }}&lt;/h3&gt;           // json 형태의 값을 참조해 대입한다.
 &lt;h4&gt;{{ product.price | currency }}&lt;/h4&gt;
   &lt;p&gt;{{ product.description }}&lt;/p&gt;
 &lt;/div&gt;
-</code></pre><h2 id="문법">문법</h2>
+</code></pre><h2 id="문법">문법<a hidden class="anchor" aria-hidden="true" href="#문법">#</a></h2>
 <ul>
 <li>반복, 출력, 링크</li>
 </ul>
-<pre><code>&lt;div *ngFor=&quot;let product of products; index as productId&quot;&gt;
+<pre tabindex="0"><code>&lt;div *ngFor=&#34;let product of products; index as productId&#34;&gt;
 /*
  *ngFor 은 반복을 뜻하는 예약어다. products 안의 원소를 하나씩 꺼내서 product 라 칭한다. 마치 java나 python의 ``for item in array`` 와 같다.
- ';' 로 구문을 구분할 수 있다.
+ &#39;;&#39; 로 구문을 구분할 수 있다.
  productId 변수에 index를 대입한다.
 */
-　　&lt;a [title]=&quot;product.name + ' details'&quot; [routerLink]=&quot;['/products', productId]&quot;&gt;
+　　&lt;a [title]=&#34;product.name + &#39; details&#39;&#34; [routerLink]=&#34;[&#39;/products&#39;, productId]&#34;&gt;
 /*
  [title] 은 마우스를 올릴 때 나오는 텍스트를 뜻한다.
- routerLink는 클릭시 넘어갈 링크이다. 링크를 []로 설정하면 []안의 내용을 appepnd 한 값을 의미한다. 즉 &quot;/product/:productId&quot; 의 주소를 나타낸다.
- &quot;&quot;안의 내용은 ts문법이고, 단순 텍스트는 '' 사이에 집어넣으면 된다.
+ routerLink는 클릭시 넘어갈 링크이다. 링크를 []로 설정하면 []안의 내용을 appepnd 한 값을 의미한다. 즉 &#34;/product/:productId&#34; 의 주소를 나타낸다.
+ &#34;&#34;안의 내용은 ts문법이고, 단순 텍스트는 &#39;&#39; 사이에 집어넣으면 된다.
 */
 　　　　&lt;h3&gt;
 　　　　　　{{ product.name }}       // product 객체의 name 필드를 출력한다.
@@ -194,7 +429,7 @@ ngOnInit() {                                                // view 생성시 �
 </code></pre><ul>
 <li>조건</li>
 </ul>
-<pre><code>&lt;p *ngIf=&quot;product.description&quot;&gt;         // *ngIf는 조건문을 뜻하는 예약어다. product 객체에 description 필드가 존재하면 아래를 실행한다.
+<pre tabindex="0"><code>&lt;p *ngIf=&#34;product.description&#34;&gt;         // *ngIf는 조건문을 뜻하는 예약어다. product 객체에 description 필드가 존재하면 아래를 실행한다.
   Description: {{ product.description }}
 &lt;/p&gt;
 </code></pre><ul>
@@ -207,13 +442,193 @@ ngOnInit() {                                                // view 생성시 �
 Interpolation {{ }}
 Property binding [ ]
 Event binding ( )</p>
-</article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/angular/>angular</a><a class="tag" href=/tags/typescript/>typescript</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
-</section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/python/"><span class="li iconfont icon-article"></span>Python</a></p><p><a class="link" href="/post/spring/"><span class="li iconfont icon-article"></span>Spring basic</a></p></section></div></section><section id="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Notepadium.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section></body>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AswinBlue.github.io/tags/angular/">angular</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/typescript/">typescript</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://AswinBlue.github.io/post/python/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Python</span>
+  </a>
+  <a class="next" href="https://AswinBlue.github.io/post/spring/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Spring basic</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Angular on twitter"
+        href="https://twitter.com/intent/tweet/?text=Angular&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f&amp;hashtags=angular%2ctypescript">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Angular on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f&amp;title=Angular&amp;summary=Angular&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Angular on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f&title=Angular">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Angular on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Angular on whatsapp"
+        href="https://api.whatsapp.com/send?text=Angular%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Angular on telegram"
+        href="https://telegram.me/share/url?text=Angular&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fangular%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
 
 </html>

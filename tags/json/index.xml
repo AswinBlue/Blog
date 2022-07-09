@@ -1,25 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>json on AsWindBlew</title>
-    <link>/tags/json/</link>
-    <description>Recent content in json on AsWindBlew</description>
+    <title>json on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/json/</link>
+    <description>Recent content in json on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Json in C&#43;&#43;</title>
-      <link>/post/json_c&#43;&#43;/</link>
+      <link>https://AswinBlue.github.io/post/json_c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/json_c&#43;&#43;/</guid>
-      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/</description>
-      
+      <guid>https://AswinBlue.github.io/post/json_c&#43;&#43;/</guid>
+      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
     </item>
     
   </channel>

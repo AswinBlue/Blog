@@ -1,25 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>regular expression on AsWindBlew</title>
-    <link>/tags/regular-expression/</link>
-    <description>Recent content in regular expression on AsWindBlew</description>
+    <title>regular expression on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/regular-expression/</link>
+    <description>Recent content in regular expression on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Mon, 23 Aug 2021 19:00:44 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/regular-expression/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 23 Aug 2021 19:00:44 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/regular-expression/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web_scrapping</title>
-      <link>/post/web_scrapping/</link>
+      <link>https://AswinBlue.github.io/post/web_scrapping/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>/post/web_scrapping/</guid>
-      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이</description>
-      
+      <guid>https://AswinBlue.github.io/post/web_scrapping/</guid>
+      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함 @id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link</description>
     </item>
     
   </channel>

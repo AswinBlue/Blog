@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cryptograph on AsWindBlew</title>
-    <link>/tags/cryptograph/</link>
-    <description>Recent content in cryptograph on AsWindBlew</description>
+    <title>cryptograph on AswinBlue</title>
+    <link>https://AswinBlue.github.io/tags/cryptograph/</link>
+    <description>Recent content in cryptograph on AswinBlue</description>
+    <image>
+      <url>https://AswinBlue.github.io/cover.png</url>
+      <link>https://AswinBlue.github.io/cover.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Wed, 02 Feb 2022 13:22:27 +0900</lastBuildDate>
-    
-        <atom:link href="/tags/cryptograph/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 02 Feb 2022 13:22:27 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/cryptograph/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cryptocurrency</title>
-      <link>/post/cryptocurrency/</link>
+      <link>https://AswinBlue.github.io/post/cryptocurrency/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>/post/cryptocurrency/</guid>
-      <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoi</description>
-      
+      <guid>https://AswinBlue.github.io/post/cryptocurrency/</guid>
+      <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
+collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.</description>
     </item>
     
   </channel>

@@ -1,86 +1,397 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Spring_boot&nbsp;&ndash;&nbsp;AsWindBlew</title><link rel="stylesheet" href="/css/core.min.df05809cfa75ea0a430dc942a79e54236823f6be194b5bc34f0c64744ba5a1b55f91020ad551b34b8af7f2ebee758cc8.css" integrity="sha384-3wWAnPp16gpDDclCp55UI2gj9r4ZS1vDTwxkdEulobVfkQIK1VGzS4r38uvudYzI"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Spring_boot" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Spring_boot | AswinBlue</title>
+<meta name="keywords" content="spring_boot, java, server">
+<meta name="description" content="Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.">
+<meta name="author" content="AswinBlue">
+<link rel="canonical" href="https://AswinBlue.github.io/post/spring_boot/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0b739a2e2c5e5656e4bcd5f0b2268d063addaf81d89ec3987d6af8f04decdc97.css" integrity="sha256-C3OaLixeVlbkvNXwsiaNBjrdr4HYnsOYfWr48E3s3Jc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AswinBlue.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AswinBlue.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Spring_boot" />
+<meta property="og:description" content="Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AswinBlue.github.io/post/spring_boot/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-30T19:20:23&#43;09:00" />
+<meta property="article:modified_time" content="2022-05-30T19:20:23&#43;09:00" />
+
+
+<meta name="twitter:title" content="Spring_boot"/>
+<meta name="twitter:description" content="Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://AswinBlue.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Spring_boot",
+      "item": "https://AswinBlue.github.io/post/spring_boot/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Spring_boot",
+  "name": "Spring_boot",
+  "description": "Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 \u0026lsquo;Java Extension Pack\u0026rsquo; 과 \u0026lsquo;Spring Boot Extension Pack\u0026rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.",
+  "keywords": [
+    "spring_boot", "java", "server"
+  ],
+  "articleBody": "Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 ‘Java Extension Pack’ 과 ‘Spring Boot Extension Pack’ 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다. gradle 설치 https://gradle.org/releases/ 주소에서 gradle 파일을 다운받는다. 이후 path 설정을 마친 후, 프로젝트 root directory에서 gradle wrapper 명령을 수행해 gradlew파일을 생성한다. 기본 설정 포트 설정\napplication.properties (혹은 yml)파일을 열고, server.port = 8080 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.\nDB, 포트, mvc, thymleaf 등 각종 설정이 포함된 yml 파일 예시는 다음과 같다.\nserver:\rport: 8080\rspring:\r# config:\r# activate:\r# on-profile: test\rh2:\rconsole:\renabled: true\rjpa:\rdatabase: h2\rgenerate-ddl: off\rdatasource:\rdriver-class-name: org.h2.Driver\rurl: jdbc:h2:mem:testdb;MODE=MySQL;\rusername: SA\rpassword:\rinitialization-mode: always\rschema: classpath:schema-h2.sql\rdata: classpath:data-h2.sql\rmvc:\rview:\rprefix: /myApp/\rsuffix: .jsp\rthymeleaef:\rcache: false\rmode: HTML\rencoding: UTF-8\rprefix: file:src/main/resources/templates/\rweb:\rresources:\rstatic-locations: file:src/main/resources/static/\rcache:\rperiod: 0 빌드 설정\ngradle 프로젝트는 ./gradlew build 명령으로 프로젝트를 빌드한다.\n이때 build.gralde 파일 설정으로 하위 프로젝트의 빌드까지 함께 정의할 수 있다.\ngradle 파일이 수정되면 ./gradlew build 명령을 새로 돌려서 업데이트 해 준다.\n아래는 React 프로젝트의 빌드 세팅이다.\n/*********************\r* 기본 설정 및 dependency\r*********************/\rplugins {\rid 'org.springframework.boot' version '2.7.1'\rid 'io.spring.dependency-management' version '1.0.11.RELEASE'\rid 'java'\r}\rgroup = 'com.aswinblue'\rversion = '0.0.1-SNAPSHOT'\rsourceCompatibility = '18'\rrepositories {\rmavenCentral()\r}\rdependencies {\rimplementation 'org.springframework.boot:spring-boot-starter-data-jpa'\rimplementation 'org.springframework.boot:spring-boot-starter-thymeleaf'\rimplementation 'org.springframework.boot:spring-boot-starter-web'\rimplementation 'com.h2database:h2'\rtestImplementation 'org.springframework.boot:spring-boot-starter-test'\r}\rtasks.named('test') {\ruseJUnitPlatform()\r}\r/*********************\r* React 설정\r*********************/\rdef reactDir = \"$projectDir/src/main/webapp\"; // react 프로젝트 경로 설정\rsourceSets{\rmain{\rresources{\rsrcDirs = [\"$projectDir/src/main/resources\"]\r}\r}\r}\r// 최초로 수행할 task 지정\rprocessResources{\rdependsOn \"copyReactBuildFiles\"\r}\r// $reactDir 위치에서 `npm audit fix` 명령 실행\rtask installReact(type:Exec){\rworkingDir \"$reactDir\"\rinputs.dir \"$reactDir\"\rgroup = BasePlugin.BUILD_GROUP\rif(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){\rcommandLine \"npm.cmd\", \"audit\", \"fix\"\rcommandLine 'npm.cmd', 'install'\r}else{\rcommandLine \"npm\", \"audit\", \"fix\"\rcommandLine 'npm', 'install'\r}\r}\r// installReact task를 호출\r// $reactDir 위치에서 `npm run-script build` 실행\r// react 프로젝트의 `package.json` 파일에 적힌 build 스크립트가 실행됨.\rtask buildReact(type:Exec){\rdependsOn \"installReact\"\rworkingDir \"$reactDir\"\rinputs.dir \"$reactDir\"\rgroup = BasePlugin.BUILD_GROUP\rif(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){\rcommandLine \"npm.cmd\", \"run-script\", \"build\"\r}else{\rcommandLine \"npm\", \"run-script\", \"build\"\r}\r}\r// buildReact task를 호출\r// 앞서 지정한 $reactDir 경로의 /build 위치에서 생성된 데이터를 $projectDir/src/main/resources/static 로 복사\rtask copyReactBuildFiles(type:Copy) {\rdependsOn \"buildReact\"\rfrom \"$reactDir/build\"\rinto \"$projectDir/src/main/resources/static\"\r} 각종 설정을 해주는 batch 파일 예시이다.\ngradle wrapper\rgradlew build\r@REM package.json에 script 작성 필요\rnpm run build:postcss 폴더 설정\nresources : html, css 등 화면 구성을 위한 파일들의 root 디렉터리 resources/static : html파일에서 href로 참조하면 아래 디렉터리를 root로 경로 설정 가능 resources/template : mustache 파일에서 root 디렉터리로 사용 웹 서비스 개발 tomcat spring boot에서 web 패키지를 설치하면 tomcat을 사용하여 web server를 동작시킨다. localhost:8080으로 default 주소가 처리되어 있고, application.yml 파일에서 아래와 같이 수정 가능하다. server:\rport : 8081 MVC 모델 model, view, control 을 나누어 개발하는 형태를 MVC 모델이라고 한다. View template view template 은 controller와 model을 합친 개념으로, 화면을 구성하는 역할을 한다. mustache 패키지를 설치하여 view template를 만들 수 있다. jsp 활용\nSpring boot에는 jsp가 잘 어울리지 않는다고 한다. 대신 Thymleaf, mustache 등을 사용하는걸 권장한다?\njsp를 사용하여 model을 구성할 수도 있다.\njsp는 사용하기 전 application.properties(혹은 yml) 파일의 수정이 필요하다. 아래 내용을 추가한다.\nspring.mvc.view.prefix=/myApp/\rspring.mvc.view.suffix=.jsp 위 내용을 적용하면 src/main/webapp/myApp/ 경로 내부에서 jsp파일을 찾게 된다. ‘webapp’ 폴더는 default로 필요하다.\nmustache 활용\n앞서 말헀듯 mustache는 view template용 패키지로 controller와 model을 관장한다.\ncontroller는 기본 패키지 경로 하위에 배치한다.\ncontroller는 다음과 같이 구성한다.\npackage com.example.firstproject.controller;\rimport org.springframework.stereotype.Controller;\rimport org.springframework.web.bind.annotation.GetMapping;\rimport org.springframework.ui.Model;\r@Controller // controller를 정의하는 annotation\rpublic class FirstController {\r@GetMapping(\"/index\") // 연결될 url을 지정하는 annotation, /index 로 연결하면\rpublic String mainPage(Model model) // model 을 통해 가변 인자 control\r{\rmodel.addAttribute(\"title\", \"hello world\"); // title 이름으로 hello world 라는 문자열을 설정\rreturn \"mainPage\"; // mainPage.mustache 파일과 연동\r}\r} model(.mustache .html 등)은 resources/templates 파일 경로 하위에 배치하고, 확장자를 .mustache로 지정한다.\nhtml 파일은 사실 view에 가깝지만, mustache 파일은 view에 변수를 적용하여 model에 해당한다.\nmodel은 다음과 같이 구성한다.\n{{title}} Layout\nmodel을 만들 때는 layout에 따라 화면에 보여지는 형태를 구성할 수 있다. layout을 template화 하여 사용 가능하다. 재사용 되는 부분을 모듈화 하여 파일로 분리하고, 이를 다른 파일에서 불러올 수 있다. {{\u003eFILE_NAME}} 형태로 다른 파일을 호출해 올 수 있다. Controller Controller는 request를 받아 어떤 화면을 보여줄지 결정하는 routing 로직을 담당하게 된다. controller class는 @Controller annotation을 붙여서 선언하며 routing 함수로는 @GetMapping, @RequestMapping annotation을 사용하여 정의한다. 에러 화면 에러 화면도 controller에 의해 유도되며 BasicErrorController가 이를 담당한다. application.yml 파일에서 따로 설정을 하지 않았다면 server.error.path=/error 가 기본이다. JPA spring은 mysql, postgress, M2 등 여러 DB를 적용할 수 있다. controller는 Java로 구현되고, DB는 sql로 동작하기 때문에 java로 sql을 조작하기 위한 JPA라는 라이브러리가 필요하다. Entity : java 객체를 DB가 이해할 수 있게 재구성한 데이터 @Entity : 해당 class를 entity 로 선언 @Table(name=\"\") : 특정 table과 객체를 연동. 기본적으로는 calss 이름에 해당하는 DB의 table과 매핑 된다. @Column : 지정한 변수를 DB의 컬럼으로 선언 Repository : entity를 DB에 저장하는 역할을 수행하는 객체 save(ENTITY) : 저장, DB의 insert / update 에 해당 delete(ENTITY) : 특정 Entity 삭제, DB의 delete에 해당 DTO 정의\n서버의 Controller에서 이를 처리 가능하며, 사용자 입력을 Java Class로 대응시킨 형태를 DTO라 칭한다. DTO를 다음과 같이 정의하였다고 하자 class DtoSample {\rprivate String name;\rpublic DtoSample(String name) {\rthis.name = name;\r}\r} Entity 정의\nDTO에 해당하는 entity를 정의해야하며, 그 형태는 다음과 같다. entity는 @Entity annotation을 붙여야 한다. Entity는 primary key를 가져야 하며, 이는 @Id annotation으로 지정한다. DB의 column에 해당하는 값들은 @Column annotation을 붙여준다. @GeneratedValue는 자동으로 생성된 값이 들어가도록 한다. ‘실제 DB table’ ⊃ ‘DTO에 정의된 column들’ 이 성립해야 한다. @Entity\rpublic class sampleEntity {\r@Id // 대표값\r@GeneratedValue // 자동생성\rprivate Long id;\r@Column\rprivate String name;\rpublic sampleEntity(Long id, String name) {\rthis.id = id;\rthis.name = name;\r}\r} Repository 구현\nEntity를 DB에 저장하기 위한 Repository도 생성한다. repository는 entity로 DB에 접근하는 방법을 정의하기 위한 객체이다. spring에서 기본으로 제공하는 형태를 상속받아 사용도 가능하다. // CrudRepository\u003c관리대상, 대표값의 type\u003e\rpublic interface searchNameRepository extends CrudRepository {\r// CrudRepository 의 기본값을 사용\r} 직접 구상한 쿼리를 사용하고 싶다면 camelcase로 구성된 함수 이름으로 쿼리를 추가할 수 있다. 상세 내용은 링크를 참조한다. JPA Repository Query function JPA Repository Query annotation public interface searchNameRepository extends CrudRepository {\r// select * from SampleEntity where name = ?1 @Query(\"Select s From SampleEntity\")\rList findByName(String name);\r// select * from SampleEntity where name = ?1 and id = 1\r@Query(\"Select s From SampleEntity where s.id = 1\")\rList findByName(String name);\r} 기타 추가작업\n이전에 만들었던 controller 에 내용을 추가한다. DTO로 받은 내용을 Entity로 변환시켜 repository를 통해 처리한다. @Autowired // String boot가 알아서 new 해서 사용하는 annotation\rsearchNameRepository snr;\r@PostMapping(\"/data/part1\")\rpublic String handleForm(DtoSample dto) {\rsampleEntity name = dto.toEntity(); // toEntity 구현 필요\rname = snr.save(name); // 'save'는 저장 및 저장된 데이터를 반환함\rreturn \"returnView\";\r} contorller에서 받은 DTO 데이터를 entity로 변환시킬 때 사용한 toEntity() 함수를 구현해야 한다. DTO 파일을 추가로 수정한다. class DtoSample {\rprivate String name;\rpublic DtoSample(String name) {\rthis.name = name;\r}\rpublic sampleEntity toEntity() {\rreturn new sampleEntity(null, this.name); // id에 null을 넣는다. @GeneratedValue에 의해 자동으로 생성된다.\r}\r} 데이터 교환 view에서 사용자 입력을 받아 처리하는 과정을 다룬다. 앞서 JPA를 통해 구현한 DB 시스템에 데이터를 넣을 수 있다. view 구현\nview쪽에서는 form 태그를 사용하여 controller에 데이터를 전송할 수 있다. form 태그의 인자로 action, method를 적용 가능하다. action : 데이터를 보낼 url을 설정. ex) action=\"/data/part1\" method : 전송 방법을 설정한다. post 혹은 get 적용 가능 form 태그 안의 input태그를 두고, 인자로 name을 설정한다. controller 구현\nDTO로 사용할 class를 선언한다. (ex: DtoSample) controller 를 구현한 java 파일에서 @PostMapping annotation을 달고, 인자로 위에서 선언한 DTO를 받는다. return 값으로 지정한 이름의 view로 redirect 한다. (ex: returnView) @PostMapping(\"/data/part1\")\rpublic String handleForm(DtoSample dto) {\rreturn \"returnView\";\r} ",
+  "wordCount" : "1281",
+  "inLanguage": "en",
+  "datePublished": "2022-05-30T19:20:23+09:00",
+  "dateModified": "2022-05-30T19:20:23+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "AswinBlue"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AswinBlue.github.io/post/spring_boot/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AswinBlue",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AswinBlue.github.io/favicon.ico"
+    }
+  }
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2984318617287323"
      crossorigin="anonymous"></script>
-<body><section id="header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">AsWindBlew</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about/">About</a><a class="nav item" href="https://gohugo%2eio/"target="_blank">Hugo</a></nav></div></span></div><div class="site slogan"><span class="title">published by AswinBlue</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">Spring_boot</h1><p class="article date">May 30, 2022<span class="reading-time"> • 6 minutes to read</span></p></section><article class="article markdown-body"><h1 id="spring-boot">Spring Boot</h1>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a>&nbsp;»&nbsp;<a href="https://AswinBlue.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      Spring_boot
+    </h1>
+    <div class="post-meta"><span title='2022-05-30 19:20:23 +0900 KST'>May 30, 2022</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href="https://github.com/AswinBlue/HugoBlog/tree/master/content/post/spring_boot.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#spring-boot" aria-label="Spring Boot">Spring Boot</a><ul>
+                        
+                <li>
+                    <a href="#%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd" aria-label="개발환경">개발환경</a><ul>
+                        
+                <li>
+                    <a href="#%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95" aria-label="기본 설정">기본 설정</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%9b%b9-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b0%9c%eb%b0%9c" aria-label="웹 서비스 개발">웹 서비스 개발</a><ul>
+                        
+                <li>
+                    <a href="#mvc-%eb%aa%a8%eb%8d%b8" aria-label="MVC 모델">MVC 모델</a><ul>
+                        
+                <li>
+                    <a href="#view-template" aria-label="View template">View template</a></li>
+                <li>
+                    <a href="#controller" aria-label="Controller">Controller</a></li>
+                <li>
+                    <a href="#jpa" aria-label="JPA">JPA</a></li>
+                <li>
+                    <a href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b5%90%ed%99%98" aria-label="데이터 교환">데이터 교환</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="spring-boot">Spring Boot<a hidden class="anchor" aria-hidden="true" href="#spring-boot">#</a></h1>
 <ul>
 <li>Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다.</li>
 <li>Java, Kitlin, Groovy 등의 언어로 구현이 가능하다.</li>
 </ul>
-<h2 id="개발환경">개발환경</h2>
+<h2 id="개발환경">개발환경<a hidden class="anchor" aria-hidden="true" href="#개발환경">#</a></h2>
 <ol>
-<li>java 기반으로 동작하기에 jdk 설치가 필요하다.</li>
-</ol>
+<li>java 기반으로 동작하기에 jdk 설치가 필요하다.
 <ul>
 <li>(22년 기준) 11버전 이상을 다운받는것을 추천한다.</li>
 </ul>
-<ol>
-<li>IDE</li>
-</ol>
+</li>
+<li>IDE
 <ul>
 <li>vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다.</li>
 <li>java 개발을 위한 eclips나 intelliJ를 사용해도 된다.</li>
 </ul>
-<ol>
-<li>spring 프로젝트 생성</li>
-</ol>
+</li>
+<li>spring 프로젝트 생성
 <ul>
 <li><code>start.spring.io</code> 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</li>
 </ul>
-<ol>
-<li>gradle 설치</li>
-</ol>
+</li>
+<li>gradle 설치
 <ul>
 <li><code>https://gradle.org/releases/</code> 주소에서 gradle 파일을 다운받는다.</li>
 <li>이후 path 설정을 마친 후, 프로젝트 root directory에서 <code>gradle wrapper</code> 명령을 수행해 gradlew파일을 생성한다.</li>
 </ul>
-<h3 id="기본-설정">기본 설정</h3>
-<ol>
-<li>포트 설정</li>
+</li>
 </ol>
-<ul>
-<li><code>application.properties</code> (혹은 yml)파일을 열고, <code>server.port = 8080</code> 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.</li>
-</ul>
+<h3 id="기본-설정">기본 설정<a hidden class="anchor" aria-hidden="true" href="#기본-설정">#</a></h3>
 <ol>
-<li>빌드 설정</li>
-</ol>
+<li>
+<p>포트 설정</p>
 <ul>
-<li>gradle 프로젝트는 <code>./gradlew build</code> 명령으로 프로젝트를 빌드한다.</li>
-<li>이때 <code>build.gralde</code> 파일 설정으로 하위 프로젝트의 빌드까지 함께 정의할 수 있다.</li>
-<li>gradle 파일이 수정되면 <code>./gradlew build</code> 명령을 새로 돌려서 업데이트 해 준다.</li>
-<li>아래는 React 프로젝트의 빌드 세팅이다.</li>
+<li>
+<p><code>application.properties</code> (혹은 yml)파일을 열고, <code>server.port = 8080</code> 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.</p>
+</li>
+<li>
+<p>DB, 포트, mvc, thymleaf 등 각종 설정이 포함된 yml 파일 예시는 다음과 같다.</p>
+<pre tabindex="0"><code>server:
+  port: 8080
+
+spring:
+  # config:
+  #   activate:
+  #     on-profile: test
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database: h2
+    generate-ddl: off
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MySQL;
+    username: SA
+    password:
+    initialization-mode: always
+    schema: classpath:schema-h2.sql
+    data: classpath:data-h2.sql
+
+  mvc:
+    view:
+      prefix: /myApp/
+      suffix: .jsp
+
+  thymeleaef:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0
+</code></pre></li>
 </ul>
-<pre><code>def reactDir = &quot;$projectDir/src/main/webapp/js&quot;; // react 프로젝트 경로 설정
+</li>
+<li>
+<p>빌드 설정</p>
+<ul>
+<li>
+<p>gradle 프로젝트는 <code>./gradlew build</code> 명령으로 프로젝트를 빌드한다.</p>
+</li>
+<li>
+<p>이때 <code>build.gralde</code> 파일 설정으로 하위 프로젝트의 빌드까지 함께 정의할 수 있다.</p>
+</li>
+<li>
+<p>gradle 파일이 수정되면 <code>./gradlew build</code> 명령을 새로 돌려서 업데이트 해 준다.</p>
+</li>
+<li>
+<p>아래는 React 프로젝트의 빌드 세팅이다.</p>
+<pre tabindex="0"><code>/*********************
+ * 기본 설정 및 dependency
+ *********************/
+plugins {
+	id &#39;org.springframework.boot&#39; version &#39;2.7.1&#39;
+	id &#39;io.spring.dependency-management&#39; version &#39;1.0.11.RELEASE&#39;
+	id &#39;java&#39;
+}
+
+group = &#39;com.aswinblue&#39;
+version = &#39;0.0.1-SNAPSHOT&#39;
+sourceCompatibility = &#39;18&#39;
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation &#39;org.springframework.boot:spring-boot-starter-data-jpa&#39;
+	implementation &#39;org.springframework.boot:spring-boot-starter-thymeleaf&#39;
+	implementation &#39;org.springframework.boot:spring-boot-starter-web&#39;
+  implementation &#39;com.h2database:h2&#39;
+	testImplementation &#39;org.springframework.boot:spring-boot-starter-test&#39;
+}
+
+tasks.named(&#39;test&#39;) {
+	useJUnitPlatform()
+}
+
+/*********************
+ * React 설정
+ *********************/
+def reactDir = &#34;$projectDir/src/main/webapp&#34;; // react 프로젝트 경로 설정
 sourceSets{
   main{
       resources{
-          srcDirs = [&quot;$projectDir/src/main/resources&quot;]
+          srcDirs = [&#34;$projectDir/src/main/resources&#34;]
       }
   }
 }
 
 // 최초로 수행할 task 지정
 processResources{
-  dependsOn &quot;copyReactBuildFiles&quot;
+  dependsOn &#34;copyReactBuildFiles&#34;
 }
 
 // $reactDir 위치에서 `npm audit fix` 명령 실행
 task installReact(type:Exec){
-  workingDir &quot;$reactDir&quot;
-  inputs.dir &quot;$reactDir&quot;
+  workingDir &#34;$reactDir&#34;
+  inputs.dir &#34;$reactDir&#34;
   group = BasePlugin.BUILD_GROUP
 
-  if(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){
-      commandLine &quot;npm.cmd&quot;, &quot;audit&quot;, &quot;fix&quot;
-      commandLine 'npm.cmd', 'install'
+  if(System.getProperty(&#39;os.name&#39;).toLowerCase(Locale.ROOT).contains(&#39;windows&#39;)){
+      commandLine &#34;npm.cmd&#34;, &#34;audit&#34;, &#34;fix&#34;
+      commandLine &#39;npm.cmd&#39;, &#39;install&#39;
   }else{
-      commandLine &quot;npm&quot;, &quot;audit&quot;, &quot;fix&quot;
-      commandLine 'npm', 'install'
+      commandLine &#34;npm&#34;, &#34;audit&#34;, &#34;fix&#34;
+      commandLine &#39;npm&#39;, &#39;install&#39;
   }
 }
 
@@ -88,27 +399,38 @@ task installReact(type:Exec){
 // $reactDir 위치에서 `npm run-script build` 실행
 // react 프로젝트의 `package.json` 파일에 적힌 build 스크립트가 실행됨.
 task buildReact(type:Exec){
-  dependsOn &quot;installReact&quot;
-  workingDir &quot;$reactDir&quot;
-  inputs.dir &quot;$reactDir&quot;
+  dependsOn &#34;installReact&#34;
+  workingDir &#34;$reactDir&#34;
+  inputs.dir &#34;$reactDir&#34;
   group = BasePlugin.BUILD_GROUP
 
-  if(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')){
-      commandLine &quot;npm.cmd&quot;, &quot;run-script&quot;, &quot;build&quot;
+  if(System.getProperty(&#39;os.name&#39;).toLowerCase(Locale.ROOT).contains(&#39;windows&#39;)){
+      commandLine &#34;npm.cmd&#34;, &#34;run-script&#34;, &#34;build&#34;
   }else{
-      commandLine &quot;npm&quot;, &quot;run-script&quot;, &quot;build&quot;
+      commandLine &#34;npm&#34;, &#34;run-script&#34;, &#34;build&#34;
   }
 }
 
 // buildReact task를 호출
 // 앞서 지정한 $reactDir 경로의 /build 위치에서 생성된 데이터를 $projectDir/src/main/resources/static 로 복사
 task copyReactBuildFiles(type:Copy) {
-  dependsOn &quot;buildReact&quot;
-  from &quot;$reactDir/build&quot;
-  into &quot;$projectDir/src/main/resources/static&quot;
+  dependsOn &#34;buildReact&#34;
+  from &#34;$reactDir/build&#34;
+  into &#34;$projectDir/src/main/resources/static&#34;
 }
-</code></pre><ol>
-<li>폴더 설정</li>
+</code></pre></li>
+<li>
+<p>각종 설정을 해주는 batch 파일 예시이다.</p>
+<pre tabindex="0"><code>gradle wrapper
+gradlew build
+@REM package.json에 script 작성 필요
+npm run build:postcss
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>폴더 설정</p>
+</li>
 </ol>
 <ul>
 <li><code>resources</code> : html, css 등 화면 구성을 위한 파일들의 root 디렉터리
@@ -118,150 +440,155 @@ task copyReactBuildFiles(type:Copy) {
 </ul>
 </li>
 </ul>
-<h2 id="웹-서비스-개발">웹 서비스 개발</h2>
+<h2 id="웹-서비스-개발">웹 서비스 개발<a hidden class="anchor" aria-hidden="true" href="#웹-서비스-개발">#</a></h2>
 <ol>
-<li>tomcat</li>
-</ol>
+<li>tomcat
 <ul>
 <li>spring boot에서 web 패키지를 설치하면 tomcat을 사용하여 web server를 동작시킨다.</li>
-<li>localhost:8080으로 default 주소가 처리되어 있고, <code>application.yml</code> 파일에서 아래와 같이 수정 가능하다.</li>
-</ul>
-<pre><code>server:
+<li>localhost:8080으로 default 주소가 처리되어 있고, <code>application.yml</code> 파일에서 아래와 같이 수정 가능하다.
+<pre tabindex="0"><code>server:
   port : 8081
-</code></pre><h3 id="mvc-모델">MVC 모델</h3>
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<h3 id="mvc-모델">MVC 모델<a hidden class="anchor" aria-hidden="true" href="#mvc-모델">#</a></h3>
 <ul>
 <li>model, view, control 을 나누어 개발하는 형태를 MVC 모델이라고 한다.</li>
 </ul>
-<h4 id="view-template">View template</h4>
+<h4 id="view-template">View template<a hidden class="anchor" aria-hidden="true" href="#view-template">#</a></h4>
 <ul>
 <li>view template 은 controller와 model을 합친 개념으로, 화면을 구성하는 역할을 한다.</li>
 <li>mustache 패키지를 설치하여 view template를 만들 수 있다.</li>
 </ul>
 <ol>
-<li>jsp 활용</li>
-</ol>
+<li>
+<p>jsp 활용</p>
 <ul>
-<li>Spring boot에는 jsp가 잘 어울리지 않는다고 한다. 대신 Thymleaf, mustache 등을 사용하는걸 권장한다?</li>
-<li>jsp를 사용하여 model을 구성할 수도 있다.</li>
-<li>jsp는 사용하기 전 <code>application.properties</code>(혹은 yml) 파일의 수정이 필요하다. 아래 내용을 추가한다.</li>
-</ul>
-<pre><code>spring.mvc.view.prefix=/myApp/
+<li>
+<p>Spring boot에는 jsp가 잘 어울리지 않는다고 한다. 대신 Thymleaf, mustache 등을 사용하는걸 권장한다?</p>
+</li>
+<li>
+<p>jsp를 사용하여 model을 구성할 수도 있다.</p>
+</li>
+<li>
+<p>jsp는 사용하기 전 <code>application.properties</code>(혹은 yml) 파일의 수정이 필요하다. 아래 내용을 추가한다.</p>
+<pre tabindex="0"><code>spring.mvc.view.prefix=/myApp/
 spring.mvc.view.suffix=.jsp
-</code></pre><ul>
-<li>위 내용을 적용하면 <code>src/main/webapp/myApp/</code> 경로 내부에서 jsp파일을 찾게 된다. &lsquo;webapp&rsquo; 폴더는 default로 필요하다.</li>
+</code></pre></li>
+<li>
+<p>위 내용을 적용하면 <code>src/main/webapp/myApp/</code> 경로 내부에서 jsp파일을 찾게 된다. &lsquo;webapp&rsquo; 폴더는 default로 필요하다.</p>
+</li>
 </ul>
-<ol>
-<li>mustache 활용</li>
-</ol>
+</li>
+<li>
+<p>mustache 활용</p>
 <ul>
-<li>앞서 말헀듯 mustache는 view template용 패키지로 controller와 model을 관장한다.</li>
-<li>controller는 기본 패키지 경로 하위에 배치한다.</li>
-<li>controller는 다음과 같이 구성한다.</li>
-</ul>
-<pre><code>package com.example.firstproject.controller;
+<li>
+<p>앞서 말헀듯 mustache는 view template용 패키지로 controller와 model을 관장한다.</p>
+</li>
+<li>
+<p>controller는 기본 패키지 경로 하위에 배치한다.</p>
+</li>
+<li>
+<p>controller는 다음과 같이 구성한다.</p>
+<pre tabindex="0"><code>package com.example.firstproject.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 
 @Controller  // controller를 정의하는 annotation
 public class FirstController {
-    @GetMapping(&quot;/index&quot;)  // 연결될 url을 지정하는 annotation, /index 로 연결하면
+    @GetMapping(&#34;/index&#34;)  // 연결될 url을 지정하는 annotation, /index 로 연결하면
     public String mainPage(Model model)  // model 을 통해 가변 인자 control
     {
-        model.addAttribute(&quot;title&quot;, &quot;hello world&quot;); // title 이름으로 hello world 라는 문자열을 설정
-        return &quot;mainPage&quot;;  // mainPage.mustache 파일과 연동
+        model.addAttribute(&#34;title&#34;, &#34;hello world&#34;); // title 이름으로 hello world 라는 문자열을 설정
+        return &#34;mainPage&#34;;  // mainPage.mustache 파일과 연동
     }
 }
-</code></pre><ul>
-<li>model(.mustache파일)은 <code>resources/templates</code> 파일 경로 하위에 배치하고, 확장자를 <code>.mustache</code>로 지정한다.</li>
-<li>html 파일은 사실 view에 가깝지만, mustache 파일은 view에 변수를 적용하여 model에 해당한다.</li>
-<li>model은 다음과 같이 구성한다.</li>
-</ul>
-<pre><code>&lt;body&gt;
+</code></pre></li>
+<li>
+<p>model(.mustache .html 등)은 <code>resources/templates</code> 파일 경로 하위에 배치하고, 확장자를 <code>.mustache</code>로 지정한다.</p>
+</li>
+<li>
+<p>html 파일은 사실 view에 가깝지만, mustache 파일은 view에 변수를 적용하여 model에 해당한다.</p>
+</li>
+<li>
+<p>model은 다음과 같이 구성한다.</p>
+<pre tabindex="0"><code>&lt;body&gt;
   &lt;h1&gt;{{title}}&lt;/h1&gt;  &lt;!-- controller에서 정의한 title이 {{title}}에 치환됨 --&gt;
 &lt;/body&gt;
-</code></pre><ol>
-<li>Layout
-- model을 만들 때는 layout에 따라 화면에 보여지는 형태를 구성할 수 있다.
-- layout을 template화 하여 사용 가능하다. 재사용 되는 부분을 모듈화 하여 파일로 분리하고, 이를 다른 파일에서 불러올 수 있다.
-- <code>{{&gt;FILE_NAME}}</code> 형태로 다른 파일을 호출해 올 수 있다.</li>
-</ol>
-<h4 id="controller">controller</h4>
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>Layout</p>
 <ul>
-<li>controller class는 <code>@Controller</code> annotation을 붙여서 선언하며 함수는 <code>@GetMapping</code>, <code>@RequestMapping</code> annotation을 사용할 수 있다.</li>
+<li>model을 만들 때는 layout에 따라 화면에 보여지는 형태를 구성할 수 있다.</li>
+<li>layout을 template화 하여 사용 가능하다. 재사용 되는 부분을 모듈화 하여 파일로 분리하고, 이를 다른 파일에서 불러올 수 있다.</li>
+<li><code>{{&gt;FILE_NAME}}</code> 형태로 다른 파일을 호출해 올 수 있다.</li>
+</ul>
+</li>
+</ol>
+<h4 id="controller">Controller<a hidden class="anchor" aria-hidden="true" href="#controller">#</a></h4>
+<ul>
+<li>Controller는 request를 받아 어떤 화면을 보여줄지 결정하는 routing 로직을 담당하게 된다.</li>
+<li>controller class는 <code>@Controller</code> annotation을 붙여서 선언하며 routing 함수로는 <code>@GetMapping</code>, <code>@RequestMapping</code> annotation을 사용하여 정의한다.</li>
 </ul>
 <ol>
-<li>에러 화면</li>
-</ol>
+<li>에러 화면
 <ul>
 <li>에러 화면도 controller에 의해 유도되며 BasicErrorController가 이를 담당한다.</li>
 <li><code>application.yml</code> 파일에서 따로 설정을 하지 않았다면 <code>server.error.path=/error</code> 가 기본이다.</li>
 </ul>
-<h4 id="데이터-교환">데이터 교환</h4>
-<ul>
-<li>view에서 사용자 입력을 받아 처리하는 과정을 다룬다.</li>
-<li>서버의 Controller에서 이를 처리 가능하며, 사용자 입력을 Java Class로 대응시킨 형태를 DTO라 칭한다.</li>
-</ul>
-<ol>
-<li>view 구현</li>
-</ol>
-<ul>
-<li>view쪽에서는 <code>form</code> 태그를 사용하여 controller에 데이터를 전송할 수 있다.</li>
-<li><code>form</code> 태그의 인자로 <code>action</code>, <code>method</code>를 적용 가능하다.
-<ul>
-<li><code>action</code> : 데이터를 보낼 url을 설정. ex) action=&quot;/data/part1&quot;</li>
-<li><code>method</code> : 전송 방법을 설정한다. post 혹은 get 적용 가능</li>
-</ul>
 </li>
-<li><code>form</code> 태그 안의 <code>input</code>태그를 두고, 인자로 <code>name</code>을 설정한다.</li>
-</ul>
-<ol start="2">
-<li>controller 구현</li>
 </ol>
-<ul>
-<li>DTO로 사용할 class를 선언한다. (ex: DtoSample)</li>
-<li>controller 를 구현한 java 파일에서 <code>@PostMapping</code> annotation을 달고, 인자로 위에서 선언한 DTO를 받는다.</li>
-<li>return 값으로 지정한 이름의 view로 redirect 한다. (ex: returnView)</li>
-</ul>
-<pre><code>@PostMapping(&quot;/data/part1&quot;)
-public String handleForm(DtoSample dto) {
-  return &quot;returnView&quot;;
-}
-</code></pre><h4 id="db">DB</h4>
+<h4 id="jpa">JPA<a hidden class="anchor" aria-hidden="true" href="#jpa">#</a></h4>
 <ul>
 <li>spring은 mysql, postgress, M2 등 여러 DB를 적용할 수 있다.</li>
 <li>controller는 Java로 구현되고, DB는 sql로 동작하기 때문에 java로 sql을 조작하기 위한 JPA라는 라이브러리가 필요하다.</li>
+<li><code>Entity</code> : java 객체를 DB가 이해할 수 있게 재구성한 데이터
+<ul>
+<li><code>@Entity</code> : 해당 class를 entity 로 선언</li>
+<li><code>@Table(name=&quot;&quot;)</code> : 특정 table과 객체를 연동. 기본적으로는 calss 이름에 해당하는 DB의 table과 매핑 된다.</li>
+<li><code>@Column</code> : 지정한 변수를 DB의 컬럼으로 선언</li>
+</ul>
+</li>
+<li><code>Repository</code> : entity를 DB에 저장하는 역할을 수행하는 객체
+<ul>
+<li><code>save(ENTITY)</code> : 저장, DB의 insert / update 에 해당</li>
+<li><code>delete(ENTITY)</code> : 특정 Entity 삭제, DB의 delete에 해당</li>
+</ul>
+</li>
 </ul>
 <ol>
-<li>JPA</li>
-</ol>
+<li>
+<p>DTO 정의</p>
 <ul>
-<li><code>Entity</code> : java 객체를 DB가 이해할 수 있게 재구성한 데이터</li>
-<li><code>Repository</code> : entity를 DB에 저장하는 역할을 수행하는 객체</li>
+<li>서버의 Controller에서 이를 처리 가능하며, 사용자 입력을 Java Class로 대응시킨 형태를 DTO라 칭한다.</li>
+<li>DTO를 다음과 같이 정의하였다고 하자</li>
 </ul>
-<ol>
-<li>controller 구현</li>
-</ol>
-<ul>
-<li>DTO를 다음과 같이 구현하였다고 하자</li>
-</ul>
-<pre><code>class DtoSample {
+<pre tabindex="0"><code>class DtoSample {
   private String name;
   public DtoSample(String name) {
       this.name = name;
   }
 }
-</code></pre><ul>
+</code></pre></li>
+<li>
+<p>Entity 정의</p>
+<ul>
 <li>DTO에 해당하는 entity를 정의해야하며, 그 형태는 다음과 같다.
 <ul>
 <li>entity는 <code>@Entity</code> annotation을 붙여야 한다.</li>
 <li>Entity는 primary key를 가져야 하며, 이는 <code>@Id</code> annotation으로 지정한다.</li>
 <li>DB의 column에 해당하는 값들은 <code>@Column</code> annotation을 붙여준다.</li>
 <li><code>@GeneratedValue</code>는 자동으로 생성된 값이 들어가도록 한다.</li>
+<li>&lsquo;실제 DB table&rsquo; ⊃ &lsquo;DTO에 정의된 column들&rsquo; 이 성립해야 한다.</li>
 </ul>
 </li>
 </ul>
-<pre><code>@Entity
+<pre tabindex="0"><code>@Entity
 public class sampleEntity {
     @Id // 대표값
     @GeneratedValue // 자동생성
@@ -275,29 +602,56 @@ public class sampleEntity {
     }
 
 }
-</code></pre><ul>
+</code></pre></li>
+<li>
+<p>Repository 구현</p>
+<ul>
 <li>Entity를 DB에 저장하기 위한 Repository도 생성한다.</li>
 <li>repository는 entity로 DB에 접근하는 방법을 정의하기 위한 객체이다.</li>
 <li>spring에서 기본으로 제공하는 형태를 상속받아 사용도 가능하다.</li>
 </ul>
-<pre><code>// CrudRepository&lt;관리대상, 대표값의 type&gt;
+<pre tabindex="0"><code>// CrudRepository&lt;관리대상, 대표값의 type&gt;
 public interface searchNameRepository extends CrudRepository&lt;sampleEntity, Long&gt; {
     // CrudRepository 의 기본값을 사용
 }
 </code></pre><ul>
-<li>이전에 만들었던 controller 에 내용을 추가한다.</li>
+<li>직접 구상한 쿼리를 사용하고 싶다면 camelcase로 구성된 함수 이름으로 쿼리를 추가할 수 있다.</li>
+<li>상세 내용은 링크를 참조한다.
+<ul>
+<li><a href="https://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#jpa.query-methods.query-creation">JPA Repository Query function</a></li>
+<li><a href="https://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#repositories.query-streaming">JPA Repository Query annotation</a></li>
 </ul>
-<pre><code>@PostMapping(&quot;/data/part1&quot;)
+<pre tabindex="0"><code>public interface searchNameRepository extends CrudRepository&lt;SampleEntity, Long&gt; {
+    // select * from SampleEntity where name = ?1     
+    @Query(&#34;Select s From SampleEntity&#34;)
+    List&lt;sampleEntity&gt; findByName(String name);
+
+    // select * from SampleEntity where name = ?1 and id = 1
+    @Query(&#34;Select s From SampleEntity where s.id = 1&#34;)
+    List&lt;sampleEntity&gt; findByName(String name);
+ }
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>기타 추가작업</p>
+<ul>
+<li>이전에 만들었던 controller 에 내용을 추가한다. DTO로 받은 내용을 Entity로 변환시켜 repository를 통해 처리한다.</li>
+</ul>
+<pre tabindex="0"><code>@Autowired // String boot가 알아서 new 해서 사용하는 annotation
+searchNameRepository snr;
+
+@PostMapping(&#34;/data/part1&#34;)
 public String handleForm(DtoSample dto) {
-  sampleEntity name = form.toEntity(); // toEntity 구현 필요
-  name = snr.save(name); // 'save'는 저장 및 저장된 데이터를 반환함
-  return &quot;returnView&quot;;
+  sampleEntity name = dto.toEntity(); // toEntity 구현 필요
+  name = snr.save(name); // &#39;save&#39;는 저장 및 저장된 데이터를 반환함
+  return &#34;returnView&#34;;
 }
 </code></pre><ul>
-<li>contorller에서 받은 DTO 데이터를 entity로 변환시켜야 한다.</li>
+<li>contorller에서 받은 DTO 데이터를 entity로 변환시킬 때 사용한 <code>toEntity()</code> 함수를 구현해야 한다.</li>
 <li>DTO 파일을 추가로 수정한다.</li>
 </ul>
-<pre><code>class DtoSample {
+<pre tabindex="0"><code>class DtoSample {
   private String name;
   public DtoSample(String name) {
       this.name = name;
@@ -306,13 +660,229 @@ public String handleForm(DtoSample dto) {
       return new sampleEntity(null, this.name); // id에 null을 넣는다. @GeneratedValue에 의해 자동으로 생성된다.
   }
 }
-</code></pre></article><section class="article labels"><a class="category" href=/categories/dev/>dev</a><a class="tag" href=/tags/spring_boot/>spring_boot</a><a class="tag" href=/tags/java/>java</a><a class="tag" href=/tags/server/>server</a></section><section class="article author"><img class="avatar" src="https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg" alt><p class="name">gohugo</p><div class="bio">Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.</div><div class="details"><a class="item" href="https://github.com/gohugoio" target="_blank"><span class="iconfont icon-github"></span>&nbsp;gohugoio</a><a class="item" href="https://twitter.com/GoHugoIO" target="_blank"><span class="iconfont icon-twitter"></span>&nbsp;@GoHugoIO</a></div>
-</section></div>
-<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/tailwind/"><span class="li iconfont icon-article"></span>Tailwind</a></p><p><a class="link" href="/post/algorithm/"><span class="li iconfont icon-article"></span>Algorithm</a></p></section></div></section><section id="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Notepadium.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section></body>
+</code></pre></li>
+</ol>
+<h4 id="데이터-교환">데이터 교환<a hidden class="anchor" aria-hidden="true" href="#데이터-교환">#</a></h4>
+<ul>
+<li>view에서 사용자 입력을 받아 처리하는 과정을 다룬다.</li>
+<li>앞서 JPA를 통해 구현한 DB 시스템에 데이터를 넣을 수 있다.</li>
+</ul>
+<ol>
+<li>
+<p>view 구현</p>
+<ul>
+<li>view쪽에서는 <code>form</code> 태그를 사용하여 controller에 데이터를 전송할 수 있다.</li>
+<li><code>form</code> 태그의 인자로 <code>action</code>, <code>method</code>를 적용 가능하다.
+<ul>
+<li><code>action</code> : 데이터를 보낼 url을 설정. ex) action=&quot;/data/part1&quot;</li>
+<li><code>method</code> : 전송 방법을 설정한다. post 혹은 get 적용 가능</li>
+</ul>
+</li>
+<li><code>form</code> 태그 안의 <code>input</code>태그를 두고, 인자로 <code>name</code>을 설정한다.</li>
+</ul>
+</li>
+<li>
+<p>controller 구현</p>
+<ul>
+<li>DTO로 사용할 class를 선언한다. (ex: DtoSample)</li>
+<li>controller 를 구현한 java 파일에서 <code>@PostMapping</code> annotation을 달고, 인자로 위에서 선언한 DTO를 받는다.</li>
+<li>return 값으로 지정한 이름의 view로 redirect 한다. (ex: returnView)
+<pre tabindex="0"><code>@PostMapping(&#34;/data/part1&#34;)
+public String handleForm(DtoSample dto) {
+  return &#34;returnView&#34;;
+}
+</code></pre></li>
+</ul>
+</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AswinBlue.github.io/tags/spring_boot/">spring_boot</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/java/">java</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/server/">server</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://AswinBlue.github.io/post/tailwind/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Tailwind</span>
+  </a>
+  <a class="next" href="https://AswinBlue.github.io/post/algorithm/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Algorithm</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Spring_boot on twitter"
+        href="https://twitter.com/intent/tweet/?text=Spring_boot&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f&amp;hashtags=spring_boot%2cjava%2cserver">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Spring_boot on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f&amp;title=Spring_boot&amp;summary=Spring_boot&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Spring_boot on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f&title=Spring_boot">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Spring_boot on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Spring_boot on whatsapp"
+        href="https://api.whatsapp.com/send?text=Spring_boot%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Spring_boot on telegram"
+        href="https://telegram.me/share/url?text=Spring_boot&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fspring_boot%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
 
 </html>
