@@ -10,14 +10,15 @@
 <meta name="description" content="Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.">
 <meta name="author" content="AswinBlue">
 <link rel="canonical" href="https://AswinBlue.github.io/post/spring_boot/">
+<meta name="google-site-verification" content="XYZabc">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.0b739a2e2c5e5656e4bcd5f0b2268d063addaf81d89ec3987d6af8f04decdc97.css" integrity="sha256-C3OaLixeVlbkvNXwsiaNBjrdr4HYnsOYfWr48E3s3Jc=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://AswinBlue.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://AswinBlue.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://AswinBlue.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="mask-icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -59,10 +60,12 @@
 </noscript><meta property="og:title" content="Spring_boot" />
 <meta property="og:description" content="Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://AswinBlue.github.io/post/spring_boot/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://AswinBlue.github.io/post/spring_boot/" /><meta property="og:image" content="https://AswinBlue.github.io/cover.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-05-30T19:20:23&#43;09:00" />
 <meta property="article:modified_time" content="2022-05-30T19:20:23&#43;09:00" />
 
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://AswinBlue.github.io/cover.png"/>
 
 <meta name="twitter:title" content="Spring_boot"/>
 <meta name="twitter:description" content="Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다."/>
@@ -116,7 +119,7 @@
     "name": "AswinBlue",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://AswinBlue.github.io/favicon.ico"
+      "url": "https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E"
     }
   }
 }
