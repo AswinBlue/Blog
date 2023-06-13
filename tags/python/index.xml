@@ -5,10 +5,12 @@
     <link>https://AswinBlue.github.io/tags/python/</link>
     <description>Recent content in python on AswinBlue</description>
     <image>
+      <title>AswinBlue</title>
       <url>https://AswinBlue.github.io/cover.png</url>
       <link>https://AswinBlue.github.io/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tensorflow</title>
@@ -41,7 +43,12 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>https://AswinBlue.github.io/post/python/</guid>
-      <description>Python numpy 기본 구문 numpy.where(조건, 값1, 값2): 조건문이 참이면 값1, 거짓이면 값2를 반환. 3항연산자와 동일 </description>
+      <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
+받은 값은 string 형태이다.
+받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print()
+함수 함수 인자로 배열 형태를 표현할 때 *를 붙인다.
+def func1(*arg)print(*arg)func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬운 숫자 표기: x = 10000 vs x = 10_000</description>
     </item>
     
     <item>

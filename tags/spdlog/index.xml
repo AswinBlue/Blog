@@ -5,10 +5,12 @@
     <link>https://AswinBlue.github.io/tags/spdlog/</link>
     <description>Recent content in spdlog on AswinBlue</description>
     <image>
+      <title>AswinBlue</title>
       <url>https://AswinBlue.github.io/cover.png</url>
       <link>https://AswinBlue.github.io/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/spdlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>spdlog C&#43;&#43;</title>

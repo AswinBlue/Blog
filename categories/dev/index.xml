@@ -5,11 +5,24 @@
     <link>https://AswinBlue.github.io/categories/dev/</link>
     <description>Recent content in dev on AswinBlue</description>
     <image>
+      <title>AswinBlue</title>
       <url>https://AswinBlue.github.io/cover.png</url>
       <link>https://AswinBlue.github.io/cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 29 Jun 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter</title>
+      <link>https://AswinBlue.github.io/post/flutter/</link>
+      <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
+      
+      <guid>https://AswinBlue.github.io/post/flutter/</guid>
+      <description>개발환경 및 기본 지식 구성 파일들 analysis_options.yaml : flutter rule을 설정하는 파일 assets : 이미지 등 리소스들을 저장하는 경로 lib/main.dart : 메인 App 소스가 구동되는 dart 파일 pubspec.yaml : 리소스 경로 및 API들을 설정할 수 있는 파일 (assets 폴더 설정 가능)
+# 경로 설정flutter:assets:- assets/# dependency 설정dependencies:flutter:sdk: fluttercupertino_icons: ^1.0.2android/app/src/main/AndroidManifext.xml : 안드로이드 앱 개발시 권한 부여를 위한 파일
+빌드 및 실행 main.dart 파일을 지정하고 실행시켜야 한다.</description>
+    </item>
+    
     <item>
       <title>thymeleaf</title>
       <link>https://AswinBlue.github.io/post/thymeleaf/</link>
@@ -107,7 +120,12 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>https://AswinBlue.github.io/post/python/</guid>
-      <description>Python numpy 기본 구문 numpy.where(조건, 값1, 값2): 조건문이 참이면 값1, 거짓이면 값2를 반환. 3항연산자와 동일 </description>
+      <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
+받은 값은 string 형태이다.
+받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print()
+함수 함수 인자로 배열 형태를 표현할 때 *를 붙인다.
+def func1(*arg)print(*arg)func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬운 숫자 표기: x = 10000 vs x = 10_000</description>
     </item>
     
     <item>
@@ -188,16 +206,6 @@ b [라인] : 해당 라인에 breakpoint 설정 b [함수명] : 해당 함수 �
 cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
 make : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일
 cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다. 1. mkdir build2.</description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://AswinBlue.github.io/post/docker/</link>
-      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
-      
-      <guid>https://AswinBlue.github.io/post/docker/</guid>
-      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 설치 링크 참조
-실행 오류 및 각종 이 is docker daemon running? 에러 service docker status 입력시 docker daemon이 꺼져있는지 확인 service docker start 명령으로 daemon 실행 만약 명령은 수행되나 켜지지 않는다면 systemctl명령 수행 systemctl start docker : docker를 daemon으로 실행 systemctl enable docker : OS실행시 docker daemon을 기본 실행 systemctl 명령도 안된다면 /lib/systemd/system/docker.</description>
     </item>
     
     <item>
