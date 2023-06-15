@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>dev on AswinBlue</title>
-    <link>/categories/dev/</link>
+    <link>https://AswinBlue.github.io/categories/dev/</link>
     <description>Recent content in dev on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flutter</title>
-      <link>/post/flutter/</link>
+      <link>https://AswinBlue.github.io/post/flutter/</link>
       <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
       
-      <guid>/post/flutter/</guid>
+      <guid>https://AswinBlue.github.io/post/flutter/</guid>
       <description>개발환경 및 기본 지식 구성 파일들 analysis_options.yaml : flutter rule을 설정하는 파일 assets : 이미지 등 리소스들을 저장하는 경로 lib/main.dart : 메인 App 소스가 구동되는 dart 파일 pubspec.yaml : 리소스 경로 및 API들을 설정할 수 있는 파일 (assets 폴더 설정 가능)
 # 경로 설정flutter:assets:- assets/# dependency 설정dependencies:flutter:sdk: fluttercupertino_icons: ^1.0.2android/app/src/main/AndroidManifext.xml : 안드로이드 앱 개발시 권한 부여를 위한 파일
 빌드 및 실행 main.dart 파일을 지정하고 실행시켜야 한다.</description>
@@ -20,19 +20,19 @@
     
     <item>
       <title>thymeleaf</title>
-      <link>/post/thymeleaf/</link>
+      <link>https://AswinBlue.github.io/post/thymeleaf/</link>
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
-      <guid>/post/thymeleaf/</guid>
+      <guid>https://AswinBlue.github.io/post/thymeleaf/</guid>
       <description>Thymeleaf 서버에서 view를 구성할 때 사용하는 라이브러리 태그 형식의 문법을 사용하며 vue와 유사하다. 기본 문법 thymeleaf 공식 튜토리얼 에서 기본적인 문법을 확인할 수 있다. 태그 안에 th:속성=&amp;quot;값&amp;quot; 형태의 속성을 추가하는 형태로 사용한다. text &amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;를 표시한다. utext &amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다. fragment &amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다.</description>
     </item>
     
     <item>
       <title>Tailwind</title>
-      <link>/post/tailwind/</link>
+      <link>https://AswinBlue.github.io/post/tailwind/</link>
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
-      <guid>/post/tailwind/</guid>
+      <guid>https://AswinBlue.github.io/post/tailwind/</guid>
       <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. Tailwind Docs Installation npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
 npx tailwindcss init -P 명령을 사용하면 tailwind.config.js 파일이 생성되며, 현재 위치에서 tailwind를 적용할 수 있게 된다.
 tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {// 포함할 항목content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],// 제외할 항목 (최신 버전에서 사용되지 않는 문법)// purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],// jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.</description>
@@ -40,56 +40,56 @@ tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {/
     
     <item>
       <title>Spring_boot</title>
-      <link>/post/spring_boot/</link>
+      <link>https://AswinBlue.github.io/post/spring_boot/</link>
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
-      <guid>/post/spring_boot/</guid>
+      <guid>https://AswinBlue.github.io/post/spring_boot/</guid>
       <description>Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &amp;lsquo;Java Extension Pack&amp;rsquo; 과 &amp;lsquo;Spring Boot Extension Pack&amp;rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</description>
     </item>
     
     <item>
       <title>Firebase_react</title>
-      <link>/post/firebase_react/</link>
+      <link>https://AswinBlue.github.io/post/firebase_react/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>/post/firebase_react/</guid>
+      <guid>https://AswinBlue.github.io/post/firebase_react/</guid>
       <description>Firebase with React react에서 firebase를 활용하는 방법 firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조 인증 (Auth) firebase 로 계정 생성 및 로그인 firebase API를 import하여 사용 &amp;lt;AppFirebase.js&amp;gt; import firebase from &amp;#34;firebase/compat/app&amp;#34;;import &amp;#34;firebase/compat/auth&amp;#34;;const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,authDomain: process.env.REACT_APP_AUTHDOMAIN,projectId: process.env.REACT_APP_PROJECTID,storageBucket: process.env.REACT_APP_STORAGEBUCKET,messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,appId: process.env.REACT_APP_APPID};export default firebase.initializeApp(firebaseConfig);export const authService = firebase.auth(); AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현 &amp;lt;Auth.</description>
     </item>
     
     <item>
       <title>Cryptocurrency</title>
-      <link>/post/cryptocurrency/</link>
+      <link>https://AswinBlue.github.io/post/cryptocurrency/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>/post/cryptocurrency/</guid>
+      <guid>https://AswinBlue.github.io/post/cryptocurrency/</guid>
       <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
 collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.</description>
     </item>
     
     <item>
       <title>Firebase</title>
-      <link>/post/firebase/</link>
+      <link>https://AswinBlue.github.io/post/firebase/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>/post/firebase/</guid>
+      <guid>https://AswinBlue.github.io/post/firebase/</guid>
       <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다. 설치 및 사용 온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다. firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다. (웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.) 버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>/post/golang/</link>
+      <link>https://AswinBlue.github.io/post/golang/</link>
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
-      <guid>/post/golang/</guid>
+      <guid>https://AswinBlue.github.io/post/golang/</guid>
       <description>Go 설치 및 프로젝트 생성 구글 검색을 통해 설치파일을 다운받는다. root 디렉터리 설정이 필요하다.(&amp;lsquo;C:\Go, &amp;lsquo;/usr/local/go/bin/&amp;rsquo;) 이후 생성할 프로젝트는 이 root 디렉터리 하위 경로에 생성된다. 외부 경로에는 프로젝트를 생성할 수 없다. root 디렉터리 안 src 디렉터리에 프로젝트를 생성한다. Go는 npm, pip 와 같이 패키지 매니저가 없다. git 등에서 코드를 받아오면 src 디렉터리 안에 도메인별로 정리해서 관리하는게 정석이다. </description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>/post/tensorflow/</link>
+      <link>https://AswinBlue.github.io/post/tensorflow/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>/post/tensorflow/</guid>
+      <guid>https://AswinBlue.github.io/post/tensorflow/</guid>
       <description>#Tensorflow
 TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
 edge는 학습데이터가 저장되는 다차원 배열이다.
@@ -101,20 +101,20 @@ archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다
     
     <item>
       <title>Kivy</title>
-      <link>/post/kivy/</link>
+      <link>https://AswinBlue.github.io/post/kivy/</link>
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
-      <guid>/post/kivy/</guid>
+      <guid>https://AswinBlue.github.io/post/kivy/</guid>
       <description>#kivy
 Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .</description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>/post/python/</link>
+      <link>https://AswinBlue.github.io/post/python/</link>
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
-      <guid>/post/python/</guid>
+      <guid>https://AswinBlue.github.io/post/python/</guid>
       <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
@@ -125,10 +125,10 @@ def func1(*arg)print(*arg)func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬�
     
     <item>
       <title>Angular</title>
-      <link>/post/angular/</link>
+      <link>https://AswinBlue.github.io/post/angular/</link>
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
-      <guid>/post/angular/</guid>
+      <guid>https://AswinBlue.github.io/post/angular/</guid>
       <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
 $ ng new &amp;lt;application_name&amp;gt; 명령어를 이용하여 설치한다.
 nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.</description>
@@ -136,66 +136,66 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
     
     <item>
       <title>Spring basic</title>
-      <link>/post/spring/</link>
+      <link>https://AswinBlue.github.io/post/spring/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>/post/spring/</guid>
+      <guid>https://AswinBlue.github.io/post/spring/</guid>
       <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
 참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.</description>
     </item>
     
     <item>
       <title>Jython</title>
-      <link>/post/jython/</link>
+      <link>https://AswinBlue.github.io/post/jython/</link>
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
-      <guid>/post/jython/</guid>
+      <guid>https://AswinBlue.github.io/post/jython/</guid>
       <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
     </item>
     
     <item>
       <title>Web_scrapping</title>
-      <link>/post/web_scrapping/</link>
+      <link>https://AswinBlue.github.io/post/web_scrapping/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>/post/web_scrapping/</guid>
+      <guid>https://AswinBlue.github.io/post/web_scrapping/</guid>
       <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함 @id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link</description>
     </item>
     
     <item>
       <title>GDB</title>
-      <link>/post/gdb/</link>
+      <link>https://AswinBlue.github.io/post/gdb/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>/post/gdb/</guid>
+      <guid>https://AswinBlue.github.io/post/gdb/</guid>
       <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint
 b [라인] : 해당 라인에 breakpoint 설정 b [함수명] : 해당 함수 시작점에 breakpoint 설정 b [파일명]:[라인] : 특정 파일 해당 라인에 breakpoin (ex : b test.cpp:10) tb : 임시 중단점 설정, 일회성 info b : breakpoint 확인 delete : 모든 brekapoint 삭제 delete [index] : 특정 breakpoint 삭제 cl [라인] : 해당 라인의 brekapoint 삭제 cl [함수] : 해당 함수의 breakpoint 삭제 cl : 모든 breakpoint 삭제 enable [index] : 해당 brekapoint 활성화 disable [index] : 해당 breakpoint 비활성화 condition [index] [조건] : 해당 breakpoint는 조건을 만족할 때에만 동작 (ex : condition 2 var_a == 0) ▷ 실행</description>
     </item>
     
     <item>
       <title>React basic</title>
-      <link>/post/react_basic/</link>
+      <link>https://AswinBlue.github.io/post/react_basic/</link>
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
-      <guid>/post/react_basic/</guid>
+      <guid>https://AswinBlue.github.io/post/react_basic/</guid>
       <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &amp;lt;NAME&amp;gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.</description>
     </item>
     
     <item>
       <title>C&#43;&#43; basic</title>
-      <link>/post/c&#43;&#43;/</link>
+      <link>https://AswinBlue.github.io/post/c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/c&#43;&#43;/</guid>
+      <guid>https://AswinBlue.github.io/post/c&#43;&#43;/</guid>
       <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\printf(&amp;#34;%d&amp;#34;, (X) + 1);\printf(&amp;#34;%d&amp;#34;, (X) + 2); 매크로 합성 : #define A 1#define B 1#define C A##B // A##B = 12 함수형태 매크로 작성 : // 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.</description>
     </item>
     
     <item>
       <title>CMake</title>
-      <link>/post/cmake/</link>
+      <link>https://AswinBlue.github.io/post/cmake/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/cmake/</guid>
+      <guid>https://AswinBlue.github.io/post/cmake/</guid>
       <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구
 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
 cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
@@ -205,66 +205,66 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
     
     <item>
       <title>Json in C&#43;&#43;</title>
-      <link>/post/json_c&#43;&#43;/</link>
+      <link>https://AswinBlue.github.io/post/json_c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/json_c&#43;&#43;/</guid>
+      <guid>https://AswinBlue.github.io/post/json_c&#43;&#43;/</guid>
       <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
     </item>
     
     <item>
       <title>Linux commands</title>
-      <link>/post/linux_command/</link>
+      <link>https://AswinBlue.github.io/post/linux_command/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/linux_command/</guid>
+      <guid>https://AswinBlue.github.io/post/linux_command/</guid>
       <description>sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트리밍 에디터 sed [-e script][-f script-file][file...]
 찾기/출력 sed -n &#39;/abd/p&#39; list.txt : list.txt : 파일을 한줄씩 읽으면서(-n : 읽은 것을 출력하지 않음) abd 문자를 찾으면 그 줄을 출력(p)한다. 치환 sed &#39;s/addrass/address/&#39; list.txt : list.txt파일에서 addrass를 address로 바꾼다. 단, 원본파일을 바꾸지 않고 출력을 바꿔서 한다. sed &#39;s/□□*/□/&#39; list.txt : ( *표시: □ 는 공백 문자를 표시한다.</description>
     </item>
     
     <item>
       <title>spdlog C&#43;&#43;</title>
-      <link>/post/log_c&#43;&#43;/</link>
+      <link>https://AswinBlue.github.io/post/log_c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>/post/log_c&#43;&#43;/</guid>
+      <guid>https://AswinBlue.github.io/post/log_c&#43;&#43;/</guid>
       <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
     </item>
     
     <item>
       <title>Nodejs</title>
-      <link>/post/nodejs/</link>
+      <link>https://AswinBlue.github.io/post/nodejs/</link>
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
-      <guid>/post/nodejs/</guid>
+      <guid>https://AswinBlue.github.io/post/nodejs/</guid>
       <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) 구조 main.js : nodejs 실행시 실행할 메인 파일 package.json : root 경로에 존재하며, npm 프로젝트를 관리하는 파일 package.</description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>/post/mysql/</link>
+      <link>https://AswinBlue.github.io/post/mysql/</link>
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
-      <guid>/post/mysql/</guid>
+      <guid>https://AswinBlue.github.io/post/mysql/</guid>
       <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax
 명령어에서 대소문자는 상관없다. mysql에서 주석은 &amp;lsquo;#&amp;lsquo;을 사용한다. 실행 및 로그인 mysql mysql 실행, 기본으로 설정된 user로 로그인됨 mysql -u 아이디 -p -u: 특정 아이디로 로그인 -p: 로그인시 비밀번호 입력하도록 데이터베이스 관리 DB 생성 UTF8 로 문자열 저장하기 CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8 DB 목록확인 show databases DB 선택 use DB_NAME 종료 EXIT 로그인 &amp;amp; 데이터베이스 선택 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도 -u DB_NAME 옵션은 로그인 후 $use DB_NAME 과 같은 효과 테이블 생성 및 관리 TABLE_NAME 테이블의 스키마 확인 desc TABLE_NAME</description>
     </item>
     
     <item>
       <title>PythonCGI</title>
-      <link>/post/pythoncgi/</link>
+      <link>https://AswinBlue.github.io/post/pythoncgi/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>/post/pythoncgi/</guid>
+      <guid>https://AswinBlue.github.io/post/pythoncgi/</guid>
       <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>/post/javascript/</link>
+      <link>https://AswinBlue.github.io/post/javascript/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
       
-      <guid>/post/javascript/</guid>
+      <guid>https://AswinBlue.github.io/post/javascript/</guid>
       <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성
 document를 호출하고, .으로 함수를 호출한다.
 querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음
@@ -279,10 +279,10 @@ ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quo
     
     <item>
       <title>Css</title>
-      <link>/post/css/</link>
+      <link>https://AswinBlue.github.io/post/css/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
-      <guid>/post/css/</guid>
+      <guid>https://AswinBlue.github.io/post/css/</guid>
       <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐 tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다. html 문서 안에 &amp;lt;style&amp;gt; 태그 안에 작성 가능
 ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
 태그의 종류별로 속성 설정 가능
@@ -292,19 +292,19 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
     
     <item>
       <title>Html</title>
-      <link>/post/html/</link>
+      <link>https://AswinBlue.github.io/post/html/</link>
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
-      <guid>/post/html/</guid>
+      <guid>https://AswinBlue.github.io/post/html/</guid>
       <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하고 &amp;lt;/TAG_NAME&amp;gt;로 끝냄 태그별로 검색 엔진에서 노출되는 중요도가 다르다. 태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다. html : body와 head를 통틀어 묶은 최 고위 태그 관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다. body : 본문을 묶는 태그 head : 본문을 설명하는 태그 body 태그 strong : 굵은 글씨</description>
     </item>
     
     <item>
       <title>Linux_apt</title>
-      <link>/post/linux_apt/</link>
+      <link>https://AswinBlue.github.io/post/linux_apt/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>/post/linux_apt/</guid>
+      <guid>https://AswinBlue.github.io/post/linux_apt/</guid>
       <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
 하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
 본 해프닝에 대해 서술하자면 아래와 같다.
@@ -315,10 +315,10 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
     
     <item>
       <title>Hugo 환경세팅</title>
-      <link>/post/hugo_dev/</link>
+      <link>https://AswinBlue.github.io/post/hugo_dev/</link>
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
-      <guid>/post/hugo_dev/</guid>
+      <guid>https://AswinBlue.github.io/post/hugo_dev/</guid>
       <description>Hugo를 이용해 블로그 만들기 Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.
 게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.
 Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.
