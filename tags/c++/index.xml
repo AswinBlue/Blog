@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>c&#43;&#43; on AswinBlue</title>
-    <link>https://AswinBlue.github.io/tags/c&#43;&#43;/</link>
+    <link>/tags/c&#43;&#43;/</link>
     <description>Recent content in c&#43;&#43; on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GDB</title>
-      <link>https://AswinBlue.github.io/post/gdb/</link>
+      <link>/post/gdb/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/gdb/</guid>
+      <guid>/post/gdb/</guid>
       <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint
 b [라인] : 해당 라인에 breakpoint 설정 b [함수명] : 해당 함수 시작점에 breakpoint 설정 b [파일명]:[라인] : 특정 파일 해당 라인에 breakpoin (ex : b test.cpp:10) tb : 임시 중단점 설정, 일회성 info b : breakpoint 확인 delete : 모든 brekapoint 삭제 delete [index] : 특정 breakpoint 삭제 cl [라인] : 해당 라인의 brekapoint 삭제 cl [함수] : 해당 함수의 breakpoint 삭제 cl : 모든 breakpoint 삭제 enable [index] : 해당 brekapoint 활성화 disable [index] : 해당 breakpoint 비활성화 condition [index] [조건] : 해당 breakpoint는 조건을 만족할 때에만 동작 (ex : condition 2 var_a == 0) ▷ 실행</description>
     </item>
     
     <item>
       <title>C&#43;&#43; basic</title>
-      <link>https://AswinBlue.github.io/post/c&#43;&#43;/</link>
+      <link>/post/c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/c&#43;&#43;/</guid>
+      <guid>/post/c&#43;&#43;/</guid>
       <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\printf(&amp;#34;%d&amp;#34;, (X) + 1);\printf(&amp;#34;%d&amp;#34;, (X) + 2); 매크로 합성 : #define A 1#define B 1#define C A##B // A##B = 12 함수형태 매크로 작성 : // 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.</description>
     </item>
     
     <item>
       <title>CMake</title>
-      <link>https://AswinBlue.github.io/post/cmake/</link>
+      <link>/post/cmake/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/cmake/</guid>
+      <guid>/post/cmake/</guid>
       <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구
 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
 cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
@@ -41,19 +41,19 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
     
     <item>
       <title>Json in C&#43;&#43;</title>
-      <link>https://AswinBlue.github.io/post/json_c&#43;&#43;/</link>
+      <link>/post/json_c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/json_c&#43;&#43;/</guid>
+      <guid>/post/json_c&#43;&#43;/</guid>
       <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
     </item>
     
     <item>
       <title>spdlog C&#43;&#43;</title>
-      <link>https://AswinBlue.github.io/post/log_c&#43;&#43;/</link>
+      <link>/post/log_c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/log_c&#43;&#43;/</guid>
+      <guid>/post/log_c&#43;&#43;/</guid>
       <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
     </item>
     

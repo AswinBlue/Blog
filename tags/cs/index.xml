@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>CS on AswinBlue</title>
-    <link>https://AswinBlue.github.io/tags/cs/</link>
+    <link>/tags/cs/</link>
     <description>Recent content in CS on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Jan 2023 21:59:14 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Jan 2023 21:59:14 +0900</lastBuildDate><atom:link href="/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Computer_science</title>
-      <link>https://AswinBlue.github.io/post/computer_science/</link>
+      <link>/post/computer_science/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/computer_science/</guid>
+      <guid>/post/computer_science/</guid>
       <description>CPU Segment 프로세스가 사용하는 메모리를 Segment라 칭하며, 리눅스에서는 5가지 종류로 이를 분류한다.
 코드 세그먼트 : 실행 가능한 코드가 위치한 영역으로, text segment라고도 부른다. 데이터 세그먼트 : 코드 실행에 필요한 데이터가 있는 영역으로, 전역변수 및 전역 상수들이 위치한다. 쓰기가 가능한 데이터들과 읽기만 가능한 상수 데이터들은 각각 data segment와 rodata(read-only) segment 에 저장된다. BSS 세그먼트 : Block Started by Symbol 의 약자로, 컴파일시점에 값이 정해지지 않은 전역변수가 저장되는 영역이다. 이 영역은 프로그램 시작시 모두 0으로 초기화 된다.</description>
     </item>

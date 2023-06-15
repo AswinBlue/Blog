@@ -2,449 +2,449 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on AswinBlue</title>
-    <link>https://AswinBlue.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>flutter</title>
-      <link>https://AswinBlue.github.io/tags/flutter/</link>
+      <link>/tags/flutter/</link>
       <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/flutter/</guid>
+      <guid>/tags/flutter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CS</title>
-      <link>https://AswinBlue.github.io/tags/cs/</link>
+      <link>/tags/cs/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/cs/</guid>
+      <guid>/tags/cs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://AswinBlue.github.io/tags/html/</link>
+      <link>/tags/html/</link>
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/html/</guid>
+      <guid>/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jsp</title>
-      <link>https://AswinBlue.github.io/tags/jsp/</link>
+      <link>/tags/jsp/</link>
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/jsp/</guid>
+      <guid>/tags/jsp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>https://AswinBlue.github.io/tags/css/</link>
+      <link>/tags/css/</link>
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/css/</guid>
+      <guid>/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://AswinBlue.github.io/tags/java/</link>
+      <link>/tags/java/</link>
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/java/</guid>
+      <guid>/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>server</title>
-      <link>https://AswinBlue.github.io/tags/server/</link>
+      <link>/tags/server/</link>
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/server/</guid>
+      <guid>/tags/server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring_boot</title>
-      <link>https://AswinBlue.github.io/tags/spring_boot/</link>
+      <link>/tags/spring_boot/</link>
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/spring_boot/</guid>
+      <guid>/tags/spring_boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>firebase</title>
-      <link>https://AswinBlue.github.io/tags/firebase/</link>
+      <link>/tags/firebase/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/firebase/</guid>
+      <guid>/tags/firebase/</guid>
       <description></description>
     </item>
     
     <item>
       <title>react</title>
-      <link>https://AswinBlue.github.io/tags/react/</link>
+      <link>/tags/react/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/react/</guid>
+      <guid>/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bitcoin</title>
-      <link>https://AswinBlue.github.io/tags/bitcoin/</link>
+      <link>/tags/bitcoin/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/bitcoin/</guid>
+      <guid>/tags/bitcoin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cryptocurrency</title>
-      <link>https://AswinBlue.github.io/tags/cryptocurrency/</link>
+      <link>/tags/cryptocurrency/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/cryptocurrency/</guid>
+      <guid>/tags/cryptocurrency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cryptograph</title>
-      <link>https://AswinBlue.github.io/tags/cryptograph/</link>
+      <link>/tags/cryptograph/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/cryptograph/</guid>
+      <guid>/tags/cryptograph/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DB</title>
-      <link>https://AswinBlue.github.io/tags/db/</link>
+      <link>/tags/db/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/db/</guid>
+      <guid>/tags/db/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>https://AswinBlue.github.io/tags/go/</link>
+      <link>/tags/go/</link>
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/go/</guid>
+      <guid>/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>deep learning</title>
-      <link>https://AswinBlue.github.io/tags/deep-learning/</link>
+      <link>/tags/deep-learning/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/deep-learning/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://AswinBlue.github.io/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tensorflow</title>
-      <link>https://AswinBlue.github.io/tags/tensorflow/</link>
+      <link>/tags/tensorflow/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/tensorflow/</guid>
+      <guid>/tags/tensorflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gui</title>
-      <link>https://AswinBlue.github.io/tags/gui/</link>
+      <link>/tags/gui/</link>
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/gui/</guid>
+      <guid>/tags/gui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kivy</title>
-      <link>https://AswinBlue.github.io/tags/kivy/</link>
+      <link>/tags/kivy/</link>
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/kivy/</guid>
+      <guid>/tags/kivy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>angular</title>
-      <link>https://AswinBlue.github.io/tags/angular/</link>
+      <link>/tags/angular/</link>
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/angular/</guid>
+      <guid>/tags/angular/</guid>
       <description></description>
     </item>
     
     <item>
       <title>typescript</title>
-      <link>https://AswinBlue.github.io/tags/typescript/</link>
+      <link>/tags/typescript/</link>
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/typescript/</guid>
+      <guid>/tags/typescript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring</title>
-      <link>https://AswinBlue.github.io/tags/spring/</link>
+      <link>/tags/spring/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/spring/</guid>
+      <guid>/tags/spring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jython</title>
-      <link>https://AswinBlue.github.io/tags/jython/</link>
+      <link>/tags/jython/</link>
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/jython/</guid>
+      <guid>/tags/jython/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regular expression</title>
-      <link>https://AswinBlue.github.io/tags/regular-expression/</link>
+      <link>/tags/regular-expression/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/regular-expression/</guid>
+      <guid>/tags/regular-expression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scrapping</title>
-      <link>https://AswinBlue.github.io/tags/scrapping/</link>
+      <link>/tags/scrapping/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/scrapping/</guid>
+      <guid>/tags/scrapping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>https://AswinBlue.github.io/tags/web/</link>
+      <link>/tags/web/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/web/</guid>
+      <guid>/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c</title>
-      <link>https://AswinBlue.github.io/tags/c/</link>
+      <link>/tags/c/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/c/</guid>
+      <guid>/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c&#43;&#43;</title>
-      <link>https://AswinBlue.github.io/tags/c&#43;&#43;/</link>
+      <link>/tags/c&#43;&#43;/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/c&#43;&#43;/</guid>
+      <guid>/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>debug</title>
-      <link>https://AswinBlue.github.io/tags/debug/</link>
+      <link>/tags/debug/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/debug/</guid>
+      <guid>/tags/debug/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gdb</title>
-      <link>https://AswinBlue.github.io/tags/gdb/</link>
+      <link>/tags/gdb/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/gdb/</guid>
+      <guid>/tags/gdb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>javaScript</title>
-      <link>https://AswinBlue.github.io/tags/javascript/</link>
+      <link>/tags/javascript/</link>
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/javascript/</guid>
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web application</title>
-      <link>https://AswinBlue.github.io/tags/web-application/</link>
+      <link>/tags/web-application/</link>
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/web-application/</guid>
+      <guid>/tags/web-application/</guid>
       <description></description>
     </item>
     
     <item>
       <title>basic</title>
-      <link>https://AswinBlue.github.io/tags/basic/</link>
+      <link>/tags/basic/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/basic/</guid>
+      <guid>/tags/basic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cmake</title>
-      <link>https://AswinBlue.github.io/tags/cmake/</link>
+      <link>/tags/cmake/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/cmake/</guid>
+      <guid>/tags/cmake/</guid>
       <description></description>
     </item>
     
     <item>
       <title>json</title>
-      <link>https://AswinBlue.github.io/tags/json/</link>
+      <link>/tags/json/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/json/</guid>
+      <guid>/tags/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://AswinBlue.github.io/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>log</title>
-      <link>https://AswinBlue.github.io/tags/log/</link>
+      <link>/tags/log/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/log/</guid>
+      <guid>/tags/log/</guid>
       <description></description>
     </item>
     
     <item>
       <title>make</title>
-      <link>https://AswinBlue.github.io/tags/make/</link>
+      <link>/tags/make/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/make/</guid>
+      <guid>/tags/make/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sed</title>
-      <link>https://AswinBlue.github.io/tags/sed/</link>
+      <link>/tags/sed/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/sed/</guid>
+      <guid>/tags/sed/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spdlog</title>
-      <link>https://AswinBlue.github.io/tags/spdlog/</link>
+      <link>/tags/spdlog/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/spdlog/</guid>
+      <guid>/tags/spdlog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nodejs</title>
-      <link>https://AswinBlue.github.io/tags/nodejs/</link>
+      <link>/tags/nodejs/</link>
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/nodejs/</guid>
+      <guid>/tags/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>webServer</title>
-      <link>https://AswinBlue.github.io/tags/webserver/</link>
+      <link>/tags/webserver/</link>
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/webserver/</guid>
+      <guid>/tags/webserver/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mysql</title>
-      <link>https://AswinBlue.github.io/tags/mysql/</link>
+      <link>/tags/mysql/</link>
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/mysql/</guid>
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CGI</title>
-      <link>https://AswinBlue.github.io/tags/cgi/</link>
+      <link>/tags/cgi/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/cgi/</guid>
+      <guid>/tags/cgi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://AswinBlue.github.io/tags/hugo/</link>
+      <link>/tags/hugo/</link>
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/hugo/</guid>
+      <guid>/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://AswinBlue.github.io/tags/markdown/</link>
+      <link>/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/markdown/</guid>
+      <guid>/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://AswinBlue.github.io/tags/themes/</link>
+      <link>/tags/themes/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/themes/</guid>
+      <guid>/tags/themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>index</title>
-      <link>https://AswinBlue.github.io/tags/index/</link>
+      <link>/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://AswinBlue.github.io/tags/index/</guid>
+      <guid>/tags/index/</guid>
       <description></description>
     </item>
     

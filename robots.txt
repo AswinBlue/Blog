@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://AswinBlue.github.io/sitemap.xml
+Sitemap: sitemap.xml
