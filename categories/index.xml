@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on AswinBlue</title>
-    <link>https://AswinBlue.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dev</title>
-      <link>https://AswinBlue.github.io/categories/dev/</link>
+      <link>/categories/dev/</link>
       <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/categories/dev/</guid>
+      <guid>/categories/dev/</guid>
       <description></description>
     </item>
     
     <item>
       <title>theory</title>
-      <link>https://AswinBlue.github.io/categories/theory/</link>
+      <link>/categories/theory/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/categories/theory/</guid>
+      <guid>/categories/theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>basic</title>
-      <link>https://AswinBlue.github.io/categories/basic/</link>
+      <link>/categories/basic/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/categories/basic/</guid>
+      <guid>/categories/basic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>syntax</title>
-      <link>https://AswinBlue.github.io/categories/syntax/</link>
+      <link>/categories/syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://AswinBlue.github.io/categories/syntax/</guid>
+      <guid>/categories/syntax/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://AswinBlue.github.io/categories/themes/</link>
+      <link>/categories/themes/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://AswinBlue.github.io/categories/themes/</guid>
+      <guid>/categories/themes/</guid>
       <description></description>
     </item>
     
