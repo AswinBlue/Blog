@@ -1,30 +1,942 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Cryptocurrency | AswinBlue</title><meta name=keywords content="cryptograph,cryptocurrency,bitcoin"><meta name=description content="Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
-collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) > num(possible_outputs) 이다."><meta name=author content="AswinBlue"><link rel=canonical href=https://AswinBlue.github.io/post/cryptocurrency/><meta name=google-site-verification content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.b2d7323c6190eef7800087a10abc5c642c537e1a414ec85ee6fa2db077f22f82.css integrity="sha256-stcyPGGQ7veAAIehCrxcZCxTfhpBTshe5votsHfyL4I=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://AswinBlue.github.io accesskey=h title="AswinBlue (Alt + H)">AswinBlue</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://AswinBlue.github.io/archives title=Archive><span>Archive</span></a></li><li><a href=https://AswinBlue.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://AswinBlue.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://AswinBlue.github.io/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><div class=grid-container><div><ins class=kakao_ad_area style=display:none data-ad-unit=DAN-17Lk24lxFVgxtePU data-ad-width=160 data-ad-height=600></ins>
-<script type=text/javascript src=//t1.daumcdn.net/kas/static/ba.min.js async></script></div><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://AswinBlue.github.io>Home</a>&nbsp;»&nbsp;<a href=https://AswinBlue.github.io/post/>Posts</a></div><h1 class=post-title>Cryptocurrency</h1><div class=post-meta><span title='2022-02-02 13:22:27 +0900 KST'>February 2, 2022</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href=https://github.com/AswinBlue/HugoBlog/tree/master/content/post/Cryptocurrency.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#cryptocurrency aria-label=Cryptocurrency>Cryptocurrency</a><ul><li><a href=#cryptographic-hash-function aria-label="Cryptographic Hash function">Cryptographic Hash function</a><ul><li><a href=#%ec%86%8d%ec%84%b11-collision-free aria-label="속성1. collision-free">속성1. collision-free</a><ul><li><a href=#hash-as-message-digest aria-label="hash as message digest">hash as message digest</a></li></ul></li><li><a href=#%ec%86%8d%ec%84%b12-hiding aria-label="속성2. hiding">속성2. hiding</a><ul><li><a href=#commitment aria-label=commitment>commitment</a></li></ul></li><li><a href=#%ec%86%8d%ec%84%b13-puzzle-friendly aria-label="속성3. puzzle-friendly">속성3. puzzle-friendly</a></li><li><a href=#sha-256 aria-label=SHA-256>SHA-256</a></li></ul></li><li><a href=#hash-pointer aria-label="Hash Pointer">Hash Pointer</a></li><li><a href=#digital-signature aria-label="Digital Signature">Digital Signature</a><ul><li><a href=#requirements-for-signature aria-label="Requirements for signature">Requirements for signature</a></li></ul></li><li><a href=#public-keys--secret-keys aria-label="Public Keys &amp;amp; Secret Keys">Public Keys & Secret Keys</a></li><li><a href=#cryptocurrency-1 aria-label=Cryptocurrency>Cryptocurrency</a><ul><li><a href=#double-spending-attack aria-label="double spending attack">double spending attack</a></li></ul></li><li><a href=#decentralization aria-label=Decentralization>Decentralization</a><ul><li><a href=#dsitributed-consensus aria-label="Dsitributed Consensus">Dsitributed Consensus</a><ul><li><a href=#public-consensus-in-crypto-currency aria-label="public consensus in crypto currency">public consensus in crypto currency</a></li><li><a href=#consensus-without-identity aria-label="consensus without identity">consensus without identity</a><ul><li><a href=#weaker-assumption aria-label="weaker assumption">weaker assumption</a></li></ul></li><li><a href=#honesty-problematic aria-label="honesty problematic">honesty problematic</a></li></ul></li><li><a href=#incentive-algorithm aria-label="Incentive Algorithm">Incentive Algorithm</a><ul><li><a href=#proof-of-work aria-label="Proof of work">Proof of work</a><ul><li><a href=#proof-of-work%ec%9d%98-%ec%86%8d%ec%84%b1 aria-label="Proof of work의 속성">Proof of work의 속성</a></li></ul></li></ul></li></ul></li></ul></li></ul></div></details></div><div class=post-content><h1 id=cryptocurrency>Cryptocurrency<a hidden class=anchor aria-hidden=true href=#cryptocurrency>#</a></h1><h2 id=cryptographic-hash-function>Cryptographic Hash function<a hidden class=anchor aria-hidden=true href=#cryptographic-hash-function>#</a></h2><ul><li>hash function은 아래와 같은 속성을 갖는다.</li></ul><ol><li>모든 크기의 String을 input 으로 받는다.</li><li>정해진 크기의 output을 생성한다. (bitcoin에서는 256bit)</li><li>적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다)</li></ol><ul><li><p>cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.</p><ol><li>collision-free</li><li>hiding</li><li>puzzle-friendly</li></ol></li></ul><h3 id=속성1-collision-free>속성1. collision-free<a hidden class=anchor aria-hidden=true href=#속성1-collision-free>#</a></h3><ul><li>x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다.</li><li>이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) > num(possible_outputs) 이다.</li><li>&lsquo;찾을 수 없다&rsquo; 라는 말은, collision이 존재하지만, hahs function의 결과를 예측할 수 없다는 뜻이다.<ul><li>실제로, 2^130 개의 무작위 수를 선택하여 hash function을 돌렸을 때, 99.8%의 확률로 충돌이 발생한다.</li><li>하지만 이 수치는 천문학적으로 크기 때문에 걱정할 필요가 없다. (collision을 발견할 확률은 인류가 만든 최고의 컴퓨터로 우주 생성시부터 계산을 해도, 2초뒤 지구에 운석이 떨어질 확률만큼 낮다.)</li><li>collision을 쉽게 구하는 방법이 있는가?
--> 특정 hash function에 대해서는(SHA256에 대해서도 최단기간 collision을 찾아내는 방법이 알려져 있다.) 가능하지만, 대부분은 그렇지 않다.</li></ul></li></ul><h4 id=hash-as-message-digest>hash as message digest<a hidden class=anchor aria-hidden=true href=#hash-as-message-digest>#</a></h4><ul><li>collision을 구하는 것이 매우 어렵기 때문에, H(x) = H(y)라면, x = y라고 확신해도 된다.</li><li>즉, hash를 이용해 데이터 전송/비교에 드는 비용을 절감 가능하다. (전체 message 대신 hash만 비교)</li></ul><h3 id=속성2-hiding>속성2. hiding<a hidden class=anchor aria-hidden=true href=#속성2-hiding>#</a></h3><ul><li>H(x)를 갖고 x를 유추할 수 없다.</li><li>hiding 속성을 가지려면 아래와 같은 방법을 사용한다.</li><li>high min-entropy 를 가진 무작위 상수 &lsquo;r&rsquo;을 x와 조합(concatenate)하여 hash function의 input에 넣으면 hiding 속성을 갖게 된다. (<code>H(r|x)</code>)</li><li>high min-entropy 란 넓고 고르게 퍼져있음을 뜻한다. 즉, 넓은 선택범위 안에서 특정 값이 특출나게 여려번 중복해서 뽑히지 않는다는 뜻이다. (no particular value is chosen with more than negligible probability)</li></ul><h4 id=commitment>commitment<a hidden class=anchor aria-hidden=true href=#commitment>#</a></h4><ul><li><p>편지를 동봉하듯 데이터가 가지고 있는 내용을 공개하지 않고 데이터를 공개하는 것</p></li><li><p>commitment를 위해 제공하는 commitment API 는 다음과 같이 동작한다.</p><ul><li><code>(commitment, key) = commit(msg)</code> msg를 동봉하고, 그 결과로 commitment와 key를 생성한다. commitment는 봉투에 해당하고, key는 열쇠에 해당한다.<ul><li>commit은 hash function으로 다음과 같이 구성된다. <code>commit(msg) = (H(key | msg), key)</code> 즉, <code>(commitment, key) = H(key|msg), key</code> 이다.</li></ul></li><li><code>match = verify(commitment, key, msg)</code> commitment, key, msg 세가지를 이용해 msg가 올바른지 검증한다.</li></ul></li><li><p>commitment는 두 가지 security property를 갖는다.</p></li><li><p>hiding : commitment만으로 msg를 파악할 수 없다.</p></li><li><p>binding : <code>msg1 != msg2</code> 라면, <code>verify(commit(msg1),msg2) != false</code> 이다.</p></li></ul><h3 id=속성3-puzzle-friendly>속성3. puzzle-friendly<a hidden class=anchor aria-hidden=true href=#속성3-puzzle-friendly>#</a></h3><ul><li>임의의 &lsquo;k&rsquo;가 high min-entropy 속성을 갖고 있다면, <code>H(k|x) = y</code> 를 만족시키는 x를 찾을 수 없다.</li><li>즉, 특정 값 y가 나오도록 x를 임의로 조작할 수 없다는 뜻이다.</li></ul><hr><p>앞서 말한 hash function으로는 여러가지 종류들이 있다. 그중 SHA-256에 대해 살펴보자.</p><h3 id=sha-256>SHA-256<a hidden class=anchor aria-hidden=true href=#sha-256>#</a></h3><ul><li>동작 방법은 아래와 같다.<ul><li>message를 512bit씩 잘라서, 256bit의 데이터&rsquo;IV&rsquo;와 함께 hashing 연산 &lsquo;C&rsquo;을 수행한다.</li><li>위 결과와 다음 256bit 메시지를 다시 &lsquo;C&rsquo;연산시킨다.</li><li>이를 메시지 끝까지 반복한다. 마지막 메시지가 256bit가 되지 않는다면 (10*|length) 로 이루어진 padding을 집어넣어 연산한다.</li></ul></li><li>collision-free를 만족하기 때문에 &lsquo;C&rsquo; 연산 각각도 collision-free이다.</li></ul><h2 id=hash-pointer>Hash Pointer<a hidden class=anchor aria-hidden=true href=#hash-pointer>#</a></h2><ul><li>data structure의 hash와 동일하게, hash pointer는 특정 데이터를 가리키는 pointer이다.</li><li>다만, 데이터는 info와 cryptographic hash를 포함한다.</li><li>hash pointer를 이용하면 데이터와, 데이터의 변경여부를 확인할 수 있다.</li><li>hash pointer를 이용하여 다양한 data structure를 구성할 수 있다.<ul><li>hash pointer를 이용해 linked list를 구성하면 흔히 block chain이라 불리는 구조가 형성된다.</li><li>linked-list의 block 하나가 &lsquo;주소 + 데이터&rsquo; 로 이루어져 있는데, block chain 에서는 &lsquo;주소&rsquo; 부분이 이전 block의 hash값(hash + data 의 hash값)으로 구성되어 있다.
-ex) <code>H(root) - B1[data1, H(B2)] - B2[data2, H(B3)] - B3[data3, H(B4)] ...</code></li><li>hash값을 이용하여 다음 데이터가 수정이 이루어졌는지 확인 가능하다. (tamper-evident)<ul><li>data3을 수정하면 H(B3)값과 B2의 H()값이 일치하지 않게 된다.</li><li>B2의 H()값을 수정하면 이번에는 H(B2)와 B1의 H()값이 일치하지 않는다.</li><li>연쇄적으로 B2, B1, root까지 수정하면 다시 모든 hash값이 맞아 떨어지게 된다.</li></ul></li><li>가장 최초의 block을 &lsquo;genesis block&rsquo;이라 부른다.</li></ul></li><li>hash pointer로 binary tree를 구성할 수도 있다. (Merkle tree)<ul><li>tree의 leaf node에는 data가 들어가고, 이후 root node 포함 모든 node들은 left&amp;right 자식 node들의 hash값을 갖게 된다.</li><li>데이터가 변경되면, 부모 node의 hash값이 연쇄적으로 어긋나게 되고, 최종적으로 root node의 hash값 R과 달라지게 된다. (H(root) 값을 기억하면 데이터 변경을 감지할 수 있게 된다.)</li><li>데이터 검증을 위해 모든 block들을 사용해야 했던 기존 block chain과 다르게, Merkle tree는 O(log n) 개의 node만으로도 데이터 무결성을 증명할 수 있다.</li><li>검증 시간 및 검색, 정렬 시간이 직렬 데이터 구조보다 절감된다.</li></ul></li><li>hash pointer는 cycle이 없는 모든 pointer-based data structure에 사용 가능하다.</li></ul><h2 id=digital-signature>Digital Signature<a hidden class=anchor aria-hidden=true href=#digital-signature>#</a></h2><ul><li>Digital Signature 은 아래와 같은 속성을 지녀야 한다.</li></ul><ol><li>only you can sign, but anyone can verify : 본인만 사용 가능하며 본인임을 인증할 수 있어야 한다.</li><li>tied to a particular document : 서명과 인증할 대상이 분리 불가능해야 한다.</li></ol><ul><li>digital signature의 API는 아래와 같을 것이다.
-<code>(secret_key, public_key) := generateKeys(size_of_key)</code> : Key를 생성하는 함수.<ul><li>randomize 되어있어야 한다.
-<code>sig := sign(secret_key, message)</code> : 특정 message에 서명을 하는 함수</li><li>마찬가지로 randomize가 잘 되어있어야 한다.</li><li>message의 길이가 너무 길면 처리하기 힘드므로, Hash function의 collision-free 특성을 이용해 message의 hash 값을 쓰도록 한다.
-<code>isValid := verify(public_key, message, sig)</code> : public key와 message, sig의 조합으로 알맞은 서명인지 검증하는 함수</li></ul></li></ul><h3 id=requirements-for-signature>Requirements for signature<a hidden class=anchor aria-hidden=true href=#requirements-for-signature>#</a></h3><ul><li>위 API로 만든 signature의 조건으로는 아래 두가지가 있다.</li></ul><ol><li>public_key, sig, message로 message가 당신의 것임을 인증 가능</li><li>다른 이가 당신의 public_key, sig를 이용해 다른 message′ 에 서명을 할 수 없어야 한다.</li></ol><ul><li>secret_key 를 공개하지 않고, public key를 타인에게 공개한 후, 수 많은 message [m0, m1, m2, &mldr;] 에 대해 서명을 한 결과 [sign(m0), sign(m1), sign(m2), &mldr;]를 타인에게 주었을 때, 그 사람이 새로운 메시지 m′에 대한 서명 sign(m′)을 만들어 낼 확률은 극히 낮아야 한다.</li></ul><p>+ Hash pointer를 sign하면, hash pointer 뿐만 아니라, pointer가 가리키는 전체 구조를 sign하는 효과를 얻을 수 있다.
-+ bitcin은 ECDSA(Elliptic Curve Digital Signature Algorithm) 표준을 사용한다.</p><h2 id=public-keys--secret-keys>Public Keys & Secret Keys<a hidden class=anchor aria-hidden=true href=#public-keys--secret-keys>#</a></h2><ul><li>public key는 개인을 식별할 수 있는 &lsquo;식별자&rsquo;이다. public key는 모두에게 공개되며, public key로 개개인을 구분할 수 있다.</li><li>secret key는 public key로 특정 발언을 할 수 있는 &lsquo;권한&rsquo; 이다.</li><li>public key 와 secret key는 pair로 존재하며, &lsquo;identity&rsquo; (고유함)를 구성한다.<ul><li>identity는 아무 때나, 몇개든 만들 수 있으며, 모든 identity를 관리하기위한 중앙 체제가 필요없다. (decentralized)</li><li>다만, 랜덤 요소가 약하다면 다수의 public key와 message를 통해 secret key가 유출될 가능성이 있음에 주의한다.</li></ul></li><li>이러한 속성 덕분에 bitcoin에서도 identity를 &lsquo;address&rsquo; 라는 용어로 사용한다.</li><li>address 는 탈 중앙화로 동작하지만, 개인이 만든 address는 즉시 identity 속성을 갖지는 못한다.<ul><li>address가 identity 속성을 갖게 하기 위해서는 다른 address들과 엮어야 하는데, observer가 주기적으로 이 동작을 수행하도록 해야한다.</li><li>address를 추적하면 address 명의로 수행한 행위들을 추출할 수 있는데, 이 내용으로 특정 개인을 추정할 수 있는 취약점이 있다.</li></ul></li></ul><hr><h2 id=cryptocurrency-1>Cryptocurrency<a hidden class=anchor aria-hidden=true href=#cryptocurrency-1>#</a></h2><ul><li>CryptoCurrency(이하 coin)에는 다음과 같은 조건이 필요하다.</li></ul><ol><li>public key, unique coin id 를 이용해 coin을 만들 수 있어야 한다.</li></ol><ul><li>A 가 unique coin id 를 인자로 coin을 만들고, 이를 public key로 sign하는 방식으로 coin을 생성한다.(<code>[pk_A, createCoin(unique_coin_id)]</code>)</li></ul><ol start=2><li>coin은 다른 사람에게 전달 가능해야 한다.</li></ol><ul><li><p>A 가 B 에게 coin을 전달한다고 할 때, 만들어진 coin을 가리키는 거래내역 block을 생성한다. <code>[pk_A, pay_to(pk_B)] -> [pk_A, createCoin(unique_coin_id)]</code></p><ul><li>pay_to 블럭의 hash pointer가 createCoin 블럭을 가리킨다. 이러면 coin의 소유자가 A에서 B로 넘어간 것이다.</li></ul></li><li><p>이후 B가 C로 coin을 전달하면 <code>[pk_B, pay_to(pk_C)] -> [pk_A, pay_to(pk_B)] -> [pk_A, createCoin(unique_coin_id)]</code> 형태가 될 것이다.</p></li><li><p>모든 chain을 따라가면 coin이 누구의 소유인지 확인 가능하다.</p></li></ul><h3 id=double-spending-attack>double spending attack<a hidden class=anchor aria-hidden=true href=#double-spending-attack>#</a></h3><ul><li>coin의 chain은 직렬로 이루어져야 한다. 만약 branch가 생겨나면 소유권이 꼬이게 된다.</li><li>아래와 같이 B가 특정 coin을 두번 이상 spend 하는 형태가 발생할 수 있다.</li></ul><pre tabindex=0><code>[pk_B, pay_to(pk_C)]    [pk_B, pay_to(pk_D)]
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Cryptocurrency | AswinBlue</title>
+<meta name="keywords" content="cryptograph, cryptocurrency, bitcoin">
+<meta name="description" content="Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
+collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &gt; num(possible_outputs) 이다.">
+<meta name="author" content="AswinBlue">
+<link rel="canonical" href="https://AswinBlue.github.io/post/cryptocurrency/">
+<meta name="google-site-verification" content="XYZabc">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b2d7323c6190eef7800087a10abc5c642c537e1a414ec85ee6fa2db077f22f82.css" integrity="sha256-stcyPGGQ7veAAIehCrxcZCxTfhpBTshe5votsHfyL4I=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="mask-icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="grid-container">
+        <div><ins class="kakao_ad_area" style="display:none;"
+data-ad-unit = "DAN-17Lk24lxFVgxtePU"
+data-ad-width = "160"
+data-ad-height = "600"></ins>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script></div>
+
+        <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a>&nbsp;»&nbsp;<a href="https://AswinBlue.github.io/post/">Posts</a></div>
+    <h1 class="post-title">
+      Cryptocurrency
+    </h1>
+    <div class="post-meta"><span title='2022-02-02 13:22:27 +0900 KST'>February 2, 2022</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;AswinBlue&nbsp;|&nbsp;<a href="https://github.com/AswinBlue/HugoBlog/tree/master/content/post/Cryptocurrency.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#cryptocurrency" aria-label="Cryptocurrency">Cryptocurrency</a><ul>
+                        
+                <li>
+                    <a href="#cryptographic-hash-function" aria-label="Cryptographic Hash function">Cryptographic Hash function</a><ul>
+                        
+                <li>
+                    <a href="#%ec%86%8d%ec%84%b11-collision-free" aria-label="속성1. collision-free">속성1. collision-free</a><ul>
+                        
+                <li>
+                    <a href="#hash-as-message-digest" aria-label="hash as message digest">hash as message digest</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%86%8d%ec%84%b12-hiding" aria-label="속성2. hiding">속성2. hiding</a><ul>
+                        
+                <li>
+                    <a href="#commitment" aria-label="commitment">commitment</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%ec%86%8d%ec%84%b13-puzzle-friendly" aria-label="속성3. puzzle-friendly">속성3. puzzle-friendly</a></li>
+                <li>
+                    <a href="#sha-256" aria-label="SHA-256">SHA-256</a></li></ul>
+                </li>
+                <li>
+                    <a href="#hash-pointer" aria-label="Hash Pointer">Hash Pointer</a></li>
+                <li>
+                    <a href="#digital-signature" aria-label="Digital Signature">Digital Signature</a><ul>
+                        
+                <li>
+                    <a href="#requirements-for-signature" aria-label="Requirements for signature">Requirements for signature</a></li></ul>
+                </li>
+                <li>
+                    <a href="#public-keys--secret-keys" aria-label="Public Keys &amp;amp; Secret Keys">Public Keys &amp; Secret Keys</a></li>
+                <li>
+                    <a href="#cryptocurrency-1" aria-label="Cryptocurrency">Cryptocurrency</a><ul>
+                        
+                <li>
+                    <a href="#double-spending-attack" aria-label="double spending attack">double spending attack</a></li></ul>
+                </li>
+                <li>
+                    <a href="#decentralization" aria-label="Decentralization">Decentralization</a><ul>
+                        
+                <li>
+                    <a href="#dsitributed-consensus" aria-label="Dsitributed Consensus">Dsitributed Consensus</a><ul>
+                        
+                <li>
+                    <a href="#public-consensus-in-crypto-currency" aria-label="public consensus in crypto currency">public consensus in crypto currency</a></li>
+                <li>
+                    <a href="#consensus-without-identity" aria-label="consensus without identity">consensus without identity</a><ul>
+                        
+                <li>
+                    <a href="#weaker-assumption" aria-label="weaker assumption">weaker assumption</a></li></ul>
+                </li>
+                <li>
+                    <a href="#honesty-problematic" aria-label="honesty problematic">honesty problematic</a></li></ul>
+                </li>
+                <li>
+                    <a href="#incentive-algorithm" aria-label="Incentive Algorithm">Incentive Algorithm</a><ul>
+                        
+                <li>
+                    <a href="#proof-of-work" aria-label="Proof of work">Proof of work</a><ul>
+                        
+                <li>
+                    <a href="#proof-of-work%ec%9d%98-%ec%86%8d%ec%84%b1" aria-label="Proof of work의 속성">Proof of work의 속성</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="cryptocurrency">Cryptocurrency<a hidden class="anchor" aria-hidden="true" href="#cryptocurrency">#</a></h1>
+<h2 id="cryptographic-hash-function">Cryptographic Hash function<a hidden class="anchor" aria-hidden="true" href="#cryptographic-hash-function">#</a></h2>
+<ul>
+<li>hash function은 아래와 같은 속성을 갖는다.</li>
+</ul>
+<ol>
+<li>모든 크기의 String을 input 으로 받는다.</li>
+<li>정해진 크기의 output을 생성한다. (bitcoin에서는 256bit)</li>
+<li>적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다)</li>
+</ol>
+<ul>
+<li>
+<p>cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.</p>
+<ol>
+<li>collision-free</li>
+<li>hiding</li>
+<li>puzzle-friendly</li>
+</ol>
+</li>
+</ul>
+<h3 id="속성1-collision-free">속성1. collision-free<a hidden class="anchor" aria-hidden="true" href="#속성1-collision-free">#</a></h3>
+<ul>
+<li>x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다.</li>
+<li>이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &gt; num(possible_outputs) 이다.</li>
+<li>&lsquo;찾을 수 없다&rsquo; 라는 말은, collision이 존재하지만, hahs function의 결과를 예측할 수 없다는 뜻이다.
+<ul>
+<li>실제로, 2^130 개의 무작위 수를 선택하여 hash function을 돌렸을 때, 99.8%의 확률로 충돌이 발생한다.</li>
+<li>하지만 이 수치는 천문학적으로 크기 때문에 걱정할 필요가 없다. (collision을 발견할 확률은 인류가 만든 최고의 컴퓨터로 우주 생성시부터 계산을 해도, 2초뒤 지구에 운석이 떨어질 확률만큼 낮다.)</li>
+<li>collision을 쉽게 구하는 방법이 있는가?
+-&gt; 특정 hash function에 대해서는(SHA256에 대해서도 최단기간 collision을 찾아내는 방법이 알려져 있다.) 가능하지만, 대부분은 그렇지 않다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="hash-as-message-digest">hash as message digest<a hidden class="anchor" aria-hidden="true" href="#hash-as-message-digest">#</a></h4>
+<ul>
+<li>collision을 구하는 것이 매우 어렵기 때문에, H(x) = H(y)라면, x = y라고 확신해도 된다.</li>
+<li>즉, hash를 이용해 데이터 전송/비교에 드는 비용을 절감 가능하다. (전체 message 대신 hash만 비교)</li>
+</ul>
+<h3 id="속성2-hiding">속성2. hiding<a hidden class="anchor" aria-hidden="true" href="#속성2-hiding">#</a></h3>
+<ul>
+<li>H(x)를 갖고 x를 유추할 수 없다.</li>
+<li>hiding 속성을 가지려면 아래와 같은 방법을 사용한다.</li>
+<li>high min-entropy 를 가진 무작위 상수 &lsquo;r&rsquo;을 x와 조합(concatenate)하여 hash function의 input에 넣으면 hiding 속성을 갖게 된다. (<code>H(r|x)</code>)</li>
+<li>high min-entropy 란 넓고 고르게 퍼져있음을 뜻한다. 즉, 넓은 선택범위 안에서 특정 값이 특출나게 여려번 중복해서 뽑히지 않는다는 뜻이다. (no particular value is chosen with more than negligible probability)</li>
+</ul>
+<h4 id="commitment">commitment<a hidden class="anchor" aria-hidden="true" href="#commitment">#</a></h4>
+<ul>
+<li>
+<p>편지를 동봉하듯 데이터가 가지고 있는 내용을 공개하지 않고 데이터를 공개하는 것</p>
+</li>
+<li>
+<p>commitment를 위해 제공하는 commitment API 는 다음과 같이 동작한다.</p>
+<ul>
+<li><code>(commitment, key) = commit(msg)</code> msg를 동봉하고, 그 결과로 commitment와 key를 생성한다. commitment는 봉투에 해당하고, key는 열쇠에 해당한다.
+<ul>
+<li>commit은 hash function으로 다음과 같이 구성된다. <code>commit(msg) = (H(key | msg), key)</code> 즉, <code>(commitment, key) = H(key|msg), key</code> 이다.</li>
+</ul>
+</li>
+<li><code>match = verify(commitment, key, msg)</code> commitment, key, msg 세가지를 이용해 msg가 올바른지 검증한다.</li>
+</ul>
+</li>
+<li>
+<p>commitment는 두 가지 security property를 갖는다.</p>
+</li>
+<li>
+<p>hiding : commitment만으로 msg를 파악할 수 없다.</p>
+</li>
+<li>
+<p>binding : <code>msg1 != msg2</code> 라면, <code>verify(commit(msg1),msg2) != false</code> 이다.</p>
+</li>
+</ul>
+<h3 id="속성3-puzzle-friendly">속성3. puzzle-friendly<a hidden class="anchor" aria-hidden="true" href="#속성3-puzzle-friendly">#</a></h3>
+<ul>
+<li>임의의 &lsquo;k&rsquo;가 high min-entropy 속성을 갖고 있다면, <code>H(k|x) = y</code> 를 만족시키는 x를 찾을 수 없다.</li>
+<li>즉, 특정 값 y가 나오도록 x를 임의로 조작할 수 없다는 뜻이다.</li>
+</ul>
+<hr>
+<p>앞서 말한 hash function으로는 여러가지 종류들이 있다. 그중 SHA-256에 대해 살펴보자.</p>
+<h3 id="sha-256">SHA-256<a hidden class="anchor" aria-hidden="true" href="#sha-256">#</a></h3>
+<ul>
+<li>동작 방법은 아래와 같다.
+<ul>
+<li>message를 512bit씩 잘라서, 256bit의 데이터&rsquo;IV&rsquo;와 함께 hashing 연산 &lsquo;C&rsquo;을 수행한다.</li>
+<li>위 결과와 다음 256bit 메시지를 다시 &lsquo;C&rsquo;연산시킨다.</li>
+<li>이를 메시지 끝까지 반복한다. 마지막 메시지가 256bit가 되지 않는다면 (10*|length) 로 이루어진 padding을 집어넣어 연산한다.</li>
+</ul>
+</li>
+<li>collision-free를 만족하기 때문에 &lsquo;C&rsquo; 연산 각각도 collision-free이다.</li>
+</ul>
+<h2 id="hash-pointer">Hash Pointer<a hidden class="anchor" aria-hidden="true" href="#hash-pointer">#</a></h2>
+<ul>
+<li>data structure의 hash와 동일하게, hash pointer는 특정 데이터를 가리키는 pointer이다.</li>
+<li>다만, 데이터는 info와 cryptographic hash를 포함한다.</li>
+<li>hash pointer를 이용하면 데이터와, 데이터의 변경여부를 확인할 수 있다.</li>
+<li>hash pointer를 이용하여 다양한 data structure를 구성할 수 있다.
+<ul>
+<li>hash pointer를 이용해 linked list를 구성하면 흔히 block chain이라 불리는 구조가 형성된다.</li>
+<li>linked-list의 block 하나가 &lsquo;주소 + 데이터&rsquo; 로 이루어져 있는데, block chain 에서는 &lsquo;주소&rsquo; 부분이 이전 block의 hash값(hash + data 의 hash값)으로 구성되어 있다.
+ex) <code>H(root) - B1[data1, H(B2)] - B2[data2, H(B3)] - B3[data3, H(B4)] ...</code></li>
+<li>hash값을 이용하여 다음 데이터가 수정이 이루어졌는지 확인 가능하다. (tamper-evident)
+<ul>
+<li>data3을 수정하면 H(B3)값과 B2의 H()값이 일치하지 않게 된다.</li>
+<li>B2의 H()값을 수정하면 이번에는 H(B2)와 B1의 H()값이 일치하지 않는다.</li>
+<li>연쇄적으로 B2, B1, root까지 수정하면 다시 모든 hash값이 맞아 떨어지게 된다.</li>
+</ul>
+</li>
+<li>가장 최초의 block을 &lsquo;genesis block&rsquo;이라 부른다.</li>
+</ul>
+</li>
+<li>hash pointer로 binary tree를 구성할 수도 있다. (Merkle tree)
+<ul>
+<li>tree의 leaf node에는 data가 들어가고, 이후 root node 포함 모든 node들은 left&amp;right 자식 node들의 hash값을 갖게 된다.</li>
+<li>데이터가 변경되면, 부모 node의 hash값이 연쇄적으로 어긋나게 되고, 최종적으로 root node의 hash값 R과 달라지게 된다. (H(root) 값을 기억하면 데이터 변경을 감지할 수 있게 된다.)</li>
+<li>데이터 검증을 위해 모든 block들을 사용해야 했던 기존 block chain과 다르게, Merkle tree는 O(log n) 개의 node만으로도 데이터 무결성을 증명할 수 있다.</li>
+<li>검증 시간 및 검색, 정렬 시간이 직렬 데이터 구조보다 절감된다.</li>
+</ul>
+</li>
+<li>hash pointer는 cycle이 없는 모든 pointer-based data structure에 사용 가능하다.</li>
+</ul>
+<h2 id="digital-signature">Digital Signature<a hidden class="anchor" aria-hidden="true" href="#digital-signature">#</a></h2>
+<ul>
+<li>Digital Signature 은 아래와 같은 속성을 지녀야 한다.</li>
+</ul>
+<ol>
+<li>only you can sign, but anyone can verify : 본인만 사용 가능하며 본인임을 인증할 수 있어야 한다.</li>
+<li>tied to a particular document : 서명과 인증할 대상이 분리 불가능해야 한다.</li>
+</ol>
+<ul>
+<li>digital signature의 API는 아래와 같을 것이다.
+<code>(secret_key, public_key) := generateKeys(size_of_key)</code> : Key를 생성하는 함수.
+<ul>
+<li>randomize 되어있어야 한다.
+<code>sig := sign(secret_key, message)</code> : 특정 message에 서명을 하는 함수</li>
+<li>마찬가지로 randomize가 잘 되어있어야 한다.</li>
+<li>message의 길이가 너무 길면 처리하기 힘드므로, Hash function의 collision-free 특성을 이용해 message의 hash 값을 쓰도록 한다.
+<code>isValid := verify(public_key, message, sig)</code> : public key와 message, sig의 조합으로 알맞은 서명인지 검증하는 함수</li>
+</ul>
+</li>
+</ul>
+<h3 id="requirements-for-signature">Requirements for signature<a hidden class="anchor" aria-hidden="true" href="#requirements-for-signature">#</a></h3>
+<ul>
+<li>위 API로 만든 signature의 조건으로는 아래 두가지가 있다.</li>
+</ul>
+<ol>
+<li>public_key, sig, message로 message가 당신의 것임을 인증 가능</li>
+<li>다른 이가 당신의 public_key, sig를 이용해 다른 message′ 에 서명을 할 수 없어야 한다.</li>
+</ol>
+<ul>
+<li>secret_key 를 공개하지 않고, public key를 타인에게 공개한 후, 수 많은 message [m0, m1, m2, &hellip;] 에 대해 서명을 한 결과 [sign(m0), sign(m1), sign(m2), &hellip;]를 타인에게 주었을 때, 그 사람이 새로운 메시지 m′에 대한 서명 sign(m′)을 만들어 낼 확률은 극히 낮아야 한다.</li>
+</ul>
+<p>+ Hash pointer를 sign하면, hash pointer 뿐만 아니라, pointer가 가리키는 전체 구조를 sign하는 효과를 얻을 수 있다.
++ bitcin은 ECDSA(Elliptic Curve Digital Signature Algorithm) 표준을 사용한다.</p>
+<h2 id="public-keys--secret-keys">Public Keys &amp; Secret Keys<a hidden class="anchor" aria-hidden="true" href="#public-keys--secret-keys">#</a></h2>
+<ul>
+<li>public key는 개인을 식별할 수 있는 &lsquo;식별자&rsquo;이다. public key는 모두에게 공개되며, public key로 개개인을 구분할 수 있다.</li>
+<li>secret key는 public key로 특정 발언을 할 수 있는 &lsquo;권한&rsquo; 이다.</li>
+<li>public key 와 secret key는 pair로 존재하며, &lsquo;identity&rsquo; (고유함)를 구성한다.
+<ul>
+<li>identity는 아무 때나, 몇개든 만들 수 있으며, 모든 identity를 관리하기위한 중앙 체제가 필요없다. (decentralized)</li>
+<li>다만, 랜덤 요소가 약하다면 다수의 public key와 message를 통해 secret key가 유출될 가능성이 있음에 주의한다.</li>
+</ul>
+</li>
+<li>이러한 속성 덕분에 bitcoin에서도 identity를 &lsquo;address&rsquo; 라는 용어로 사용한다.</li>
+<li>address 는 탈 중앙화로 동작하지만, 개인이 만든 address는 즉시 identity 속성을 갖지는 못한다.
+<ul>
+<li>address가 identity 속성을 갖게 하기 위해서는 다른 address들과 엮어야 하는데, observer가 주기적으로 이 동작을 수행하도록 해야한다.</li>
+<li>address를 추적하면 address 명의로 수행한 행위들을 추출할 수 있는데, 이 내용으로 특정 개인을 추정할 수 있는 취약점이 있다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="cryptocurrency-1">Cryptocurrency<a hidden class="anchor" aria-hidden="true" href="#cryptocurrency-1">#</a></h2>
+<ul>
+<li>CryptoCurrency(이하 coin)에는 다음과 같은 조건이 필요하다.</li>
+</ul>
+<ol>
+<li>public key, unique coin id 를 이용해 coin을 만들 수 있어야 한다.</li>
+</ol>
+<ul>
+<li>A 가 unique coin id 를 인자로 coin을 만들고, 이를 public key로 sign하는 방식으로 coin을 생성한다.(<code>[pk_A, createCoin(unique_coin_id)]</code>)</li>
+</ul>
+<ol start="2">
+<li>coin은 다른 사람에게 전달 가능해야 한다.</li>
+</ol>
+<ul>
+<li>
+<p>A 가 B 에게 coin을 전달한다고 할 때, 만들어진 coin을 가리키는 거래내역 block을 생성한다. <code>[pk_A, pay_to(pk_B)] -&gt; [pk_A, createCoin(unique_coin_id)]</code></p>
+<ul>
+<li>pay_to 블럭의 hash pointer가 createCoin 블럭을 가리킨다. 이러면 coin의 소유자가 A에서 B로 넘어간 것이다.</li>
+</ul>
+</li>
+<li>
+<p>이후 B가 C로 coin을 전달하면 <code>[pk_B, pay_to(pk_C)] -&gt; [pk_A, pay_to(pk_B)] -&gt; [pk_A, createCoin(unique_coin_id)]</code> 형태가 될 것이다.</p>
+</li>
+<li>
+<p>모든 chain을 따라가면 coin이 누구의 소유인지 확인 가능하다.</p>
+</li>
+</ul>
+<h3 id="double-spending-attack">double spending attack<a hidden class="anchor" aria-hidden="true" href="#double-spending-attack">#</a></h3>
+<ul>
+<li>coin의 chain은 직렬로 이루어져야 한다. 만약 branch가 생겨나면 소유권이 꼬이게 된다.</li>
+<li>아래와 같이 B가 특정 coin을 두번 이상 spend 하는 형태가 발생할 수 있다.</li>
+</ul>
+<pre tabindex="0"><code>[pk_B, pay_to(pk_C)]    [pk_B, pay_to(pk_D)]
                 ↓           ↓
               [pk_A, pay_to(pk_B)]
         ↓
 [pk_A, createCoin(unique_coin_id)]
-</code></pre><ul><li><p>이러한 경우, 이 코인은 secure하지 않기 때문에 cryptoCurrency로서는 좋지 않다.</p></li><li><p>double spending attack을 해소하려면 history를 관리하면 된다.</p></li><li><p>history는 위에서 살펴본 block chain(hash pointer를 이용한 linked list) 형태로 구성한다.</p><ul><li>거래내역(transactions) 들을 content로 갖는 block들 생성하고, 이를 hash pointer로 연결한다. (보통 한 block 안에는 다수의 transaction들을 포함한다.)</li><li>관리자가 root hash 및 block들을 public key로 인증하여 publish하면, history가 관리되어 안정성이 확보된다.
-<code>H() -> ... -> [H(), transaction3] -> [H(), transaction2] -> [H(), transaction1]</code></li></ul></li><li><p>transaction들은 관리자에 의해 publish되어야 한다. (pk로 sign)</p></li><li><p>transaction들은 다음과 같이 구성된다.</p></li></ul><ol><li>create coin</li></ol><ul><li>value와 recipient를 설정한다.</li><li>생성한 coin에 고유 id를 붙인다. (trainsaction Id + index로 조합)</li></ul><ol start=2><li>pay</li></ol><ul><li>consume -> create 작업을 수행한다.</li><li>consume은 coin id를 이용해 coin을 폐기하는 작업이다.</li><li>create 작업은 create coin과 동일하다.</li><li>작업을 수행하기 전 다음 사항들을 validate 하고 수행한다.
+</code></pre><ul>
+<li>
+<p>이러한 경우, 이 코인은 secure하지 않기 때문에 cryptoCurrency로서는 좋지 않다.</p>
+</li>
+<li>
+<p>double spending attack을 해소하려면 history를 관리하면 된다.</p>
+</li>
+<li>
+<p>history는 위에서 살펴본 block chain(hash pointer를 이용한 linked list) 형태로 구성한다.</p>
+<ul>
+<li>거래내역(transactions) 들을 content로 갖는 block들 생성하고, 이를 hash pointer로 연결한다. (보통 한 block 안에는 다수의 transaction들을 포함한다.)</li>
+<li>관리자가 root hash 및 block들을 public key로 인증하여 publish하면, history가 관리되어 안정성이 확보된다.
+<code>H() -&gt; ... -&gt; [H(), transaction3] -&gt; [H(), transaction2]  -&gt; [H(), transaction1]</code></li>
+</ul>
+</li>
+<li>
+<p>transaction들은 관리자에 의해 publish되어야 한다. (pk로 sign)</p>
+</li>
+<li>
+<p>transaction들은 다음과 같이 구성된다.</p>
+</li>
+</ul>
+<ol>
+<li>create coin</li>
+</ol>
+<ul>
+<li>value와 recipient를 설정한다.</li>
+<li>생성한 coin에 고유 id를 붙인다. (trainsaction Id + index로 조합)</li>
+</ul>
+<ol start="2">
+<li>pay</li>
+</ol>
+<ul>
+<li>consume -&gt; create 작업을 수행한다.</li>
+<li>consume은 coin id를 이용해 coin을 폐기하는 작업이다.</li>
+<li>create 작업은 create coin과 동일하다.</li>
+<li>작업을 수행하기 전 다음 사항들을 validate 하고 수행한다.
 1) consume하는 coin이 valid한지 체크
 2) consume 하는 coin이 이미 consume되지 않았는지 체크(not double spend)
 3) consume 되는 양과 create 되는 양이 같은지 체크
 4) consume 되는 coin들은 각 owner에 의해 sign 되어있는지 체크
-- 모든 사항이 확인되면 관리자에 의해 publish된다.</li></ul><p>-> double spending 문제는 해결했지만 centralization 문제가 발생한다. (&lsquo;관리자&rsquo; 가 중앙 체제에 해당)</p><h2 id=decentralization>Decentralization<a hidden class=anchor aria-hidden=true href=#decentralization>#</a></h2><ul><li>Crypto currency를 구성하기 위해서는 탈 중앙화가 이루어져야 한다.</li><li>앞서 보았듯이 거래 장부(transaction)를 관리하기 위해서는 이를 인증해 줄 주체가 필요했다. 이 주체를 분산시키는 것이 필요하다. (Distributed Consensus)</li></ul><h3 id=dsitributed-consensus>Dsitributed Consensus<a hidden class=anchor aria-hidden=true href=#dsitributed-consensus>#</a></h3><ul><li>분산의 개념은 암호화 회폐 이전에 서버 동작에서도 논제가 되었다. 여러개의 서버가 병렬로 동작할 때, consistency를 유지하기 위해 distributed consensus protocol이 필요했다.</li><li>방법중 하나로 distributed key-value store 방식이 있는데, DNS, public key directory, stock trade 등 여러 방면에서 사용되고 있고, altcoin에도 사용되고 있다.</li></ul><h4 id=public-consensus-in-crypto-currency>public consensus in crypto currency<a hidden class=anchor aria-hidden=true href=#public-consensus-in-crypto-currency>#</a></h4><ul><li><p>암호화 화폐에서는 transaction가 모여 block을 이루고, 이를 모아 block chain을 만든다.</p></li><li><p>block chain에 들어간 모든 block들은 consensus된 내용들이어야 한다.</p></li><li><p>transaction 하나를 consensus 해도 괜찮지만, block 단위로 consensus하여 효율을 높인다.</p></li><li><p>peer to peer 통신은 완벽하지 않기 때문에 여러개의 각기 다른 block들을 비교해야 한다.</p></li><li><p>비교한 block들 중 특정 block을 block chain 에 추가하면, 어떤 transaction은 빠질 수도 있는데, 이는 다음번 consensus때 까지 대기해야 한다.</p><ul><li>Node간 충돌은 consensus protocol이 쉽지 않은 이유중 하나이다.</li><li>모든 Node들이 연결되어 있지 않기 때문에 Node간 충돌은 불가피하다.</li><li>network latency 혹은 fault도 Node간 차이를 발생하는 원인이 된다.</li></ul></li><li><p>Byzantine general problems 는 consensus problem 중 하나이다. Fischer-Lynch-Paterson impossibility result 라는 이름의 증명은 하나의 fault만 존재해도 consensus는 불가능하다는 것을 증명한 내용이다.</p></li><li><p>그럼에도 불구하고 대표적인 consensus protocol들이 있다. 그중 하나는 Paxos 프로토콜이다.</p><ul><li>Paxo 프로토콜은 inconsistent 한 상황은 절대 발생시키지 않지만, 특정한 상황이 되면 dead-lock 처럼 로직이 멈춰 더이상 동작하지 않는 상태가 발생할 수 있다.</li></ul></li><li><p>현실 bitcoin에서는 이론에 비해 consensus가 더 잘 이루어지고 있다. 이론은 아직 실제 현상을 따라잡아 가는 형태이지만, 여전히 이론은 예상치 못한 공격에 대한 대응과 bitcoin 생태계에서의 확신을 주기 위한 존재로서 중요하다.</p></li><li><p>현실의 bitcoin에서는 어떤점이 다른가?<br>bitcoin에서는 insentive의 개념이 있다. 정직하게 활동한 참여자에게는 insentive를 줌으로써 시스템에 우호적으로 활동할 계기를 준다.</p></li><li><p>이는 bitcoin이 currency의 개념이기 때문에 가능하며, 이번의 모든 distributed consensus system 에서는 없었던 개념이다.</p></li><li><p>insentive를 통해 bitcoin은 distributed consensus system를 근본적으로 해결하지 않았지만, 해결책을 찾은 셈이다.</p></li><li><p>consensus system은 즉각적이지 않고, consensus를 수행하는데도 약 1시간 정도가 소요된다. 하지만 시간이 지날수록 transaction이 반영되지 않거나 잘못될 확률은 exponential하게 줄어들게 된다.</p></li></ul><h4 id=consensus-without-identity>consensus without identity<a hidden class=anchor aria-hidden=true href=#consensus-without-identity>#</a></h4><ul><li><p>bitcoin에서는 persistent long term identities 없이 consensus가 이루어진다. 즉, node를 칭할 수 있는 identity가 없다.</p></li><li><p>identity가 있다면 다음과 같은 이점이 있다.</p><ol><li>실용성(pragmatic) : 프로토콜에서 id를 이용한 로직을 사용할 수 있다.</li><li>보안(security) : 특정 인물의 malicious한 행동을 tracking 가능하다.</li></ol></li><li><p>그럼에도 불구하고 bitcoin에서 identity를 사용하지 않는 이유는 p2p system의 한계 때문이다.</p><ul><li>p2p는 중앙 체제가 없기 때문에 인정받은 identity를 갖기 어렵다.</li><li>bitcoin 자체가 현실의 identity를 사용하는 것을 원하지 않는다. (특정 node에서 이루어지는 transaction들은 구분할 수 있지만, 그 node가 현실의 누구 것인지는 알 수 없다.)</li><li>이러한 identity가 없는 특징 때문에 p2p network는 Sybil attack에 취약하다.<ul><li>Sybil attack : 한 명이 가상의 node들을 다수로 만들어 마치 여러 사람인 것 처럼 보이게 하는 것.</li></ul></li></ul></li></ul><h5 id=weaker-assumption>weaker assumption<a hidden class=anchor aria-hidden=true href=#weaker-assumption>#</a></h5><ul><li><p>node마다 identity를 부여하고, 이 부여받은 identity를 검증하는 작업은 매우 복잡하다.</p></li><li><p>authenticated 된 identity를 부여하는 것 대신 랜덤한 token을 node에 부여한다.</p></li><li><p>token으로 특정 node를 구분할 수 있으며, 특정 사용자가 여러 node들을 만드려 할 경우 해당 node들에 동일한 token을 부여하는 방식으로 Sybil attack을 방지할 수도 있다.</p></li><li><p>implicit consensus : 매 round마다 random node가 선택되고, 이 node는 block chain에 들어갈 다음 block을 추천하는 방식.</p><ul><li>이 추천은 일방적이며, consensus 알고리즘이나 투표같은게 없다.</li><li>다른 node들은 implicitly 하게 이 block을 수락하거나 거절함으로써 malicious한 node의 행위를 막을 수 있다. implicitly 하다는 뜻은, 직접적으로 투표를 행하지는 않지만, 해당 block을 포함한 block chain을 사용하면 찬성하는 것이고, 그렇지 않다면 반대하는 것이다.<ul><li>block chain에서 특정 block은 마지막 block의 hash를 가지고 있기에 가능하다.</li></ul></li></ul></li><li><p>bitcoin에서 사용되는 consensus algorithm을 간단하게 살펴보면 아래와 같다.</p><ol><li>신규 transaction은 모든 node들에 broadcast된다.</li><li>각 node들은 transaction들을 모아 block을 구성한다.</li><li>매 round마다 random node가 선출되고, 그 node에서 생성한 block을 broadcast한다.</li><li>다른 node들은 (3)에서 전송된 block을 보고, valid(unspent, valid signature) 하다면 이를 수락한다.</li><li>Node들은 다음번 만드는 block에다 (3)에서 전송된 block의 hash를 집어넣음으로써 implicit하게 수락을 표현할 수 있다. (그렇지 않으면 거절을 표현한 것)</li></ol></li><li><p>그렇다면 위 방식에 문제는 없을까?</p><ul><li>signature 설정 방식이 견고하다면, transaction을 위조할 수 없기 때문에 타인의 coin을 강제로 탈취할 수 없다.</li><li>특정 node가 valid 한 데이터를 계속 deny 하더라도, 해당 node가 다음 round에서 선택되지 않으면 transaction들은 정상적으로 올라가게 된다. 약간의 번거로움만 있을 뿐 전체 시스템에 치명적인 문제가 발생하지는 않는다.</li><li>node가 수행할 수 있는 악의적인 행위로는 &lsquo;double spending attack&rsquo; 이 있다.</li></ul></li><li><p>double spending attack</p><ul><li>block chain의 block1을 base로 A가 B에게 coin을 넘겨준 transaction [b1 : A -> B] 이 있다고 하자</li><li>이때, A가 악의적으로 A가 자신의 또다른 계정 A&rsquo;에게 coin을 넘겨주었다는 거짓 transaction [b1 : A -> A&rsquo;] 를 추가한다면, 정상적으로 수행된 [b1 : A -> B] transaction과 충돌이 발생한다. 즉, merge conflict가 발생하는 2개의 branch가 생성되는 것이다.</li><li>이는 moral distinction을 요하기 때문에 기술적으로 어렵다. node들은 대체로 먼저 들어온 block을 수락하고, 더 긴 branch를 정당한 branch로 취급한다.</li><li>조작된 transaction [b1: A -> A&rsquo;]이 든 block이 network 지연 등의 이슈로 인해 먼저 broadcast되고, 정당성을 확립하면 실제 transaction[b1 : A -> B] 는 orphan block이 되고, 네트워크에서 사라지게 된다.</li></ul></li><li><p>0 confirmation transaction</p><ul><li>double spending attack을 막기 위해, block chain에 내가 coin을 지불받는 transaction이 정상적으로 들어있는 것을 확인한 후 현실 세게에서 물건을 전달하는 방식</li><li>다른 node가 올린 block에서 내 transaction이 정상적으로 적용되었는지 확인할 수 있다. 해당 block 뒤에 더 많은 block이 붙을 수록 &rsquo;long term consensus chain&rsquo; 이 될 확률이 높아진다.</li><li>double spending attack의 성공 확률은 confirmation의 횟수만큼 exponential 하게 줄어든다.</li></ul><pre tabindex=0><code>block chain의 형태가 아래와 같을 때,
+- 모든 사항이 확인되면 관리자에 의해 publish된다.</li>
+</ul>
+<p>-&gt; double spending 문제는 해결했지만 centralization 문제가 발생한다. (&lsquo;관리자&rsquo; 가 중앙 체제에 해당)</p>
+<h2 id="decentralization">Decentralization<a hidden class="anchor" aria-hidden="true" href="#decentralization">#</a></h2>
+<ul>
+<li>Crypto currency를 구성하기 위해서는 탈 중앙화가 이루어져야 한다.</li>
+<li>앞서 보았듯이 거래 장부(transaction)를 관리하기 위해서는 이를 인증해 줄 주체가 필요했다. 이 주체를 분산시키는 것이 필요하다. (Distributed Consensus)</li>
+</ul>
+<h3 id="dsitributed-consensus">Dsitributed Consensus<a hidden class="anchor" aria-hidden="true" href="#dsitributed-consensus">#</a></h3>
+<ul>
+<li>분산의 개념은 암호화 회폐 이전에 서버 동작에서도 논제가 되었다. 여러개의 서버가 병렬로 동작할 때, consistency를 유지하기 위해 distributed consensus protocol이 필요했다.</li>
+<li>방법중 하나로 distributed key-value store 방식이 있는데, DNS, public key directory, stock trade 등 여러 방면에서 사용되고 있고, altcoin에도 사용되고 있다.</li>
+</ul>
+<h4 id="public-consensus-in-crypto-currency">public consensus in crypto currency<a hidden class="anchor" aria-hidden="true" href="#public-consensus-in-crypto-currency">#</a></h4>
+<ul>
+<li>
+<p>암호화 화폐에서는 transaction가 모여 block을 이루고, 이를 모아 block chain을 만든다.</p>
+</li>
+<li>
+<p>block chain에 들어간 모든 block들은 consensus된 내용들이어야 한다.</p>
+</li>
+<li>
+<p>transaction 하나를 consensus 해도 괜찮지만, block 단위로 consensus하여 효율을 높인다.</p>
+</li>
+<li>
+<p>peer to peer 통신은 완벽하지 않기 때문에 여러개의 각기 다른 block들을 비교해야 한다.</p>
+</li>
+<li>
+<p>비교한 block들 중 특정 block을 block chain 에 추가하면, 어떤 transaction은 빠질 수도 있는데, 이는 다음번 consensus때 까지 대기해야 한다.</p>
+<ul>
+<li>Node간 충돌은 consensus protocol이 쉽지 않은 이유중 하나이다.</li>
+<li>모든 Node들이 연결되어 있지 않기 때문에 Node간 충돌은 불가피하다.</li>
+<li>network latency 혹은 fault도 Node간 차이를 발생하는 원인이 된다.</li>
+</ul>
+</li>
+<li>
+<p>Byzantine general problems 는 consensus problem 중 하나이다. Fischer-Lynch-Paterson impossibility result 라는 이름의 증명은 하나의 fault만 존재해도 consensus는 불가능하다는 것을 증명한 내용이다.</p>
+</li>
+<li>
+<p>그럼에도 불구하고 대표적인 consensus protocol들이 있다. 그중 하나는 Paxos 프로토콜이다.</p>
+<ul>
+<li>Paxo 프로토콜은 inconsistent 한 상황은 절대 발생시키지 않지만, 특정한 상황이 되면 dead-lock 처럼 로직이 멈춰 더이상 동작하지 않는 상태가 발생할 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>현실 bitcoin에서는 이론에 비해 consensus가 더 잘 이루어지고 있다. 이론은 아직 실제 현상을 따라잡아 가는 형태이지만, 여전히 이론은 예상치 못한 공격에 대한 대응과 bitcoin 생태계에서의 확신을 주기 위한 존재로서 중요하다.</p>
+</li>
+<li>
+<p>현실의 bitcoin에서는 어떤점이 다른가?<br>
+bitcoin에서는 insentive의 개념이 있다. 정직하게 활동한 참여자에게는 insentive를 줌으로써 시스템에 우호적으로 활동할 계기를 준다.</p>
+</li>
+<li>
+<p>이는 bitcoin이 currency의 개념이기 때문에 가능하며, 이번의 모든 distributed consensus system 에서는 없었던 개념이다.</p>
+</li>
+<li>
+<p>insentive를 통해 bitcoin은 distributed consensus system를 근본적으로 해결하지 않았지만, 해결책을 찾은 셈이다.</p>
+</li>
+<li>
+<p>consensus system은 즉각적이지 않고, consensus를 수행하는데도 약 1시간 정도가 소요된다. 하지만 시간이 지날수록 transaction이 반영되지 않거나 잘못될 확률은 exponential하게 줄어들게 된다.</p>
+</li>
+</ul>
+<h4 id="consensus-without-identity">consensus without identity<a hidden class="anchor" aria-hidden="true" href="#consensus-without-identity">#</a></h4>
+<ul>
+<li>
+<p>bitcoin에서는 persistent long term identities 없이 consensus가 이루어진다. 즉, node를 칭할 수 있는 identity가 없다.</p>
+</li>
+<li>
+<p>identity가 있다면 다음과 같은 이점이 있다.</p>
+<ol>
+<li>실용성(pragmatic) : 프로토콜에서 id를 이용한 로직을 사용할 수 있다.</li>
+<li>보안(security) : 특정 인물의 malicious한 행동을 tracking 가능하다.</li>
+</ol>
+</li>
+<li>
+<p>그럼에도 불구하고 bitcoin에서 identity를 사용하지 않는 이유는 p2p system의 한계 때문이다.</p>
+<ul>
+<li>p2p는 중앙 체제가 없기 때문에 인정받은 identity를 갖기 어렵다.</li>
+<li>bitcoin 자체가 현실의 identity를 사용하는 것을 원하지 않는다. (특정 node에서 이루어지는 transaction들은 구분할 수 있지만, 그 node가 현실의 누구 것인지는 알 수 없다.)</li>
+<li>이러한 identity가 없는 특징 때문에 p2p network는 Sybil attack에 취약하다.
+<ul>
+<li>Sybil attack : 한 명이 가상의 node들을 다수로 만들어 마치 여러 사람인 것 처럼 보이게 하는 것.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="weaker-assumption">weaker assumption<a hidden class="anchor" aria-hidden="true" href="#weaker-assumption">#</a></h5>
+<ul>
+<li>
+<p>node마다 identity를 부여하고, 이 부여받은 identity를 검증하는 작업은 매우 복잡하다.</p>
+</li>
+<li>
+<p>authenticated 된 identity를 부여하는 것 대신 랜덤한 token을 node에 부여한다.</p>
+</li>
+<li>
+<p>token으로 특정 node를 구분할 수 있으며, 특정 사용자가 여러 node들을 만드려 할 경우 해당 node들에 동일한 token을 부여하는 방식으로 Sybil attack을 방지할 수도 있다.</p>
+</li>
+<li>
+<p>implicit consensus : 매 round마다 random node가 선택되고, 이 node는 block chain에 들어갈 다음 block을 추천하는 방식.</p>
+<ul>
+<li>이 추천은 일방적이며, consensus 알고리즘이나 투표같은게 없다.</li>
+<li>다른 node들은 implicitly 하게 이 block을 수락하거나 거절함으로써 malicious한 node의 행위를 막을 수 있다. implicitly 하다는 뜻은, 직접적으로 투표를 행하지는 않지만, 해당 block을 포함한 block chain을 사용하면 찬성하는 것이고, 그렇지 않다면 반대하는 것이다.
+<ul>
+<li>block chain에서 특정 block은 마지막 block의 hash를 가지고 있기에 가능하다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>bitcoin에서 사용되는 consensus algorithm을 간단하게 살펴보면 아래와 같다.</p>
+<ol>
+<li>신규 transaction은 모든 node들에 broadcast된다.</li>
+<li>각 node들은 transaction들을 모아 block을 구성한다.</li>
+<li>매 round마다 random node가 선출되고, 그 node에서 생성한 block을 broadcast한다.</li>
+<li>다른 node들은 (3)에서 전송된 block을 보고, valid(unspent, valid signature) 하다면 이를 수락한다.</li>
+<li>Node들은 다음번 만드는 block에다 (3)에서 전송된 block의 hash를 집어넣음으로써 implicit하게 수락을 표현할 수 있다. (그렇지 않으면 거절을 표현한 것)</li>
+</ol>
+</li>
+<li>
+<p>그렇다면 위 방식에 문제는 없을까?</p>
+<ul>
+<li>signature 설정 방식이 견고하다면, transaction을 위조할 수 없기 때문에 타인의 coin을 강제로 탈취할 수 없다.</li>
+<li>특정 node가 valid 한 데이터를 계속 deny 하더라도, 해당 node가 다음 round에서 선택되지 않으면 transaction들은 정상적으로 올라가게 된다. 약간의 번거로움만 있을 뿐 전체 시스템에 치명적인 문제가 발생하지는 않는다.</li>
+<li>node가 수행할 수 있는 악의적인 행위로는 &lsquo;double spending attack&rsquo; 이 있다.</li>
+</ul>
+</li>
+<li>
+<p>double spending attack</p>
+<ul>
+<li>block chain의 block1을 base로 A가 B에게 coin을 넘겨준 transaction [b1 : A -&gt; B] 이 있다고 하자</li>
+<li>이때, A가 악의적으로 A가 자신의 또다른 계정 A&rsquo;에게 coin을 넘겨주었다는 거짓 transaction [b1 : A -&gt; A&rsquo;] 를 추가한다면, 정상적으로 수행된 [b1 : A -&gt; B] transaction과 충돌이 발생한다. 즉, merge conflict가 발생하는 2개의 branch가 생성되는 것이다.</li>
+<li>이는 moral distinction을 요하기 때문에 기술적으로 어렵다. node들은 대체로 먼저 들어온 block을 수락하고, 더 긴 branch를 정당한 branch로 취급한다.</li>
+<li>조작된 transaction [b1: A -&gt; A&rsquo;]이 든 block이 network 지연 등의 이슈로 인해 먼저 broadcast되고, 정당성을 확립하면 실제 transaction[b1 : A -&gt; B] 는 orphan block이 되고, 네트워크에서 사라지게 된다.</li>
+</ul>
+</li>
+<li>
+<p>0 confirmation transaction</p>
+<ul>
+<li>double spending attack을 막기 위해, block chain에 내가 coin을 지불받는 transaction이 정상적으로 들어있는 것을 확인한 후 현실 세게에서 물건을 전달하는 방식</li>
+<li>다른 node가 올린 block에서 내 transaction이 정상적으로 적용되었는지 확인할 수 있다. 해당 block 뒤에 더 많은 block이 붙을 수록 &rsquo;long term consensus chain&rsquo; 이 될 확률이 높아진다.</li>
+<li>double spending attack의 성공 확률은 confirmation의 횟수만큼 exponential 하게 줄어든다.</li>
+</ul>
+<pre tabindex="0"><code>block chain의 형태가 아래와 같을 때,
 
 [block1] - [block2] - [block3] - [block4] - [block5]
 block3는 3 confirmation을 받은 상태이다.
 block4는 2 confirmation을 받은 상태이다.
-</code></pre><ul><li>일반적인 bitcoin에서는 transaction이 정상적으로 이루어진 것을 판단하기 위해서 6 confirmation을 확인한다. 이는 시간과 확률의 trade-off 관계에서 성립된 수치이다.</li></ul></li></ul><h4 id=honesty-problematic>honesty problematic<a hidden class=anchor aria-hidden=true href=#honesty-problematic>#</a></h4><ul><li>우리는 탈 중앙화를 위해 랜덤한 node에서 block을 받아 block chain에 적용하기로 했다. 하지만 모든 node가 honest 한지에 대해서는 보장할 수 없다.</li><li>각 node들은 현실 정보의 개인정보를 갖고있지 않기 때문에 block chain에 위해를 가하는(double spent 같은 공격) node를 처벌할 수 없다.</li><li>대신 올바른 block들을 만들어주는 node들에 대해 보상을 주는 방법은 가능하다. 이는 block chain으로 구성된 내용이 가치를 가지는 crypto currency 이기 때문에 가능하다.</li></ul><h3 id=incentive-algorithm>Incentive Algorithm<a hidden class=anchor aria-hidden=true href=#incentive-algorithm>#</a></h3><ul><li>bitcoin은 decentralize를 위해 기술적인 부분(distributed consensus)과 incentive aoglrithm 을 사용한다.</li></ul><ol><li>block reward</li></ol><ul><li>block chain의 규칙에 따라, block을 생성하는 node는 특수한 coin-creation transaction을 추가할 수 있다.</li><li>이를 통해 coin을 생성하고, 그것을 자신의 계좌로 연결하여 수익을 얻을 수 있다.</li><li>bitcoin에서 현재(14.08) coin 생성 양은 25 코인으로 고정되어 있는데, 이는 매 4년마다 절반으로 줄어든다. 최초에는 50코인이었다.</li><li>coin-creation transaction은 다른 transaction과 마찬가지로 취급된다. transaction이 consensus chain에 들어가야 효력이 발생한다.<ul><li>즉, 자신의 coin-creation transaction이 든 block이 consensus chain에 포함되려면, 다른 node들이 agree 할 만한 block을 base로 하여 block을 연결하는게 유리하다.</li><li>악의적인 node가 double-spending attack을 위해 길이가 긴 block-chain을 무시하고 임의의 block을 base로 하여 자신의 block을 연결한다면, 다른 node들은 그가 만든 block-chain을 reject 할 것이고, 그가 받는 보상은 무효화 될 것이다.</li><li>이러한 방식으로 node들이 honest하게 동작하도록 유도한다.</li></ul></li><li>새로운 bitcoin은 transaction시 발생하는 coin-creation transaction에 의해서만 생성되고, 현재 규칙이 계속 유지될 경우 2140에는 새로운 coin이 생성되지 않고 21 million 에서 수렴할 것이다.</li></ul><ol><li>transaction fee</li></ol><ul><li><p>transaction을 생성하는 자는(거래를 하는 자) output value를 임의로 설정할 수 있다. (단, output value &lt; input value)</p></li><li><p>해당 transactio을 최초로 block에 넣는 node는 input-output 의 차액을 가져갈 수 있다.</p></li><li><p>transaction fee는 자발적이고, tip과 같은 느낌이지만, block reward가 점차 감소하는 시점에서 시스템을 유지하기 위해서는 필수적인 요소가 된다.</p></li><li><p>이러한 시스템에서도 아직 해결안된 문제는 남아있다.</p></li></ul><ol><li>어떻게 random 한 node를 선택할 것인가</li><li>보상을 위해 과도한 경쟁(free-for-all)을 하는 현상을 어떻게 막을 것인가</li><li>Sybil attack 의 방지(2번의 심화 형태)</li></ol><ul><li>위 세가지 문제점은 모두 연관되어 있고, 하나의 방법으로 해결 가능하다.</li></ul><h4 id=proof-of-work>Proof of work<a hidden class=anchor aria-hidden=true href=#proof-of-work>#</a></h4><ul><li><p>직접 random 한 node를 선택하는 대신, resource(computing power) 의 비율로 다음 node가 선택되게 하는 방법이다.</p></li><li><p>즉, 각 node들이 각각의 computing power을 이용해 서로 경쟁하도록 하는 것이다.</p></li><li><p>이러한 경쟁 방법을 Hash puzzle이라 부른다.</p><ul><li>block을 [nonce, previous hash, {Tx1, Tx2, &mldr;}] 형태로 구성하도록 한다.</li><li>nonce를 포함한 전체 block을 hash 로 취했을 때, 결과값 중 target space(일반적으로 1% 이하의 매우 작은 영역)가 특정한 값이 나오도록 해야한다. (target 값보다 작은 값이 되도록)</li><li>hash function이 충분히 secure 하다면, nonce를 찾으려면 random한 nonce 값을 넣으며 계산을 시도해야 하며, 일반적으로 많은 computing power가 필요할 것이다.</li></ul></li><li><p>이를 통해 단순히 node의 숫자를 늘려서 다음 block을 선택할 기회를 얻을 확률을 높일 수 없게 되었다.</p></li><li><p>또한 누군가가 랜덤한 block을 선출하는 것이 아닌, 경쟁과 확률을 통해 자연적으로 선출될 수 있도록 하였다.</p></li></ul><h5 id=proof-of-work의-속성>Proof of work의 속성<a hidden class=anchor aria-hidden=true href=#proof-of-work의-속성>#</a></h5><ol><li>Difficult to compute</li></ol><ul><li>hash puzzle을 푸는데는 현재(14.8) 기준 block당 약 10^20 hash를 계산해야 한다. (target space의 크기가 1/10^20 이란 의미)</li><li>일반적인 PC로는 감당할 수 없고, 많은 양의 computing power을 사용하여야 하는 작업이다.</li><li>이렇게 nonce 값을 찾는 것을 흔히 bitcoin mining이라 하는 과정이다.</li></ul><ol><li>parameterizable cost</li></ol><ul><li><p>target space의 범위를 고정된 %로 취하는 것이 아닌, 가변적인 값으로 설정한다.</p></li><li><p>p2p 에 연결된 모든 node들은 자동적으로 매 2주마다 target space를 재 설정하도록 동작한다.</p></li><li><p>target space의 값은 hash puzzle을 푸는데 걸리는 시간이 약 10분이 되도록 하는 것을 목표로 한다.</p><ul><li>block 간의 간격이 10분이 되는 이유는, 너무 빨리 block이 갱신되면 한 block에 여러 transaction(현재기준 약 수백개)을 담아 효율적으로 운영할 수 없게 된다.</li><li>latency는 기술적으로는 더 낮게 설정할 수도 있지만, 모두의 동의 하에 하한값을 설정하여 작동한다.</li></ul></li><li><p>특정 node가 다음 block을 설정하게 될 확률은, 전체 node들의 computing power에서 그 node가 갖고 있는 computing power 의 비율에 비례한다.</p></li><li><p>결과적으로, 다량의 computing power을 가지고 mining을 하고 있는 사람들은 대부분이 honest하고, 다음 block 선택을 경쟁적으로 수행하기 때문에 적어도 50% 이상의 확률로 block이 honest node에서 선택되었음을 보장할 수 있다.</p></li><li><p>nonce는 확률적으로 밖에 도출될 수 없다. 이는 discrete probability process로, Bernoulii trial 이다.</p><ul><li>nonce를 찾는 과정은 Bernoulii trial을 연속적으로 수행하는 poisson process에 속한다.</li><li>전 network에서 누군가가 nonce를 찾는데 걸리는 시간을 확률 밀도함수(probability density)로 표현하면 exponential distribution을 이룬다. (0에 수렴하도록 감소하는 지수 함수)</li></ul></li></ul><ol><li>Trivial to verify</li></ol><ul><li>특정 node가 hash puzzle을 해결하여 올린 block을 다른 node에서 쉽게 검증할 수 있어야 한다.</li><li><code>H(block) &lt; target</code>, block의 모든 값을 hash 계산한 결과가 target 보다 작은지 확인</li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://AswinBlue.github.io/tags/cryptograph/>cryptograph</a></li><li><a href=https://AswinBlue.github.io/tags/cryptocurrency/>cryptocurrency</a></li><li><a href=https://AswinBlue.github.io/tags/bitcoin/>bitcoin</a></li></ul><nav class=paginav><a class=prev href=https://AswinBlue.github.io/post/firebase_react/><span class=title>« Prev</span><br><span>Firebase_react</span></a>
-<a class=next href=https://AswinBlue.github.io/post/firebase/><span class=title>Next »</span><br><span>Firebase</span></a></nav><div class=share-buttons><a target=_blank rel="noopener noreferrer" aria-label="share Cryptocurrency on twitter" href="https://twitter.com/intent/tweet/?text=Cryptocurrency&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f&amp;hashtags=cryptograph%2ccryptocurrency%2cbitcoin"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Cryptocurrency on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f&amp;title=Cryptocurrency&amp;summary=Cryptocurrency&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Cryptocurrency on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f&title=Cryptocurrency"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Cryptocurrency on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Cryptocurrency on whatsapp" href="https://api.whatsapp.com/send?text=Cryptocurrency%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Cryptocurrency on telegram" href="https://telegram.me/share/url?text=Cryptocurrency&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></div></footer></article></main></div><footer class=footer><span>&copy; 2023 <a href=https://AswinBlue.github.io>AswinBlue</a></span>
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+</code></pre><ul>
+<li>일반적인 bitcoin에서는 transaction이 정상적으로 이루어진 것을 판단하기 위해서 6 confirmation을 확인한다. 이는 시간과 확률의 trade-off 관계에서 성립된 수치이다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="honesty-problematic">honesty problematic<a hidden class="anchor" aria-hidden="true" href="#honesty-problematic">#</a></h4>
+<ul>
+<li>우리는 탈 중앙화를 위해 랜덤한 node에서 block을 받아 block chain에 적용하기로 했다. 하지만 모든 node가 honest 한지에 대해서는 보장할 수 없다.</li>
+<li>각 node들은 현실 정보의 개인정보를 갖고있지 않기 때문에 block chain에 위해를 가하는(double spent 같은 공격) node를 처벌할 수 없다.</li>
+<li>대신 올바른 block들을 만들어주는 node들에 대해 보상을 주는 방법은 가능하다. 이는 block chain으로 구성된 내용이 가치를 가지는 crypto currency 이기 때문에 가능하다.</li>
+</ul>
+<h3 id="incentive-algorithm">Incentive Algorithm<a hidden class="anchor" aria-hidden="true" href="#incentive-algorithm">#</a></h3>
+<ul>
+<li>bitcoin은 decentralize를 위해 기술적인 부분(distributed consensus)과 incentive aoglrithm 을 사용한다.</li>
+</ul>
+<ol>
+<li>block reward</li>
+</ol>
+<ul>
+<li>block chain의 규칙에 따라, block을 생성하는 node는 특수한 coin-creation transaction을 추가할 수 있다.</li>
+<li>이를 통해 coin을 생성하고, 그것을 자신의 계좌로 연결하여 수익을 얻을 수 있다.</li>
+<li>bitcoin에서 현재(14.08) coin 생성 양은 25 코인으로 고정되어 있는데, 이는 매 4년마다 절반으로 줄어든다. 최초에는 50코인이었다.</li>
+<li>coin-creation transaction은 다른 transaction과 마찬가지로 취급된다. transaction이 consensus chain에 들어가야 효력이 발생한다.
+<ul>
+<li>즉, 자신의 coin-creation transaction이 든 block이 consensus chain에 포함되려면, 다른 node들이 agree 할 만한 block을 base로 하여 block을 연결하는게 유리하다.</li>
+<li>악의적인 node가 double-spending attack을 위해 길이가 긴 block-chain을 무시하고 임의의 block을 base로 하여 자신의 block을 연결한다면, 다른 node들은 그가 만든 block-chain을 reject 할 것이고, 그가 받는 보상은 무효화 될 것이다.</li>
+<li>이러한 방식으로 node들이 honest하게 동작하도록 유도한다.</li>
+</ul>
+</li>
+<li>새로운 bitcoin은 transaction시 발생하는 coin-creation transaction에 의해서만 생성되고, 현재 규칙이 계속 유지될 경우 2140에는 새로운 coin이 생성되지 않고 21 million 에서 수렴할 것이다.</li>
+</ul>
+<ol>
+<li>transaction fee</li>
+</ol>
+<ul>
+<li>
+<p>transaction을 생성하는 자는(거래를 하는 자) output value를 임의로 설정할 수 있다. (단, output value &lt; input value)</p>
+</li>
+<li>
+<p>해당 transactio을 최초로 block에 넣는 node는 input-output 의 차액을 가져갈 수 있다.</p>
+</li>
+<li>
+<p>transaction fee는 자발적이고, tip과 같은 느낌이지만, block reward가 점차 감소하는 시점에서 시스템을 유지하기 위해서는 필수적인 요소가 된다.</p>
+</li>
+<li>
+<p>이러한 시스템에서도 아직 해결안된 문제는 남아있다.</p>
+</li>
+</ul>
+<ol>
+<li>어떻게 random 한 node를 선택할 것인가</li>
+<li>보상을 위해 과도한 경쟁(free-for-all)을 하는 현상을 어떻게 막을 것인가</li>
+<li>Sybil attack 의 방지(2번의 심화 형태)</li>
+</ol>
+<ul>
+<li>위 세가지 문제점은 모두 연관되어 있고, 하나의 방법으로 해결 가능하다.</li>
+</ul>
+<h4 id="proof-of-work">Proof of work<a hidden class="anchor" aria-hidden="true" href="#proof-of-work">#</a></h4>
+<ul>
+<li>
+<p>직접 random 한 node를 선택하는 대신, resource(computing power) 의 비율로 다음 node가 선택되게 하는 방법이다.</p>
+</li>
+<li>
+<p>즉, 각 node들이 각각의 computing power을 이용해 서로 경쟁하도록 하는 것이다.</p>
+</li>
+<li>
+<p>이러한 경쟁 방법을 Hash puzzle이라 부른다.</p>
+<ul>
+<li>block을 [nonce, previous hash, {Tx1, Tx2, &hellip;}] 형태로 구성하도록 한다.</li>
+<li>nonce를 포함한 전체 block을 hash 로 취했을 때, 결과값 중 target space(일반적으로 1% 이하의 매우 작은 영역)가 특정한 값이 나오도록 해야한다. (target 값보다 작은 값이 되도록)</li>
+<li>hash function이 충분히 secure 하다면, nonce를 찾으려면 random한 nonce 값을 넣으며 계산을 시도해야 하며, 일반적으로 많은 computing power가 필요할 것이다.</li>
+</ul>
+</li>
+<li>
+<p>이를 통해 단순히 node의 숫자를 늘려서 다음 block을 선택할 기회를 얻을 확률을 높일 수 없게 되었다.</p>
+</li>
+<li>
+<p>또한 누군가가 랜덤한 block을 선출하는 것이 아닌, 경쟁과 확률을 통해 자연적으로 선출될 수 있도록 하였다.</p>
+</li>
+</ul>
+<h5 id="proof-of-work의-속성">Proof of work의 속성<a hidden class="anchor" aria-hidden="true" href="#proof-of-work의-속성">#</a></h5>
+<ol>
+<li>Difficult to compute</li>
+</ol>
+<ul>
+<li>hash puzzle을 푸는데는 현재(14.8) 기준 block당 약 10^20 hash를 계산해야 한다. (target space의 크기가 1/10^20 이란 의미)</li>
+<li>일반적인 PC로는 감당할 수 없고, 많은 양의 computing power을 사용하여야 하는 작업이다.</li>
+<li>이렇게 nonce 값을 찾는 것을 흔히 bitcoin mining이라 하는 과정이다.</li>
+</ul>
+<ol>
+<li>parameterizable cost</li>
+</ol>
+<ul>
+<li>
+<p>target space의 범위를 고정된 %로 취하는 것이 아닌, 가변적인 값으로 설정한다.</p>
+</li>
+<li>
+<p>p2p 에 연결된 모든 node들은 자동적으로 매 2주마다 target space를 재 설정하도록 동작한다.</p>
+</li>
+<li>
+<p>target space의 값은 hash puzzle을 푸는데 걸리는 시간이 약 10분이 되도록 하는 것을 목표로 한다.</p>
+<ul>
+<li>block 간의 간격이 10분이 되는 이유는, 너무 빨리 block이 갱신되면 한 block에 여러 transaction(현재기준 약 수백개)을 담아 효율적으로 운영할 수 없게 된다.</li>
+<li>latency는 기술적으로는 더 낮게 설정할 수도 있지만, 모두의 동의 하에 하한값을 설정하여 작동한다.</li>
+</ul>
+</li>
+<li>
+<p>특정 node가 다음 block을 설정하게 될 확률은, 전체 node들의 computing power에서 그 node가 갖고 있는 computing power 의 비율에 비례한다.</p>
+</li>
+<li>
+<p>결과적으로, 다량의 computing power을 가지고 mining을 하고 있는 사람들은 대부분이 honest하고, 다음 block 선택을 경쟁적으로 수행하기 때문에 적어도 50% 이상의 확률로 block이 honest node에서 선택되었음을 보장할 수 있다.</p>
+</li>
+<li>
+<p>nonce는 확률적으로 밖에 도출될 수 없다. 이는 discrete probability process로, Bernoulii trial 이다.</p>
+<ul>
+<li>nonce를 찾는 과정은 Bernoulii trial을 연속적으로 수행하는 poisson process에 속한다.</li>
+<li>전 network에서 누군가가 nonce를 찾는데 걸리는 시간을 확률 밀도함수(probability density)로 표현하면 exponential distribution을 이룬다. (0에 수렴하도록 감소하는 지수 함수)</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Trivial to verify</li>
+</ol>
+<ul>
+<li>특정 node가 hash puzzle을 해결하여 올린 block을 다른 node에서 쉽게 검증할 수 있어야 한다.</li>
+<li><code>H(block) &lt; target</code>, block의 모든 값을 hash 계산한 결과가 target 보다 작은지 확인</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AswinBlue.github.io/tags/cryptograph/">cryptograph</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/cryptocurrency/">cryptocurrency</a></li>
+      <li><a href="https://AswinBlue.github.io/tags/bitcoin/">bitcoin</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://AswinBlue.github.io/post/firebase_react/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Firebase_react</span>
+  </a>
+  <a class="next" href="https://AswinBlue.github.io/post/firebase/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Firebase</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Cryptocurrency on twitter"
+        href="https://twitter.com/intent/tweet/?text=Cryptocurrency&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f&amp;hashtags=cryptograph%2ccryptocurrency%2cbitcoin">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Cryptocurrency on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f&amp;title=Cryptocurrency&amp;summary=Cryptocurrency&amp;source=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Cryptocurrency on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f&title=Cryptocurrency">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Cryptocurrency on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Cryptocurrency on whatsapp"
+        href="https://api.whatsapp.com/send?text=Cryptocurrency%20-%20https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Cryptocurrency on telegram"
+        href="https://telegram.me/share/url?text=Cryptocurrency&amp;url=https%3a%2f%2fAswinBlue.github.io%2fpost%2fcryptocurrency%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+        </main>
+    </div>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

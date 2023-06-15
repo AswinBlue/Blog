@@ -1,23 +1,296 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | AswinBlue</title><meta name=keywords content="index"><meta name=description content="Posts - AswinBlue"><meta name=author content="Hugo Authors"><link rel=canonical href=https://AswinBlue.github.io/post/><meta name=google-site-verification content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.b2d7323c6190eef7800087a10abc5c642c537e1a414ec85ee6fa2db077f22f82.css integrity="sha256-stcyPGGQ7veAAIehCrxcZCxTfhpBTshe5votsHfyL4I=" rel="preload stylesheet" as=style><link rel=icon href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://AswinBlue.github.io/post/index.xml><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://AswinBlue.github.io accesskey=h title="AswinBlue (Alt + H)">AswinBlue</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://AswinBlue.github.io/archives title=Archive><span>Archive</span></a></li><li><a href=https://AswinBlue.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://AswinBlue.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://AswinBlue.github.io/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><div class=grid-container><div><ins class=kakao_ad_area style=display:none data-ad-unit=DAN-17Lk24lxFVgxtePU data-ad-width=160 data-ad-height=600></ins>
-<script type=text/javascript src=//t1.daumcdn.net/kas/static/ba.min.js async></script></div><main class=main><header class=page-header><div class=breadcrumbs><a href=https://AswinBlue.github.io>Home</a></div><h1>Posts
-<a href=/post/index.xml title=RSS aria-label=RSS><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="23"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></h1></header><article class=post-entry><header class=entry-header><h2>Python</h2></header><div class=entry-content><p>Python 기본 내장 함수 입력 한줄 받기 : a = input()
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Posts | AswinBlue</title>
+<meta name="keywords" content="index">
+<meta name="description" content="Posts - AswinBlue">
+<meta name="author" content="Hugo Authors">
+<link rel="canonical" href="https://AswinBlue.github.io/post/">
+<meta name="google-site-verification" content="XYZabc">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b2d7323c6190eef7800087a10abc5c642c537e1a414ec85ee6fa2db077f22f82.css" integrity="sha256-stcyPGGQ7veAAIehCrxcZCxTfhpBTshe5votsHfyL4I=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="apple-touch-icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<link rel="mask-icon" href="https://AswinBlue.github.io/%3Clink%20/%20abs%20url%3E">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://AswinBlue.github.io/post/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AswinBlue.github.io" accesskey="h" title="AswinBlue (Alt + H)">AswinBlue</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AswinBlue.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AswinBlue.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="grid-container">
+        <div><ins class="kakao_ad_area" style="display:none;"
+data-ad-unit = "DAN-17Lk24lxFVgxtePU"
+data-ad-width = "160"
+data-ad-height = "600"></ins>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script></div>
+
+        <main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://AswinBlue.github.io">Home</a></div>
+  <h1>
+    Posts
+    <a href="/post/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Python
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
 받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print()
 함수 함수 인자로 배열 형태를 표현할 때 *를 붙인다.
-def func1(*arg)
-print(*arg)
-func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬운 숫자 표기: x = 10000 vs x = 10_000...</p></div><footer class=entry-footer><span title='2021-09-01 18:49:18 +0900 KST'>September 1, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer><a class=entry-link aria-label="post link to Python" href=https://AswinBlue.github.io/post/python/></a></article><article class=post-entry><header class=entry-header><h2>Angular</h2></header><div class=entry-content><p>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
-$ ng new &lt;application_name> 명령어를 이용하여 설치한다.
-nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자....</p></div><footer class=entry-footer><span title='2021-08-23 19:46:09 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;AswinBlue</footer><a class=entry-link aria-label="post link to Angular" href=https://AswinBlue.github.io/post/angular/></a></article><article class=post-entry><header class=entry-header><h2>Spring basic</h2></header><div class=entry-content><p>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
-참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다....</p></div><footer class=entry-footer><span title='2021-08-23 19:21:55 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer><a class=entry-link aria-label="post link to Spring basic" href=https://AswinBlue.github.io/post/spring/></a></article><article class=post-entry><header class=entry-header><h2>Jython</h2></header><div class=entry-content><p>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &lt;!-- https://mvnrepository.com/artifact/org.python/jython -->
-&lt;dependency>
-&lt;groupId>org.python&lt;/groupId>
-&lt;artifactId>jython&lt;/artifactId>
-&lt;version>2.7.0&lt;/version>
-&lt;/dependency> 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;
-jython....</p></div><footer class=entry-footer><span title='2021-08-23 19:20:47 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer><a class=entry-link aria-label="post link to Jython" href=https://AswinBlue.github.io/post/jython/></a></article><article class=post-entry><header class=entry-header><h2>Web_scrapping</h2></header><div class=entry-content><p>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id="abcd"] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 ‘TAG’ 라는 이름의 태그를 가진 항목에서만 검색함 @id=“abcd” 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link...</p></div><footer class=entry-footer><span title='2021-08-23 19:00:44 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer><a class=entry-link aria-label="post link to Web_scrapping" href=https://AswinBlue.github.io/post/web_scrapping/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://AswinBlue.github.io/post/page/3/>«&nbsp;Prev&nbsp;</a>
-<a class=next href=https://AswinBlue.github.io/post/page/5/>Next&nbsp;&nbsp;»</a></nav></footer></main></div><footer class=footer><span>&copy; 2023 <a href=https://AswinBlue.github.io>AswinBlue</a></span>
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
+def func1(*arg)print(*arg)func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬운 숫자 표기: x = 10000 vs x = 10_000...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-09-01 18:49:18 +0900 KST'>September 1, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer>
+  <a class="entry-link" aria-label="post link to Python" href="https://AswinBlue.github.io/post/python/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Angular
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
+$ ng new &lt;application_name&gt; 명령어를 이용하여 설치한다.
+nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자....</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-23 19:46:09 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;AswinBlue</footer>
+  <a class="entry-link" aria-label="post link to Angular" href="https://AswinBlue.github.io/post/angular/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Spring basic
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
+참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다....</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-23 19:21:55 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer>
+  <a class="entry-link" aria-label="post link to Spring basic" href="https://AswinBlue.github.io/post/spring/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Jython
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &lt;!-- https://mvnrepository.com/artifact/org.python/jython --&gt;&lt;dependency&gt;&lt;groupId&gt;org.python&lt;/groupId&gt;&lt;artifactId&gt;jython&lt;/artifactId&gt;&lt;version&gt;2.7.0&lt;/version&gt;&lt;/dependency&gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython....</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-23 19:20:47 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer>
+  <a class="entry-link" aria-label="post link to Jython" href="https://AswinBlue.github.io/post/jython/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Web_scrapping
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&#34;abcd&#34;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 ‘TAG’ 라는 이름의 태그를 가진 항목에서만 검색함 @id=“abcd” 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-23 19:00:44 +0900 KST'>August 23, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;AswinBlue</footer>
+  <a class="entry-link" aria-label="post link to Web_scrapping" href="https://AswinBlue.github.io/post/web_scrapping/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://AswinBlue.github.io/post/page/3/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="https://AswinBlue.github.io/post/page/5/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+        </main>
+    </div>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://AswinBlue.github.io">AswinBlue</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
