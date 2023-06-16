@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>css on AswinBlue</title>
-    <link>/tags/css/</link>
+    <link>https://aswinblue.github.io/tags/css/</link>
     <description>Recent content in css on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jun 2022 21:55:38 +0900</lastBuildDate><atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jun 2022 21:55:38 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tailwind</title>
-      <link>/post/tailwind/</link>
+      <link>https://aswinblue.github.io/post/tailwind/</link>
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
-      <guid>/post/tailwind/</guid>
+      <guid>https://aswinblue.github.io/post/tailwind/</guid>
       <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. Tailwind Docs Installation npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
 npx tailwindcss init -P 명령을 사용하면 tailwind.config.js 파일이 생성되며, 현재 위치에서 tailwind를 적용할 수 있게 된다.
 tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {// 포함할 항목content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],// 제외할 항목 (최신 버전에서 사용되지 않는 문법)// purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],// jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.</description>
@@ -20,10 +20,10 @@ tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {/
     
     <item>
       <title>Css</title>
-      <link>/post/css/</link>
+      <link>https://aswinblue.github.io/post/css/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
-      <guid>/post/css/</guid>
+      <guid>https://aswinblue.github.io/post/css/</guid>
       <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐 tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다. html 문서 안에 &amp;lt;style&amp;gt; 태그 안에 작성 가능
 ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
 태그의 종류별로 속성 설정 가능
@@ -33,10 +33,10 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>/post/sample/</link>
+      <link>https://aswinblue.github.io/post/sample/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/sample/</guid>
+      <guid>https://aswinblue.github.io/post/sample/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
     

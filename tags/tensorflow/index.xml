@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>tensorflow on AswinBlue</title>
-    <link>/tags/tensorflow/</link>
+    <link>https://aswinblue.github.io/tags/tensorflow/</link>
     <description>Recent content in tensorflow on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tensorflow</title>
-      <link>/post/tensorflow/</link>
+      <link>https://aswinblue.github.io/post/tensorflow/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>/post/tensorflow/</guid>
+      <guid>https://aswinblue.github.io/post/tensorflow/</guid>
       <description>#Tensorflow
 TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
 edge는 학습데이터가 저장되는 다차원 배열이다.
