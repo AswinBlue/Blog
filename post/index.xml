@@ -290,7 +290,7 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/nodejs/</guid>
-      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) 구조 main.js : nodejs 실행시 실행할 메인 파일 package.json : root 경로에 존재하며, npm 프로젝트를 관리하는 파일 package.</description>
+      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) npm audit : 의존성 문제가 발생했을 때, npm audit fix : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.</description>
     </item>
     
     <item>
