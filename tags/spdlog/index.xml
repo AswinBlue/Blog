@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/spdlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>spdlog C&#43;&#43;</title>
-      <link>https://aswinblue.github.io/post/log_c&#43;&#43;/</link>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/log_c&#43;&#43;/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/log_c&#43;&#43;/</guid>
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/log_c&#43;&#43;/</guid>
       <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
     </item>
     

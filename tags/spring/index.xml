@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 23 Aug 2021 19:21:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring basic</title>
-      <link>https://aswinblue.github.io/post/spring/</link>
+      <link>https://aswinblue.github.io/post/webserver/spring/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/spring/</guid>
+      <guid>https://aswinblue.github.io/post/webserver/spring/</guid>
       <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
 참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.</description>
     </item>

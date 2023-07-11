@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CMake</title>
-      <link>https://aswinblue.github.io/post/cmake/</link>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/cmake/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/cmake/</guid>
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/cmake/</guid>
       <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구
 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
 cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.

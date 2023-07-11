@@ -2,22 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>docker on AswinBlue</title>
-    <link>https://AswinBlue.github.io/tags/docker/</link>
+    <link>https://aswinblue.github.io/tags/docker/</link>
     <description>Recent content in docker on AswinBlue</description>
-    <image>
-      <url>https://AswinBlue.github.io/cover.png</url>
-      <link>https://AswinBlue.github.io/cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://AswinBlue.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>https://AswinBlue.github.io/post/docker/</link>
+      <link>https://aswinblue.github.io/post/ci_cd/docker/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://AswinBlue.github.io/post/docker/</guid>
+      <guid>https://aswinblue.github.io/post/ci_cd/docker/</guid>
       <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 설치 링크 참조
-실행 오류 및 각종 이 is docker daemon running? 에러 service docker status 입력시 docker daemon이 꺼져있는지 확인 service docker start 명령으로 daemon 실행 만약 명령은 수행되나 켜지지 않는다면 systemctl명령 수행 systemctl start docker : docker를 daemon으로 실행 systemctl enable docker : OS실행시 docker daemon을 기본 실행 systemctl 명령도 안된다면 /lib/systemd/system/docker.</description>
+실행 DockerFile 이름의 파일을 생성하고 내용을 채워넣는다. https://docs.docker.com/engine/reference/builder/ DockerFile 명령어
+FROM: base image를 지정하는 명령어 DockerFile의 시작은 무조건 FORM 이 필요하다. FROM &amp;lt;IMAGE&amp;gt;:&amp;lt;VERSION&amp;gt; 형태로 사용한다. FROM base:${CODE_VERSION} ARG: 변수를 선언 ARG CODE_VERSION=latest 선언한 변수는 ${CODE_VERSION} 형태로 참조 가능하며, build시 자동으로 argument로 사용된다.</description>
     </item>
     
   </channel>

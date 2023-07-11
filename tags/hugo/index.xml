@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 10 May 2020 12:23:13 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 환경세팅</title>
-      <link>https://aswinblue.github.io/post/hugo_dev/</link>
+      <link>https://aswinblue.github.io/post/hugo/hugo_dev/</link>
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/hugo_dev/</guid>
+      <guid>https://aswinblue.github.io/post/hugo/hugo_dev/</guid>
       <description>Hugo를 이용해 블로그 만들기 Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.
 게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.
 Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.

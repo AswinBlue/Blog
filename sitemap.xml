@@ -3,27 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aswinblue.github.io/</loc>
-    <lastmod>2023-01-19T22:01:38+09:00</lastmod>
+    <lastmod>2023-07-10T22:13:06+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/gcc/</loc>
+    <lastmod>2023-07-10T22:13:06+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/</loc>
+    <lastmod>2023-07-10T22:13:06+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/linux/linux_introduction/</loc>
+    <lastmod>2023-07-10T21:31:47+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/categories/</loc>
-    <lastmod>2023-01-19T22:01:38+09:00</lastmod>
+    <lastmod>2023-07-10T21:04:56+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/categories/dev/</loc>
-    <lastmod>2023-01-19T22:01:38+09:00</lastmod>
+    <lastmod>2023-07-10T21:04:56+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/tags/linux/</loc>
+    <lastmod>2023-07-10T21:04:56+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/linux/linux_env/</loc>
+    <lastmod>2023-07-10T21:04:56+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/tags/</loc>
+    <lastmod>2023-07-10T21:04:56+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/linux/virtual_box/</loc>
+    <lastmod>2023-07-02T20:03:24+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/flutter/</loc>
     <lastmod>2023-01-19T22:01:38+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/flutter/</loc>
+    <loc>https://aswinblue.github.io/post/mobileapp/flutter/</loc>
     <lastmod>2023-01-19T22:01:38+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/</loc>
-    <lastmod>2023-01-19T22:01:38+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/tags/</loc>
-    <lastmod>2023-01-19T22:01:38+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/post/computer_science/</loc>
+    <loc>https://aswinblue.github.io/post/computerscience/computer_science/</loc>
     <lastmod>2023-01-19T21:59:14+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/cs/</loc>
@@ -38,13 +53,13 @@
     <loc>https://aswinblue.github.io/tags/jsp/</loc>
     <lastmod>2022-06-29T20:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/thymeleaf/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/thymeleaf/</loc>
     <lastmod>2022-06-29T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/css/</loc>
     <lastmod>2022-06-02T21:55:38+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/tailwind/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/tailwind/</loc>
     <lastmod>2022-06-02T21:55:38+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/java/</loc>
@@ -56,25 +71,28 @@
     <loc>https://aswinblue.github.io/tags/spring_boot/</loc>
     <lastmod>2022-05-30T19:20:23+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/spring_boot/</loc>
+    <loc>https://aswinblue.github.io/post/webserver/spring_boot/</loc>
     <lastmod>2022-05-30T19:20:23+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/algorithm/algorithm/</loc>
+    <lastmod>2022-04-24T18:16:23+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/post/algorithm/</loc>
     <lastmod>2022-04-24T18:16:23+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/vscode/</loc>
+    <loc>https://aswinblue.github.io/post/developtips/vscode/</loc>
     <lastmod>2022-04-16T09:07:48+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/c&#43;&#43;_stl/</loc>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/c&#43;&#43;_stl/</loc>
     <lastmod>2022-04-12T19:17:21+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/window/</loc>
+    <loc>https://aswinblue.github.io/post/developtips/window/</loc>
     <lastmod>2022-03-19T08:29:51+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/firebase/</loc>
     <lastmod>2022-02-12T19:32:34+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/firebase_react/</loc>
+    <loc>https://aswinblue.github.io/post/database/firebase_react/</loc>
     <lastmod>2022-02-12T19:32:34+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/react/</loc>
@@ -86,7 +104,7 @@
     <loc>https://aswinblue.github.io/tags/cryptocurrency/</loc>
     <lastmod>2022-02-02T13:22:27+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/cryptocurrency/</loc>
+    <loc>https://aswinblue.github.io/post/crypto/cryptocurrency/</loc>
     <lastmod>2022-02-02T13:22:27+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/cryptograph/</loc>
@@ -95,13 +113,13 @@
     <loc>https://aswinblue.github.io/tags/db/</loc>
     <lastmod>2022-01-19T21:02:46+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/firebase/</loc>
+    <loc>https://aswinblue.github.io/post/database/firebase/</loc>
     <lastmod>2022-01-19T21:02:46+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/go/</loc>
     <lastmod>2022-01-14T21:52:14+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/golang/</loc>
+    <loc>https://aswinblue.github.io/post/golang/golang/</loc>
     <lastmod>2022-01-14T21:52:14+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/deep-learning/</loc>
@@ -113,7 +131,7 @@
     <loc>https://aswinblue.github.io/tags/tensorflow/</loc>
     <lastmod>2021-11-27T08:15:42+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/tensorflow/</loc>
+    <loc>https://aswinblue.github.io/post/machinelearning/tensorflow/</loc>
     <lastmod>2021-11-27T08:15:42+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/gui/</loc>
@@ -122,16 +140,16 @@
     <loc>https://aswinblue.github.io/tags/kivy/</loc>
     <lastmod>2021-09-09T18:43:28+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/kivy/</loc>
+    <loc>https://aswinblue.github.io/post/windowapp/kivy/</loc>
     <lastmod>2021-09-09T18:43:28+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/python/</loc>
+    <loc>https://aswinblue.github.io/post/python/python/</loc>
     <lastmod>2021-09-01T18:49:18+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/angular/</loc>
     <lastmod>2021-08-23T19:46:09+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/angular/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/angular/</loc>
     <lastmod>2021-08-23T19:46:09+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/typescript/</loc>
@@ -143,13 +161,13 @@
     <loc>https://aswinblue.github.io/tags/spring/</loc>
     <lastmod>2021-08-23T19:21:55+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/spring/</loc>
+    <loc>https://aswinblue.github.io/post/webserver/spring/</loc>
     <lastmod>2021-08-23T19:21:55+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/jython/</loc>
     <lastmod>2021-08-23T19:20:47+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/jython/</loc>
+    <loc>https://aswinblue.github.io/post/java/jython/</loc>
     <lastmod>2021-08-23T19:20:47+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/regular-expression/</loc>
@@ -161,7 +179,7 @@
     <loc>https://aswinblue.github.io/tags/web/</loc>
     <lastmod>2021-08-23T19:00:44+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/web_scrapping/</loc>
+    <loc>https://aswinblue.github.io/post/developtips/web_scrapping/</loc>
     <lastmod>2021-08-23T19:00:44+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/c/</loc>
@@ -176,13 +194,13 @@
     <loc>https://aswinblue.github.io/tags/gdb/</loc>
     <lastmod>2021-08-23T18:49:15+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/gdb/</loc>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/gdb/</loc>
     <lastmod>2021-08-23T18:49:15+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/javascript/</loc>
     <lastmod>2021-08-23T18:46:22+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/react_basic/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/react_basic/</loc>
     <lastmod>2021-08-23T18:46:22+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/web-application/</loc>
@@ -191,25 +209,28 @@
     <loc>https://aswinblue.github.io/tags/basic/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/c&#43;&#43;/</loc>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/c&#43;&#43;/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/cmake/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/cmake/</loc>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/cmake/</loc>
+    <lastmod>2021-08-12T10:41:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/tags/docker/</loc>
+    <lastmod>2021-08-12T10:41:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/ci_cd/docker/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/json/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/json_c&#43;&#43;/</loc>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/json_c&#43;&#43;/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/tags/linux/</loc>
-    <lastmod>2021-08-12T10:41:00+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/post/linux_command/</loc>
+    <loc>https://aswinblue.github.io/post/linux/linux_command/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/log/</loc>
@@ -224,13 +245,13 @@
     <loc>https://aswinblue.github.io/tags/spdlog/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/log_c&#43;&#43;/</loc>
+    <loc>https://aswinblue.github.io/post/c&#43;&#43;/log_c&#43;&#43;/</loc>
     <lastmod>2021-08-12T10:41:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/nodejs/</loc>
     <lastmod>2020-07-20T20:40:05+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/nodejs/</loc>
+    <loc>https://aswinblue.github.io/post/webserver/nodejs/</loc>
     <lastmod>2020-07-20T20:40:05+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/webserver/</loc>
@@ -239,37 +260,37 @@
     <loc>https://aswinblue.github.io/tags/mysql/</loc>
     <lastmod>2021-08-16T14:15:00+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/mysql/</loc>
+    <loc>https://aswinblue.github.io/post/database/mysql/</loc>
     <lastmod>2021-08-16T14:15:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/cgi/</loc>
     <lastmod>2020-07-02T19:15:21+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/pythoncgi/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/pythoncgi/</loc>
     <lastmod>2020-07-02T19:15:21+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/javascript/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/javascript/</loc>
     <lastmod>2020-06-23T20:38:45+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/css/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/css/</loc>
     <lastmod>2020-06-23T20:38:05+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/html/</loc>
+    <loc>https://aswinblue.github.io/post/webapplication/html/</loc>
     <lastmod>2020-06-23T19:13:17+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/linux_apt/</loc>
+    <loc>https://aswinblue.github.io/post/linux/linux_apt/</loc>
     <lastmod>2020-05-25T18:30:15+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/hugo/</loc>
     <lastmod>2020-05-10T12:23:13+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/hugo_dev/</loc>
+    <loc>https://aswinblue.github.io/post/hugo/hugo_dev/</loc>
     <lastmod>2020-05-10T12:23:13+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/post/sample/</loc>
+    <loc>https://aswinblue.github.io/post/hugo/sample/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/series/</loc>
@@ -289,8 +310,6 @@
   </url><url>
     <loc>https://aswinblue.github.io/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/post/docker/</loc>
   </url><url>
     <loc>https://aswinblue.github.io/archives/</loc>
   </url><url>
