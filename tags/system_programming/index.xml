@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>system_programming on AswinBlue</title>
+    <link>https://aswinblue.github.io/tags/system_programming/</link>
+    <description>Recent content in system_programming on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/system_programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System_programming</title>
+      <link>https://aswinblue.github.io/post/linux/system_programming/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/linux/system_programming/</guid>
+      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) Kernel level에서는 System call을 사용하며 system buffer를 사용한다. application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.</description>
+    </item>
+    
+  </channel>
+</rss>

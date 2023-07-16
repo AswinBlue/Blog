@@ -6,7 +6,26 @@
     <description>Recent content in linux on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Jul 2023 21:04:56 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System_programming</title>
+      <link>https://aswinblue.github.io/post/linux/system_programming/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/linux/system_programming/</guid>
+      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) Kernel level에서는 System call을 사용하며 system buffer를 사용한다. application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://aswinblue.github.io/post/linux/shell/</link>
+      <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/linux/shell/</guid>
+      <description>Shell 리눅스 쉘 명령어에 대해 기술한다.
+기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력</description>
+    </item>
+    
     <item>
       <title>Linux_env</title>
       <link>https://aswinblue.github.io/post/linux/linux_env/</link>
@@ -35,8 +54,8 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/linux/linux_command/</guid>
-      <description>sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트리밍 에디터 sed [-e script][-f script-file][file...]
-찾기/출력 sed -n &#39;/abd/p&#39; list.txt : list.txt : 파일을 한줄씩 읽으면서(-n : 읽은 것을 출력하지 않음) abd 문자를 찾으면 그 줄을 출력(p)한다. 치환 sed &#39;s/addrass/address/&#39; list.txt : list.txt파일에서 addrass를 address로 바꾼다. 단, 원본파일을 바꾸지 않고 출력을 바꿔서 한다. sed &#39;s/□□*/□/&#39; list.txt : ( *표시: □ 는 공백 문자를 표시한다.</description>
+      <description>리눅스 기본 stty -a: 시그널 단축키들의 값 확인 strace FILE_NAME: 실행파일이 실행되는 상세 과정을 라인별로 보여준다. sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트리밍 에디터 sed [-e script][-f script-file][file...]
+찾기/출력 sed -n &#39;/abd/p&#39; list.txt : list.txt : 파일을 한줄씩 읽으면서(-n : 읽은 것을 출력하지 않음) abd 문자를 찾으면 그 줄을 출력(p)한다. 치환 sed &#39;s/addrass/address/&#39; list.txt : list.</description>
     </item>
     
     <item>

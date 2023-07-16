@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C&#43;&#43; on AswinBlue</title>
+    <link>https://aswinblue.github.io/post/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 20:59:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Make</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/make/</link>
+      <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/make/</guid>
+      <description>make 분할 컴파일을 통해 컴파일 작업 효율을 올리고, 이 과정을 자동화 하기 위해 일괄처리를 도와주는 도구이다. batch 파일로 컴파일 하면, 변경점을 감지하지 못해 batch파일을 수정하지 않고서는 분할 컴파일을 수행할 수 없다. make파일은 파일들 간의 의존성을 정의하여, 특정 파일이 수정되면 어떤 파일을 컴파일 해야하는지 알아서 판단해 준다. 리눅스 시스템의 수정 시간을 확인하여, 빌드 결과물이 생성된 시간과 소스가 수정된 시간을 비교해서 컴파일 혹은 링킹이 다시 필요한지 판단하는 원리이다. 기본구조 파일 이름은 Makefile 으로 생성한다.</description>
+    </item>
+    
+    <item>
+      <title>Gcc</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/gcc/</link>
+      <pubDate>Mon, 10 Jul 2023 22:13:06 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/gcc/</guid>
+      <description>GCC C / C++ 언어를 컴파일 해 주는 도구이다. 리눅스에서는 apt 명령으로 설치 가능하며, 윈도우에서는 Mingw을 이용하여 설치 가능하다. gcc는 컴파일러를 포함한 패키지일 뿐, 내부적인 컴파일러는 따로 있다. (cc1 등)
+GCC 컴파일 동작 순서 gcc main.c 파일을 동작시키면 main.c파일을 컴파일하여 실행파일인 a.out 파일을 생성하게 된다.
+하지만 내부적으로는 아래와 같은 과정을 거치게 된다.
+c언어로 구현된 .c 파일을 전처리가 완료된 .i 파일로 변환한다.
+gcc -E main.c -o a.i : main.c 파일을 a.i 파일로 전처리 전처리된 .</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;_stl</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/c&#43;&#43;_stl/</link>
+      <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/c&#43;&#43;_stl/</guid>
+      <description>C++ STL 자료구조 map key-value 쌍으로 이루어진 tree형태의 자료구조 중복을 허용하지 않음 C++에서는 red black tree로 구현되어 삽입,삭제가 O(log n) 안에 이루어진다. 내부적으로 key를 기준으로 오름차순으로 자료를 정렬한다. 헤더 : #include &amp;lt;map&amp;gt;
+선언 : map&amp;lt;int, int&amp;gt; map1;
+내림차순으로 선언 : map &amp;lt;int, int, greater&amp;gt; map2 삽입 : insert : map1.insert({&amp;quot;key&amp;quot;,VALUE}) [] : map1[&amp;quot;key&amp;quot;] = VALUE 삭제 : 특정 index : map1.erase(map1.begin()+2) 특정 key : map1.erase(KEY) 구간 : map1.erase(map1.begin(), map1.end()) 전체 : map1.</description>
+    </item>
+    
+    <item>
+      <title>GDB</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/gdb/</link>
+      <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/gdb/</guid>
+      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 gdb 옵션 gdb [파일이름] : 해당 파일이름 디버깅 실행 --args [arg1] [arg2] [...] : 파일 실행에 필요한 argument를 전달 기타 명령어 coredumb 파일 생성 프로그램이 비정상적으로 종료될 때 메모리의 현재 상황을 블랙박스처럼 남기는 coredump 파일이 생성된다.다만, coredump 파일 생성에는 사전에 설정이 필요하다. 리눅스 프롬프트에서 ulimit -a 명령을 입력 해 보면 각종 파일들의 크기 설정을 볼 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; basic</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/c&#43;&#43;/</guid>
+      <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\printf(&amp;#34;%d&amp;#34;, (X) + 1);\printf(&amp;#34;%d&amp;#34;, (X) + 2); 매크로 합성 : #define A 1#define B 1#define C A##B // A##B = 12 함수형태 매크로 작성 : // 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/cmake/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/cmake/</guid>
+      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
+cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
+make : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일
+cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다. 1. mkdir build2.</description>
+    </item>
+    
+    <item>
+      <title>Json in C&#43;&#43;</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/json_c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/json_c&#43;&#43;/</guid>
+      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
+    </item>
+    
+    <item>
+      <title>spdlog C&#43;&#43;</title>
+      <link>https://aswinblue.github.io/post/c&#43;&#43;/log_c&#43;&#43;/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/c&#43;&#43;/log_c&#43;&#43;/</guid>
+      <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
+    </item>
+    
+  </channel>
+</rss>

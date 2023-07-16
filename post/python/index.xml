@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on AswinBlue</title>
+    <link>https://aswinblue.github.io/post/python/</link>
+    <description>Recent content in Python on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Jul 2023 09:23:24 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://aswinblue.github.io/post/python/python/</link>
+      <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/python/python/</guid>
+      <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
+받은 값은 string 형태이다.
+받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print()
+함수 함수 인자로 배열 형태를 표현할 때 *를 붙인다.
+def func1(*arg)print(*arg)func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬운 숫자 표기: x = 10000 vs x = 10_000</description>
+    </item>
+    
+  </channel>
+</rss>

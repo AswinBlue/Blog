@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevelopTips on AswinBlue</title>
+    <link>https://aswinblue.github.io/post/developtips/</link>
+    <description>Recent content in DevelopTips on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Jul 2023 09:22:36 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/developtips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VsCode</title>
+      <link>https://aswinblue.github.io/post/developtips/vscode/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/developtips/vscode/</guid>
+      <description>VS code visual studio code 사용법 개발환경 C / C++ 컴파일러 gcc 혹은 mingw 설치가 필요하다. 인터넷에서 설치하도록 한다. 설정파일 컴파일 및 실행을 위해서는 launch.json, setting.json, tasks.json 파일이 필요하다. vs code에서 알아서 작성해 주지만, 기본 설정으로 부족한 부분은 수정해야 한다. # settings.json{&amp;#34;C_Cpp_Runner.cStandard&amp;#34;: &amp;#34;&amp;#34;,&amp;#34;C_Cpp_Runner.cppStandard&amp;#34;: &amp;#34;&amp;#34;,&amp;#34;C_Cpp_Runner.msvcBatchPath&amp;#34;: &amp;#34;&amp;#34;,&amp;#34;C_Cpp_Runner.warnings&amp;#34;: [&amp;#34;-Wall&amp;#34;,&amp;#34;-Wextra&amp;#34;,&amp;#34;-Wpedantic&amp;#34;],&amp;#34;C_Cpp_Runner.enableWarnings&amp;#34;: true,&amp;#34;C_Cpp_Runner.warningsAsError&amp;#34;: false,&amp;#34;C_Cpp_Runner.compilerArgs&amp;#34;: [],&amp;#34;C_Cpp_Runner.linkerArgs&amp;#34;: [],&amp;#34;C_Cpp_Runner.includePaths&amp;#34;: [],&amp;#34;C_Cpp_Runner.includeSearch&amp;#34;: [&amp;#34;*&amp;#34;,&amp;#34;**/*&amp;#34;],&amp;#34;C_Cpp_Runner.</description>
+    </item>
+    
+    <item>
+      <title>Window</title>
+      <link>https://aswinblue.github.io/post/developtips/window/</link>
+      <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/developtips/window/</guid>
+      <description>#MS Window
+MS window 사용시 필요한 편이 기능들을 나열 WSL2 윈도우에서 리눅스를 실행하는 방법이다. windows 10 이상부터 지원 가능하며, microsoft store에서 ubuntu를 설치하는 방식이다. PowerShell을 관리자 권한으로 실행하여 아래 명령어 입력 $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+$ wsl &amp;ndash;set-default-version 2
+환경변수 환경변수 설정시 컴퓨터를 재부팅하지 않고 적용하는 방법 콘솔에 taskkill /f /im explorer.exe, explorer.exe 명령을 순서대로 입력한다. 작업표시줄이 없어졌다 생겨나면 적용이 된 것이다.</description>
+    </item>
+    
+    <item>
+      <title>Web_scrapping</title>
+      <link>https://aswinblue.github.io/post/developtips/web_scrapping/</link>
+      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/developtips/web_scrapping/</guid>
+      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함 @id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link</description>
+    </item>
+    
+  </channel>
+</rss>

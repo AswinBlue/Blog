@@ -6,13 +6,31 @@
     <description>Recent content in Tags on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Jul 2023 21:04:56 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux</title>
       <link>https://aswinblue.github.io/tags/linux/</link>
-      <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system_programming</title>
+      <link>https://aswinblue.github.io/tags/system_programming/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/tags/system_programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://aswinblue.github.io/tags/shell/</link>
+      <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/tags/shell/</guid>
       <description></description>
     </item>
     

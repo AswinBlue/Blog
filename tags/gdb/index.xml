@@ -13,8 +13,7 @@
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB 컴파일 컴파일 옵션에 -g 를 붙여야 디버깅이 가능 시작 gdb [파일이름] gdb 실행 후 file [파일이름] 디버깅 중 명령어 ▷breakpoint
-b [라인] : 해당 라인에 breakpoint 설정 b [함수명] : 해당 함수 시작점에 breakpoint 설정 b [파일명]:[라인] : 특정 파일 해당 라인에 breakpoin (ex : b test.cpp:10) tb : 임시 중단점 설정, 일회성 info b : breakpoint 확인 delete : 모든 brekapoint 삭제 delete [index] : 특정 breakpoint 삭제 cl [라인] : 해당 라인의 brekapoint 삭제 cl [함수] : 해당 함수의 breakpoint 삭제 cl : 모든 breakpoint 삭제 enable [index] : 해당 brekapoint 활성화 disable [index] : 해당 breakpoint 비활성화 condition [index] [조건] : 해당 breakpoint는 조건을 만족할 때에만 동작 (ex : condition 2 var_a == 0) ▷ 실행</description>
+      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 gdb 옵션 gdb [파일이름] : 해당 파일이름 디버깅 실행 --args [arg1] [arg2] [...] : 파일 실행에 필요한 argument를 전달 기타 명령어 coredumb 파일 생성 프로그램이 비정상적으로 종료될 때 메모리의 현재 상황을 블랙박스처럼 남기는 coredump 파일이 생성된다.다만, coredump 파일 생성에는 사전에 설정이 필요하다. 리눅스 프롬프트에서 ulimit -a 명령을 입력 해 보면 각종 파일들의 크기 설정을 볼 수 있다.</description>
     </item>
     
   </channel>
