@@ -25,8 +25,8 @@
       <description>GCC C / C++ 언어를 컴파일 해 주는 도구이다. 리눅스에서는 apt 명령으로 설치 가능하며, 윈도우에서는 Mingw을 이용하여 설치 가능하다. gcc는 컴파일러를 포함한 패키지일 뿐, 내부적인 컴파일러는 따로 있다. (cc1 등)
 GCC 컴파일 동작 순서 gcc main.c 파일을 동작시키면 main.c파일을 컴파일하여 실행파일인 a.out 파일을 생성하게 된다.
 하지만 내부적으로는 아래와 같은 과정을 거치게 된다.
-c언어로 구현된 .c 파일을 전처리가 완료된 .i 파일로 변환한다.
-gcc -E main.c -o a.i : main.c 파일을 a.i 파일로 전처리 전처리된 .</description>
+전처리 : c언어로 구현된 .c 파일을 전처리가 완료된 .i 파일로 변환한다.
+gcc -E main.c -o a.i : main.c 파일을 a.</description>
     </item>
     
     <item>

@@ -8,6 +8,24 @@
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 09:23:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>IPC</title>
+      <link>https://aswinblue.github.io/post/linux/ipc/</link>
+      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/linux/ipc/</guid>
+      <description>IPC (Inter Process Communicatrion) Signal Signal은 프로세스간 동기화를 위해 프로세스간 전송하는 신호를 의미한다. Software Interrupt 라고도 한다. 커널에서 kill -&amp;lt;SIGNAL_NUMBER&amp;gt; &amp;lt;PROCESS_ID&amp;gt; 명령으로 특정 PROCESS_ID에 ISGNAL_NUMBER에 해당하는 signal을 전달할 수 있다. signal은 총 64까지 정의되어 있고 1~31까지가 일반적으로 사용하는 signal이다. 34~63은 고성능 네트워크 통신을 위한 시그널이다. (32, 33는 미정의) kill -l 명령으로 signal 리스트를 확인할 수 있다. SIGHUP SIGINT : 인터럽트, Ctrl+C 명령으로 전송 가능 SIGQUIT Coredump시 발생 SIGILL : Illegal instruction SIGTRAP : debugger is tracing SIGABRT : Abort process SIGBUS : bus error SIGFPE : Floating point exception SIGKILL : 강제 종료 SIGUSR1	: User-defined signal 1, 마음대로 사용 가능 SIGSEGV	: invalid virtual memory reference SIGUSR2 : User-defined signal 2, 마음대로 사용 가능 SIGPIPE	: 반대편이 연결되지 않은 pip에 신호 전송시 발생하는 에러 SIGALRM : alarm() 함수에 의해 발생한 시그널 1 SIGTERM : 종료 요청, SIGKILL(9)보다 안전한 종료 방법, SIGINT와 유사한 성능 SIGSTKFLT : Stack fault SIGCHLD : 자식 process가 종료될 때 부모에게 전달하는 신호 SIGCONT : SIGSTOP 에 의해 정지된 경우, 다시 시작하라는 신호 SIGSTOP : process 정지 SIGTSTP : process 일시정지, Ctrl+Z 명령으로 전송 가능 SIGTTIN	: background 에 있을 때 read 요청을 받은 경우 발생 SIGTTOU : background 에 있을 때 write 요청을 받은 경우 발생 SIGURG : 긴급 통신을 받은 경우 (Out Of Band) SIGXCPU : 설정된 CPU 사용량을 초과하여 프로세스가 동작 한 경우 SIGXFSZ : 파일 크기가 허용된 크기를 초과한 경우 SIGVTALRM : 프로세스 실행시간 관리를 위한 시그널1 SIGPROF : 프로세스 실행시간 관리를 위한 시그널2 SIGWINCH : Window change SIGIO, SIGPOLL : Input/output is now possible SIGPWR, SIGLOST : Power failure SIGUNUSED, SIGSYS : Unused signal.</description>
+    </item>
+    
+    <item>
+      <title>Thread</title>
+      <link>https://aswinblue.github.io/post/linux/thread/</link>
+      <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/linux/thread/</guid>
+      <description>Thread thread는 process의 경량화 버전으로 생각할 수 있다. pthread_create() 함수로 fork 명령을 대체하고, pthread_join() 으로 wait 명령을 대체하면 process 대신 thread를 동작시킨다. thread는 함수를 실행시키는 것이 기본이며, 함수를 실행시킬 때 넣을 인자와, 함수의 리턴값을 받을 인자를 pthread_create의 파라미터로 받는다. 리눅스 프로세스 표시 목록에 LWP(light-weight-process) 항목으로 표시되며, proces ID가 같더라도 LWP ID가 다르면 같은 process 안의 thread인 것. pthread_exit() 로 thread만 종료시킬 수 있다. main process가 종료되면 딸려있는 thread들도 함께 종료된다. 다만, main thread만 pthread_exit으로 종료시키면 process가 종료되지 않고 main thread만 종료되고 다른 thread들은 계속 구동되는 형태가 되므로 주의한다.</description>
+    </item>
+    
+    <item>
       <title>Process</title>
       <link>https://aswinblue.github.io/post/linux/process/</link>
       <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
@@ -22,16 +40,16 @@
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/linux/system_programming/</guid>
-      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) Kernel level에서는 System call을 사용하며 system buffer를 사용한다. application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.</description>
+      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
     </item>
     
     <item>
-      <title>Shell</title>
-      <link>https://aswinblue.github.io/post/linux/shell/</link>
+      <title>Shell Programming</title>
+      <link>https://aswinblue.github.io/post/linux/shell_programming/</link>
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/shell/</guid>
-      <description>Shell 리눅스 쉘 명령어에 대해 기술한다.
+      <guid>https://aswinblue.github.io/post/linux/shell_programming/</guid>
+      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다.
 기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력</description>
     </item>
     
