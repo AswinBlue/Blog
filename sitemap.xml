@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aswinblue.github.io/post/projects/</loc>
+    <loc>https://aswinblue.github.io/post/projects/delver/delver/</loc>
     <lastmod>2024-01-30T21:37:19+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/projects/delver/</loc>
+    <lastmod>2024-01-30T21:21:38+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/projects/flickthrough/</loc>
+    <lastmod>2024-01-30T21:20:31+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/projects/flickthrough/flickthrough/</loc>
+    <lastmod>2024-01-30T21:37:19+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/post/projects/</loc>
+    <lastmod>2024-01-30T21:11:39+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/post/linux/ipc/</loc>
     <lastmod>2023-07-29T12:29:41+09:00</lastmod>
