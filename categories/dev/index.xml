@@ -83,9 +83,8 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/webapplication/tailwind/</guid>
-      <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. Tailwind Docs Installation npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
-npx tailwindcss init -P 명령을 사용하면 tailwind.config.js 파일이 생성되며, 현재 위치에서 tailwind를 적용할 수 있게 된다.
-tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {// 포함할 항목content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],// 제외할 항목 (최신 버전에서 사용되지 않는 문법)// purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],// jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.</description>
+      <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. Tailwind Docs Installation tailwind 모듈 설치
+npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다. npx tailwindcss init 명령을 사용하면 현재 경로에 tailwind.config.js 파일이 생성되며, 현재 프로젝트에서 tailwind를 적용할 수 있게 된다. tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {// 포함할 항목content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],// 제외할 항목 (최신 버전에서 사용되지 않는 문법)// purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],// jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.</description>
     </item>
     
     <item>
