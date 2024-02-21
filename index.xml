@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://aswinblue.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Assembly_basic</title>
+      <link>https://aswinblue.github.io/post/assembly/assembly_basic/</link>
+      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/assembly/assembly_basic/</guid>
+      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. 명령어 mov 특정 값을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
+    </item>
+    
+    <item>
       <title>Delver</title>
       <link>https://aswinblue.github.io/post/projects/delver/delver/</link>
       <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
@@ -315,9 +324,7 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
-받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print()
-함수 함수 인자로 배열 형태를 표현할 때 *를 붙인다.
-def func1(*arg)print(*arg)func1(1, 2, 3) # 출력: [1, 2, 3] 숫자 읽기쉬운 숫자 표기: x = 10000 vs x = 10_000</description>
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. Flush print() 함수는 효율을 위해 버퍼에 내용을 채워놓고 있다가 버퍼가 일정량 채워지면 화면에 버퍼의 내용을 출력한다.</description>
     </item>
     
     <item>

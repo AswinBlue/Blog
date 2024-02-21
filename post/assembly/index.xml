@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Assembly on AswinBlue</title>
+    <link>https://aswinblue.github.io/post/assembly/</link>
+    <description>Recent content in Assembly on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Feb 2024 11:09:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/assembly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assembly_basic</title>
+      <link>https://aswinblue.github.io/post/assembly/assembly_basic/</link>
+      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/assembly/assembly_basic/</guid>
+      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. 명령어 mov 특정 값을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>
