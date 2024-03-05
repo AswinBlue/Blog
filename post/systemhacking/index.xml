@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>System Hacking on AswinBlue</title>
+    <link>https://aswinblue.github.io/post/systemhacking/</link>
+    <description>Recent content in System Hacking on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Mar 2024 21:02:28 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/systemhacking/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
