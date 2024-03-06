@@ -13,7 +13,7 @@
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 gdb 옵션 gdb [파일이름] : 해당 파일이름 디버깅 실행 --args [arg1] [arg2] [...] : 파일 실행에 필요한 argument를 전달 기타 명령어 coredumb 파일 생성 프로그램이 비정상적으로 종료될 때 메모리의 현재 상황을 블랙박스처럼 남기는 coredump 파일이 생성된다.다만, coredump 파일 생성에는 사전에 설정이 필요하다. 리눅스 프롬프트에서 ulimit -a 명령을 입력 해 보면 각종 파일들의 크기 설정을 볼 수 있다.</description>
+      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다. ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.</description>
     </item>
     
     <item>
