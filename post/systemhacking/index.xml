@@ -7,5 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 04 Mar 2024 21:02:28 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/systemhacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pwntool</title>
+      <link>https://aswinblue.github.io/post/systemhacking/pwntool/</link>
+      <pubDate>Sat, 09 Mar 2024 10:09:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/systemhacking/pwntool/</guid>
+      <description>pwntool 시스템 해킹을 위해 제작된 파이썬 라이브러리 바이너리를 실행하고 특정 input을 집어넣어 해킹(exploit)을 할수 있게 한다. 설치 리눅스의 apt와 파이썬의 pip 명령으로 설치가 가능하다. $ apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential$ python3 -m pip install --upgrade pip$ python3 -m pip install --upgrade pwntools 공식 메뉴얼 사용법 from pwn import * 을 통해 모듈을 로딩한다. process / remote target = process(파일경로) 로 로컬 파일을 exploit 하기위한 대상으로 설정한다.</description>
+    </item>
+    
   </channel>
 </rss>
