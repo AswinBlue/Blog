@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://aswinblue.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Exploit</title>
+      <link>https://aswinblue.github.io/post/systemhacking/exploit/</link>
+      <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/post/systemhacking/exploit/</guid>
+      <description>Exploit Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. ORW 파일을 열고 읽고 쓸 수 있도록 하는 shell code를 &amp;lsquo;ORW shell code&amp;rsquo; 라 칭한다. 시스템 콜들은 rax, rdi, rsi, rdx로 이루어 져 있음을 참고하여 shell code를 작성해 보자. rax : 시스템 콜에 대응되는 번호 rdi : 시스템 콜의 첫 번째 인자 rsi : 시스템 콜의 두 번째 인자 rdx : 시스템 콜의 세 번째 인자 open</description>
+    </item>
+    
+    <item>
       <title>Pwntool</title>
       <link>https://aswinblue.github.io/post/systemhacking/pwntool/</link>
       <pubDate>Sat, 09 Mar 2024 10:09:44 +0900</pubDate>
@@ -21,7 +30,7 @@
       <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/assembly/assembly_basic/</guid>
-      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. WORD: 16bit DWORD: 32bit QWORD: 64bit 명령어 mov &amp;ldquo;값&amp;quot;을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀(src는 상수값) mov dst, [mem + 4] : mem + 4 주소에 저장된 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
+      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. WORD: 16bit DWORD: 32bit QWORD: 64bit 명령어 mov &amp;ldquo;값&amp;quot;을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀 dst = 레지스터, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 레지스터, src = 메모리 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 메모리 : 불가능 mov dst, [mem + 4] : mem + 4 주소에 저장된 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
     </item>
     
     <item>
