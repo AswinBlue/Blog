@@ -167,7 +167,7 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
-받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. Flush print() 함수는 효율을 위해 버퍼에 내용을 채워놓고 있다가 버퍼가 일정량 채워지면 화면에 버퍼의 내용을 출력한다.</description>
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. sys.stdout.write 안에는 string 형태만 적용할 수 있다. print 안에는 수식 등으로 string 및 byte를 표현 가능하다.</description>
     </item>
     
     <item>

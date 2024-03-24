@@ -268,7 +268,7 @@ DFS 용도 : 경로가 있는지 확인할 때 사용 가능 자로구조 : stac
 MS window 사용시 필요한 편이 기능들을 나열 WSL2 윈도우에서 리눅스를 실행하는 방법이다. windows 10 이상부터 지원 가능하며, microsoft store에서 ubuntu를 설치하는 방식이다. PowerShell을 관리자 권한으로 실행하여 아래 명령어 입력 $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 $ wsl &amp;ndash;set-default-version 2
-환경변수 환경변수 설정시 컴퓨터를 재부팅하지 않고 적용하는 방법 콘솔에 taskkill /f /im explorer.exe, explorer.exe 명령을 순서대로 입력한다. 작업표시줄이 없어졌다 생겨나면 적용이 된 것이다.</description>
+WSL 콘솔에서 explorer.exe . 를 입력하면 현재 경로를 윈도우의 파일 탐색기로 열 수 있다. 해당 경로에 파일을 옮기면 윈도우-리눅스 간 파일 이동이 가능하다.</description>
     </item>
     
     <item>
@@ -342,7 +342,7 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
-받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. Flush print() 함수는 효율을 위해 버퍼에 내용을 채워놓고 있다가 버퍼가 일정량 채워지면 화면에 버퍼의 내용을 출력한다.</description>
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. sys.stdout.write 안에는 string 형태만 적용할 수 있다. print 안에는 수식 등으로 string 및 byte를 표현 가능하다.</description>
     </item>
     
     <item>
