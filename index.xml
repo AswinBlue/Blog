@@ -155,7 +155,7 @@ gcc -E main.c -o a.i : main.c 파일을 a.</description>
       
       <guid>https://aswinblue.github.io/post/linux/linux_env/</guid>
       <description>Dev in Linux 리눅스 개발환경 구축을 위한 가이드
-.bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
+사용자 맞춤 설정 .bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
 source ~/.bashrc 명령어로 언제든 새로고침 할 수 있다.
 리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.
 force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then# We have color support; assume it&amp;#39;s compliant with Ecma-48# (ISO/IEC-6429). (Lack of such support is extremely rare, and such# a case would tend to support setf rather than setaf.</description>
