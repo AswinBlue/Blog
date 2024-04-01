@@ -215,7 +215,7 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다. ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.</description>
+      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다. https://github.com/pwndbg/pwndbg 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 gdb 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.</description>
     </item>
     
     <item>
@@ -274,8 +274,7 @@ FROM: base image를 지정하는 명령어 DockerFile의 시작은 무조건 FOR
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/linux/linux_command/</guid>
-      <description>리눅스 기본 stty -a: 시그널 단축키들의 값 확인 strace FILE_NAME: 실행파일이 실행되는 상세 과정을 라인별로 보여준다. sed 기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다. ed는 대화형 편집기이며, sed는 스트리밍 편집기 \n 을 개행문자로 사용하는 스트리밍 에디터 sed [-e script][-f script-file][file...]
-찾기/출력 sed -n &#39;/abd/p&#39; list.txt : list.txt : 파일을 한줄씩 읽으면서(-n : 읽은 것을 출력하지 않음) abd 문자를 찾으면 그 줄을 출력(p)한다. 치환 sed &#39;s/addrass/address/&#39; list.txt : list.</description>
+      <description>Linux Command 리눅스에서 사용되는 명령어들을 정리한다. 자주 사용되는 모듈의 명령어도 포함한다. 리눅스에서 명령어는 /usr/bin/ 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다. 유저 개인의 명령어를 따로 설정 및 관리하려면 ~/.bashrc 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다. 기본적으로 ~/bin/ 경로가 PATH에 추가되어 있다. export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...] 명령어를 ~/.bashrc 에 추가하면 경로를 추가할 수 있다. ex) # in .bashrc filePATH=$PATH:/home/user/bashrc # 기존의 PATH에 /home/user/.bashrc 추가# 현재 PATH는 .bashrc 포함PATH=$PATH:/home/user/dir1:/home/user/dir2 # 기존의 PATH에 dir1, dir2 추가# 현재 PATH는 .</description>
     </item>
     
     <item>
