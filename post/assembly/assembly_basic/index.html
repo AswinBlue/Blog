@@ -9,16 +9,16 @@ sub ESP, VALUE  # 지역변수가 설정될 영역만큼(VALUE) ESP 주소를 �
 지역변수
 ----------  &lt;- EBP(rbp)
 SFP
-----------  &lt;- EBP(rbp) + 0x08 (x64라면 +0x10)
+----------  &lt;- EBP(rbp) + 0x04 (x64라면 +0x08)
 return address (EIP)
 ----------
 </code></pre></li><li>만약 Stack canary 기법이 적용되었다면 아래와 같이 canary가 추가된다.<pre tabindex=0><code>----------  &lt;- ESP(rsp)
 지역변수
-----------  &lt;- EBP(rbp) - 0x08 (x64라면 -0x10)
+----------  &lt;- EBP(rbp) - 0x04 (x64라면 -0x08)
 Canary (8byte length)
 ----------  &lt;- EBP(rbp)
 SFP
-----------  &lt;- EBP(rbp) + 0x08 (x64라면 +0x10)
+----------  &lt;- EBP(rbp) + 0x04 (x64라면 +0x08)
 return address (EIP)
 ----------
 </code></pre></li><li>함수가 종료되면 다음 절차가 수행된다.<pre tabindex=0><code>mov ESP, EBP  # 지역변수 공간을 해제
