@@ -12,7 +12,7 @@
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/post/systemhacking/exploit/</guid>
-      <description>Exploit Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 취약점 일반적으로 잘 알려진 취약점에 대해 서술한다. ORW 파일을 열고 읽고 쓸 수 있도록 하는 shell code를 &amp;lsquo;ORW shell code&amp;rsquo; 라 칭한다. 시스템 콜들은 rax, rdi, rsi, rdx로 이루어 져 있음을 참고하여 shell code를 작성해 보자. rax : 시스템 콜에 대응되는 번호 rdi : 시스템 콜의 첫 번째 인자 rsi : 시스템 콜의 두 번째 인자 rdx : 시스템 콜의 세 번째 인자 open</description>
+      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 취약점 일반적으로 잘 알려진 취약점에 대해 서술한다. ORW 파일을 열고 읽고 쓸 수 있도록 하는 shell code를 &amp;lsquo;ORW shell code&amp;rsquo; 라 칭한다. 시스템 콜들은 rax, rdi, rsi, rdx로 이루어 져 있음을 참고하여 shell code를 작성해 보자.</description>
     </item>
     
     <item>
