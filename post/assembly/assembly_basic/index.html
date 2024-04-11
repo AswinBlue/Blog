@@ -14,8 +14,10 @@ return address (EIP)
 ----------
 </code></pre></li><li>만약 Stack canary 기법이 적용되었다면 아래와 같이 canary가 추가된다.<pre tabindex=0><code>----------  &lt;- ESP(rsp)
 지역변수
+----------  &lt;- EBP(rbp) - 0x08 (x64라면 -0x10)
+dummy value 0x00 (4byte / x64라면 8byte)
 ----------  &lt;- EBP(rbp) - 0x04 (x64라면 -0x08)
-Canary (8byte length)
+Canary (4byte / x64라면 8byte)
 ----------  &lt;- EBP(rbp)
 SFP
 ----------  &lt;- EBP(rbp) + 0x04 (x64라면 +0x08)
