@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>WebApplication on AswinBlue</title>
-    <link>https://aswinblue.github.io/post/webapplication/</link>
+    <link>https://aswinblue.github.io/Blog/post/webapplication/</link>
     <description>Recent content in WebApplication on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 09:23:30 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/webapplication/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 09:23:30 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/webapplication/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>thymeleaf</title>
-      <link>https://aswinblue.github.io/post/webapplication/thymeleaf/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/thymeleaf/</link>
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/thymeleaf/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/thymeleaf/</guid>
       <description>Thymeleaf 서버에서 view를 구성할 때 사용하는 라이브러리 태그 형식의 문법을 사용하며 vue와 유사하다. 기본 문법 thymeleaf 공식 튜토리얼 에서 기본적인 문법을 확인할 수 있다. 태그 안에 th:속성=&amp;quot;값&amp;quot; 형태의 속성을 추가하는 형태로 사용한다. text &amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;를 표시한다. utext &amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다. fragment &amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다.</description>
     </item>
     
     <item>
       <title>Tailwind</title>
-      <link>https://aswinblue.github.io/post/webapplication/tailwind/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/tailwind/</link>
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/tailwind/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/tailwind/</guid>
       <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. Tailwind Docs Installation tailwind 모듈 설치
 npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다. npx tailwindcss init 명령을 사용하면 현재 경로에 tailwind.config.js 파일이 생성되며, 현재 프로젝트에서 tailwind를 적용할 수 있게 된다. tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {// 포함할 항목content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],// 제외할 항목 (최신 버전에서 사용되지 않는 문법)// purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],// jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.</description>
     </item>
     
     <item>
       <title>Angular</title>
-      <link>https://aswinblue.github.io/post/webapplication/angular/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/angular/</link>
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/angular/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/angular/</guid>
       <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
 $ ng new &amp;lt;application_name&amp;gt; 명령어를 이용하여 설치한다.
 nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.</description>
@@ -39,28 +39,28 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
     
     <item>
       <title>React basic</title>
-      <link>https://aswinblue.github.io/post/webapplication/react_basic/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</link>
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/react_basic/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</guid>
       <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &amp;lt;NAME&amp;gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.</description>
     </item>
     
     <item>
       <title>PythonCGI</title>
-      <link>https://aswinblue.github.io/post/webapplication/pythoncgi/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/pythoncgi/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
       <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>https://aswinblue.github.io/post/webapplication/javascript/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/javascript/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/javascript/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/javascript/</guid>
       <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성
 document를 호출하고, .으로 함수를 호출한다.
 querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음
@@ -75,10 +75,10 @@ ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quo
     
     <item>
       <title>Css</title>
-      <link>https://aswinblue.github.io/post/webapplication/css/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/css/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/css/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/css/</guid>
       <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐 tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다. html 문서 안에 &amp;lt;style&amp;gt; 태그 안에 작성 가능
 ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
 태그의 종류별로 속성 설정 가능
@@ -88,10 +88,10 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
     
     <item>
       <title>Html</title>
-      <link>https://aswinblue.github.io/post/webapplication/html/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/html/</link>
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/html/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/html/</guid>
       <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하고 &amp;lt;/TAG_NAME&amp;gt;로 끝냄 태그별로 검색 엔진에서 노출되는 중요도가 다르다. 태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다. html : body와 head를 통틀어 묶은 최 고위 태그 관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다. body : 본문을 묶는 태그 head : 본문을 설명하는 태그 속성(attribute) &amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음 body 속성 strong : 굵은 글씨</description>
     </item>
     

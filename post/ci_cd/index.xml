@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>CI_CD on AswinBlue</title>
-    <link>https://aswinblue.github.io/post/ci_cd/</link>
+    <link>https://aswinblue.github.io/Blog/post/ci_cd/</link>
     <description>Recent content in CI_CD on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 09:21:51 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/ci_cd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 09:21:51 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/ci_cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>https://aswinblue.github.io/post/ci_cd/docker/</link>
+      <link>https://aswinblue.github.io/Blog/post/ci_cd/docker/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/ci_cd/docker/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/ci_cd/docker/</guid>
       <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 설치 링크 참조
 실행 DockerFile 이름의 파일을 생성하고 내용을 채워넣는다. https://docs.docker.com/engine/reference/builder/ DockerFile 명령어
 FROM: base image를 지정하는 명령어 DockerFile의 시작은 무조건 FORM 이 필요하다. FROM &amp;lt;IMAGE&amp;gt;:&amp;lt;VERSION&amp;gt; 형태로 사용한다. FROM base:${CODE_VERSION} ARG: 변수를 선언 ARG CODE_VERSION=latest 선언한 변수는 ${CODE_VERSION} 형태로 참조 가능하며, build시 자동으로 argument로 사용된다.</description>

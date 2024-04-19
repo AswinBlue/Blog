@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>webServer on AswinBlue</title>
-    <link>https://aswinblue.github.io/tags/webserver/</link>
+    <link>https://aswinblue.github.io/Blog/tags/webserver/</link>
     <description>Recent content in webServer on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nodejs</title>
-      <link>https://aswinblue.github.io/post/webserver/nodejs/</link>
+      <link>https://aswinblue.github.io/Blog/post/webserver/nodejs/</link>
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webserver/nodejs/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs/</guid>
       <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) npm audit : 의존성 문제가 발생했을 때, npm audit fix : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.</description>
     </item>
     
     <item>
       <title>PythonCGI</title>
-      <link>https://aswinblue.github.io/post/webapplication/pythoncgi/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/pythoncgi/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
       <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>https://aswinblue.github.io/post/webapplication/javascript/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/javascript/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/javascript/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/javascript/</guid>
       <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성
 document를 호출하고, .으로 함수를 호출한다.
 querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음
@@ -45,10 +45,10 @@ ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quo
     
     <item>
       <title>Css</title>
-      <link>https://aswinblue.github.io/post/webapplication/css/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/css/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/css/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/css/</guid>
       <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐 tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다. html 문서 안에 &amp;lt;style&amp;gt; 태그 안에 작성 가능
 ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
 태그의 종류별로 속성 설정 가능
@@ -58,10 +58,10 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
     
     <item>
       <title>Html</title>
-      <link>https://aswinblue.github.io/post/webapplication/html/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/html/</link>
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/html/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/html/</guid>
       <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하고 &amp;lt;/TAG_NAME&amp;gt;로 끝냄 태그별로 검색 엔진에서 노출되는 중요도가 다르다. 태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다. html : body와 head를 통틀어 묶은 최 고위 태그 관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다. body : 본문을 묶는 태그 head : 본문을 설명하는 태그 속성(attribute) &amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음 body 속성 strong : 굵은 글씨</description>
     </item>
     

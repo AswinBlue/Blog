@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on AswinBlue</title>
-    <link>https://aswinblue.github.io/post/linux/</link>
+    <link>https://aswinblue.github.io/Blog/post/linux/</link>
     <description>Recent content in Linux on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 09:23:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 09:23:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IPC</title>
-      <link>https://aswinblue.github.io/post/linux/ipc/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/ipc/</link>
       <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/ipc/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/ipc/</guid>
       <description>IPC (Inter Process Communicatrion) Signal Signal은 프로세스간 동기화를 위해 프로세스간 전송하는 신호를 의미한다. Software Interrupt 라고도 한다. 커널에서 kill -&amp;lt;SIGNAL_NUMBER&amp;gt; &amp;lt;PROCESS_ID&amp;gt; 명령으로 특정 PROCESS_ID에 ISGNAL_NUMBER에 해당하는 signal을 전달할 수 있다. signal은 총 64까지 정의되어 있고 1~31까지가 일반적으로 사용하는 signal이다. 34~63은 고성능 네트워크 통신을 위한 시그널이다. (32, 33는 미정의) kill -l 명령으로 signal 리스트를 확인할 수 있다. SIGHUP SIGINT : 인터럽트, Ctrl+C 명령으로 전송 가능 SIGQUIT Coredump시 발생 SIGILL : Illegal instruction SIGTRAP : debugger is tracing SIGABRT : Abort process SIGBUS : bus error SIGFPE : Floating point exception SIGKILL : 강제 종료 SIGUSR1	: User-defined signal 1, 마음대로 사용 가능 SIGSEGV	: invalid virtual memory reference SIGUSR2 : User-defined signal 2, 마음대로 사용 가능 SIGPIPE	: 반대편이 연결되지 않은 pip에 신호 전송시 발생하는 에러 SIGALRM : alarm() 함수에 의해 발생한 시그널 1 SIGTERM : 종료 요청, SIGKILL(9)보다 안전한 종료 방법, SIGINT와 유사한 성능 SIGSTKFLT : Stack fault SIGCHLD : 자식 process가 종료될 때 부모에게 전달하는 신호 SIGCONT : SIGSTOP 에 의해 정지된 경우, 다시 시작하라는 신호 SIGSTOP : process 정지 SIGTSTP : process 일시정지, Ctrl+Z 명령으로 전송 가능 SIGTTIN	: background 에 있을 때 read 요청을 받은 경우 발생 SIGTTOU : background 에 있을 때 write 요청을 받은 경우 발생 SIGURG : 긴급 통신을 받은 경우 (Out Of Band) SIGXCPU : 설정된 CPU 사용량을 초과하여 프로세스가 동작 한 경우 SIGXFSZ : 파일 크기가 허용된 크기를 초과한 경우 SIGVTALRM : 프로세스 실행시간 관리를 위한 시그널1 SIGPROF : 프로세스 실행시간 관리를 위한 시그널2 SIGWINCH : Window change SIGIO, SIGPOLL : Input/output is now possible SIGPWR, SIGLOST : Power failure SIGUNUSED, SIGSYS : Unused signal.</description>
     </item>
     
     <item>
       <title>Thread</title>
-      <link>https://aswinblue.github.io/post/linux/thread/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/thread/</link>
       <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/thread/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/thread/</guid>
       <description>Thread thread는 process의 경량화 버전으로 생각할 수 있다. pthread_create() 함수로 fork 명령을 대체하고, pthread_join() 으로 wait 명령을 대체하면 process 대신 thread를 동작시킨다. thread는 함수를 실행시키는 것이 기본이며, 함수를 실행시킬 때 넣을 인자와, 함수의 리턴값을 받을 인자를 pthread_create의 파라미터로 받는다. 리눅스 프로세스 표시 목록에 LWP(light-weight-process) 항목으로 표시되며, proces ID가 같더라도 LWP ID가 다르면 같은 process 안의 thread인 것. pthread_exit() 로 thread만 종료시킬 수 있다. main process가 종료되면 딸려있는 thread들도 함께 종료된다. 다만, main thread만 pthread_exit으로 종료시키면 process가 종료되지 않고 main thread만 종료되고 다른 thread들은 계속 구동되는 형태가 되므로 주의한다.</description>
     </item>
     
     <item>
       <title>Process</title>
-      <link>https://aswinblue.github.io/post/linux/process/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/process/</link>
       <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/process/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/process/</guid>
       <description>Process Program vs Process Process : 실행중인 프로그램 Program : 실행 가능한 파일 Process는 메모리에 올라가 있는 상태의 프로그램을 의미한다. C언어 Program to Process C언어로 구성된 프로그램은 전처리 - 컴파일 - 링킹 - 로딩의 과정을 거친다. 전처리 : # 으로 시작하는 라인들을 알맞은 형태로 치환한다. 컴파일 : C언어(high-level language)를 어셈블리어(기계어) 로 변환한다. 링킹 : 외부의 ELF(Executable and Linkable Format) 파일들을 호출할 수 있도록 연결한다. 로딩 : 최종 생성된 파일을 실행시켜 메모리에 올려 프로세스로 만든다.</description>
     </item>
     
     <item>
       <title>System_programming</title>
-      <link>https://aswinblue.github.io/post/linux/system_programming/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/system_programming/</link>
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/system_programming/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
       <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
     </item>
     
     <item>
       <title>Shell Programming</title>
-      <link>https://aswinblue.github.io/post/linux/shell_programming/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/shell_programming/</link>
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/shell_programming/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
       <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다.
 기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력</description>
     </item>
     
     <item>
       <title>Linux_introduction</title>
-      <link>https://aswinblue.github.io/post/linux/linux_introduction/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_introduction/</link>
       <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_introduction/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_introduction/</guid>
       <description>Linux 생성 배경 Unix unix는 범용 다중 사용자 방식의 시분할 운영체제이다. 즉, multi-user를 목적으로 개발된 운영체제이다. Dennis Ritche, Ken Thompson, Douglas Mcllroy 등이 주축이 되어 개발 이후 다양한 회사들에 의해 개발이 지속되어, 표준화의 필요성이 생겼고, IEEE에서 제안한 POSIX(Portable Operating System Interface) 라는 표준 인터페이스를 따르게 되었다. 리눅스는 unix를 기반으로 개발된 os이다. GNU Richard Stallman이 창시한 FSF(Free Software Foundation) 의 프로젝트 GNU 리눅스도 GNU의 GPL(General Public License) 에 의해 배포된다. 무료로 사용 가능하며 GPL 소스를 적용된 코드를 수정하여 재판매가 가능하지만, 해당 코드를 공개해야 하며, 개발자는 코드로 인해 발생하는 어떤 문제에 대해서도 법적 책임을 지지 않는다.</description>
     </item>
     
     <item>
       <title>Linux_env</title>
-      <link>https://aswinblue.github.io/post/linux/linux_env/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_env/</link>
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_env/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_env/</guid>
       <description>Dev in Linux 리눅스 개발환경 구축을 위한 가이드
 사용자 맞춤 설정 .bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
 source ~/.bashrc 명령어로 언제든 새로고침 할 수 있다.
@@ -77,28 +77,28 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
     
     <item>
       <title>Virtual_box</title>
-      <link>https://aswinblue.github.io/post/linux/virtual_box/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/virtual_box/</link>
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/virtual_box/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/virtual_box/</guid>
       <description>VirtualBox 문제와 해결 root 계정 virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다. virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다. virtualbox에서 원하는 ubuntu machine를 실행시킨다. machine이 실행되는 도중 shift키를 클릭하고 있는다. 부팅 모드 선택 화면이 뜨면 Advanced options for Ubuntu 를 선택하고, (recovery mode)표시가 되어있는 항목으로 부팅을 시도한다. 로딩이 완료되면 root 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.</description>
     </item>
     
     <item>
       <title>Linux commands</title>
-      <link>https://aswinblue.github.io/post/linux/linux_command/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_command/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_command/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_command/</guid>
       <description>Linux Command 리눅스에서 사용되는 명령어들을 정리한다. 자주 사용되는 모듈의 명령어도 포함한다. 리눅스에서 명령어는 /usr/bin/ 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다. 유저 개인의 명령어를 따로 설정 및 관리하려면 ~/.bashrc 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다. 기본적으로 ~/bin/ 경로가 PATH에 추가되어 있다. export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...] 명령어를 ~/.bashrc 에 추가하면 경로를 추가할 수 있다. ex) # in .bashrc filePATH=$PATH:/home/user/bashrc # 기존의 PATH에 /home/user/.bashrc 추가# 현재 PATH는 .bashrc 포함PATH=$PATH:/home/user/dir1:/home/user/dir2 # 기존의 PATH에 dir1, dir2 추가# 현재 PATH는 .</description>
     </item>
     
     <item>
       <title>Linux_apt</title>
-      <link>https://aswinblue.github.io/post/linux/linux_apt/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_apt/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_apt/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_apt/</guid>
       <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
 하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
 본 해프닝에 대해 서술하자면 아래와 같다.

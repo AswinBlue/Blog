@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>FlickThrough on AswinBlue</title>
-    <link>https://aswinblue.github.io/post/projects/flickthrough/</link>
+    <link>https://aswinblue.github.io/Blog/post/projects/flickthrough/</link>
     <description>Recent content in FlickThrough on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2024 21:20:31 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/projects/flickthrough/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2024 21:20:31 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/projects/flickthrough/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FlickThrough</title>
-      <link>https://aswinblue.github.io/post/projects/flickthrough/flick_through/</link>
+      <link>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</link>
       <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/projects/flickthrough/flick_through/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</guid>
       <description>Flick Through github: https://github.com/AswinBlue/FlickThrough
 Link : aswinblue.github.io/FlickThrough/
 시작날짜: August 21, 2023

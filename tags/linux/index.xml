@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>linux on AswinBlue</title>
-    <link>https://aswinblue.github.io/tags/linux/</link>
+    <link>https://aswinblue.github.io/Blog/tags/linux/</link>
     <description>Recent content in linux on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>System_programming</title>
-      <link>https://aswinblue.github.io/post/linux/system_programming/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/system_programming/</link>
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/system_programming/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
       <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
     </item>
     
     <item>
       <title>Shell Programming</title>
-      <link>https://aswinblue.github.io/post/linux/shell_programming/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/shell_programming/</link>
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/shell_programming/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
       <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다.
 기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력</description>
     </item>
     
     <item>
       <title>Linux_env</title>
-      <link>https://aswinblue.github.io/post/linux/linux_env/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_env/</link>
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_env/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_env/</guid>
       <description>Dev in Linux 리눅스 개발환경 구축을 위한 가이드
 사용자 맞춤 설정 .bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
 source ~/.bashrc 명령어로 언제든 새로고침 할 수 있다.
@@ -41,28 +41,28 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
     
     <item>
       <title>Virtual_box</title>
-      <link>https://aswinblue.github.io/post/linux/virtual_box/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/virtual_box/</link>
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/virtual_box/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/virtual_box/</guid>
       <description>VirtualBox 문제와 해결 root 계정 virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다. virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다. virtualbox에서 원하는 ubuntu machine를 실행시킨다. machine이 실행되는 도중 shift키를 클릭하고 있는다. 부팅 모드 선택 화면이 뜨면 Advanced options for Ubuntu 를 선택하고, (recovery mode)표시가 되어있는 항목으로 부팅을 시도한다. 로딩이 완료되면 root 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.</description>
     </item>
     
     <item>
       <title>Linux commands</title>
-      <link>https://aswinblue.github.io/post/linux/linux_command/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_command/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_command/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_command/</guid>
       <description>Linux Command 리눅스에서 사용되는 명령어들을 정리한다. 자주 사용되는 모듈의 명령어도 포함한다. 리눅스에서 명령어는 /usr/bin/ 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다. 유저 개인의 명령어를 따로 설정 및 관리하려면 ~/.bashrc 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다. 기본적으로 ~/bin/ 경로가 PATH에 추가되어 있다. export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...] 명령어를 ~/.bashrc 에 추가하면 경로를 추가할 수 있다. ex) # in .bashrc filePATH=$PATH:/home/user/bashrc # 기존의 PATH에 /home/user/.bashrc 추가# 현재 PATH는 .bashrc 포함PATH=$PATH:/home/user/dir1:/home/user/dir2 # 기존의 PATH에 dir1, dir2 추가# 현재 PATH는 .</description>
     </item>
     
     <item>
       <title>Linux_apt</title>
-      <link>https://aswinblue.github.io/post/linux/linux_apt/</link>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux_apt/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/linux/linux_apt/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux_apt/</guid>
       <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
 하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
 본 해프닝에 대해 서술하자면 아래와 같다.

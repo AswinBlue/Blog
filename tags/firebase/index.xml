@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>firebase on AswinBlue</title>
-    <link>https://aswinblue.github.io/tags/firebase/</link>
+    <link>https://aswinblue.github.io/Blog/tags/firebase/</link>
     <description>Recent content in firebase on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firebase_react</title>
-      <link>https://aswinblue.github.io/post/database/firebase_react/</link>
+      <link>https://aswinblue.github.io/Blog/post/database/firebase_react/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/database/firebase_react/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/database/firebase_react/</guid>
       <description>Firebase with React react에서 firebase를 활용하는 방법 firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조 인증 (Auth) firebase 로 계정 생성 및 로그인 firebase API를 import하여 사용 &amp;lt;AppFirebase.js&amp;gt; import firebase from &amp;#34;firebase/compat/app&amp;#34;;import &amp;#34;firebase/compat/auth&amp;#34;;const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,authDomain: process.env.REACT_APP_AUTHDOMAIN,projectId: process.env.REACT_APP_PROJECTID,storageBucket: process.env.REACT_APP_STORAGEBUCKET,messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,appId: process.env.REACT_APP_APPID};export default firebase.initializeApp(firebaseConfig);export const authService = firebase.auth(); AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현 &amp;lt;Auth.</description>
     </item>
     
     <item>
       <title>Firebase</title>
-      <link>https://aswinblue.github.io/post/database/firebase/</link>
+      <link>https://aswinblue.github.io/Blog/post/database/firebase/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/database/firebase/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/database/firebase/</guid>
       <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다. 설치 및 사용 온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다. firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다. (웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.) 버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</description>
     </item>
     

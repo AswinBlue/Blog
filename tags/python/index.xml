@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>python on AswinBlue</title>
-    <link>https://aswinblue.github.io/tags/python/</link>
+    <link>https://aswinblue.github.io/Blog/tags/python/</link>
     <description>Recent content in python on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tensorflow</title>
-      <link>https://aswinblue.github.io/post/machinelearning/tensorflow/</link>
+      <link>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/machinelearning/tensorflow/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow/</guid>
       <description>#Tensorflow
 TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
 edge는 학습데이터가 저장되는 다차원 배열이다.
@@ -24,20 +24,20 @@ archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다
     
     <item>
       <title>Kivy</title>
-      <link>https://aswinblue.github.io/post/windowapp/kivy/</link>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/kivy/</link>
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/windowapp/kivy/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/kivy/</guid>
       <description>#kivy
 Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .</description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://aswinblue.github.io/post/python/python/</link>
+      <link>https://aswinblue.github.io/Blog/post/python/python/</link>
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/python/python/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/python/python/</guid>
       <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
@@ -46,19 +46,19 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
     
     <item>
       <title>Jython</title>
-      <link>https://aswinblue.github.io/post/java/jython/</link>
+      <link>https://aswinblue.github.io/Blog/post/java/jython/</link>
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/java/jython/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/java/jython/</guid>
       <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
     </item>
     
     <item>
       <title>PythonCGI</title>
-      <link>https://aswinblue.github.io/post/webapplication/pythoncgi/</link>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webapplication/pythoncgi/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
       <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
     </item>
     

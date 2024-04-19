@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>nodejs on AswinBlue</title>
-    <link>https://aswinblue.github.io/tags/nodejs/</link>
+    <link>https://aswinblue.github.io/Blog/tags/nodejs/</link>
     <description>Recent content in nodejs on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nodejs</title>
-      <link>https://aswinblue.github.io/post/webserver/nodejs/</link>
+      <link>https://aswinblue.github.io/Blog/post/webserver/nodejs/</link>
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/webserver/nodejs/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs/</guid>
       <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) npm audit : 의존성 문제가 발생했을 때, npm audit fix : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.</description>
     </item>
     

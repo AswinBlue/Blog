@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Crypto on AswinBlue</title>
-    <link>https://aswinblue.github.io/post/crypto/</link>
+    <link>https://aswinblue.github.io/Blog/post/crypto/</link>
     <description>Recent content in Crypto on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 09:22:10 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 09:22:10 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/crypto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cryptocurrency</title>
-      <link>https://aswinblue.github.io/post/crypto/cryptocurrency/</link>
+      <link>https://aswinblue.github.io/Blog/post/crypto/cryptocurrency/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/crypto/cryptocurrency/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/crypto/cryptocurrency/</guid>
       <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
 collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.</description>
     </item>

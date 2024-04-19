@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>MobileApp on AswinBlue</title>
-    <link>https://aswinblue.github.io/post/mobileapp/</link>
+    <link>https://aswinblue.github.io/Blog/post/mobileapp/</link>
     <description>Recent content in MobileApp on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 09:23:19 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/post/mobileapp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 09:23:19 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/mobileapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flutter</title>
-      <link>https://aswinblue.github.io/post/mobileapp/flutter/</link>
+      <link>https://aswinblue.github.io/Blog/post/mobileapp/flutter/</link>
       <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/post/mobileapp/flutter/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter/</guid>
       <description>개발환경 및 기본 지식 구성 파일들 analysis_options.yaml : flutter rule을 설정하는 파일 assets : 이미지 등 리소스들을 저장하는 경로 lib/main.dart : 메인 App 소스가 구동되는 dart 파일 pubspec.yaml : 리소스 경로 및 API들을 설정할 수 있는 파일 (assets 폴더 설정 가능)
 # 경로 설정flutter:assets:- assets/# dependency 설정dependencies:flutter:sdk: fluttercupertino_icons: ^1.0.2android/app/src/main/AndroidManifext.xml : 안드로이드 앱 개발시 권한 부여를 위한 파일
 빌드 및 실행 main.dart 파일을 지정하고 실행시켜야 한다.</description>
