@@ -7,5 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 30 Jan 2024 21:11:39 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delver</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/delver/delver/</link>
+      <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/delver/delver/</guid>
+      <description>Delver 시작날짜: March 18, 2023
+종료날짜: March 28, 2023
+목표 python 기반 웹 scrapping 및 결과를 slack 에 전송하는 slack bot
+요구사항 AWS lambda를 사용하여 동작 매 시간마다 동작하도록 설정 Web scrapper 작성 1. 구현 내용 beautiful soup를 사용하여 특정 web을 scrap (API 참조: https://beautiful-soup-4.readthedocs.io/en/latest/) 여러 사이트에 호환되도록 구조를 설정
+사이트별 속성을 json 형태로 기록
+json 형태를 읽어 코드 변경 없이 사이트 추가할 수 있는 구조로 작성
+2. 문제와 해결 Beautiful soup를 사용하여 특정 문자 찾기 find() 혹은 find_all() 에 string 인자를 넣어서 검색을 하면 반환 값으로html tag 배열이 아니라, string 배열이 온다.</description>
+    </item>
+    
+    <item>
+      <title>FlickThrough</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</link>
+      <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</guid>
+      <description>Flick Through github: https://github.com/AswinBlue/FlickThrough
+Link : aswinblue.github.io/FlickThrough/
+시작날짜: August 21, 2023
+목표 텍스트 파일을 읽어 단어 단위로 슬라이드 쇼를 수행하는 앱 제작
+요구사항 텍스트 파일의 공백과 줄바꿈을 기준으로 단어를 나누고 이를 화면에 출력 출력은 한 단어씩 이루어 지며 분당 300개를 기본으로, 속도는 조절 가능 단어 자르는건 커스텀 가능 특정 문자마다 딜레이 다르게 줄 수 있도록 설정 스크린샷 혹은 클립보드의 내용도 사용할 수 있도록 함 기능 구현 1. 구현 내용 UI 구성 텍스트가 출력될 텍스트박스, 진행률 표시바, 시작/일시정지 버튼, 속도 조절 스크롤바, 파일 읽기 버튼을 구성</description>
+    </item>
+    
   </channel>
 </rss>
