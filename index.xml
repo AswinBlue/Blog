@@ -7,6 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://aswinblue.github.io/Blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Window_programming</title>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/window_programming/</link>
+      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/window_programming/</guid>
+      <description>Window Programming PE 윈도우는 실행 가능한 목적 파일을 PE 포멧이라 칭한다. (리눅스의 ELF 와 유사) PE 파일은 header 와 section 으로 구성된다. section 에는 이름, 크기, 로드될 주소의 오프셋, 속성과 권한 등의 정보가 들어있다. PE 파일에 들어가야 할 필수 section 은 없지만, &amp;lsquo;.text&amp;rsquo;, &amp;lsquo;.data&amp;rsquo;, &amp;lsquo;.rdata&amp;rsquo; section 이 주로 사용된다. .text: 실행 가능한 기계코드가 위치하는 영역 (읽기, 쓰기 가능) .data: 컴파일 시점에 정해진 전역 변수들이 위치하는 영역 (읽기, 쓰기 가능) .rdata: 컴파일 시점에 값이 정해진 전역 상수와 참조할 DLL 및 외부 함수들의 정보가 위치하는 영역 (읽기만 가능) 윈도우가 실행되면 PE 파일의 데이터들이 메모리에 적재된다.</description>
+    </item>
+    
+    <item>
+      <title>Reverse_engineering</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</guid>
+      <description>Reverse Engineering software 를 분석하여 소스코드를 역으로 생성 해 내는 기법 software 분석 방법 Static analysis 프로그램을 실행시키지 않고 수행하는 분석이다.
+프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.
+난독화 적용시 분석이 어려워 진다는 단점이 있다.
+정적분석에 사용되는 툴로는 IDA 가 있다.
+IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하다. Dynamic analysis 프로그램을 실행시키며 수행하는 분석이다. 프로그램의 개략적인 동작을 빠르게 확인 할 수 있다. 정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.</description>
+    </item>
+    
+    <item>
       <title>Exploit</title>
       <link>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</link>
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
@@ -30,7 +52,7 @@
       <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/assembly/assembly_basic/</guid>
-      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. WORD: 16bit DWORD: 32bit QWORD: 64bit 명령어 mov &amp;ldquo;값&amp;quot;을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀 dst = 레지스터, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 레지스터, src = 메모리 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 메모리 : 불가능 mov dst, [mem + 4] : mem + 4 주소에 저장된 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
+      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. BYTE: 8bit BYTE PTR rax : rax 레지스터의 데이터를 1바이트만큼 참조 WORD: 16bit WORD PTR [0x8048000] : 0x8048000의 데이터를 2바이트만큼 참조 DWORD: 32bit QWORD: 64bit 명령어 mov &amp;ldquo;값&amp;quot;을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀 mov rdi, rsi : rsi의 값을 rdi에 대입 mov QWORD PTR[rdi], rsi : rsi의 값을 rdi가 가리키는 주소에 대입 mov QWORD PTR[rdi + 8 * rcx], rsi : rsi의 값을 (rdi + 8 * rcx)가 가리키는 주소에 대입 dst = 레지스터, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 레지스터, src = 메모리 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 메모리 : 불가능 mov dst, [mem + 4] : mem + 4 주소에 저장된 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
     </item>
     
     <item>

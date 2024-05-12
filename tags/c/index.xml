@@ -6,7 +6,29 @@
     <description>Recent content in c on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reverse_engineering</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</guid>
+      <description>Reverse Engineering software 를 분석하여 소스코드를 역으로 생성 해 내는 기법 software 분석 방법 Static analysis 프로그램을 실행시키지 않고 수행하는 분석이다.
+프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.
+난독화 적용시 분석이 어려워 진다는 단점이 있다.
+정적분석에 사용되는 툴로는 IDA 가 있다.
+IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하다. Dynamic analysis 프로그램을 실행시키며 수행하는 분석이다. 프로그램의 개략적인 동작을 빠르게 확인 할 수 있다. 정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Exploit</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</link>
+      <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</guid>
+      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 취약점 공격 기법 ORW 파일을 열고 읽고 쓸 수 있도록 하는 shell code를 &amp;lsquo;ORW shell code&amp;rsquo; 라 칭한다. 시스템 콜들은 rax, rdi, rsi, rdx로 이루어 져 있음을 참고하여 shell code를 작성해 보자. rax : 시스템 콜에 대응되는 번호 rdi : 시스템 콜의 첫 번째 인자 rsi : 시스템 콜의 두 번째 인자 rdx : 시스템 콜의 세 번째 인자 open</description>
+    </item>
+    
     <item>
       <title>GDB</title>
       <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</link>
