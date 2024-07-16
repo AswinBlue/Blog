@@ -451,7 +451,7 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/ci_cd/docker/</guid>
-      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 Startup 설치 링크 참조 docker api 리눅스 설치 : sudo apt-get install docker 실행 DockerFile 이름의 파일을 생성하고 내용을 채워넣는다. 가이드
+      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 Startup 설치 링크 참조 docker api 리눅스 설치 : sudo apt-get install docker 실행 DockerFile 이름의 파일을 생성하고 내용을 채워넣는다. 공식 가이드
 python 서버 실행 예시
 # python:3.10의 이미지로 부터FROM python:3.9# 제작자 및 author 기입LABEL maintainer=&amp;#34;huisam@naver.</description>
     </item>

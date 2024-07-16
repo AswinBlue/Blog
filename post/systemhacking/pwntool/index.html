@@ -49,7 +49,7 @@ target.interactive() # 쉘을 획득하고 쉘을 유저가 활용할 수 있게
  NX:       NX enabled
  PIE:      No PIE (0x400000)
  RWX:      Has RWX segments
-</code></pre></li></ul><h3 id=shellcraft>shellcraft<a hidden class=anchor aria-hidden=true href=#shellcraft>#</a></h3><ul><li>pwntool과 함께 설치되는 파이썬 모듈로 쉘 코드의 함수들을 반환한다.<ul><li>shellcraft.sh() : 쉘 실행 코드</li><li>shellcraft.open() : 쉘 코드 open(인자 필요)</li><li>shellcraft.read() : 쉘 코드 read(인자 필요)</li><li>shellcraft.write() : 쉘 코드 write(인자 필요)</li><li>shellcraft.exit() : 쉘 코드 exit</li></ul></li><li>asm() 함수와 함께 조합하면 쉘코드를 바이너리로 만들어 프로그램에 주입할 수 있다.<ul><li>ex) shellcraft.sh() :<pre tabindex=0><code>/* execve(path=&#39;/bin///sh&#39;, argv=[&#39;sh&#39;], envp=0) */
+</code></pre></li></ul><h3 id=shellcraft>shellcraft<a hidden class=anchor aria-hidden=true href=#shellcraft>#</a></h3><ul><li>pwntool과 함께 설치되는 파이썬 모듈로 쉘 코드의 함수들을 반환한다.</li><li><a href=https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/>시스템 콜 테이블 참조</a><ul><li>shellcraft.sh() : 쉘 실행 코드</li><li>shellcraft.open() : 쉘 코드 open(인자 필요)</li><li>shellcraft.read() : 쉘 코드 read(인자 필요)</li><li>shellcraft.write() : 쉘 코드 write(인자 필요)</li><li>shellcraft.exit() : 쉘 코드 exit</li></ul></li><li>asm() 함수와 함께 조합하면 쉘코드를 바이너리로 만들어 프로그램에 주입할 수 있다.<ul><li>ex) shellcraft.sh() :<pre tabindex=0><code>/* execve(path=&#39;/bin///sh&#39;, argv=[&#39;sh&#39;], envp=0) */
 /* push b&#39;/bin///sh\x00&#39; */
 push 0x68
 push 0x732f2f2f
