@@ -23,7 +23,7 @@
       
       <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
       <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다.
-기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력</description>
+기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력 echo &amp;ldquo;파라미터 개수 : $#&amp;rdquo; 파라미터 $1: 첫 번째 파라미터 $2: 두 번째 파라미터 $@: 모든 파라미터 $#: 파라미터 갯수 </description>
     </item>
     
     <item>
