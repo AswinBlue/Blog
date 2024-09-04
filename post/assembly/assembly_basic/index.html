@@ -10,7 +10,7 @@ sub ESP, VALUE  # 지역변수가 설정될 영역만큼(VALUE) ESP 주소를 �
 ----------  &lt;- EBP(rbp)
 SFP
 ----------  &lt;- EBP(rbp) + 0x04 (x64라면 +0x08)
-return address (EIP)
+return address -&gt; 함수 종료시 EIP(rip) 에 해당 위치의 값 대입
 ----------
 </code></pre></li><li><p>만약 Stack canary 기법이 적용되었다면 아래와 같이 canary가 추가된다.</p><pre tabindex=0><code>----------  &lt;- ESP(rsp)
 지역변수
@@ -19,7 +19,7 @@ Canary (4byte / x64라면 8byte)
 ----------  &lt;- EBP(rbp)
 SFP
 ----------  &lt;- EBP(rbp) + 0x04 (x64라면 +0x08)
-return address (EIP)
+return address -&gt; 함수 종료시 EIP(rip) 에 해당 위치의 값 대입
 ----------
 </code></pre></li><li><p>함수가 종료되면 다음 절차가 수행된다.</p><pre tabindex=0><code>mov ESP, EBP  # 지역변수 공간을 해제
 pop EBP  # SFP에 정보를 가져와 ebp에 대입
