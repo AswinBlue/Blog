@@ -13,7 +13,7 @@
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</guid>
-      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 취약점 공격 순서 바이너리를 분석하여 보호기법을 확인한다. checksec 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다. checksec 참조 ldd 명령을 활용하여 의존성 관계를 확인한다. ldd 명령 코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다 stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.</description>
+      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 환경세팅 pwntools checksec shellcraft ROPgadget one_gadget patchelf 취약점 공격 순서 바이너리를 분석하여 보호기법을 확인한다. checksec 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다. checksec 참조 ldd 명령을 활용하여 의존성 관계를 확인한다. ldd 명령 코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다 stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.</description>
     </item>
     
   </channel>
