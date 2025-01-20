@@ -6,7 +6,19 @@
     <description>Recent content in basic on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Aug 2021 19:21:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/basic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Sep 2021 18:49:18 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python_basic/</link>
+      <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/python/python_basic/</guid>
+      <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
+받은 값은 string 형태이다.
+받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
+받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. sys.stdout.write 안에는 string 형태만 적용할 수 있다. print 안에는 수식 등으로 string 및 byte를 표현 가능하다.</description>
+    </item>
+    
     <item>
       <title>Spring basic</title>
       <link>https://aswinblue.github.io/Blog/post/webserver/spring/</link>

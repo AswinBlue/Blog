@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 30 Jan 2024 21:11:39 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Delver</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/delver/delver/</link>
+      <link>https://aswinblue.github.io/Blog/post/projects/delver/</link>
       <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/delver/delver/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/projects/delver/</guid>
       <description>Delver 시작날짜: March 18, 2023
 종료날짜: March 28, 2023
 목표 python 기반 웹 scrapping 및 결과를 slack 에 전송하는 slack bot
@@ -24,10 +24,10 @@ json 형태를 읽어 코드 변경 없이 사이트 추가할 수 있는 구조
     
     <item>
       <title>FlickThrough</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</link>
+      <link>https://aswinblue.github.io/Blog/post/projects/flick_through/</link>
       <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/projects/flick_through/</guid>
       <description>Flick Through github: https://github.com/AswinBlue/FlickThrough
 Link : aswinblue.github.io/FlickThrough/
 시작날짜: August 21, 2023

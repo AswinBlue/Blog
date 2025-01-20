@@ -67,10 +67,10 @@ IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하�
     
     <item>
       <title>Delver</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/delver/delver/</link>
+      <link>https://aswinblue.github.io/Blog/post/projects/delver/</link>
       <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/delver/delver/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/projects/delver/</guid>
       <description>Delver 시작날짜: March 18, 2023
 종료날짜: March 28, 2023
 목표 python 기반 웹 scrapping 및 결과를 slack 에 전송하는 slack bot
@@ -82,10 +82,10 @@ json 형태를 읽어 코드 변경 없이 사이트 추가할 수 있는 구조
     
     <item>
       <title>FlickThrough</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</link>
+      <link>https://aswinblue.github.io/Blog/post/projects/flick_through/</link>
       <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/flickthrough/flick_through/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/projects/flick_through/</guid>
       <description>Flick Through github: https://github.com/AswinBlue/FlickThrough
 Link : aswinblue.github.io/FlickThrough/
 시작날짜: August 21, 2023
@@ -366,11 +366,11 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://aswinblue.github.io/Blog/post/python/python/</link>
+      <title>Python 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python_basic/</link>
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/python/python/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/python/python_basic/</guid>
       <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
 받은 값은 string 형태이다.
 받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
