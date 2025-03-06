@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WebHacking on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/post/webhacking/</link>
+    <description>Recent content in WebHacking on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Mar 2025 20:16:45 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/webhacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web/</link>
+      <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web/</guid>
+      <description>Web HTTP를 이용하여 정보를 공유하는 인터넷 기반 서비스를 Web이라 한다. 정보 제공자를 Web Server, 정보 수신자를 Web Client라 칭한다. 현재의 웹은 단순 정보 제공을 떠나 서비스를 제공하는 형태로 발전하고 있으며, Front end 와 Back end 로 역할이 나뉘어지고 있다. Front end : Web resource로 구성된 사용자에게 직접 보여지는 부분 Back end : 사용자에게 직접 보여지지는 않지만 서비스 제공을 위해 구동되는 부분 Web Resource 웹에 갖춰진 정보 자산을 의미하며, 사용자에게 제공되어 화면을 구성하는데 사용된다.</description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/http/</link>
+      <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/http/</guid>
+      <description>HTTP(Hyper Text Transfer Protocol) 서버와 클라이언트의 데이터 교환을 요청(Request)과 응답(Response) 형식으로 정의한 프로토콜로, 웹 서비스의 근간이 되는 텍스트 교환 프로토콜이다. 주로 클라이언트가 요청을 하면 서버가 응답을 해 주는 방식이며, 서버는 클라이언트의 요청을 받기 위해 socket 통신으로 80번 (혹은 8080번) 포트를 상시 열어놓고 대기한다. HTTP 프로토콜은 ISO 7계층 중 Application layer에 해당하며, transport layer 에 TCP 프로토콜을 사용할 떄 80번 포트를 HTTP 프로토콜 용으로 할당받는다. 0 ~ 1023 번 까지 port는 well-known 포트로, 시스템 혹은 네트워크에서 공공연히 사용되는 프로토콜들의 포트들이 할당되어 있고, HTTP 프로토콜도 그 중 하나이다.</description>
+    </item>
+    
+  </channel>
+</rss>
