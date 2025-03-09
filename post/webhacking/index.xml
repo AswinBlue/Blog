@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Thu, 06 Mar 2025 20:16:45 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/webhacking/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cookie</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/cookie/</link>
+      <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/cookie/</guid>
+      <description>Cookie HTTP의 특징(Connectionless, Stateless) 때문에 Web Server 는 HTTP로 요청된 패킷들이 어떤 Web Client에서 전달된 것인지 구분할 수 없다. IP 주소와 User-Agent 등의 정보는 매번 변경될 수 있다. Client의 정보와 요청의 내용을 구체화하기 위해, Server는 Client 마다 고유한 Cookie를 발급하고, Client는 Server에 요청을 보낼 때마다 Cookie를 같이 전송한다. Server는 Request 패킷에 들어있는 Cookie 를 통해 Client의 정보와 상태를 기록한다. Cookie 는 key-value 로 구성된 파일이며, Client 에 저장된다. Cookie의 단점 4KB의 크기 제한 쿠키로 인해 웹의 반응성이 느려질 수 있음 도메인 내의 모든 페이지가 같은 쿠키를 전달 받음 HTTP 프로토콜로 Cookie 요청시 암호화 되지 않아 보안이 취약함 쿠키는 사용자의 로컬에 텍스트로 저장 되어있어 쉽게 내용 확인이 가능함 악의적인 Client 가 Cookie 를 변조할 수 있음 Modern Storage APIs Cookie 의 단점을 해결하기 위해 사용되는 방법이다.</description>
+    </item>
+    
+    <item>
       <title>Web</title>
       <link>https://aswinblue.github.io/Blog/post/webhacking/web/</link>
       <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
