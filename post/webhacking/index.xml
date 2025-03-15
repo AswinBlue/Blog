@@ -13,11 +13,7 @@
       <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/exploit/</guid>
-      <description>XSS (Cross Site Scripting) 공격자가 웹 리소스에 악성 스크립트를 삽입해 이용자의 웹 브라우저에서 해당 스크립트를 실행하는 공격이다.
-XSS 취약점이 존재하는 사이트에 공격자는 origin 권한으로 악성 스크립트가 포함된 페이지를 만들어서 이용자가 악성 스크립트가 포함된 페이지를 방문하면 공격자의 악성 스크립트가 동작해 정보를 탈취하는 방식이다.
-XSS 공격은 이용자가 삽입한 내용을 출력하는 기능에서 발생한다.
-XSS 는 악성 스크립트의 위치와 침투 경로에 따라 아래와 같이 구분된다.
-Stored XSS : XSS에 사용되는 악성 스크립트가 서버에 저장되고 서버의 응답에 담겨오는 XSS 게시물과 댓글에 악성 스크립트를 포함해 업로드하는 방식이 있음 불특정 다수에게 보여지기 때문에 파급력이 크다.</description>
+      <description>XSS (Cross Site Scripting) 공격자가 웹 리소스에 악성 스크립트를 삽입해 이용자의 웹 브라우저에서 해당 스크립트를 실행하는 공격이다. XSS 취약점이 존재하는 사이트에 공격자는 origin 권한으로 악성 스크립트가 포함된 페이지를 만들어서 이용자가 악성 스크립트가 포함된 페이지를 방문하면 공격자의 악성 스크립트가 동작해 정보를 탈취하는 방식이다. 공격 경로 XSS 공격은 이용자가 삽입한 내용을 출력하는 기능에서 발생한다. 악성 태그를 필터링하는 HTML Sanitization을 사용하거나 엔티티 코드로 치환하는 방법으로 XSS를 예방할 수 있다. Flask는 render_template 함수를 사용하여 인자를 HTML 엔티티코드로 변환하여 출력하는 방식으로 XSS를 방지한다.</description>
     </item>
     
     <item>
