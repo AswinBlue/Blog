@@ -13,8 +13,8 @@
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
-      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다.
-기본 !/bin/bash : 쉘 파일을 실행할 때 어떤 쉘로 실행될지 설정 하는 것 set -x : 실행되는 내용의 결과를 화면에 출력 echo &amp;ldquo;파라미터 개수 : $#&amp;rdquo; 파라미터 $1: 첫 번째 파라미터 $2: 두 번째 파라미터 $@: 모든 파라미터 $#: 파라미터 갯수 </description>
+      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다. 쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다. 명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사) .sh 파일 작성 새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 chmod 명령어로 권한을 수정해야 한다.
+ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.</description>
     </item>
     
   </channel>
