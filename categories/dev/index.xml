@@ -139,10 +139,10 @@ npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
     
     <item>
       <title>Firebase_react</title>
-      <link>https://aswinblue.github.io/Blog/post/database/firebase_react/</link>
+      <link>https://aswinblue.github.io/Blog/post/databases/firebase_react/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/database/firebase_react/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/databases/firebase_react/</guid>
       <description>Firebase with React react에서 firebase를 활용하는 방법 firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조 인증 (Auth) firebase 로 계정 생성 및 로그인 firebase API를 import하여 사용 &amp;lt;AppFirebase.js&amp;gt; import firebase from &amp;#34;firebase/compat/app&amp;#34;;import &amp;#34;firebase/compat/auth&amp;#34;;const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,authDomain: process.env.REACT_APP_AUTHDOMAIN,projectId: process.env.REACT_APP_PROJECTID,storageBucket: process.env.REACT_APP_STORAGEBUCKET,messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,appId: process.env.REACT_APP_APPID};export default firebase.initializeApp(firebaseConfig);export const authService = firebase.auth(); AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현 &amp;lt;Auth.</description>
     </item>
     
@@ -158,10 +158,10 @@ collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x
     
     <item>
       <title>Firebase</title>
-      <link>https://aswinblue.github.io/Blog/post/database/firebase/</link>
+      <link>https://aswinblue.github.io/Blog/post/databases/firebase/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/database/firebase/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/databases/firebase/</guid>
       <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다. 설치 및 사용 온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다. firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다. (웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.) 버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</description>
     </item>
     
@@ -339,10 +339,10 @@ python 서버 실행 예시
     
     <item>
       <title>Mysql</title>
-      <link>https://aswinblue.github.io/Blog/post/database/mysql/</link>
+      <link>https://aswinblue.github.io/Blog/post/databases/mysql/</link>
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/database/mysql/</guid>
+      <guid>https://aswinblue.github.io/Blog/post/databases/mysql/</guid>
       <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax
 명령어에서 대소문자는 상관없다. mysql에서 주석은 &amp;lsquo;#&amp;lsquo;을 사용한다. 실행 및 로그인 mysql mysql 실행, 기본으로 설정된 user로 로그인됨 mysql -u 아이디 -p -u: 특정 아이디로 로그인 -p: 로그인시 비밀번호 입력하도록 데이터베이스 관리 DB 생성 UTF8 로 문자열 저장하기 CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8 DB 목록확인 show databases DB 선택 use DB_NAME 종료 EXIT 로그인 &amp;amp; 데이터베이스 선택 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도 -u DB_NAME 옵션은 로그인 후 $use DB_NAME 과 같은 효과 테이블 생성 및 관리 TABLE_NAME 테이블의 스키마 확인 desc TABLE_NAME</description>
     </item>
