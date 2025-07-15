@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>system_programming on AswinBlue</title>
+    <title>System_programming on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/system_programming/</link>
-    <description>Recent content in system_programming on AswinBlue</description>
+    <description>Recent content in System_programming on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/system_programming/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,98 @@
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
-      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
+      <description>&lt;h1 id=&#34;system-programming&#34;&gt;System Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;_____________
+|  Library  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Application level
+------------------------------
+_____________
+|System call|
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Kernel level
+------------------------------
+_____________
+|  Hardware  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   H/W level
+------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;)
+&lt;ul&gt;
+&lt;li&gt;시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다.&lt;/li&gt;
+&lt;li&gt;예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다. (IO접근은 적을수록 효율적)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kernel level에서는 System call을 사용하며 system buffer를 사용한다.&lt;/li&gt;
+&lt;li&gt;application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.
+&lt;ul&gt;
+&lt;li&gt;printf는 c library 함수이며, &amp;lsquo;\n&amp;rsquo;을 만나야 화면상에 출력을 한다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;\n&amp;rsquo;이 입력되기 전 까지 문자열들은 library buffer에 기록된다.&lt;/li&gt;
+&lt;li&gt;fprintf는 &amp;lsquo;\n&amp;rsquo;과 상관없이 문자열을 출력한다. 즉 library buffer를 사용하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-입출력&#34;&gt;파일 입출력&lt;/h2&gt;
+&lt;h3 id=&#34;fgetc&#34;&gt;fgetc&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C에서 파일에 접근하기 위해서는 &lt;code&gt;fopen&lt;/code&gt; 함수를 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 포인터를 반환하며, 코드 내에서 파일 포인터로 해당 파일에 접근이가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fgetc(FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 char 하나를 읽고 반환한다.
+&lt;ul&gt;
+&lt;li&gt;fgetc 함수의 반환 값은 int 형태이다.&lt;/li&gt;
+&lt;li&gt;text file을 읽을 땐, 0xFF값이 내용에 올 수 없지만, binary file을 읽을 땐 중간에 0xFF 값이 올 수 있다.&lt;/li&gt;
+&lt;li&gt;char 형태로 0xFF를 읽으면 -1값에 해당하기 때문에, EOF와 구분이 불가능하여 char 대신 int를 반환하도록 되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-구조체&#34;&gt;파일 구조체&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 구조체의 주소(포인터)를 반환한다.&lt;/li&gt;
+&lt;li&gt;파일 구조체는 아래와 같은 내용을 담고 있다.
+&lt;ul&gt;
+&lt;li&gt;_flags:&lt;/li&gt;
+&lt;li&gt;_IO_read_ptr : 다음 명령시 파일을 읽거나 쓸 위치&lt;/li&gt;
+&lt;li&gt;_IO_read_end: kernel에서 데이터를 받아서 저장할 버퍼의 끝 위치.&lt;/li&gt;
+&lt;li&gt;_IO_read_base: kernel에서 데이터를 받아서 저장할 버퍼의 시작 위치. 파일에 대한 읽기 명령(fgetc/fgets등) 이 발생했을 때, kernel은 4096byte(BUF_SIZE) 만큼 데이터를 미리 읽어서 이곳에 채워둔다.&lt;/li&gt;
+&lt;li&gt;_fileno: 파일의 offset, kernel에서 해당 파일에 정해준 index(kernel 함수에서 사용할 수 있다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fopen 시에 파일 구조체가 생성 및 초기화 되지만, &lt;em&gt;IO_read&lt;/em&gt;* 인자들은 파일 접근이 이루어짐과 동시에 값이 적용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eof&#34;&gt;EOF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;파일을 끝까지 읽었다고 판단하는 것은, EOF 문자(-1) 으로 판단한다.
+&lt;ul&gt;
+&lt;li&gt;하지만 실제파일을 읽어보면 마지막에 -1값이 실제로 들어있지는 않다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EOF 값은 file I/O 함수의 리턴값일 뿐 실제 파일에 기입된 값이 아니다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;file I/O 함수는 i-node에 기록된 파일의 크기를 기반으로 파일 끝을 판단한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;ASKII 코드 중 주요 문자의 값 참조&lt;/li&gt;
+&lt;li&gt;a: 97&lt;/li&gt;
+&lt;li&gt;A: 68&lt;/li&gt;
+&lt;li&gt;0: 48&lt;/li&gt;
+&lt;li&gt;\n: 10&lt;/li&gt;
+&lt;li&gt;\r: 13&lt;/li&gt;
+&lt;li&gt;(공백): 32&lt;/li&gt;
+&lt;li&gt;\t: 9&lt;/li&gt;
+&lt;li&gt;\0: 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fguts(BUFF, SIZE, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 읽어온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fputs(BUFF, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 출력한다.
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 표준 입력/출력/에러는 기본적으로 파일 포인터를 열어둔다. 각각 아래 문자열 혹은 번호로 참조 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;stdin&lt;/code&gt; : 표준 입력
+&lt;code&gt;stdout&lt;/code&gt; : 표준 출력 &lt;br&gt;
+&lt;code&gt;stderr&lt;/code&gt;: 표준 에러   &lt;br&gt;
+-&amp;gt; 파일 포인터 대신 &lt;code&gt;stdout&lt;/code&gt; 을 입력하면 표준 출력으로 문자열이 출력된다. (ex: &lt;code&gt;fputc(BUF, stdout)&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     
   </channel>

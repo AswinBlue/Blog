@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>java on AswinBlue</title>
+    <title>Java on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/java/</link>
-    <description>Recent content in java on AswinBlue</description>
+    <description>Recent content in Java on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/java/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,48 @@
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/spring_boot/</guid>
-      <description>Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &amp;lsquo;Java Extension Pack&amp;rsquo; 과 &amp;lsquo;Spring Boot Extension Pack&amp;rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</description>
+      <description>&lt;h1 id=&#34;spring-boot&#34;&gt;Spring Boot&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다.&lt;/li&gt;
+&lt;li&gt;Java, Kitlin, Groovy 등의 언어로 구현이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개발환경&#34;&gt;개발환경&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;java 기반으로 동작하기에 jdk 설치가 필요하다.
+&lt;ul&gt;
+&lt;li&gt;(22년 기준) 11버전 이상을 다운받는것을 추천한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IDE
+&lt;ul&gt;
+&lt;li&gt;vs code를 사용한다면 확장패키지로 &amp;lsquo;Java Extension Pack&amp;rsquo; 과 &amp;lsquo;Spring Boot Extension Pack&amp;rsquo; 을 설치한다.&lt;/li&gt;
+&lt;li&gt;java 개발을 위한 eclips나 intelliJ를 사용해도 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;spring 프로젝트 생성
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;start.spring.io&lt;/code&gt; 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;gradle 설치
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://gradle.org/releases/&lt;/code&gt; 주소에서 gradle 파일을 다운받는다.&lt;/li&gt;
+&lt;li&gt;이후 path 설정을 마친 후, 프로젝트 root directory에서 &lt;code&gt;gradle wrapper&lt;/code&gt; 명령을 수행해 gradlew파일을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;포트 설정
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;application.properties&lt;/code&gt; (혹은 yml)파일을 열고, &lt;code&gt;server.port = 8080&lt;/code&gt; 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;devtools 설정&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;정적 파일들을 갱신했을 때, 서버 재실행 없이 explorer만 reload 해 주면 변경점이 반영될 수 있도록 한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,8 +63,37 @@
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/spring/</guid>
-      <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
-참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.</description>
+      <description>&lt;h1 id=&#34;spring-basic&#34;&gt;Spring basic&lt;/h1&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.&lt;br&gt;
+&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-installing-the-cli&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CLI로 프로젝트를 생성해 보자.
+&lt;code&gt;spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--build=gradle&lt;/code&gt; 기본으로 maven을 사용하지만 gradle로 설정 가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-d=web&lt;/code&gt; dependency를 web으로 설정&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-a=myApp&lt;/code&gt; artifactId, 즉 project명을 설정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-g=com.aswin.blue&lt;/code&gt; 그룹 명을 설정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[location]&lt;/code&gt; 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.&lt;/li&gt;
+&lt;li&gt;각종 라이브러리를 플러그인 형태로 사용하려면 dependency와 repository 설정을해 줘야 한다.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;&lt;a href=&#34;https://mvnrepository.com/%22&#34;&gt;https://mvnrepository.com/&#34;&lt;/a&gt; 주소처럼 maven repository를 정리해 놓은 사이트에서 원하는 repository를 찾아서 dependency를 작성한다.&lt;/li&gt;
+&lt;li&gt;repository 추가시 compile dependency를 확인하고 추가로 pom.xml을 작성한다.&lt;/li&gt;
+&lt;li&gt;maven 사이트보다는 github의 readme를 더 신용하자, maven 사이트 업데이트가 안돼서 잘 동작하지 않는 것도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;maven 프로젝트의 실행에도 maven이 사용된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mvn -X clean install exec:java -Dexec.args=&amp;quot;&amp;quot;&lt;/code&gt; 로 실행이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;-X&lt;/code&gt; 는 디버깅 로그 출력을 의미한다.
+&lt;code&gt;-Dexec.args=&lt;/code&gt; 는 main 함수의 argv를 설정한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,7 +102,34 @@
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/java/jython/</guid>
-      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
+      <description>&lt;h1 id=&#34;jython&#34;&gt;Jython&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 환경에서 python을 실행하게 하는 방법 중 하나&lt;/li&gt;
+&lt;li&gt;역으로 Jython 환경에서 java를 실행 가능하기도 하다.&lt;/li&gt;
+&lt;li&gt;spring에서 jython을 사용하는 방법에 대해 묘사하겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pom.xml에 의존성을 작성한다.&lt;/li&gt;
+&lt;li&gt;pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PythonInterpreter 을 선언한다.&lt;/li&gt;
+&lt;li&gt;이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PythonInterpreter jython;
+jython.execfile(PYTHON);
+jython.exec(&amp;#34;print(1+1)&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;execfile로 특정 함수를 정의하였다면 그 아래에 있는 exec함수에서 함수를 호출할 수도 있다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

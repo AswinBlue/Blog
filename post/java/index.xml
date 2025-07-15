@@ -13,7 +13,34 @@
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/java/jython/</guid>
-      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
+      <description>&lt;h1 id=&#34;jython&#34;&gt;Jython&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 환경에서 python을 실행하게 하는 방법 중 하나&lt;/li&gt;
+&lt;li&gt;역으로 Jython 환경에서 java를 실행 가능하기도 하다.&lt;/li&gt;
+&lt;li&gt;spring에서 jython을 사용하는 방법에 대해 묘사하겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pom.xml에 의존성을 작성한다.&lt;/li&gt;
+&lt;li&gt;pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PythonInterpreter 을 선언한다.&lt;/li&gt;
+&lt;li&gt;이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PythonInterpreter jython;
+jython.execfile(PYTHON);
+jython.exec(&amp;#34;print(1+1)&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;execfile로 특정 함수를 정의하였다면 그 아래에 있는 exec함수에서 함수를 호출할 수도 있다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

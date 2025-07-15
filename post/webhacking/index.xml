@@ -13,7 +13,333 @@
       <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/exploit/</guid>
-      <description>공격 방법 분류 Server side 공격 방법 Injection (인젝션) 서버의 처리 과정 중 사용자가 입력한 데이터가 시스템의 다른 기능을 주거나 문법적으로 사용되어 발생하는 취약점 injection 공격의 종류 SQL Injection Command Injection SSTI (Server Side Template Injection) Path Traversal SSRF (Server Side Request Forgery) ORM과 같이 검증된 SQL 라이브러리를 사용하여 방어가 필요하다. File vulnerability 서버의 파일 시스템에 사용자가 원하는 행위를 할 수 있을 때 발생하는 취약점 system(PHP), child_process(Node JS), os.system(Python) 등 OS command를 실행하는 함수를 호출하지 않는 방법이 가장 좋으나, 입력 필터링이나 대체 라이브러리를 사용하는 방법으로 위협을 줄일 수 있다.</description>
+      <description>&lt;h1 id=&#34;공격-방법-분류&#34;&gt;공격 방법 분류&lt;/h1&gt;
+&lt;h2 id=&#34;server-side-공격-방법&#34;&gt;Server side 공격 방법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Injection (인젝션)
+&lt;ul&gt;
+&lt;li&gt;서버의 처리 과정 중 사용자가 입력한 데이터가 시스템의 다른 기능을 주거나 문법적으로 사용되어 발생하는 취약점&lt;/li&gt;
+&lt;li&gt;injection 공격의 종류
+&lt;ul&gt;
+&lt;li&gt;SQL Injection&lt;/li&gt;
+&lt;li&gt;Command Injection&lt;/li&gt;
+&lt;li&gt;SSTI (Server Side Template Injection)&lt;/li&gt;
+&lt;li&gt;Path Traversal&lt;/li&gt;
+&lt;li&gt;SSRF (Server Side Request Forgery)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ORM과 같이 검증된 SQL 라이브러리를 사용하여 방어가 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;File vulnerability
+&lt;ul&gt;
+&lt;li&gt;서버의 파일 시스템에 사용자가 원하는 행위를 할 수 있을 때 발생하는 취약점&lt;/li&gt;
+&lt;li&gt;system(PHP), child_process(Node JS), os.system(Python) 등 OS command를 실행하는 함수를 호출하지 않는 방법이 가장 좋으나, 입력 필터링이나 대체 라이브러리를 사용하는 방법으로 위협을 줄일 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Business Logic Vulnerability (비즈니스 로직 취약점)
+&lt;ul&gt;
+&lt;li&gt;인젝션, 파일 관련 취약점들과는 다르게 정상적인 흐름을 악용하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Language specific Vulnerability (PHP, Python, NodeJS)
+&lt;ul&gt;
+&lt;li&gt;웹 어플리케이션에서 사용하는 언어의 특성으로 인해 발생하는 취약점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Misconfiguration
+&lt;ul&gt;
+&lt;li&gt;잘못된 설정으로 인해 발생하는 취약점
+&lt;ul&gt;
+&lt;li&gt;Debug mode를 설정한 채로 배포하는 경우&lt;/li&gt;
+&lt;li&gt;임시/백업 파일을 삭제하지 않은 경우
+&lt;ul&gt;
+&lt;li&gt;백업파일 종류
+&lt;ul&gt;
+&lt;li&gt;bak : 백업 파일, 대부분의 에디터에서 사용함&lt;/li&gt;
+&lt;li&gt;config : 설정 파일, 비밀 키들이 존재하는 경우가 많음&lt;/li&gt;
+&lt;li&gt;sql : sql schema 파일, 데이터 베이스 구조를 알아낼 수 있음&lt;/li&gt;
+&lt;li&gt;sh : shell script 파일&lt;/li&gt;
+&lt;li&gt;~ : bluefish 에디터 백업 파일&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;서비스와는 무관한 파일들을 제거해서 위협을 없앨 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;VCS 프로그램으로 인한 임시 파일들을 정리해야 한다.
+&lt;ul&gt;
+&lt;li&gt;.git, .hg 등의 파일이 있다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kost/dvcs-ripper&#34;&gt;https://github.com/kost/dvcs-ripper&lt;/a&gt; 정보를 참조하여 진단이 가능하다.&lt;/li&gt;
+&lt;li&gt;웹 서버의 설정으로 VCS 파일의 경로의 접근을 막는 방법도 가능하다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;location ~ /\.(git|hg) {
+  deny all;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;네트워크 바인딩을 0.0.0.0 으로 세팅하는 경우
+&lt;ul&gt;
+&lt;li&gt;편의를 위해 세팅한 설정을 운영 환경이 변경되었음에도 그대로 유지하여 발생할 수 있는 취약점이다.&lt;/li&gt;
+&lt;li&gt;내부 망에서만 접근할 수 있는 서비스는 mask를 제대로 설정 해 주고, 허용할 포트를 제외한 설정은 모두 삭제하도록 하여 위협을 제거한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;취약점&#34;&gt;취약점&lt;/h1&gt;
+&lt;h2 id=&#34;xss-cross-site-scripting&#34;&gt;XSS (Cross Site Scripting)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;공격자가 웹 리소스에 악성 스크립트를 삽입해 이용자의 웹 브라우저에서 해당 스크립트를 실행하는 공격이다.&lt;/li&gt;
+&lt;li&gt;XSS 취약점이 존재하는 사이트에 공격자는 origin 권한으로 악성 스크립트가 포함된 페이지를 만들어서 이용자가 악성 스크립트가 포함된 페이지를 방문하면 공격자의 악성 스크립트가 동작해 정보를 탈취하는 방식이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;공격-경로&#34;&gt;공격 경로&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;XSS 공격은 이용자가 삽입한 내용을 출력하는 기능에서 발생한다.
+&lt;ul&gt;
+&lt;li&gt;악성 태그를 필터링하는 HTML Sanitization을 사용하거나 엔티티 코드로 치환하는 방법으로 XSS를 예방할 수 있다.&lt;/li&gt;
+&lt;li&gt;Flask는 &lt;code&gt;render_template&lt;/code&gt; 함수를 사용하여 인자를 HTML 엔티티코드로 변환하여 출력하는 방식으로 XSS를 방지한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;아래와 같이 입력값을 그대로 출력하게 되면, 입력값으로 script 를 전달해 공격에 사용할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;서버의 코드
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@app.route(&amp;#34;/vulnerable&amp;#34;)
+def vulnerable():
+    param = request.args.get(&amp;#34;param&amp;#34;, &amp;#34;&amp;#34;) # 이용자가 입력한 인자를 가져옴
+    return param # 이용자의 입력값을 화면 상에 표시
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;공격자 입력1. 다른 페이지로 redirection
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;script&amp;gt;location.href = &amp;#34;/another_page?param=PARAM1&amp;#34;;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;공격자 입력2. cookie 정보 출력
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;script&amp;gt;document.cookie&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;xss-공격-종류&#34;&gt;XSS 공격 종류&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;XSS 는 악성 스크립트의 위치와 침투 경로에 따라 아래와 같이 구분된다.
+&lt;ul&gt;
+&lt;li&gt;Stored XSS : XSS에 사용되는 악성 스크립트가 서버에 저장되고 서버의 응답에 담겨오는 XSS
+&lt;ul&gt;
+&lt;li&gt;게시물과 댓글에 악성 스크립트를 포함해 업로드하는 방식이 있음&lt;/li&gt;
+&lt;li&gt;불특정 다수에게 보여지기 때문에 파급력이 크다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Reflected XSS : XSS에 사용되는 악성 스크립트가 URL에 삽입되고 서버의 응답에 담겨오는 XSS
+&lt;ul&gt;
+&lt;li&gt;게시판 서비스에서 작성된 게시물을 조회하기 위한 검색창에서 스크립트를 포함해 검색하는 방식이 있음&lt;/li&gt;
+&lt;li&gt;검색 결과를 응답에 포함하는 일부 서비스에서 발생 가능&lt;/li&gt;
+&lt;li&gt;공격을 위해서는 다른 이용자를 악성 스크립트가 포함된 링크에 접속하도록 유도해야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DOM-based XSS : XSS에 사용되는 악성 스크립트가 URL Fragment에 삽입되는 XSS&lt;/li&gt;
+&lt;li&gt;Universal XSS : 클라이언트의 브라우저 혹은 브라우저의 플러그인에서 발생하는 취약점으로 SOP 정책을 우회하는 XSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;csrf-cross-site-request-forgery&#34;&gt;CSRF (Cross Site Request Forgery)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;어떤 사이트에서 이용자의 신원 정보가 포함된 쿠키를 사용한다면, 타인의 쿠키를 탈취하여 변조된 명령을 서버로 번달하는 공격 방식이다.
+&lt;ul&gt;
+&lt;li&gt;이용자의 신원 정보가 포함된 쿠키는 일종의 서명과 같은 역할을 하기 때문에, 쿠키가 특정 명령에 대한 이용자의 본인 인증 역할을 수행할 수도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2차 인증을 수행하지 않고 cookie로만 인증을 하는 사이트에 대해 공격이 가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;XSS&lt;/code&gt;는 인증 정보인 세션 및 쿠키 탈취를 목적으로 서버에서 스크립트를 실행 하는 방식인 반면, &lt;code&gt;CSRF&lt;/code&gt;는 이용자가 임의 페이지에 HTTP 요청을 보내는 것을 목적으로 하는 공격이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;공격-경로-1&#34;&gt;공격 경로&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 태그나 &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; 태그를 활용해서 사용자가 의도하지 않은 명령을 서버에 요청하는 script를 실행시킬 수 있다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/* img 태그 활용 요청 전달 */
+&amp;lt;img src=&amp;#39;http://bank.dreamhack.io/sendmoney?to=Dreamhack&amp;amp;amount=1337&amp;#39; width=0px height=0px&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/* javascript 공격 예시 */
+/* 새 창 띄우기 */
+window.open(&amp;#39;http://bank.dreamhack.io/sendmoney?to=Dreamhack&amp;amp;amount=1337&amp;#39;);
+/* 현재 창 주소 옮기기 */
+location.href = &amp;#39;http://bank.dreamhack.io/sendmoney?to=Dreamhack&amp;amp;amount=1337&amp;#39;;
+location.replace(&amp;#39;http://bank.dreamhack.io/sendmoney?to=Dreamhack&amp;amp;amount=1337&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sql-injection&#34;&gt;SQL Injection&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;조작된 SQL 쿼리를 서버에 주입하여 인증을 우회하거나, 데이터베이스의 정보를 유출하는 공격행위&lt;/li&gt;
+&lt;li&gt;Blind SQL Injection : SQL Injection 의 한 종류로, DBMS가 답변 가능한 형태로 질문을 수행하여 스무고개 게임과 같이 정답을 유추해 나가는 공격 기법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nosql-injection&#34;&gt;NoSQL Injection&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NoSQL은 데이터 타입으로 &amp;lsquo;오브젝트&amp;rsquo; 라는 개념을 갖는다. 오브젝트 타입의 입력값을 처리할 때에는 쿼리 연산자를 사용할 수 있고, 이 부분의 취약점을 활용한 것이 NoSQL Injection 이다.&lt;/li&gt;
+&lt;li&gt;NodeJs를 예를 들면 아래와 같이 url에 object를 대입할 수 있다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 서버 코드 예시
+const express = require(&amp;#39;express&amp;#39;);
+const app = express();
+app.get(&amp;#39;/&amp;#39;, function(req,res) {
+    console.log(&amp;#39;data:&amp;#39;, req.query.data, &amp;#39; / type:&amp;#39;, typeof req.query.data);
+    res.send(&amp;#39;done&amp;#39;);
+});
+const server = app.listen(3000, function(){
+    console.log(&amp;#39;app.listen&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 결과 예시
+http://localhost:3000/?data=1234
+data: 1234
+type: string
+
+http://localhost:3000/?data[]=1234
+data: [ &amp;#39;1234&amp;#39; ]
+type: object
+
+http://localhost:3000/?data[]=1234&amp;amp;data[]=5678
+data: [ &amp;#39;1234&amp;#39;, &amp;#39;5678&amp;#39; ] 
+type: object
+
+http://localhost:3000/?data[5678]=1234
+data: { &amp;#39;5678&amp;#39;: &amp;#39;1234&amp;#39; } 
+type: object
+
+http://localhost:3000/?data[5678]=1234&amp;amp;data=0000
+data: { &amp;#39;5678&amp;#39;: &amp;#39;1234&amp;#39;, &amp;#39;0000&amp;#39;: true } 
+type: object
+
+http://localhost:3000/?data[5678]=1234&amp;amp;data[]=0000
+data: { &amp;#39;0&amp;#39;: &amp;#39;0000&amp;#39;, &amp;#39;5678&amp;#39;: &amp;#39;1234&amp;#39; } 
+type: object
+
+http://localhost:3000/?data[5678]=1234&amp;amp;data[1111]=0000
+data: { &amp;#39;1111&amp;#39;: &amp;#39;0000&amp;#39;, &amp;#39;5678&amp;#39;: &amp;#39;1234&amp;#39; } 
+type: object
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;이 방법으로 아래와 같이 &amp;lsquo;data&amp;rsquo; 객체 안에 NoSQL 쿼리가 들어가도록 url을 설정할 수도 있다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/databases/database/#%eb%ac%b8%eb%b2%95&#34;&gt;NoSQL 문법 참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;http://localhost:3000/?data[$eq]=A
+data: { &amp;#34;$eq&amp;#34;: &amp;#34;A&amp;#34; } 
+type: object
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;command-injection&#34;&gt;Command Injection&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;공격자가 클라이언트 인터페이스를 통해 서버측에 시스템 명령어를 전달하여 실행시켜 공격을 수행하는 기법&lt;/li&gt;
+&lt;li&gt;PHP의 &lt;code&gt;system&lt;/code&gt;, Node JS의 &lt;code&gt;child_process&lt;/code&gt;, 파이썬의 &lt;code&gt;os.system&lt;/code&gt; 과 같이 시스템 명령어를 수행하는 함수에 이용자가 임의의 인자를 전달할 수 있을 때 발생할 수 있다.&lt;/li&gt;
+&lt;li&gt;명령어 입력란에 다른 명령어를 입력하는 기법에는 다음의 &lt;code&gt;메타문자&lt;/code&gt; 들을 활용할 수 있다.
+&lt;ol&gt;
+&lt;li&gt;명령어 치환
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;``&lt;/code&gt; 사이에 든 문자는 새로운 명령어 라인으로 인식한다.
+&lt;ul&gt;
+&lt;li&gt;ex) echo `ls`
+&lt;ul&gt;
+&lt;li&gt;ls 명령어가 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;$()&lt;/code&gt; 사이에 든 문자는 새로운 명령어 라인으로 인식한다.
+&lt;ul&gt;
+&lt;li&gt;ex) echo $(ls)
+&lt;ul&gt;
+&lt;li&gt;ls 명령어가 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;명령어 연속 실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;||&lt;/code&gt; 를 사용하면, || 앞과 || 뒤를 다른 명령어 라인으로 인식하고 각각 실행한다.
+&lt;ul&gt;
+&lt;li&gt;한 줄에 둘 이상의 명령어를 실행시킬 수 있다.&lt;/li&gt;
+&lt;li&gt;ex) mkdir FILE || cd FILE
+&lt;ul&gt;
+&lt;li&gt;FILE 디렉터리를 만들고 FILE 디렉터리 안으로 이동하는 명령을 한줄로 수행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; 를 사용하면, &amp;amp;&amp;amp; 앞과 &amp;amp;&amp;amp; 뒤를 다른 명령어 라인으로 인식하고 각각 실행한다.
+&lt;ul&gt;
+&lt;li&gt;ex) mkdir FILE &amp;amp;&amp;amp; cd FILE
+&lt;ul&gt;
+&lt;li&gt;FILE 디렉터리를 만들고 FILE 디렉터리 안으로 이동하는 명령을 한줄로 수행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;;&lt;/code&gt; 를 사용하면, ; 앞과 ; 뒤를 다른 명령어 라인으로 인식하고 각각 실행한다.
+&lt;ul&gt;
+&lt;li&gt;ex) mkdir FILE ; cd FILE
+&lt;ul&gt;
+&lt;li&gt;FILE 디렉터리를 만들고 FILE 디렉터리 안으로 이동하는 명령을 한줄로 수행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;파이프
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;|&lt;/code&gt; 를 사용하면 | 앞의 명령어 실행 결과를 | 뒤의 명령어 실행시 입력으로 설정할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;ex) cat FILE | less
+&lt;ul&gt;
+&lt;li&gt;FILE 내용을 출력한 것을 less 명령으로 나눠서 볼 수 있도록 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;뒷내용 무시
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘에서 &lt;code&gt;#&lt;/code&gt;을 사용하면 # 뒤의 내용은 주석처리되어 무시된다.
+&lt;ul&gt;
+&lt;li&gt;ex) ls #a&amp;quot;sdfa&amp;quot;sd&amp;rsquo;fas&amp;quot;&amp;rsquo;&amp;ldquo;df
+&lt;ul&gt;
+&lt;li&gt;구문 오류 없이 ls 명령이 잘 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;문자열을 whitelist 처리하거나 blacklist 처리하여 공격을 방어할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;정규식을 통해 IP 주소 포멧을 whitelist 로 지정하는 코드
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import re, os, ...
+...
+chk_ip = re.compile(&amp;#39;^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$&amp;#39;)
+if bool(chk_ip.match(ip)):
+    return run_system(f&amp;#39;ping -c 3 {ip}&amp;#39;)
+else:
+    return &amp;#39;ip format error&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;허용되면 안되는 문자열을 blacklist 로 지정하는 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if &amp;#39;\&amp;#39;&amp;#39; in ip:
+    return &amp;#39;not allowed character&amp;#39;
+return run_system(f&amp;#39;ping -c 3 \&amp;#39;{ip}\&amp;#39;&amp;#39;)  # shell command 상에서 모든 입력을 문자열로 처리하는 Single Quotes (&amp;#39;)를 사용해야 함
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;system(PHP), child_process(Node JS), os.system(Python) 등 OS command를 실행하는 함수 외 대체 라이브러리를 사용하는 방법으로 위협을 줄일 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;file-vulnerability&#34;&gt;File Vulnerability&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;공격자의 파일을 웹 서비스의 파일 시스템에 업로드 혹은 하는 과정에서 발생하는 보안 취약점&lt;/li&gt;
+&lt;li&gt;파일 업로드/다운로드 서비스를 개발시 이용자가 업로드한 파일을 데이터베이스에 저장하는 것보다는 서버의 파일 시스템에 저장하는 것이 개발하기 쉽고, 관리 효율도 높지만 File Vulnerability를 주의해야 한다.&lt;/li&gt;
+&lt;li&gt;원격 코드 실행, 민감정보 탈취 등이 수행될 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;File Upload Vulnerability&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +348,35 @@
       <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/cookie/</guid>
-      <description>Cookie HTTP의 특징(Connectionless, Stateless) 때문에 Web Server 는 HTTP로 요청된 패킷들이 어떤 Web Client에서 전달된 것인지 구분할 수 없다. IP 주소와 User-Agent 등의 정보는 매번 변경될 수 있다. Client의 정보와 요청의 내용을 구체화하기 위해, Server는 Client 마다 고유한 Cookie를 발급하고, Client는 Server에 요청을 보낼 때마다 Cookie를 같이 전송한다. Server는 Request 패킷에 들어있는 Cookie 를 통해 Client의 정보와 상태를 기록한다. Cookie 는 key-value 로 구성된 파일이며, Client 에 저장된다. Cookie의 단점 4KB의 크기 제한 쿠키로 인해 웹의 반응성이 느려질 수 있음 도메인 내의 모든 페이지가 같은 쿠키를 전달 받음 HTTP 프로토콜로 Cookie 요청시 암호화 되지 않아 보안이 취약함 쿠키는 사용자의 로컬에 텍스트로 저장 되어있어 쉽게 내용 확인이 가능함 악의적인 Client 가 Cookie 를 변조할 수 있음 Modern Storage APIs Cookie 의 단점을 해결하기 위해 사용되는 방법이다.</description>
+      <description>&lt;h1 id=&#34;cookie&#34;&gt;Cookie&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP의 특징(Connectionless, Stateless) 때문에 Web Server 는 HTTP로 요청된 패킷들이 어떤 Web Client에서 전달된 것인지 구분할 수 없다.
+&lt;ul&gt;
+&lt;li&gt;IP 주소와 User-Agent 등의 정보는 매번 변경될 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Client의 정보와 요청의 내용을 구체화하기 위해, Server는 Client 마다 고유한 Cookie를 발급하고, Client는 Server에 요청을 보낼 때마다 Cookie를 같이 전송한다.&lt;/li&gt;
+&lt;li&gt;Server는 Request 패킷에 들어있는 Cookie 를 통해 Client의 정보와 상태를 기록한다.&lt;/li&gt;
+&lt;li&gt;Cookie 는 key-value 로 구성된 파일이며, Client 에 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cookie의-단점&#34;&gt;Cookie의 단점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;4KB의 크기 제한&lt;/li&gt;
+&lt;li&gt;쿠키로 인해 웹의 반응성이 느려질 수 있음&lt;/li&gt;
+&lt;li&gt;도메인 내의 모든 페이지가 같은 쿠키를 전달 받음&lt;/li&gt;
+&lt;li&gt;HTTP 프로토콜로 Cookie 요청시 암호화 되지 않아 보안이 취약함&lt;/li&gt;
+&lt;li&gt;쿠키는 사용자의 로컬에 텍스트로 저장 되어있어 쉽게 내용 확인이 가능함&lt;/li&gt;
+&lt;li&gt;악의적인 Client 가 Cookie 를 변조할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;modern-storage-apis&#34;&gt;Modern Storage APIs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookie 의 단점을 해결하기 위해 사용되는 방법이다.&lt;/li&gt;
+&lt;li&gt;Local storage, Session storage 등이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Session 은 Server 에서 생성한 랜덤한 문자열이고, Server 가 Client 마다 고유한 값을 발급한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +385,77 @@
       <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/web/</guid>
-      <description>Web HTTP를 이용하여 정보를 공유하는 인터넷 기반 서비스를 Web이라 한다. 정보 제공자를 Web Server, 정보 수신자를 Web Client라 칭한다. 현재의 웹은 단순 정보 제공을 떠나 서비스를 제공하는 형태로 발전하고 있으며, Front end 와 Back end 로 역할이 나뉘어지고 있다. Front end : Web resource로 구성된 사용자에게 직접 보여지는 부분 Back end : 사용자에게 직접 보여지지는 않지만 서비스 제공을 위해 구동되는 부분 Web Resource 웹에 갖춰진 정보 자산을 의미하며, 사용자에게 제공되어 화면을 구성하는데 사용된다.</description>
+      <description>&lt;h1 id=&#34;web&#34;&gt;Web&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP를 이용하여 정보를 공유하는 인터넷 기반 서비스를 Web이라 한다.&lt;/li&gt;
+&lt;li&gt;정보 제공자를 Web Server, 정보 수신자를 Web Client라 칭한다.&lt;/li&gt;
+&lt;li&gt;현재의 웹은 단순 정보 제공을 떠나 서비스를 제공하는 형태로 발전하고 있으며, &lt;code&gt;Front end&lt;/code&gt; 와 &lt;code&gt;Back end&lt;/code&gt; 로 역할이 나뉘어지고 있다.
+&lt;ul&gt;
+&lt;li&gt;Front end : &lt;code&gt;Web resource&lt;/code&gt;로 구성된 사용자에게 직접 보여지는 부분&lt;/li&gt;
+&lt;li&gt;Back end : 사용자에게 직접 보여지지는 않지만 서비스 제공을 위해 구동되는 부분&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web-resource&#34;&gt;Web Resource&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;웹에 갖춰진 정보 자산을 의미하며, 사용자에게 제공되어 화면을 구성하는데 사용된다.&lt;/li&gt;
+&lt;li&gt;고유한 식별자인 Uniform Resource Identifier (URI)를 가진다.&lt;/li&gt;
+&lt;li&gt;대표적인 웹 리소스의 종류
+&lt;ul&gt;
+&lt;li&gt;Hyper Text Markup Language (HTML) : 태그와 속성을 통한 구조화된 문서 작성에 사용. &lt;a href=&#34;https://aswinblue.github.io/Blog/post/webapplication/html/&#34;&gt;설명 참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cascading Style Sheets (CSS) : 웹 문서의 외형을 조절하는데 사용. &lt;a href=&#34;https://aswinblue.github.io/Blog/post/webapplication/css/&#34;&gt;설명 참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript (JS) : 이용자의 브라우저에서 실행되는 코드로 front end 의 동작을 결정. &lt;a href=&#34;https://aswinblue.github.io/Blog/post/webapplication/javascript/&#34;&gt;설명 참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;text&lt;/li&gt;
+&lt;li&gt;image&lt;/li&gt;
+&lt;li&gt;video&lt;/li&gt;
+&lt;li&gt;font&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web-browser&#34;&gt;Web browser&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Client 의 위치에서 Server 와 HTTP 통신을 수행해주고 그 결과를 가시화 해 주는 도구로, 사용자가 HTTP 통신을 직접 알지 못해도 Web을 사용할 수 있게 해 준다.&lt;/li&gt;
+&lt;li&gt;동작 순서
+&lt;ol&gt;
+&lt;li&gt;URL 분석&lt;/li&gt;
+&lt;li&gt;DNS 요청&lt;/li&gt;
+&lt;li&gt;HTTP Request&lt;/li&gt;
+&lt;li&gt;get HTTP Respond&lt;/li&gt;
+&lt;li&gt;리소스 다운로드 및 웹 랜더링&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dev-tool&#34;&gt;Dev Tool&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Web browser 에서 사용할 수 있는 개발자 도구&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + U&lt;/code&gt; : 소스코드 보기 단축키&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;console.log&lt;/code&gt; : 콘솔창에 로그 출력&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;document.cookie&lt;/code&gt; : 콘솔창에서 쿠키 출력&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;location.href&lt;/code&gt; : 전체 URL 을 반환하거나, URL을 업데이트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;urluniform-resource-locator&#34;&gt;URL(Uniform Resource Locator)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;웹에 있는 리소스의 위치를 표현하는 문자열&lt;/li&gt;
+&lt;li&gt;URL 의 구성 요소
+&lt;ul&gt;
+&lt;li&gt;Scheme: 웹 서버와 어떤 프로토콜로 통신할지 나타냅니다.&lt;/li&gt;
+&lt;li&gt;Host: Authority의 일부로, 접속할 웹 서버의 주소에 대한 정보를 가지고 있습니다.&lt;/li&gt;
+&lt;li&gt;Port: Authority의 일부로, 접속할 웹 서버의 포트에 대한 정보를 가지고 있습니다.&lt;/li&gt;
+&lt;li&gt;Path: 접근할 웹 서버의 리소스 경로로 &amp;lsquo;/&amp;lsquo;로 구분됩니다.&lt;/li&gt;
+&lt;li&gt;Query: 웹 서버에 전달하는 파라미터이며 URL에서 &amp;lsquo;?&amp;rsquo; 뒤에 위치합니다.&lt;/li&gt;
+&lt;li&gt;Fragment: 메인 리소스에 존재하는 서브 리소스를 접근할 때 이를 식별하기 위한 정보를 담고 있습니다. &amp;lsquo;#&amp;rsquo; 문자 뒤에 위치합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;domain-name&#34;&gt;Domain name&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;숫자의 조합으로 이루어진 IP 주소를 사람이 읽기 쉬운 형태의 문자열로 대체한 형태&lt;/li&gt;
+&lt;li&gt;Domain name 을 사용하기 위해서는 DNS가 필요하다.&lt;/li&gt;
+&lt;li&gt;DNS(Domain Name Server) 에 Domain name 을 질의하면 DNS 는 매핑되는 IP 를 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;콘솔의 nslookup  명령으로 domain name 정보를 확인할 수 있다.&lt;br&gt;
+ex) &lt;code&gt;nslookup google.com&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +464,116 @@
       <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/http/</guid>
-      <description>HTTP(Hyper Text Transfer Protocol) 서버와 클라이언트의 데이터 교환을 요청(Request)과 응답(Response) 형식으로 정의한 프로토콜로, 웹 서비스의 근간이 되는 텍스트 교환 프로토콜이다. 주로 클라이언트가 요청을 하면 서버가 응답을 해 주는 방식이며, 서버는 클라이언트의 요청을 받기 위해 socket 통신으로 80번 (혹은 8080번) 포트를 상시 열어놓고 대기한다. HTTP 프로토콜은 ISO 7계층 중 Application layer에 해당하며, transport layer 에 TCP 프로토콜을 사용할 떄 80번 포트를 HTTP 프로토콜 용으로 할당받는다. 0 ~ 1023 번 까지 port는 well-known 포트로, 시스템 혹은 네트워크에서 공공연히 사용되는 프로토콜들의 포트들이 할당되어 있고, HTTP 프로토콜도 그 중 하나이다.</description>
+      <description>&lt;h1 id=&#34;httphyper-text-transfer-protocol&#34;&gt;HTTP(Hyper Text Transfer Protocol)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;서버와 클라이언트의 데이터 교환을 요청(Request)과 응답(Response) 형식으로 정의한 프로토콜로, 웹 서비스의 근간이 되는 텍스트 교환 프로토콜이다.&lt;/li&gt;
+&lt;li&gt;주로 클라이언트가 요청을 하면 서버가 응답을 해 주는 방식이며, 서버는 클라이언트의 요청을 받기 위해 socket 통신으로 80번 (혹은 8080번) 포트를 상시 열어놓고 대기한다.&lt;/li&gt;
+&lt;li&gt;HTTP 프로토콜은 ISO 7계층 중 Application layer에 해당하며, transport layer 에 TCP 프로토콜을 사용할 떄 80번 포트를 HTTP 프로토콜 용으로 할당받는다.
+&lt;ul&gt;
+&lt;li&gt;0 ~ 1023 번 까지 port는 well-known 포트로, 시스템 혹은 네트워크에서 공공연히 사용되는 프로토콜들의 포트들이 할당되어 있고, HTTP 프로토콜도 그 중 하나이다.&lt;/li&gt;
+&lt;li&gt;80번 포트에 HTTP가, 443 포트에 HTTPS가 할당되어 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Connectionless&lt;/code&gt;와 &lt;code&gt;Stateless&lt;/code&gt; 라는 특징이 있다.
+&lt;ul&gt;
+&lt;li&gt;Connectionless: 하나의 요청에 하나의 응답을 한 후 연결을 종료하는 것을 의미합니다. 특정 요청에 대한 연결은 이후의 요청과 이어지지 않고 새 요청이 있을 때 마다 항상 새로운 연결을 맺음.&lt;/li&gt;
+&lt;li&gt;Stateless: 통신이 끝난 후 상태 정보를 저장하지 않는 것을 의미합니다. 이전 연결에서 사용한 데이터를 다른 연결에서 요구할 수 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;프로토콜-상세&#34;&gt;프로토콜 상세&lt;/h2&gt;
+&lt;h3 id=&#34;패킷-구조&#34;&gt;패킷 구조&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;headers
+&lt;ul&gt;
+&lt;li&gt;headers는 &lt;code&gt;CRLF&lt;/code&gt;(Carriage Return Line Feed) 로 한 줄을 구분하며, 첫 줄은 &lt;code&gt;Start line&lt;/code&gt;, 이후 나머지 줄들은 모두 &lt;code&gt;header&lt;/code&gt; 라 부른다.&lt;/li&gt;
+&lt;li&gt;headers 의 끝은 빈 줄로 나타낸다.&lt;/li&gt;
+&lt;li&gt;headers 는 &lt;code&gt;field&lt;/code&gt; 와 &lt;code&gt;value&lt;/code&gt; 로 구성되어 HTTP 메시지의 속성 또는 body 의 속성을 나타낸다.&lt;/li&gt;
+&lt;li&gt;HTTP 메시지에는 0개 이상의 headers 가 존재할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;body
+&lt;ul&gt;
+&lt;li&gt;headers 의 마지막 &lt;code&gt;CRLF&lt;/code&gt; 다음 모든 줄을 body라 칭한다.&lt;/li&gt;
+&lt;li&gt;상대방에게 전하려는 실제 데이터가 들어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;패킷-종류&#34;&gt;패킷 종류&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc2616.html#section-5&#34;&gt;HTTP 패킷 참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Request
+&lt;ul&gt;
+&lt;li&gt;시작줄에 Method, Request target, HTTP version 가 작성되며, 띄어쓰기로 구분된다.&lt;/li&gt;
+&lt;li&gt;Method
+&lt;ul&gt;
+&lt;li&gt;GET:  특정 리소스의 표시를 요청합니다. GET을 사용하는 요청은 오직 데이터를 받기만 합니다.&lt;/li&gt;
+&lt;li&gt;HEAD: GET 메서드의 요청과 동일한 응답을 요구하지만, 응답 본문을 포함하지 않습니다.&lt;/li&gt;
+&lt;li&gt;POST: 특정 리소스에 엔티티를 제출할 때 쓰입니다. 이는 종종 서버의 상태의 변화나 부작용을 일으킵니다.&lt;/li&gt;
+&lt;li&gt;PUT: 목적 리소스 모든 현재 표시를 요청 payload로 바꿉니다.&lt;/li&gt;
+&lt;li&gt;DELETE: 특정 리소스를 삭제합니다.&lt;/li&gt;
+&lt;li&gt;CONNECT: 목적 리소스로 식별되는 서버로의 터널을 맺습니다.&lt;/li&gt;
+&lt;li&gt;OPTIONS: 목적 리소스의 통신을 설정하는 데 쓰입니다.&lt;/li&gt;
+&lt;li&gt;TRACE: 목적 리소스의 경로를 따라 메시지 loop-back 테스트를 합니다.&lt;/li&gt;
+&lt;li&gt;PATCH: 리소스의 부분만을 수정하는 데 쓰입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Request Target
+&lt;ul&gt;
+&lt;li&gt;URI라고도 불리며, 서비스 내에서 메소드를 처리할 하위 대상을 지정하는 용도이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HTTP version
+&lt;ul&gt;
+&lt;li&gt;프로토콜의 버전을 나타낸다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Response
+&lt;ul&gt;
+&lt;li&gt;요청에 대한 회신을 담아내는 패킷으로, 요청 결과를 숫자로 표현한 상태 코드를 담고 있다.&lt;/li&gt;
+&lt;li&gt;상태 코드는 첫 숫자에 따라 아래와 같은 의미를 지닌다.
+&lt;ul&gt;
+&lt;li&gt;1xx: 요청을 제대로 받았고, 처리가 진행 중임&lt;/li&gt;
+&lt;li&gt;2xx: 요청이 제대로 처리됨
+&lt;ul&gt;
+&lt;li&gt;200(OK): 성공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;3xx: 요청을 처리하려면, 클라이언트가 추가 동작을 취해야 함.
+&lt;ul&gt;
+&lt;li&gt;302(Found): 다른 URL로 갈 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4xx: 클라이언트가 잘못된 요청을 보내어 처리에 실패
+&lt;ul&gt;
+&lt;li&gt;400(Bad Request): 요청이 문법에 맞지 않음&lt;/li&gt;
+&lt;li&gt;401(Unauthorized): 클라이언트가 요청한 리소스에 대한 인증이 실패함&lt;/li&gt;
+&lt;li&gt;403(Forbidden): 클라이언트가 리소스에 요청할 권한이 없음&lt;/li&gt;
+&lt;li&gt;404(Not Found): 리소스가 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;5xx: 클라이언트의 요청은 유효하지만, 서버에 에러가 발생하여 처리에 실패
+&lt;ul&gt;
+&lt;li&gt;500(Internal Server Error): 서버가 요청을 처리하다가 에러가 발생함&lt;/li&gt;
+&lt;li&gt;503(Service Unavailable): 서버가 과부하로 인해 요청을 처리할 수 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc2616.html#section-6&#34;&gt;상태코드 참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;httpshttp-over-secure-socket-layer&#34;&gt;HTTPS(HTTP over Secure socket layer)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP는 평문으로 전달하기 때문에, 패킷이 유출되면 중요 정보가 노출될 수 있다.&lt;/li&gt;
+&lt;li&gt;보안 위협을 방지하기 위해 TLS(Transport Layer Security) 프로토콜을 도입한 HTTP의 변형 프로토콜이 HTTPS 이다.&lt;/li&gt;
+&lt;li&gt;평문 대신 암호화된 구문을 전송하며 복호화를 위한 키가 있어야 내용을 읽을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

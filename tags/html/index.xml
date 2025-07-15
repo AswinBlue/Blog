@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>html on AswinBlue</title>
+    <title>Html on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/html/</link>
-    <description>Recent content in html on AswinBlue</description>
+    <description>Recent content in Html on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 Jun 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/html/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,46 @@
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/thymeleaf/</guid>
-      <description>Thymeleaf 서버에서 view를 구성할 때 사용하는 라이브러리 태그 형식의 문법을 사용하며 vue와 유사하다. 기본 문법 thymeleaf 공식 튜토리얼 에서 기본적인 문법을 확인할 수 있다. 태그 안에 th:속성=&amp;quot;값&amp;quot; 형태의 속성을 추가하는 형태로 사용한다. text &amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;를 표시한다. utext &amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다. fragment &amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다.</description>
+      <description>&lt;h1 id=&#34;thymeleaf&#34;&gt;Thymeleaf&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;서버에서 view를 구성할 때 사용하는 라이브러리&lt;/li&gt;
+&lt;li&gt;태그 형식의 문법을 사용하며 vue와 유사하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-문법&#34;&gt;기본 문법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html&#34;&gt;thymeleaf 공식 튜토리얼&lt;/a&gt; 에서 기본적인 문법을 확인할 수 있다.&lt;/li&gt;
+&lt;li&gt;태그 안에  &lt;code&gt;th:속성=&amp;quot;값&amp;quot;&lt;/code&gt; 형태의 속성을 추가하는 형태로 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;text&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &lt;code&gt;&amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;를 표시한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;utext&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;fragment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;&lt;/code&gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다. fragment는 &lt;code&gt;th:replace&lt;/code&gt;, &lt;code&gt;th:copy&lt;/code&gt; 를 사용해서 재활용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;copy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;div th:copy=&amp;quot;this::name&amp;quot;&amp;gt;&lt;/code&gt;: 현재 파일의 &amp;rsquo;name&amp;rsquo; fragment를 &amp;lsquo;div&amp;rsquo;태그로 표현한다. &amp;rsquo;this&amp;rsquo; 대신 파일 이름을 사용하면 다른 파일의 fragment를 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;replace&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;div th:replace=&amp;quot;this::name&amp;quot;&amp;gt;&lt;/code&gt;: 현재 파일의 &amp;rsquo;name&amp;rsquo; fragment로 대체한다.(태그도 바뀐다.) &amp;rsquo;this&amp;rsquo; 대신 파일 이름을 사용하면 다른 파일의 fragment를 사용가능하다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -22,7 +61,33 @@
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/html/</guid>
-      <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하고 &amp;lt;/TAG_NAME&amp;gt;로 끝냄 태그별로 검색 엔진에서 노출되는 중요도가 다르다. 태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다. html : body와 head를 통틀어 묶은 최 고위 태그 관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다. body : 본문을 묶는 태그 head : 본문을 설명하는 태그 속성(attribute) &amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음 body 속성 strong : 굵은 글씨</description>
+      <description>&lt;h1 id=&#34;html&#34;&gt;HTML&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;태그&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;element라고 칭하기도 한다.&lt;/li&gt;
+&lt;li&gt;부모 자식 관계가 존재&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAG_NAME&amp;gt;&lt;/code&gt; 로 시작하고 &lt;code&gt;&amp;lt;/TAG_NAME&amp;gt;&lt;/code&gt;로 끝냄&lt;/li&gt;
+&lt;li&gt;태그별로 검색 엔진에서 노출되는 중요도가 다르다.&lt;/li&gt;
+&lt;li&gt;태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다.&lt;/li&gt;
+&lt;li&gt;html : body와 head를 통틀어 묶은 최 고위 태그&lt;/li&gt;
+&lt;li&gt;관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다.&lt;/li&gt;
+&lt;li&gt;body : 본문을 묶는 태그&lt;/li&gt;
+&lt;li&gt;head : 본문을 설명하는 태그&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;속성(attribute)
+&amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;body&#34;&gt;body&lt;/h2&gt;
+&lt;h3 id=&#34;속성&#34;&gt;속성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;strong : 굵은 글씨&lt;/p&gt;</description>
     </item>
     
     <item>

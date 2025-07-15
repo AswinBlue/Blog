@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>shell_programming on AswinBlue</title>
+    <title>Shell_programming on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/shell_programming/</link>
-    <description>Recent content in shell_programming on AswinBlue</description>
+    <description>Recent content in Shell_programming on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Jul 2023 18:29:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/shell_programming/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,22 @@
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
-      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다. 쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다. 명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사) .sh 파일 작성 새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 chmod 명령어로 권한을 수정해야 한다.
-ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.</description>
+      <description>&lt;h1 id=&#34;shell-programming&#34;&gt;Shell Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘 프로그래밍에 대해 기술한다.&lt;/li&gt;
+&lt;li&gt;쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다.&lt;/li&gt;
+&lt;li&gt;명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sh-파일-작성&#34;&gt;.sh 파일 작성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 &lt;code&gt;chmod&lt;/code&gt; 명령어로 권한을 수정해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ex) &lt;code&gt;chmod a+x &amp;lt;파일이름&amp;gt;&lt;/code&gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.sh 파일 안에는 shell 명령어들을 사용할 수 있다. 그 외 추가적으로 작성할 수 있는 구문들은 다음과 같다.&lt;/p&gt;</description>
     </item>
     
   </channel>

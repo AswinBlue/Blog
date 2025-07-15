@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>gdb on AswinBlue</title>
+    <title>Gdb on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/gdb/</link>
-    <description>Recent content in gdb on AswinBlue</description>
+    <description>Recent content in Gdb on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,38 @@
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다. https://github.com/pwndbg/pwndbg 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 gdb 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.</description>
+      <description>&lt;h1 id=&#34;gdb&#34;&gt;GDB&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Debugger의 약자&lt;/li&gt;
+&lt;li&gt;유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거&lt;/li&gt;
+&lt;li&gt;디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다.&lt;/li&gt;
+&lt;li&gt;pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://github.com/pwndbg/pwndbg&lt;/code&gt; 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 &lt;code&gt;gdb&lt;/code&gt; 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;컴파일&#34;&gt;컴파일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc로 컴파일시 옵션에 &lt;code&gt;-g&lt;/code&gt; 를 붙여야 소스를 보면서 디버깅이 가능&lt;/li&gt;
+&lt;li&gt;리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.
+&lt;ul&gt;
+&lt;li&gt;ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.&lt;/li&gt;
+&lt;li&gt;섹션에는 기계어 코드 등의 정보들이 들어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;readelf -h [ELF파일]&lt;/code&gt; 명령으로 ELF 파일의 헤더 정보를 확인 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gdb-옵션&#34;&gt;gdb 옵션&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gdb [파일이름]&lt;/code&gt; : 해당 파일이름 디버깅 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--args [arg1] [arg2] [...]&lt;/code&gt; : 파일 실행에 필요한 argument를 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기타-명령어&#34;&gt;기타 명령어&lt;/h2&gt;
+&lt;h3 id=&#34;실행-전-설정사항&#34;&gt;실행 전 설정사항&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;coredumb 파일&lt;/p&gt;</description>
     </item>
     
   </channel>

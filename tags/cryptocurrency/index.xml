@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cryptocurrency on AswinBlue</title>
+    <title>Cryptocurrency on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/cryptocurrency/</link>
-    <description>Recent content in cryptocurrency on AswinBlue</description>
+    <description>Recent content in Cryptocurrency on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 02 Feb 2022 13:22:27 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,55 @@
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/crypto/cryptocurrency/</guid>
-      <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
-collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.</description>
+      <description>&lt;h1 id=&#34;cryptocurrency&#34;&gt;Cryptocurrency&lt;/h1&gt;
+&lt;h2 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic Hash function&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hash function은 아래와 같은 속성을 갖는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;모든 크기의 String을 input 으로 받는다.&lt;/li&gt;
+&lt;li&gt;정해진 크기의 output을 생성한다. (bitcoin에서는 256bit)&lt;/li&gt;
+&lt;li&gt;적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;collision-free&lt;/li&gt;
+&lt;li&gt;hiding&lt;/li&gt;
+&lt;li&gt;puzzle-friendly&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;속성1-collision-free&#34;&gt;속성1. collision-free&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다.&lt;/li&gt;
+&lt;li&gt;이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;찾을 수 없다&amp;rsquo; 라는 말은, collision이 존재하지만, hahs function의 결과를 예측할 수 없다는 뜻이다.
+&lt;ul&gt;
+&lt;li&gt;실제로, 2^130 개의 무작위 수를 선택하여 hash function을 돌렸을 때, 99.8%의 확률로 충돌이 발생한다.&lt;/li&gt;
+&lt;li&gt;하지만 이 수치는 천문학적으로 크기 때문에 걱정할 필요가 없다. (collision을 발견할 확률은 인류가 만든 최고의 컴퓨터로 우주 생성시부터 계산을 해도, 2초뒤 지구에 운석이 떨어질 확률만큼 낮다.)&lt;/li&gt;
+&lt;li&gt;collision을 쉽게 구하는 방법이 있는가?
+-&amp;gt; 특정 hash function에 대해서는(SHA256에 대해서도 최단기간 collision을 찾아내는 방법이 알려져 있다.) 가능하지만, 대부분은 그렇지 않다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hash-as-message-digest&#34;&gt;hash as message digest&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;collision을 구하는 것이 매우 어렵기 때문에, H(x) = H(y)라면, x = y라고 확신해도 된다.&lt;/li&gt;
+&lt;li&gt;즉, hash를 이용해 데이터 전송/비교에 드는 비용을 절감 가능하다. (전체 message 대신 hash만 비교)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;속성2-hiding&#34;&gt;속성2. hiding&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;H(x)를 갖고 x를 유추할 수 없다.&lt;/li&gt;
+&lt;li&gt;hiding 속성을 가지려면 아래와 같은 방법을 사용한다.&lt;/li&gt;
+&lt;li&gt;high min-entropy 를 가진 무작위 상수 &amp;lsquo;r&amp;rsquo;을 x와 조합(concatenate)하여 hash function의 input에 넣으면 hiding 속성을 갖게 된다. (&lt;code&gt;H(r|x)&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;high min-entropy 란 넓고 고르게 퍼져있음을 뜻한다. 즉, 넓은 선택범위 안에서 특정 값이 특출나게 여려번 중복해서 뽑히지 않는다는 뜻이다. (no particular value is chosen with more than negligible probability)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;commitment&#34;&gt;commitment&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;편지를 동봉하듯 데이터가 가지고 있는 내용을 공개하지 않고 데이터를 공개하는 것&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -13,7 +13,37 @@
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
-      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
+      <description>&lt;h1 id=&#34;python-cgi&#34;&gt;python CGI&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CGI는 Common Gateway Interface의 약자다.&lt;/li&gt;
+&lt;li&gt;web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다.&lt;/li&gt;
+&lt;li&gt;web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다.&lt;/li&gt;
+&lt;li&gt;apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ a2enmod CGI&lt;/code&gt; 명령으로 apache의 CGI를 켜 주고, &lt;code&gt;sudo service apache2 restart&lt;/code&gt; 로 설정 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt; 안에 apache 실행시 발생한 에러 로그가 담겨있다.&lt;/li&gt;
+&lt;li&gt;웹 브라우저가 웹 서버에 요청할 때 웹 서버는 응답으로 웹 페이지의 데이터 타입(헤더)와 함께 웹 페이지를 전송한다.
+python CGI로는 &lt;code&gt;print(&amp;quot;content-type:text/html; charset=UTF-8\n&amp;quot;)&lt;/code&gt; 와 같이 헤더를 표기낸다.&lt;/li&gt;
+&lt;li&gt;헤더를 출력한 다음 부터는 body 부분이 출력된다.&lt;/li&gt;
+&lt;li&gt;특정 주소로 Redirection을 할 때에는 &lt;code&gt;print(&amp;quot;location : index.py?id=title&amp;quot;)&lt;/code&gt;을 이용한다. ( &amp;lsquo;:&amp;rsquo; 이후 부터 &amp;lsquo;&amp;quot;&amp;rsquo; 까지는 원하는대로 작성)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;formatting&#34;&gt;formatting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;string에서 특정 문자열을 다른 문자로 치환하는 기능
+ex) &lt;code&gt;&#39;{} {}&#39;.format(&#39;one&#39;,&#39;tow&#39;)&lt;/code&gt;
+ex) &lt;code&gt;&#39;{a} {b}&#39;.format(a=&#39;hello&#39;, b=&#39;world&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cgi-모듈&#34;&gt;CGI 모듈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import cgi&lt;/code&gt; 로 모듈을 로드해 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form = cgi.FieldStorage()&lt;/code&gt; form은 jQuery와 같은 역할을 한다.
+ex) &lt;code&gt;pageId = form[&#39;id&#39;].value&lt;/code&gt; : page의 id를 가져온다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html-연동&#34;&gt;HTML 연동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;input 태그의 name 속성 : input 태그를 특정 이름으로 CGI에 전달함
+ex)&lt;/p&gt;</description>
     </item>
     
   </channel>

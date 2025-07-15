@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>log on AswinBlue</title>
+    <title>Log on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/log/</link>
-    <description>Recent content in log on AswinBlue</description>
+    <description>Recent content in Log on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/log/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,14 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/log_c&#43;&#43;/</guid>
-      <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
+      <description>&lt;h1 id=&#34;spdlog&#34;&gt;spdlog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리&lt;/li&gt;
+&lt;li&gt;fast, header only, no dependency, .. 등 장점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;참조&#34;&gt;참조&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://isocpp.org/blog/2014/11/spdlog&#34;&gt;https://isocpp.org/blog/2014/11/spdlog&lt;/a&gt;
+&lt;a href=&#34;https://github.com/gabime/spdlog&#34;&gt;https://github.com/gabime/spdlog&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

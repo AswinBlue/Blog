@@ -13,12 +13,13 @@
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/hugo/hugo_dev/</guid>
-      <description>Hugo를 이용해 블로그 만들기 Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.
-게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.
-Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.
-내 컴퓨터에는 Go가 이미 설치되 있던 터라 apt-get으로 hugo를 받아서 사용해 보았다.
-설치는 정상적으로 되었고, 처음에는 잘 동작하는 듯 했는데, theme을 적용하니 ERROR들이 뜨기 시작했다.
-인터넷 검색을 아무리 해 봐도 해결책이 보이지 않고, 해당 git에 issue를 날려보기도 했는데 응답이 없어서 혼자 이것저것 뒤져 보았다.</description>
+      <description>&lt;h1 id=&#34;hugo를-이용해-블로그-만들기&#34;&gt;Hugo를 이용해 블로그 만들기&lt;/h1&gt;
+&lt;p&gt;Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.&lt;/p&gt;
+&lt;p&gt;게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.&lt;/p&gt;
+&lt;p&gt;Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.&lt;/p&gt;
+&lt;p&gt;내 컴퓨터에는 Go가 이미 설치되 있던 터라 apt-get으로 hugo를 받아서 사용해 보았다.&lt;/p&gt;
+&lt;p&gt;설치는 정상적으로 되었고, 처음에는 잘 동작하는 듯 했는데, theme을 적용하니 ERROR들이 뜨기 시작했다.&lt;/p&gt;
+&lt;p&gt;인터넷 검색을 아무리 해 봐도 해결책이 보이지 않고, 해당 git에 issue를 날려보기도 했는데 응답이 없어서 혼자 이것저것 뒤져 보았다.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>linux on AswinBlue</title>
+    <title>Linux on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/linux/</link>
-    <description>Recent content in linux on AswinBlue</description>
+    <description>Recent content in Linux on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,98 @@
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
-      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
+      <description>&lt;h1 id=&#34;system-programming&#34;&gt;System Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;_____________
+|  Library  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Application level
+------------------------------
+_____________
+|System call|
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Kernel level
+------------------------------
+_____________
+|  Hardware  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   H/W level
+------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;)
+&lt;ul&gt;
+&lt;li&gt;시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다.&lt;/li&gt;
+&lt;li&gt;예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다. (IO접근은 적을수록 효율적)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kernel level에서는 System call을 사용하며 system buffer를 사용한다.&lt;/li&gt;
+&lt;li&gt;application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.
+&lt;ul&gt;
+&lt;li&gt;printf는 c library 함수이며, &amp;lsquo;\n&amp;rsquo;을 만나야 화면상에 출력을 한다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;\n&amp;rsquo;이 입력되기 전 까지 문자열들은 library buffer에 기록된다.&lt;/li&gt;
+&lt;li&gt;fprintf는 &amp;lsquo;\n&amp;rsquo;과 상관없이 문자열을 출력한다. 즉 library buffer를 사용하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-입출력&#34;&gt;파일 입출력&lt;/h2&gt;
+&lt;h3 id=&#34;fgetc&#34;&gt;fgetc&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C에서 파일에 접근하기 위해서는 &lt;code&gt;fopen&lt;/code&gt; 함수를 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 포인터를 반환하며, 코드 내에서 파일 포인터로 해당 파일에 접근이가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fgetc(FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 char 하나를 읽고 반환한다.
+&lt;ul&gt;
+&lt;li&gt;fgetc 함수의 반환 값은 int 형태이다.&lt;/li&gt;
+&lt;li&gt;text file을 읽을 땐, 0xFF값이 내용에 올 수 없지만, binary file을 읽을 땐 중간에 0xFF 값이 올 수 있다.&lt;/li&gt;
+&lt;li&gt;char 형태로 0xFF를 읽으면 -1값에 해당하기 때문에, EOF와 구분이 불가능하여 char 대신 int를 반환하도록 되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-구조체&#34;&gt;파일 구조체&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 구조체의 주소(포인터)를 반환한다.&lt;/li&gt;
+&lt;li&gt;파일 구조체는 아래와 같은 내용을 담고 있다.
+&lt;ul&gt;
+&lt;li&gt;_flags:&lt;/li&gt;
+&lt;li&gt;_IO_read_ptr : 다음 명령시 파일을 읽거나 쓸 위치&lt;/li&gt;
+&lt;li&gt;_IO_read_end: kernel에서 데이터를 받아서 저장할 버퍼의 끝 위치.&lt;/li&gt;
+&lt;li&gt;_IO_read_base: kernel에서 데이터를 받아서 저장할 버퍼의 시작 위치. 파일에 대한 읽기 명령(fgetc/fgets등) 이 발생했을 때, kernel은 4096byte(BUF_SIZE) 만큼 데이터를 미리 읽어서 이곳에 채워둔다.&lt;/li&gt;
+&lt;li&gt;_fileno: 파일의 offset, kernel에서 해당 파일에 정해준 index(kernel 함수에서 사용할 수 있다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fopen 시에 파일 구조체가 생성 및 초기화 되지만, &lt;em&gt;IO_read&lt;/em&gt;* 인자들은 파일 접근이 이루어짐과 동시에 값이 적용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eof&#34;&gt;EOF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;파일을 끝까지 읽었다고 판단하는 것은, EOF 문자(-1) 으로 판단한다.
+&lt;ul&gt;
+&lt;li&gt;하지만 실제파일을 읽어보면 마지막에 -1값이 실제로 들어있지는 않다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EOF 값은 file I/O 함수의 리턴값일 뿐 실제 파일에 기입된 값이 아니다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;file I/O 함수는 i-node에 기록된 파일의 크기를 기반으로 파일 끝을 판단한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;ASKII 코드 중 주요 문자의 값 참조&lt;/li&gt;
+&lt;li&gt;a: 97&lt;/li&gt;
+&lt;li&gt;A: 68&lt;/li&gt;
+&lt;li&gt;0: 48&lt;/li&gt;
+&lt;li&gt;\n: 10&lt;/li&gt;
+&lt;li&gt;\r: 13&lt;/li&gt;
+&lt;li&gt;(공백): 32&lt;/li&gt;
+&lt;li&gt;\t: 9&lt;/li&gt;
+&lt;li&gt;\0: 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fguts(BUFF, SIZE, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 읽어온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fputs(BUFF, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 출력한다.
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 표준 입력/출력/에러는 기본적으로 파일 포인터를 열어둔다. 각각 아래 문자열 혹은 번호로 참조 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;stdin&lt;/code&gt; : 표준 입력
+&lt;code&gt;stdout&lt;/code&gt; : 표준 출력 &lt;br&gt;
+&lt;code&gt;stderr&lt;/code&gt;: 표준 에러   &lt;br&gt;
+-&amp;gt; 파일 포인터 대신 &lt;code&gt;stdout&lt;/code&gt; 을 입력하면 표준 출력으로 문자열이 출력된다. (ex: &lt;code&gt;fputc(BUF, stdout)&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,8 +113,22 @@
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
-      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다. 쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다. 명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사) .sh 파일 작성 새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 chmod 명령어로 권한을 수정해야 한다.
-ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.</description>
+      <description>&lt;h1 id=&#34;shell-programming&#34;&gt;Shell Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘 프로그래밍에 대해 기술한다.&lt;/li&gt;
+&lt;li&gt;쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다.&lt;/li&gt;
+&lt;li&gt;명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sh-파일-작성&#34;&gt;.sh 파일 작성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 &lt;code&gt;chmod&lt;/code&gt; 명령어로 권한을 수정해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ex) &lt;code&gt;chmod a+x &amp;lt;파일이름&amp;gt;&lt;/code&gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.sh 파일 안에는 shell 명령어들을 사용할 수 있다. 그 외 추가적으로 작성할 수 있는 구문들은 다음과 같다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,11 +137,41 @@ ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대�
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_env/</guid>
-      <description>Dev in Linux 리눅스 개발환경 구축을 위한 가이드
-사용자 맞춤 설정 .bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
-source ~/.bashrc 명령어로 언제든 새로고침 할 수 있다.
-리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.
-force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then# We have color support; assume it&amp;#39;s compliant with Ecma-48# (ISO/IEC-6429). (Lack of such support is extremely rare, and such# a case would tend to support setf rather than setaf.</description>
+      <description>&lt;h1 id=&#34;dev-in-linux&#34;&gt;Dev in Linux&lt;/h1&gt;
+&lt;p&gt;리눅스 개발환경 구축을 위한 가이드&lt;/p&gt;
+&lt;h2 id=&#34;사용자-맞춤-설정&#34;&gt;사용자 맞춤 설정&lt;/h2&gt;
+&lt;h3 id=&#34;bashrc&#34;&gt;.bashrc&lt;/h3&gt;
+&lt;p&gt;홈 디렉터리에 위치한 user별 설정 파일이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 언제든 새로고침 할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;force_color_prompt=true
+if [ -n &amp;#34;$force_color_prompt&amp;#34; ]; then
+    if [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then
+	# We have color support; assume it&amp;#39;s compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ &amp;#34;$color_prompt&amp;#34; = yes ]; then
+    PS1=&amp;#39;${debian_chroot:+($debian_root)}\[\033[01;32m\]\u\[\033[01;36m\]@\[\033[01;35m\]\h\[\033[00m\]:\[\033[01;033m\]\w\$\[\033[00m\]&amp;#39;
+else
+    PS1=&amp;#39;${debian_chroot:+($debian_chroot)}\u@\h:\w\$ &amp;#39;
+fi
+unset color_prompt force_color_prompt
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;vi&#34;&gt;vi&lt;/h3&gt;
+&lt;p&gt;리눅스에서 활용할 수 있는 기본적인 에디터이다. 진입장벽은 높은 편이지만, 한번 익숙해지면 매우 편리하다.&lt;br&gt;
+~/.vimrc 폴더에 기본 설정을 적용할 수 있다.&lt;br&gt;
+기본적인 설정은 아래와 같이 세팅할 수 있다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +180,19 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/virtual_box/</guid>
-      <description>VirtualBox 문제와 해결 root 계정 virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다. virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다. virtualbox에서 원하는 ubuntu machine를 실행시킨다. machine이 실행되는 도중 shift키를 클릭하고 있는다. 부팅 모드 선택 화면이 뜨면 Advanced options for Ubuntu 를 선택하고, (recovery mode)표시가 되어있는 항목으로 부팅을 시도한다. 로딩이 완료되면 root 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.</description>
+      <description>&lt;h1 id=&#34;virtualbox&#34;&gt;VirtualBox&lt;/h1&gt;
+&lt;h2 id=&#34;문제와-해결&#34;&gt;문제와 해결&lt;/h2&gt;
+&lt;h3 id=&#34;root-계정&#34;&gt;root 계정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다.&lt;/li&gt;
+&lt;li&gt;virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;virtualbox에서 원하는 ubuntu machine를 실행시킨다.&lt;/li&gt;
+&lt;li&gt;machine이 실행되는 도중 shift키를 클릭하고 있는다.&lt;/li&gt;
+&lt;li&gt;부팅 모드 선택 화면이 뜨면 &lt;code&gt;Advanced options for Ubuntu&lt;/code&gt; 를 선택하고, &lt;code&gt;(recovery mode)&lt;/code&gt;표시가 되어있는 항목으로 부팅을 시도한다.&lt;/li&gt;
+&lt;li&gt;로딩이 완료되면 &lt;code&gt;root&lt;/code&gt; 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -54,7 +201,61 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_command/</guid>
-      <description>Linux Command 리눅스에서 사용되는 명령어들을 정리한다. 자주 사용되는 모듈의 명령어도 포함한다. 리눅스에서 명령어는 /usr/bin/ 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다. 유저 개인의 명령어를 따로 설정 및 관리하려면 ~/.bashrc 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다. 기본적으로 ~/bin/ 경로가 PATH에 추가되어 있다. export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...] 명령어를 ~/.bashrc 에 추가하면 경로를 추가할 수 있다. ex) # in .bashrc filePATH=$PATH:/home/user/bashrc # 기존의 PATH에 /home/user/.bashrc 추가# 현재 PATH는 .bashrc 포함PATH=$PATH:/home/user/dir1:/home/user/dir2 # 기존의 PATH에 dir1, dir2 추가# 현재 PATH는 .</description>
+      <description>&lt;h1 id=&#34;linux-command&#34;&gt;Linux Command&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 사용되는 명령어들을 정리한다.&lt;/li&gt;
+&lt;li&gt;자주 사용되는 모듈의 명령어도 포함한다.&lt;/li&gt;
+&lt;li&gt;리눅스에서 명령어는 &lt;code&gt;/usr/bin/&lt;/code&gt; 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다.&lt;/li&gt;
+&lt;li&gt;유저 개인의 명령어를 따로 설정 및 관리하려면 &lt;code&gt;~/.bashrc&lt;/code&gt; 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;기본적으로 &lt;code&gt;~/bin/&lt;/code&gt; 경로가 PATH에 추가되어 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...]&lt;/code&gt; 명령어를 &lt;code&gt;~/.bashrc&lt;/code&gt; 에 추가하면 경로를 추가할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;ex)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# in .bashrc file
+PATH=$PATH:/home/user/bashrc  # 기존의 PATH에 /home/user/.bashrc 추가
+# 현재 PATH는 .bashrc 포함
+PATH=$PATH:/home/user/dir1:/home/user/dir2  # 기존의 PATH에 dir1, dir2 추가
+# 현재 PATH는 .bashrc, dir1, dir2 포함
+
+export PATH  # PATH를 적용
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;적용 후 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 .bashrc를 재적용 해 주면 설정이 완료된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;리눅스 쉘에서 위 쉘코드를 바로 입력해도 적용은 가능하지만, 이 경우 재부팅시 설정이 초기화된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;리눅스-기본&#34;&gt;리눅스 기본&lt;/h2&gt;
+&lt;h3 id=&#34;리눅스-설정-관련&#34;&gt;리눅스 설정 관련&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stty -a&lt;/code&gt;: 시그널 단축키들의 값 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;strace FILE_NAME&lt;/code&gt;: 실행파일이 실행되는 상세 과정을 라인별로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getconf&lt;/code&gt;  리눅스의 시스템 변수 값을 확인하는 명령어
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;getconf -a&lt;/code&gt;: 모든 시스템 변수를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getconf LONG_BIT&lt;/code&gt;: 시스템이 x64라면 64를, x86이라면 32를 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ldd FILE_NAME&lt;/code&gt; : FILE_NAME 을 실행하는데 필요한 라이브러리 의존성을 확인한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-시스템-조작&#34;&gt;파일 시스템 조작&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkdir&lt;/code&gt; : 디렉터리를 생성하는 명령여
+&lt;ul&gt;
+&lt;li&gt;parent 디렉터리가 존재하지 않는다면 &lt;code&gt;mkdir -p&lt;/code&gt; 명령어로 한 번에 생성 가능 (ex: &lt;code&gt;mkdir -R A/B/C/D&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문자열-조작&#34;&gt;문자열 조작&lt;/h2&gt;
+&lt;h3 id=&#34;sed&#34;&gt;sed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다.&lt;/li&gt;
+&lt;li&gt;ed는 대화형 편집기이며, sed는 스트리밍 편집기&lt;/li&gt;
+&lt;li&gt;\n 을 개행문자로 사용하는 스트리밍 에디터&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sed [-e script][-f script-file][file...]&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,12 +264,14 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_apt/</guid>
-      <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
-하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
-본 해프닝에 대해 서술하자면 아래와 같다.
-원인 /bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.
-환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.
-현상 apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.</description>
+      <description>&lt;p&gt;Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.&lt;/p&gt;
+&lt;p&gt;하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.&lt;/p&gt;
+&lt;p&gt;본 해프닝에 대해 서술하자면 아래와 같다.&lt;/p&gt;
+&lt;h2 id=&#34;원인&#34;&gt;원인&lt;/h2&gt;
+&lt;p&gt;/bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.&lt;/p&gt;
+&lt;p&gt;환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.&lt;/p&gt;
+&lt;h2 id=&#34;현상&#34;&gt;현상&lt;/h2&gt;
+&lt;p&gt;apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.&lt;/p&gt;</description>
     </item>
     
   </channel>

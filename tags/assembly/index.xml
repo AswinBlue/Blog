@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>assembly on AswinBlue</title>
+    <title>Assembly on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/assembly/</link>
-    <description>Recent content in assembly on AswinBlue</description>
+    <description>Recent content in Assembly on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 11 Mar 2024 20:46:33 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,46 @@
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</guid>
-      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 환경세팅 pwntools checksec shellcraft ROPgadget one_gadget patchelf 취약점 공격 순서 바이너리를 분석하여 보호기법을 확인한다. checksec 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다. checksec 참조 ldd 명령을 활용하여 의존성 관계를 확인한다. ldd 명령 코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다 stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.</description>
+      <description>&lt;h1 id=&#34;exploit&#34;&gt;Exploit&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pwntool&lt;/code&gt;의 &lt;code&gt;checksec&lt;/code&gt; 명령어로 어떤 보안이 적용되었는지 확인 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shell-code&#34;&gt;Shell Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다.&lt;/li&gt;
+&lt;li&gt;Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;환경세팅&#34;&gt;환경세팅&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#%EC%84%A4%EC%B9%98&#34;&gt;pwntools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#shellcraft&#34;&gt;shellcraft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#ropgadget&#34;&gt;ROPgadget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#one_gadget&#34;&gt;one_gadget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#patchelf&#34;&gt;patchelf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;취약점-공격-순서&#34;&gt;취약점 공격 순서&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;바이너리를 분석하여 보호기법을 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;checksec&lt;/code&gt; 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec 참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ldd&lt;/code&gt; 명령을 활용하여 의존성 관계를 확인한다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../Linux/linux_command/#%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%84%A4%EC%A0%95-%EA%B4%80%EB%A0%A8&#34;&gt;ldd 명령&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.&lt;/p&gt;</description>
     </item>
     
   </channel>

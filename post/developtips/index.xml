@@ -13,7 +13,143 @@
       <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/developtips/vscode/</guid>
-      <description>VS code visual studio code 사용법 개발환경 C / C++ 컴파일러 gcc 혹은 mingw 설치가 필요하다. 인터넷에서 설치하도록 한다. 설정파일 컴파일 및 실행을 위해서는 launch.json, setting.json, tasks.json 파일이 필요하다. vs code에서 알아서 작성해 주지만, 기본 설정으로 부족한 부분은 수정해야 한다. # settings.json{&amp;#34;C_Cpp_Runner.cStandard&amp;#34;: &amp;#34;&amp;#34;,&amp;#34;C_Cpp_Runner.cppStandard&amp;#34;: &amp;#34;&amp;#34;,&amp;#34;C_Cpp_Runner.msvcBatchPath&amp;#34;: &amp;#34;&amp;#34;,&amp;#34;C_Cpp_Runner.warnings&amp;#34;: [&amp;#34;-Wall&amp;#34;,&amp;#34;-Wextra&amp;#34;,&amp;#34;-Wpedantic&amp;#34;],&amp;#34;C_Cpp_Runner.enableWarnings&amp;#34;: true,&amp;#34;C_Cpp_Runner.warningsAsError&amp;#34;: false,&amp;#34;C_Cpp_Runner.compilerArgs&amp;#34;: [],&amp;#34;C_Cpp_Runner.linkerArgs&amp;#34;: [],&amp;#34;C_Cpp_Runner.includePaths&amp;#34;: [],&amp;#34;C_Cpp_Runner.includeSearch&amp;#34;: [&amp;#34;*&amp;#34;,&amp;#34;**/*&amp;#34;],&amp;#34;C_Cpp_Runner.</description>
+      <description>&lt;h1 id=&#34;vs-code&#34;&gt;VS code&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;visual studio code 사용법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개발환경&#34;&gt;개발환경&lt;/h2&gt;
+&lt;h3 id=&#34;c--c&#34;&gt;C / C++&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;컴파일러&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc 혹은 mingw 설치가 필요하다. 인터넷에서 설치하도록 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;설정파일&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;컴파일 및 실행을 위해서는 launch.json, setting.json, tasks.json 파일이 필요하다.&lt;/li&gt;
+&lt;li&gt;vs code에서 알아서 작성해 주지만, 기본 설정으로 부족한 부분은 수정해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# settings.json
+{
+  &amp;#34;C_Cpp_Runner.cStandard&amp;#34;: &amp;#34;&amp;#34;,
+  &amp;#34;C_Cpp_Runner.cppStandard&amp;#34;: &amp;#34;&amp;#34;,
+  &amp;#34;C_Cpp_Runner.msvcBatchPath&amp;#34;: &amp;#34;&amp;#34;,
+  &amp;#34;C_Cpp_Runner.warnings&amp;#34;: [
+    &amp;#34;-Wall&amp;#34;,
+    &amp;#34;-Wextra&amp;#34;,
+    &amp;#34;-Wpedantic&amp;#34;
+  ],
+  &amp;#34;C_Cpp_Runner.enableWarnings&amp;#34;: true,
+  &amp;#34;C_Cpp_Runner.warningsAsError&amp;#34;: false,
+  &amp;#34;C_Cpp_Runner.compilerArgs&amp;#34;: [],
+  &amp;#34;C_Cpp_Runner.linkerArgs&amp;#34;: [],
+  &amp;#34;C_Cpp_Runner.includePaths&amp;#34;: [],
+  &amp;#34;C_Cpp_Runner.includeSearch&amp;#34;: [
+    &amp;#34;*&amp;#34;,
+    &amp;#34;**/*&amp;#34;
+  ],
+  &amp;#34;C_Cpp_Runner.excludeSearch&amp;#34;: [
+    &amp;#34;**/build&amp;#34;,
+    &amp;#34;**/build/**&amp;#34;,
+    &amp;#34;**/.*&amp;#34;,
+    &amp;#34;**/.*/**&amp;#34;,
+    &amp;#34;**/.vscode&amp;#34;,
+    &amp;#34;**/.vscode/**&amp;#34;
+  ],
+  &amp;#34;C_Cpp_Runner.cCompilerPath&amp;#34;: &amp;#34;gcc&amp;#34;,
+  &amp;#34;C_Cpp_Runner.cppCompilerPath&amp;#34;: &amp;#34;C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/g++.exe&amp;#34;,
+  &amp;#34;C_Cpp_Runner.debuggerPath&amp;#34;: &amp;#34;C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gdb.exe&amp;#34;,
+  &amp;#34;files.associations&amp;#34;: {
+    &amp;#34;hash_map&amp;#34;: &amp;#34;cpp&amp;#34;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# launch.json
+{
+  &amp;#34;version&amp;#34;: &amp;#34;0.2.0&amp;#34;,
+  &amp;#34;configurations&amp;#34;: [
+    {
+      &amp;#34;name&amp;#34;: &amp;#34;C/C++ Runner: Debug Session&amp;#34;,
+      &amp;#34;type&amp;#34;: &amp;#34;cppdbg&amp;#34;,
+      &amp;#34;request&amp;#34;: &amp;#34;launch&amp;#34;,
+      &amp;#34;args&amp;#34;: [],
+      &amp;#34;stopAtEntry&amp;#34;: false,
+      &amp;#34;cwd&amp;#34;: &amp;#34;f:/Documents/GitHub/acmicpc/15997&amp;#34;,
+      &amp;#34;environment&amp;#34;: [],
+      &amp;#34;program&amp;#34;: &amp;#34;동작시킬 프로그램 경로&amp;#34;,
+      &amp;#34;internalConsoleOptions&amp;#34;: &amp;#34;openOnSessionStart&amp;#34;,
+      &amp;#34;MIMode&amp;#34;: &amp;#34;gdb&amp;#34;,
+      &amp;#34;miDebuggerPath&amp;#34;: &amp;#34;C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gdb.exe&amp;#34;,
+      &amp;#34;externalConsole&amp;#34;: false,
+      &amp;#34;setupCommands&amp;#34;: [
+        {
+          &amp;#34;description&amp;#34;: &amp;#34;Enable pretty-printing for gdb&amp;#34;,
+          &amp;#34;text&amp;#34;: &amp;#34;-enable-pretty-printing&amp;#34;,
+          &amp;#34;ignoreFailures&amp;#34;: true
+        }
+      ]
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# tasks.json
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    &amp;#34;version&amp;#34;: &amp;#34;2.0.0&amp;#34;,
+    &amp;#34;tasks&amp;#34;: [
+        {
+            &amp;#34;type&amp;#34;: &amp;#34;shell&amp;#34;,
+            &amp;#34;label&amp;#34;: &amp;#34;execute&amp;#34;,
+            &amp;#34;command&amp;#34;: &amp;#34;${fileDirname}/${fileBasenameNoExtension}.exe&amp;#34;,
+            &amp;#34;group&amp;#34;: {
+                &amp;#34;kind&amp;#34;: &amp;#34;test&amp;#34;,
+                &amp;#34;isDefault&amp;#34;: true
+            },
+            &amp;#34;problemMatcher&amp;#34;: []
+        },
+        {
+            &amp;#34;type&amp;#34;: &amp;#34;cppbuild&amp;#34;,
+            &amp;#34;label&amp;#34;: &amp;#34;C/C++: g++.exe 활성 파일 빌드&amp;#34;,
+            &amp;#34;command&amp;#34;: &amp;#34;C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe&amp;#34;,
+            &amp;#34;args&amp;#34;: [
+                &amp;#34;-fdiagnostics-color=always&amp;#34;,
+                &amp;#34;-g&amp;#34;,
+                &amp;#34;${file}&amp;#34;,
+                &amp;#34;-o&amp;#34;,
+                &amp;#34;${fileDirname}\\${fileBasenameNoExtension}.exe&amp;#34;
+            ],
+            &amp;#34;options&amp;#34;: {
+                &amp;#34;cwd&amp;#34;: &amp;#34;${fileDirname}&amp;#34;
+            },
+            &amp;#34;problemMatcher&amp;#34;: [
+                &amp;#34;$gcc&amp;#34;
+            ],
+            &amp;#34;group&amp;#34;: &amp;#34;build&amp;#34;,
+            &amp;#34;detail&amp;#34;: &amp;#34;컴파일러: \&amp;#34;C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe\&amp;#34;&amp;#34;
+        }
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;단축키&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Shift + P&lt;/code&gt; 단축키로 명령을 일일이 수행해도 되지만, 단축키를 설정해 바로 실행하는게 빠르다.&lt;/li&gt;
+&lt;li&gt;파일 -&amp;gt; 기본설정 -&amp;gt; 바로가기키 (&lt;code&gt;Ctrl + K &amp;amp; Ctrl + S&lt;/code&gt;) 를 누르고, 우측 상단 &amp;lsquo;바로가기 키 열기&amp;rsquo; 를 클릭하여 단축키를 직접 입력한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 키 바인딩을 이 파일에 넣어서 기본값 재정의
+[
+    {
+        &amp;#34;key&amp;#34;: &amp;#34;ctrl+alt+c&amp;#34;,
+        &amp;#34;command&amp;#34;: &amp;#34;workbench.action.tasks.build&amp;#34;,
+    },
+    {
+        &amp;#34;key&amp;#34;: &amp;#34;ctrl+alt+e&amp;#34;,
+        &amp;#34;command&amp;#34;: &amp;#34;workbench.action.tasks.test&amp;#34;,
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -22,11 +158,49 @@
       <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/developtips/window/</guid>
-      <description>#MS Window
-MS window 사용시 필요한 편이 기능들을 나열 WSL2 윈도우에서 리눅스를 실행하는 방법이다. windows 10 이상부터 지원 가능하며, microsoft store에서 ubuntu를 설치하는 방식이다. PowerShell을 관리자 권한으로 실행하여 아래 명령어 입력 $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-$ wsl &amp;ndash;set-default-version 2
-WSL 콘솔에서 explorer.exe . 를 입력하면 현재 경로를 윈도우의 파일 탐색기로 열 수 있다. 해당 경로에 파일을 옮기면 윈도우-리눅스 간 파일 이동이 가능하다.</description>
+      <description>&lt;p&gt;#MS Window&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS window 사용시 필요한 편이 기능들을 나열&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;wsl2&#34;&gt;WSL2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;윈도우에서 리눅스를 실행하는 방법이다.&lt;/li&gt;
+&lt;li&gt;windows 10 이상부터 지원 가능하며, microsoft store에서 ubuntu를 설치하는 방식이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;PowerShell을 관리자 권한으로 실행하여 아래 명령어 입력&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart&lt;br&gt;
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart&lt;br&gt;
+$ wsl &amp;ndash;set-default-version 2&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;WSL 콘솔에서 &lt;code&gt;explorer.exe .&lt;/code&gt; 를 입력하면 현재 경로를 윈도우의 파일 탐색기로 열 수 있다. 해당 경로에 파일을 옮기면 윈도우-리눅스 간 파일 이동이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;환경변수&#34;&gt;환경변수&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;환경변수 설정시 컴퓨터를 재부팅하지 않고 적용하는 방법&lt;/li&gt;
+&lt;li&gt;콘솔에 &lt;code&gt;taskkill /f /im explorer.exe&lt;/code&gt;, &lt;code&gt;explorer.exe&lt;/code&gt; 명령을 순서대로 입력한다.&lt;/li&gt;
+&lt;li&gt;작업표시줄이 없어졌다 생겨나면 적용이 된 것이다. 켜져있던 탐색기는 복원되지 않으니 주의&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;batch&#34;&gt;batch&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;call&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;기본 command가 아닌 package command를 수행할 경우, batch파일에 명령어를 그대로 넣어서 수행하면 첫번째 줄만 수행될 수 있다.&lt;/li&gt;
+&lt;li&gt;이때 &lt;code&gt;call&lt;/code&gt; 명령어를 사용해주면 여러 라인을 실행 가능하다.
+ex)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;call npm run build
+cd server
+call gradle wrapper
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;리눅스에서-파일-가져오기&#34;&gt;리눅스에서 파일 가져오기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;scp&lt;/code&gt; 명령을 사용해서 리눅스에서 파일을 가져올 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp &amp;lt;계정&amp;gt;@&amp;lt;리눅스_IP주소&amp;gt;:리눅스에서_가져올_파일_경로 윈도우에_저장할_경로&lt;/code&gt; 형태로 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;ex) &lt;code&gt;scp kim@10.162.32.11:target_file C:\&lt;/code&gt; : C 경로에 target_file을 받아온다. target_file에 절대경로를 사용하는게 좋다. 상대경로를 사용할 시 절대 경로는 /home/kim/target_file 가 된다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -35,7 +209,32 @@ WSL 콘솔에서 explorer.exe . 를 입력하면 현재 경로를 윈도우의 �
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/developtips/web_scrapping/</guid>
-      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함 @id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link</description>
+      <description>&lt;h1 id=&#34;web-scrapping&#34;&gt;Web Scrapping&lt;/h1&gt;
+&lt;h2 id=&#34;x-path&#34;&gt;x-path&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/a/b/c/d/e/f/g/...&lt;/code&gt; 와 같이 특정 경로를 가진 개체를 가리키는 방법이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;//*[@id=&amp;quot;abcd&amp;quot;]&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;// 는 모든 경로에서 찾겠다는 의미&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미&lt;/li&gt;
+&lt;li&gt;브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;정규식&#34;&gt;정규식&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;. : 하나의 문자&lt;/li&gt;
+&lt;li&gt;^ : 문자열의 시작&lt;/li&gt;
+&lt;li&gt;$ : 문자열의 끝&lt;/li&gt;
+&lt;li&gt;* : 모든 문자&lt;/li&gt;
+&lt;li&gt;# : 하나의 숫자&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/python/python_regex.asp&#34;&gt;정규식 참조 link&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

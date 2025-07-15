@@ -13,10 +13,51 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/ci_cd/docker/</guid>
-      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 Startup 설치 링크 참조 docker api 리눅스 설치 : sudo apt-get install docker 실행 DockerFile 이름의 파일을 생성하고 내용을 채워넣는다.
-공식 가이드
-python 서버 실행 예시
-# python:3.10의 이미지로 부터FROM python:3.9# 제작자 및 author 기입LABEL maintainer=&amp;#34;huisam@naver.</description>
+      <description>&lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술&lt;/li&gt;
+&lt;li&gt;가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다.&lt;/li&gt;
+&lt;li&gt;게스트는 호스트 OS와 자원을 공유한다.&lt;/li&gt;
+&lt;li&gt;immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;startup&#34;&gt;Startup&lt;/h2&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository&#34;&gt;링크 참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docker api 리눅스 설치 : &lt;code&gt;sudo apt-get install docker&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;실행&#34;&gt;실행&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DockerFile&lt;/code&gt; 이름의 파일을 생성하고 내용을 채워넣는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder/&#34;&gt;공식 가이드&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;python 서버 실행 예시&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# python:3.10의 이미지로 부터
+FROM python:3.9
+# 제작자 및 author 기입
+LABEL maintainer=&amp;#34;huisam@naver.com&amp;#34;
+
+# 해당 디렉토리에 있는 모든 하위항목들을 &amp;#39;/app/server`로 복사한다
+COPY . /app/server
+
+# image의 directory로 이동하고
+WORKDIR /app/server
+
+# 필요한 의존성 file들 설치
+RUN pip3 install -r requirements.txt
+
+# 환경 설정 세팅
+RUN python setup.py install
+
+# container가 구동되면 실행
+ENTRYPOINT [&amp;#34;python&amp;#34;, &amp;#34;Server.py&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;리눅스 실행 예시&lt;/p&gt;</description>
     </item>
     
   </channel>

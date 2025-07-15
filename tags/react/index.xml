@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>react on AswinBlue</title>
+    <title>React on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/react/</link>
-    <description>Recent content in react on AswinBlue</description>
+    <description>Recent content in React on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,75 @@
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/firebase_react/</guid>
-      <description>Firebase with React react에서 firebase를 활용하는 방법 firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조 인증 (Auth) firebase 로 계정 생성 및 로그인 firebase API를 import하여 사용 &amp;lt;AppFirebase.js&amp;gt; import firebase from &amp;#34;firebase/compat/app&amp;#34;;import &amp;#34;firebase/compat/auth&amp;#34;;const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,authDomain: process.env.REACT_APP_AUTHDOMAIN,projectId: process.env.REACT_APP_PROJECTID,storageBucket: process.env.REACT_APP_STORAGEBUCKET,messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,appId: process.env.REACT_APP_APPID};export default firebase.initializeApp(firebaseConfig);export const authService = firebase.auth(); AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현 &amp;lt;Auth.</description>
+      <description>&lt;h1 id=&#34;firebase-with-react&#34;&gt;Firebase with React&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;react에서 firebase를 활용하는 방법&lt;/li&gt;
+&lt;li&gt;firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;인증-auth&#34;&gt;인증 (Auth)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;firebase 로 계정 생성 및 로그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;firebase API를 import하여 사용&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;AppFirebase.js&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import firebase from &amp;#34;firebase/compat/app&amp;#34;;
+import &amp;#34;firebase/compat/auth&amp;#34;;
+
+const firebaseConfig = {
+apiKey: process.env.REACT_APP_API_KEY,
+authDomain: process.env.REACT_APP_AUTHDOMAIN,
+projectId: process.env.REACT_APP_PROJECTID,
+storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+appId: process.env.REACT_APP_APPID
+};
+
+export default firebase.initializeApp(firebaseConfig);
+export const authService = firebase.auth();
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현
+&amp;lt;Auth.js&amp;gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import { authService } from &amp;#34;../components/AppFirebase&amp;#34;;
+
+const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
+const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;createUserWithEmailAndPassword / signInWithEmailAndPassword 실행 이후 authService.currentUser를 참조하면 user 정보를 받아올 수 있다.&lt;/li&gt;
+&lt;li&gt;하지만, authService.currentUser 정보를 갱신하는데는 시간이 걸린다. firebase API에서는 observer를 등록하여 currentUser의 변경 시점을 확인할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;currentUser 변경시점에 특정함수 동작&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;user 정보가 갱신된 시점에 특정 동작을 원한다면, 아래와 같이 onAuthStateChanged 함수를 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;authService.onAuthStateChanged((user) =&amp;gt; { /* something to do */ }});
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;로그아웃&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;authService.signOut()&lt;/code&gt; 함수를 호출하여 로그아웃이 가능하다.&lt;/li&gt;
+&lt;li&gt;참고로 크롬 웹 디버깅 화면에서 &amp;lsquo;Application&amp;rsquo;탭에 들어가서 IndexedDB -&amp;gt; firebaseLocalDb 안의 내용을 🚫버튼으로 삭제해 주면 로그인 정보가 사라진다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;에러&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;authService&lt;/code&gt;의 함수(&lt;code&gt;createUserWithEmailAndPassword&lt;/code&gt;, &lt;code&gt;signInWithEmailAndPassword&lt;/code&gt;, &amp;hellip;) 사용시 에러가 발생할 수 있으므로, try, catch문으로 묶어서 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;try {
+  let data
+  data = await authService.createUserWithEmailAndPassword(email, password)
+} catch(error) {
+  console.log(error.code) // 에러의 원인이 코드 형태로 출력된다.
+  console.log(error.message) // 에러의 원인이 메시지 형태로 출력된다.
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ref) 오류발생 원인&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +90,48 @@
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</guid>
-      <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &amp;lt;NAME&amp;gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.</description>
+      <description>&lt;h1 id=&#34;react-basic&#34;&gt;React basic&lt;/h1&gt;
+&lt;h2 id=&#34;개발환경-설치-및-실행&#34;&gt;개발환경 설치 및 실행&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다.
+&lt;code&gt;npm install -g create-react-app&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;원하는 경로에 들어가 프로젝트를 생성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create-react-app &amp;lt;NAME&amp;gt;&lt;/code&gt; : NAME 경로에 프로젝트 생성&lt;/li&gt;
+&lt;li&gt;주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm run start&lt;/code&gt; 를 수행하면 &lt;code&gt;localhost:3000&lt;/code&gt;에서 웹페이지를 퍼블리싱한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;실행 포트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; 파일에서 &lt;code&gt;&amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot;&lt;/code&gt; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-구조&#34;&gt;기본 구조&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;/public/index.html 에서 기본 화면 구성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;root&amp;rsquo; 이름으로 된 division이 있는데, 이 division에 대한 설정은 javascript로 정의되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;src 경로에 javascript파일들 구성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lsquo;index.js&amp;rsquo; 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 &amp;lsquo;root&amp;rsquo; 인 division에 &amp;lsquo;App&amp;rsquo;을 적용하겠다는 의미이다.&lt;/p&gt;</description>
     </item>
     
   </channel>

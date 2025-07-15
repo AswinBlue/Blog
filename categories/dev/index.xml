@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>dev on AswinBlue</title>
+    <title>Dev on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/categories/dev/</link>
-    <description>Recent content in dev on AswinBlue</description>
+    <description>Recent content in Dev on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 19 Aug 2024 04:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/dev/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,38 @@
       <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/unit_test/</guid>
-      <description>Unit Test 테스트의 속성 좋은 단위 테스트를 작성하기 위해서는 아래 세 가지 기준을 만족해야 한다. 가독성
-3A(Arrange / Act / Assert) 순서대로 test case 코드가 작성되어 있어야 한다. test case 가 어떤 동작을 검증하는지 알 수 있어야 한다. test case 의 이름을 명확하게 작성 필요 최신 test framework (java 에서 사용하는 spock)에서는 자연어로 test case 이름을 작성할 수 있도록 지원하는 경우도 있다. (google test 는 미지원) test case 실행 시 printf 문을 한 번 출력 하도록 규칙을 정하여 사용할 수 있다.</description>
+      <description>&lt;h1 id=&#34;unit-test&#34;&gt;Unit Test&lt;/h1&gt;
+&lt;h2 id=&#34;테스트의-속성&#34;&gt;테스트의 속성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;좋은 단위 테스트를 작성하기 위해서는 아래 세 가지 기준을 만족해야 한다.
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;가독성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3A(Arrange / Act / Assert) 순서대로 test case 코드가 작성되어 있어야 한다.&lt;/li&gt;
+&lt;li&gt;test case 가 어떤 동작을 검증하는지 알 수 있어야 한다.
+&lt;ul&gt;
+&lt;li&gt;test case 의 이름을 명확하게 작성 필요&lt;/li&gt;
+&lt;li&gt;최신 test framework (java 에서 사용하는 spock)에서는 자연어로 test case 이름을 작성할 수 있도록 지원하는 경우도 있다. (google test 는 미지원)&lt;/li&gt;
+&lt;li&gt;test case 실행 시 printf 문을 한 번 출력 하도록 규칙을 정하여 사용할 수 있다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define SPEC(msg) printf(&amp;#34;[SPEC] %s\n&amp;#34;, msg)
+TEST(SampleTestCase, SampleTest) {
+    SPEC(&amp;#34;이 테스트는 무엇을 하는 테스트 입니다&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;코드를 보지 않고 오류의 원인을 알 수 있어야 한다.&lt;/li&gt;
+&lt;li&gt;자연여와 가깝게 테스트 코드를 표현하는 것이 유리하다.
+&lt;ul&gt;
+&lt;li&gt;함수 이름을 자연어로 상세히 지정&lt;/li&gt;
+&lt;li&gt;에러 메시지를 자연어로 출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;유지보수성&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -23,7 +53,21 @@
       <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/window_programming/</guid>
-      <description>Window Programming PE 윈도우는 실행 가능한 목적 파일을 PE 포멧이라 칭한다. (리눅스의 ELF 와 유사) PE 파일은 header 와 section 으로 구성된다. section 에는 이름, 크기, 로드될 주소의 오프셋, 속성과 권한 등의 정보가 들어있다. PE 파일에 들어가야 할 필수 section 은 없지만, &amp;lsquo;.text&amp;rsquo;, &amp;lsquo;.data&amp;rsquo;, &amp;lsquo;.rdata&amp;rsquo; section 이 주로 사용된다. .text: 실행 가능한 기계코드가 위치하는 영역 (읽기, 쓰기 가능) .data: 컴파일 시점에 정해진 전역 변수들이 위치하는 영역 (읽기, 쓰기 가능) .rdata: 컴파일 시점에 값이 정해진 전역 상수와 참조할 DLL 및 외부 함수들의 정보가 위치하는 영역 (읽기만 가능) 윈도우가 실행되면 PE 파일의 데이터들이 메모리에 적재된다.</description>
+      <description>&lt;h1 id=&#34;window-programming&#34;&gt;Window Programming&lt;/h1&gt;
+&lt;h2 id=&#34;pe&#34;&gt;PE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;윈도우는 실행 가능한 목적 파일을 &lt;code&gt;PE&lt;/code&gt; 포멧이라 칭한다. (리눅스의 ELF 와 유사)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE&lt;/code&gt; 파일은 header 와 section 으로 구성된다.&lt;/li&gt;
+&lt;li&gt;section 에는 이름, 크기, 로드될 주소의 오프셋, 속성과 권한 등의 정보가 들어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE&lt;/code&gt; 파일에 들어가야 할 필수 section 은 없지만, &amp;lsquo;.text&amp;rsquo;, &amp;lsquo;.data&amp;rsquo;, &amp;lsquo;.rdata&amp;rsquo; section 이 주로 사용된다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.text&lt;/code&gt;: 실행 가능한 기계코드가 위치하는 영역 (읽기, 쓰기 가능)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.data&lt;/code&gt;: 컴파일 시점에 정해진 전역 변수들이 위치하는 영역 (읽기, 쓰기 가능)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.rdata&lt;/code&gt;: 컴파일 시점에 값이 정해진 전역 상수와 참조할 DLL 및 외부 함수들의 정보가 위치하는 영역 (읽기만 가능)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;윈도우가 실행되면 &lt;code&gt;PE&lt;/code&gt; 파일의 데이터들이 메모리에 적재된다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -32,11 +76,132 @@
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</guid>
-      <description>Reverse Engineering software 를 분석하여 소스코드를 역으로 생성 해 내는 기법 software 분석 방법 Static analysis 프로그램을 실행시키지 않고 수행하는 분석이다.
-프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.
-난독화 적용시 분석이 어려워 진다는 단점이 있다.
-정적분석에 사용되는 툴로는 IDA 가 있다.
-IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하다. Dynamic analysis 프로그램을 실행시키며 수행하는 분석이다. 프로그램의 개략적인 동작을 빠르게 확인 할 수 있다. 정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.</description>
+      <description>&lt;h1 id=&#34;reverse-engineering&#34;&gt;Reverse Engineering&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;software 를 분석하여 소스코드를 역으로 생성 해 내는 기법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software-분석-방법&#34;&gt;software 분석 방법&lt;/h2&gt;
+&lt;h3 id=&#34;static-analysis&#34;&gt;Static analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;프로그램을 실행시키지 않고 수행하는 분석이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;난독화 적용시 분석이 어려워 진다는 단점이 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;정적분석에 사용되는 툴로는 &lt;code&gt;IDA&lt;/code&gt; 가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;IDA&lt;/code&gt; 는 프리웨어로 &lt;a href=&#34;https://hex-rays.com/ida-free/&#34;&gt;https://hex-rays.com/ida-free/&lt;/a&gt; 에서 다운 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dynamic-analysis&#34;&gt;Dynamic analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그램을 실행시키며 수행하는 분석이다.&lt;/li&gt;
+&lt;li&gt;프로그램의 개략적인 동작을 빠르게 확인 할 수 있다.&lt;/li&gt;
+&lt;li&gt;정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.&lt;/li&gt;
+&lt;li&gt;안티 디버깅 기법 적용된 프로그램은 디버깅이 불가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ida&#34;&gt;IDA&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리버스 엔지니어링 툴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;단축어&#34;&gt;단축어&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;shift + F12
+&lt;ul&gt;
+&lt;li&gt;문자열 검색, String 탭으로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;상호참조 확인, 변수 또는 함수가 사용되는 곳의 위치를 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;F5
+&lt;ul&gt;
+&lt;li&gt;어셈블리를 C 언어 형태로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 주소 혹은 라인으로 이동&lt;/li&gt;
+&lt;li&gt;디컴파일 된 함수 이름 위에 커서를 놓고 g 를 누르면 어셈블리 상 함수 라인을 확인할 수 있다.&lt;/li&gt;
+&lt;li&gt;함수 이름을 적어도 함수 위치로 이동된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ESC
+&lt;ul&gt;
+&lt;li&gt;이전 커서 위치로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ctrl + Enter
+&lt;ul&gt;
+&lt;li&gt;다음 커서 위치로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;변수 이름 바꾸기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;변수 타입 설정&lt;/li&gt;
+&lt;li&gt;함수 매개변수 변경, 함수 매개변수 타입 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;F2
+&lt;ul&gt;
+&lt;li&gt;어셈블리 혹은 C 언어 라인에서는 break point(중단점) 설정&lt;/li&gt;
+&lt;li&gt;stack 또는 hex View 에서는 값 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;F9&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;실행 (run)&lt;/li&gt;
+&lt;li&gt;프로그램을 실행시켜 동적 분석을 수행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;F8&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;한 단계 실행 (next)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;F7&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;함수 내부로 진입 (step int)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Ctrl + F2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;디버깅 중단&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;hex 데이터를 문자로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;Shift + E&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;선택한 값을 원하는 형태로 변환하여 추출(export)&lt;/li&gt;
+&lt;li&gt;hex 데이터를 문자열로 추출할 때 유용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;화면&#34;&gt;화면&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;IDA View&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +210,46 @@ IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하�
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</guid>
-      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 환경세팅 pwntools checksec shellcraft ROPgadget one_gadget patchelf 취약점 공격 순서 바이너리를 분석하여 보호기법을 확인한다. checksec 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다. checksec 참조 ldd 명령을 활용하여 의존성 관계를 확인한다. ldd 명령 코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다 stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.</description>
+      <description>&lt;h1 id=&#34;exploit&#34;&gt;Exploit&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pwntool&lt;/code&gt;의 &lt;code&gt;checksec&lt;/code&gt; 명령어로 어떤 보안이 적용되었는지 확인 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shell-code&#34;&gt;Shell Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다.&lt;/li&gt;
+&lt;li&gt;Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;환경세팅&#34;&gt;환경세팅&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#%EC%84%A4%EC%B9%98&#34;&gt;pwntools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#shellcraft&#34;&gt;shellcraft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#ropgadget&#34;&gt;ROPgadget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#one_gadget&#34;&gt;one_gadget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#patchelf&#34;&gt;patchelf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;취약점-공격-순서&#34;&gt;취약점 공격 순서&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;바이너리를 분석하여 보호기법을 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;checksec&lt;/code&gt; 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec 참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ldd&lt;/code&gt; 명령을 활용하여 의존성 관계를 확인한다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../Linux/linux_command/#%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%84%A4%EC%A0%95-%EA%B4%80%EB%A0%A8&#34;&gt;ldd 명령&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,7 +258,98 @@ IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하�
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
-      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
+      <description>&lt;h1 id=&#34;system-programming&#34;&gt;System Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;_____________
+|  Library  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Application level
+------------------------------
+_____________
+|System call|
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Kernel level
+------------------------------
+_____________
+|  Hardware  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   H/W level
+------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;)
+&lt;ul&gt;
+&lt;li&gt;시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다.&lt;/li&gt;
+&lt;li&gt;예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다. (IO접근은 적을수록 효율적)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kernel level에서는 System call을 사용하며 system buffer를 사용한다.&lt;/li&gt;
+&lt;li&gt;application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.
+&lt;ul&gt;
+&lt;li&gt;printf는 c library 함수이며, &amp;lsquo;\n&amp;rsquo;을 만나야 화면상에 출력을 한다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;\n&amp;rsquo;이 입력되기 전 까지 문자열들은 library buffer에 기록된다.&lt;/li&gt;
+&lt;li&gt;fprintf는 &amp;lsquo;\n&amp;rsquo;과 상관없이 문자열을 출력한다. 즉 library buffer를 사용하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-입출력&#34;&gt;파일 입출력&lt;/h2&gt;
+&lt;h3 id=&#34;fgetc&#34;&gt;fgetc&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C에서 파일에 접근하기 위해서는 &lt;code&gt;fopen&lt;/code&gt; 함수를 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 포인터를 반환하며, 코드 내에서 파일 포인터로 해당 파일에 접근이가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fgetc(FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 char 하나를 읽고 반환한다.
+&lt;ul&gt;
+&lt;li&gt;fgetc 함수의 반환 값은 int 형태이다.&lt;/li&gt;
+&lt;li&gt;text file을 읽을 땐, 0xFF값이 내용에 올 수 없지만, binary file을 읽을 땐 중간에 0xFF 값이 올 수 있다.&lt;/li&gt;
+&lt;li&gt;char 형태로 0xFF를 읽으면 -1값에 해당하기 때문에, EOF와 구분이 불가능하여 char 대신 int를 반환하도록 되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-구조체&#34;&gt;파일 구조체&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 구조체의 주소(포인터)를 반환한다.&lt;/li&gt;
+&lt;li&gt;파일 구조체는 아래와 같은 내용을 담고 있다.
+&lt;ul&gt;
+&lt;li&gt;_flags:&lt;/li&gt;
+&lt;li&gt;_IO_read_ptr : 다음 명령시 파일을 읽거나 쓸 위치&lt;/li&gt;
+&lt;li&gt;_IO_read_end: kernel에서 데이터를 받아서 저장할 버퍼의 끝 위치.&lt;/li&gt;
+&lt;li&gt;_IO_read_base: kernel에서 데이터를 받아서 저장할 버퍼의 시작 위치. 파일에 대한 읽기 명령(fgetc/fgets등) 이 발생했을 때, kernel은 4096byte(BUF_SIZE) 만큼 데이터를 미리 읽어서 이곳에 채워둔다.&lt;/li&gt;
+&lt;li&gt;_fileno: 파일의 offset, kernel에서 해당 파일에 정해준 index(kernel 함수에서 사용할 수 있다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fopen 시에 파일 구조체가 생성 및 초기화 되지만, &lt;em&gt;IO_read&lt;/em&gt;* 인자들은 파일 접근이 이루어짐과 동시에 값이 적용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eof&#34;&gt;EOF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;파일을 끝까지 읽었다고 판단하는 것은, EOF 문자(-1) 으로 판단한다.
+&lt;ul&gt;
+&lt;li&gt;하지만 실제파일을 읽어보면 마지막에 -1값이 실제로 들어있지는 않다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EOF 값은 file I/O 함수의 리턴값일 뿐 실제 파일에 기입된 값이 아니다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;file I/O 함수는 i-node에 기록된 파일의 크기를 기반으로 파일 끝을 판단한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;ASKII 코드 중 주요 문자의 값 참조&lt;/li&gt;
+&lt;li&gt;a: 97&lt;/li&gt;
+&lt;li&gt;A: 68&lt;/li&gt;
+&lt;li&gt;0: 48&lt;/li&gt;
+&lt;li&gt;\n: 10&lt;/li&gt;
+&lt;li&gt;\r: 13&lt;/li&gt;
+&lt;li&gt;(공백): 32&lt;/li&gt;
+&lt;li&gt;\t: 9&lt;/li&gt;
+&lt;li&gt;\0: 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fguts(BUFF, SIZE, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 읽어온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fputs(BUFF, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 출력한다.
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 표준 입력/출력/에러는 기본적으로 파일 포인터를 열어둔다. 각각 아래 문자열 혹은 번호로 참조 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;stdin&lt;/code&gt; : 표준 입력
+&lt;code&gt;stdout&lt;/code&gt; : 표준 출력 &lt;br&gt;
+&lt;code&gt;stderr&lt;/code&gt;: 표준 에러   &lt;br&gt;
+-&amp;gt; 파일 포인터 대신 &lt;code&gt;stdout&lt;/code&gt; 을 입력하면 표준 출력으로 문자열이 출력된다. (ex: &lt;code&gt;fputc(BUF, stdout)&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,8 +358,22 @@ IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하�
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
-      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다. 쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다. 명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사) .sh 파일 작성 새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 chmod 명령어로 권한을 수정해야 한다.
-ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.</description>
+      <description>&lt;h1 id=&#34;shell-programming&#34;&gt;Shell Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘 프로그래밍에 대해 기술한다.&lt;/li&gt;
+&lt;li&gt;쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다.&lt;/li&gt;
+&lt;li&gt;명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sh-파일-작성&#34;&gt;.sh 파일 작성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 &lt;code&gt;chmod&lt;/code&gt; 명령어로 권한을 수정해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ex) &lt;code&gt;chmod a+x &amp;lt;파일이름&amp;gt;&lt;/code&gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.sh 파일 안에는 shell 명령어들을 사용할 수 있다. 그 외 추가적으로 작성할 수 있는 구문들은 다음과 같다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,11 +382,41 @@ ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대�
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_env/</guid>
-      <description>Dev in Linux 리눅스 개발환경 구축을 위한 가이드
-사용자 맞춤 설정 .bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
-source ~/.bashrc 명령어로 언제든 새로고침 할 수 있다.
-리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.
-force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then# We have color support; assume it&amp;#39;s compliant with Ecma-48# (ISO/IEC-6429). (Lack of such support is extremely rare, and such# a case would tend to support setf rather than setaf.</description>
+      <description>&lt;h1 id=&#34;dev-in-linux&#34;&gt;Dev in Linux&lt;/h1&gt;
+&lt;p&gt;리눅스 개발환경 구축을 위한 가이드&lt;/p&gt;
+&lt;h2 id=&#34;사용자-맞춤-설정&#34;&gt;사용자 맞춤 설정&lt;/h2&gt;
+&lt;h3 id=&#34;bashrc&#34;&gt;.bashrc&lt;/h3&gt;
+&lt;p&gt;홈 디렉터리에 위치한 user별 설정 파일이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 언제든 새로고침 할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;force_color_prompt=true
+if [ -n &amp;#34;$force_color_prompt&amp;#34; ]; then
+    if [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then
+	# We have color support; assume it&amp;#39;s compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ &amp;#34;$color_prompt&amp;#34; = yes ]; then
+    PS1=&amp;#39;${debian_chroot:+($debian_root)}\[\033[01;32m\]\u\[\033[01;36m\]@\[\033[01;35m\]\h\[\033[00m\]:\[\033[01;033m\]\w\$\[\033[00m\]&amp;#39;
+else
+    PS1=&amp;#39;${debian_chroot:+($debian_chroot)}\u@\h:\w\$ &amp;#39;
+fi
+unset color_prompt force_color_prompt
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;vi&#34;&gt;vi&lt;/h3&gt;
+&lt;p&gt;리눅스에서 활용할 수 있는 기본적인 에디터이다. 진입장벽은 높은 편이지만, 한번 익숙해지면 매우 편리하다.&lt;br&gt;
+~/.vimrc 폴더에 기본 설정을 적용할 수 있다.&lt;br&gt;
+기본적인 설정은 아래와 같이 세팅할 수 있다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -86,7 +425,19 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/virtual_box/</guid>
-      <description>VirtualBox 문제와 해결 root 계정 virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다. virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다. virtualbox에서 원하는 ubuntu machine를 실행시킨다. machine이 실행되는 도중 shift키를 클릭하고 있는다. 부팅 모드 선택 화면이 뜨면 Advanced options for Ubuntu 를 선택하고, (recovery mode)표시가 되어있는 항목으로 부팅을 시도한다. 로딩이 완료되면 root 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.</description>
+      <description>&lt;h1 id=&#34;virtualbox&#34;&gt;VirtualBox&lt;/h1&gt;
+&lt;h2 id=&#34;문제와-해결&#34;&gt;문제와 해결&lt;/h2&gt;
+&lt;h3 id=&#34;root-계정&#34;&gt;root 계정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다.&lt;/li&gt;
+&lt;li&gt;virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;virtualbox에서 원하는 ubuntu machine를 실행시킨다.&lt;/li&gt;
+&lt;li&gt;machine이 실행되는 도중 shift키를 클릭하고 있는다.&lt;/li&gt;
+&lt;li&gt;부팅 모드 선택 화면이 뜨면 &lt;code&gt;Advanced options for Ubuntu&lt;/code&gt; 를 선택하고, &lt;code&gt;(recovery mode)&lt;/code&gt;표시가 되어있는 항목으로 부팅을 시도한다.&lt;/li&gt;
+&lt;li&gt;로딩이 완료되면 &lt;code&gt;root&lt;/code&gt; 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -95,9 +446,27 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter/</guid>
-      <description>개발환경 및 기본 지식 구성 파일들 analysis_options.yaml : flutter rule을 설정하는 파일 assets : 이미지 등 리소스들을 저장하는 경로 lib/main.dart : 메인 App 소스가 구동되는 dart 파일 pubspec.yaml : 리소스 경로 및 API들을 설정할 수 있는 파일 (assets 폴더 설정 가능)
-# 경로 설정flutter:assets:- assets/# dependency 설정dependencies:flutter:sdk: fluttercupertino_icons: ^1.0.2android/app/src/main/AndroidManifext.xml : 안드로이드 앱 개발시 권한 부여를 위한 파일
-빌드 및 실행 main.dart 파일을 지정하고 실행시켜야 한다.</description>
+      <description>&lt;h1 id=&#34;개발환경-및-기본-지식&#34;&gt;개발환경 및 기본 지식&lt;/h1&gt;
+&lt;h2 id=&#34;구성-파일들&#34;&gt;구성 파일들&lt;/h2&gt;
+&lt;p&gt;analysis_options.yaml : flutter rule을 설정하는 파일
+assets : 이미지 등 리소스들을 저장하는 경로
+lib/main.dart : 메인 App 소스가 구동되는 dart 파일
+pubspec.yaml : 리소스 경로 및 API들을 설정할 수 있는 파일 (assets 폴더 설정 가능)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 경로 설정
+flutter:
+  assets:
+    - assets/
+	
+# dependency 설정
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;android/app/src/main/AndroidManifext.xml : 안드로이드 앱 개발시 권한 부여를 위한 파일&lt;/p&gt;
+&lt;h2 id=&#34;빌드-및-실행&#34;&gt;빌드 및 실행&lt;/h2&gt;
+&lt;p&gt;main.dart 파일을 지정하고 실행시켜야 한다.
+이때, dart 빌드가 아닌 flutter 빌드를 해준다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -106,7 +475,41 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Sat, 09 Jul 2022 10:58:55 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/git/git/</guid>
-      <description>Git Cache Cache 확인: git ls-files --stage FILE_PATH Cache 삭제: git rm -r --cached FILE_PATH &#39;PATH&#39; already exists in the index 오류가 발생했을 때, cache를 확인하고 삭제하면 해결 가능하다. config git config 명령으로 git 관련 setting을 확인 및 설정할 수 있다. git config --list : 설정된 내용 확인 git config --add : 설정 추가 --system : 컴퓨터 환경에 적용 --global : 사용자 환경에 적용 --local : repository별로 설정 적용, default값 git config --global user.</description>
+      <description>&lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
+&lt;h2 id=&#34;cache&#34;&gt;Cache&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cache 확인: &lt;code&gt;git ls-files --stage FILE_PATH&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Cache 삭제: &lt;code&gt;git rm -r --cached FILE_PATH&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;PATH&#39; already exists in the index&lt;/code&gt; 오류가 발생했을 때, cache를 확인하고 삭제하면 해결 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;config&#34;&gt;config&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config&lt;/code&gt; 명령으로  git 관련 setting을 확인 및 설정할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --list&lt;/code&gt; : 설정된 내용 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --add&lt;/code&gt; : 설정 추가
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--system&lt;/code&gt; : 컴퓨터 환경에 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--global&lt;/code&gt; : 사용자 환경에 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--local&lt;/code&gt; : repository별로 설정 적용, default값
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.name &amp;lt;USER_NAME&amp;gt;&lt;/code&gt; : 사용자 이름 설정, 구역 인자를 붙이면 &amp;ndash;add 는 생략가능&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.email &amp;lt;EMAIL&amp;gt;&lt;/code&gt; : 사용자 email 설정, 구역 인자를 붙이면 &amp;ndash;add 는 생략가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --unset&lt;/code&gt; : 설정 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;submodule&#34;&gt;Submodule&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;git repository 안에 다른 git repository를 관리할 때 사용한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -115,7 +518,46 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/thymeleaf/</guid>
-      <description>Thymeleaf 서버에서 view를 구성할 때 사용하는 라이브러리 태그 형식의 문법을 사용하며 vue와 유사하다. 기본 문법 thymeleaf 공식 튜토리얼 에서 기본적인 문법을 확인할 수 있다. 태그 안에 th:속성=&amp;quot;값&amp;quot; 형태의 속성을 추가하는 형태로 사용한다. text &amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;를 표시한다. utext &amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다. fragment &amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다.</description>
+      <description>&lt;h1 id=&#34;thymeleaf&#34;&gt;Thymeleaf&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;서버에서 view를 구성할 때 사용하는 라이브러리&lt;/li&gt;
+&lt;li&gt;태그 형식의 문법을 사용하며 vue와 유사하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-문법&#34;&gt;기본 문법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html&#34;&gt;thymeleaf 공식 튜토리얼&lt;/a&gt; 에서 기본적인 문법을 확인할 수 있다.&lt;/li&gt;
+&lt;li&gt;태그 안에  &lt;code&gt;th:속성=&amp;quot;값&amp;quot;&lt;/code&gt; 형태의 속성을 추가하는 형태로 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;text&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &lt;code&gt;&amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;를 표시한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;utext&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;fragment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;&lt;/code&gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다. fragment는 &lt;code&gt;th:replace&lt;/code&gt;, &lt;code&gt;th:copy&lt;/code&gt; 를 사용해서 재활용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;copy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;div th:copy=&amp;quot;this::name&amp;quot;&amp;gt;&lt;/code&gt;: 현재 파일의 &amp;rsquo;name&amp;rsquo; fragment를 &amp;lsquo;div&amp;rsquo;태그로 표현한다. &amp;rsquo;this&amp;rsquo; 대신 파일 이름을 사용하면 다른 파일의 fragment를 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;replace&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;div th:replace=&amp;quot;this::name&amp;quot;&amp;gt;&lt;/code&gt;: 현재 파일의 &amp;rsquo;name&amp;rsquo; fragment로 대체한다.(태그도 바뀐다.) &amp;rsquo;this&amp;rsquo; 대신 파일 이름을 사용하면 다른 파일의 fragment를 사용가능하다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -124,8 +566,87 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/tailwind/</guid>
-      <description>Tailwind Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다. Tailwind Docs Installation tailwind 모듈 설치
-npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다. npx tailwindcss init 명령을 사용하면 현재 경로에 tailwind.config.js 파일이 생성되며, 현재 프로젝트에서 tailwind를 적용할 수 있게 된다. tailwind.config.js 파일은 다음과 같이 구성된다. module.exports = {// 포함할 항목content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],// 제외할 항목 (최신 버전에서 사용되지 않는 문법)// purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],// jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.</description>
+      <description>&lt;h1 id=&#34;tailwind&#34;&gt;Tailwind&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tailwindcss.com/docs&#34;&gt;Tailwind Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;tailwind 모듈 설치&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install -D tailwindcss@latest&lt;/code&gt; 명령을 사용하여 설치가 가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npx tailwindcss init&lt;/code&gt; 명령을 사용하면 현재 경로에 tailwind.config.js 파일이 생성되며, 현재 프로젝트에서 tailwind를 적용할 수 있게 된다.
+&lt;ul&gt;
+&lt;li&gt;tailwind.config.js 파일은 다음과 같이 구성된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;module.exports = {
+  // 포함할 항목
+  content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],
+  // 제외할 항목 (최신 버전에서 사용되지 않는 문법)
+  // purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],
+  // jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.(?)
+  // mode: process.env.NODE_ENV ? &amp;#39;jit&amp;#39; : undefined,
+  darkMode: &amp;#39;class&amp;#39;, // [false, &amp;#39;mdeia&amp;#39;, &amp;#39;class&amp;#39;]
+  theme: {
+    fontFamily: {
+      display: [&amp;#39;Open Sans&amp;#39;, &amp;#39;sans-serif&amp;#39;],
+      body: [&amp;#39;Open Sans&amp;#39;, &amp;#39;sans-serif&amp;#39;],
+    },
+    extend: {
+      fontSize: {
+        14: &amp;#39;14px&amp;#39;,
+      },
+      backgroundColor: {
+        &amp;#39;main-bg&amp;#39;: &amp;#39;#FAFBFB&amp;#39;,
+        &amp;#39;main-dark-bg&amp;#39;: &amp;#39;#20232A&amp;#39;,
+        &amp;#39;secondary-dark-bg&amp;#39;: &amp;#39;#33373E&amp;#39;,
+        &amp;#39;light-gray&amp;#39;: &amp;#39;#F7F7F7&amp;#39;,
+        &amp;#39;half-transparent&amp;#39;: &amp;#39;rgba(0, 0, 0, 0.5)&amp;#39;,
+      },
+      borderWidth: {
+        1: &amp;#39;1px&amp;#39;,
+      },
+      borderColor: {
+        color: &amp;#39;rgba(0, 0, 0, 0.1)&amp;#39;,
+      },
+      width: {
+        400: &amp;#39;400px&amp;#39;,
+        760: &amp;#39;760px&amp;#39;,
+        780: &amp;#39;780px&amp;#39;,
+        800: &amp;#39;800px&amp;#39;,
+        1000: &amp;#39;1000px&amp;#39;,
+        1200: &amp;#39;1200px&amp;#39;,
+        1400: &amp;#39;1400px&amp;#39;,
+      },
+      height: {
+        80: &amp;#39;80px&amp;#39;,
+      },
+      minHeight: {
+        590: &amp;#39;590px&amp;#39;,
+      },
+      backgroundImage: {
+        &amp;#39;hero-pattern&amp;#39;:
+          &amp;#34;url(&amp;#39;https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg&amp;#39;)&amp;#34;,
+      },
+    },
+  },
+  plugins: [],
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;tailwind는 react와 같은 framework에서는 자동으로 적용이 가능하지만, 그 외의 경우에는 postcss 등과 같은 모듈의 도움이 필요하다.&lt;/li&gt;
+&lt;li&gt;tailwind 모듈 설치와 tailwind.config.js 구성이 끝났다면, tailwind로 작성된 css를 코드에 추가해줘야 한다. index.css에 아래 구문을 추가한다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@tailwind base;
+@tailwind components;
+@tailwind utilities;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;postcss&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -134,7 +655,48 @@ npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/spring_boot/</guid>
-      <description>Spring Boot Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다. Java, Kitlin, Groovy 등의 언어로 구현이 가능하다. 개발환경 java 기반으로 동작하기에 jdk 설치가 필요하다. (22년 기준) 11버전 이상을 다운받는것을 추천한다. IDE vs code를 사용한다면 확장패키지로 &amp;lsquo;Java Extension Pack&amp;rsquo; 과 &amp;lsquo;Spring Boot Extension Pack&amp;rsquo; 을 설치한다. java 개발을 위한 eclips나 intelliJ를 사용해도 된다. spring 프로젝트 생성 start.spring.io 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</description>
+      <description>&lt;h1 id=&#34;spring-boot&#34;&gt;Spring Boot&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다.&lt;/li&gt;
+&lt;li&gt;Java, Kitlin, Groovy 등의 언어로 구현이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개발환경&#34;&gt;개발환경&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;java 기반으로 동작하기에 jdk 설치가 필요하다.
+&lt;ul&gt;
+&lt;li&gt;(22년 기준) 11버전 이상을 다운받는것을 추천한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IDE
+&lt;ul&gt;
+&lt;li&gt;vs code를 사용한다면 확장패키지로 &amp;lsquo;Java Extension Pack&amp;rsquo; 과 &amp;lsquo;Spring Boot Extension Pack&amp;rsquo; 을 설치한다.&lt;/li&gt;
+&lt;li&gt;java 개발을 위한 eclips나 intelliJ를 사용해도 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;spring 프로젝트 생성
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;start.spring.io&lt;/code&gt; 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;gradle 설치
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://gradle.org/releases/&lt;/code&gt; 주소에서 gradle 파일을 다운받는다.&lt;/li&gt;
+&lt;li&gt;이후 path 설정을 마친 후, 프로젝트 root directory에서 &lt;code&gt;gradle wrapper&lt;/code&gt; 명령을 수행해 gradlew파일을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;포트 설정
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;application.properties&lt;/code&gt; (혹은 yml)파일을 열고, &lt;code&gt;server.port = 8080&lt;/code&gt; 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;devtools 설정&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;정적 파일들을 갱신했을 때, 서버 재실행 없이 explorer만 reload 해 주면 변경점이 반영될 수 있도록 한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -143,7 +705,75 @@ npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/firebase_react/</guid>
-      <description>Firebase with React react에서 firebase를 활용하는 방법 firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조 인증 (Auth) firebase 로 계정 생성 및 로그인 firebase API를 import하여 사용 &amp;lt;AppFirebase.js&amp;gt; import firebase from &amp;#34;firebase/compat/app&amp;#34;;import &amp;#34;firebase/compat/auth&amp;#34;;const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,authDomain: process.env.REACT_APP_AUTHDOMAIN,projectId: process.env.REACT_APP_PROJECTID,storageBucket: process.env.REACT_APP_STORAGEBUCKET,messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,appId: process.env.REACT_APP_APPID};export default firebase.initializeApp(firebaseConfig);export const authService = firebase.auth(); AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현 &amp;lt;Auth.</description>
+      <description>&lt;h1 id=&#34;firebase-with-react&#34;&gt;Firebase with React&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;react에서 firebase를 활용하는 방법&lt;/li&gt;
+&lt;li&gt;firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;인증-auth&#34;&gt;인증 (Auth)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;firebase 로 계정 생성 및 로그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;firebase API를 import하여 사용&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;AppFirebase.js&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import firebase from &amp;#34;firebase/compat/app&amp;#34;;
+import &amp;#34;firebase/compat/auth&amp;#34;;
+
+const firebaseConfig = {
+apiKey: process.env.REACT_APP_API_KEY,
+authDomain: process.env.REACT_APP_AUTHDOMAIN,
+projectId: process.env.REACT_APP_PROJECTID,
+storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+appId: process.env.REACT_APP_APPID
+};
+
+export default firebase.initializeApp(firebaseConfig);
+export const authService = firebase.auth();
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현
+&amp;lt;Auth.js&amp;gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import { authService } from &amp;#34;../components/AppFirebase&amp;#34;;
+
+const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
+const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;createUserWithEmailAndPassword / signInWithEmailAndPassword 실행 이후 authService.currentUser를 참조하면 user 정보를 받아올 수 있다.&lt;/li&gt;
+&lt;li&gt;하지만, authService.currentUser 정보를 갱신하는데는 시간이 걸린다. firebase API에서는 observer를 등록하여 currentUser의 변경 시점을 확인할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;currentUser 변경시점에 특정함수 동작&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;user 정보가 갱신된 시점에 특정 동작을 원한다면, 아래와 같이 onAuthStateChanged 함수를 사용하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;authService.onAuthStateChanged((user) =&amp;gt; { /* something to do */ }});
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;로그아웃&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;authService.signOut()&lt;/code&gt; 함수를 호출하여 로그아웃이 가능하다.&lt;/li&gt;
+&lt;li&gt;참고로 크롬 웹 디버깅 화면에서 &amp;lsquo;Application&amp;rsquo;탭에 들어가서 IndexedDB -&amp;gt; firebaseLocalDb 안의 내용을 🚫버튼으로 삭제해 주면 로그인 정보가 사라진다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;에러&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;authService&lt;/code&gt;의 함수(&lt;code&gt;createUserWithEmailAndPassword&lt;/code&gt;, &lt;code&gt;signInWithEmailAndPassword&lt;/code&gt;, &amp;hellip;) 사용시 에러가 발생할 수 있으므로, try, catch문으로 묶어서 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;try {
+  let data
+  data = await authService.createUserWithEmailAndPassword(email, password)
+} catch(error) {
+  console.log(error.code) // 에러의 원인이 코드 형태로 출력된다.
+  console.log(error.message) // 에러의 원인이 메시지 형태로 출력된다.
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ref) 오류발생 원인&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -152,8 +782,55 @@ npm install -D tailwindcss@latest 명령을 사용하여 설치가 가능하다.
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/crypto/cryptocurrency/</guid>
-      <description>Cryptocurrency Cryptographic Hash function hash function은 아래와 같은 속성을 갖는다. 모든 크기의 String을 input 으로 받는다. 정해진 크기의 output을 생성한다. (bitcoin에서는 256bit) 적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다) cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.
-collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다. 이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.</description>
+      <description>&lt;h1 id=&#34;cryptocurrency&#34;&gt;Cryptocurrency&lt;/h1&gt;
+&lt;h2 id=&#34;cryptographic-hash-function&#34;&gt;Cryptographic Hash function&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hash function은 아래와 같은 속성을 갖는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;모든 크기의 String을 input 으로 받는다.&lt;/li&gt;
+&lt;li&gt;정해진 크기의 output을 생성한다. (bitcoin에서는 256bit)&lt;/li&gt;
+&lt;li&gt;적당한 시간 안에 계산이 가능하다. (계산 시간이 너무 길지 않다)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cryptographic hash function은 아래와 같은 security 속성을 추가로 갖는다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;collision-free&lt;/li&gt;
+&lt;li&gt;hiding&lt;/li&gt;
+&lt;li&gt;puzzle-friendly&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;속성1-collision-free&#34;&gt;속성1. collision-free&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;x != y 라면, H(x) = H(y) 인 경우를 찾을 수 없어야 한다.&lt;/li&gt;
+&lt;li&gt;이 말은 collision 이 존재하지 않는다는 뜻은 아니다. num(possible_input) &amp;gt; num(possible_outputs) 이다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;찾을 수 없다&amp;rsquo; 라는 말은, collision이 존재하지만, hahs function의 결과를 예측할 수 없다는 뜻이다.
+&lt;ul&gt;
+&lt;li&gt;실제로, 2^130 개의 무작위 수를 선택하여 hash function을 돌렸을 때, 99.8%의 확률로 충돌이 발생한다.&lt;/li&gt;
+&lt;li&gt;하지만 이 수치는 천문학적으로 크기 때문에 걱정할 필요가 없다. (collision을 발견할 확률은 인류가 만든 최고의 컴퓨터로 우주 생성시부터 계산을 해도, 2초뒤 지구에 운석이 떨어질 확률만큼 낮다.)&lt;/li&gt;
+&lt;li&gt;collision을 쉽게 구하는 방법이 있는가?
+-&amp;gt; 특정 hash function에 대해서는(SHA256에 대해서도 최단기간 collision을 찾아내는 방법이 알려져 있다.) 가능하지만, 대부분은 그렇지 않다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hash-as-message-digest&#34;&gt;hash as message digest&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;collision을 구하는 것이 매우 어렵기 때문에, H(x) = H(y)라면, x = y라고 확신해도 된다.&lt;/li&gt;
+&lt;li&gt;즉, hash를 이용해 데이터 전송/비교에 드는 비용을 절감 가능하다. (전체 message 대신 hash만 비교)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;속성2-hiding&#34;&gt;속성2. hiding&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;H(x)를 갖고 x를 유추할 수 없다.&lt;/li&gt;
+&lt;li&gt;hiding 속성을 가지려면 아래와 같은 방법을 사용한다.&lt;/li&gt;
+&lt;li&gt;high min-entropy 를 가진 무작위 상수 &amp;lsquo;r&amp;rsquo;을 x와 조합(concatenate)하여 hash function의 input에 넣으면 hiding 속성을 갖게 된다. (&lt;code&gt;H(r|x)&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;high min-entropy 란 넓고 고르게 퍼져있음을 뜻한다. 즉, 넓은 선택범위 안에서 특정 값이 특출나게 여려번 중복해서 뽑히지 않는다는 뜻이다. (no particular value is chosen with more than negligible probability)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;commitment&#34;&gt;commitment&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;편지를 동봉하듯 데이터가 가지고 있는 내용을 공개하지 않고 데이터를 공개하는 것&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -162,7 +839,21 @@ collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/firebase/</guid>
-      <description>firebase firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다. Amazon의 Amplify가 firebase와 유사하다. 일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다. 설치 및 사용 온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다. firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다. (웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.) 버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자</description>
+      <description>&lt;h1 id=&#34;firebase&#34;&gt;firebase&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다.&lt;/li&gt;
+&lt;li&gt;Amazon의 Amplify가 firebase와 유사하다.&lt;/li&gt;
+&lt;li&gt;일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치-및-사용&#34;&gt;설치 및 사용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다.&lt;/li&gt;
+&lt;li&gt;firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다.
+(웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -171,7 +862,30 @@ collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/golang/golang/</guid>
-      <description>Go 설치 및 프로젝트 생성 구글 검색을 통해 설치파일을 다운받는다. root 디렉터리 설정이 필요하다.(&amp;lsquo;C:\Go, &amp;lsquo;/usr/local/go/bin/&amp;rsquo;) 이후 생성할 프로젝트는 이 root 디렉터리 하위 경로에 생성된다. 외부 경로에는 프로젝트를 생성할 수 없다. root 디렉터리 안 src 디렉터리에 프로젝트를 생성한다. Go는 npm, pip 와 같이 패키지 매니저가 없다. git 등에서 코드를 받아오면 src 디렉터리 안에 도메인별로 정리해서 관리하는게 정석이다. 문법 printf format specifier %v: used as a placeholder for the default format representation of a value %+v: a detailed representation of the value, including all the fields and their corresponding values for structs and maps.</description>
+      <description>&lt;h1 id=&#34;go&#34;&gt;Go&lt;/h1&gt;
+&lt;h2 id=&#34;설치-및-프로젝트-생성&#34;&gt;설치 및 프로젝트 생성&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;구글 검색을 통해 설치파일을 다운받는다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;root 디렉터리 설정이 필요하다.(&amp;lsquo;C:\Go, &amp;lsquo;/usr/local/go/bin/&amp;rsquo;)&lt;/li&gt;
+&lt;li&gt;이후 생성할 프로젝트는 이 root 디렉터리 하위 경로에 생성된다. 외부 경로에는 프로젝트를 생성할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;root 디렉터리 안 src 디렉터리에 프로젝트를 생성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Go는 npm, pip 와 같이 패키지 매니저가 없다. git 등에서 코드를 받아오면 src 디렉터리 안에 도메인별로 정리해서 관리하는게 정석이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문법&#34;&gt;문법&lt;/h2&gt;
+&lt;h3 id=&#34;printf&#34;&gt;printf&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;format specifier&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%v&lt;/code&gt;: used as a placeholder for the default format representation of a value&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%+v&lt;/code&gt;: a detailed representation of the value, including all the fields and their corresponding values for structs and maps.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -180,13 +894,95 @@ collision-free hiding puzzle-friendly 속성1. collision-free x != y 라면, H(x
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow/</guid>
-      <description>#Tensorflow
-TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
-edge는 학습데이터가 저장되는 다차원 배열이다.
-edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
-edge는 방향성이 있으며(directed), tensor라 불린다.
-archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
-설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.</description>
+      <description>&lt;p&gt;#Tensorflow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-개념&#34;&gt;기본 개념&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 학습데이터가 저장되는 다차원 배열이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 방향성이 있으며(directed), tensor라 불린다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;&#34;&gt;archive.ics.uci.edu/ml&lt;/a&gt; 에서 학습용 데이터를 받아 사용할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;python과 pip를 설치한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install tensorflow&lt;/code&gt; 명령을 수행한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.&lt;/li&gt;
+&lt;li&gt;실행에서 &lt;code&gt;regedit&lt;/code&gt;을 실행하고, &amp;lsquo;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&amp;rsquo; 레지스트리를 찾아 값을 1로 세팅해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;연관-모듈&#34;&gt;연관 모듈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;함께 쓰면 효율이 좋은 모듈들&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;numpy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data = np.loadtxt(FILE_NAME, delimiter=&#39;,&#39;)&lt;/code&gt; : ,를 기준으로 데이터를 나누는 csv 파일을 읽어들임. 숫자 데이터를 읽을 때 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;keras (tensorflow 설치시 자동성치된다)
+&lt;code&gt;y_encoded = to_categorical(y_data)&lt;/code&gt; : y_data 를 one-hot-encoding 하는 함수  (tensorflow.keras.utils.to_categorical)&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df = pd.read_csv(FILE_NAME)&lt;/code&gt; : csv 파일을 읽어서 dataframe을 구성한다. 숫자 및 문자열 데이터를 읽을 때 사용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;sklearn&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 전처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;e = sklearn.preprocessing.LabelEncoder()
+e.fit(data)  # data 에 들어있는 값 중 unique한 값을 뽑아(중복 제거) 특정 string에 번호를 매기는(indexing) 함수
+data = e.transform(data)  # indexing 된 정보를 바탕으로 실제 data값을 index로 치환
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;기본-문법&#34;&gt;기본 문법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;상수 선언&lt;br&gt;
+&lt;code&gt;val = tf.constant(value, dtype=None, shape=None, name=&#39;Conts&#39;, verify_shape=False)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;value = 값&lt;/li&gt;
+&lt;li&gt;dtype : 데이터 타입, ex) &amp;rsquo;tf.float32&amp;rsquo;, &amp;rsquo;tf.float64&amp;rsquo;, &amp;rsquo;tf.int8&amp;rsquo;
+&lt;ul&gt;
+&lt;li&gt;float(32, 64), int(8, 16, 64),uint(8, 16), string, bool, complex(64, 128 : 복소수)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;shape : 차원, value 형태에 따라 자동으로 설정 됨, ex) &amp;lsquo;[3,3]&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;name : 상수의 이름&lt;/li&gt;
+&lt;li&gt;verify_shape : tensor의 shape를 바꿀수 있는지 여부&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;배열 생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;arr = tf.range(5)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;output : &lt;code&gt;tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -195,8 +991,78 @@ archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/kivy/</guid>
-      <description>#kivy
-Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .</description>
+      <description>&lt;p&gt;#kivy&lt;/p&gt;
+&lt;h2 id=&#34;basic-concepts&#34;&gt;Basic concepts&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Widget&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;어플리케이션을 구성하는 객체&lt;/li&gt;
+&lt;li&gt;widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합&lt;/li&gt;
+&lt;li&gt;위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Layout&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;화면 구성을 설정한 요소&lt;/li&gt;
+&lt;li&gt;widget 혹은 layout을 포함 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;structure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;main.py에 python으로 내용을 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class TheLabApp(App):
+pass
+TheLabApp().run()
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/
+|-main.py
+|-TheLab.kv
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;.py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .kv파일에서 바로 작성할 수도 있다.&lt;/li&gt;
+&lt;li&gt;단, .kv파일에서 객체를 생성하려면 .py파일에 정의된 class를 사용해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXAMPLE@BoxLayout&amp;gt;&lt;/code&gt; 와 같이 .py파일의 class 선언을 생략하고 default 객체를 사용하는 방법도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;///////// .py /////////
+class Box(BoxLayout):
+  pass
+///////// .kv /////////
+&amp;lt;Box&amp;gt;: # .py에서 정의된 Box객체를 사용 가능
+  GridLayout:  # 이후부터는 kivy에서 제공하는 객체들 사용 가능
+    label:
+      text:&amp;#34;lb&amp;#34;
+
+&amp;lt;Box2@BoxLayout&amp;gt;: # .py파일에서 아무것도 하지 않는 객체를 선언하기 싫을 때 사용
+///////////////////////
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;ex) class 안에서 속성 설정 :&lt;code&gt;self.orientation = &amp;quot;vertical&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ex) kv파일에서 속성 설정 : &lt;code&gt;orientation: &amp;quot;vertical&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;NAME&amp;gt;&lt;/code&gt;형태로 선언한 객체는 다른 객체에서 사용할수 있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Box&amp;gt;:
+  ...
+&amp;lt;Box2&amp;gt;:
+  Button:
+    ...
+  Box:  # 사용자 정의 객체
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;.kv파일은 아래와 같이 구성된다.&lt;/li&gt;
+&lt;li&gt;화면을 구성하는 내용들의 속성을 정의하고 배치할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;MainWidget:         # 화면에 표기할 객체(widget, layout, &amp;hellip;)
+&lt;MainWidget&gt;:       # widget 정의
+Button:           # widget 내부 항목 선언, kivy에서 지원하는 객체의 종류
+text:&amp;ldquo;A&amp;rdquo;
+Button:
+text:&amp;ldquo;B&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -205,10 +1071,40 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/python/python_basic/</guid>
-      <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
-받은 값은 string 형태이다.
-받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
-받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. sys.stdout.write 안에는 string 형태만 적용할 수 있다. print 안에는 수식 등으로 string 및 byte를 표현 가능하다.</description>
+      <description>&lt;h1 id=&#34;python&#34;&gt;Python&lt;/h1&gt;
+&lt;h2 id=&#34;기본-내장-함수&#34;&gt;기본 내장 함수&lt;/h2&gt;
+&lt;h3 id=&#34;입력&#34;&gt;입력&lt;/h3&gt;
+&lt;p&gt;한줄 받기 : &lt;code&gt;a = input()&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;받은 값은 string 형태이다.&lt;br&gt;
+받은 단어 끊어서 해석 : &lt;code&gt;a, b = input().split()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌&lt;br&gt;
+받은 단어 끊고 숫자로 변환 : &lt;code&gt;a, b = map(int, input().split())&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;int 외 다른 형태도 사용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;출력&#34;&gt;출력&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;print()&lt;/code&gt; 와 &lt;code&gt;sys.stdout.write()&lt;/code&gt; 로 화면에 출력할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sys.stdout.write&lt;/code&gt; 안에는 string 형태만 적용할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;print&lt;/code&gt; 안에는 수식 등으로 string 및 byte를 표현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sys.stdout.buffer.write()&lt;/code&gt; 를 사용하면 문자열을 수식을 통해 조합하고 ascii 코드 형태로 출력 가능하다.
+&lt;ul&gt;
+&lt;li&gt;print() 를 사용하면 prefix가 붙어서 원하는 형태를 표현하기 어렵다. 이럴 때 sys.stdout.buffer.write()를 사용한다.&lt;/li&gt;
+&lt;li&gt;ex)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  sys.stdout.write(b&amp;#39;A&amp;#39;*0x10 + b&amp;#39;B&amp;#39;*0x20 + b&amp;#39;\xaa\
+  xbb\xcc\xdd\x00\x00\x00\x00&amp;#39;)
+  # 결과: AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB����
+  sys.stdout.write(b&amp;#39;A&amp;#39;*0x10 + b&amp;#39;B&amp;#39;*0x20 + b&amp;#39;\xaa\
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;xbb\xcc\xdd\x00\x00\x00\x00&amp;rsquo;)
+# 결과: b&amp;rsquo;AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\xaa\xbb\xcc\xdd\x00\x00\x00\x00&amp;rsquo;
+```&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -217,9 +1113,36 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/angular/</guid>
-      <description>Angular Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다. javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다. 개발환경 세팅 nodejs 설치 $ sudo apt install npm :nodejs와 npm 동시에 설치 angular client 설치 $ npm install -g @angular/cli 명령어를 이용하여 설치 workspace 생성 client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.
-$ ng new &amp;lt;application_name&amp;gt; 명령어를 이용하여 설치한다.
-nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보자.</description>
+      <description>&lt;h1 id=&#34;angular&#34;&gt;Angular&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다.&lt;/li&gt;
+&lt;li&gt;javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;개발환경-세팅&#34;&gt;개발환경 세팅&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;nodejs 설치&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ sudo apt install npm&lt;/code&gt; :nodejs와 npm 동시에 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;angular client 설치&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ npm install -g @angular/cli&lt;/code&gt; 명령어를 이용하여 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;workspace 생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$ ng new &amp;lt;application_name&amp;gt;&lt;/code&gt; 명령어를 이용하여 설치한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nodejs 버전이 낮다고 한다.  github에서 받아서 빌드하여 써 보자.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -228,8 +1151,37 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/spring/</guid>
-      <description>Spring basic 설치 spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.
-참조 프로젝트 생성 CLI로 프로젝트를 생성해 보자. spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location] --build=gradle 기본으로 maven을 사용하지만 gradle로 설정 가능하다. -d=web dependency를 web으로 설정 -a=myApp artifactId, 즉 project명을 설정한다. -g=com.aswin.blue 그룹 명을 설정한다. [location] 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다. 설정 maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.</description>
+      <description>&lt;h1 id=&#34;spring-basic&#34;&gt;Spring basic&lt;/h1&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.&lt;br&gt;
+&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-installing-the-cli&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CLI로 프로젝트를 생성해 보자.
+&lt;code&gt;spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--build=gradle&lt;/code&gt; 기본으로 maven을 사용하지만 gradle로 설정 가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-d=web&lt;/code&gt; dependency를 web으로 설정&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-a=myApp&lt;/code&gt; artifactId, 즉 project명을 설정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-g=com.aswin.blue&lt;/code&gt; 그룹 명을 설정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[location]&lt;/code&gt; 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.&lt;/li&gt;
+&lt;li&gt;각종 라이브러리를 플러그인 형태로 사용하려면 dependency와 repository 설정을해 줘야 한다.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;&lt;a href=&#34;https://mvnrepository.com/%22&#34;&gt;https://mvnrepository.com/&#34;&lt;/a&gt; 주소처럼 maven repository를 정리해 놓은 사이트에서 원하는 repository를 찾아서 dependency를 작성한다.&lt;/li&gt;
+&lt;li&gt;repository 추가시 compile dependency를 확인하고 추가로 pom.xml을 작성한다.&lt;/li&gt;
+&lt;li&gt;maven 사이트보다는 github의 readme를 더 신용하자, maven 사이트 업데이트가 안돼서 잘 동작하지 않는 것도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;maven 프로젝트의 실행에도 maven이 사용된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mvn -X clean install exec:java -Dexec.args=&amp;quot;&amp;quot;&lt;/code&gt; 로 실행이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;-X&lt;/code&gt; 는 디버깅 로그 출력을 의미한다.
+&lt;code&gt;-Dexec.args=&lt;/code&gt; 는 main 함수의 argv를 설정한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -238,7 +1190,34 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/java/jython/</guid>
-      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
+      <description>&lt;h1 id=&#34;jython&#34;&gt;Jython&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 환경에서 python을 실행하게 하는 방법 중 하나&lt;/li&gt;
+&lt;li&gt;역으로 Jython 환경에서 java를 실행 가능하기도 하다.&lt;/li&gt;
+&lt;li&gt;spring에서 jython을 사용하는 방법에 대해 묘사하겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pom.xml에 의존성을 작성한다.&lt;/li&gt;
+&lt;li&gt;pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PythonInterpreter 을 선언한다.&lt;/li&gt;
+&lt;li&gt;이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PythonInterpreter jython;
+jython.execfile(PYTHON);
+jython.exec(&amp;#34;print(1+1)&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;execfile로 특정 함수를 정의하였다면 그 아래에 있는 exec함수에서 함수를 호출할 수도 있다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -247,7 +1226,32 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/developtips/web_scrapping/</guid>
-      <description>Web Scrapping x-path /a/b/c/d/e/f/g/... 와 같이 특정 경로를 가진 개체를 가리키는 방법이다. //*[@id=&amp;quot;abcd&amp;quot;] // 는 모든 경로에서 찾겠다는 의미 는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함 @id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미 브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다. 정규식 . : 하나의 문자 ^ : 문자열의 시작 $ : 문자열의 끝 * : 모든 문자 # : 하나의 숫자 정규식 참조 link</description>
+      <description>&lt;h1 id=&#34;web-scrapping&#34;&gt;Web Scrapping&lt;/h1&gt;
+&lt;h2 id=&#34;x-path&#34;&gt;x-path&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/a/b/c/d/e/f/g/...&lt;/code&gt; 와 같이 특정 경로를 가진 개체를 가리키는 방법이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;//*[@id=&amp;quot;abcd&amp;quot;]&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;// 는 모든 경로에서 찾겠다는 의미&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;는 모든 태그에 대해 찾겠다는 의미. *대신 TAG를 넣으면 &amp;lsquo;TAG&amp;rsquo; 라는 이름의 태그를 가진 항목에서만 검색함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@id=&amp;ldquo;abcd&amp;rdquo; 는 id라는 속성이 abcd 인 항목을 찾겠다는 의미&lt;/li&gt;
+&lt;li&gt;브라우저에서 자동으로 해줒기 때문에 보통은 걱정할 필요가 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;정규식&#34;&gt;정규식&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;. : 하나의 문자&lt;/li&gt;
+&lt;li&gt;^ : 문자열의 시작&lt;/li&gt;
+&lt;li&gt;$ : 문자열의 끝&lt;/li&gt;
+&lt;li&gt;* : 모든 문자&lt;/li&gt;
+&lt;li&gt;# : 하나의 숫자&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/python/python_regex.asp&#34;&gt;정규식 참조 link&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -256,7 +1260,38 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다. https://github.com/pwndbg/pwndbg 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 gdb 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.</description>
+      <description>&lt;h1 id=&#34;gdb&#34;&gt;GDB&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Debugger의 약자&lt;/li&gt;
+&lt;li&gt;유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거&lt;/li&gt;
+&lt;li&gt;디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다.&lt;/li&gt;
+&lt;li&gt;pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://github.com/pwndbg/pwndbg&lt;/code&gt; 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 &lt;code&gt;gdb&lt;/code&gt; 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;컴파일&#34;&gt;컴파일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc로 컴파일시 옵션에 &lt;code&gt;-g&lt;/code&gt; 를 붙여야 소스를 보면서 디버깅이 가능&lt;/li&gt;
+&lt;li&gt;리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.
+&lt;ul&gt;
+&lt;li&gt;ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.&lt;/li&gt;
+&lt;li&gt;섹션에는 기계어 코드 등의 정보들이 들어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;readelf -h [ELF파일]&lt;/code&gt; 명령으로 ELF 파일의 헤더 정보를 확인 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gdb-옵션&#34;&gt;gdb 옵션&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gdb [파일이름]&lt;/code&gt; : 해당 파일이름 디버깅 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--args [arg1] [arg2] [...]&lt;/code&gt; : 파일 실행에 필요한 argument를 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기타-명령어&#34;&gt;기타 명령어&lt;/h2&gt;
+&lt;h3 id=&#34;실행-전-설정사항&#34;&gt;실행 전 설정사항&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;coredumb 파일&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -265,7 +1300,48 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</guid>
-      <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &amp;lt;NAME&amp;gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.</description>
+      <description>&lt;h1 id=&#34;react-basic&#34;&gt;React basic&lt;/h1&gt;
+&lt;h2 id=&#34;개발환경-설치-및-실행&#34;&gt;개발환경 설치 및 실행&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다.
+&lt;code&gt;npm install -g create-react-app&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;원하는 경로에 들어가 프로젝트를 생성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create-react-app &amp;lt;NAME&amp;gt;&lt;/code&gt; : NAME 경로에 프로젝트 생성&lt;/li&gt;
+&lt;li&gt;주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm run start&lt;/code&gt; 를 수행하면 &lt;code&gt;localhost:3000&lt;/code&gt;에서 웹페이지를 퍼블리싱한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;실행 포트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; 파일에서 &lt;code&gt;&amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot;&lt;/code&gt; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-구조&#34;&gt;기본 구조&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;/public/index.html 에서 기본 화면 구성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;root&amp;rsquo; 이름으로 된 division이 있는데, 이 division에 대한 설정은 javascript로 정의되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;src 경로에 javascript파일들 구성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lsquo;index.js&amp;rsquo; 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 &amp;lsquo;root&amp;rsquo; 인 division에 &amp;lsquo;App&amp;rsquo;을 적용하겠다는 의미이다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -274,7 +1350,72 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/c&#43;&#43;/</guid>
-      <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\printf(&amp;#34;%d&amp;#34;, (X) + 1);\printf(&amp;#34;%d&amp;#34;, (X) + 2); 매크로 합성 : #define A 1#define B 1#define C A##B // A##B = 12 함수형태 매크로 작성 : // 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.</description>
+      <description>&lt;h1 id=&#34;c-basics&#34;&gt;C++ basics&lt;/h1&gt;
+&lt;h2 id=&#34;매크로&#34;&gt;매크로&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#define MACRO 1&lt;/code&gt; : MACRO 값으로 1을 지정&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#undef MACRO&lt;/code&gt; : MACRO값에 지정된 내용 해제&lt;/li&gt;
+&lt;li&gt;여러줄의 매크로 값 지정 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\
+  printf(&amp;#34;%d&amp;#34;, (X) + 1);\
+  printf(&amp;#34;%d&amp;#34;, (X) + 2);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;매크로 합성 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define A 1
+#define B 1
+#define C A##B // A##B = 12
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;함수형태 매크로 작성 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.
+// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.
+#define FUNC(a, b) do { \
+    a = b * 2;\
+} while (0)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;연산자 우선순 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 매크로 함수는 계산 전 치환을 먼저 수행한다. 연산자 우선순위에 주의한다.
+#define ADD1(a,b) a+b
+#define ADD2(a,b) (a+b)
+#define MULT(a,b) a*b
+#define MULT2(a,b) (a)*(b)
+...
+printf(&amp;#34;%d&amp;#34;,ADD1(3,4) * 2) // 예상값 (3 + 4) * 2 = 14
+// 3 + 4 * 2 로 치환하여 계산되어 실제 결과는 11
+// ADD2 처럼 계산 결과를 괄호로 묶어야 안전하다.
+
+printf(&amp;#34;%d&amp;#34;,MULT(2+2,3+3)) // 예상값 (4 * 6) * 2 = 26
+// (2 + 2 * 3 + 3) 로 치환하여 계산되어 실제 결과는 11
+// MULT2 처럼 각 변수를 괄호로 묶어야 안전하다.
+
+// ADD1, MULT2 경우를 종합하여 아래와 같이 사용하자
+#define ADD3(a,b) ((a) + (b))
+#define MULT3(a,b) ((a) * (b))
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;조건부 컴파일
+&lt;ul&gt;
+&lt;li&gt;if-elif-else 사용 가능&lt;/li&gt;
+&lt;li&gt;조건에 !, &amp;amp;&amp;amp; || 논리연산 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define MACRO
+#define DEBUG 1
+
+#ifdef MACRO // 정의가 되어있으면 수행
+#endif
+
+#if DEBUG // DEBUG가 나타내는 값 또는 식이 참이면 수행
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;파일 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;FILE_NAME&amp;gt; // 표준라이브러리에서 파일 참조
+#include &amp;#34;FILE_NAME&amp;#34; // 현재 경로 기준 파일 참조
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;→ [&lt;em&gt;활용&lt;/em&gt;]: 헤더파일 중복 참조 방지법&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -283,10 +1424,39 @@ nodejs 버전이 낮다고 한다. github에서 받아서 빌드하여 써 보�
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake/</guid>
-      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
-cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
-make : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일
-cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다. 1. mkdir build2.</description>
+      <description>&lt;h1 id=&#34;cmake&#34;&gt;CMake&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cmake CMakeList.txt&lt;/code&gt; : CMakeList.txt파일 안의 내용을 수행한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cmake .&lt;/code&gt; : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt; : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. mkdir build
+2. vi CMakeList.txt 후 내용 작성
+3. cd build
+4. cmake ..
+5. make
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;CmakeLists.txt 작성은 쉘 프로그래밍과 유사하다. cmake 문법을 사용하여 작성해 주면 된다. 미리 지정된 변수들도 있는데, 해당 변수들에 주의하며 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문법&#34;&gt;문법&lt;/h2&gt;
+&lt;h3 id=&#34;빌드-설정&#34;&gt;빌드 설정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ADD_EXECUTABLE&lt;/code&gt; : 실행파일 생성
+ex) &lt;code&gt;ADD_EXECUTABLE(main.exe main.cpp function.cpp)&lt;/code&gt; : main.cpp와 function.cpp를 사용해 main.exe를 생성한다. 헤더 파일은 자동으로 적용된다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -295,10 +1465,51 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/ci_cd/docker/</guid>
-      <description>Docker 리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술 가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다. 게스트는 호스트 OS와 자원을 공유한다. immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태 Startup 설치 링크 참조 docker api 리눅스 설치 : sudo apt-get install docker 실행 DockerFile 이름의 파일을 생성하고 내용을 채워넣는다.
-공식 가이드
-python 서버 실행 예시
-# python:3.10의 이미지로 부터FROM python:3.9# 제작자 및 author 기입LABEL maintainer=&amp;#34;huisam@naver.</description>
+      <description>&lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 커널의 cgroups와 namespace에 의해 제공되는 기술&lt;/li&gt;
+&lt;li&gt;가상화 기능의 일종으로, 별도의 OS를 갖지 않아 VM(Virtual Machine) 보다 가볍다.&lt;/li&gt;
+&lt;li&gt;게스트는 호스트 OS와 자원을 공유한다.&lt;/li&gt;
+&lt;li&gt;immutable infrastructure : 서비스 운영 환경을 통째로 이미지화 하여 배포하는 형태&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;startup&#34;&gt;Startup&lt;/h2&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository&#34;&gt;링크 참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docker api 리눅스 설치 : &lt;code&gt;sudo apt-get install docker&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;실행&#34;&gt;실행&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DockerFile&lt;/code&gt; 이름의 파일을 생성하고 내용을 채워넣는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.docker.com/engine/reference/builder/&#34;&gt;공식 가이드&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;python 서버 실행 예시&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# python:3.10의 이미지로 부터
+FROM python:3.9
+# 제작자 및 author 기입
+LABEL maintainer=&amp;#34;huisam@naver.com&amp;#34;
+
+# 해당 디렉토리에 있는 모든 하위항목들을 &amp;#39;/app/server`로 복사한다
+COPY . /app/server
+
+# image의 directory로 이동하고
+WORKDIR /app/server
+
+# 필요한 의존성 file들 설치
+RUN pip3 install -r requirements.txt
+
+# 환경 설정 세팅
+RUN python setup.py install
+
+# container가 구동되면 실행
+ENTRYPOINT [&amp;#34;python&amp;#34;, &amp;#34;Server.py&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;리눅스 실행 예시&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -307,7 +1518,31 @@ python 서버 실행 예시
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/json_c&#43;&#43;/</guid>
-      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
+      <description>&lt;h1 id=&#34;json-library-in-c&#34;&gt;Json library in C++&lt;/h1&gt;
+&lt;h2 id=&#34;rapid-json&#34;&gt;Rapid Json&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;커뮤니티&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;오픈소스로 다양한 예제코드를 찾을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;parsing 속도&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;다른 Json 파싱 라이브러리와 비교시 상위권에 위치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;라이브러리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;헤더 온리 사용이 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;참조&#34;&gt;참조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://joycecoder.tistory.com/9&#34;&gt;https://joycecoder.tistory.com/9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Tencent/rapidjson/&#34;&gt;https://github.com/Tencent/rapidjson/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -316,7 +1551,61 @@ python 서버 실행 예시
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_command/</guid>
-      <description>Linux Command 리눅스에서 사용되는 명령어들을 정리한다. 자주 사용되는 모듈의 명령어도 포함한다. 리눅스에서 명령어는 /usr/bin/ 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다. 유저 개인의 명령어를 따로 설정 및 관리하려면 ~/.bashrc 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다. 기본적으로 ~/bin/ 경로가 PATH에 추가되어 있다. export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...] 명령어를 ~/.bashrc 에 추가하면 경로를 추가할 수 있다. ex) # in .bashrc filePATH=$PATH:/home/user/bashrc # 기존의 PATH에 /home/user/.bashrc 추가# 현재 PATH는 .bashrc 포함PATH=$PATH:/home/user/dir1:/home/user/dir2 # 기존의 PATH에 dir1, dir2 추가# 현재 PATH는 .</description>
+      <description>&lt;h1 id=&#34;linux-command&#34;&gt;Linux Command&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 사용되는 명령어들을 정리한다.&lt;/li&gt;
+&lt;li&gt;자주 사용되는 모듈의 명령어도 포함한다.&lt;/li&gt;
+&lt;li&gt;리눅스에서 명령어는 &lt;code&gt;/usr/bin/&lt;/code&gt; 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다.&lt;/li&gt;
+&lt;li&gt;유저 개인의 명령어를 따로 설정 및 관리하려면 &lt;code&gt;~/.bashrc&lt;/code&gt; 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;기본적으로 &lt;code&gt;~/bin/&lt;/code&gt; 경로가 PATH에 추가되어 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...]&lt;/code&gt; 명령어를 &lt;code&gt;~/.bashrc&lt;/code&gt; 에 추가하면 경로를 추가할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;ex)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# in .bashrc file
+PATH=$PATH:/home/user/bashrc  # 기존의 PATH에 /home/user/.bashrc 추가
+# 현재 PATH는 .bashrc 포함
+PATH=$PATH:/home/user/dir1:/home/user/dir2  # 기존의 PATH에 dir1, dir2 추가
+# 현재 PATH는 .bashrc, dir1, dir2 포함
+
+export PATH  # PATH를 적용
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;적용 후 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 .bashrc를 재적용 해 주면 설정이 완료된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;리눅스 쉘에서 위 쉘코드를 바로 입력해도 적용은 가능하지만, 이 경우 재부팅시 설정이 초기화된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;리눅스-기본&#34;&gt;리눅스 기본&lt;/h2&gt;
+&lt;h3 id=&#34;리눅스-설정-관련&#34;&gt;리눅스 설정 관련&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stty -a&lt;/code&gt;: 시그널 단축키들의 값 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;strace FILE_NAME&lt;/code&gt;: 실행파일이 실행되는 상세 과정을 라인별로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getconf&lt;/code&gt;  리눅스의 시스템 변수 값을 확인하는 명령어
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;getconf -a&lt;/code&gt;: 모든 시스템 변수를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getconf LONG_BIT&lt;/code&gt;: 시스템이 x64라면 64를, x86이라면 32를 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ldd FILE_NAME&lt;/code&gt; : FILE_NAME 을 실행하는데 필요한 라이브러리 의존성을 확인한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-시스템-조작&#34;&gt;파일 시스템 조작&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkdir&lt;/code&gt; : 디렉터리를 생성하는 명령여
+&lt;ul&gt;
+&lt;li&gt;parent 디렉터리가 존재하지 않는다면 &lt;code&gt;mkdir -p&lt;/code&gt; 명령어로 한 번에 생성 가능 (ex: &lt;code&gt;mkdir -R A/B/C/D&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문자열-조작&#34;&gt;문자열 조작&lt;/h2&gt;
+&lt;h3 id=&#34;sed&#34;&gt;sed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다.&lt;/li&gt;
+&lt;li&gt;ed는 대화형 편집기이며, sed는 스트리밍 편집기&lt;/li&gt;
+&lt;li&gt;\n 을 개행문자로 사용하는 스트리밍 에디터&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sed [-e script][-f script-file][file...]&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -325,7 +1614,14 @@ python 서버 실행 예시
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/log_c&#43;&#43;/</guid>
-      <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
+      <description>&lt;h1 id=&#34;spdlog&#34;&gt;spdlog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리&lt;/li&gt;
+&lt;li&gt;fast, header only, no dependency, .. 등 장점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;참조&#34;&gt;참조&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://isocpp.org/blog/2014/11/spdlog&#34;&gt;https://isocpp.org/blog/2014/11/spdlog&lt;/a&gt;
+&lt;a href=&#34;https://github.com/gabime/spdlog&#34;&gt;https://github.com/gabime/spdlog&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -334,7 +1630,39 @@ python 서버 실행 예시
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs/</guid>
-      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) npm audit : 의존성 문제가 발생했을 때, npm audit fix : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.</description>
+      <description>&lt;h1 id=&#34;nodejs&#34;&gt;Node.js&lt;/h1&gt;
+&lt;h2 id=&#34;기본-명령&#34;&gt;기본 명령&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm init&lt;/code&gt; : 패키지 생성&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm install&lt;/code&gt; : 라이브러리 설치
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-P&lt;/code&gt; : package.json에 저장, 기본옵션&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-O&lt;/code&gt; : optionalDependencies에 저장&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-D&lt;/code&gt;, &lt;code&gt;--no-save&lt;/code&gt; : 기록없이 다운로드&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-g&lt;/code&gt; : 글로벌 설치, 모든 프로젝트에 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MODULE_NAME@VERSION&lt;/code&gt; : 버전 설정, latest는 가장 최근 버전을 의미&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node main.js&lt;/code&gt; : 실행(main.js)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npx &amp;lt;package_name&amp;gt;&lt;/code&gt; : 설치하지 않고 일회만 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node main.js&lt;/code&gt; : 패키지 실행 (main.js파일)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm audit&lt;/code&gt; : 의존성 문제가 발생했을 때,
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm audit fix&lt;/code&gt; : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.json 파일을 수정할 수 있으므로 주의. &amp;ndash;fix 옵션을 넣어서 강제로 수정할 수도 있지만, 오히려 되던 기능이 안 될 수도 있으므로 추천하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm cache clean&lt;/code&gt; : 캐싱된 데이터를 정리할 수 있다. &amp;ndash;force 옵션을 넣어 강제로 처리 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;구조&#34;&gt;구조&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;main.js&lt;/code&gt; : nodejs 실행시 실행할 메인 파일&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; : root 경로에 존재하며, npm 프로젝트를 관리하는 파일&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/node_modules&lt;/code&gt; : 프로젝트에서 사용되는 모듈들이 저장되는 파일이다. npm install 명령 사용시 모듈들이 다운받아지는 경로이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;packagejson&#34;&gt;package.json&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;nodejs 설정을 담고있는 파일로, 참조할 내용이 많아 아래에 따로 정리한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -343,8 +1671,60 @@ python 서버 실행 예시
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/mysql/</guid>
-      <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax
-명령어에서 대소문자는 상관없다. mysql에서 주석은 #을 사용한다. 한줄 주속은 -- 을 사용한다. -- 뒤에 공백 없이 바로 문자나 문자가 아닌 문자가 올 경우, SQL 엔진에 따라 주석으로 인식되지 않을 수도 있어서, 일반적으로 -- (띄어쓰기 포함) 또는 -- - 같이 공백이나 의미 없는 문자를 추가해서 주석임을 명확히 해준다. 이건 DBMS에 따라 차이가 있지만, 일부 엔진(MySQL 등)은 -- 뒤에 공백이 있어야 주석으로 인식한다. 실행 및 로그인 mysql mysql 실행, 기본으로 설정된 user로 로그인됨 mysql -u 아이디 -p -u: 특정 아이디로 로그인 -p: 로그인시 비밀번호 입력하도록 데이터베이스 관리 DB 생성 UTF8 로 문자열 저장하기 CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8 DB 목록확인 show databases DB 선택 use DB_NAME 종료 EXIT 로그인 &amp;amp; 데이터베이스 선택 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도 -u DB_NAME 옵션은 로그인 후 $use DB_NAME 과 같은 효과 테이블 생성 및 관리 (DDL) TABLE_NAME 테이블의 스키마 확인 desc TABLE_NAME</description>
+      <description>&lt;h1 id=&#34;mysql&#34;&gt;mysql&lt;/h1&gt;
+&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
+&lt;p&gt;문법 참조 : &lt;a href=&#34;http://tcpschool.com/mysql/mysql_basic_syntax&#34;&gt;http://tcpschool.com/mysql/mysql_basic_syntax&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;명령어에서 대소문자는 상관없다.&lt;/li&gt;
+&lt;li&gt;mysql에서 주석은 &lt;code&gt;#&lt;/code&gt;을 사용한다.&lt;/li&gt;
+&lt;li&gt;한줄 주속은 &lt;code&gt;--&lt;/code&gt; 을 사용한다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--&lt;/code&gt; 뒤에 공백 없이 바로 문자나 문자가 아닌 문자가 올 경우, SQL 엔진에 따라 주석으로 인식되지 않을 수도 있어서, 일반적으로 &lt;code&gt;-- &lt;/code&gt;(띄어쓰기 포함) 또는 &lt;code&gt;-- -&lt;/code&gt; 같이 공백이나 의미 없는 문자를 추가해서 주석임을 명확히 해준다. 이건 DBMS에 따라 차이가 있지만, 일부 엔진(MySQL 등)은 &lt;code&gt;--&lt;/code&gt; 뒤에 공백이 있어야 주석으로 인식한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;실행-및-로그인&#34;&gt;실행 및 로그인&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;mysql&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;mysql 실행, 기본으로 설정된 user로 로그인됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;code&gt;mysql -u 아이디 -p&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;/code&gt;: 특정 아이디로 로그인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;: 로그인시 비밀번호 입력하도록&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;데이터베이스-관리&#34;&gt;데이터베이스 관리&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;DB 생성
+&lt;ul&gt;
+&lt;li&gt;UTF8 로 문자열 저장하기
+&lt;code&gt;CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DB 목록확인
+&lt;code&gt;show databases&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;DB 선택
+&lt;code&gt;use DB_NAME&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;종료
+&lt;code&gt;EXIT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;로그인 &amp;amp; 데이터베이스 선택
+&lt;code&gt;$ mysql -p DB_NAME -u USER_NAME&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행&lt;/li&gt;
+&lt;li&gt;USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도&lt;/li&gt;
+&lt;li&gt;-u DB_NAME 옵션은 로그인 후 &lt;code&gt;$use DB_NAME&lt;/code&gt; 과 같은 효과&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;테이블-생성-및-관리-ddl&#34;&gt;테이블 생성 및 관리 (DDL)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;TABLE_NAME 테이블의 스키마 확인
+&lt;code&gt;desc TABLE_NAME&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -353,7 +1733,37 @@ python 서버 실행 예시
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
-      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
+      <description>&lt;h1 id=&#34;python-cgi&#34;&gt;python CGI&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CGI는 Common Gateway Interface의 약자다.&lt;/li&gt;
+&lt;li&gt;web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다.&lt;/li&gt;
+&lt;li&gt;web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다.&lt;/li&gt;
+&lt;li&gt;apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ a2enmod CGI&lt;/code&gt; 명령으로 apache의 CGI를 켜 주고, &lt;code&gt;sudo service apache2 restart&lt;/code&gt; 로 설정 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt; 안에 apache 실행시 발생한 에러 로그가 담겨있다.&lt;/li&gt;
+&lt;li&gt;웹 브라우저가 웹 서버에 요청할 때 웹 서버는 응답으로 웹 페이지의 데이터 타입(헤더)와 함께 웹 페이지를 전송한다.
+python CGI로는 &lt;code&gt;print(&amp;quot;content-type:text/html; charset=UTF-8\n&amp;quot;)&lt;/code&gt; 와 같이 헤더를 표기낸다.&lt;/li&gt;
+&lt;li&gt;헤더를 출력한 다음 부터는 body 부분이 출력된다.&lt;/li&gt;
+&lt;li&gt;특정 주소로 Redirection을 할 때에는 &lt;code&gt;print(&amp;quot;location : index.py?id=title&amp;quot;)&lt;/code&gt;을 이용한다. ( &amp;lsquo;:&amp;rsquo; 이후 부터 &amp;lsquo;&amp;quot;&amp;rsquo; 까지는 원하는대로 작성)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;formatting&#34;&gt;formatting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;string에서 특정 문자열을 다른 문자로 치환하는 기능
+ex) &lt;code&gt;&#39;{} {}&#39;.format(&#39;one&#39;,&#39;tow&#39;)&lt;/code&gt;
+ex) &lt;code&gt;&#39;{a} {b}&#39;.format(a=&#39;hello&#39;, b=&#39;world&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cgi-모듈&#34;&gt;CGI 모듈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import cgi&lt;/code&gt; 로 모듈을 로드해 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form = cgi.FieldStorage()&lt;/code&gt; form은 jQuery와 같은 역할을 한다.
+ex) &lt;code&gt;pageId = form[&#39;id&#39;].value&lt;/code&gt; : page의 id를 가져온다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html-연동&#34;&gt;HTML 연동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;input 태그의 name 속성 : input 태그를 특정 이름으로 CGI에 전달함
+ex)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -362,16 +1772,34 @@ python 서버 실행 예시
       <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/javascript/</guid>
-      <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성
-document를 호출하고, .으로 함수를 호출한다.
-querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음
-querySelectorAll(&amp;rsquo;&amp;rsquo;)로 원하는 속성의 element들을 nodeList(배열과 유사)형태로 선택 가능
-ex ) document.querySelector(&#39;body&#39;)
-ex ) document.querySelector(&#39;#new&#39;)
-ex ) document.write(&amp;quot;hello world&amp;quot;)
-태그 안에 javaScript를 사용하는 속성값으로 사용
-ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quot; onclick=&amp;quot;alert(&#39;hello&#39;)&amp;quot;&amp;gt;
-특정 태그 안에서 자기자신을 호출할 때에는 querySelector를 호출하지 않고 this를 사용하면 된다.</description>
+      <description>&lt;h1 id=&#34;javascript&#34;&gt;JavaScript&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;기본적으로 HTML 위에서 돌아가는 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;body 태그 안에 &lt;script&gt; &lt;/script&gt; 태그를 넣고 안에 작성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;document를 호출하고, .으로 함수를 호출한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;querySelectorAll(&amp;rsquo;&amp;rsquo;)로 원하는 속성의 element들을 nodeList(배열과 유사)형태로 선택 가능&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;document.querySelector(&#39;body&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;document.querySelector(&#39;#new&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;document.write(&amp;quot;hello world&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;태그 안에 javaScript를 사용하는 속성값으로 사용&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quot; onclick=&amp;quot;alert(&#39;hello&#39;)&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;특정 태그 안에서 자기자신을 호출할 때에는 querySelector를 호출하지 않고 this를 사용하면 된다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -380,11 +1808,28 @@ ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quo
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/css/</guid>
-      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐 tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다. html 문서 안에 &amp;lt;style&amp;gt; 태그 안에 작성 가능
-ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
-태그의 종류별로 속성 설정 가능
-여기서 태그 a 는 선택자(selector)라고 한다.
-선택자는 ,로 구별하여 함께 사용 가능</description>
+      <description>&lt;h1 id=&#34;css&#34;&gt;CSS&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다.&lt;/li&gt;
+&lt;li&gt;중복의 제거 가능, 유지보수 수월, 가독성 증가&lt;/li&gt;
+&lt;li&gt;위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐&lt;/li&gt;
+&lt;li&gt;tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;html 문서 안에 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 태그 안에 작성 가능&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;&amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;태그의 종류별로 속성 설정 가능&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;여기서 태그 a 는 선택자(selector)라고 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;선택자는 ,로 구별하여 함께 사용 가능&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -393,7 +1838,33 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/html/</guid>
-      <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하고 &amp;lt;/TAG_NAME&amp;gt;로 끝냄 태그별로 검색 엔진에서 노출되는 중요도가 다르다. 태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다. html : body와 head를 통틀어 묶은 최 고위 태그 관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다. body : 본문을 묶는 태그 head : 본문을 설명하는 태그 속성(attribute) &amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음 body 속성 strong : 굵은 글씨</description>
+      <description>&lt;h1 id=&#34;html&#34;&gt;HTML&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;태그&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;element라고 칭하기도 한다.&lt;/li&gt;
+&lt;li&gt;부모 자식 관계가 존재&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAG_NAME&amp;gt;&lt;/code&gt; 로 시작하고 &lt;code&gt;&amp;lt;/TAG_NAME&amp;gt;&lt;/code&gt;로 끝냄&lt;/li&gt;
+&lt;li&gt;태그별로 검색 엔진에서 노출되는 중요도가 다르다.&lt;/li&gt;
+&lt;li&gt;태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다.&lt;/li&gt;
+&lt;li&gt;html : body와 head를 통틀어 묶은 최 고위 태그&lt;/li&gt;
+&lt;li&gt;관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다.&lt;/li&gt;
+&lt;li&gt;body : 본문을 묶는 태그&lt;/li&gt;
+&lt;li&gt;head : 본문을 설명하는 태그&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;속성(attribute)
+&amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;body&#34;&gt;body&lt;/h2&gt;
+&lt;h3 id=&#34;속성&#34;&gt;속성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;strong : 굵은 글씨&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -402,12 +1873,14 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_apt/</guid>
-      <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
-하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
-본 해프닝에 대해 서술하자면 아래와 같다.
-원인 /bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.
-환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.
-현상 apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.</description>
+      <description>&lt;p&gt;Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.&lt;/p&gt;
+&lt;p&gt;하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.&lt;/p&gt;
+&lt;p&gt;본 해프닝에 대해 서술하자면 아래와 같다.&lt;/p&gt;
+&lt;h2 id=&#34;원인&#34;&gt;원인&lt;/h2&gt;
+&lt;p&gt;/bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.&lt;/p&gt;
+&lt;p&gt;환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.&lt;/p&gt;
+&lt;h2 id=&#34;현상&#34;&gt;현상&lt;/h2&gt;
+&lt;p&gt;apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -416,12 +1889,13 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/hugo/hugo_dev/</guid>
-      <description>Hugo를 이용해 블로그 만들기 Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.
-게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.
-Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.
-내 컴퓨터에는 Go가 이미 설치되 있던 터라 apt-get으로 hugo를 받아서 사용해 보았다.
-설치는 정상적으로 되었고, 처음에는 잘 동작하는 듯 했는데, theme을 적용하니 ERROR들이 뜨기 시작했다.
-인터넷 검색을 아무리 해 봐도 해결책이 보이지 않고, 해당 git에 issue를 날려보기도 했는데 응답이 없어서 혼자 이것저것 뒤져 보았다.</description>
+      <description>&lt;h1 id=&#34;hugo를-이용해-블로그-만들기&#34;&gt;Hugo를 이용해 블로그 만들기&lt;/h1&gt;
+&lt;p&gt;Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.&lt;/p&gt;
+&lt;p&gt;게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.&lt;/p&gt;
+&lt;p&gt;Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.&lt;/p&gt;
+&lt;p&gt;내 컴퓨터에는 Go가 이미 설치되 있던 터라 apt-get으로 hugo를 받아서 사용해 보았다.&lt;/p&gt;
+&lt;p&gt;설치는 정상적으로 되었고, 처음에는 잘 동작하는 듯 했는데, theme을 적용하니 ERROR들이 뜨기 시작했다.&lt;/p&gt;
+&lt;p&gt;인터넷 검색을 아무리 해 봐도 해결책이 보이지 않고, 해당 git에 issue를 날려보기도 했는데 응답이 없어서 혼자 이것저것 뒤져 보았다.&lt;/p&gt;</description>
     </item>
     
   </channel>

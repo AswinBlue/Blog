@@ -13,7 +13,441 @@
       <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/assembly/assembly_basic/</guid>
-      <description>Assembly 기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다. operation code(명령어) 와 operand(피연산자) 로 구성된다. 명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다. 피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다. 숫자를 넣으면 상수이다. [] 로 둘러싸인 숫자는 메모리이다. 메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다. BYTE: 8bit BYTE PTR rax : rax 레지스터의 데이터를 1바이트만큼 참조 WORD: 16bit WORD PTR [0x8048000] : 0x8048000의 데이터를 2바이트만큼 참조 DWORD: 32bit QWORD: 64bit 명령어 mov &amp;ldquo;값&amp;quot;을 레지스터리나 메모리에 저장하는 명령 mov dst, src : src 값을 dst에 덮어씀 mov rdi, rsi : rsi의 값을 rdi에 대입 mov QWORD PTR[rdi], rsi : rsi의 값을 rdi가 가리키는 주소에 대입 mov QWORD PTR[rdi + 8 * rcx], rsi : rsi의 값을 (rdi + 8 * rcx)가 가리키는 주소에 대입 dst = 레지스터, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 레지스터, src = 메모리 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀 dst = 메모리, src = 메모리 : 불가능 mov dst, [mem + 4] : mem + 4 주소에 저장된 값을 dst에 덮어씀 dst 값으로는 주소나 포인터가 올 수 있다.</description>
+      <description>&lt;h1 id=&#34;assembly&#34;&gt;Assembly&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;기계어로 1대1 대응 가능한 언어로, human readable 한 언어 중 가장 기계어에 가까운 언어이다. 기계어로 컴파일 직전에 어셈블리어로 변환을 거친다.&lt;/li&gt;
+&lt;li&gt;operation code(명령어) 와 operand(피연산자) 로 구성된다.&lt;/li&gt;
+&lt;li&gt;명령어는 데이터 이동, 산술연산, 논리연산, 비교, 분기, 스택, 프로시저, 시스템콜의 종류가 있다.&lt;/li&gt;
+&lt;li&gt;피연산자 자리에는 상수(Immediate Value), 레지스터(Register), 메모리(Memory)가 올 수 있다.
+&lt;ul&gt;
+&lt;li&gt;숫자를 넣으면 상수이다.&lt;/li&gt;
+&lt;li&gt;[] 로 둘러싸인 숫자는 메모리이다.&lt;/li&gt;
+&lt;li&gt;메모리 피연산자 앞에는 메모리의 크기를 나타내는 크기 지정자(Size Directive)가 붙을 수 있다.
+&lt;ul&gt;
+&lt;li&gt;BYTE: 8bit
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BYTE PTR rax&lt;/code&gt; : rax 레지스터의 데이터를 1바이트만큼 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WORD: 16bit
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;WORD PTR [0x8048000]&lt;/code&gt; : 0x8048000의 데이터를 2바이트만큼 참조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DWORD: 32bit&lt;/li&gt;
+&lt;li&gt;QWORD: 64bit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;mov
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;값&amp;quot;을 레지스터리나 메모리에 저장하는 명령&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mov dst, src&lt;/code&gt; : src 값을 dst에 덮어씀
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mov rdi, rsi&lt;/code&gt; : rsi의 값을 rdi에 대입&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mov QWORD PTR[rdi], rsi&lt;/code&gt; : rsi의 값을 rdi가 가리키는 주소에 대입&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mov QWORD PTR[rdi + 8 * rcx], rsi&lt;/code&gt; : rsi의 값을 (rdi + 8 * rcx)가 가리키는 주소에 대입&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dst = 레지스터, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀&lt;/li&gt;
+&lt;li&gt;dst = 메모리, src = 레지스터 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀&lt;/li&gt;
+&lt;li&gt;dst = 레지스터, src = 메모리 : src가 가리키는 주소의 값을 dst가 가리키는 주소의 값에 덮어씀&lt;/li&gt;
+&lt;li&gt;dst = 메모리, src = 메모리 : 불가능&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mov dst, [mem + 4]&lt;/code&gt; : mem + 4 주소에 저장된 값을 dst에 덮어씀&lt;/li&gt;
+&lt;li&gt;dst 값으로는 주소나 포인터가 올 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lea
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;주소&amp;quot;를 레지스터리나 메모리에 저장하는 명령&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lea dst, src&lt;/code&gt; : src값을 dst에 덮어씀 (src는 주소값)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lea rsi, [rbx + 8 * rcx]&lt;/code&gt; : (rbx + 8 * rcx) 를 rsi에 대입&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lea dst, [mem + 4]&lt;/code&gt; : mem 값에 4를 더한 값을 dst에 덮어씀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;add
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;add dst, src&lt;/code&gt; : dst 에 있는 값에 src 값을 더해 dst에 덮어씀&lt;/li&gt;
+&lt;li&gt;dst는 주소, src는 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;sub
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sub dst, src:&lt;/code&gt; : dst 에 있는 값에 src 값을 빼고 dst 주소에 덮어씀&lt;/li&gt;
+&lt;li&gt;dst는 주소, src는 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;inc
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;inc op&lt;/code&gt; : op 에 있는 값을 1 증가시킴&lt;/li&gt;
+&lt;li&gt;op는 주소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dec
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dec op&lt;/code&gt; : op 에 있는 값을 1 감소시킴&lt;/li&gt;
+&lt;li&gt;op는 주소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;and
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;and dst, src&lt;/code&gt; : src와 dst 값을 and 연산한 결과를 dst에 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;or
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;or dst, src&lt;/code&gt; : src와 dst 값을 or 연산한 결과를 dst에 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;xor
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;xor dst, src&lt;/code&gt; : src와 dst 값을 xor 연산한 결과를 dst에 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;not&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;not op&lt;/code&gt; : op 값을 not 연산한 값을 op에 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;comp
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cmp rax, rbx&lt;/code&gt; : rax 값과 rbx 값을 비교한 후, 결과에 따라 플래그 설정&lt;/li&gt;
+&lt;li&gt;if rax == rbx: ZF = 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;test
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;test rax, rbx&lt;/code&gt; : rax 값과 rbx 값을 and 연산 후, 결과에 따라 플래그 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;jmp
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;jmp addr&lt;/code&gt; : addr 주소로 rip를 이동한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;je
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;je addr&lt;/code&gt; : 직전에 비교한 &lt;code&gt;cmp rax rbx&lt;/code&gt; 연산에서  rax == rbx 라면 addr로 rip 를 이동한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;jg
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;jg addr&lt;/code&gt; : 직전에 비교한 &lt;code&gt;cmp rax rbx&lt;/code&gt; 연산에서  rax &amp;gt; rbx 라면 addr로 rip 를 이동한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;push
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;push val&lt;/code&gt; : 스택의 최상단에 &amp;lsquo;val&amp;rsquo; 값을 집어넣는다.&lt;/li&gt;
+&lt;li&gt;rsp 를 한칸 위로 옮기고, 그 위치에 &amp;lsquo;val&amp;rsquo;을 대입한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rsp -= 8; [rsp] = val&lt;/code&gt; 동작과 동일하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;push val&lt;/code&gt; 형태로는 4byte 데이터밖에 주입할 수 없으므로, 4byte를 초과하는 데이터를 주입할 때는 값을 레지스터에 대입하고, 레지스터를 push한다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;   mov rax 0x0102030405060708
+   push rax
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;pop
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pop rax&lt;/code&gt; : 스택의 최상단에 있는 값을 &amp;lsquo;rax&amp;rsquo; 주소에 대입한다.&lt;/li&gt;
+&lt;li&gt;rsp 위치의 값을 반환하고, rsp 를 한칸 밑으로 옮긴다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rsp += 8; reg = [rsp-8]&lt;/code&gt; 동작과 동일하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;call
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;call addr&lt;/code&gt; &amp;lsquo;addr&amp;rsquo; 위치의 프로시저를 호출&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;push&amp;rsquo; 명령과 &amp;lsquo;jump&amp;rsquo; 명령으로 구현할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;스택에 다음 실행 주소를 push한다. (push rip + 8)&lt;/li&gt;
+&lt;li&gt;rip를 실행시키고 싶은 명령어가 적힌 주소로 이동한다. (jump)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;leave&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;rsp를 rbp + 8 위치로 이동한다.&lt;/li&gt;
+&lt;li&gt;rbp도 갱신한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mov rsp, rbp; pop rbp&lt;/code&gt; 명령과 동일하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;20&#34;&gt;
+&lt;li&gt;ret
+&lt;ul&gt;
+&lt;li&gt;rip를 rsp가 가리키는 스택의 주소에 담긴 값으로 이동한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pop rip&lt;/code&gt; 명령과 동일하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;시스템콜&#34;&gt;시스템콜&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;운영체제는 하드웨어 및 소프트웨어를 총괄하며, 접근 권한을 제한하여 해킹으로부터 컴퓨터를 보호하기 위해 커널 모드와 유저 모드로 권한을 분리한다.&lt;/li&gt;
+&lt;li&gt;시스템 콜은 유저모드에서 시스템에게 커널 모드에서 실행할 수 있는 동작들을 요청하는 동작이다.
+&lt;ul&gt;
+&lt;li&gt;유저가 시스템 콜을 호출하면 커널은 이를 실행하고, 결과를 유저에게 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;레지스터&#34;&gt;레지스터&lt;/h2&gt;
+&lt;h3 id=&#34;범용-레지스터&#34;&gt;범용 레지스터&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../computerscience/computer_science/#x86-64-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EB%A0%88%EC%A7%80%EC%8A%A4%ED%84%B0&#34;&gt;x86-64 아키텍처 레지스터 참조&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;r0 ~ r15까지 존재하며, r0 ~ r7 까지는 이름이 붙고, r8부터 r15까지는 숫자로 부른다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;rax : (Extended Accumulator Register) 사칙연산에서 자동으로 피연산자의 값이 저장된다.
+&lt;ul&gt;
+&lt;li&gt;논리 연산(덧셈, 뺄셈 등)의 결과값이 저장된다.&lt;/li&gt;
+&lt;li&gt;피연산자와 별개로 데이터가 저장된다.&lt;/li&gt;
+&lt;li&gt;시스템 콜의 실질적인 번호를 가리킴&lt;/li&gt;
+&lt;li&gt;시스템 콜의 반환값도 rax에 저장됨&lt;/li&gt;
+&lt;li&gt;x64구조에서 rax 를 사용하고, x86구조에서는 eax 를 사용했다.&lt;/li&gt;
+&lt;li&gt;ax : eax가 사용되기 이전, CPU의 word가 16bit 일 때 사용되던 레지스터&lt;/li&gt;
+&lt;li&gt;큰 의미는 없지만 관습처럼 사용되며 eax에서 하위 2byte를 자른 값을 나타낸다.&lt;/li&gt;
+&lt;li&gt;ax 는 다시 ah와 al로 한 byte씩 나뉜다.
+&lt;ul&gt;
+&lt;li&gt;ah : ax에서 상위 1byte&lt;/li&gt;
+&lt;li&gt;al : ax에서 하위 1byte&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;byte_8&lt;/th&gt;
+          &lt;th&gt;byte_7&lt;/th&gt;
+          &lt;th&gt;byte_6&lt;/th&gt;
+          &lt;th&gt;byte_5&lt;/th&gt;
+          &lt;th&gt;byte_4&lt;/th&gt;
+          &lt;th&gt;byte_3&lt;/th&gt;
+          &lt;th&gt;byte_2&lt;/th&gt;
+          &lt;th&gt;byte_1&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rax_8&lt;/td&gt;
+          &lt;td&gt;rax_7&lt;/td&gt;
+          &lt;td&gt;rax_6&lt;/td&gt;
+          &lt;td&gt;rax_5&lt;/td&gt;
+          &lt;td&gt;rax_4&lt;/td&gt;
+          &lt;td&gt;rax_3&lt;/td&gt;
+          &lt;td&gt;rax_2&lt;/td&gt;
+          &lt;td&gt;rax_1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;eax_4&lt;/td&gt;
+          &lt;td&gt;eax_3&lt;/td&gt;
+          &lt;td&gt;eax_2&lt;/td&gt;
+          &lt;td&gt;eax_1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;ax_2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;ah&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rbx(ebx) : (Extended Base register)메모리 주소를 저장하는 용도로 사용&lt;/li&gt;
+&lt;li&gt;rcx(ecx) : (Extended Counter Register)CPU loop counter&lt;/li&gt;
+&lt;li&gt;rdx(edx) : 시스템 콜 실행 시 세 번째 인자의 주소 / (Extended Data Register)&lt;/li&gt;
+&lt;li&gt;rsi : 시스템 콜 실행시 두 번째 인자의 주소 / (source index) 데이터 이동시 원본을 가리키는 주소
+&lt;ul&gt;
+&lt;li&gt;x64구조에서 rsi 를 사용하고, x86구조에서는 esi 를 사용했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rdi : 함수 실행시 첫 번째 인자의 주소 / 시스템 콜 실행시 첫 번째 인자의 주소 / (destination index) 데이터 이동시 목적지를 가리키는 주소
+&lt;ul&gt;
+&lt;li&gt;x64구조에서 rdi 를 사용하고, x86구조에서는 edi 를 사용했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rbp : (Base Register Pointer)스택 복귀 주소
+&lt;ul&gt;
+&lt;li&gt;rbp 주소에는 함수가 종료되고 함수를 호출한 함수(caller) 의 스택 프레임으로 rbp를 이동하기 위한 주소 SFP(Stack Frame Pointer) 가 저장된다. 함수 호출시 호출자(caller)의 SFP를 stack에 넣고, 실행된 함수가 끝날 때 이를 pop하여 함수가 호출된 코드 라인으로 복귀할 수 있다.&lt;/li&gt;
+&lt;li&gt;즉, 함수 호출 시마다 &lt;code&gt;push rbp&lt;/code&gt; 코드를 보게 될 것이다.&lt;/li&gt;
+&lt;li&gt;x64구조에서 rbp 를 사용하고, x86구조에서는 ebp 를 사용했다.&lt;/li&gt;
+&lt;li&gt;ebp : 스택 프레임 최하단의 주소값 (Base pointer register)
+&lt;ul&gt;
+&lt;li&gt;x86에서 사용하는 값으로, x64에서는 rbp로 대체된다.&lt;/li&gt;
+&lt;li&gt;새로운 함수가 호출 될 경우, EBP 값이 스택에 push되어, 이전 함수의 EBP값이 스택에 쌓이게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rsp : 스택의 최상단의 주소
+&lt;ul&gt;
+&lt;li&gt;x64구조에서 rsp 를 사용하고, x86구조에서는 esp 를 사용했다.&lt;/li&gt;
+&lt;li&gt;esp : 스택 최상단의 주소값 (Stack pointer register)
+&lt;ul&gt;
+&lt;li&gt;PUSH, POP, SUB, CALL 명령을 수행 할 때 마다 자동으로 변경된다.&lt;/li&gt;
+&lt;li&gt;PUSH, POP 의 기준이 되는 포인터이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;r8 ~ r15까지는 따로 명칭이 없다.&lt;/li&gt;
+&lt;li&gt;각 레지스터들은 64비트 일때 하위 32비트(=32bit 시스템에서 사용하는 명칭), 하위 16bit, 하위 8bit 를 칭하는 명칭이 각각 존재한다.
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;64비트&lt;/th&gt;
+          &lt;th&gt;하위32비트&lt;/th&gt;
+          &lt;th&gt;하위16비트&lt;/th&gt;
+          &lt;th&gt;하위8비트&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rax&lt;/td&gt;
+          &lt;td&gt;eax&lt;/td&gt;
+          &lt;td&gt;ax&lt;/td&gt;
+          &lt;td&gt;al&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rbx&lt;/td&gt;
+          &lt;td&gt;ebx&lt;/td&gt;
+          &lt;td&gt;bx&lt;/td&gt;
+          &lt;td&gt;bl&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rcx&lt;/td&gt;
+          &lt;td&gt;ecx&lt;/td&gt;
+          &lt;td&gt;cx&lt;/td&gt;
+          &lt;td&gt;cl&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rdx&lt;/td&gt;
+          &lt;td&gt;edx&lt;/td&gt;
+          &lt;td&gt;dx&lt;/td&gt;
+          &lt;td&gt;dl&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rsi&lt;/td&gt;
+          &lt;td&gt;esi&lt;/td&gt;
+          &lt;td&gt;si&lt;/td&gt;
+          &lt;td&gt;sil&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rdi&lt;/td&gt;
+          &lt;td&gt;edi&lt;/td&gt;
+          &lt;td&gt;di&lt;/td&gt;
+          &lt;td&gt;dil&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rbp&lt;/td&gt;
+          &lt;td&gt;ebp&lt;/td&gt;
+          &lt;td&gt;bp&lt;/td&gt;
+          &lt;td&gt;bpl&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rsp&lt;/td&gt;
+          &lt;td&gt;esp&lt;/td&gt;
+          &lt;td&gt;sp&lt;/td&gt;
+          &lt;td&gt;spl&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;r8&lt;/td&gt;
+          &lt;td&gt;r8d&lt;/td&gt;
+          &lt;td&gt;r8w&lt;/td&gt;
+          &lt;td&gt;r8b&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;r9&lt;/td&gt;
+          &lt;td&gt;r9d&lt;/td&gt;
+          &lt;td&gt;r9w&lt;/td&gt;
+          &lt;td&gt;r9b&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;hellip;&lt;/td&gt;
+          &lt;td&gt;&amp;hellip;&lt;/td&gt;
+          &lt;td&gt;&amp;hellip;&lt;/td&gt;
+          &lt;td&gt;&amp;hellip;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;r15&lt;/td&gt;
+          &lt;td&gt;r15d&lt;/td&gt;
+          &lt;td&gt;r15w&lt;/td&gt;
+          &lt;td&gt;r15b&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;세그먼트-레지스터&#34;&gt;세그먼트 레지스터&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;cs, ss, ds, es, fs, gs
+&lt;ul&gt;
+&lt;li&gt;cs : code segment&lt;/li&gt;
+&lt;li&gt;ds : data segment&lt;/li&gt;
+&lt;li&gt;es : extra segment&lt;/li&gt;
+&lt;li&gt;fs, gs : 앞선 세 개의 segment를 만들고 여유분 두개를 추가한 것. cs/ds/es는 CPU가 명확한 사용 용도를 가지는 반면 fs/gs는 정해진 용도가 없어 OS가 임의로 사용 가능
+&lt;ul&gt;
+&lt;li&gt;리눅스에서는 fs segment register를 Thread Local Storage(TLS) 의 포인터로 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;명령어-포인터-레지스터&#34;&gt;명령어 포인터 레지스터&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Instruction Pointer Register, IP&lt;/li&gt;
+&lt;li&gt;rip : 현재 명령 실행 주소
+&lt;ul&gt;
+&lt;li&gt;x64구조에서 rip 를 사용하고, x86구조에서는 eip 를 사용했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;플래그-레지스터&#34;&gt;플래그 레지스터&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CF(Carry Flag) : 부호 없는 수의 연산 결과가 비트의 범위를 넘을 경우 1로 세팅&lt;/li&gt;
+&lt;li&gt;ZF(Zero Flag) : 연산의 결과가 0일 경우 1로 세팅&lt;/li&gt;
+&lt;li&gt;SF(Sign Flag) : 연산의 결과가 음수일 경우 1로 세팅&lt;/li&gt;
+&lt;li&gt;OF(Overflow Flag) : 부호 있는 수의 연산 결과가 비트 범위를 넘을 경우 1로 세팅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;프로시저&#34;&gt;프로시저&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 주소의 명령어를 실행하도록 하는 코드이다.&lt;/li&gt;
+&lt;li&gt;프로시저를 사용하면 가독성이 높아지고, 반복되는 코드를 절약할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;section&#34;&gt;Section&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;object 파일 안에서 재배치 될 수 있는 가장 작은 단위를 섹션(section) 이라 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;objdump -h&lt;/code&gt; 로 목적파일의 Section을 확인할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;스택프레임&#34;&gt;스택프레임&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;각 함수들은 실행되면서 지역변수와 임시 값들을 저장해야 하는데, 이 값들은 스택 영역에 저장된다.&lt;/p&gt;</description>
     </item>
     
   </channel>

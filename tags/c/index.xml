@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>c on AswinBlue</title>
+    <title>C on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/c/</link>
-    <description>Recent content in c on AswinBlue</description>
+    <description>Recent content in C on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/c/index.xml" rel="self" type="application/rss+xml" />
@@ -13,11 +13,132 @@
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</guid>
-      <description>Reverse Engineering software 를 분석하여 소스코드를 역으로 생성 해 내는 기법 software 분석 방법 Static analysis 프로그램을 실행시키지 않고 수행하는 분석이다.
-프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.
-난독화 적용시 분석이 어려워 진다는 단점이 있다.
-정적분석에 사용되는 툴로는 IDA 가 있다.
-IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하다. Dynamic analysis 프로그램을 실행시키며 수행하는 분석이다. 프로그램의 개략적인 동작을 빠르게 확인 할 수 있다. 정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.</description>
+      <description>&lt;h1 id=&#34;reverse-engineering&#34;&gt;Reverse Engineering&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;software 를 분석하여 소스코드를 역으로 생성 해 내는 기법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software-분석-방법&#34;&gt;software 분석 방법&lt;/h2&gt;
+&lt;h3 id=&#34;static-analysis&#34;&gt;Static analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;프로그램을 실행시키지 않고 수행하는 분석이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;난독화 적용시 분석이 어려워 진다는 단점이 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;정적분석에 사용되는 툴로는 &lt;code&gt;IDA&lt;/code&gt; 가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;IDA&lt;/code&gt; 는 프리웨어로 &lt;a href=&#34;https://hex-rays.com/ida-free/&#34;&gt;https://hex-rays.com/ida-free/&lt;/a&gt; 에서 다운 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dynamic-analysis&#34;&gt;Dynamic analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그램을 실행시키며 수행하는 분석이다.&lt;/li&gt;
+&lt;li&gt;프로그램의 개략적인 동작을 빠르게 확인 할 수 있다.&lt;/li&gt;
+&lt;li&gt;정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.&lt;/li&gt;
+&lt;li&gt;안티 디버깅 기법 적용된 프로그램은 디버깅이 불가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;ida&#34;&gt;IDA&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리버스 엔지니어링 툴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;단축어&#34;&gt;단축어&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;shift + F12
+&lt;ul&gt;
+&lt;li&gt;문자열 검색, String 탭으로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;상호참조 확인, 변수 또는 함수가 사용되는 곳의 위치를 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;F5
+&lt;ul&gt;
+&lt;li&gt;어셈블리를 C 언어 형태로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 주소 혹은 라인으로 이동&lt;/li&gt;
+&lt;li&gt;디컴파일 된 함수 이름 위에 커서를 놓고 g 를 누르면 어셈블리 상 함수 라인을 확인할 수 있다.&lt;/li&gt;
+&lt;li&gt;함수 이름을 적어도 함수 위치로 이동된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ESC
+&lt;ul&gt;
+&lt;li&gt;이전 커서 위치로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ctrl + Enter
+&lt;ul&gt;
+&lt;li&gt;다음 커서 위치로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;변수 이름 바꾸기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;변수 타입 설정&lt;/li&gt;
+&lt;li&gt;함수 매개변수 변경, 함수 매개변수 타입 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;F2
+&lt;ul&gt;
+&lt;li&gt;어셈블리 혹은 C 언어 라인에서는 break point(중단점) 설정&lt;/li&gt;
+&lt;li&gt;stack 또는 hex View 에서는 값 변경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;F9&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;실행 (run)&lt;/li&gt;
+&lt;li&gt;프로그램을 실행시켜 동적 분석을 수행할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;F8&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;한 단계 실행 (next)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;F7&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;함수 내부로 진입 (step int)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Ctrl + F2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;디버깅 중단&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;hex 데이터를 문자로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;Shift + E&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;선택한 값을 원하는 형태로 변환하여 추출(export)&lt;/li&gt;
+&lt;li&gt;hex 데이터를 문자열로 추출할 때 유용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;화면&#34;&gt;화면&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;IDA View&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,7 +147,46 @@ IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하�
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</guid>
-      <description>Exploit pwntool의 checksec 명령어로 어떤 보안이 적용되었는지 확인 가능하다. Shell Code exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다. Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다. 환경세팅 pwntools checksec shellcraft ROPgadget one_gadget patchelf 취약점 공격 순서 바이너리를 분석하여 보호기법을 확인한다. checksec 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다. checksec 참조 ldd 명령을 활용하여 의존성 관계를 확인한다. ldd 명령 코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다 stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.</description>
+      <description>&lt;h1 id=&#34;exploit&#34;&gt;Exploit&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pwntool&lt;/code&gt;의 &lt;code&gt;checksec&lt;/code&gt; 명령어로 어떤 보안이 적용되었는지 확인 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shell-code&#34;&gt;Shell Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다.&lt;/li&gt;
+&lt;li&gt;Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;환경세팅&#34;&gt;환경세팅&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#%EC%84%A4%EC%B9%98&#34;&gt;pwntools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#shellcraft&#34;&gt;shellcraft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#ropgadget&#34;&gt;ROPgadget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#one_gadget&#34;&gt;one_gadget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#patchelf&#34;&gt;patchelf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;취약점-공격-순서&#34;&gt;취약점 공격 순서&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;바이너리를 분석하여 보호기법을 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;checksec&lt;/code&gt; 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec 참조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ldd&lt;/code&gt; 명령을 활용하여 의존성 관계를 확인한다.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../Linux/linux_command/#%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%84%A4%EC%A0%95-%EA%B4%80%EB%A0%A8&#34;&gt;ldd 명령&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,7 +195,38 @@ IDA 는 프리웨어로 https://hex-rays.com/ida-free/ 에서 다운 가능하�
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다. https://github.com/pwndbg/pwndbg 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 gdb 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.</description>
+      <description>&lt;h1 id=&#34;gdb&#34;&gt;GDB&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Debugger의 약자&lt;/li&gt;
+&lt;li&gt;유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거&lt;/li&gt;
+&lt;li&gt;디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다.&lt;/li&gt;
+&lt;li&gt;pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://github.com/pwndbg/pwndbg&lt;/code&gt; 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 &lt;code&gt;gdb&lt;/code&gt; 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;컴파일&#34;&gt;컴파일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc로 컴파일시 옵션에 &lt;code&gt;-g&lt;/code&gt; 를 붙여야 소스를 보면서 디버깅이 가능&lt;/li&gt;
+&lt;li&gt;리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.
+&lt;ul&gt;
+&lt;li&gt;ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.&lt;/li&gt;
+&lt;li&gt;섹션에는 기계어 코드 등의 정보들이 들어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;readelf -h [ELF파일]&lt;/code&gt; 명령으로 ELF 파일의 헤더 정보를 확인 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gdb-옵션&#34;&gt;gdb 옵션&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gdb [파일이름]&lt;/code&gt; : 해당 파일이름 디버깅 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--args [arg1] [arg2] [...]&lt;/code&gt; : 파일 실행에 필요한 argument를 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기타-명령어&#34;&gt;기타 명령어&lt;/h2&gt;
+&lt;h3 id=&#34;실행-전-설정사항&#34;&gt;실행 전 설정사항&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;coredumb 파일&lt;/p&gt;</description>
     </item>
     
   </channel>

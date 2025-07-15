@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>mysql on AswinBlue</title>
+    <title>Mysql on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/mysql/</link>
-    <description>Recent content in mysql on AswinBlue</description>
+    <description>Recent content in Mysql on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,60 @@
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/mysql/</guid>
-      <description>mysql 명령어 문법 참조 : http://tcpschool.com/mysql/mysql_basic_syntax
-명령어에서 대소문자는 상관없다. mysql에서 주석은 #을 사용한다. 한줄 주속은 -- 을 사용한다. -- 뒤에 공백 없이 바로 문자나 문자가 아닌 문자가 올 경우, SQL 엔진에 따라 주석으로 인식되지 않을 수도 있어서, 일반적으로 -- (띄어쓰기 포함) 또는 -- - 같이 공백이나 의미 없는 문자를 추가해서 주석임을 명확히 해준다. 이건 DBMS에 따라 차이가 있지만, 일부 엔진(MySQL 등)은 -- 뒤에 공백이 있어야 주석으로 인식한다. 실행 및 로그인 mysql mysql 실행, 기본으로 설정된 user로 로그인됨 mysql -u 아이디 -p -u: 특정 아이디로 로그인 -p: 로그인시 비밀번호 입력하도록 데이터베이스 관리 DB 생성 UTF8 로 문자열 저장하기 CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8 DB 목록확인 show databases DB 선택 use DB_NAME 종료 EXIT 로그인 &amp;amp; 데이터베이스 선택 $ mysql -p DB_NAME -u USER_NAME 사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행 USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도 -u DB_NAME 옵션은 로그인 후 $use DB_NAME 과 같은 효과 테이블 생성 및 관리 (DDL) TABLE_NAME 테이블의 스키마 확인 desc TABLE_NAME</description>
+      <description>&lt;h1 id=&#34;mysql&#34;&gt;mysql&lt;/h1&gt;
+&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
+&lt;p&gt;문법 참조 : &lt;a href=&#34;http://tcpschool.com/mysql/mysql_basic_syntax&#34;&gt;http://tcpschool.com/mysql/mysql_basic_syntax&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;명령어에서 대소문자는 상관없다.&lt;/li&gt;
+&lt;li&gt;mysql에서 주석은 &lt;code&gt;#&lt;/code&gt;을 사용한다.&lt;/li&gt;
+&lt;li&gt;한줄 주속은 &lt;code&gt;--&lt;/code&gt; 을 사용한다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--&lt;/code&gt; 뒤에 공백 없이 바로 문자나 문자가 아닌 문자가 올 경우, SQL 엔진에 따라 주석으로 인식되지 않을 수도 있어서, 일반적으로 &lt;code&gt;-- &lt;/code&gt;(띄어쓰기 포함) 또는 &lt;code&gt;-- -&lt;/code&gt; 같이 공백이나 의미 없는 문자를 추가해서 주석임을 명확히 해준다. 이건 DBMS에 따라 차이가 있지만, 일부 엔진(MySQL 등)은 &lt;code&gt;--&lt;/code&gt; 뒤에 공백이 있어야 주석으로 인식한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;실행-및-로그인&#34;&gt;실행 및 로그인&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;mysql&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;mysql 실행, 기본으로 설정된 user로 로그인됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;code&gt;mysql -u 아이디 -p&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;/code&gt;: 특정 아이디로 로그인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;: 로그인시 비밀번호 입력하도록&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;데이터베이스-관리&#34;&gt;데이터베이스 관리&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;DB 생성
+&lt;ul&gt;
+&lt;li&gt;UTF8 로 문자열 저장하기
+&lt;code&gt;CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DB 목록확인
+&lt;code&gt;show databases&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;DB 선택
+&lt;code&gt;use DB_NAME&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;종료
+&lt;code&gt;EXIT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;로그인 &amp;amp; 데이터베이스 선택
+&lt;code&gt;$ mysql -p DB_NAME -u USER_NAME&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행&lt;/li&gt;
+&lt;li&gt;USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도&lt;/li&gt;
+&lt;li&gt;-u DB_NAME 옵션은 로그인 후 &lt;code&gt;$use DB_NAME&lt;/code&gt; 과 같은 효과&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;테이블-생성-및-관리-ddl&#34;&gt;테이블 생성 및 관리 (DDL)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;TABLE_NAME 테이블의 스키마 확인
+&lt;code&gt;desc TABLE_NAME&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

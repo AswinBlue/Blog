@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cmake on AswinBlue</title>
+    <title>Cmake on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/cmake/</link>
-    <description>Recent content in cmake on AswinBlue</description>
+    <description>Recent content in Cmake on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,39 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake/</guid>
-      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
-cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
-make : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일
-cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다. 1. mkdir build2.</description>
+      <description>&lt;h1 id=&#34;cmake&#34;&gt;CMake&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cmake CMakeList.txt&lt;/code&gt; : CMakeList.txt파일 안의 내용을 수행한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cmake .&lt;/code&gt; : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt; : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. mkdir build
+2. vi CMakeList.txt 후 내용 작성
+3. cd build
+4. cmake ..
+5. make
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;CmakeLists.txt 작성은 쉘 프로그래밍과 유사하다. cmake 문법을 사용하여 작성해 주면 된다. 미리 지정된 변수들도 있는데, 해당 변수들에 주의하며 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문법&#34;&gt;문법&lt;/h2&gt;
+&lt;h3 id=&#34;빌드-설정&#34;&gt;빌드 설정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ADD_EXECUTABLE&lt;/code&gt; : 실행파일 생성
+ex) &lt;code&gt;ADD_EXECUTABLE(main.exe main.cpp function.cpp)&lt;/code&gt; : main.cpp와 function.cpp를 사용해 main.exe를 생성한다. 헤더 파일은 자동으로 적용된다.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -13,7 +13,105 @@
       <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/ipc/</guid>
-      <description>IPC (Inter Process Communicatrion) Signal Signal은 프로세스간 동기화를 위해 프로세스간 전송하는 신호를 의미한다. Software Interrupt 라고도 한다. 커널에서 kill -&amp;lt;SIGNAL_NUMBER&amp;gt; &amp;lt;PROCESS_ID&amp;gt; 명령으로 특정 PROCESS_ID에 ISGNAL_NUMBER에 해당하는 signal을 전달할 수 있다. signal은 총 64까지 정의되어 있고 1~31까지가 일반적으로 사용하는 signal이다. 34~63은 고성능 네트워크 통신을 위한 시그널이다. (32, 33는 미정의) kill -l 명령으로 signal 리스트를 확인할 수 있다. SIGHUP SIGINT : 인터럽트, Ctrl+C 명령으로 전송 가능 SIGQUIT Coredump시 발생 SIGILL : Illegal instruction SIGTRAP : debugger is tracing SIGABRT : Abort process SIGBUS : bus error SIGFPE : Floating point exception SIGKILL : 강제 종료 SIGUSR1	: User-defined signal 1, 마음대로 사용 가능 SIGSEGV	: invalid virtual memory reference SIGUSR2 : User-defined signal 2, 마음대로 사용 가능 SIGPIPE	: 반대편이 연결되지 않은 pip에 신호 전송시 발생하는 에러 SIGALRM : alarm() 함수에 의해 발생한 시그널 1 SIGTERM : 종료 요청, SIGKILL(9)보다 안전한 종료 방법, SIGINT와 유사한 성능 SIGSTKFLT : Stack fault SIGCHLD : 자식 process가 종료될 때 부모에게 전달하는 신호 SIGCONT : SIGSTOP 에 의해 정지된 경우, 다시 시작하라는 신호 SIGSTOP : process 정지 SIGTSTP : process 일시정지, Ctrl+Z 명령으로 전송 가능 SIGTTIN	: background 에 있을 때 read 요청을 받은 경우 발생 SIGTTOU : background 에 있을 때 write 요청을 받은 경우 발생 SIGURG : 긴급 통신을 받은 경우 (Out Of Band) SIGXCPU : 설정된 CPU 사용량을 초과하여 프로세스가 동작 한 경우 SIGXFSZ : 파일 크기가 허용된 크기를 초과한 경우 SIGVTALRM : 프로세스 실행시간 관리를 위한 시그널1 SIGPROF : 프로세스 실행시간 관리를 위한 시그널2 SIGWINCH : Window change SIGIO, SIGPOLL : Input/output is now possible SIGPWR, SIGLOST : Power failure SIGUNUSED, SIGSYS : Unused signal.</description>
+      <description>&lt;h1 id=&#34;ipc-inter-process-communicatrion&#34;&gt;IPC (Inter Process Communicatrion)&lt;/h1&gt;
+&lt;h2 id=&#34;signal&#34;&gt;Signal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Signal은 프로세스간 동기화를 위해 프로세스간 전송하는 신호를 의미한다.&lt;/li&gt;
+&lt;li&gt;Software Interrupt 라고도 한다.&lt;/li&gt;
+&lt;li&gt;커널에서 &lt;code&gt;kill -&amp;lt;SIGNAL_NUMBER&amp;gt; &amp;lt;PROCESS_ID&amp;gt;&lt;/code&gt; 명령으로 특정 PROCESS_ID에 ISGNAL_NUMBER에 해당하는 signal을 전달할 수 있다.&lt;/li&gt;
+&lt;li&gt;signal은 총 64까지 정의되어 있고 1&lt;del&gt;31까지가 일반적으로 사용하는 signal이다. 34&lt;/del&gt;63은 고성능 네트워크 통신을 위한 시그널이다. (32, 33는 미정의)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;kill -l&lt;/code&gt;  명령으로 signal 리스트를 확인할 수 있다.
+&lt;ol&gt;
+&lt;li&gt;SIGHUP&lt;/li&gt;
+&lt;li&gt;SIGINT : 인터럽트, Ctrl+C 명령으로 전송 가능&lt;/li&gt;
+&lt;li&gt;SIGQUIT Coredump시 발생&lt;/li&gt;
+&lt;li&gt;SIGILL : Illegal instruction&lt;/li&gt;
+&lt;li&gt;SIGTRAP : debugger is tracing&lt;/li&gt;
+&lt;li&gt;SIGABRT : Abort process&lt;/li&gt;
+&lt;li&gt;SIGBUS : bus error&lt;/li&gt;
+&lt;li&gt;SIGFPE : Floating point exception&lt;/li&gt;
+&lt;li&gt;SIGKILL : 강제 종료&lt;/li&gt;
+&lt;li&gt;SIGUSR1	: User-defined signal 1, 마음대로 사용 가능&lt;/li&gt;
+&lt;li&gt;SIGSEGV	: invalid virtual memory reference&lt;/li&gt;
+&lt;li&gt;SIGUSR2 : User-defined signal 2, 마음대로 사용 가능&lt;/li&gt;
+&lt;li&gt;SIGPIPE	: 반대편이 연결되지 않은 pip에 신호 전송시 발생하는 에러&lt;/li&gt;
+&lt;li&gt;SIGALRM : alarm() 함수에 의해 발생한 시그널 1&lt;/li&gt;
+&lt;li&gt;SIGTERM : 종료 요청, SIGKILL(9)보다 안전한 종료 방법, SIGINT와 유사한 성능&lt;/li&gt;
+&lt;li&gt;SIGSTKFLT : Stack fault&lt;/li&gt;
+&lt;li&gt;SIGCHLD : 자식 process가 종료될 때 부모에게 전달하는 신호&lt;/li&gt;
+&lt;li&gt;SIGCONT : SIGSTOP 에 의해 정지된 경우, 다시 시작하라는 신호&lt;/li&gt;
+&lt;li&gt;SIGSTOP : process 정지&lt;/li&gt;
+&lt;li&gt;SIGTSTP : process 일시정지, Ctrl+Z 명령으로 전송 가능&lt;/li&gt;
+&lt;li&gt;SIGTTIN	: background 에 있을 때 read 요청을 받은 경우 발생&lt;/li&gt;
+&lt;li&gt;SIGTTOU : background 에 있을 때 write 요청을 받은 경우 발생&lt;/li&gt;
+&lt;li&gt;SIGURG : 긴급 통신을 받은 경우 (Out Of Band)&lt;/li&gt;
+&lt;li&gt;SIGXCPU : 설정된 CPU 사용량을 초과하여 프로세스가 동작 한 경우&lt;/li&gt;
+&lt;li&gt;SIGXFSZ : 파일 크기가 허용된 크기를 초과한 경우&lt;/li&gt;
+&lt;li&gt;SIGVTALRM : 프로세스 실행시간 관리를 위한 시그널1&lt;/li&gt;
+&lt;li&gt;SIGPROF : 프로세스 실행시간 관리를 위한 시그널2&lt;/li&gt;
+&lt;li&gt;SIGWINCH : Window change&lt;/li&gt;
+&lt;li&gt;SIGIO, SIGPOLL : Input/output is now possible&lt;/li&gt;
+&lt;li&gt;SIGPWR, SIGLOST : Power failure&lt;/li&gt;
+&lt;li&gt;SIGUNUSED, SIGSYS : Unused signal.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;signal-library-in-c&#34;&gt;Signal Library in C&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;signal.h&lt;/code&gt; 에 정의된 signal 함수로 signal을 무시(ignore)하거나, 시그널 발생시 특정 함수를 동작(catch)시키도록 설정할 수 있다.&lt;/li&gt;
+&lt;li&gt;처리되지 않은 (ignore 또는 catch 처리) signal을 받으면 기본적으로 해당 프로세스는 종료한다.&lt;/li&gt;
+&lt;li&gt;SIGKILL(강제종료 용도)과 SIGSTOP(디버깅시 일시정지 용도)시그널을 제외한 모든 시그널을 무시할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;signal(SIGNAL, PID)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;pid &amp;gt; 0 : PID에 SIGNAL 전달&lt;/li&gt;
+&lt;li&gt;pid &amp;lt; 0 : PID의 절댓값에 해당하는 groupId를 가진 프로세스들에 SIGNAL 전달&lt;/li&gt;
+&lt;li&gt;pid == 0 : 자신과 같은 groupId를 가진 프로세스들에 SIGNAL 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;code&gt;alarm(TIME)&lt;/code&gt; : TIME초 이후 SIGALRM 시그널 발생
+&lt;ul&gt;
+&lt;li&gt;alarm timer가 만기되기 전 새로운 alarm을 호출하면 값을 덮어쓴다. 대신 alarm 함수는 남은 시간을 반환 한다.&lt;/li&gt;
+&lt;li&gt;alarm(0) 을 호출하면 알림이 취소된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;시그널 처리 flag는 bit연산으로 관리된다.&lt;/li&gt;
+&lt;li&gt;sigset_t 타입의 bit 하나하나들은 1~64까지의 signal을 의미하고, 아래와 같이 set을 연산하여 process에서 signal을 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;sigemptyset(siget_t* SET)&lt;/code&gt; : SET 모든 비트를 0으로 세팅.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sigfillset(int SIGNAL, sigset_t* SET)&lt;/code&gt; : | 연산으로 SET 에서 SIGNAL에 해당하는 비트만 1로 세팅&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sigdelset(int SIGNAL, sigset_t* SET)&lt;/code&gt; : &amp;amp; 연산으로 SIGNAL에 해당하는 비트만 0으로 세팅&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sigismember(int SIGNAL, sigset_t* SET)&lt;/code&gt; : SET에서 SIGNAL비트가 1로 세팅되었다면 true 반환&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sigprocmask(int HOW, siget_t* NEW, sigset_t* OLD)&lt;/code&gt; : 특정 SIGNAL을 무시하도록 설정할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;필요할 경우 OLD에 siget_t* 타입 변수를 집어넣으면 현재 프로세스에 설정된 set을 담아낸다.&lt;/li&gt;
+&lt;li&gt;SIG_BLOCK : NEW에 set된 signal들을 추가로 무시한다.&lt;/li&gt;
+&lt;li&gt;SIG_UNBLOCK : NEW에 set 된 signal들의 무시처리를 해제한다.&lt;/li&gt;
+&lt;li&gt;SIG_SETMASK : 기존 값에 상관없이 NEW에 set 된 signal들만 무시하도록 set을 덮어쓴다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;signal 을 처리하여 signal에 의해 process가 정지되지 않는 구간을 &lt;code&gt;임계영역&lt;/code&gt; 이라 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pipe&#34;&gt;Pipe&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로세스간 단방향 통신을 위해 프로세스들의 표준 입출력을 서로 교차하여 연결하는 기법이다.&lt;/li&gt;
+&lt;li&gt;프로세스간 데이터 전송시 주로 사용된다.&lt;/li&gt;
+&lt;li&gt;flow control이 기본적으로 제공된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pipe-library-in-c&#34;&gt;Pipe Library in C&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;pipe(int[2] fd)&lt;/code&gt; : 파일 디스크립터 두개를 생성하고, 단방향 통신을 생성함&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +120,245 @@
       <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/thread/</guid>
-      <description>Thread thread는 process의 경량화 버전으로 생각할 수 있다. pthread_create() 함수로 fork 명령을 대체하고, pthread_join() 으로 wait 명령을 대체하면 process 대신 thread를 동작시킨다. thread는 함수를 실행시키는 것이 기본이며, 함수를 실행시킬 때 넣을 인자와, 함수의 리턴값을 받을 인자를 pthread_create의 파라미터로 받는다. 리눅스 프로세스 표시 목록에 LWP(light-weight-process) 항목으로 표시되며, proces ID가 같더라도 LWP ID가 다르면 같은 process 안의 thread인 것. pthread_exit() 로 thread만 종료시킬 수 있다. main process가 종료되면 딸려있는 thread들도 함께 종료된다. 다만, main thread만 pthread_exit으로 종료시키면 process가 종료되지 않고 main thread만 종료되고 다른 thread들은 계속 구동되는 형태가 되므로 주의한다.</description>
+      <description>&lt;h1 id=&#34;thread&#34;&gt;Thread&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;thread는 process의 경량화 버전으로 생각할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pthread_create()&lt;/code&gt; 함수로 &lt;code&gt;fork&lt;/code&gt; 명령을 대체하고, &lt;code&gt;pthread_join()&lt;/code&gt; 으로 &lt;code&gt;wait&lt;/code&gt; 명령을 대체하면 process 대신 thread를 동작시킨다.&lt;/li&gt;
+&lt;li&gt;thread는 함수를 실행시키는 것이 기본이며, 함수를 실행시킬 때 넣을 인자와, 함수의 리턴값을 받을 인자를 pthread_create의 파라미터로 받는다.&lt;/li&gt;
+&lt;li&gt;리눅스 프로세스 표시 목록에 &lt;code&gt;LWP(light-weight-process)&lt;/code&gt; 항목으로 표시되며, proces ID가 같더라도 LWP ID가 다르면 같은 process 안의 thread인 것.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pthread_exit()&lt;/code&gt; 로 thread만 종료시킬 수 있다.&lt;/li&gt;
+&lt;li&gt;main process가 종료되면 딸려있는 thread들도 함께 종료된다. 다만, main thread만 pthread_exit으로 종료시키면 process가 종료되지 않고 main thread만 종료되고 다른 thread들은 계속 구동되는 형태가 되므로 주의한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int pthread_join(pthread_t thread, void **retval)&lt;/code&gt; : 자식 thread가 종료될 때 까지 대기하고, 종료처리를 해 주는 함수, &lt;code&gt;pthread_exit()&lt;/code&gt;에서 반환된 값을 retval로 받아올수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pthread_detach(int tid)&lt;/code&gt; : thread id가 tid에 해당하는 thread를 부모 thread에서 분리하는 함수. 이후 종료되고 join 처리를 대기하지 않고 바로 free됨.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int pthread_self()&lt;/code&gt; : 자신의 thread id 를 확인할때 사용하는 함수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;void* func(void* data)
+{
+    (struct ARG*) data;
+    ...
+    pthread_detach(pthread_self()); // pthread_join 대신 사용 가능
+}
+
+...
+// thread 생성
+struct ARG *arg;
+int tid = pthread_create(&amp;amp;thread, 0, func, arg);
+...
+pthread_join(tid, 0); // pthread_detach 대신 사용 가능
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;process-와-thread-차이&#34;&gt;process 와 thread 차이&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;process는 메모리를 수정하는 순간 메모리가 분리되지만, thread는 메모리를 공유하여 수정하고 나서도 같은 영역을 참조할수 있다. (전체 가상메모리를 공유한다.)&lt;/li&gt;
+&lt;li&gt;process는 wait 값의 인자를 확인 에러를 확인할 수 있는 반면, thread의 에러는 pthread_join의 return 값을 확인한다. (값이 0 초과이면 에러가 됨)
+&lt;ul&gt;
+&lt;li&gt;일반적인 에러 처리는, &lt;code&gt;errno.h&lt;/code&gt; 헤더파일에 &lt;code&gt;errno&lt;/code&gt; 라는 변수가 전역변수로 선언되어 있고, 프로세스가 에러에 의해 종료될 경우 이 변수에 값을 채워넣는다.&lt;/li&gt;
+&lt;li&gt;thread는 전역변수를 공유하기 때문에 errno를 사용하지 않는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mutex&#34;&gt;Mutex&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;전역변수의 상호 참조에 의해 발생하는 race condition 문제를 해결하기 위해 사용할 수 있는 방법
+&lt;ul&gt;
+&lt;li&gt;race condition : 둘 이상의 thread가 전역변수를 참조할 때 메모리 접근하려 서로 경쟁하는 상황&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pthread.h&lt;/code&gt; 헤더를 사용하며, pthread 라이브러리를 사용하기 떄문에 빌드시 옵션에 &lt;code&gt;-lpthread&lt;/code&gt;를 추가해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+...
+pthread_mutex_lock(&amp;amp;mutex);
+// 전역변수 참조 영역
+pthread_mutex_unlock(&amp;amp;mutex);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;mutex를 사용해 임계 영역(critical section)에 대해 mutual exclusion 속성을 보장하여 동시 접속에 의한 오동작을 막을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mutex-내부-구조&#34;&gt;Mutex 내부 구조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C언어로는 compare와 set을 atomic하게 수행할 수 없어 mutual exclusion을 구현할 수 없다.&lt;/li&gt;
+&lt;li&gt;cas(compare and set) 라는 코드를 어셈블리어에서 지원하는데, compare와 set을 atomic하게 처리할 수 있다.&lt;/li&gt;
+&lt;li&gt;아래 함수는 어셈블리어를 사용하여 C에서 cas를 구현한 내용이다. cpu 칩마다 지원하는 형태가 다를 수 있음에 주의한다. (아래는 인텔이 제공하는 형태)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;typedef int int32_t;
+int mutex = 0; // 초기값 0
+/**
+ * @brief   old_value와 *ptr을 비교하여 같다면 *ptr에 new_value를 대입한다.
+ *          mutex lock의 역할을 한다. 
+ * @return  int old_value와 *ptr의 비교 결과가 같다면 false를, 다르다면 true를 반환
+ */
+int __bionic_cmpxchg(int32_t old_value, int32_t new_value, volatile int32_t* ptr)
+{
+    int 32_t prev;
+    __asm__ __volatile__ (&amp;#34;lock; cmpxchgl %1, %2&amp;#34;
+            : &amp;#34;=a&amp;#34; (prev)
+            : &amp;#34;q&amp;#34; (new_value), &amp;#34;m&amp;#34; (*ptr), &amp;#34;0&amp;#34; (old_value)
+            : &amp;#34;memory&amp;#34;);
+    return prev != old_value;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;spin-lock&#34;&gt;Spin Lock&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;while문을 반복하며 mutex를 계속 체크하는 기법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;void spin_lock(int* mutex)
+{
+    while (__bionic_cmpxchg(0, 1, mutex)); // mutex가 0이 될 때 까지 무한 대기 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;CPU 활용도가 떨어지므로 임계영역이 짧은 경우만 사용 권장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sleep-lock&#34;&gt;Sleep Lock&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;mutex를 기다리는 동안 thread를 sleep 시키면 thread에 할당된 리소스를 해제하여 다른 곳에 할당해 줄 수 있게 된다.&lt;/li&gt;
+&lt;li&gt;gcc에서는 slelep lock을 지원하는 라이브러리가 없지만, 시스템 커맨드 라이브러리에는 futex(fast user mutex)라는 함수로 sleep lock을 지원한다. C언어로 사용하려면 시스템 콜로 futex를 호출하면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;unisted.h&amp;gt;
+int mutex = 1;
+void *foo(void *data)
+{
+    sytstemcall 202, &amp;amp;mutex, 0, 1, 0); // __futex_wait();
+    ... /* critical section */
+    systemcall(202, &amp;amp;mutex, 1, 1); // __futex_wake();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;__futex_wait 은 mutex_lock, __futex_wake는 mutex_unlock에 대응된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;self-lock&#34;&gt;Self Lock&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;recursive 함수에서 mutex를 사용한다면 하나의 함수에서 동일한 mutex를 두번 호출하게 되는 &amp;ldquo;selfl lock&amp;quot;이 발생할 수 있다.&lt;/li&gt;
+&lt;li&gt;self lock이 발생하면 마찬가지로 deadlock이 발생한다.&lt;/li&gt;
+&lt;li&gt;재귀 호출을 위한 &lt;code&gt;recursive mutex lock&lt;/code&gt; 이 존재한다. mutex 생성시 attribute로 재귀함수를 위한 설정이 존재하며, mutex_lock을 한 thread에서 중복 호출 가능하며, mutex_lock을 호출한 수만큼 mutex_unlock을 호출해 주면 mutex가 해제된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pthread_mutexattr_t attr;
+pthread_mutex_t mutex;
+...
+pthread_mutexattr_init(&amp;amp;attr);
+pthread_mutexattr_settype(&amp;amp;attr, PTHREAD_MUTEX_RECURSIVE);
+pthread_mutuex_init(&amp;amp;mutex, &amp;amp;attr);
+...
+pthread_mutex_lock(&amp;amp;mutex); // 1
+pthread_mutex_lock(&amp;amp;mutex); // 2
+pthread_mutex_lock(&amp;amp;mutex); // 3
+...
+pthread_mutex_unlock(&amp;amp;mutex); // 1
+pthread_mutex_unlock(&amp;amp;mutex); // 2
+pthread_mutex_unlock(&amp;amp;mutex); // 3
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;condition-조건변수&#34;&gt;Condition (조건변수)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;thread에서 전역 변수에 참조할 때, 순서를 제어하기 위해 사용하는 방법&lt;/li&gt;
+&lt;li&gt;아래 코드는 thread1에서 전역변수를 처리해야 thread2에서 전역변수에 접근이 가능하게 하는 코드이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+...
+thread1()
+{
+    pthread_mutex_lock(&amp;amp;mutex);
+    // 전역변수 처리
+    pthread_cond_signal(&amp;amp;cond);
+    pthread_mutex_unlock(&amp;amp;mutex);
+}
+...
+thread2()
+{
+    pthread_mutex_lock(&amp;amp;mutex);
+    pthread_cond_wait(&amp;amp;cond);
+    // 전역변수 처리
+    pthread_mutex_unlock(&amp;amp;mutex);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;condition-내부-구조&#34;&gt;Condition 내부 구조&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;func1()
+{
+    pthread_mutex_lock(); // &amp;lt;- (1)
+    do_something();
+    pthread_cond_signal();
+    pthread_mutex_unlock();
+}
+func2()
+{
+    pthread_mutex_lock();
+    pthread_cond_wait(); // &amp;lt;- (2)
+    do_something();
+    pthread_mutex_unlock();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;func1이 (1)에서 mutex unlock을 대기하고, func2가 (2)에서 condition signal을 대기하면 deadlock이 걸릴 것 같지만, condition wait와 mutex lock은 서로 교착상태를 만들지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pthread_cond_wait()&lt;/code&gt; 아래와 같이 mutex_unlock, futex_wait, mutex_lock으로 구성되어 있으므로 mutex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pthread_cond_wait()
+{
+    ...
+    pthread_mutex_unlock();
+    while (condition == 0) // condition 조건이 충족될 때 까지 무한 대기
+    {
+        futex_wait(); // sleep lock
+    }
+    condition = 0; // condition 초기화
+    pthread_mutex_lock();
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;즉, condition wait는 condition signal이 발생한 시점이 아니라, mutex 가 unlock되는 시점에 탈출된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;deadlock&#34;&gt;Deadlock&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;두 개 이상의 Mutex가 서로 해제되기를 기다리며 대기하여 더 이상 process가 진행되지 못하게 되는 상황을 deadlock이라 한다.&lt;/li&gt;
+&lt;li&gt;lock을 순서대로 잡고, cycle이 생기지 않게 관리하면 deadlock을 피할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;재진입-가능-함수-reentrant&#34;&gt;재진입 가능 함수 (Reentrant)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;thread에서 사용할 수 있는 함수를 &amp;lsquo;재진입 가능 함수&amp;rsquo; 라 한다. 즉, Thread-safe 한 함수를 의미한다.&lt;/li&gt;
+&lt;li&gt;내부적으롱 전역변수, 혹은 static 변수를 사용하는 함수는 &amp;lsquo;재진입 불가능&amp;rsquo; 하다.&lt;/li&gt;
+&lt;li&gt;strtok는 대표적인 재진입 불가능한 함수이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;func1()
+{
+    strtok()
+}
+func2()
+{
+    strtok()
+}
+main()
+{
+    pthread_create(func1);
+    pthread_create(func2);
+}
+// -&amp;gt; strtok는 재진입 불가능한 함수이기 때문에 결과가 의도한 결과가 나오지 않을 수 있다.
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;C 라이브러리에서는 strtok_r 이라는 재진입 가능한 함수를 제공한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tls--tsd&#34;&gt;TLS / TSD&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;TLS는 thread 의 전역 변수를 저장하기 위한 공간으로, 로더(Loader)에 의해서 할당된다.&lt;/li&gt;
+&lt;li&gt;리눅스에서는 TSD라 부른다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int pthread_setspecific(pthread_key_t key, const void *value)&lt;/code&gt; : &amp;lsquo;key&amp;rsquo; 에 해당하는 영역에 &amp;lsquo;value&amp;rsquo;를 연결한다. value로는 동적할당한 메모리가 온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void* pthread_getspecific(pthread_key_t key)&lt;/code&gt; : 기존에 set으로 할당한 key에 해당하는 메모리를 가져온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void pthread_key_create(pthread_key_t key, void* (*descturctor)(void*))&lt;/code&gt; 할당한 메모리를 해제하는 역할을 수행할 함수 &lt;code&gt;void destructor(void* ptr){free(p);}&lt;/code&gt;를 정의하고, destructor의 포인터를 key와 매핑시킨다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;void main(void)
+{
+    pthread_key_t key;
+    pthread_key_create(key, void (*destructor)(void*));
+}
+
+void func1(void)
+{
+    int *tsd = pthread_get_specific(key) // key에 해당하는 영역 가져옴
+    if (!tsd) // null 받았을 시
+    {
+        tsd = calloc(1, sizeof int); // int 영역이 필요해서 동적할당. 다른 자료형도 가능
+        pthread_set_specific(key, tsd); // TSD 영역에 저장
+    }
+}
+
+void destructor(void* ptr)
+{
+    free(p);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;TLS는 내부적으로 &lt;code&gt;void* tls[]&lt;/code&gt; 배열을 bitmap 형태로 지니고, pthread_set_specific을 할 경우 &lt;code&gt;tls[idx]&lt;/code&gt;에 메모리 주소를 대입한다.&lt;/li&gt;
+&lt;li&gt;pthread_set_specific을 호출할 때 마다 idx는 자동으로 갱신된다.&lt;/li&gt;
+&lt;li&gt;thread가 종료될 때 모든 key에 대해 소멸자로 정의된 destructor가 호출된다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -31,7 +367,89 @@
       <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/process/</guid>
-      <description>Process Program vs Process Process : 실행중인 프로그램 Program : 실행 가능한 파일 Process는 메모리에 올라가 있는 상태의 프로그램을 의미한다. C언어 Program to Process C언어로 구성된 프로그램은 전처리 - 컴파일 - 링킹 - 로딩의 과정을 거친다. 전처리 : # 으로 시작하는 라인들을 알맞은 형태로 치환한다. 컴파일 : C언어(high-level language)를 어셈블리어(기계어) 로 변환한다. 링킹 : 외부의 ELF(Executable and Linkable Format) 파일들을 호출할 수 있도록 연결한다. 로딩 : 최종 생성된 파일을 실행시켜 메모리에 올려 프로세스로 만든다.</description>
+      <description>&lt;h1 id=&#34;process&#34;&gt;Process&lt;/h1&gt;
+&lt;h2 id=&#34;program-vs-process&#34;&gt;Program vs Process&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Process : 실행중인 프로그램&lt;/li&gt;
+&lt;li&gt;Program : 실행 가능한 파일&lt;/li&gt;
+&lt;li&gt;Process는 메모리에 올라가 있는 상태의 프로그램을 의미한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;c언어-program-to-process&#34;&gt;C언어 Program to Process&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;C언어로 구성된 프로그램은 전처리 - 컴파일 - 링킹 - 로딩의 과정을 거친다.
+&lt;ul&gt;
+&lt;li&gt;전처리 : &lt;code&gt;#&lt;/code&gt; 으로 시작하는 라인들을 알맞은 형태로 치환한다.&lt;/li&gt;
+&lt;li&gt;컴파일 : C언어(high-level language)를 어셈블리어(기계어) 로 변환한다.&lt;/li&gt;
+&lt;li&gt;링킹 : 외부의 ELF(Executable and Linkable Format) 파일들을 호출할 수 있도록 연결한다.&lt;/li&gt;
+&lt;li&gt;로딩 : 최종 생성된 파일을 실행시켜 메모리에 올려 프로세스로 만든다.
+&lt;ul&gt;
+&lt;li&gt;리눅스에서는 &lt;code&gt;execv()&lt;/code&gt; 함수에 의해 프로세스화 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;프로세스&#34;&gt;프로세스&lt;/h2&gt;
+&lt;h3 id=&#34;fork&#34;&gt;fork&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fork()&lt;/code&gt; 함수는 프로세스를 복사하는 함수이다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;unistd.h&lt;/code&gt; 헤더에 선언되어 있다.&lt;/li&gt;
+&lt;li&gt;복사당한 프로세스를 부모 프로세스, 복사해서 생성된 프로세스를 자식 프로세스라 한다.&lt;/li&gt;
+&lt;li&gt;복사된 자식 프로세스도 &lt;code&gt;fork&lt;/code&gt; 실행 이후부터 코드가 진행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork&lt;/code&gt; 함수의 반환값은 &lt;code&gt;pid_t&lt;/code&gt; 타입이다.
+&lt;ul&gt;
+&lt;li&gt;반환값이 -1이라면 실패를 의미한다.&lt;/li&gt;
+&lt;li&gt;결과가 0이라면 현재 프로세스는 자식 프로세스임을 의미한다.&lt;/li&gt;
+&lt;li&gt;0이 아니닌 값이라면 현재 프로세스는 부모 프로세스이다.
+&lt;ul&gt;
+&lt;li&gt;반환값은 자식프로세스의 process id를 의미하며, 리눅스 명령어 &lt;code&gt;ps -ef&lt;/code&gt; 로 pid를 확인 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Race Condition : 일단 fork가 되어 프로세스가 부모 자식으로 나뉘면, 프로세스의 실행은 병렬적으로 이루어지며, 같은 코드라도 어느 것이 먼저 동작할지 알 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;wait&#34;&gt;wait&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;fork() 로 자식 프로세스를 생성한 후 자식 프로세스가 exit()를 호출하여 종료될 때, 부모 process는 자식 process의 종료 결과를 &lt;code&gt;wait()&lt;/code&gt; 으로 받을수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wait(statloc *status)&lt;/code&gt; : 자식 process에서 호출된 exit() 함수 안에 들어간 인자값을 status(인자는 4byte int지만, 사용하는 부분은 2byte) 에 담아낸다.&lt;/li&gt;
+&lt;li&gt;status 값은 상위 1byte와 하위 1byte를 구분해서 사용한다.
+&lt;ul&gt;
+&lt;li&gt;정상적으로 종료가 된경우는 exit() 함수에 의한 종료를 의미하며, status의 상위 1byte에 exit의 인자값을 담아낸다.&lt;/li&gt;
+&lt;li&gt;비정상 종료는 signal에 의한 종료를 의미하며, signal 번호 값을 status의 하위 1byte에 담아낸다.&lt;/li&gt;
+&lt;li&gt;0~7번 bit : 자식 process 정상종료시 종료 status&lt;/li&gt;
+&lt;li&gt;8번 bit : core dump 여부&lt;/li&gt;
+&lt;li&gt;9~15번 bit : 시그널 번호&lt;/li&gt;
+&lt;li&gt;status값을 인자로 받아 종료 사유를 회신하는 매크로 함수를 사용하면 쉽게 판단할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;WIFEXITED, WEXITEDSTATUS, WIFSIGNALED &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;메모리&#34;&gt;메모리&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;부모 프로세스를 복사해 자식 프로세스를 생성해도 code 영역은 공유된다.
+&lt;ul&gt;
+&lt;li&gt;code 영역은 read only memory 이기 때문에&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;자식 프로세스는 부모 프로세스의 ram 영역 값도그대로 복사 해 온다.
+&lt;ul&gt;
+&lt;li&gt;하지만, 자식 프로세스가 새성될 당시 메모리가 바로 복사되는 것이 아니라, 메모리에 값을 작성하는 시점에 복사가 된다.&lt;/li&gt;
+&lt;li&gt;즉, 부모나 자식 프로세스에서 값을 덮어쓰거나 새로 생성하지 않은 변수에 대해서는 같은 메모리를 바라보고 있다고 볼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;메모리는 reference count를 들고 있어 몇개의 프로세스에서 해당 영역을 참조하는지 체크한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;프로세스-생명-주기-life-cycle&#34;&gt;프로세스 생명 주기 (Life Cycle)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;모든 프로세스는 부모 프로세스가 있고, 가장 최초로 실행된 프로세스를 init 프로세스라 하며, init 프로세스의 pid는 1이다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +458,98 @@
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
-      <description>System Programming 프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다. _____________| Library |¯¯¯¯¯¯¯¯¯¯¯¯¯ Application level------------------------------_____________|System call|¯¯¯¯¯¯¯¯¯¯¯¯¯ Kernel level------------------------------_____________| Hardware |¯¯¯¯¯¯¯¯¯¯¯¯¯ H/W level------------------------------ application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;) 시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다. 예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다.</description>
+      <description>&lt;h1 id=&#34;system-programming&#34;&gt;System Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;_____________
+|  Library  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Application level
+------------------------------
+_____________
+|System call|
+¯¯¯¯¯¯¯¯¯¯¯¯¯   Kernel level
+------------------------------
+_____________
+|  Hardware  |
+¯¯¯¯¯¯¯¯¯¯¯¯¯   H/W level
+------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;)
+&lt;ul&gt;
+&lt;li&gt;시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다.&lt;/li&gt;
+&lt;li&gt;예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다. (IO접근은 적을수록 효율적)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kernel level에서는 System call을 사용하며 system buffer를 사용한다.&lt;/li&gt;
+&lt;li&gt;application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.
+&lt;ul&gt;
+&lt;li&gt;printf는 c library 함수이며, &amp;lsquo;\n&amp;rsquo;을 만나야 화면상에 출력을 한다.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;\n&amp;rsquo;이 입력되기 전 까지 문자열들은 library buffer에 기록된다.&lt;/li&gt;
+&lt;li&gt;fprintf는 &amp;lsquo;\n&amp;rsquo;과 상관없이 문자열을 출력한다. 즉 library buffer를 사용하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;파일-입출력&#34;&gt;파일 입출력&lt;/h2&gt;
+&lt;h3 id=&#34;fgetc&#34;&gt;fgetc&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C에서 파일에 접근하기 위해서는 &lt;code&gt;fopen&lt;/code&gt; 함수를 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 포인터를 반환하며, 코드 내에서 파일 포인터로 해당 파일에 접근이가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fgetc(FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 char 하나를 읽고 반환한다.
+&lt;ul&gt;
+&lt;li&gt;fgetc 함수의 반환 값은 int 형태이다.&lt;/li&gt;
+&lt;li&gt;text file을 읽을 땐, 0xFF값이 내용에 올 수 없지만, binary file을 읽을 땐 중간에 0xFF 값이 올 수 있다.&lt;/li&gt;
+&lt;li&gt;char 형태로 0xFF를 읽으면 -1값에 해당하기 때문에, EOF와 구분이 불가능하여 char 대신 int를 반환하도록 되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-구조체&#34;&gt;파일 구조체&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 구조체의 주소(포인터)를 반환한다.&lt;/li&gt;
+&lt;li&gt;파일 구조체는 아래와 같은 내용을 담고 있다.
+&lt;ul&gt;
+&lt;li&gt;_flags:&lt;/li&gt;
+&lt;li&gt;_IO_read_ptr : 다음 명령시 파일을 읽거나 쓸 위치&lt;/li&gt;
+&lt;li&gt;_IO_read_end: kernel에서 데이터를 받아서 저장할 버퍼의 끝 위치.&lt;/li&gt;
+&lt;li&gt;_IO_read_base: kernel에서 데이터를 받아서 저장할 버퍼의 시작 위치. 파일에 대한 읽기 명령(fgetc/fgets등) 이 발생했을 때, kernel은 4096byte(BUF_SIZE) 만큼 데이터를 미리 읽어서 이곳에 채워둔다.&lt;/li&gt;
+&lt;li&gt;_fileno: 파일의 offset, kernel에서 해당 파일에 정해준 index(kernel 함수에서 사용할 수 있다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fopen 시에 파일 구조체가 생성 및 초기화 되지만, &lt;em&gt;IO_read&lt;/em&gt;* 인자들은 파일 접근이 이루어짐과 동시에 값이 적용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;eof&#34;&gt;EOF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;파일을 끝까지 읽었다고 판단하는 것은, EOF 문자(-1) 으로 판단한다.
+&lt;ul&gt;
+&lt;li&gt;하지만 실제파일을 읽어보면 마지막에 -1값이 실제로 들어있지는 않다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EOF 값은 file I/O 함수의 리턴값일 뿐 실제 파일에 기입된 값이 아니다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;file I/O 함수는 i-node에 기록된 파일의 크기를 기반으로 파일 끝을 판단한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;ASKII 코드 중 주요 문자의 값 참조&lt;/li&gt;
+&lt;li&gt;a: 97&lt;/li&gt;
+&lt;li&gt;A: 68&lt;/li&gt;
+&lt;li&gt;0: 48&lt;/li&gt;
+&lt;li&gt;\n: 10&lt;/li&gt;
+&lt;li&gt;\r: 13&lt;/li&gt;
+&lt;li&gt;(공백): 32&lt;/li&gt;
+&lt;li&gt;\t: 9&lt;/li&gt;
+&lt;li&gt;\0: 0&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fguts(BUFF, SIZE, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 읽어온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fputs(BUFF, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 출력한다.
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 표준 입력/출력/에러는 기본적으로 파일 포인터를 열어둔다. 각각 아래 문자열 혹은 번호로 참조 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;stdin&lt;/code&gt; : 표준 입력
+&lt;code&gt;stdout&lt;/code&gt; : 표준 출력 &lt;br&gt;
+&lt;code&gt;stderr&lt;/code&gt;: 표준 에러   &lt;br&gt;
+-&amp;gt; 파일 포인터 대신 &lt;code&gt;stdout&lt;/code&gt; 을 입력하면 표준 출력으로 문자열이 출력된다. (ex: &lt;code&gt;fputc(BUF, stdout)&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,8 +558,22 @@
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
-      <description>Shell Programming 리눅스 쉘 프로그래밍에 대해 기술한다. 쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다. 명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사) .sh 파일 작성 새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 chmod 명령어로 권한을 수정해야 한다.
-ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.</description>
+      <description>&lt;h1 id=&#34;shell-programming&#34;&gt;Shell Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 쉘 프로그래밍에 대해 기술한다.&lt;/li&gt;
+&lt;li&gt;쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다.&lt;/li&gt;
+&lt;li&gt;명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sh-파일-작성&#34;&gt;.sh 파일 작성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 &lt;code&gt;chmod&lt;/code&gt; 명령어로 권한을 수정해야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ex) &lt;code&gt;chmod a+x &amp;lt;파일이름&amp;gt;&lt;/code&gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.sh 파일 안에는 shell 명령어들을 사용할 수 있다. 그 외 추가적으로 작성할 수 있는 구문들은 다음과 같다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -59,7 +582,51 @@ ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대�
       <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_introduction/</guid>
-      <description>Linux 생성 배경 Unix unix는 범용 다중 사용자 방식의 시분할 운영체제이다. 즉, multi-user를 목적으로 개발된 운영체제이다. Dennis Ritche, Ken Thompson, Douglas Mcllroy 등이 주축이 되어 개발 이후 다양한 회사들에 의해 개발이 지속되어, 표준화의 필요성이 생겼고, IEEE에서 제안한 POSIX(Portable Operating System Interface) 라는 표준 인터페이스를 따르게 되었다. 리눅스는 unix를 기반으로 개발된 os이다. GNU Richard Stallman이 창시한 FSF(Free Software Foundation) 의 프로젝트 GNU 리눅스도 GNU의 GPL(General Public License) 에 의해 배포된다. 무료로 사용 가능하며 GPL 소스를 적용된 코드를 수정하여 재판매가 가능하지만, 해당 코드를 공개해야 하며, 개발자는 코드로 인해 발생하는 어떤 문제에 대해서도 법적 책임을 지지 않는다.</description>
+      <description>&lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
+&lt;h2 id=&#34;생성-배경&#34;&gt;생성 배경&lt;/h2&gt;
+&lt;h3 id=&#34;unix&#34;&gt;Unix&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;unix는 범용 다중 사용자 방식의 시분할 운영체제이다. 즉, multi-user를 목적으로 개발된 운영체제이다.&lt;/li&gt;
+&lt;li&gt;Dennis Ritche, Ken Thompson, Douglas Mcllroy 등이 주축이 되어 개발&lt;/li&gt;
+&lt;li&gt;이후 다양한 회사들에 의해 개발이 지속되어, 표준화의 필요성이 생겼고, IEEE에서 제안한 POSIX(Portable Operating System Interface) 라는 표준 인터페이스를 따르게 되었다.&lt;/li&gt;
+&lt;li&gt;리눅스는 unix를 기반으로 개발된 os이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;gnu&#34;&gt;GNU&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Richard Stallman이 창시한 FSF(Free Software &lt;strong&gt;Fo&lt;/strong&gt;undation) 의 프로젝트 GNU&lt;/li&gt;
+&lt;li&gt;리눅스도 GNU의 GPL(General Public License) 에 의해 배포된다.
+&lt;ol&gt;
+&lt;li&gt;무료로 사용 가능하며&lt;/li&gt;
+&lt;li&gt;GPL 소스를 적용된 코드를 수정하여 재판매가 가능하지만, 해당 코드를 공개해야 하며,&lt;/li&gt;
+&lt;li&gt;개발자는 코드로 인해 발생하는 어떤 문제에 대해서도 법적 책임을 지지 않는다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;GNU 프로젝트에서 linux를 main os로 채택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;linus-torvalds&#34;&gt;Linus Torvalds&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 커널을 최초로 개발하였으며, 현재도 리눅스 커널 최고 설계자로 위치&lt;/li&gt;
+&lt;li&gt;Git 개발에도 참여하였음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스는 수많은 개발자들이 개발에 동참하기에 개발 속도가 빠르고 분량이 방대하다.&lt;/li&gt;
+&lt;li&gt;1991년 0.01버전이 공개되고, 1994년 1.0버전이, 1999년 2.4가 발표되었다.&lt;/li&gt;
+&lt;li&gt;커널은 같지만, Redhat Ubuntu CentOs Fedora 등 다양한 배포 버전이 개발되었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;linux-hierarchy&#34;&gt;Linux hierarchy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스는 다음과 같은 구조로 구성되어 하드웨어를 제어한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hardware -&amp;gt;&lt;br&gt;
+Linux Kernel -&amp;gt;&lt;br&gt;
+System Call Interface -&amp;gt;&lt;br&gt;
+System Utilities -&amp;gt;&lt;br&gt;
+Linux Shell&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -68,11 +635,41 @@ ex) chmod a+x &amp;lt;파일이름&amp;gt; 명령으로 모든 사용자에 대�
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_env/</guid>
-      <description>Dev in Linux 리눅스 개발환경 구축을 위한 가이드
-사용자 맞춤 설정 .bashrc 홈 디렉터리에 위치한 user별 설정 파일이다.
-source ~/.bashrc 명령어로 언제든 새로고침 할 수 있다.
-리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.
-force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then# We have color support; assume it&amp;#39;s compliant with Ecma-48# (ISO/IEC-6429). (Lack of such support is extremely rare, and such# a case would tend to support setf rather than setaf.</description>
+      <description>&lt;h1 id=&#34;dev-in-linux&#34;&gt;Dev in Linux&lt;/h1&gt;
+&lt;p&gt;리눅스 개발환경 구축을 위한 가이드&lt;/p&gt;
+&lt;h2 id=&#34;사용자-맞춤-설정&#34;&gt;사용자 맞춤 설정&lt;/h2&gt;
+&lt;h3 id=&#34;bashrc&#34;&gt;.bashrc&lt;/h3&gt;
+&lt;p&gt;홈 디렉터리에 위치한 user별 설정 파일이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 언제든 새로고침 할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;force_color_prompt=true
+if [ -n &amp;#34;$force_color_prompt&amp;#34; ]; then
+    if [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then
+	# We have color support; assume it&amp;#39;s compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ &amp;#34;$color_prompt&amp;#34; = yes ]; then
+    PS1=&amp;#39;${debian_chroot:+($debian_root)}\[\033[01;32m\]\u\[\033[01;36m\]@\[\033[01;35m\]\h\[\033[00m\]:\[\033[01;033m\]\w\$\[\033[00m\]&amp;#39;
+else
+    PS1=&amp;#39;${debian_chroot:+($debian_chroot)}\u@\h:\w\$ &amp;#39;
+fi
+unset color_prompt force_color_prompt
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;vi&#34;&gt;vi&lt;/h3&gt;
+&lt;p&gt;리눅스에서 활용할 수 있는 기본적인 에디터이다. 진입장벽은 높은 편이지만, 한번 익숙해지면 매우 편리하다.&lt;br&gt;
+~/.vimrc 폴더에 기본 설정을 적용할 수 있다.&lt;br&gt;
+기본적인 설정은 아래와 같이 세팅할 수 있다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,7 +678,19 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/virtual_box/</guid>
-      <description>VirtualBox 문제와 해결 root 계정 virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다. virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다. virtualbox에서 원하는 ubuntu machine를 실행시킨다. machine이 실행되는 도중 shift키를 클릭하고 있는다. 부팅 모드 선택 화면이 뜨면 Advanced options for Ubuntu 를 선택하고, (recovery mode)표시가 되어있는 항목으로 부팅을 시도한다. 로딩이 완료되면 root 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.</description>
+      <description>&lt;h1 id=&#34;virtualbox&#34;&gt;VirtualBox&lt;/h1&gt;
+&lt;h2 id=&#34;문제와-해결&#34;&gt;문제와 해결&lt;/h2&gt;
+&lt;h3 id=&#34;root-계정&#34;&gt;root 계정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다.&lt;/li&gt;
+&lt;li&gt;virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;virtualbox에서 원하는 ubuntu machine를 실행시킨다.&lt;/li&gt;
+&lt;li&gt;machine이 실행되는 도중 shift키를 클릭하고 있는다.&lt;/li&gt;
+&lt;li&gt;부팅 모드 선택 화면이 뜨면 &lt;code&gt;Advanced options for Ubuntu&lt;/code&gt; 를 선택하고, &lt;code&gt;(recovery mode)&lt;/code&gt;표시가 되어있는 항목으로 부팅을 시도한다.&lt;/li&gt;
+&lt;li&gt;로딩이 완료되면 &lt;code&gt;root&lt;/code&gt; 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -90,7 +699,61 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_command/</guid>
-      <description>Linux Command 리눅스에서 사용되는 명령어들을 정리한다. 자주 사용되는 모듈의 명령어도 포함한다. 리눅스에서 명령어는 /usr/bin/ 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다. 유저 개인의 명령어를 따로 설정 및 관리하려면 ~/.bashrc 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다. 기본적으로 ~/bin/ 경로가 PATH에 추가되어 있다. export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...] 명령어를 ~/.bashrc 에 추가하면 경로를 추가할 수 있다. ex) # in .bashrc filePATH=$PATH:/home/user/bashrc # 기존의 PATH에 /home/user/.bashrc 추가# 현재 PATH는 .bashrc 포함PATH=$PATH:/home/user/dir1:/home/user/dir2 # 기존의 PATH에 dir1, dir2 추가# 현재 PATH는 .</description>
+      <description>&lt;h1 id=&#34;linux-command&#34;&gt;Linux Command&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스에서 사용되는 명령어들을 정리한다.&lt;/li&gt;
+&lt;li&gt;자주 사용되는 모듈의 명령어도 포함한다.&lt;/li&gt;
+&lt;li&gt;리눅스에서 명령어는 &lt;code&gt;/usr/bin/&lt;/code&gt; 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다.&lt;/li&gt;
+&lt;li&gt;유저 개인의 명령어를 따로 설정 및 관리하려면 &lt;code&gt;~/.bashrc&lt;/code&gt; 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;기본적으로 &lt;code&gt;~/bin/&lt;/code&gt; 경로가 PATH에 추가되어 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...]&lt;/code&gt; 명령어를 &lt;code&gt;~/.bashrc&lt;/code&gt; 에 추가하면 경로를 추가할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;ex)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# in .bashrc file
+PATH=$PATH:/home/user/bashrc  # 기존의 PATH에 /home/user/.bashrc 추가
+# 현재 PATH는 .bashrc 포함
+PATH=$PATH:/home/user/dir1:/home/user/dir2  # 기존의 PATH에 dir1, dir2 추가
+# 현재 PATH는 .bashrc, dir1, dir2 포함
+
+export PATH  # PATH를 적용
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;적용 후 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 .bashrc를 재적용 해 주면 설정이 완료된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;리눅스 쉘에서 위 쉘코드를 바로 입력해도 적용은 가능하지만, 이 경우 재부팅시 설정이 초기화된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;리눅스-기본&#34;&gt;리눅스 기본&lt;/h2&gt;
+&lt;h3 id=&#34;리눅스-설정-관련&#34;&gt;리눅스 설정 관련&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stty -a&lt;/code&gt;: 시그널 단축키들의 값 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;strace FILE_NAME&lt;/code&gt;: 실행파일이 실행되는 상세 과정을 라인별로 보여준다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getconf&lt;/code&gt;  리눅스의 시스템 변수 값을 확인하는 명령어
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;getconf -a&lt;/code&gt;: 모든 시스템 변수를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getconf LONG_BIT&lt;/code&gt;: 시스템이 x64라면 64를, x86이라면 32를 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ldd FILE_NAME&lt;/code&gt; : FILE_NAME 을 실행하는데 필요한 라이브러리 의존성을 확인한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;파일-시스템-조작&#34;&gt;파일 시스템 조작&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkdir&lt;/code&gt; : 디렉터리를 생성하는 명령여
+&lt;ul&gt;
+&lt;li&gt;parent 디렉터리가 존재하지 않는다면 &lt;code&gt;mkdir -p&lt;/code&gt; 명령어로 한 번에 생성 가능 (ex: &lt;code&gt;mkdir -R A/B/C/D&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문자열-조작&#34;&gt;문자열 조작&lt;/h2&gt;
+&lt;h3 id=&#34;sed&#34;&gt;sed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다.&lt;/li&gt;
+&lt;li&gt;ed는 대화형 편집기이며, sed는 스트리밍 편집기&lt;/li&gt;
+&lt;li&gt;\n 을 개행문자로 사용하는 스트리밍 에디터&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sed [-e script][-f script-file][file...]&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,12 +762,14 @@ force_color_prompt=trueif [ -n &amp;#34;$force_color_prompt&amp;#34; ]; thenif
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/linux_apt/</guid>
-      <description>Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.
-하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.
-본 해프닝에 대해 서술하자면 아래와 같다.
-원인 /bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.
-환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.
-현상 apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.</description>
+      <description>&lt;p&gt;Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.&lt;/p&gt;
+&lt;p&gt;하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.&lt;/p&gt;
+&lt;p&gt;본 해프닝에 대해 서술하자면 아래와 같다.&lt;/p&gt;
+&lt;h2 id=&#34;원인&#34;&gt;원인&lt;/h2&gt;
+&lt;p&gt;/bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.&lt;/p&gt;
+&lt;p&gt;환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.&lt;/p&gt;
+&lt;h2 id=&#34;현상&#34;&gt;현상&lt;/h2&gt;
+&lt;p&gt;apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.&lt;/p&gt;</description>
     </item>
     
   </channel>

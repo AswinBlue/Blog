@@ -13,7 +13,41 @@
       <pubDate>Sat, 09 Jul 2022 10:58:55 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/git/git/</guid>
-      <description>Git Cache Cache 확인: git ls-files --stage FILE_PATH Cache 삭제: git rm -r --cached FILE_PATH &#39;PATH&#39; already exists in the index 오류가 발생했을 때, cache를 확인하고 삭제하면 해결 가능하다. config git config 명령으로 git 관련 setting을 확인 및 설정할 수 있다. git config --list : 설정된 내용 확인 git config --add : 설정 추가 --system : 컴퓨터 환경에 적용 --global : 사용자 환경에 적용 --local : repository별로 설정 적용, default값 git config --global user.</description>
+      <description>&lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
+&lt;h2 id=&#34;cache&#34;&gt;Cache&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cache 확인: &lt;code&gt;git ls-files --stage FILE_PATH&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Cache 삭제: &lt;code&gt;git rm -r --cached FILE_PATH&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;PATH&#39; already exists in the index&lt;/code&gt; 오류가 발생했을 때, cache를 확인하고 삭제하면 해결 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;config&#34;&gt;config&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config&lt;/code&gt; 명령으로  git 관련 setting을 확인 및 설정할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --list&lt;/code&gt; : 설정된 내용 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --add&lt;/code&gt; : 설정 추가
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--system&lt;/code&gt; : 컴퓨터 환경에 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--global&lt;/code&gt; : 사용자 환경에 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--local&lt;/code&gt; : repository별로 설정 적용, default값
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.name &amp;lt;USER_NAME&amp;gt;&lt;/code&gt; : 사용자 이름 설정, 구역 인자를 붙이면 &amp;ndash;add 는 생략가능&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.email &amp;lt;EMAIL&amp;gt;&lt;/code&gt; : 사용자 email 설정, 구역 인자를 붙이면 &amp;ndash;add 는 생략가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --unset&lt;/code&gt; : 설정 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;submodule&#34;&gt;Submodule&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;git repository 안에 다른 git repository를 관리할 때 사용한다.&lt;/p&gt;</description>
     </item>
     
   </channel>

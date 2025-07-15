@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>window on AswinBlue</title>
+    <title>Window on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/window/</link>
-    <description>Recent content in window on AswinBlue</description>
+    <description>Recent content in Window on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 May 2024 16:02:25 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/window/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,21 @@
       <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/window_programming/</guid>
-      <description>Window Programming PE 윈도우는 실행 가능한 목적 파일을 PE 포멧이라 칭한다. (리눅스의 ELF 와 유사) PE 파일은 header 와 section 으로 구성된다. section 에는 이름, 크기, 로드될 주소의 오프셋, 속성과 권한 등의 정보가 들어있다. PE 파일에 들어가야 할 필수 section 은 없지만, &amp;lsquo;.text&amp;rsquo;, &amp;lsquo;.data&amp;rsquo;, &amp;lsquo;.rdata&amp;rsquo; section 이 주로 사용된다. .text: 실행 가능한 기계코드가 위치하는 영역 (읽기, 쓰기 가능) .data: 컴파일 시점에 정해진 전역 변수들이 위치하는 영역 (읽기, 쓰기 가능) .rdata: 컴파일 시점에 값이 정해진 전역 상수와 참조할 DLL 및 외부 함수들의 정보가 위치하는 영역 (읽기만 가능) 윈도우가 실행되면 PE 파일의 데이터들이 메모리에 적재된다.</description>
+      <description>&lt;h1 id=&#34;window-programming&#34;&gt;Window Programming&lt;/h1&gt;
+&lt;h2 id=&#34;pe&#34;&gt;PE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;윈도우는 실행 가능한 목적 파일을 &lt;code&gt;PE&lt;/code&gt; 포멧이라 칭한다. (리눅스의 ELF 와 유사)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE&lt;/code&gt; 파일은 header 와 section 으로 구성된다.&lt;/li&gt;
+&lt;li&gt;section 에는 이름, 크기, 로드될 주소의 오프셋, 속성과 권한 등의 정보가 들어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE&lt;/code&gt; 파일에 들어가야 할 필수 section 은 없지만, &amp;lsquo;.text&amp;rsquo;, &amp;lsquo;.data&amp;rsquo;, &amp;lsquo;.rdata&amp;rsquo; section 이 주로 사용된다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.text&lt;/code&gt;: 실행 가능한 기계코드가 위치하는 영역 (읽기, 쓰기 가능)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.data&lt;/code&gt;: 컴파일 시점에 정해진 전역 변수들이 위치하는 영역 (읽기, 쓰기 가능)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.rdata&lt;/code&gt;: 컴파일 시점에 값이 정해진 전역 상수와 참조할 DLL 및 외부 함수들의 정보가 위치하는 영역 (읽기만 가능)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;윈도우가 실행되면 &lt;code&gt;PE&lt;/code&gt; 파일의 데이터들이 메모리에 적재된다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

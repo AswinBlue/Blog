@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>webServer on AswinBlue</title>
+    <title>WebServer on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/webserver/</link>
-    <description>Recent content in webServer on AswinBlue</description>
+    <description>Recent content in WebServer on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,39 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs/</guid>
-      <description>Node.js 기본 명령 npm init : 패키지 생성 npm install : 라이브러리 설치 -P : package.json에 저장, 기본옵션 -O : optionalDependencies에 저장 -D, --no-save : 기록없이 다운로드 -g : 글로벌 설치, 모든 프로젝트에 적용 MODULE_NAME@VERSION : 버전 설정, latest는 가장 최근 버전을 의미 node main.js : 실행(main.js) npx &amp;lt;package_name&amp;gt; : 설치하지 않고 일회만 실행 node main.js : 패키지 실행 (main.js파일) npm audit : 의존성 문제가 발생했을 때, npm audit fix : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.</description>
+      <description>&lt;h1 id=&#34;nodejs&#34;&gt;Node.js&lt;/h1&gt;
+&lt;h2 id=&#34;기본-명령&#34;&gt;기본 명령&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm init&lt;/code&gt; : 패키지 생성&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm install&lt;/code&gt; : 라이브러리 설치
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-P&lt;/code&gt; : package.json에 저장, 기본옵션&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-O&lt;/code&gt; : optionalDependencies에 저장&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-D&lt;/code&gt;, &lt;code&gt;--no-save&lt;/code&gt; : 기록없이 다운로드&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-g&lt;/code&gt; : 글로벌 설치, 모든 프로젝트에 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MODULE_NAME@VERSION&lt;/code&gt; : 버전 설정, latest는 가장 최근 버전을 의미&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node main.js&lt;/code&gt; : 실행(main.js)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npx &amp;lt;package_name&amp;gt;&lt;/code&gt; : 설치하지 않고 일회만 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node main.js&lt;/code&gt; : 패키지 실행 (main.js파일)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm audit&lt;/code&gt; : 의존성 문제가 발생했을 때,
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm audit fix&lt;/code&gt; : 의존성 문제를 자동으로 해결하는 명령어, 일부 해결을 할 수는 있지만 package.json 파일을 수정할 수 있으므로 주의. &amp;ndash;fix 옵션을 넣어서 강제로 수정할 수도 있지만, 오히려 되던 기능이 안 될 수도 있으므로 추천하지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm cache clean&lt;/code&gt; : 캐싱된 데이터를 정리할 수 있다. &amp;ndash;force 옵션을 넣어 강제로 처리 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;구조&#34;&gt;구조&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;main.js&lt;/code&gt; : nodejs 실행시 실행할 메인 파일&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; : root 경로에 존재하며, npm 프로젝트를 관리하는 파일&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/node_modules&lt;/code&gt; : 프로젝트에서 사용되는 모듈들이 저장되는 파일이다. npm install 명령 사용시 모듈들이 다운받아지는 경로이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;packagejson&#34;&gt;package.json&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;nodejs 설정을 담고있는 파일로, 참조할 내용이 많아 아래에 따로 정리한다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -22,7 +54,37 @@
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
-      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
+      <description>&lt;h1 id=&#34;python-cgi&#34;&gt;python CGI&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CGI는 Common Gateway Interface의 약자다.&lt;/li&gt;
+&lt;li&gt;web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다.&lt;/li&gt;
+&lt;li&gt;web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다.&lt;/li&gt;
+&lt;li&gt;apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ a2enmod CGI&lt;/code&gt; 명령으로 apache의 CGI를 켜 주고, &lt;code&gt;sudo service apache2 restart&lt;/code&gt; 로 설정 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt; 안에 apache 실행시 발생한 에러 로그가 담겨있다.&lt;/li&gt;
+&lt;li&gt;웹 브라우저가 웹 서버에 요청할 때 웹 서버는 응답으로 웹 페이지의 데이터 타입(헤더)와 함께 웹 페이지를 전송한다.
+python CGI로는 &lt;code&gt;print(&amp;quot;content-type:text/html; charset=UTF-8\n&amp;quot;)&lt;/code&gt; 와 같이 헤더를 표기낸다.&lt;/li&gt;
+&lt;li&gt;헤더를 출력한 다음 부터는 body 부분이 출력된다.&lt;/li&gt;
+&lt;li&gt;특정 주소로 Redirection을 할 때에는 &lt;code&gt;print(&amp;quot;location : index.py?id=title&amp;quot;)&lt;/code&gt;을 이용한다. ( &amp;lsquo;:&amp;rsquo; 이후 부터 &amp;lsquo;&amp;quot;&amp;rsquo; 까지는 원하는대로 작성)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;formatting&#34;&gt;formatting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;string에서 특정 문자열을 다른 문자로 치환하는 기능
+ex) &lt;code&gt;&#39;{} {}&#39;.format(&#39;one&#39;,&#39;tow&#39;)&lt;/code&gt;
+ex) &lt;code&gt;&#39;{a} {b}&#39;.format(a=&#39;hello&#39;, b=&#39;world&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cgi-모듈&#34;&gt;CGI 모듈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import cgi&lt;/code&gt; 로 모듈을 로드해 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form = cgi.FieldStorage()&lt;/code&gt; form은 jQuery와 같은 역할을 한다.
+ex) &lt;code&gt;pageId = form[&#39;id&#39;].value&lt;/code&gt; : page의 id를 가져온다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html-연동&#34;&gt;HTML 연동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;input 태그의 name 속성 : input 태그를 특정 이름으로 CGI에 전달함
+ex)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,16 +93,34 @@
       <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/javascript/</guid>
-      <description>JavaScript 기본적으로 HTML 위에서 돌아가는 코드 body 태그 안에 태그를 넣고 안에 작성
-document를 호출하고, .으로 함수를 호출한다.
-querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음
-querySelectorAll(&amp;rsquo;&amp;rsquo;)로 원하는 속성의 element들을 nodeList(배열과 유사)형태로 선택 가능
-ex ) document.querySelector(&#39;body&#39;)
-ex ) document.querySelector(&#39;#new&#39;)
-ex ) document.write(&amp;quot;hello world&amp;quot;)
-태그 안에 javaScript를 사용하는 속성값으로 사용
-ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quot; onclick=&amp;quot;alert(&#39;hello&#39;)&amp;quot;&amp;gt;
-특정 태그 안에서 자기자신을 호출할 때에는 querySelector를 호출하지 않고 this를 사용하면 된다.</description>
+      <description>&lt;h1 id=&#34;javascript&#34;&gt;JavaScript&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;기본적으로 HTML 위에서 돌아가는 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;body 태그 안에 &lt;script&gt; &lt;/script&gt; 태그를 넣고 안에 작성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;document를 호출하고, .으로 함수를 호출한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;querySelectorAll(&amp;rsquo;&amp;rsquo;)로 원하는 속성의 element들을 nodeList(배열과 유사)형태로 선택 가능&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;document.querySelector(&#39;body&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;document.querySelector(&#39;#new&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;document.write(&amp;quot;hello world&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;태그 안에 javaScript를 사용하는 속성값으로 사용&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quot; onclick=&amp;quot;alert(&#39;hello&#39;)&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;특정 태그 안에서 자기자신을 호출할 때에는 querySelector를 호출하지 않고 this를 사용하면 된다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,11 +129,28 @@ ex ) &amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quo
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/css/</guid>
-      <description>CSS 특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다. 중복의 제거 가능, 유지보수 수월, 가독성 증가 위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐 tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다. html 문서 안에 &amp;lt;style&amp;gt; 태그 안에 작성 가능
-ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
-태그의 종류별로 속성 설정 가능
-여기서 태그 a 는 선택자(selector)라고 한다.
-선택자는 ,로 구별하여 함께 사용 가능</description>
+      <description>&lt;h1 id=&#34;css&#34;&gt;CSS&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다.&lt;/li&gt;
+&lt;li&gt;중복의 제거 가능, 유지보수 수월, 가독성 증가&lt;/li&gt;
+&lt;li&gt;위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐&lt;/li&gt;
+&lt;li&gt;tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;html 문서 안에 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 태그 안에 작성 가능&lt;/p&gt;
+&lt;p&gt;ex ) &lt;code&gt;&amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;태그의 종류별로 속성 설정 가능&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;여기서 태그 a 는 선택자(selector)라고 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;선택자는 ,로 구별하여 함께 사용 가능&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,7 +159,33 @@ ex ) &amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/html/</guid>
-      <description>HTML W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다. 태그 element라고 칭하기도 한다. 부모 자식 관계가 존재 &amp;lt;TAG_NAME&amp;gt; 로 시작하고 &amp;lt;/TAG_NAME&amp;gt;로 끝냄 태그별로 검색 엔진에서 노출되는 중요도가 다르다. 태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다. html : body와 head를 통틀어 묶은 최 고위 태그 관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다. body : 본문을 묶는 태그 head : 본문을 설명하는 태그 속성(attribute) &amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음 body 속성 strong : 굵은 글씨</description>
+      <description>&lt;h1 id=&#34;html&#34;&gt;HTML&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;태그&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;element라고 칭하기도 한다.&lt;/li&gt;
+&lt;li&gt;부모 자식 관계가 존재&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAG_NAME&amp;gt;&lt;/code&gt; 로 시작하고 &lt;code&gt;&amp;lt;/TAG_NAME&amp;gt;&lt;/code&gt;로 끝냄&lt;/li&gt;
+&lt;li&gt;태그별로 검색 엔진에서 노출되는 중요도가 다르다.&lt;/li&gt;
+&lt;li&gt;태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다.&lt;/li&gt;
+&lt;li&gt;html : body와 head를 통틀어 묶은 최 고위 태그&lt;/li&gt;
+&lt;li&gt;관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다.&lt;/li&gt;
+&lt;li&gt;body : 본문을 묶는 태그&lt;/li&gt;
+&lt;li&gt;head : 본문을 설명하는 태그&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;속성(attribute)
+&amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;body&#34;&gt;body&lt;/h2&gt;
+&lt;h3 id=&#34;속성&#34;&gt;속성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;strong : 굵은 글씨&lt;/p&gt;</description>
     </item>
     
   </channel>

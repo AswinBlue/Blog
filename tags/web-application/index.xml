@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>web application on AswinBlue</title>
+    <title>Web Application on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/web-application/</link>
-    <description>Recent content in web application on AswinBlue</description>
+    <description>Recent content in Web Application on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Aug 2021 18:46:22 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-application/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,48 @@
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</guid>
-      <description>React basic 개발환경 설치 및 실행 node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다. npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다. npm install -g create-react-app 원하는 경로에 들어가 프로젝트를 생성한다. create-react-app &amp;lt;NAME&amp;gt; : NAME 경로에 프로젝트 생성 주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다. 실행 npm run start 를 수행하면 localhost:3000에서 웹페이지를 퍼블리싱한다. 기본 설정 실행 포트 package.json 파일에서 &amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.</description>
+      <description>&lt;h1 id=&#34;react-basic&#34;&gt;React basic&lt;/h1&gt;
+&lt;h2 id=&#34;개발환경-설치-및-실행&#34;&gt;개발환경 설치 및 실행&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다.
+&lt;code&gt;npm install -g create-react-app&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;원하는 경로에 들어가 프로젝트를 생성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create-react-app &amp;lt;NAME&amp;gt;&lt;/code&gt; : NAME 경로에 프로젝트 생성&lt;/li&gt;
+&lt;li&gt;주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm run start&lt;/code&gt; 를 수행하면 &lt;code&gt;localhost:3000&lt;/code&gt;에서 웹페이지를 퍼블리싱한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;실행 포트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; 파일에서 &lt;code&gt;&amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot;&lt;/code&gt; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-구조&#34;&gt;기본 구조&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;/public/index.html 에서 기본 화면 구성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;root&amp;rsquo; 이름으로 된 division이 있는데, 이 division에 대한 설정은 javascript로 정의되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;src 경로에 javascript파일들 구성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lsquo;index.js&amp;rsquo; 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 &amp;lsquo;root&amp;rsquo; 인 division에 &amp;lsquo;App&amp;rsquo;을 적용하겠다는 의미이다.&lt;/p&gt;</description>
     </item>
     
   </channel>

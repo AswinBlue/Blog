@@ -13,13 +13,95 @@
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow/</guid>
-      <description>#Tensorflow
-TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
-edge는 학습데이터가 저장되는 다차원 배열이다.
-edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
-edge는 방향성이 있으며(directed), tensor라 불린다.
-archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
-설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.</description>
+      <description>&lt;p&gt;#Tensorflow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-개념&#34;&gt;기본 개념&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 학습데이터가 저장되는 다차원 배열이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 방향성이 있으며(directed), tensor라 불린다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;&#34;&gt;archive.ics.uci.edu/ml&lt;/a&gt; 에서 학습용 데이터를 받아 사용할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;python과 pip를 설치한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install tensorflow&lt;/code&gt; 명령을 수행한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.&lt;/li&gt;
+&lt;li&gt;실행에서 &lt;code&gt;regedit&lt;/code&gt;을 실행하고, &amp;lsquo;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&amp;rsquo; 레지스트리를 찾아 값을 1로 세팅해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;연관-모듈&#34;&gt;연관 모듈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;함께 쓰면 효율이 좋은 모듈들&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;numpy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data = np.loadtxt(FILE_NAME, delimiter=&#39;,&#39;)&lt;/code&gt; : ,를 기준으로 데이터를 나누는 csv 파일을 읽어들임. 숫자 데이터를 읽을 때 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;keras (tensorflow 설치시 자동성치된다)
+&lt;code&gt;y_encoded = to_categorical(y_data)&lt;/code&gt; : y_data 를 one-hot-encoding 하는 함수  (tensorflow.keras.utils.to_categorical)&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df = pd.read_csv(FILE_NAME)&lt;/code&gt; : csv 파일을 읽어서 dataframe을 구성한다. 숫자 및 문자열 데이터를 읽을 때 사용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;sklearn&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 전처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;e = sklearn.preprocessing.LabelEncoder()
+e.fit(data)  # data 에 들어있는 값 중 unique한 값을 뽑아(중복 제거) 특정 string에 번호를 매기는(indexing) 함수
+data = e.transform(data)  # indexing 된 정보를 바탕으로 실제 data값을 index로 치환
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;기본-문법&#34;&gt;기본 문법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;상수 선언&lt;br&gt;
+&lt;code&gt;val = tf.constant(value, dtype=None, shape=None, name=&#39;Conts&#39;, verify_shape=False)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;value = 값&lt;/li&gt;
+&lt;li&gt;dtype : 데이터 타입, ex) &amp;rsquo;tf.float32&amp;rsquo;, &amp;rsquo;tf.float64&amp;rsquo;, &amp;rsquo;tf.int8&amp;rsquo;
+&lt;ul&gt;
+&lt;li&gt;float(32, 64), int(8, 16, 64),uint(8, 16), string, bool, complex(64, 128 : 복소수)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;shape : 차원, value 형태에 따라 자동으로 설정 됨, ex) &amp;lsquo;[3,3]&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;name : 상수의 이름&lt;/li&gt;
+&lt;li&gt;verify_shape : tensor의 shape를 바꿀수 있는지 여부&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;배열 생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;arr = tf.range(5)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;output : &lt;code&gt;tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

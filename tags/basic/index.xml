@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>basic on AswinBlue</title>
+    <title>Basic on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/basic/</link>
-    <description>Recent content in basic on AswinBlue</description>
+    <description>Recent content in Basic on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/basic/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,72 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/c&#43;&#43;/</guid>
-      <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\printf(&amp;#34;%d&amp;#34;, (X) + 1);\printf(&amp;#34;%d&amp;#34;, (X) + 2); 매크로 합성 : #define A 1#define B 1#define C A##B // A##B = 12 함수형태 매크로 작성 : // 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.</description>
+      <description>&lt;h1 id=&#34;c-basics&#34;&gt;C++ basics&lt;/h1&gt;
+&lt;h2 id=&#34;매크로&#34;&gt;매크로&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#define MACRO 1&lt;/code&gt; : MACRO 값으로 1을 지정&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#undef MACRO&lt;/code&gt; : MACRO값에 지정된 내용 해제&lt;/li&gt;
+&lt;li&gt;여러줄의 매크로 값 지정 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\
+  printf(&amp;#34;%d&amp;#34;, (X) + 1);\
+  printf(&amp;#34;%d&amp;#34;, (X) + 2);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;매크로 합성 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define A 1
+#define B 1
+#define C A##B // A##B = 12
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;함수형태 매크로 작성 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.
+// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.
+#define FUNC(a, b) do { \
+    a = b * 2;\
+} while (0)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;연산자 우선순 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 매크로 함수는 계산 전 치환을 먼저 수행한다. 연산자 우선순위에 주의한다.
+#define ADD1(a,b) a+b
+#define ADD2(a,b) (a+b)
+#define MULT(a,b) a*b
+#define MULT2(a,b) (a)*(b)
+...
+printf(&amp;#34;%d&amp;#34;,ADD1(3,4) * 2) // 예상값 (3 + 4) * 2 = 14
+// 3 + 4 * 2 로 치환하여 계산되어 실제 결과는 11
+// ADD2 처럼 계산 결과를 괄호로 묶어야 안전하다.
+
+printf(&amp;#34;%d&amp;#34;,MULT(2+2,3+3)) // 예상값 (4 * 6) * 2 = 26
+// (2 + 2 * 3 + 3) 로 치환하여 계산되어 실제 결과는 11
+// MULT2 처럼 각 변수를 괄호로 묶어야 안전하다.
+
+// ADD1, MULT2 경우를 종합하여 아래와 같이 사용하자
+#define ADD3(a,b) ((a) + (b))
+#define MULT3(a,b) ((a) * (b))
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;조건부 컴파일
+&lt;ul&gt;
+&lt;li&gt;if-elif-else 사용 가능&lt;/li&gt;
+&lt;li&gt;조건에 !, &amp;amp;&amp;amp; || 논리연산 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define MACRO
+#define DEBUG 1
+
+#ifdef MACRO // 정의가 되어있으면 수행
+#endif
+
+#if DEBUG // DEBUG가 나타내는 값 또는 식이 참이면 수행
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;파일 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;FILE_NAME&amp;gt; // 표준라이브러리에서 파일 참조
+#include &amp;#34;FILE_NAME&amp;#34; // 현재 경로 기준 파일 참조
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;→ [&lt;em&gt;활용&lt;/em&gt;]: 헤더파일 중복 참조 방지법&lt;/p&gt;</description>
     </item>
     
   </channel>

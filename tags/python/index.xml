@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>python on AswinBlue</title>
+    <title>Python on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/python/</link>
-    <description>Recent content in python on AswinBlue</description>
+    <description>Recent content in Python on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -13,13 +13,95 @@
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow/</guid>
-      <description>#Tensorflow
-TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다. 기본 개념 node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다. node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.
-edge는 학습데이터가 저장되는 다차원 배열이다.
-edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.
-edge는 방향성이 있으며(directed), tensor라 불린다.
-archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다.
-설치 python과 pip를 설치한다. pip install tensorflow 명령을 수행한다. window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.</description>
+      <description>&lt;p&gt;#Tensorflow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TensorFlow는 구글에서 수치연산을 위해 만든 라이브러리이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기본-개념&#34;&gt;기본 개념&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;node와 edge로 구성된 graph를 이용해 수치 연산을 수행한다.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;node들은 특정한 데이터가 들어오면 연산을 수행하거나, 형태를 변경하거나, 결과를 출력하는 역할을 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 학습데이터가 저장되는 다차원 배열이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 node에서 계산된 데이터를 다음 node로 이동시킨다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edge는 방향성이 있으며(directed), tensor라 불린다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;&#34;&gt;archive.ics.uci.edu/ml&lt;/a&gt; 에서 학습용 데이터를 받아 사용할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;python과 pip를 설치한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install tensorflow&lt;/code&gt; 명령을 수행한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;window에서 &amp;lsquo;client_load_reporting_filter.h&amp;rsquo; 파일을 찾지 못해 설치를 못했다면, path 경로가 너무 길어서 발생하는 오류이다.&lt;/li&gt;
+&lt;li&gt;실행에서 &lt;code&gt;regedit&lt;/code&gt;을 실행하고, &amp;lsquo;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&amp;rsquo; 레지스트리를 찾아 값을 1로 세팅해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;연관-모듈&#34;&gt;연관 모듈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;함께 쓰면 효율이 좋은 모듈들&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;numpy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data = np.loadtxt(FILE_NAME, delimiter=&#39;,&#39;)&lt;/code&gt; : ,를 기준으로 데이터를 나누는 csv 파일을 읽어들임. 숫자 데이터를 읽을 때 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;keras (tensorflow 설치시 자동성치된다)
+&lt;code&gt;y_encoded = to_categorical(y_data)&lt;/code&gt; : y_data 를 one-hot-encoding 하는 함수  (tensorflow.keras.utils.to_categorical)&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df = pd.read_csv(FILE_NAME)&lt;/code&gt; : csv 파일을 읽어서 dataframe을 구성한다. 숫자 및 문자열 데이터를 읽을 때 사용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;sklearn&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 전처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;e = sklearn.preprocessing.LabelEncoder()
+e.fit(data)  # data 에 들어있는 값 중 unique한 값을 뽑아(중복 제거) 특정 string에 번호를 매기는(indexing) 함수
+data = e.transform(data)  # indexing 된 정보를 바탕으로 실제 data값을 index로 치환
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;기본-문법&#34;&gt;기본 문법&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;상수 선언&lt;br&gt;
+&lt;code&gt;val = tf.constant(value, dtype=None, shape=None, name=&#39;Conts&#39;, verify_shape=False)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;value = 값&lt;/li&gt;
+&lt;li&gt;dtype : 데이터 타입, ex) &amp;rsquo;tf.float32&amp;rsquo;, &amp;rsquo;tf.float64&amp;rsquo;, &amp;rsquo;tf.int8&amp;rsquo;
+&lt;ul&gt;
+&lt;li&gt;float(32, 64), int(8, 16, 64),uint(8, 16), string, bool, complex(64, 128 : 복소수)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;shape : 차원, value 형태에 따라 자동으로 설정 됨, ex) &amp;lsquo;[3,3]&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;name : 상수의 이름&lt;/li&gt;
+&lt;li&gt;verify_shape : tensor의 shape를 바꿀수 있는지 여부&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;배열 생성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;arr = tf.range(5)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;output : &lt;code&gt;tf.Tensor : shape(5,), dtype=int32, numpy=([0, 1, 2, 3, 4], dtype=int32)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,8 +110,78 @@ archive.ics.uci.edu/ml 에서 학습용 데이터를 받아 사용할 수 있다
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/kivy/</guid>
-      <description>#kivy
-Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .</description>
+      <description>&lt;p&gt;#kivy&lt;/p&gt;
+&lt;h2 id=&#34;basic-concepts&#34;&gt;Basic concepts&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Widget&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;어플리케이션을 구성하는 객체&lt;/li&gt;
+&lt;li&gt;widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합&lt;/li&gt;
+&lt;li&gt;위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Layout&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;화면 구성을 설정한 요소&lt;/li&gt;
+&lt;li&gt;widget 혹은 layout을 포함 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;structure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;main.py에 python으로 내용을 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class TheLabApp(App):
+pass
+TheLabApp().run()
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/
+|-main.py
+|-TheLab.kv
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;.py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .kv파일에서 바로 작성할 수도 있다.&lt;/li&gt;
+&lt;li&gt;단, .kv파일에서 객체를 생성하려면 .py파일에 정의된 class를 사용해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXAMPLE@BoxLayout&amp;gt;&lt;/code&gt; 와 같이 .py파일의 class 선언을 생략하고 default 객체를 사용하는 방법도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;///////// .py /////////
+class Box(BoxLayout):
+  pass
+///////// .kv /////////
+&amp;lt;Box&amp;gt;: # .py에서 정의된 Box객체를 사용 가능
+  GridLayout:  # 이후부터는 kivy에서 제공하는 객체들 사용 가능
+    label:
+      text:&amp;#34;lb&amp;#34;
+
+&amp;lt;Box2@BoxLayout&amp;gt;: # .py파일에서 아무것도 하지 않는 객체를 선언하기 싫을 때 사용
+///////////////////////
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;ex) class 안에서 속성 설정 :&lt;code&gt;self.orientation = &amp;quot;vertical&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ex) kv파일에서 속성 설정 : &lt;code&gt;orientation: &amp;quot;vertical&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;NAME&amp;gt;&lt;/code&gt;형태로 선언한 객체는 다른 객체에서 사용할수 있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Box&amp;gt;:
+  ...
+&amp;lt;Box2&amp;gt;:
+  Button:
+    ...
+  Box:  # 사용자 정의 객체
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;.kv파일은 아래와 같이 구성된다.&lt;/li&gt;
+&lt;li&gt;화면을 구성하는 내용들의 속성을 정의하고 배치할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;MainWidget:         # 화면에 표기할 객체(widget, layout, &amp;hellip;)
+&lt;MainWidget&gt;:       # widget 정의
+Button:           # widget 내부 항목 선언, kivy에서 지원하는 객체의 종류
+text:&amp;ldquo;A&amp;rdquo;
+Button:
+text:&amp;ldquo;B&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,10 +190,40 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/python/python_basic/</guid>
-      <description>Python 기본 내장 함수 입력 한줄 받기 : a = input()
-받은 값은 string 형태이다.
-받은 단어 끊어서 해석 : a, b = input().split() split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌
-받은 단어 끊고 숫자로 변환 : a, b = map(int, input().split()) int 외 다른 형태도 사용 가능 출력 print() 와 sys.stdout.write() 로 화면에 출력할 수 있다. sys.stdout.write 안에는 string 형태만 적용할 수 있다. print 안에는 수식 등으로 string 및 byte를 표현 가능하다.</description>
+      <description>&lt;h1 id=&#34;python&#34;&gt;Python&lt;/h1&gt;
+&lt;h2 id=&#34;기본-내장-함수&#34;&gt;기본 내장 함수&lt;/h2&gt;
+&lt;h3 id=&#34;입력&#34;&gt;입력&lt;/h3&gt;
+&lt;p&gt;한줄 받기 : &lt;code&gt;a = input()&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;받은 값은 string 형태이다.&lt;br&gt;
+받은 단어 끊어서 해석 : &lt;code&gt;a, b = input().split()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌&lt;br&gt;
+받은 단어 끊고 숫자로 변환 : &lt;code&gt;a, b = map(int, input().split())&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;int 외 다른 형태도 사용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;출력&#34;&gt;출력&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;print()&lt;/code&gt; 와 &lt;code&gt;sys.stdout.write()&lt;/code&gt; 로 화면에 출력할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sys.stdout.write&lt;/code&gt; 안에는 string 형태만 적용할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;print&lt;/code&gt; 안에는 수식 등으로 string 및 byte를 표현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sys.stdout.buffer.write()&lt;/code&gt; 를 사용하면 문자열을 수식을 통해 조합하고 ascii 코드 형태로 출력 가능하다.
+&lt;ul&gt;
+&lt;li&gt;print() 를 사용하면 prefix가 붙어서 원하는 형태를 표현하기 어렵다. 이럴 때 sys.stdout.buffer.write()를 사용한다.&lt;/li&gt;
+&lt;li&gt;ex)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  sys.stdout.write(b&amp;#39;A&amp;#39;*0x10 + b&amp;#39;B&amp;#39;*0x20 + b&amp;#39;\xaa\
+  xbb\xcc\xdd\x00\x00\x00\x00&amp;#39;)
+  # 결과: AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB����
+  sys.stdout.write(b&amp;#39;A&amp;#39;*0x10 + b&amp;#39;B&amp;#39;*0x20 + b&amp;#39;\xaa\
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;xbb\xcc\xdd\x00\x00\x00\x00&amp;rsquo;)
+# 결과: b&amp;rsquo;AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\xaa\xbb\xcc\xdd\x00\x00\x00\x00&amp;rsquo;
+```&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,7 +232,34 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/java/jython/</guid>
-      <description>Jython Java 환경에서 python을 실행하게 하는 방법 중 하나 역으로 Jython 환경에서 java를 실행 가능하기도 하다. spring에서 jython을 사용하는 방법에 대해 묘사하겠다. 설치 pom.xml에 의존성을 작성한다. pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다. &amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;&amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt; 실행 PythonInterpreter 을 선언한다. 이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다. PythonInterpreter jython;jython.</description>
+      <description>&lt;h1 id=&#34;jython&#34;&gt;Jython&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 환경에서 python을 실행하게 하는 방법 중 하나&lt;/li&gt;
+&lt;li&gt;역으로 Jython 환경에서 java를 실행 가능하기도 하다.&lt;/li&gt;
+&lt;li&gt;spring에서 jython을 사용하는 방법에 대해 묘사하겠다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pom.xml에 의존성을 작성한다.&lt;/li&gt;
+&lt;li&gt;pom을 사용하면 jython을 설치하지 않고 일부 동작이 실행되게 할 수 있지만, 외부 모듈 사용에는 제한적인 부분이 있기에 설치가 필요하면 설치를 해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!-- https://mvnrepository.com/artifact/org.python/jython --&amp;gt;
+&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.python&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;jython&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PythonInterpreter 을 선언한다.&lt;/li&gt;
+&lt;li&gt;이후 execfile, exec 함수를 이용하여 python 문법을 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PythonInterpreter jython;
+jython.execfile(PYTHON);
+jython.exec(&amp;#34;print(1+1)&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;execfile로 특정 함수를 정의하였다면 그 아래에 있는 exec함수에서 함수를 호출할 수도 있다.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -59,7 +268,37 @@ Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
-      <description>python CGI CGI는 Common Gateway Interface의 약자다. web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다. web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다. apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자. $ a2enmod CGI 명령으로 apache의 CGI를 켜 주고, sudo service apache2 restart 로 설정 적용 /var/log/apache2/error.log 안에 apache 실행시 발생한 에러 로그가 담겨있다.</description>
+      <description>&lt;h1 id=&#34;python-cgi&#34;&gt;python CGI&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CGI는 Common Gateway Interface의 약자다.&lt;/li&gt;
+&lt;li&gt;web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다.&lt;/li&gt;
+&lt;li&gt;web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다.&lt;/li&gt;
+&lt;li&gt;apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ a2enmod CGI&lt;/code&gt; 명령으로 apache의 CGI를 켜 주고, &lt;code&gt;sudo service apache2 restart&lt;/code&gt; 로 설정 적용&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt; 안에 apache 실행시 발생한 에러 로그가 담겨있다.&lt;/li&gt;
+&lt;li&gt;웹 브라우저가 웹 서버에 요청할 때 웹 서버는 응답으로 웹 페이지의 데이터 타입(헤더)와 함께 웹 페이지를 전송한다.
+python CGI로는 &lt;code&gt;print(&amp;quot;content-type:text/html; charset=UTF-8\n&amp;quot;)&lt;/code&gt; 와 같이 헤더를 표기낸다.&lt;/li&gt;
+&lt;li&gt;헤더를 출력한 다음 부터는 body 부분이 출력된다.&lt;/li&gt;
+&lt;li&gt;특정 주소로 Redirection을 할 때에는 &lt;code&gt;print(&amp;quot;location : index.py?id=title&amp;quot;)&lt;/code&gt;을 이용한다. ( &amp;lsquo;:&amp;rsquo; 이후 부터 &amp;lsquo;&amp;quot;&amp;rsquo; 까지는 원하는대로 작성)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;formatting&#34;&gt;formatting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;string에서 특정 문자열을 다른 문자로 치환하는 기능
+ex) &lt;code&gt;&#39;{} {}&#39;.format(&#39;one&#39;,&#39;tow&#39;)&lt;/code&gt;
+ex) &lt;code&gt;&#39;{a} {b}&#39;.format(a=&#39;hello&#39;, b=&#39;world&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cgi-모듈&#34;&gt;CGI 모듈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import cgi&lt;/code&gt; 로 모듈을 로드해 사용한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form = cgi.FieldStorage()&lt;/code&gt; form은 jQuery와 같은 역할을 한다.
+ex) &lt;code&gt;pageId = form[&#39;id&#39;].value&lt;/code&gt; : page의 id를 가져온다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html-연동&#34;&gt;HTML 연동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;input 태그의 name 속성 : input 태그를 특정 이름으로 CGI에 전달함
+ex)&lt;/p&gt;</description>
     </item>
     
   </channel>

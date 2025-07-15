@@ -13,8 +13,38 @@
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/computerscience/computer_science/</guid>
-      <description>Computer Science CPU Segment 프로세스가 사용하는 메모리를 Segment라 칭하며, 리눅스에서는 5가지 종류로 이를 분류한다.
-코드 세그먼트 : 실행 가능한 코드가 위치한 영역으로, text segment라고도 부른다. 데이터 세그먼트 : 코드 실행에 필요한 데이터가 있는 영역으로, 전역변수 및 전역 상수들이 위치한다. 읽기/쓰기가 모두 가능한 데이터들은 data segment에 저장된다. 읽기만 가능한 상수 데이터들은 rodata(read-only) segment 에 저장된다. BSS 세그먼트 : Block Started by Symbol 의 약자로, 컴파일시점에 값이 정해지지 않은 전역변수가 저장되는 영역이다. 이 영역은 프로그램 시작시 모두 0으로 초기화 된다.</description>
+      <description>&lt;h1 id=&#34;computer-science&#34;&gt;Computer Science&lt;/h1&gt;
+&lt;h2 id=&#34;cpu&#34;&gt;CPU&lt;/h2&gt;
+&lt;h3 id=&#34;segment&#34;&gt;Segment&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;프로세스가 사용하는 메모리를 Segment라 칭하며, 리눅스에서는 5가지 종류로 이를 분류한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;코드 세그먼트&lt;/code&gt; : 실행 가능한 코드가 위치한 영역으로, text segment라고도 부른다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;데이터 세그먼트&lt;/code&gt; : 코드 실행에 필요한 데이터가 있는 영역으로, 전역변수 및 전역 상수들이 위치한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;읽기/쓰기가 모두 가능한 데이터들은 data segment에 저장된다.&lt;/li&gt;
+&lt;li&gt;읽기만 가능한 상수 데이터들은 rodata(read-only) segment 에 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;code&gt;BSS 세그먼트&lt;/code&gt; : Block Started by Symbol 의 약자로, 컴파일시점에 값이 정해지지 않은 전역변수가 저장되는 영역이다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;이 영역은 프로그램 시작시 모두 0으로 초기화 된다. C에서 전역변수가 0 으로 초기화되는 이유가 이 때문이다.&lt;/li&gt;
+&lt;li&gt;읽기와 쓰기가 모두 가능한 영역이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;code&gt;힙 세그먼트&lt;/code&gt; : 동적으로 할당되는 데이터들을 저장하는 영역이다. 스택과 마주보는 방향으로 증가한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;스택 세그먼트&lt;/code&gt; : 프로세스의 스택이 위치하는 영역으로, 지역변수 및 함수 인자들이 저장된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;스택 세그먼트는 메모리 마지막 주소(가장 큰 주소)부터 시작해서 힙과 마주보는 방향으로 증가한다.&lt;/li&gt;
+&lt;li&gt;운영체제가 프로세스 동작 상황에 따라 스택 영역을 관리한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;세그먼트는 위에서 언급된 순서대로 메모리에 배치되며, 스택 세그먼트만 특이하게 메모리 가장 마지막을 기준으로 할당된다.&lt;/p&gt;</description>
     </item>
     
   </channel>

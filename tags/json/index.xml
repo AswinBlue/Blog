@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>json on AswinBlue</title>
+    <title>Json on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/json/</link>
-    <description>Recent content in json on AswinBlue</description>
+    <description>Recent content in Json on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/json/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,31 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/json_c&#43;&#43;/</guid>
-      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
+      <description>&lt;h1 id=&#34;json-library-in-c&#34;&gt;Json library in C++&lt;/h1&gt;
+&lt;h2 id=&#34;rapid-json&#34;&gt;Rapid Json&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;커뮤니티&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;오픈소스로 다양한 예제코드를 찾을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;parsing 속도&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;다른 Json 파싱 라이브러리와 비교시 상위권에 위치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;라이브러리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;헤더 온리 사용이 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;참조&#34;&gt;참조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://joycecoder.tistory.com/9&#34;&gt;https://joycecoder.tistory.com/9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Tencent/rapidjson/&#34;&gt;https://github.com/Tencent/rapidjson/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

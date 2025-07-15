@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>gui on AswinBlue</title>
+    <title>Gui on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/gui/</link>
-    <description>Recent content in gui on AswinBlue</description>
+    <description>Recent content in Gui on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gui/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,78 @@
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/kivy/</guid>
-      <description>#kivy
-Basic concepts Widget 어플리케이션을 구성하는 객체 widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합 위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다. Layout 화면 구성을 설정한 요소 widget 혹은 layout을 포함 가능하다. structure main.py에 python으로 내용을 작성한다. class TheLabApp(App):passTheLabApp().run() main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다. /|-main.py|-TheLab.kv .py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .</description>
+      <description>&lt;p&gt;#kivy&lt;/p&gt;
+&lt;h2 id=&#34;basic-concepts&#34;&gt;Basic concepts&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Widget&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;어플리케이션을 구성하는 객체&lt;/li&gt;
+&lt;li&gt;widget은 다른 widget을 tree형태로 포함 가능하며 버튼, 라벨 등상호작용 가능한 객체 또는 Widget의 집합&lt;/li&gt;
+&lt;li&gt;위치는 좌표로 표현되는데 좌표는 좌측하단이 (0,0)이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Layout&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;화면 구성을 설정한 요소&lt;/li&gt;
+&lt;li&gt;widget 혹은 layout을 포함 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;structure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;main.py에 python으로 내용을 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class TheLabApp(App):
+pass
+TheLabApp().run()
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;main.py에서 선언한 class &amp;lsquo;TheLabApp&amp;rsquo; 에서 App을 뺀 TheLab을 따서 main.py와 같은 경로에 &amp;lsquo;TheLab.kv&amp;rsquo;파일을 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/
+|-main.py
+|-TheLab.kv
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;.py파일에서 원하는 layout class를 상속받아 객체를 구성할 수도 있고, .kv파일에서 바로 작성할 수도 있다.&lt;/li&gt;
+&lt;li&gt;단, .kv파일에서 객체를 생성하려면 .py파일에 정의된 class를 사용해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXAMPLE@BoxLayout&amp;gt;&lt;/code&gt; 와 같이 .py파일의 class 선언을 생략하고 default 객체를 사용하는 방법도 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;///////// .py /////////
+class Box(BoxLayout):
+  pass
+///////// .kv /////////
+&amp;lt;Box&amp;gt;: # .py에서 정의된 Box객체를 사용 가능
+  GridLayout:  # 이후부터는 kivy에서 제공하는 객체들 사용 가능
+    label:
+      text:&amp;#34;lb&amp;#34;
+
+&amp;lt;Box2@BoxLayout&amp;gt;: # .py파일에서 아무것도 하지 않는 객체를 선언하기 싫을 때 사용
+///////////////////////
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;ex) class 안에서 속성 설정 :&lt;code&gt;self.orientation = &amp;quot;vertical&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ex) kv파일에서 속성 설정 : &lt;code&gt;orientation: &amp;quot;vertical&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;NAME&amp;gt;&lt;/code&gt;형태로 선언한 객체는 다른 객체에서 사용할수 있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Box&amp;gt;:
+  ...
+&amp;lt;Box2&amp;gt;:
+  Button:
+    ...
+  Box:  # 사용자 정의 객체
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;.kv파일은 아래와 같이 구성된다.&lt;/li&gt;
+&lt;li&gt;화면을 구성하는 내용들의 속성을 정의하고 배치할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;MainWidget:         # 화면에 표기할 객체(widget, layout, &amp;hellip;)
+&lt;MainWidget&gt;:       # widget 정의
+Button:           # widget 내부 항목 선언, kivy에서 지원하는 객체의 종류
+text:&amp;ldquo;A&amp;rdquo;
+Button:
+text:&amp;ldquo;B&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>c&#43;&#43; on AswinBlue</title>
+    <title>C&#43;&#43; on AswinBlue</title>
     <link>https://aswinblue.github.io/Blog/tags/c&#43;&#43;/</link>
-    <description>Recent content in c&#43;&#43; on AswinBlue</description>
+    <description>Recent content in C&#43;&#43; on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 19 Aug 2024 04:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/c++/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,38 @@
       <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/unit_test/</guid>
-      <description>Unit Test 테스트의 속성 좋은 단위 테스트를 작성하기 위해서는 아래 세 가지 기준을 만족해야 한다. 가독성
-3A(Arrange / Act / Assert) 순서대로 test case 코드가 작성되어 있어야 한다. test case 가 어떤 동작을 검증하는지 알 수 있어야 한다. test case 의 이름을 명확하게 작성 필요 최신 test framework (java 에서 사용하는 spock)에서는 자연어로 test case 이름을 작성할 수 있도록 지원하는 경우도 있다. (google test 는 미지원) test case 실행 시 printf 문을 한 번 출력 하도록 규칙을 정하여 사용할 수 있다.</description>
+      <description>&lt;h1 id=&#34;unit-test&#34;&gt;Unit Test&lt;/h1&gt;
+&lt;h2 id=&#34;테스트의-속성&#34;&gt;테스트의 속성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;좋은 단위 테스트를 작성하기 위해서는 아래 세 가지 기준을 만족해야 한다.
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;가독성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3A(Arrange / Act / Assert) 순서대로 test case 코드가 작성되어 있어야 한다.&lt;/li&gt;
+&lt;li&gt;test case 가 어떤 동작을 검증하는지 알 수 있어야 한다.
+&lt;ul&gt;
+&lt;li&gt;test case 의 이름을 명확하게 작성 필요&lt;/li&gt;
+&lt;li&gt;최신 test framework (java 에서 사용하는 spock)에서는 자연어로 test case 이름을 작성할 수 있도록 지원하는 경우도 있다. (google test 는 미지원)&lt;/li&gt;
+&lt;li&gt;test case 실행 시 printf 문을 한 번 출력 하도록 규칙을 정하여 사용할 수 있다.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define SPEC(msg) printf(&amp;#34;[SPEC] %s\n&amp;#34;, msg)
+TEST(SampleTestCase, SampleTest) {
+    SPEC(&amp;#34;이 테스트는 무엇을 하는 테스트 입니다&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;코드를 보지 않고 오류의 원인을 알 수 있어야 한다.&lt;/li&gt;
+&lt;li&gt;자연여와 가깝게 테스트 코드를 표현하는 것이 유리하다.
+&lt;ul&gt;
+&lt;li&gt;함수 이름을 자연어로 상세히 지정&lt;/li&gt;
+&lt;li&gt;에러 메시지를 자연어로 출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;유지보수성&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -23,7 +53,38 @@
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</guid>
-      <description>GDB GNU Debugger의 약자 유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거 디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다. pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다. https://github.com/pwndbg/pwndbg 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 gdb 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다. 컴파일 gcc로 컴파일시 옵션에 -g 를 붙여야 소스를 보면서 디버깅이 가능 리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.</description>
+      <description>&lt;h1 id=&#34;gdb&#34;&gt;GDB&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Debugger의 약자&lt;/li&gt;
+&lt;li&gt;유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거&lt;/li&gt;
+&lt;li&gt;디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다.&lt;/li&gt;
+&lt;li&gt;pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://github.com/pwndbg/pwndbg&lt;/code&gt; 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 &lt;code&gt;gdb&lt;/code&gt; 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;컴파일&#34;&gt;컴파일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;gcc로 컴파일시 옵션에 &lt;code&gt;-g&lt;/code&gt; 를 붙여야 소스를 보면서 디버깅이 가능&lt;/li&gt;
+&lt;li&gt;리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.
+&lt;ul&gt;
+&lt;li&gt;ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.&lt;/li&gt;
+&lt;li&gt;섹션에는 기계어 코드 등의 정보들이 들어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;readelf -h [ELF파일]&lt;/code&gt; 명령으로 ELF 파일의 헤더 정보를 확인 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gdb-옵션&#34;&gt;gdb 옵션&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gdb [파일이름]&lt;/code&gt; : 해당 파일이름 디버깅 실행&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--args [arg1] [arg2] [...]&lt;/code&gt; : 파일 실행에 필요한 argument를 전달&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;기타-명령어&#34;&gt;기타 명령어&lt;/h2&gt;
+&lt;h3 id=&#34;실행-전-설정사항&#34;&gt;실행 전 설정사항&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;coredumb 파일&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,7 +93,72 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/c&#43;&#43;/</guid>
-      <description>C++ basics 매크로 #define MACRO 1 : MACRO 값으로 1을 지정 #undef MACRO : MACRO값에 지정된 내용 해제 여러줄의 매크로 값 지정 : #define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\printf(&amp;#34;%d&amp;#34;, (X) + 1);\printf(&amp;#34;%d&amp;#34;, (X) + 2); 매크로 합성 : #define A 1#define B 1#define C A##B // A##B = 12 함수형태 매크로 작성 : // 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.</description>
+      <description>&lt;h1 id=&#34;c-basics&#34;&gt;C++ basics&lt;/h1&gt;
+&lt;h2 id=&#34;매크로&#34;&gt;매크로&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#define MACRO 1&lt;/code&gt; : MACRO 값으로 1을 지정&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#undef MACRO&lt;/code&gt; : MACRO값에 지정된 내용 해제&lt;/li&gt;
+&lt;li&gt;여러줄의 매크로 값 지정 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define PRINT(X) printf(&amp;#34;%d&amp;#34;, X);\
+  printf(&amp;#34;%d&amp;#34;, (X) + 1);\
+  printf(&amp;#34;%d&amp;#34;, (X) + 2);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;매크로 합성 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define A 1
+#define B 1
+#define C A##B // A##B = 12
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;함수형태 매크로 작성 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 일반함수에는 &amp;#39;;&amp;#39; 를 붙이지만 매크로 함수에는 &amp;#39;;&amp;#39;를 붙일 필요가 없다.
+// 일관성을 갖기 위해 do-while문 안에 작성하면 매크로 함수에도 &amp;#39;;&amp;#39;를 붙이도록 할 수 있다.
+#define FUNC(a, b) do { \
+    a = b * 2;\
+} while (0)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;연산자 우선순 :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 매크로 함수는 계산 전 치환을 먼저 수행한다. 연산자 우선순위에 주의한다.
+#define ADD1(a,b) a+b
+#define ADD2(a,b) (a+b)
+#define MULT(a,b) a*b
+#define MULT2(a,b) (a)*(b)
+...
+printf(&amp;#34;%d&amp;#34;,ADD1(3,4) * 2) // 예상값 (3 + 4) * 2 = 14
+// 3 + 4 * 2 로 치환하여 계산되어 실제 결과는 11
+// ADD2 처럼 계산 결과를 괄호로 묶어야 안전하다.
+
+printf(&amp;#34;%d&amp;#34;,MULT(2+2,3+3)) // 예상값 (4 * 6) * 2 = 26
+// (2 + 2 * 3 + 3) 로 치환하여 계산되어 실제 결과는 11
+// MULT2 처럼 각 변수를 괄호로 묶어야 안전하다.
+
+// ADD1, MULT2 경우를 종합하여 아래와 같이 사용하자
+#define ADD3(a,b) ((a) + (b))
+#define MULT3(a,b) ((a) * (b))
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;조건부 컴파일
+&lt;ul&gt;
+&lt;li&gt;if-elif-else 사용 가능&lt;/li&gt;
+&lt;li&gt;조건에 !, &amp;amp;&amp;amp; || 논리연산 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#define MACRO
+#define DEBUG 1
+
+#ifdef MACRO // 정의가 되어있으면 수행
+#endif
+
+#if DEBUG // DEBUG가 나타내는 값 또는 식이 참이면 수행
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;파일 포함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;FILE_NAME&amp;gt; // 표준라이브러리에서 파일 참조
+#include &amp;#34;FILE_NAME&amp;#34; // 현재 경로 기준 파일 참조
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;→ [&lt;em&gt;활용&lt;/em&gt;]: 헤더파일 중복 참조 방지법&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -41,10 +167,39 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake/</guid>
-      <description>CMake Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구 명령어 cmake CMakeList.txt : CMakeList.txt파일 안의 내용을 수행한다.
-cmake . : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.
-make : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일
-cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다. 1. mkdir build2.</description>
+      <description>&lt;h1 id=&#34;cmake&#34;&gt;CMake&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Cmake란 : C,C++ 언어 컴파일시 make 툴을 이용할 때, 규모가 큰 프로젝트에서 컴파일 의존성 관리를 쉽게 하기 위한 도구&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cmake CMakeList.txt&lt;/code&gt; : CMakeList.txt파일 안의 내용을 수행한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cmake .&lt;/code&gt; : 파일 경로를 입력하면 해당 경로에서 CMakeList.txt파일을 찾아서 수행.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt; : cmake를 이용해 생성한 파일들을 이용해 make로 컴파일&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많이 생성된다. 이를 방지하기 위해 보통 새로운 폴더를 만들어 넣어서 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. mkdir build
+2. vi CMakeList.txt 후 내용 작성
+3. cd build
+4. cmake ..
+5. make
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;CmakeLists.txt 작성은 쉘 프로그래밍과 유사하다. cmake 문법을 사용하여 작성해 주면 된다. 미리 지정된 변수들도 있는데, 해당 변수들에 주의하며 작성한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문법&#34;&gt;문법&lt;/h2&gt;
+&lt;h3 id=&#34;빌드-설정&#34;&gt;빌드 설정&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ADD_EXECUTABLE&lt;/code&gt; : 실행파일 생성
+ex) &lt;code&gt;ADD_EXECUTABLE(main.exe main.cpp function.cpp)&lt;/code&gt; : main.cpp와 function.cpp를 사용해 main.exe를 생성한다. 헤더 파일은 자동으로 적용된다.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -53,7 +208,31 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/json_c&#43;&#43;/</guid>
-      <description>Json library in C++ Rapid Json 커뮤니티 오픈소스로 다양한 예제코드를 찾을 수 있다. parsing 속도 다른 Json 파싱 라이브러리와 비교시 상위권에 위치 라이브러리 헤더 온리 사용이 가능 참조 https://joycecoder.tistory.com/9 https://github.com/Tencent/rapidjson/ </description>
+      <description>&lt;h1 id=&#34;json-library-in-c&#34;&gt;Json library in C++&lt;/h1&gt;
+&lt;h2 id=&#34;rapid-json&#34;&gt;Rapid Json&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;커뮤니티&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;오픈소스로 다양한 예제코드를 찾을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;parsing 속도&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;다른 Json 파싱 라이브러리와 비교시 상위권에 위치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;라이브러리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;헤더 온리 사용이 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;참조&#34;&gt;참조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://joycecoder.tistory.com/9&#34;&gt;https://joycecoder.tistory.com/9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Tencent/rapidjson/&#34;&gt;https://github.com/Tencent/rapidjson/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -62,7 +241,14 @@ cmake 명령 후 make를 이용해 컴파일을 수행하면 부산물들이 많
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/log_c&#43;&#43;/</guid>
-      <description>spdlog C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리 fast, header only, no dependency, .. 등 장점 참조 https://isocpp.org/blog/2014/11/spdlog https://github.com/gabime/spdlog</description>
+      <description>&lt;h1 id=&#34;spdlog&#34;&gt;spdlog&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ 프로젝트에서 로그를 세팅할 수 있는 라이브러리&lt;/li&gt;
+&lt;li&gt;fast, header only, no dependency, .. 등 장점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;참조&#34;&gt;참조&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://isocpp.org/blog/2014/11/spdlog&#34;&gt;https://isocpp.org/blog/2014/11/spdlog&lt;/a&gt;
+&lt;a href=&#34;https://github.com/gabime/spdlog&#34;&gt;https://github.com/gabime/spdlog&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
