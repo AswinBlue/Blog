@@ -6,7 +6,22 @@
     <description>Recent content in Git on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 Jul 2022 10:58:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jul 2025 22:20:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Action</title>
+      <link>https://aswinblue.github.io/Blog/post/git/github_action/</link>
+      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/github_action/</guid>
+      <description>&lt;h1 id=&#34;github-action&#34;&gt;Github Action&lt;/h1&gt;
+&lt;p&gt;Github action 을 통해 github 에 코드를 push 함과 동시에 docker를 구동시켜 작업을 동작시킬수 있다.
+이 문서는 React로 개발된 웹 애플리케이션을 GitHub Actions를 사용하여 &lt;strong&gt;자동으로 빌드하고 GitHub Pages에 배포&lt;/strong&gt;하는 파이프라인 구축 과정을 안내한다. &lt;code&gt;main&lt;/code&gt; (또는 &lt;code&gt;master&lt;/code&gt;) 브랜치에 코드를 &lt;code&gt;push&lt;/code&gt;하면 모든 과정이 자동으로 실행되도록 설정하는 것을 목표로 한다.&lt;/p&gt;
+&lt;h2 id=&#34;1-사전-준비&#34;&gt;1. 사전 준비&lt;/h2&gt;
+&lt;p&gt;배포 자동화를 설정하기 전, React 프로젝트와 GitHub 저장소에 몇 가지 준비가 필요하다.&lt;/p&gt;
+&lt;h3 id=&#34;11-packagejson-설정&#34;&gt;1.1. &lt;code&gt;package.json&lt;/code&gt; 설정&lt;/h3&gt;
+&lt;p&gt;GitHub Pages는 보통 &lt;code&gt;https://&amp;lt;사용자명&amp;gt;.github.io/&amp;lt;저장소명&amp;gt;/&lt;/code&gt; 형태의 하위 경로에 배포된다. React 앱이 CSS나 JS 파일을 올바르게 찾아오게 하려면 &lt;code&gt;package.json&lt;/code&gt; 파일에 &lt;code&gt;homepage&lt;/code&gt; 속성을 추가해야 한다.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>https://aswinblue.github.io/Blog/post/git/git/</link>
@@ -42,12 +57,16 @@
 &lt;li&gt;&lt;code&gt;git config --unset&lt;/code&gt; : 설정 제거&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;submodule&#34;&gt;Submodule&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Git Submodule은 하나의 Git 저장소 안에 다른 Git 저장소를 포함시키는 기능. 마치 폴더처럼 보이지만, 그 내용은 별도의 저장소에서 관리된다.&lt;/li&gt;
+&lt;li&gt;git repository 안에 다른 git repository를 관리할 때 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;생성&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;git repository 안에 다른 git repository를 관리할 때 사용한다.&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;REPOSITORY_URL&amp;gt; [PATH]&lt;/code&gt; 명령어로 추가 가능하다.&lt;/p&gt;</description>
     </item>
     
   </channel>

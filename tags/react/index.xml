@@ -6,7 +6,48 @@
     <description>Recent content in React on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jul 2025 21:44:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevTool</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/dev_tools/</link>
+      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/dev_tools/</guid>
+      <description>&lt;h1 id=&#34;devtool&#34;&gt;DevTool&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;버전:&lt;/strong&gt; 1.0.0
+&lt;strong&gt;최종 수정일:&lt;/strong&gt; 2025년 7월 19일&lt;/p&gt;
+&lt;h2 id=&#34;1-프로젝트-개요&#34;&gt;1. 프로젝트 개요&lt;/h2&gt;
+&lt;h3 id=&#34;11-목적&#34;&gt;1.1. 목적&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;DevTool&lt;/strong&gt;은 개발자들이 일상적으로 사용하는 다양한 인코딩/디코딩, 포맷팅, 텍스트 비교 등의 작업을 하나의 통합된 웹 환경에서 빠르고 편리하게 수행할 수 있도록 설계된 온라인 유틸리티 모음입니다. 여러 웹사이트를 오가며 필요한 도구를 찾아야 하는 번거로움을 줄이고, 일관된 사용자 경험을 통해 개발 생산성을 높이는 것을 목표로 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;12-핵심-가치-및-철학&#34;&gt;1.2. 핵심 가치 및 철학&lt;/h3&gt;
+&lt;p&gt;본 프로젝트는 다음의 핵심 가치를 기반으로 설계되었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;클라이언트 측 연산 (Client-Side Processing)&lt;/strong&gt;: 모든 데이터 변환 및 계산은 사용자의 브라우저 내에서만 이루어집니다. 이를 통해 민감한 데이터가 서버로 전송되지 않아 &lt;strong&gt;보안 및 프라이버시&lt;/strong&gt;를 보장하며, 서버 통신 없이 즉각적인 결과를 제공하여 &lt;strong&gt;최상의 속도&lt;/strong&gt;를 경험할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;반응형 및 모던 UI/UX&lt;/strong&gt;: 모든 기기에서 최적의 사용 경험을 제공하기 위해 반응형 디자인을 채택했습니다. 또한, 일관된 디자인 시스템과 직관적인 인터페이스를 통해 사용자가 별도의 학습 없이 즉시 도구를 사용할 수 있도록 설계되었습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;성능 최적화&lt;/strong&gt;: React의 &lt;code&gt;useMemo&lt;/code&gt; 훅을 적극적으로 활용하여, 불필요한 리렌더링과 연산을 최소화했습니다. 사용자의 입력에만 반응하여 상태를 파생시키므로, 복잡한 연산에서도 높은 성능을 유지합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;13-주요-기능&#34;&gt;1.3. 주요 기능&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ASCII &amp;lt;&amp;gt; Hex Converter&lt;/strong&gt;: 아스키(ASCII) 문자열과 16진수(Hex) 값을 상호 변환합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Base64 Encoder / Decoder&lt;/strong&gt;: 문자열을 Base64로 인코딩하거나 디코딩하며, 유니코드(UTF-8)를 완벽하게 지원합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;URL Encoder / Decoder&lt;/strong&gt;: URL 문자열을 안전하게 인코딩/디코딩하며, 전체 URI와 URI 컴포넌트 인코딩 방식을 모두 지원합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JSON Inspector &amp;amp; Formatter&lt;/strong&gt;: JSON 데이터의 유효성을 검사하고, 원하는 포맷으로 정렬하며, 계층 구조를 시각적으로 탐색할 수 있는 트리 뷰를 제공합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Text Diff Checker&lt;/strong&gt;: 두 개의 텍스트를 비교하여 차이점을 시각적으로 보여주며, 다양한 비교 옵션과 Patch 파일 생성 기능을 제공합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;14-기술-스택&#34;&gt;1.4. 기술 스택&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Frontend&lt;/strong&gt;: React.js&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Styling&lt;/strong&gt;: Tailwind CSS&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State Management&lt;/strong&gt;: React Context API, React Hooks (&lt;code&gt;useState&lt;/code&gt;, &lt;code&gt;useMemo&lt;/code&gt;, &lt;code&gt;useEffect&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Routing&lt;/strong&gt;: React Router&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Core Logic Library&lt;/strong&gt;: &lt;code&gt;diff&lt;/code&gt; (for Text Diff Checker)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;: GitHub Pages (via GitHub Actions)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-시스템-아키텍처-및-설계&#34;&gt;2. 시스템 아키텍처 및 설계&lt;/h2&gt;
+&lt;p&gt;본 애플리케이션은 현대적인 프론트엔드 설계 원칙에 따라 구축되었습니다.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Firebase_react</title>
       <link>https://aswinblue.github.io/Blog/post/databases/firebase_react/</link>
