@@ -6,7 +6,33 @@
     <description>Recent content in Dev on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Jul 2025 21:30:40 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DailyNote</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/daily_note/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/daily_note/</guid>
+      <description>&lt;h1 id=&#34;daily-note&#34;&gt;Daily Note&lt;/h1&gt;
+&lt;p&gt;사진 일기 앱 &amp;ldquo;하루기록&amp;rdquo; (DailyNote) 개발 Document&lt;/p&gt;
+&lt;h2 id=&#34;기획서&#34;&gt;기획서&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;앱 개요 및 핵심 가치&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;하루기록&amp;rdquo;&lt;/strong&gt; 은 단순한 사진 기록을 넘어, 사용자의 감정과 경험을 데이터로 시각화하여 &amp;lsquo;더 나은 나&amp;rsquo;를 발견하도록 돕는 인터랙티브 사진 일기 앱입니다.&lt;/p&gt;
+&lt;p&gt;Target User: 자신의 일상을 의미 있게 기록하고 싶어 하는 사람, 감정의 변화나 생활 패턴을 객관적으로 파악하고 싶은 사람, 꾸준한 기록을 통해 성취감을 느끼고 싶은 사람.&lt;/p&gt;
+&lt;p&gt;Core Value (핵심 가치):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;간편한 기록: 사진 한 장으로 시작되는 쉽고 빠른 일기 작성.&lt;/li&gt;
+&lt;li&gt;데이터 기반의 성찰: 나의 감정, 활동 등을 그래프와 지도로 돌아보며 새로운 인사이트 발견.&lt;/li&gt;
+&lt;li&gt;완벽한 프라이버시: 민감한 기록을 안전하게 보관하는 기술적 선택.&lt;/li&gt;
+&lt;li&gt;동기 부여 시스템: 꾸준한 기록이 즐거워지는 게이미피케이션 요소.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;사용자들이 중요하게 여기는 점 (User Needs)&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pytest</title>
       <link>https://aswinblue.github.io/Blog/post/python/pytest/</link>

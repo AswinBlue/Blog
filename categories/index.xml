@@ -6,11 +6,38 @@
     <description>Recent content in Categories on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Jul 2025 21:30:40 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advertisement</title>
+      <link>https://aswinblue.github.io/Blog/categories/advertisement/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/advertisement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deploy</title>
+      <link>https://aswinblue.github.io/Blog/categories/deploy/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://aswinblue.github.io/Blog/categories/design/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/design/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Dev</title>
       <link>https://aswinblue.github.io/Blog/categories/dev/</link>
-      <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/categories/dev/</guid>
       <description></description>
@@ -31,15 +58,6 @@
       <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/categories/ci-cd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deploy</title>
-      <link>https://aswinblue.github.io/Blog/categories/deploy/</link>
-      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/categories/deploy/</guid>
       <description></description>
     </item>
     
