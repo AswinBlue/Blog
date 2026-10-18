@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Compiler on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/compiler/</link>
+    <description>Recent content in Compiler on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jul 2023 22:13:06 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GCC 컴파일 과정과 핵심 옵션 및 정적·동적 라이브러리 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gcc-compilation-process-and-options/</link>
+      <pubDate>Mon, 10 Jul 2023 22:13:06 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gcc-compilation-process-and-options/</guid>
+      <description>GCC 컴파일러의 4단계 빌드 과정(전처리, 컴파일, 어셈블, 링킹)과 핵심 옵션(-E, -S, -c, -g, -Wall), 정적 및 동적 라이브러리(ar, LD_LIBRARY_PATH, LD_PRELOAD) 생성과 활용법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

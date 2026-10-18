@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git 실전 트러블슈팅 on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/series/git-%EC%8B%A4%EC%A0%84-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85/</link>
+    <description>Recent content in Git 실전 트러블슈팅 on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Jul 2022 11:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/series/git-%EC%8B%A4%EC%A0%84-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</link>
+      <pubDate>Sat, 09 Jul 2022 11:05:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</guid>
+      <description>Windows와 Linux 간 협업 시 발생하는 CRLF/LF 개행 문자 불일치 오류와 SHA-256 해시 불일치 문제를 core.autocrlf 및 캐시 초기화로 해결하는 방법을 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>Git 서브모듈(Submodule) 추가부터 재귀 클론 및 동기화 충돌 해결 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-submodule-management-and-troubleshooting/</link>
+      <pubDate>Sat, 09 Jul 2022 11:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/git-submodule-management-and-troubleshooting/</guid>
+      <description>Git 저장소 내에 다른 저장소를 종속성으로 관리하는 Submodule의 생성(add), 클론(recurse-submodules), 원격 동기화(sync/update) 및 부모-자식 커밋 충돌 해결법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Git &#39;already exists in the index&#39; 오류 원인과 캐시(Cache) 안전하게 삭제하기</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-already-exists-in-index-remove-cache/</link>
+      <pubDate>Sat, 09 Jul 2022 10:58:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/git-already-exists-in-index-remove-cache/</guid>
+      <description>.gitignore 설정 후에도 파일 추적이 계속되거나 already exists in the index 에러가 발생할 때, 로컬 파일 삭제 없이 Git 스테이징 캐시만 초기화하는 방법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

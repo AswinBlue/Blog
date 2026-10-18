@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Binary-Analysis on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/binary-analysis/</link>
+    <description>Recent content in Binary-Analysis on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/binary-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
+      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

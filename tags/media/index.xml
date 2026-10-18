@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Media on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/media/</link>
+    <description>Recent content in Media on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Mar 2025 20:40:01 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/media/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</link>
+      <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</guid>
+      <description>pytube 라이브러리와 PyQt를 활용하여 유튜브 동영상 및 음원 추출을 안전하고 직관적으로 처리하는 데스크톱 다운로더 유틸리티 제작기입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cross-Platform on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/cross-platform/</link>
+    <description>Recent content in Cross-Platform on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Jan 2024 21:12:32 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/cross-platform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter 기반 텍스트 단어 슬라이더 &#39;FlickThrough&#39; 개발 및 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</link>
+      <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</guid>
+      <description>Flutter로 개발한 단어 단위 슬라이드 쇼 앱 &amp;#39;FlickThrough&amp;#39;의 요구사항 분석, 크로스 플랫폼 파일 처리, 다국어 지원, GitHub Pages 및 Android Play Store 배포 전 과정을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>Flutter 및 Dart 기반 크로스 플랫폼 모바일 앱 개발 환경 구축과 위젯 라이프사이클</title>
+      <link>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</link>
+      <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</guid>
+      <description>구글 Flutter SDK 설치, StatelessWidget과 StatefulWidget의 생명주기, BuildContext 원리 및 모바일 앱 핫 리로드 개발 팁을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</link>
+      <pubDate>Sat, 09 Jul 2022 11:05:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</guid>
+      <description>Windows와 Linux 간 협업 시 발생하는 CRLF/LF 개행 문자 불일치 오류와 SHA-256 해시 불일치 문제를 core.autocrlf 및 캐시 초기화로 해결하는 방법을 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>Python Kivy 프레임워크를 활용한 크로스 플랫폼 GUI 앱 개발 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/</guid>
+      <description>파이썬으로 윈도우, 안드로이드, iOS용 GUI 앱을 제작하는 Kivy의 위젯 레이아웃 시스템, 이벤트 바인딩, KV 언어 문법 및 빌드 절차를 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>CMake 기본 문법과 크로스 플랫폼 빌드 스크립트 작성 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</guid>
+      <description>CMakeLists.txt를 활용하여 C/C&#43;&#43; 프로젝트를 플랫폼 독립적으로 빌드하고 외부 라이브러리 종속성을 연결하는 핵심 작성법을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

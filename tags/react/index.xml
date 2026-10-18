@@ -8,171 +8,30 @@
     <language>en</language>
     <lastBuildDate>Sat, 19 Jul 2025 21:44:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DevTool</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/dev_tools/</link>
+      <title>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</link>
       <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/dev_tools/</guid>
-      <description>&lt;h1 id=&#34;devtool&#34;&gt;DevTool&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;버전:&lt;/strong&gt; 1.0.0
-&lt;strong&gt;최종 수정일:&lt;/strong&gt; 2025년 7월 19일&lt;/p&gt;
-&lt;h2 id=&#34;1-프로젝트-개요&#34;&gt;1. 프로젝트 개요&lt;/h2&gt;
-&lt;h3 id=&#34;11-목적&#34;&gt;1.1. 목적&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;DevTool&lt;/strong&gt;은 개발자들이 일상적으로 사용하는 다양한 인코딩/디코딩, 포맷팅, 텍스트 비교 등의 작업을 하나의 통합된 웹 환경에서 빠르고 편리하게 수행할 수 있도록 설계된 온라인 유틸리티 모음입니다. 여러 웹사이트를 오가며 필요한 도구를 찾아야 하는 번거로움을 줄이고, 일관된 사용자 경험을 통해 개발 생산성을 높이는 것을 목표로 합니다.&lt;/p&gt;
-&lt;h3 id=&#34;12-핵심-가치-및-철학&#34;&gt;1.2. 핵심 가치 및 철학&lt;/h3&gt;
-&lt;p&gt;본 프로젝트는 다음의 핵심 가치를 기반으로 설계되었습니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;클라이언트 측 연산 (Client-Side Processing)&lt;/strong&gt;: 모든 데이터 변환 및 계산은 사용자의 브라우저 내에서만 이루어집니다. 이를 통해 민감한 데이터가 서버로 전송되지 않아 &lt;strong&gt;보안 및 프라이버시&lt;/strong&gt;를 보장하며, 서버 통신 없이 즉각적인 결과를 제공하여 &lt;strong&gt;최상의 속도&lt;/strong&gt;를 경험할 수 있습니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;반응형 및 모던 UI/UX&lt;/strong&gt;: 모든 기기에서 최적의 사용 경험을 제공하기 위해 반응형 디자인을 채택했습니다. 또한, 일관된 디자인 시스템과 직관적인 인터페이스를 통해 사용자가 별도의 학습 없이 즉시 도구를 사용할 수 있도록 설계되었습니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;성능 최적화&lt;/strong&gt;: React의 &lt;code&gt;useMemo&lt;/code&gt; 훅을 적극적으로 활용하여, 불필요한 리렌더링과 연산을 최소화했습니다. 사용자의 입력에만 반응하여 상태를 파생시키므로, 복잡한 연산에서도 높은 성능을 유지합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;13-주요-기능&#34;&gt;1.3. 주요 기능&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ASCII &amp;lt;&amp;gt; Hex Converter&lt;/strong&gt;: 아스키(ASCII) 문자열과 16진수(Hex) 값을 상호 변환합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Base64 Encoder / Decoder&lt;/strong&gt;: 문자열을 Base64로 인코딩하거나 디코딩하며, 유니코드(UTF-8)를 완벽하게 지원합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;URL Encoder / Decoder&lt;/strong&gt;: URL 문자열을 안전하게 인코딩/디코딩하며, 전체 URI와 URI 컴포넌트 인코딩 방식을 모두 지원합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JSON Inspector &amp;amp; Formatter&lt;/strong&gt;: JSON 데이터의 유효성을 검사하고, 원하는 포맷으로 정렬하며, 계층 구조를 시각적으로 탐색할 수 있는 트리 뷰를 제공합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Text Diff Checker&lt;/strong&gt;: 두 개의 텍스트를 비교하여 차이점을 시각적으로 보여주며, 다양한 비교 옵션과 Patch 파일 생성 기능을 제공합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;14-기술-스택&#34;&gt;1.4. 기술 스택&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Frontend&lt;/strong&gt;: React.js&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Styling&lt;/strong&gt;: Tailwind CSS&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;State Management&lt;/strong&gt;: React Context API, React Hooks (&lt;code&gt;useState&lt;/code&gt;, &lt;code&gt;useMemo&lt;/code&gt;, &lt;code&gt;useEffect&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Routing&lt;/strong&gt;: React Router&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Core Logic Library&lt;/strong&gt;: &lt;code&gt;diff&lt;/code&gt; (for Text Diff Checker)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;: GitHub Pages (via GitHub Actions)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;2-시스템-아키텍처-및-설계&#34;&gt;2. 시스템 아키텍처 및 설계&lt;/h2&gt;
-&lt;p&gt;본 애플리케이션은 현대적인 프론트엔드 설계 원칙에 따라 구축되었습니다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</guid>
+      <description>Base64, JSON 포맷터, URL 인코더, 해시 생성기 등 개발에 필요한 편의 기능을 단일 웹 인터페이스로 제공하는 React 기반 웹 툴 제작기입니다.</description>
     </item>
     
     <item>
-      <title>Firebase_react</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/firebase_react/</link>
+      <title>React 프로젝트에 Firebase SDK 연동 및 실시간 데이터 바인딩 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/firebase_react/</guid>
-      <description>&lt;h1 id=&#34;firebase-with-react&#34;&gt;Firebase with React&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;react에서 firebase를 활용하는 방법&lt;/li&gt;
-&lt;li&gt;firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;인증-auth&#34;&gt;인증 (Auth)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;firebase 로 계정 생성 및 로그인&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;firebase API를 import하여 사용&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;lt;AppFirebase.js&amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import firebase from &amp;#34;firebase/compat/app&amp;#34;;
-import &amp;#34;firebase/compat/auth&amp;#34;;
-
-const firebaseConfig = {
-apiKey: process.env.REACT_APP_API_KEY,
-authDomain: process.env.REACT_APP_AUTHDOMAIN,
-projectId: process.env.REACT_APP_PROJECTID,
-storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-appId: process.env.REACT_APP_APPID
-};
-
-export default firebase.initializeApp(firebaseConfig);
-export const authService = firebase.auth();
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현
-&amp;lt;Auth.js&amp;gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import { authService } from &amp;#34;../components/AppFirebase&amp;#34;;
-
-const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
-const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;createUserWithEmailAndPassword / signInWithEmailAndPassword 실행 이후 authService.currentUser를 참조하면 user 정보를 받아올 수 있다.&lt;/li&gt;
-&lt;li&gt;하지만, authService.currentUser 정보를 갱신하는데는 시간이 걸린다. firebase API에서는 observer를 등록하여 currentUser의 변경 시점을 확인할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;currentUser 변경시점에 특정함수 동작&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;user 정보가 갱신된 시점에 특정 동작을 원한다면, 아래와 같이 onAuthStateChanged 함수를 사용하면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;authService.onAuthStateChanged((user) =&amp;gt; { /* something to do */ }});
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;로그아웃&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;authService.signOut()&lt;/code&gt; 함수를 호출하여 로그아웃이 가능하다.&lt;/li&gt;
-&lt;li&gt;참고로 크롬 웹 디버깅 화면에서 &amp;lsquo;Application&amp;rsquo;탭에 들어가서 IndexedDB -&amp;gt; firebaseLocalDb 안의 내용을 🚫버튼으로 삭제해 주면 로그인 정보가 사라진다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;에러&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;authService&lt;/code&gt;의 함수(&lt;code&gt;createUserWithEmailAndPassword&lt;/code&gt;, &lt;code&gt;signInWithEmailAndPassword&lt;/code&gt;, &amp;hellip;) 사용시 에러가 발생할 수 있으므로, try, catch문으로 묶어서 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;try {
-  let data
-  data = await authService.createUserWithEmailAndPassword(email, password)
-} catch(error) {
-  console.log(error.code) // 에러의 원인이 코드 형태로 출력된다.
-  console.log(error.message) // 에러의 원인이 메시지 형태로 출력된다.
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ref) 오류발생 원인&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</guid>
+      <description>React 웹 애플리케이션에 Firebase v9&#43; 모듈러 SDK를 설치하고 환경변수 설정, Firestore 실시간 구독(onSnapshot), 소셜 로그인 구현법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>React basic</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</link>
+      <title>React 기초 입문: 컴포넌트 생명주기, State/Props 및 Hooks 핵심 완벽 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/</link>
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</guid>
-      <description>&lt;h1 id=&#34;react-basic&#34;&gt;React basic&lt;/h1&gt;
-&lt;h2 id=&#34;개발환경-설치-및-실행&#34;&gt;개발환경 설치 및 실행&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다.
-&lt;code&gt;npm install -g create-react-app&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;원하는 경로에 들어가 프로젝트를 생성한다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;create-react-app &amp;lt;NAME&amp;gt;&lt;/code&gt; : NAME 경로에 프로젝트 생성&lt;/li&gt;
-&lt;li&gt;주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;실행&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;npm run start&lt;/code&gt; 를 수행하면 &lt;code&gt;localhost:3000&lt;/code&gt;에서 웹페이지를 퍼블리싱한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;실행 포트&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; 파일에서 &lt;code&gt;&amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot;&lt;/code&gt; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;기본-구조&#34;&gt;기본 구조&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;/public/index.html 에서 기본 화면 구성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;lsquo;root&amp;rsquo; 이름으로 된 division이 있는데, 이 division에 대한 설정은 javascript로 정의되어있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;src 경로에 javascript파일들 구성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&amp;lsquo;index.js&amp;rsquo; 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 &amp;lsquo;root&amp;rsquo; 인 division에 &amp;lsquo;App&amp;rsquo;을 적용하겠다는 의미이다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/</guid>
+      <description>React의 기본 구조와 JSX 문법부터 클래스/함수형 컴포넌트 비교, Props와 State 관리, 핵심 Hooks(useState, useEffect, useRef), React Router 활용까지 총정리합니다.</description>
     </item>
     
   </channel>

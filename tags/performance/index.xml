@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Performance on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/performance/</link>
+    <description>Recent content in Performance on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Sep 2021 18:49:18 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 표준 입출력 속도 향상과 버퍼 플러시(Flush) 최적화 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/</link>
+      <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/</guid>
+      <description>대용량 데이터 처리 및 알고리즘 풀이에서 print 대신 sys.stdout.write, buffer, flush를 활용하여 파이썬 입출력 성능을 극대화하는 방법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>spdlog 라이브러리를 활용한 고성능 C&#43;&#43; 비동기 로깅 환경 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</guid>
+      <description>빠르고 간결한 C&#43;&#43; 헤더 온리 로깅 라이브러리 spdlog의 포맷팅 규칙, 파일 회전(Rotating), 비동기 큐 로깅 및 성능 튜닝 기법을 소개합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

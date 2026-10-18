@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WindowApp on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/windowapp/</link>
+    <description>Recent content in WindowApp on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 May 2024 16:02:25 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/windowapp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows PE 파일 구조 및 Win32 API 기반 윈도우 시스템 프로그래밍 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</link>
+      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</guid>
+      <description>윈도우 실행 파일의 표준 포맷인 PE(Portable Executable) 구조(DOS Header, NT Header, Section Table)와 Win32 API 핸들 및 윈도우 프로시저를 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>Python Kivy 프레임워크를 활용한 크로스 플랫폼 GUI 앱 개발 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/</link>
+      <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/</guid>
+      <description>파이썬으로 윈도우, 안드로이드, iOS용 GUI 앱을 제작하는 Kivy의 위젯 레이아웃 시스템, 이벤트 바인딩, KV 언어 문법 및 빌드 절차를 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

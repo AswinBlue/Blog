@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Virtualbox on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/virtualbox/</link>
+    <description>Recent content in Virtualbox on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Jul 2023 20:03:24 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VirtualBox 리눅스 가상머신 설치 및 게스트 확장(Guest Additions) 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/</link>
+      <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/</guid>
+      <description>VirtualBox를 활용한 Ubuntu 가상머신 생성, 포트포워딩 네트워크 세팅, 클립보드 공유 및 해상도 자동 조절을 위한 게스트 확장 설치법을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

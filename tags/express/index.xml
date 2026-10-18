@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Express on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/express/</link>
+    <description>Recent content in Express on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node.js 비동기 이벤트 루프 아키텍처와 Express 웹 서버 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</guid>
+      <description>단일 스레드 논블로킹 I/O와 이벤트 루프의 동작 원리, npm 패키지 관리, Express 미들웨어 체인 및 RESTful API 엔드포인트 구현을 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

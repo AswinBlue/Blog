@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Basics on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/basics/</link>
+    <description>Recent content in Basics on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jul 2023 21:31:47 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 기본 개념과 파일 시스템 계층 구조(FHS) 및 권한 관리 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</link>
+      <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</guid>
+      <description>리눅스 커널과 쉘의 역할, FHS 표준 디렉터리 구조(/bin, /etc, /var), chmod/chown 파일 퍼미션 설정 및 심볼릭 링크 개념을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

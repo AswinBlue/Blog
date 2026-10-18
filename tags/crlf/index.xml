@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Crlf on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/crlf/</link>
+    <description>Recent content in Crlf on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Jul 2022 11:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/crlf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</link>
+      <pubDate>Sat, 09 Jul 2022 11:05:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</guid>
+      <description>Windows와 Linux 간 협업 시 발생하는 CRLF/LF 개행 문자 불일치 오류와 SHA-256 해시 불일치 문제를 core.autocrlf 및 캐시 초기화로 해결하는 방법을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

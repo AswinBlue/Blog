@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nosql on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/nosql/</link>
+    <description>Recent content in Nosql on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Mar 2025 22:03:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RDBMS vs NoSQL 차이점 비교: 대규모 서비스를 위한 데이터베이스 아키텍처 선택 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/</link>
+      <pubDate>Thu, 20 Mar 2025 22:03:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/</guid>
+      <description>관계형 데이터베이스(RDBMS)의 ACID 트랜잭션과 NoSQL(MongoDB, Redis)의 분산 확장성을 실무 비용 및 쿼리 최적화 관점에서 비교 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>Firebase Authentication 및 Firestore 실전 연동과 보안 규칙(Rules) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</guid>
+      <description>구글 Firebase를 활용한 사용자 인증 플로우, Cloud Firestore NoSQL 데이터베이스 CRUD 연동, 보안 규칙 작성 및 실시간 리스너 활용법을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

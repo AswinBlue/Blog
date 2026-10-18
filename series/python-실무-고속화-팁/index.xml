@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python 실무 고속화 팁 on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/series/python-%EC%8B%A4%EB%AC%B4-%EA%B3%A0%EC%86%8D%ED%99%94-%ED%8C%81/</link>
+    <description>Recent content in Python 실무 고속화 팁 on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Sep 2021 18:49:18 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/series/python-%EC%8B%A4%EB%AC%B4-%EA%B3%A0%EC%86%8D%ED%99%94-%ED%8C%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 표준 입출력 속도 향상과 버퍼 플러시(Flush) 최적화 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/</link>
+      <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/</guid>
+      <description>대용량 데이터 처리 및 알고리즘 풀이에서 print 대신 sys.stdout.write, buffer, flush를 활용하여 파이썬 입출력 성능을 극대화하는 방법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

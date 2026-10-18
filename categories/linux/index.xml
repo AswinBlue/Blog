@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/linux/</link>
+    <description>Recent content in Linux on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Jul 2023 20:37:08 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</link>
+      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</guid>
+      <description>독립된 가상 주소 공간을 가진 프로세스 간 데이터 교환을 위한 익명/네임드 파이프, POSIX 공유 메모리, System V IPC 메커니즘을 상세히 비교 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>POSIX pthread를 활용한 멀티스레드 프로그래밍 및 동기화(Mutex) 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</link>
+      <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</guid>
+      <description>스레드 생성과 종료(pthread_create/join), 임계 영역 보호를 위한 뮤텍스(Mutex), 조건 변수(Condvar) 및 경쟁 상태(Race Condition) 방어법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 프로세스 생명주기(fork/exec) 및 시그널(Signal) 제어 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</link>
+      <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</guid>
+      <description>프로세스 생성과 종료, 좀비/고아 프로세스 방지, fork와 exec 시스템 콜의 차이, kill 및 trap을 통한 비동기 시그널 핸들링을 상세히 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 시스템 프로그래밍: POSIX 저수준 파일 I/O 및 디스크립터 제어</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</guid>
+      <description>open, read, write, close, lseek 시스템 콜과 파일 디스크립터(FD), 표준 I/O 버퍼링과의 차이점, 파일 오프셋 제어를 깊이 있게 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 Bash 쉘 스크립트 프로그래밍 기초 문법 및 업무 자동화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</link>
+      <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</guid>
+      <description>변수 선언, 조건문(if/case), 반복문(for/while), 함수, 명령줄 인자 처리($1, $@) 등 실무 자동화 스크립트 작성에 필요한 Bash 문법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 기본 개념과 파일 시스템 계층 구조(FHS) 및 권한 관리 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</link>
+      <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</guid>
+      <description>리눅스 커널과 쉘의 역할, FHS 표준 디렉터리 구조(/bin, /etc, /var), chmod/chown 파일 퍼미션 설정 및 심볼릭 링크 개념을 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
+      <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
+      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>VirtualBox 리눅스 가상머신 설치 및 게스트 확장(Guest Additions) 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/</link>
+      <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/</guid>
+      <description>VirtualBox를 활용한 Ubuntu 가상머신 생성, 포트포워딩 네트워크 세팅, 클립보드 공유 및 해상도 자동 조절을 위한 게스트 확장 설치법을 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
+      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</link>
+      <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</guid>
+      <description>데비안/우분투 계열 리눅스의 패키지 관리 도구인 apt, apt-get의 설치, 갱신, 의존성 충돌 해결 및 사용자 PPA 저장소 관리 팁을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

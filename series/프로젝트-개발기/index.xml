@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>프로젝트 개발기 on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</link>
+    <description>Recent content in 프로젝트 개발기 on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Native와 Firebase 기반 사진 일기 앱 &#39;하루기록&#39; 개발기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</guid>
+      <description>React Native(Expo)와 Firebase 기반의 사진 일기 앱 &amp;#39;하루기록&amp;#39; 개발 기록입니다. MVP 기획부터 Google 소셜 로그인 연동, 로컬 및 EAS 빌드 환경 구축, Cloud Vision API 연동 전략까지의 설계와 구현 과정을 상세히 정리했습니다.</description>
+    </item>
+    
+    <item>
+      <title>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</link>
+      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</guid>
+      <description>Base64, JSON 포맷터, URL 인코더, 해시 생성기 등 개발에 필요한 편의 기능을 단일 웹 인터페이스로 제공하는 React 기반 웹 툴 제작기입니다.</description>
+    </item>
+    
+    <item>
+      <title>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</link>
+      <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</guid>
+      <description>pytube 라이브러리와 PyQt를 활용하여 유튜브 동영상 및 음원 추출을 안전하고 직관적으로 처리하는 데스크톱 다운로더 유틸리티 제작기입니다.</description>
+    </item>
+    
+    <item>
+      <title>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</link>
+      <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</guid>
+      <description>다양한 채용 플랫폼의 공고 데이터를 비동기 웹 크롤러로 자동 수집하고 키워드 빈도를 분석하는 Delver 서비스의 아키텍처와 구현 기록입니다.</description>
+    </item>
+    
+    <item>
+      <title>Flutter 기반 텍스트 단어 슬라이더 &#39;FlickThrough&#39; 개발 및 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</link>
+      <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</guid>
+      <description>Flutter로 개발한 단어 단위 슬라이드 쇼 앱 &amp;#39;FlickThrough&amp;#39;의 요구사항 분석, 크로스 플랫폼 파일 처리, 다국어 지원, GitHub Pages 및 Android Play Store 배포 전 과정을 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

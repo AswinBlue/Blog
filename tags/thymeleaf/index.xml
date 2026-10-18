@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thymeleaf on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/thymeleaf/</link>
+    <description>Recent content in Thymeleaf on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Jun 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/thymeleaf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 환경에서 Thymeleaf 템플릿 엔진을 활용한 서버 사이드 렌더링(SSR)</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</link>
+      <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</guid>
+      <description>스프링 부트와 Thymeleaf의 th:text, th:each, th:if 문법과 Model 객체 바인딩, 레이아웃 컴포넌트 분리 및 URL 링크 처리법을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

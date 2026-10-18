@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bash on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/bash/</link>
+    <description>Recent content in Bash on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 18:29:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 Bash 쉘 스크립트 프로그래밍 기초 문법 및 업무 자동화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</link>
+      <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</guid>
+      <description>변수 선언, 조건문(if/case), 반복문(for/while), 함수, 명령줄 인자 처리($1, $@) 등 실무 자동화 스크립트 작성에 필요한 Bash 문법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
+      <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
+      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
+      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

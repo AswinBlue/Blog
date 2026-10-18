@@ -1,0 +1,4 @@
+# Google AdSense
+# Note: For GitHub Pages subpath (https://aswinblue.github.io/Blog/),
+# this ads.txt must also be placed at root repository (https://aswinblue.github.io/ads.txt).
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

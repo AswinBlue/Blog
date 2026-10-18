@@ -8,279 +8,30 @@
     <language>en</language>
     <lastBuildDate>Mon, 04 Mar 2024 21:02:28 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/systemhacking/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Reverse Engineering</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</link>
+      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/reverse_engineering/</guid>
-      <description>&lt;h1 id=&#34;reverse-engineering&#34;&gt;Reverse Engineering&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;software 를 분석하여 소스코드를 역으로 생성 해 내는 기법&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;software-분석-방법&#34;&gt;software 분석 방법&lt;/h2&gt;
-&lt;h3 id=&#34;static-analysis&#34;&gt;Static analysis&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;프로그램을 실행시키지 않고 수행하는 분석이다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;프로그램의 전체 구조를 파악하기 쉬우며, 환경적 제약 사항에 자유롭고, 악성 코드의 위협으로부터 안전하다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;난독화 적용시 분석이 어려워 진다는 단점이 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;정적분석에 사용되는 툴로는 &lt;code&gt;IDA&lt;/code&gt; 가 있다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;IDA&lt;/code&gt; 는 프리웨어로 &lt;a href=&#34;https://hex-rays.com/ida-free/&#34;&gt;https://hex-rays.com/ida-free/&lt;/a&gt; 에서 다운 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;dynamic-analysis&#34;&gt;Dynamic analysis&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;프로그램을 실행시키며 수행하는 분석이다.&lt;/li&gt;
-&lt;li&gt;프로그램의 개략적인 동작을 빠르게 확인 할 수 있다.&lt;/li&gt;
-&lt;li&gt;정적 분석과 반대로 프로그램 실행에 필요한 환경 구성이 어려울 수 있다.&lt;/li&gt;
-&lt;li&gt;안티 디버깅 기법 적용된 프로그램은 디버깅이 불가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;ida&#34;&gt;IDA&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;리버스 엔지니어링 툴&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;단축어&#34;&gt;단축어&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;shift + F12
-&lt;ul&gt;
-&lt;li&gt;문자열 검색, String 탭으로 이동&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;x&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;상호참조 확인, 변수 또는 함수가 사용되는 곳의 위치를 확인&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;F5
-&lt;ul&gt;
-&lt;li&gt;어셈블리를 C 언어 형태로 변환&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;특정 주소 혹은 라인으로 이동&lt;/li&gt;
-&lt;li&gt;디컴파일 된 함수 이름 위에 커서를 놓고 g 를 누르면 어셈블리 상 함수 라인을 확인할 수 있다.&lt;/li&gt;
-&lt;li&gt;함수 이름을 적어도 함수 위치로 이동된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ESC
-&lt;ul&gt;
-&lt;li&gt;이전 커서 위치로 이동&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Ctrl + Enter
-&lt;ul&gt;
-&lt;li&gt;다음 커서 위치로 이동&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;n&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;변수 이름 바꾸기&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Y&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;변수 타입 설정&lt;/li&gt;
-&lt;li&gt;함수 매개변수 변경, 함수 매개변수 타입 변경&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;F2
-&lt;ul&gt;
-&lt;li&gt;어셈블리 혹은 C 언어 라인에서는 break point(중단점) 설정&lt;/li&gt;
-&lt;li&gt;stack 또는 hex View 에서는 값 변경&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;F9&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;실행 (run)&lt;/li&gt;
-&lt;li&gt;프로그램을 실행시켜 동적 분석을 수행할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;F8&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;한 단계 실행 (next)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;12&#34;&gt;
-&lt;li&gt;F7&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;함수 내부로 진입 (step int)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;13&#34;&gt;
-&lt;li&gt;Ctrl + F2&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;디버깅 중단&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;14&#34;&gt;
-&lt;li&gt;&lt;code&gt;r&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;hex 데이터를 문자로 변환&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;15&#34;&gt;
-&lt;li&gt;Shift + E&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;선택한 값을 원하는 형태로 변환하여 추출(export)&lt;/li&gt;
-&lt;li&gt;hex 데이터를 문자열로 추출할 때 유용하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;화면&#34;&gt;화면&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;IDA View&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
+      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
     </item>
     
     <item>
-      <title>Exploit</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</link>
+      <title>리눅스 시스템 해킹과 메모리 커럽션(Buffer Overflow) 공격 기법 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</link>
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/exploit/</guid>
-      <description>&lt;h1 id=&#34;exploit&#34;&gt;Exploit&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pwntool&lt;/code&gt;의 &lt;code&gt;checksec&lt;/code&gt; 명령어로 어떤 보안이 적용되었는지 확인 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;shell-code&#34;&gt;Shell Code&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;exploit은 파일 읽고 쓰기(open-read-write, orw), 셸 명령 실행(execve) 권한을 취득하는 것을 목표로 한다.&lt;/li&gt;
-&lt;li&gt;Shell 권한을 획득하기 위한 어셈블리 코드들의 모음을 &amp;lsquo;Shell Code&amp;rsquo; 라 칭한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;환경세팅&#34;&gt;환경세팅&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../pwntool/#%EC%84%A4%EC%B9%98&#34;&gt;pwntools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../pwntool/#shellcraft&#34;&gt;shellcraft&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../pwntool/#ropgadget&#34;&gt;ROPgadget&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#one_gadget&#34;&gt;one_gadget&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/systemhacking/pwntool/#patchelf&#34;&gt;patchelf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;취약점-공격-순서&#34;&gt;취약점 공격 순서&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;바이너리를 분석하여 보호기법을 확인한다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;checksec&lt;/code&gt; 명령어를 사용하여 바이너리에 적용된 보호기법을 확인하고, 적용 불가능한 exploit 기법을 추려낸다.
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../pwntool/#checksec&#34;&gt;checksec 참조&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ldd&lt;/code&gt; 명령을 활용하여 의존성 관계를 확인한다.
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;../../Linux/linux_command/#%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%84%A4%EC%A0%95-%EA%B4%80%EB%A0%A8&#34;&gt;ldd 명령&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;코드를 확인하여 취약점 및 구조(stack 형태)을 파악한다&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;stack은 함수에서 선언된 순서대로 할당되지 않음에 주의하며, 무조건 assembly어를 통해 stack 주소에서 특정 변수의 위치를 확인하도록 한다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</guid>
+      <description>스택 기반 버퍼 오버플로우(BOF), 셸코드 주입, RTL(Return-to-Libc), ROP 가젯 체이닝 원리와 ASLR/NX 보안 방어 기법을 심층 분석합니다.</description>
     </item>
     
     <item>
-      <title>Pwntool</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/pwntool/</link>
+      <title>Pwntools 라이브러리를 활용한 시스템 취약점 익스플로잇 자동화 스크립트 작성법</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</link>
       <pubDate>Sat, 09 Mar 2024 10:09:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/pwntool/</guid>
-      <description>&lt;h1 id=&#34;pwntool&#34;&gt;pwntool&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;시스템 해킹을 위해 제작된 파이썬 라이브러리&lt;/li&gt;
-&lt;li&gt;바이너리를 실행하고 특정 input을 집어넣어 해킹(exploit)을 할수 있게 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;리눅스의 apt와 파이썬의 pip 명령으로 설치가 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
-$ python3 -m pip install --upgrade pip
-$ python3 -m pip install --upgrade pwntools
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.pwntools.com/en/latest/&#34;&gt;공식 메뉴얼&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;docker를 사용한 설치 방법
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM ubuntu:18.04
-
-ENV PATH=&amp;#34;${PATH}:/usr/local/lib/python3.6/dist-packages/bin&amp;#34;
-ENV LC_CTYPE=C.UTF-8
-
-RUN apt update
-RUN apt install -y \
-   gcc \
-   git \
-   python3 \
-   python3-pip \
-   ruby \
-   sudo \
-   tmux \
-   vim \
-   wget
-
-# install pwndbg
-WORKDIR /root
-RUN git clone https://github.com/pwndbg/pwndbg
-WORKDIR /root/pwndbg
-RUN git checkout 2023.03.19
-RUN ./setup.sh
-
-# install pwntools
-RUN pip3 install --upgrade pip
-RUN pip3 install pwntools
-
-# install one_gadget command
-RUN gem install one_gadget
-
-WORKDIR /root
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;에러-발생시-해결&#34;&gt;에러 발생시 해결&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;partially initialized module &#39;pwndbg&#39; has no attribute &#39;lib&#39;&lt;/code&gt; 에러 발생시에는 쉘 명령어에 &lt;code&gt;export LANG=C.UTF-8&lt;/code&gt; 를 입력한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;사용법&#34;&gt;사용법&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;from pwn import *&lt;/code&gt; 을 통해 모듈을 로딩한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;실행&#34;&gt;실행&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;process / remote
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;target = process(파일경로)&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;로컬 파일을 exploit 하기위한 대상으로 설정한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;env&lt;/code&gt; 인자를 추가하여 프로그램 동작시 적용될 환경변수를 설정할 수 있다.
-&lt;ul&gt;
-&lt;li&gt;다음은 libc 파일을 원하는 경로에서 링킹 하도록 설정하는 구문이다. :  &lt;code&gt;target = process(&#39;./a.out&#39;, env= {&amp;quot;LD_PRELOAD&amp;quot; : &amp;quot;./libc.so.6&amp;quot;})&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;target = remote(&#39;목적지 ip&#39;, 목적지 port)&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;ip:port 에 연결된 소켓을 exploit target으로 설정한다.&lt;/li&gt;
-&lt;li&gt;원격으로 접속한 목적지의 파일을 exploit 할 때 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;데이터-송수신&#34;&gt;데이터 송수신&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;send&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</guid>
+      <description>파이썬 Pwntools 모듈의 로컬/원격 프로세스 I/O 통신, 페이로드 패킹(p64/u64), ELF 바이너리 심볼 파싱 및 대화형 쉘 획득 기법을 정리합니다.</description>
     </item>
     
   </channel>

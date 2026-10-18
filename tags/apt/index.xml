@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Apt on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/apt/</link>
+    <description>Recent content in Apt on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 May 2020 18:30:15 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</link>
+      <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</guid>
+      <description>데비안/우분투 계열 리눅스의 패키지 관리 도구인 apt, apt-get의 설치, 갱신, 의존성 충돌 해결 및 사용자 PPA 저장소 관리 팁을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

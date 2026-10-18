@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gradle on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/gradle/</link>
+    <description>Recent content in Gradle on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
+      <description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

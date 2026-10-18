@@ -6,67 +6,32 @@
     <description>Recent content in Git on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Jul 2025 22:20:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jul 2022 11:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Github Action</title>
-      <link>https://aswinblue.github.io/Blog/post/git/github_action/</link>
-      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
+      <title>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</link>
+      <pubDate>Sat, 09 Jul 2022 11:05:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/git/github_action/</guid>
-      <description>&lt;h1 id=&#34;github-action&#34;&gt;Github Action&lt;/h1&gt;
-&lt;p&gt;Github action 을 통해 github 에 코드를 push 함과 동시에 docker를 구동시켜 작업을 동작시킬수 있다.
-이 문서는 React로 개발된 웹 애플리케이션을 GitHub Actions를 사용하여 &lt;strong&gt;자동으로 빌드하고 GitHub Pages에 배포&lt;/strong&gt;하는 파이프라인 구축 과정을 안내한다. &lt;code&gt;main&lt;/code&gt; (또는 &lt;code&gt;master&lt;/code&gt;) 브랜치에 코드를 &lt;code&gt;push&lt;/code&gt;하면 모든 과정이 자동으로 실행되도록 설정하는 것을 목표로 한다.&lt;/p&gt;
-&lt;h2 id=&#34;1-사전-준비&#34;&gt;1. 사전 준비&lt;/h2&gt;
-&lt;p&gt;배포 자동화를 설정하기 전, React 프로젝트와 GitHub 저장소에 몇 가지 준비가 필요하다.&lt;/p&gt;
-&lt;h3 id=&#34;11-packagejson-설정&#34;&gt;1.1. &lt;code&gt;package.json&lt;/code&gt; 설정&lt;/h3&gt;
-&lt;p&gt;GitHub Pages는 보통 &lt;code&gt;https://&amp;lt;사용자명&amp;gt;.github.io/&amp;lt;저장소명&amp;gt;/&lt;/code&gt; 형태의 하위 경로에 배포된다. React 앱이 CSS나 JS 파일을 올바르게 찾아오게 하려면 &lt;code&gt;package.json&lt;/code&gt; 파일에 &lt;code&gt;homepage&lt;/code&gt; 속성을 추가해야 한다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</guid>
+      <description>Windows와 Linux 간 협업 시 발생하는 CRLF/LF 개행 문자 불일치 오류와 SHA-256 해시 불일치 문제를 core.autocrlf 및 캐시 초기화로 해결하는 방법을 설명합니다.</description>
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://aswinblue.github.io/Blog/post/git/git/</link>
+      <title>Git 서브모듈(Submodule) 추가부터 재귀 클론 및 동기화 충돌 해결 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-submodule-management-and-troubleshooting/</link>
+      <pubDate>Sat, 09 Jul 2022 11:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/git-submodule-management-and-troubleshooting/</guid>
+      <description>Git 저장소 내에 다른 저장소를 종속성으로 관리하는 Submodule의 생성(add), 클론(recurse-submodules), 원격 동기화(sync/update) 및 부모-자식 커밋 충돌 해결법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Git &#39;already exists in the index&#39; 오류 원인과 캐시(Cache) 안전하게 삭제하기</title>
+      <link>https://aswinblue.github.io/Blog/post/git/git-already-exists-in-index-remove-cache/</link>
       <pubDate>Sat, 09 Jul 2022 10:58:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/git/git/</guid>
-      <description>&lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
-&lt;h2 id=&#34;cache&#34;&gt;Cache&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Cache 확인: &lt;code&gt;git ls-files --stage FILE_PATH&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Cache 삭제: &lt;code&gt;git rm -r --cached FILE_PATH&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&#39;PATH&#39; already exists in the index&lt;/code&gt; 오류가 발생했을 때, cache를 확인하고 삭제하면 해결 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;config&#34;&gt;config&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git config&lt;/code&gt; 명령으로  git 관련 setting을 확인 및 설정할 수 있다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git config --list&lt;/code&gt; : 설정된 내용 확인&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git config --add&lt;/code&gt; : 설정 추가
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--system&lt;/code&gt; : 컴퓨터 환경에 적용&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--global&lt;/code&gt; : 사용자 환경에 적용&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--local&lt;/code&gt; : repository별로 설정 적용, default값
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git config --global user.name &amp;lt;USER_NAME&amp;gt;&lt;/code&gt; : 사용자 이름 설정, 구역 인자를 붙이면 &amp;ndash;add 는 생략가능&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git config --global user.email &amp;lt;EMAIL&amp;gt;&lt;/code&gt; : 사용자 email 설정, 구역 인자를 붙이면 &amp;ndash;add 는 생략가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git config --unset&lt;/code&gt; : 설정 제거&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;submodule&#34;&gt;Submodule&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Git Submodule은 하나의 Git 저장소 안에 다른 Git 저장소를 포함시키는 기능. 마치 폴더처럼 보이지만, 그 내용은 별도의 저장소에서 관리된다.&lt;/li&gt;
-&lt;li&gt;git repository 안에 다른 git repository를 관리할 때 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;생성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;REPOSITORY_URL&amp;gt; [PATH]&lt;/code&gt; 명령어로 추가 가능하다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/git/git-already-exists-in-index-remove-cache/</guid>
+      <description>.gitignore 설정 후에도 파일 추적이 계속되거나 already exists in the index 에러가 발생할 때, 로컬 파일 삭제 없이 Git 스테이징 캐시만 초기화하는 방법을 정리합니다.</description>
     </item>
     
   </channel>

@@ -8,36 +8,12 @@
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Json in C&#43;&#43;</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/json_c&#43;&#43;/</link>
+      <title>nlohmann/json C&#43;&#43; 라이브러리를 활용한 JSON 파싱 및 직렬화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-nlohmann-json-parsing-and-serialization/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/json_c&#43;&#43;/</guid>
-      <description>&lt;h1 id=&#34;json-library-in-c&#34;&gt;Json library in C++&lt;/h1&gt;
-&lt;h2 id=&#34;rapid-json&#34;&gt;Rapid Json&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;커뮤니티&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;오픈소스로 다양한 예제코드를 찾을 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;parsing 속도&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;다른 Json 파싱 라이브러리와 비교시 상위권에 위치&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;라이브러리&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;헤더 온리 사용이 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;참조&#34;&gt;참조&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://joycecoder.tistory.com/9&#34;&gt;https://joycecoder.tistory.com/9&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Tencent/rapidjson/&#34;&gt;https://github.com/Tencent/rapidjson/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-nlohmann-json-parsing-and-serialization/</guid>
+      <description>모던 C&#43;&#43;에서 가장 널리 쓰이는 nlohmann/json 헤더 온리 라이브러리를 통해 복잡한 JSON 데이터를 객체로 역직렬화하고 생성하는 방법을 정리합니다.</description>
     </item>
     
   </channel>

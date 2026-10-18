@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mobile-App on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/mobile-app/</link>
+    <description>Recent content in Mobile-App on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/mobile-app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Native와 Firebase 기반 사진 일기 앱 &#39;하루기록&#39; 개발기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</guid>
+      <description>React Native(Expo)와 Firebase 기반의 사진 일기 앱 &amp;#39;하루기록&amp;#39; 개발 기록입니다. MVP 기획부터 Google 소셜 로그인 연동, 로컬 및 EAS 빌드 환경 구축, Cloud Vision API 연동 전략까지의 설계와 구현 과정을 상세히 정리했습니다.</description>
+    </item>
+    
+    <item>
+      <title>Flutter 및 Dart 기반 크로스 플랫폼 모바일 앱 개발 환경 구축과 위젯 라이프사이클</title>
+      <link>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</link>
+      <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</guid>
+      <description>구글 Flutter SDK 설치, StatelessWidget과 StatefulWidget의 생명주기, BuildContext 원리 및 모바일 앱 핫 리로드 개발 팁을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

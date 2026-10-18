@@ -8,96 +8,21 @@
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 09:23:24 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pytest</title>
-      <link>https://aswinblue.github.io/Blog/post/python/pytest/</link>
+      <title>Python pytest 프레임워크를 활용한 단위 테스트 및 TDD 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python-pytest-unit-testing-and-tdd-guide/</link>
       <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/python/pytest/</guid>
-      <description>&lt;h1 id=&#34;pytest를-활용한-파이썬-프로젝트-테스트-가이드-&#34;&gt;Pytest를 활용한 파이썬 프로젝트 테스트 가이드 ⚙️&lt;/h1&gt;
-&lt;p&gt;본문에서는 auto trading code 에 대한 test code 작성을 예시로 pytests 를 활용하는 방법에 대해 설명합니다.&lt;/p&gt;
-&lt;h2 id=&#34;목차&#34;&gt;목차&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#pytest%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ea%b0%80%ec%9d%b4%eb%93%9c-%ef%b8%8f&#34;&gt;Pytest를 활용한 파이썬 프로젝트 테스트 가이드 ⚙️&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#%eb%aa%a9%ec%b0%a8&#34;&gt;목차&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#1-pytest-%ed%99%98%ea%b2%bd-%ec%84%a4%ec%a0%95&#34;&gt;1. Pytest 환경 설정&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#%ec%84%a4%ec%b9%98&#34;&gt;설치&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#%ec%b6%94%ec%b2%9c-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0&#34;&gt;추천 프로젝트 구조&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#2-%ea%b8%b0%eb%b3%b8-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ec%9e%91%ec%84%b1-%eb%b0%8f-%ec%8b%a4%ed%96%89&#34;&gt;2. 기본 테스트 작성 및 실행&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#%ed%85%8c%ec%8a%a4%ed%8a%b8-%ed%8c%8c%ec%9d%bc-%eb%b0%8f-%ed%95%a8%ec%88%98-%ea%b7%9c%ec%b9%99&#34;&gt;테스트 파일 및 함수 규칙&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#%ea%b8%b0%eb%b3%b8-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ec%98%88%ec%8b%9c&#34;&gt;기본 테스트 예시&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#%ed%85%8c%ec%8a%a4%ed%8a%b8-%ec%8b%a4%ed%96%89&#34;&gt;테스트 실행&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#3-pytest-%ed%95%b5%ec%8b%ac-%ea%b8%b0%eb%8a%a5-%ed%99%9c%ec%9a%a9%ed%95%98%ea%b8%b0&#34;&gt;3. Pytest 핵심 기능 활용하기&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#31-fixture-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ec%a4%80%eb%b9%84-%eb%b0%8f-%ec%a0%95%eb%a6%ac-%ec%9e%90%eb%8f%99%ed%99%94&#34;&gt;3.1. Fixture: 테스트 준비 및 정리 자동화&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#32-mocking-%ec%99%b8%eb%b6%80-%ec%9d%98%ec%a1%b4%ec%84%b1-%eb%b6%84%eb%a6%ac%ed%95%98%ea%b8%b0&#34;&gt;3.2. Mocking: 외부 의존성 분리하기&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#33-skip-%ed%8a%b9%ec%a0%95-%ed%85%8c%ec%8a%a4%ed%8a%b8-%ea%b1%b4%eb%84%88%eb%9b%b0%ea%b8%b0&#34;&gt;3.3. Skip: 특정 테스트 건너뛰기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#4-%ec%8b%a4%ec%a0%84-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0-%ed%8a%b8%eb%9f%ac%eb%b8%94%ec%8a%88%ed%8c%85-%ea%b0%80%ec%9d%b4%eb%93%9c-&#34;&gt;4. 실전 문제 해결: 트러블슈팅 가이드 🔍&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#41-modulenotfounderror&#34;&gt;4.1. &lt;code&gt;ModuleNotFoundError&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#42-while-true-%eb%ac%b4%ed%95%9c-%eb%a3%a8%ed%94%84-%ed%85%8c%ec%8a%a4%ed%8a%b8%ed%95%98%ea%b8%b0&#34;&gt;4.2. &lt;code&gt;while True&lt;/code&gt; 무한 루프 테스트하기&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#43-typeerror-%eb%82%b4%ec%9e%a5-%ed%83%80%ec%9e%85-%eb%aa%a8%ed%82%b9-%eb%ac%b8%ec%a0%9c---datetime-%eb%93%b1&#34;&gt;4.3. &lt;code&gt;TypeError&lt;/code&gt; (내장 타입 모킹 문제 - &lt;code&gt;datetime&lt;/code&gt; 등)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#44-patch%ea%b0%80-%eb%8f%99%ec%9e%91%ed%95%98%ec%a7%80-%ec%95%8a%ec%9d%84-%eb%95%8c-%ea%b2%bd%eb%a1%9c-%eb%ac%b8%ec%a0%9c&#34;&gt;4.4. &lt;code&gt;Patch&lt;/code&gt;가 동작하지 않을 때 (경로 문제)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#45-%ed%84%b0%eb%af%b8%eb%84%90-%ec%b6%9c%eb%a0%a5-%ed%95%9c%ea%b8%80-%ea%b9%a8%ec%a7%90-%eb%ac%b8%ec%a0%9c&#34;&gt;4.5. 터미널 출력 한글 깨짐 문제&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aswinblue.github.io/Blog/post/python/pytest/#5-%eb%8d%94-%ec%95%8c%ec%95%84%eb%b3%b4%ea%b8%b0&#34;&gt;5. 더 알아보기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;1-pytest-환경-설정&#34;&gt;1. Pytest 환경 설정&lt;/h2&gt;
-&lt;p&gt;자동화된 테스트는 코드의 안정성을 보장하고, 리팩토링에 대한 자신감을 줍니다. &lt;code&gt;pytest&lt;/code&gt;는 간결한 문법과 강력한 기능으로 파이썬 테스트를 쉽게 만들어주는 프레임워크입니다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/python/python-pytest-unit-testing-and-tdd-guide/</guid>
+      <description>간결한 assert 구문, fixture를 활용한 테스트 의존성 주입, parametrize 다중 파라미터 테스트 및 coverage 코드 커버리지 측정법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>Python 기초</title>
-      <link>https://aswinblue.github.io/Blog/post/python/python_basic/</link>
+      <title>Python 표준 입출력 속도 향상과 버퍼 플러시(Flush) 최적화 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/</link>
       <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/python/python_basic/</guid>
-      <description>&lt;h1 id=&#34;python&#34;&gt;Python&lt;/h1&gt;
-&lt;h2 id=&#34;기본-내장-함수&#34;&gt;기본 내장 함수&lt;/h2&gt;
-&lt;h3 id=&#34;입력&#34;&gt;입력&lt;/h3&gt;
-&lt;p&gt;한줄 받기 : &lt;code&gt;a = input()&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;받은 값은 string 형태이다.&lt;br&gt;
-받은 단어 끊어서 해석 : &lt;code&gt;a, b = input().split()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;split() 함수 안의 인자에 따라 구분자 설정 가능. 빈칸이면 공백을 기준으로 끊어줌&lt;br&gt;
-받은 단어 끊고 숫자로 변환 : &lt;code&gt;a, b = map(int, input().split())&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;int 외 다른 형태도 사용 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;출력&#34;&gt;출력&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;print()&lt;/code&gt; 와 &lt;code&gt;sys.stdout.write()&lt;/code&gt; 로 화면에 출력할 수 있다.
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sys.stdout.write&lt;/code&gt; 안에는 string 형태만 적용할 수 있다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;print&lt;/code&gt; 안에는 수식 등으로 string 및 byte를 표현 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sys.stdout.buffer.write()&lt;/code&gt; 를 사용하면 문자열을 수식을 통해 조합하고 ascii 코드 형태로 출력 가능하다.
-&lt;ul&gt;
-&lt;li&gt;print() 를 사용하면 prefix가 붙어서 원하는 형태를 표현하기 어렵다. 이럴 때 sys.stdout.buffer.write()를 사용한다.&lt;/li&gt;
-&lt;li&gt;ex)
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  sys.stdout.write(b&amp;#39;A&amp;#39;*0x10 + b&amp;#39;B&amp;#39;*0x20 + b&amp;#39;\xaa\
-  xbb\xcc\xdd\x00\x00\x00\x00&amp;#39;)
-  # 결과: AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB����
-  sys.stdout.write(b&amp;#39;A&amp;#39;*0x10 + b&amp;#39;B&amp;#39;*0x20 + b&amp;#39;\xaa\
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;xbb\xcc\xdd\x00\x00\x00\x00&amp;rsquo;)
-# 결과: b&amp;rsquo;AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\xaa\xbb\xcc\xdd\x00\x00\x00\x00&amp;rsquo;
-```&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/</guid>
+      <description>대용량 데이터 처리 및 알고리즘 풀이에서 print 대신 sys.stdout.write, buffer, flush를 활용하여 파이썬 입출력 성능을 극대화하는 방법을 정리합니다.</description>
     </item>
     
   </channel>

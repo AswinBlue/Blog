@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github-Actions on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/github-actions/</link>
+    <description>Recent content in Github-Actions on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Jul 2025 22:20:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions CI/CD 파이프라인 구축 및 자동화 워크플로우 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/git/github-actions-ci-cd-pipeline-automation-guide/</link>
+      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/github-actions-ci-cd-pipeline-automation-guide/</guid>
+      <description>이벤트 트리거, 잡(Job)과 스텝(Step) 구성, secrets 환경변수 주입, 캐싱 액션을 활용한 빌드 속도 개선 및 자동 배포 파이프라인 구축법을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>Hugo(PaperMod) 블로그 로컬 환경 구축부터 애드센스 연동 및 GitHub Actions 자동 배포까지</title>
+      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/</link>
+      <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/</guid>
+      <description>Go 및 Hugo Extended 버전 호환성 에러 해결, PaperMod 테마 커스텀, Google AdSense/AdFit 광고 슬롯 배치, GitHub Pages 자동 배포 CI/CD 파이프라인 구축 실전 가이드입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

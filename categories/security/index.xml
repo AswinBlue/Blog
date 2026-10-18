@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Security on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/security/</link>
+    <description>Recent content in Security on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 20:54:59 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 취약점 분석과 SQL Injection 및 XSS 공격 메커니즘 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</link>
+      <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</guid>
+      <description>Error-based, Blind SQL 인젝션 공격 기법과 Stored/Reflected XSS 취약점 분석, 그리고 Prepared Statements를 통한 방어 대책을 체계적으로 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>웹 쿠키(Cookie)와 세션(Session) 동작 원리 및 보안 플래그(HttpOnly, Secure) 설정법</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</link>
+      <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</guid>
+      <description>상태 유지를 위한 쿠키와 세션의 차이점, 브라우저 스토리지 비교, XSS 및 CSRF 공격을 방어하기 위한 HttpOnly, Secure, SameSite 플래그 설정을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>웹 애플리케이션 아키텍처와 브라우저 렌더링 과정 및 네트워크 통신 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</link>
+      <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</guid>
+      <description>URL 입력부터 DNS 조회, TCP 핸드셰이크, HTML/CSS 파싱, DOM/CSSOM 트리 구축, 렌더 트리 및 Reflow/Repaint까지 브라우저 동작 전 과정을 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>HTTP 프로토콜 핵심 구조: 요청·응답 메시지, 메서드 및 상태 코드 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</link>
+      <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
+      <description>HTTP 1.1과 HTTP/2의 차이, Start Line, Header, Body 구조, GET/POST/PUT/DELETE 멱등성 및 2xx, 3xx, 4xx, 5xx 상태 코드의 의미를 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
+      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 시스템 해킹과 메모리 커럽션(Buffer Overflow) 공격 기법 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</link>
+      <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</guid>
+      <description>스택 기반 버퍼 오버플로우(BOF), 셸코드 주입, RTL(Return-to-Libc), ROP 가젯 체이닝 원리와 ASLR/NX 보안 방어 기법을 심층 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>Pwntools 라이브러리를 활용한 시스템 취약점 익스플로잇 자동화 스크립트 작성법</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</link>
+      <pubDate>Sat, 09 Mar 2024 10:09:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</guid>
+      <description>파이썬 Pwntools 모듈의 로컬/원격 프로세스 I/O 통신, 페이로드 패킹(p64/u64), ELF 바이너리 심볼 파싱 및 대화형 쉘 획득 기법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

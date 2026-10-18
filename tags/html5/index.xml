@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Html5 on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/html5/</link>
+    <description>Recent content in Html5 on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Jun 2020 19:13:17 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML5 웹 표준과 시맨틱 태그(Semantic Tag) 기반 검색 최적화(SEO) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</link>
+      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</guid>
+      <description>header, nav, main, article, section 등 시맨틱 태그를 활용한 문서 구조화와 웹 접근성(A11y), 검색 엔진 크롤러 최적화 마크업 원칙을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

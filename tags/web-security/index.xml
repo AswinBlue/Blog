@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web-Security on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/web-security/</link>
+    <description>Recent content in Web-Security on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 20:54:59 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 취약점 분석과 SQL Injection 및 XSS 공격 메커니즘 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</link>
+      <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</guid>
+      <description>Error-based, Blind SQL 인젝션 공격 기법과 Stored/Reflected XSS 취약점 분석, 그리고 Prepared Statements를 통한 방어 대책을 체계적으로 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>웹 쿠키(Cookie)와 세션(Session) 동작 원리 및 보안 플래그(HttpOnly, Secure) 설정법</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</link>
+      <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</guid>
+      <description>상태 유지를 위한 쿠키와 세션의 차이점, 브라우저 스토리지 비교, XSS 및 CSRF 공격을 방어하기 위한 HttpOnly, Secure, SameSite 플래그 설정을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>HTTP 프로토콜 핵심 구조: 요청·응답 메시지, 메서드 및 상태 코드 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</link>
+      <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
+      <description>HTTP 1.1과 HTTP/2의 차이, Start Line, Header, Body 구조, GET/POST/PUT/DELETE 멱등성 및 2xx, 3xx, 4xx, 5xx 상태 코드의 의미를 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Environment-Variables on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/environment-variables/</link>
+    <description>Recent content in Environment-Variables on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jul 2023 21:04:56 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/environment-variables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
+      <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
+      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

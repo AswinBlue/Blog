@@ -6,272 +6,122 @@
     <description>Recent content in Linux on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2024 20:46:33 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>System_programming</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/system_programming/</link>
+      <title>리눅스 시스템 해킹과 메모리 커럽션(Buffer Overflow) 공격 기법 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</link>
+      <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</guid>
+      <description>스택 기반 버퍼 오버플로우(BOF), 셸코드 주입, RTL(Return-to-Libc), ROP 가젯 체이닝 원리와 ASLR/NX 보안 방어 기법을 심층 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</link>
+      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</guid>
+      <description>독립된 가상 주소 공간을 가진 프로세스 간 데이터 교환을 위한 익명/네임드 파이프, POSIX 공유 메모리, System V IPC 메커니즘을 상세히 비교 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>POSIX pthread를 활용한 멀티스레드 프로그래밍 및 동기화(Mutex) 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</link>
+      <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</guid>
+      <description>스레드 생성과 종료(pthread_create/join), 임계 영역 보호를 위한 뮤텍스(Mutex), 조건 변수(Condvar) 및 경쟁 상태(Race Condition) 방어법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 프로세스 생명주기(fork/exec) 및 시그널(Signal) 제어 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</link>
+      <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</guid>
+      <description>프로세스 생성과 종료, 좀비/고아 프로세스 방지, fork와 exec 시스템 콜의 차이, kill 및 trap을 통한 비동기 시그널 핸들링을 상세히 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 시스템 프로그래밍: POSIX 저수준 파일 I/O 및 디스크립터 제어</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</link>
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/system_programming/</guid>
-      <description>&lt;h1 id=&#34;system-programming&#34;&gt;System Programming&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;프로그램이 동작하는 구조는 크게 application, kernel, HW 로 분리할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;_____________
-|  Library  |
-¯¯¯¯¯¯¯¯¯¯¯¯¯   Application level
-------------------------------
-_____________
-|System call|
-¯¯¯¯¯¯¯¯¯¯¯¯¯   Kernel level
-------------------------------
-_____________
-|  Hardware  |
-¯¯¯¯¯¯¯¯¯¯¯¯¯   H/W level
-------------------------------
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;application level에서는 library를 사용하며, 이 코드들은 library buffer를 사용한다. (open(), read(), write(), close() &amp;hellip;)
-&lt;ul&gt;
-&lt;li&gt;시스템에서 제공하는 최적의 buffer 단위로 disk에서 값을 읽어오고, library buffer에 담아두면 작은단위로 읽어올 때 효율적이다.&lt;/li&gt;
-&lt;li&gt;예를들어, 한 줄씩 파일을 읽어야 한다면, 1byte씩 파일에서 &amp;lsquo;\n&amp;rsquo;을 감지할 때 까지 읽을 수 있지만, BUF_SIZ만큼 파일에서 읽어서 library buffer에 담아두고 library buffer를 1byte씩 읽으며 &amp;lsquo;\n&amp;rsquo;를 찾는 것이 실행 속도는 더 빠르다. (IO접근은 적을수록 효율적)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Kernel level에서는 System call을 사용하며 system buffer를 사용한다.&lt;/li&gt;
-&lt;li&gt;application level 함수를 사용하면, 보통 library buffer를 1차적으로 사용하고, 내부적으로 system call을 수행해 system buffer를 2차적으로 사용하게 된다.
-&lt;ul&gt;
-&lt;li&gt;printf는 c library 함수이며, &amp;lsquo;\n&amp;rsquo;을 만나야 화면상에 출력을 한다.&lt;/li&gt;
-&lt;li&gt;&amp;lsquo;\n&amp;rsquo;이 입력되기 전 까지 문자열들은 library buffer에 기록된다.&lt;/li&gt;
-&lt;li&gt;fprintf는 &amp;lsquo;\n&amp;rsquo;과 상관없이 문자열을 출력한다. 즉 library buffer를 사용하지 않는다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;파일-입출력&#34;&gt;파일 입출력&lt;/h2&gt;
-&lt;h3 id=&#34;fgetc&#34;&gt;fgetc&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;C에서 파일에 접근하기 위해서는 &lt;code&gt;fopen&lt;/code&gt; 함수를 사용한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 포인터를 반환하며, 코드 내에서 파일 포인터로 해당 파일에 접근이가능하다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fgetc(FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 char 하나를 읽고 반환한다.
-&lt;ul&gt;
-&lt;li&gt;fgetc 함수의 반환 값은 int 형태이다.&lt;/li&gt;
-&lt;li&gt;text file을 읽을 땐, 0xFF값이 내용에 올 수 없지만, binary file을 읽을 땐 중간에 0xFF 값이 올 수 있다.&lt;/li&gt;
-&lt;li&gt;char 형태로 0xFF를 읽으면 -1값에 해당하기 때문에, EOF와 구분이 불가능하여 char 대신 int를 반환하도록 되어있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;파일-구조체&#34;&gt;파일 구조체&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;fopen&lt;/code&gt;은 파일 구조체의 주소(포인터)를 반환한다.&lt;/li&gt;
-&lt;li&gt;파일 구조체는 아래와 같은 내용을 담고 있다.
-&lt;ul&gt;
-&lt;li&gt;_flags:&lt;/li&gt;
-&lt;li&gt;_IO_read_ptr : 다음 명령시 파일을 읽거나 쓸 위치&lt;/li&gt;
-&lt;li&gt;_IO_read_end: kernel에서 데이터를 받아서 저장할 버퍼의 끝 위치.&lt;/li&gt;
-&lt;li&gt;_IO_read_base: kernel에서 데이터를 받아서 저장할 버퍼의 시작 위치. 파일에 대한 읽기 명령(fgetc/fgets등) 이 발생했을 때, kernel은 4096byte(BUF_SIZE) 만큼 데이터를 미리 읽어서 이곳에 채워둔다.&lt;/li&gt;
-&lt;li&gt;_fileno: 파일의 offset, kernel에서 해당 파일에 정해준 index(kernel 함수에서 사용할 수 있다.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;fopen 시에 파일 구조체가 생성 및 초기화 되지만, &lt;em&gt;IO_read&lt;/em&gt;* 인자들은 파일 접근이 이루어짐과 동시에 값이 적용된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;eof&#34;&gt;EOF&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;파일을 끝까지 읽었다고 판단하는 것은, EOF 문자(-1) 으로 판단한다.
-&lt;ul&gt;
-&lt;li&gt;하지만 실제파일을 읽어보면 마지막에 -1값이 실제로 들어있지는 않다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;EOF 값은 file I/O 함수의 리턴값일 뿐 실제 파일에 기입된 값이 아니다.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;file I/O 함수는 i-node에 기록된 파일의 크기를 기반으로 파일 끝을 판단한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;ASKII 코드 중 주요 문자의 값 참조&lt;/li&gt;
-&lt;li&gt;a: 97&lt;/li&gt;
-&lt;li&gt;A: 68&lt;/li&gt;
-&lt;li&gt;0: 48&lt;/li&gt;
-&lt;li&gt;\n: 10&lt;/li&gt;
-&lt;li&gt;\r: 13&lt;/li&gt;
-&lt;li&gt;(공백): 32&lt;/li&gt;
-&lt;li&gt;\t: 9&lt;/li&gt;
-&lt;li&gt;\0: 0&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;fguts(BUFF, SIZE, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 읽어온다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fputs(BUFF, FPTR)&lt;/code&gt; 함수는 fopen으로 연 파일 포인터를 참조해서 line 하나를 출력한다.
-&lt;ul&gt;
-&lt;li&gt;리눅스에서 표준 입력/출력/에러는 기본적으로 파일 포인터를 열어둔다. 각각 아래 문자열 혹은 번호로 참조 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;stdin&lt;/code&gt; : 표준 입력
-&lt;code&gt;stdout&lt;/code&gt; : 표준 출력 &lt;br&gt;
-&lt;code&gt;stderr&lt;/code&gt;: 표준 에러   &lt;br&gt;
--&amp;gt; 파일 포인터 대신 &lt;code&gt;stdout&lt;/code&gt; 을 입력하면 표준 출력으로 문자열이 출력된다. (ex: &lt;code&gt;fputc(BUF, stdout)&lt;/code&gt;)&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</guid>
+      <description>open, read, write, close, lseek 시스템 콜과 파일 디스크립터(FD), 표준 I/O 버퍼링과의 차이점, 파일 오프셋 제어를 깊이 있게 분석합니다.</description>
     </item>
     
     <item>
-      <title>Shell Programming</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/shell_programming/</link>
+      <title>GNU Make 및 Makefile 작성법: C/C&#43;&#43; 빌드 자동화 기초 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</link>
+      <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</guid>
+      <description>타겟, 의존성, 레시피 규칙을 바탕으로 변경된 소스코드만 선별 컴파일하는 증분 빌드 Makefile 문법과 매크로 변수 활용법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 Bash 쉘 스크립트 프로그래밍 기초 문법 및 업무 자동화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</link>
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/shell_programming/</guid>
-      <description>&lt;h1 id=&#34;shell-programming&#34;&gt;Shell Programming&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;리눅스 쉘 프로그래밍에 대해 기술한다.&lt;/li&gt;
-&lt;li&gt;쉘 프로그래밍은 bash, sh 등의 명령어를 활용한 로직을 칭하며, 리눅스 환경에서 text 파일 안에 명령어를 작성해 놓고, 실행하는 방식으로 사용한다.&lt;/li&gt;
-&lt;li&gt;명령어가 든 파일의 확장자는 보통 .sh 로 세팅한다. (윈도우 OS의 .batch 와 유사)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;sh-파일-작성&#34;&gt;.sh 파일 작성&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;새로 생성된 text 파일은 확장자가 .sh 라도 실행 권한이 없기 떄문에 &lt;code&gt;chmod&lt;/code&gt; 명령어로 권한을 수정해야 한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ex) &lt;code&gt;chmod a+x &amp;lt;파일이름&amp;gt;&lt;/code&gt; 명령으로 모든 사용자에 대해 실행 권한을 부여할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;.sh 파일 안에는 shell 명령어들을 사용할 수 있다. 그 외 추가적으로 작성할 수 있는 구문들은 다음과 같다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</guid>
+      <description>변수 선언, 조건문(if/case), 반복문(for/while), 함수, 명령줄 인자 처리($1, $@) 등 실무 자동화 스크립트 작성에 필요한 Bash 문법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>Linux_env</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux_env/</link>
+      <title>리눅스 기본 개념과 파일 시스템 계층 구조(FHS) 및 권한 관리 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</link>
+      <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</guid>
+      <description>리눅스 커널과 쉘의 역할, FHS 표준 디렉터리 구조(/bin, /etc, /var), chmod/chown 파일 퍼미션 설정 및 심볼릭 링크 개념을 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux_env/</guid>
-      <description>&lt;h1 id=&#34;dev-in-linux&#34;&gt;Dev in Linux&lt;/h1&gt;
-&lt;p&gt;리눅스 개발환경 구축을 위한 가이드&lt;/p&gt;
-&lt;h2 id=&#34;사용자-맞춤-설정&#34;&gt;사용자 맞춤 설정&lt;/h2&gt;
-&lt;h3 id=&#34;bashrc&#34;&gt;.bashrc&lt;/h3&gt;
-&lt;p&gt;홈 디렉터리에 위치한 user별 설정 파일이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 언제든 새로고침 할 수 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;리눅스 콘솔 프롬프트를 보기 쉽게 색칠하기 위한 설정할 수 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;force_color_prompt=true
-if [ -n &amp;#34;$force_color_prompt&amp;#34; ]; then
-    if [ -x /usr/bin/tput ] &amp;amp;&amp;amp; tput setaf 1 &amp;gt;&amp;amp;/dev/null; then
-	# We have color support; assume it&amp;#39;s compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-if [ &amp;#34;$color_prompt&amp;#34; = yes ]; then
-    PS1=&amp;#39;${debian_chroot:+($debian_root)}\[\033[01;32m\]\u\[\033[01;36m\]@\[\033[01;35m\]\h\[\033[00m\]:\[\033[01;033m\]\w\$\[\033[00m\]&amp;#39;
-else
-    PS1=&amp;#39;${debian_chroot:+($debian_chroot)}\u@\h:\w\$ &amp;#39;
-fi
-unset color_prompt force_color_prompt
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;vi&#34;&gt;vi&lt;/h3&gt;
-&lt;p&gt;리눅스에서 활용할 수 있는 기본적인 에디터이다. 진입장벽은 높은 편이지만, 한번 익숙해지면 매우 편리하다.&lt;br&gt;
-~/.vimrc 폴더에 기본 설정을 적용할 수 있다.&lt;br&gt;
-기본적인 설정은 아래와 같이 세팅할 수 있다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
+      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
     </item>
     
     <item>
-      <title>Virtual_box</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/virtual_box/</link>
+      <title>VirtualBox 리눅스 가상머신 설치 및 게스트 확장(Guest Additions) 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/</link>
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/virtual_box/</guid>
-      <description>&lt;h1 id=&#34;virtualbox&#34;&gt;VirtualBox&lt;/h1&gt;
-&lt;h2 id=&#34;문제와-해결&#34;&gt;문제와 해결&lt;/h2&gt;
-&lt;h3 id=&#34;root-계정&#34;&gt;root 계정&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;virtual box를 생성하면 기본 user의 이름은 vboxuser로 세팅되어 있다. 하지만 vboxuser는 sudo 권한이 없어 다른 설정을 수행 할 수가 없다.&lt;/li&gt;
-&lt;li&gt;virtual box에서 root 계정 비밀번호를 변경하는 방법은 다음과 같다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;virtualbox에서 원하는 ubuntu machine를 실행시킨다.&lt;/li&gt;
-&lt;li&gt;machine이 실행되는 도중 shift키를 클릭하고 있는다.&lt;/li&gt;
-&lt;li&gt;부팅 모드 선택 화면이 뜨면 &lt;code&gt;Advanced options for Ubuntu&lt;/code&gt; 를 선택하고, &lt;code&gt;(recovery mode)&lt;/code&gt;표시가 되어있는 항목으로 부팅을 시도한다.&lt;/li&gt;
-&lt;li&gt;로딩이 완료되면 &lt;code&gt;root&lt;/code&gt; 라는 항목을 선택하여 root 계정의 비밀번호를 재설정 할 수 있다.&lt;/li&gt;
-&lt;/ol&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/</guid>
+      <description>VirtualBox를 활용한 Ubuntu 가상머신 생성, 포트포워딩 네트워크 세팅, 클립보드 공유 및 해상도 자동 조절을 위한 게스트 확장 설치법을 설명합니다.</description>
     </item>
     
     <item>
-      <title>Linux commands</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux_command/</link>
+      <title>GDB 디버거 기본 사용법과 핵심 명령어 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</link>
+      <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</guid>
+      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 모드 활용법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux_command/</guid>
-      <description>&lt;h1 id=&#34;linux-command&#34;&gt;Linux Command&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;리눅스에서 사용되는 명령어들을 정리한다.&lt;/li&gt;
-&lt;li&gt;자주 사용되는 모듈의 명령어도 포함한다.&lt;/li&gt;
-&lt;li&gt;리눅스에서 명령어는 &lt;code&gt;/usr/bin/&lt;/code&gt; 폴더에 저장되며, 내부에 저장된 파일들은 각 유저들에게 실행권한이 있다.&lt;/li&gt;
-&lt;li&gt;유저 개인의 명령어를 따로 설정 및 관리하려면 &lt;code&gt;~/.bashrc&lt;/code&gt; 파일에서 특정 디리렉터리를 PATH에 추가하여 사용할 수 있다.
-&lt;ul&gt;
-&lt;li&gt;기본적으로 &lt;code&gt;~/bin/&lt;/code&gt; 경로가 PATH에 추가되어 있다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;export PATH=$PATH:추가할경로[:추가할경로2:추가할경로3:...]&lt;/code&gt; 명령어를 &lt;code&gt;~/.bashrc&lt;/code&gt; 에 추가하면 경로를 추가할 수 있다.
-&lt;ul&gt;
-&lt;li&gt;ex)
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# in .bashrc file
-PATH=$PATH:/home/user/bashrc  # 기존의 PATH에 /home/user/.bashrc 추가
-# 현재 PATH는 .bashrc 포함
-PATH=$PATH:/home/user/dir1:/home/user/dir2  # 기존의 PATH에 dir1, dir2 추가
-# 현재 PATH는 .bashrc, dir1, dir2 포함
-
-export PATH  # PATH를 적용
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;적용 후 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 명령어로 .bashrc를 재적용 해 주면 설정이 완료된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;리눅스 쉘에서 위 쉘코드를 바로 입력해도 적용은 가능하지만, 이 경우 재부팅시 설정이 초기화된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;리눅스-기본&#34;&gt;리눅스 기본&lt;/h2&gt;
-&lt;h3 id=&#34;리눅스-설정-관련&#34;&gt;리눅스 설정 관련&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;stty -a&lt;/code&gt;: 시그널 단축키들의 값 확인&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;strace FILE_NAME&lt;/code&gt;: 실행파일이 실행되는 상세 과정을 라인별로 보여준다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;getconf&lt;/code&gt;  리눅스의 시스템 변수 값을 확인하는 명령어
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;getconf -a&lt;/code&gt;: 모든 시스템 변수를 반환한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;getconf LONG_BIT&lt;/code&gt;: 시스템이 x64라면 64를, x86이라면 32를 반환한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ldd FILE_NAME&lt;/code&gt; : FILE_NAME 을 실행하는데 필요한 라이브러리 의존성을 확인한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;파일-시스템-조작&#34;&gt;파일 시스템 조작&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mkdir&lt;/code&gt; : 디렉터리를 생성하는 명령여
-&lt;ul&gt;
-&lt;li&gt;parent 디렉터리가 존재하지 않는다면 &lt;code&gt;mkdir -p&lt;/code&gt; 명령어로 한 번에 생성 가능 (ex: &lt;code&gt;mkdir -R A/B/C/D&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;문자열-조작&#34;&gt;문자열 조작&lt;/h2&gt;
-&lt;h3 id=&#34;sed&#34;&gt;sed&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;기본적인 기능은 ed에서 따 왔으며, 이 기능들은 모두 sed에 적용이 된다.&lt;/li&gt;
-&lt;li&gt;ed는 대화형 편집기이며, sed는 스트리밍 편집기&lt;/li&gt;
-&lt;li&gt;\n 을 개행문자로 사용하는 스트리밍 에디터&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;sed [-e script][-f script-file][file...]&lt;/code&gt;&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
+      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
     </item>
     
     <item>
-      <title>Linux_apt</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux_apt/</link>
+      <title>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux_apt/</guid>
-      <description>&lt;p&gt;Linux 서버에 개발 환경을 세팅하는데 뭔가 제대로 되지 않아 이미 환경설정을 해 본 다른 사람에게 원격으로 도움을 요청했다.&lt;/p&gt;
-&lt;p&gt;하지만 그 사람이 리눅스에 익숙하지 않았는지, 우리 서버를 잘못 만져 apt가 먹통이 되는 현상이 발생했다.&lt;/p&gt;
-&lt;p&gt;본 해프닝에 대해 서술하자면 아래와 같다.&lt;/p&gt;
-&lt;h2 id=&#34;원인&#34;&gt;원인&lt;/h2&gt;
-&lt;p&gt;/bin 디렉터리 안의 python bin파일을 강제로 삭제한 것이 원인으로 추정된다.&lt;/p&gt;
-&lt;p&gt;환경 설정을 하는데 제대로 되지 않으니 sudo apt-get upgrade 명령도 남용하기도 했다.&lt;/p&gt;
-&lt;h2 id=&#34;현상&#34;&gt;현상&lt;/h2&gt;
-&lt;p&gt;apt를 이용해 install, remove를 하려 하면 py3compile, py3clean 등에서 오류가 발생하였다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</guid>
+      <description>데비안/우분투 계열 리눅스의 패키지 관리 도구인 apt, apt-get의 설치, 갱신, 의존성 충돌 해결 및 사용자 PPA 저장소 관리 팁을 정리합니다.</description>
     </item>
     
   </channel>

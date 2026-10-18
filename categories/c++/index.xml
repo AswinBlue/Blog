@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C&#43;&#43; on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Aug 2024 04:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoogleTest 및 C&#43;&#43; 단위 테스트(Unit Test) 프레임워크 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/googletest-cpp-unit-testing-framework/</link>
+      <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/googletest-cpp-unit-testing-framework/</guid>
+      <description>GoogleTest(gtest) 기반의 테스트 픽스처(Fixture), Assertion 매크로, Mocking 기법을 적용하여 견고한 TDD 개발 환경을 구축하는 방법을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>GNU Make 및 Makefile 작성법: C/C&#43;&#43; 빌드 자동화 기초 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</link>
+      <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</guid>
+      <description>타겟, 의존성, 레시피 규칙을 바탕으로 변경된 소스코드만 선별 컴파일하는 증분 빌드 Makefile 문법과 매크로 변수 활용법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>GCC 컴파일 과정과 핵심 옵션 및 정적·동적 라이브러리 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gcc-compilation-process-and-options/</link>
+      <pubDate>Mon, 10 Jul 2023 22:13:06 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gcc-compilation-process-and-options/</guid>
+      <description>GCC 컴파일러의 4단계 빌드 과정(전처리, 컴파일, 어셈블, 링킹)과 핵심 옵션(-E, -S, -c, -g, -Wall), 정적 및 동적 라이브러리(ar, LD_LIBRARY_PATH, LD_PRELOAD) 생성과 활용법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; STL 핵심 컨테이너와 알고리즘 라이브러리 활용 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-stl-containers-and-algorithms/</link>
+      <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-stl-containers-and-algorithms/</guid>
+      <description>vector, list, deque, map, set 등 C&#43;&#43; 표준 템플릿 라이브러리(STL)의 핵심 자료구조 동작 원리와 효율적인 알고리즘 활용법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>GDB 디버거 기본 사용법과 핵심 명령어 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</link>
+      <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</guid>
+      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 모드 활용법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 핵심 문법과 객체 지향 프로그래밍(OOP) 기초 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-syntax-and-oop-fundamentals/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-syntax-and-oop-fundamentals/</guid>
+      <description>C&#43;&#43; 언어의 기본 문법부터 클래스 설계, 생성자와 소멸자, 상속과 다형성, 가상 함수 테이블(vtable)까지 객체 지향 프로그래밍의 핵심 개념을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>CMake 기본 문법과 크로스 플랫폼 빌드 스크립트 작성 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</guid>
+      <description>CMakeLists.txt를 활용하여 C/C&#43;&#43; 프로젝트를 플랫폼 독립적으로 빌드하고 외부 라이브러리 종속성을 연결하는 핵심 작성법을 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>nlohmann/json C&#43;&#43; 라이브러리를 활용한 JSON 파싱 및 직렬화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-nlohmann-json-parsing-and-serialization/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-nlohmann-json-parsing-and-serialization/</guid>
+      <description>모던 C&#43;&#43;에서 가장 널리 쓰이는 nlohmann/json 헤더 온리 라이브러리를 통해 복잡한 JSON 데이터를 객체로 역직렬화하고 생성하는 방법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>spdlog 라이브러리를 활용한 고성능 C&#43;&#43; 비동기 로깅 환경 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</guid>
+      <description>빠르고 간결한 C&#43;&#43; 헤더 온리 로깅 라이브러리 spdlog의 포맷팅 규칙, 파일 회전(Rotating), 비동기 큐 로깅 및 성능 튜닝 기법을 소개합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

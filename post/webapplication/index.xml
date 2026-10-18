@@ -8,368 +8,75 @@
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 09:23:30 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/webapplication/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>thymeleaf</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/thymeleaf/</link>
+      <title>Spring Boot 환경에서 Thymeleaf 템플릿 엔진을 활용한 서버 사이드 렌더링(SSR)</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</link>
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/thymeleaf/</guid>
-      <description>&lt;h1 id=&#34;thymeleaf&#34;&gt;Thymeleaf&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;서버에서 view를 구성할 때 사용하는 라이브러리&lt;/li&gt;
-&lt;li&gt;태그 형식의 문법을 사용하며 vue와 유사하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;기본-문법&#34;&gt;기본 문법&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html&#34;&gt;thymeleaf 공식 튜토리얼&lt;/a&gt; 에서 기본적인 문법을 확인할 수 있다.&lt;/li&gt;
-&lt;li&gt;태그 안에  &lt;code&gt;th:속성=&amp;quot;값&amp;quot;&lt;/code&gt; 형태의 속성을 추가하는 형태로 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;text&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;span th:text=&amp;quot;${text}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;: 서버에서 &amp;rsquo;text&amp;rsquo;라는 이름으로 정의한 태그가 있으면 text를 표시한다. text변수가 없으면 &lt;code&gt;&amp;lt;span&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;를 표시한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;utext&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;span th:utext=&amp;quot;${utext}&amp;quot;&amp;gt;default text&amp;lt;/span&amp;gt;&lt;/code&gt;: &amp;rsquo;text&amp;rsquo; 이름으로 정의한 텍스트를 &amp;lsquo;span&amp;rsquo; 태그에 넣어 표시한다. &amp;rsquo;text&amp;rsquo;변수가 없으면 &amp;lsquo;default text&amp;rsquo;를 표시한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;fragment&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;div th:fragment=&amp;quot;name&amp;quot;&amp;gt;&lt;/code&gt;: &amp;rsquo;name&amp;rsquo; 이라는 이름으로 fragment를 생성한다. fragment는 &lt;code&gt;th:replace&lt;/code&gt;, &lt;code&gt;th:copy&lt;/code&gt; 를 사용해서 재활용 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;copy&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;div th:copy=&amp;quot;this::name&amp;quot;&amp;gt;&lt;/code&gt;: 현재 파일의 &amp;rsquo;name&amp;rsquo; fragment를 &amp;lsquo;div&amp;rsquo;태그로 표현한다. &amp;rsquo;this&amp;rsquo; 대신 파일 이름을 사용하면 다른 파일의 fragment를 사용 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;replace&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;div th:replace=&amp;quot;this::name&amp;quot;&amp;gt;&lt;/code&gt;: 현재 파일의 &amp;rsquo;name&amp;rsquo; fragment로 대체한다.(태그도 바뀐다.) &amp;rsquo;this&amp;rsquo; 대신 파일 이름을 사용하면 다른 파일의 fragment를 사용가능하다.&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</guid>
+      <description>스프링 부트와 Thymeleaf의 th:text, th:each, th:if 문법과 Model 객체 바인딩, 레이아웃 컴포넌트 분리 및 URL 링크 처리법을 총정리합니다.</description>
     </item>
     
     <item>
-      <title>Tailwind</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/tailwind/</link>
+      <title>Tailwind CSS 유틸리티 클래스 기반 고속 UI 컴포넌트 스타일링 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/</link>
       <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/tailwind/</guid>
-      <description>&lt;h1 id=&#34;tailwind&#34;&gt;Tailwind&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Css 프레임워크로 빠르고 효율적으로 css를 설정할 수 있는 툴이다.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://tailwindcss.com/docs&#34;&gt;Tailwind Docs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;tailwind 모듈 설치&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;npm install -D tailwindcss@latest&lt;/code&gt; 명령을 사용하여 설치가 가능하다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;npx tailwindcss init&lt;/code&gt; 명령을 사용하면 현재 경로에 tailwind.config.js 파일이 생성되며, 현재 프로젝트에서 tailwind를 적용할 수 있게 된다.
-&lt;ul&gt;
-&lt;li&gt;tailwind.config.js 파일은 다음과 같이 구성된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;module.exports = {
-  // 포함할 항목
-  content: [&amp;#39;./src/**/*.{html,js,jsx,ts,tsx, mustache}&amp;#39;],
-  // 제외할 항목 (최신 버전에서 사용되지 않는 문법)
-  // purge: [&amp;#34;./src/**/*.html&amp;#34;, &amp;#34;./src/**/*.js&amp;#34;],
-  // jit mode는 purge와 함께 세트로 사용되었고, 세트로 사라졌다.(?)
-  // mode: process.env.NODE_ENV ? &amp;#39;jit&amp;#39; : undefined,
-  darkMode: &amp;#39;class&amp;#39;, // [false, &amp;#39;mdeia&amp;#39;, &amp;#39;class&amp;#39;]
-  theme: {
-    fontFamily: {
-      display: [&amp;#39;Open Sans&amp;#39;, &amp;#39;sans-serif&amp;#39;],
-      body: [&amp;#39;Open Sans&amp;#39;, &amp;#39;sans-serif&amp;#39;],
-    },
-    extend: {
-      fontSize: {
-        14: &amp;#39;14px&amp;#39;,
-      },
-      backgroundColor: {
-        &amp;#39;main-bg&amp;#39;: &amp;#39;#FAFBFB&amp;#39;,
-        &amp;#39;main-dark-bg&amp;#39;: &amp;#39;#20232A&amp;#39;,
-        &amp;#39;secondary-dark-bg&amp;#39;: &amp;#39;#33373E&amp;#39;,
-        &amp;#39;light-gray&amp;#39;: &amp;#39;#F7F7F7&amp;#39;,
-        &amp;#39;half-transparent&amp;#39;: &amp;#39;rgba(0, 0, 0, 0.5)&amp;#39;,
-      },
-      borderWidth: {
-        1: &amp;#39;1px&amp;#39;,
-      },
-      borderColor: {
-        color: &amp;#39;rgba(0, 0, 0, 0.1)&amp;#39;,
-      },
-      width: {
-        400: &amp;#39;400px&amp;#39;,
-        760: &amp;#39;760px&amp;#39;,
-        780: &amp;#39;780px&amp;#39;,
-        800: &amp;#39;800px&amp;#39;,
-        1000: &amp;#39;1000px&amp;#39;,
-        1200: &amp;#39;1200px&amp;#39;,
-        1400: &amp;#39;1400px&amp;#39;,
-      },
-      height: {
-        80: &amp;#39;80px&amp;#39;,
-      },
-      minHeight: {
-        590: &amp;#39;590px&amp;#39;,
-      },
-      backgroundImage: {
-        &amp;#39;hero-pattern&amp;#39;:
-          &amp;#34;url(&amp;#39;https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg&amp;#39;)&amp;#34;,
-      },
-    },
-  },
-  plugins: [],
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;tailwind는 react와 같은 framework에서는 자동으로 적용이 가능하지만, 그 외의 경우에는 postcss 등과 같은 모듈의 도움이 필요하다.&lt;/li&gt;
-&lt;li&gt;tailwind 모듈 설치와 tailwind.config.js 구성이 끝났다면, tailwind로 작성된 css를 코드에 추가해줘야 한다. index.css에 아래 구문을 추가한다.
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@tailwind base;
-@tailwind components;
-@tailwind utilities;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;postcss&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/</guid>
+      <description>유틸리티 퍼스트 CSS 프레임워크인 Tailwind CSS의 설치 및 tailwind.config.js 설정, PostCSS 연동 빌드, Flexbox 정렬 유틸리티 클래스, 반응형 접두사(sm/md/lg) 활용법을 체계적으로 정리합니다.</description>
     </item>
     
     <item>
-      <title>Angular</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/angular/</link>
+      <title>Angular 기본 개념 및 프로젝트 아키텍처와 템플릿 바인딩 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/angular-basics-project-structure-template-syntax/</link>
       <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/angular/</guid>
-      <description>&lt;h1 id=&#34;angular&#34;&gt;Angular&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Angular JS와 Angular는 다르다. Angular JS는 초창기 Angular를 의미하고, 그냥 Angular는 Angular2 이상의 버전을 의미한다.&lt;/li&gt;
-&lt;li&gt;javascript기반의 textscript를 사용한다. 확장자가 ts로 끝난다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;개발환경-세팅&#34;&gt;개발환경 세팅&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;nodejs 설치&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ sudo apt install npm&lt;/code&gt; :nodejs와 npm 동시에 설치&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;angular client 설치&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ npm install -g @angular/cli&lt;/code&gt; 명령어를 이용하여 설치&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;workspace 생성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;client 설치가 완료되었으면 workspace를 생성하고 application을 생성한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;$ ng new &amp;lt;application_name&amp;gt;&lt;/code&gt; 명령어를 이용하여 설치한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;nodejs 버전이 낮다고 한다.  github에서 받아서 빌드하여 써 보자.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/angular-basics-project-structure-template-syntax/</guid>
+      <description>Angular CLI를 활용한 개발 환경 구축부터 프로젝트 아키텍처, 컴포넌트 생명주기와 부모-자식 데이터 통신(@Input, @Output), 라우팅 파라미터 처리, 템플릿 바인딩 문법까지 핵심 개념을 체계적으로 정리합니다.</description>
     </item>
     
     <item>
-      <title>React basic</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</link>
+      <title>React 기초 입문: 컴포넌트 생명주기, State/Props 및 Hooks 핵심 완벽 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/</link>
       <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/react_basic/</guid>
-      <description>&lt;h1 id=&#34;react-basic&#34;&gt;React basic&lt;/h1&gt;
-&lt;h2 id=&#34;개발환경-설치-및-실행&#34;&gt;개발환경 설치 및 실행&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;node.js 로 만들어진 create-react-app 툴을 이용하면 손쉽게 react 앱을 생성할 수 있다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;npm을 설치하고 아래 명령어를 수행하여 create-react-app을 설치한다.
-&lt;code&gt;npm install -g create-react-app&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;원하는 경로에 들어가 프로젝트를 생성한다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;create-react-app &amp;lt;NAME&amp;gt;&lt;/code&gt; : NAME 경로에 프로젝트 생성&lt;/li&gt;
-&lt;li&gt;주의 : 프로젝트가 생성되는 폴더명은 대문자를 사용할 수 없다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;실행&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;npm run start&lt;/code&gt; 를 수행하면 &lt;code&gt;localhost:3000&lt;/code&gt;에서 웹페이지를 퍼블리싱한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;기본-설정&#34;&gt;기본 설정&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;실행 포트&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt; 파일에서 &lt;code&gt;&amp;quot;proxy&amp;quot;: &amp;quot;http://localhost:3000/&amp;quot;&lt;/code&gt; 과 같이 입력하면 실행시 포트를 3000으로 설정할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;기본-구조&#34;&gt;기본 구조&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;/public/index.html 에서 기본 화면 구성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;lsquo;root&amp;rsquo; 이름으로 된 division이 있는데, 이 division에 대한 설정은 javascript로 정의되어있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;src 경로에 javascript파일들 구성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&amp;lsquo;index.js&amp;rsquo; 에 메인 화면에 사용된 객체가 정의되어 있다. 아래 내용은 id가 &amp;lsquo;root&amp;rsquo; 인 division에 &amp;lsquo;App&amp;rsquo;을 적용하겠다는 의미이다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/</guid>
+      <description>React의 기본 구조와 JSX 문법부터 클래스/함수형 컴포넌트 비교, Props와 State 관리, 핵심 Hooks(useState, useEffect, useRef), React Router 활용까지 총정리합니다.</description>
     </item>
     
     <item>
-      <title>PythonCGI</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</link>
+      <title>Python CGI 스크립트를 활용한 레거시 웹 서버 데이터 처리와 보안 고려사항</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</link>
       <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/pythoncgi/</guid>
-      <description>&lt;h1 id=&#34;python-cgi&#34;&gt;python CGI&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;CGI는 Common Gateway Interface의 약자다.&lt;/li&gt;
-&lt;li&gt;web application을 만들 수 있는 언어는 ruby, java, php 등 다양하지만 모두 CGI 규약을 따라 web server와 통신한다.&lt;/li&gt;
-&lt;li&gt;web server는 사용자의 요청을 받으면 약속된 이름의 데이터를 환경변수로 web application에 전달하여 서로 교류한다.&lt;/li&gt;
-&lt;li&gt;apache에서 python을 이용해 web application을 만들어 web server와 통신해 보자.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$ a2enmod CGI&lt;/code&gt; 명령으로 apache의 CGI를 켜 주고, &lt;code&gt;sudo service apache2 restart&lt;/code&gt; 로 설정 적용&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt; 안에 apache 실행시 발생한 에러 로그가 담겨있다.&lt;/li&gt;
-&lt;li&gt;웹 브라우저가 웹 서버에 요청할 때 웹 서버는 응답으로 웹 페이지의 데이터 타입(헤더)와 함께 웹 페이지를 전송한다.
-python CGI로는 &lt;code&gt;print(&amp;quot;content-type:text/html; charset=UTF-8\n&amp;quot;)&lt;/code&gt; 와 같이 헤더를 표기낸다.&lt;/li&gt;
-&lt;li&gt;헤더를 출력한 다음 부터는 body 부분이 출력된다.&lt;/li&gt;
-&lt;li&gt;특정 주소로 Redirection을 할 때에는 &lt;code&gt;print(&amp;quot;location : index.py?id=title&amp;quot;)&lt;/code&gt;을 이용한다. ( &amp;lsquo;:&amp;rsquo; 이후 부터 &amp;lsquo;&amp;quot;&amp;rsquo; 까지는 원하는대로 작성)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;formatting&#34;&gt;formatting&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;string에서 특정 문자열을 다른 문자로 치환하는 기능
-ex) &lt;code&gt;&#39;{} {}&#39;.format(&#39;one&#39;,&#39;tow&#39;)&lt;/code&gt;
-ex) &lt;code&gt;&#39;{a} {b}&#39;.format(a=&#39;hello&#39;, b=&#39;world&#39;)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;python 파일에서 문자열과 format 함수를 이용하여 동적 html을 구현 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;cgi-모듈&#34;&gt;CGI 모듈&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;import cgi&lt;/code&gt; 로 모듈을 로드해 사용한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;form = cgi.FieldStorage()&lt;/code&gt; form은 jQuery와 같은 역할을 한다.
-ex) &lt;code&gt;pageId = form[&#39;id&#39;].value&lt;/code&gt; : page의 id를 가져온다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;html-연동&#34;&gt;HTML 연동&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;input 태그의 name 속성 : input 태그를 특정 이름으로 CGI에 전달함
-ex)&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</guid>
+      <description>공용 게이트웨이 인터페이스(CGI)의 동작 메커니즘과 파이썬 cgi 모듈을 통한 폼 데이터 파싱, 환경 변수 읽기 및 XSS/인젝션 방어법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>JavaScript</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/javascript/</link>
+      <title>모던 자바스크립트(ES6&#43;) 핵심 문법과 비동기 프로그래밍(Promise / async-await)</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/modern-javascript-es6-async-await-guide/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/javascript/</guid>
-      <description>&lt;h1 id=&#34;javascript&#34;&gt;JavaScript&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;기본적으로 HTML 위에서 돌아가는 코드&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;body 태그 안에 &lt;script&gt; &lt;/script&gt; 태그를 넣고 안에 작성&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;document를 호출하고, .으로 함수를 호출한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;querySelector(&amp;rsquo;&amp;rsquo;)로 원하는 element 선택 가능, &amp;lsquo;&amp;lsquo;안의 내용은 css 선택자 문법과 같음&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;querySelectorAll(&amp;rsquo;&amp;rsquo;)로 원하는 속성의 element들을 nodeList(배열과 유사)형태로 선택 가능&lt;/p&gt;
-&lt;p&gt;ex ) &lt;code&gt;document.querySelector(&#39;body&#39;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ex ) &lt;code&gt;document.querySelector(&#39;#new&#39;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ex ) &lt;code&gt;document.write(&amp;quot;hello world&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;태그 안에 javaScript를 사용하는 속성값으로 사용&lt;/p&gt;
-&lt;p&gt;ex ) &lt;code&gt;&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;hello&amp;quot; onclick=&amp;quot;alert(&#39;hello&#39;)&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;특정 태그 안에서 자기자신을 호출할 때에는 querySelector를 호출하지 않고 this를 사용하면 된다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/modern-javascript-es6-async-await-guide/</guid>
+      <description>let/const 스코프, 화살표 함수, 구조 분해 할당, 이벤트 루프(Event Loop) 동작 원리 및 Promise와 async/await를 활용한 비동기 흐름 제어를 총정리합니다.</description>
     </item>
     
     <item>
-      <title>Css</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/css/</link>
+      <title>CSS3 핵심 레이아웃: Flexbox, Grid 및 미디어 쿼리 반응형 웹 디자인 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/</link>
       <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/css/</guid>
-      <description>&lt;h1 id=&#34;css&#34;&gt;CSS&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;특정 개체에 효과를 부과한다. 이를 declaration 이라 칭한다.&lt;/li&gt;
-&lt;li&gt;중복의 제거 가능, 유지보수 수월, 가독성 증가&lt;/li&gt;
-&lt;li&gt;위에서 부터 아래로 읽어가며 효과 적용, 중복 불가능한 효과에 대해서는 이전 효과가 사라짐&lt;/li&gt;
-&lt;li&gt;tag 선택자 &amp;lt; calss 선택자 &amp;lt; id 선택자 로 우선 순위가 높다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;html 문서 안에 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 태그 안에 작성 가능&lt;/p&gt;
-&lt;p&gt;ex ) &lt;code&gt;&amp;lt;style&amp;gt; a { color:black; } &amp;lt;/style&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;태그의 종류별로 속성 설정 가능&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;여기서 태그 a 는 선택자(selector)라고 한다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;선택자는 ,로 구별하여 함께 사용 가능&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/</guid>
+      <description>모던 CSS 레이아웃의 양대 축인 Flexbox와 Grid 시스템의 정렬 축 원리, 박스 모델(box-sizing), 미디어 쿼리를 통한 반응형 웹 제작법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>HTML</title>
-      <link>https://aswinblue.github.io/Blog/post/webapplication/html/</link>
+      <title>HTML5 웹 표준과 시맨틱 태그(Semantic Tag) 기반 검색 최적화(SEO) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</link>
       <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webapplication/html/</guid>
-      <description>&lt;h1 id=&#34;html&#34;&gt;HTML&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;W3C에서 HTML 규칙을 규정, 웹 브라우저 제작사들이 이를 참조하여 브라우저를 만든다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;태그&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;element라고 칭하기도 한다.&lt;/li&gt;
-&lt;li&gt;부모 자식 관계가 존재&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAG_NAME&amp;gt;&lt;/code&gt; 로 시작하고 &lt;code&gt;&amp;lt;/TAG_NAME&amp;gt;&lt;/code&gt;로 끝냄&lt;/li&gt;
-&lt;li&gt;태그별로 검색 엔진에서 노출되는 중요도가 다르다.&lt;/li&gt;
-&lt;li&gt;태그의 종류에 따라 줄 전체를 사용하거나(block level element), 내용의 크기 만큼의 공간만 사용하는 태그(lnline element)들이 있다.&lt;/li&gt;
-&lt;li&gt;html : body와 head를 통틀어 묶은 최 고위 태그&lt;/li&gt;
-&lt;li&gt;관용적으로 &amp;lt;!doctype html&amp;gt; 을 붙여 쓴다.&lt;/li&gt;
-&lt;li&gt;body : 본문을 묶는 태그&lt;/li&gt;
-&lt;li&gt;head : 본문을 설명하는 태그&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;속성(attribute)
-&amp;lt;TAG_NAME ATTRIBUTE&amp;gt; 와 같은 형태로 태그 이름 뒤에 붙음&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;body&#34;&gt;body&lt;/h2&gt;
-&lt;h3 id=&#34;속성&#34;&gt;속성&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;strong : 굵은 글씨&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</guid>
+      <description>header, nav, main, article, section 등 시맨틱 태그를 활용한 문서 구조화와 웹 접근성(A11y), 검색 엔진 크롤러 최적화 마크업 원칙을 설명합니다.</description>
     </item>
     
   </channel>

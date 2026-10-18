@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ui on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/ui/</link>
+    <description>Recent content in Ui on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter 및 Dart 기반 크로스 플랫폼 모바일 앱 개발 환경 구축과 위젯 라이프사이클</title>
+      <link>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</link>
+      <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</guid>
+      <description>구글 Flutter SDK 설치, StatelessWidget과 StatefulWidget의 생명주기, BuildContext 원리 및 모바일 앱 핫 리로드 개발 팁을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

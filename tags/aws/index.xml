@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aws on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/aws/</link>
+    <description>Recent content in Aws on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Jul 2023 21:12:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS 핵심 클라우드 인프라 서비스(EC2, S3, RDS, IAM) 아키텍처 및 실전 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/</link>
+      <pubDate>Wed, 12 Jul 2023 21:12:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/</guid>
+      <description>아마존 웹 서비스(AWS)의 컴퓨팅(EC2), 오브젝트 스토리지(S3), 관리형 DB(RDS), 보안 권한(IAM)의 핵심 개념과 VPC 네트워크 구성법을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

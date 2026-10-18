@@ -8,18 +8,21 @@
     <language>en</language>
     <lastBuildDate>Sun, 10 May 2020 12:23:13 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 환경세팅</title>
-      <link>https://aswinblue.github.io/Blog/post/hugo/hugo_dev/</link>
+      <title>Hugo(PaperMod) 블로그 로컬 환경 구축부터 애드센스 연동 및 GitHub Actions 자동 배포까지</title>
+      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/</link>
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo_dev/</guid>
-      <description>&lt;h1 id=&#34;hugo를-이용해-블로그-만들기&#34;&gt;Hugo를 이용해 블로그 만들기&lt;/h1&gt;
-&lt;p&gt;Git과 markdown을 이용하여 git을 블로그처럼 이용하는 사람들이 있다는 것을 알았다.&lt;/p&gt;
-&lt;p&gt;게다가 UI를 보기 좋게 꾸며줄 수 있는 툴들도 찾았는데, 그 중 Hugo를 사용해 보았다.&lt;/p&gt;
-&lt;p&gt;Hugo는 Go 언어로 짜여져 있어 apt-get으로도 설치가 가능하고, 소스 코드를 받아 빌드하여 쓸 수도 있다.&lt;/p&gt;
-&lt;p&gt;내 컴퓨터에는 Go가 이미 설치되 있던 터라 apt-get으로 hugo를 받아서 사용해 보았다.&lt;/p&gt;
-&lt;p&gt;설치는 정상적으로 되었고, 처음에는 잘 동작하는 듯 했는데, theme을 적용하니 ERROR들이 뜨기 시작했다.&lt;/p&gt;
-&lt;p&gt;인터넷 검색을 아무리 해 봐도 해결책이 보이지 않고, 해당 git에 issue를 날려보기도 했는데 응답이 없어서 혼자 이것저것 뒤져 보았다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/</guid>
+      <description>Go 및 Hugo Extended 버전 호환성 에러 해결, PaperMod 테마 커스텀, Google AdSense/AdFit 광고 슬롯 배치, GitHub Pages 자동 배포 CI/CD 파이프라인 구축 실전 가이드입니다.</description>
+    </item>
+    
+    <item>
+      <title>Hugo 마크다운 포스트 서식 및 Shortcode 문법 샘플 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</guid>
+      <description>PaperMod 테마에서 지원하는 코드 블록 하이라이팅, 접기(collapse), 테이블, 이미지 캡션 및 인아티클 광고 Shortcode 작성 문법 샘플입니다.</description>
     </item>
     
   </channel>

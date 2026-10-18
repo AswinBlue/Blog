@@ -8,42 +8,12 @@
     <language>en</language>
     <lastBuildDate>Mon, 23 Aug 2021 19:21:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Spring basic</title>
-      <link>https://aswinblue.github.io/Blog/post/webserver/spring/</link>
+      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 AOP</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webserver/spring/</guid>
-      <description>&lt;h1 id=&#34;spring-basic&#34;&gt;Spring basic&lt;/h1&gt;
-&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;spring CLI를 설치한다. 직접 다운받아서 원하는 곳에 압축을 푼 후 PATH설정을 해 주는게 빠르다.&lt;br&gt;
-&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-installing-the-cli&#34;&gt;참조&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;프로젝트-생성&#34;&gt;프로젝트 생성&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;CLI로 프로젝트를 생성해 보자.
-&lt;code&gt;spring init --build=gradle -d=web -a=myApp -g=com.aswin.blue [location]&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--build=gradle&lt;/code&gt; 기본으로 maven을 사용하지만 gradle로 설정 가능하다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-d=web&lt;/code&gt; dependency를 web으로 설정&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-a=myApp&lt;/code&gt; artifactId, 즉 project명을 설정한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-g=com.aswin.blue&lt;/code&gt; 그룹 명을 설정한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[location]&lt;/code&gt; 생성할 폴더를 지정한다. 없으면 새로 생성한다. 지정하지 않으면 zip 형태로 압축해서 생성한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;maven으로 프로젝트를 생성하면 pom.xml을 설정해야 한다.&lt;/li&gt;
-&lt;li&gt;각종 라이브러리를 플러그인 형태로 사용하려면 dependency와 repository 설정을해 줘야 한다.&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;&lt;a href=&#34;https://mvnrepository.com/%22&#34;&gt;https://mvnrepository.com/&#34;&lt;/a&gt; 주소처럼 maven repository를 정리해 놓은 사이트에서 원하는 repository를 찾아서 dependency를 작성한다.&lt;/li&gt;
-&lt;li&gt;repository 추가시 compile dependency를 확인하고 추가로 pom.xml을 작성한다.&lt;/li&gt;
-&lt;li&gt;maven 사이트보다는 github의 readme를 더 신용하자, maven 사이트 업데이트가 안돼서 잘 동작하지 않는 것도 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;maven 프로젝트의 실행에도 maven이 사용된다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mvn -X clean install exec:java -Dexec.args=&amp;quot;&amp;quot;&lt;/code&gt; 로 실행이 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;-X&lt;/code&gt; 는 디버깅 로그 출력을 의미한다.
-&lt;code&gt;-Dexec.args=&lt;/code&gt; 는 main 함수의 argv를 설정한다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</guid>
+      <description>엔터프라이즈 자바 개발의 핵심인 스프링 컨테이너(ApplicationContext), 빈(Bean) 생명주기, 컴포넌트 스캔 및 관점 지향 프로그래밍(AOP)의 원리를 정리합니다.</description>
     </item>
     
   </channel>

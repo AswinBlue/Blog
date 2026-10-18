@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Windows on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/windows/</link>
+    <description>Recent content in Windows on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 May 2024 16:02:25 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows PE 파일 구조 및 Win32 API 기반 윈도우 시스템 프로그래밍 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</link>
+      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</guid>
+      <description>윈도우 실행 파일의 표준 포맷인 PE(Portable Executable) 구조(DOS Header, NT Header, Section Table)와 Win32 API 핸들 및 윈도우 프로시저를 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>Windows 환경 개발 생산성 향상을 위한 고급 설정 및 쉘 명령어 팁</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/</link>
+      <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/</guid>
+      <description>Windows Terminal, PowerShell 유용한 단축키, PATH 환경변수 빠른 편집 및 개발 친화적 윈도우 OS 튜닝 팁을 공유합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

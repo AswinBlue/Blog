@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Responsive-Web on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/responsive-web/</link>
+    <description>Recent content in Responsive-Web on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Jun 2022 21:55:38 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/responsive-web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tailwind CSS 유틸리티 클래스 기반 고속 UI 컴포넌트 스타일링 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/</link>
+      <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/</guid>
+      <description>유틸리티 퍼스트 CSS 프레임워크인 Tailwind CSS의 설치 및 tailwind.config.js 설정, PostCSS 연동 빌드, Flexbox 정렬 유틸리티 클래스, 반응형 접두사(sm/md/lg) 활용법을 체계적으로 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>CSS3 핵심 레이아웃: Flexbox, Grid 및 미디어 쿼리 반응형 웹 디자인 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/</guid>
+      <description>모던 CSS 레이아웃의 양대 축인 Flexbox와 Grid 시스템의 정렬 축 원리, 박스 모델(box-sizing), 미디어 쿼리를 통한 반응형 웹 제작법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,105 +6,32 @@
     <description>Recent content in Firebase on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Firebase_react</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/firebase_react/</link>
-      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      <title>React Native와 Firebase 기반 사진 일기 앱 &#39;하루기록&#39; 개발기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</link>
+      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/firebase_react/</guid>
-      <description>&lt;h1 id=&#34;firebase-with-react&#34;&gt;Firebase with React&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;react에서 firebase를 활용하는 방법&lt;/li&gt;
-&lt;li&gt;firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;인증-auth&#34;&gt;인증 (Auth)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;firebase 로 계정 생성 및 로그인&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;firebase API를 import하여 사용&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;lt;AppFirebase.js&amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import firebase from &amp;#34;firebase/compat/app&amp;#34;;
-import &amp;#34;firebase/compat/auth&amp;#34;;
-
-const firebaseConfig = {
-apiKey: process.env.REACT_APP_API_KEY,
-authDomain: process.env.REACT_APP_AUTHDOMAIN,
-projectId: process.env.REACT_APP_PROJECTID,
-storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-appId: process.env.REACT_APP_APPID
-};
-
-export default firebase.initializeApp(firebaseConfig);
-export const authService = firebase.auth();
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현
-&amp;lt;Auth.js&amp;gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import { authService } from &amp;#34;../components/AppFirebase&amp;#34;;
-
-const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
-const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;createUserWithEmailAndPassword / signInWithEmailAndPassword 실행 이후 authService.currentUser를 참조하면 user 정보를 받아올 수 있다.&lt;/li&gt;
-&lt;li&gt;하지만, authService.currentUser 정보를 갱신하는데는 시간이 걸린다. firebase API에서는 observer를 등록하여 currentUser의 변경 시점을 확인할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;currentUser 변경시점에 특정함수 동작&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;user 정보가 갱신된 시점에 특정 동작을 원한다면, 아래와 같이 onAuthStateChanged 함수를 사용하면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;authService.onAuthStateChanged((user) =&amp;gt; { /* something to do */ }});
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;로그아웃&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;authService.signOut()&lt;/code&gt; 함수를 호출하여 로그아웃이 가능하다.&lt;/li&gt;
-&lt;li&gt;참고로 크롬 웹 디버깅 화면에서 &amp;lsquo;Application&amp;rsquo;탭에 들어가서 IndexedDB -&amp;gt; firebaseLocalDb 안의 내용을 🚫버튼으로 삭제해 주면 로그인 정보가 사라진다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;에러&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;authService&lt;/code&gt;의 함수(&lt;code&gt;createUserWithEmailAndPassword&lt;/code&gt;, &lt;code&gt;signInWithEmailAndPassword&lt;/code&gt;, &amp;hellip;) 사용시 에러가 발생할 수 있으므로, try, catch문으로 묶어서 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;try {
-  let data
-  data = await authService.createUserWithEmailAndPassword(email, password)
-} catch(error) {
-  console.log(error.code) // 에러의 원인이 코드 형태로 출력된다.
-  console.log(error.message) // 에러의 원인이 메시지 형태로 출력된다.
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ref) 오류발생 원인&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</guid>
+      <description>React Native(Expo)와 Firebase 기반의 사진 일기 앱 &amp;#39;하루기록&amp;#39; 개발 기록입니다. MVP 기획부터 Google 소셜 로그인 연동, 로컬 및 EAS 빌드 환경 구축, Cloud Vision API 연동 전략까지의 설계와 구현 과정을 상세히 정리했습니다.</description>
     </item>
     
     <item>
-      <title>Firebase</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/firebase/</link>
+      <title>React 프로젝트에 Firebase SDK 연동 및 실시간 데이터 바인딩 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</link>
+      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</guid>
+      <description>React 웹 애플리케이션에 Firebase v9&#43; 모듈러 SDK를 설치하고 환경변수 설정, Firestore 실시간 구독(onSnapshot), 소셜 로그인 구현법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Firebase Authentication 및 Firestore 실전 연동과 보안 규칙(Rules) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/firebase/</guid>
-      <description>&lt;h1 id=&#34;firebase&#34;&gt;firebase&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다.&lt;/li&gt;
-&lt;li&gt;Amazon의 Amplify가 firebase와 유사하다.&lt;/li&gt;
-&lt;li&gt;일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;설치-및-사용&#34;&gt;설치 및 사용&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다.&lt;/li&gt;
-&lt;li&gt;firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다.
-(웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</guid>
+      <description>구글 Firebase를 활용한 사용자 인증 플로우, Cloud Firestore NoSQL 데이터베이스 CRUD 연동, 보안 규칙 작성 및 실시간 리스너 활용법을 설명합니다.</description>
     </item>
     
   </channel>

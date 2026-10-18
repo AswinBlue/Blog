@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WebServer on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/webserver/</link>
+    <description>Recent content in WebServer on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/webserver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
+      <description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 AOP</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</link>
+      <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</guid>
+      <description>엔터프라이즈 자바 개발의 핵심인 스프링 컨테이너(ApplicationContext), 빈(Bean) 생명주기, 컴포넌트 스캔 및 관점 지향 프로그래밍(AOP)의 원리를 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Node.js 비동기 이벤트 루프 아키텍처와 Express 웹 서버 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</guid>
+      <description>단일 스레드 논블로킹 I/O와 이벤트 루프의 동작 원리, npm 패키지 관리, Express 미들웨어 체인 및 RESTful API 엔드포인트 구현을 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,34 +6,23 @@
     <description>Recent content in Flutter on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Jan 2023 22:01:38 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2024 21:12:32 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Flutter</title>
-      <link>https://aswinblue.github.io/Blog/post/mobileapp/flutter/</link>
+      <title>Flutter 기반 텍스트 단어 슬라이더 &#39;FlickThrough&#39; 개발 및 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</link>
+      <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</guid>
+      <description>Flutter로 개발한 단어 단위 슬라이드 쇼 앱 &amp;#39;FlickThrough&amp;#39;의 요구사항 분석, 크로스 플랫폼 파일 처리, 다국어 지원, GitHub Pages 및 Android Play Store 배포 전 과정을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>Flutter 및 Dart 기반 크로스 플랫폼 모바일 앱 개발 환경 구축과 위젯 라이프사이클</title>
+      <link>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</link>
       <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter/</guid>
-      <description>&lt;h1 id=&#34;개발환경-및-기본-지식&#34;&gt;개발환경 및 기본 지식&lt;/h1&gt;
-&lt;h2 id=&#34;구성-파일들&#34;&gt;구성 파일들&lt;/h2&gt;
-&lt;p&gt;analysis_options.yaml : flutter rule을 설정하는 파일
-assets : 이미지 등 리소스들을 저장하는 경로
-lib/main.dart : 메인 App 소스가 구동되는 dart 파일
-pubspec.yaml : 리소스 경로 및 API들을 설정할 수 있는 파일 (assets 폴더 설정 가능)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 경로 설정
-flutter:
-  assets:
-    - assets/
-	
-# dependency 설정
-dependencies:
-  flutter:
-    sdk: flutter
-  cupertino_icons: ^1.0.2
-  
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;android/app/src/main/AndroidManifext.xml : 안드로이드 앱 개발시 권한 부여를 위한 파일&lt;/p&gt;
-&lt;h2 id=&#34;빌드-및-실행&#34;&gt;빌드 및 실행&lt;/h2&gt;
-&lt;p&gt;main.dart 파일을 지정하고 실행시켜야 한다.
-이때, dart 빌드가 아닌 flutter 빌드를 해준다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/</guid>
+      <description>구글 Flutter SDK 설치, StatelessWidget과 StatefulWidget의 생명주기, BuildContext 원리 및 모바일 앱 핫 리로드 개발 팁을 정리합니다.</description>
     </item>
     
   </channel>

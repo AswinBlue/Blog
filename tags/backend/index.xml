@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Backend on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/backend/</link>
+    <description>Recent content in Backend on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
+      <description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Go 언어 핵심 기초 문법과 고루틴(Goroutine) 동시성 프로그래밍</title>
+      <link>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</link>
+      <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</guid>
+      <description>Go 언어의 타입 시스템, 슬라이스, 맵, 구조체 및 고루틴과 채널을 활용한 경량 비동기 동시성 프로그래밍 기초를 체계적으로 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 AOP</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</link>
+      <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</guid>
+      <description>엔터프라이즈 자바 개발의 핵심인 스프링 컨테이너(ApplicationContext), 빈(Bean) 생명주기, 컴포넌트 스캔 및 관점 지향 프로그래밍(AOP)의 원리를 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Node.js 비동기 이벤트 루프 아키텍처와 Express 웹 서버 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</guid>
+      <description>단일 스레드 논블로킹 I/O와 이벤트 루프의 동작 원리, npm 패키지 관리, Express 미들웨어 체인 및 RESTful API 엔드포인트 구현을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>MySQL 관계형 데이터베이스 기초: DDL, DML 쿼리 작성 및 계정 권한 관리</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</guid>
+      <description>데이터베이스/테이블 생성, SELECT/INSERT/UPDATE/DELETE 핵심 질의문, 외래키 제약조건, 사용자 계정 생성과 GRANT 권한 부여 방법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Python CGI 스크립트를 활용한 레거시 웹 서버 데이터 처리와 보안 고려사항</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</guid>
+      <description>공용 게이트웨이 인터페이스(CGI)의 동작 메커니즘과 파이썬 cgi 모듈을 통한 폼 데이터 파싱, 환경 변수 읽기 및 XSS/인젝션 방어법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

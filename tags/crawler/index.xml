@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Crawler on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/crawler/</link>
+    <description>Recent content in Crawler on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Aug 2021 19:00:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python BeautifulSoup 및 Selenium 웹 스크래핑 크롤러 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</link>
+      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</guid>
+      <description>정적 HTML 파싱을 위한 BeautifulSoup4와 자바스크립트 동적 렌더링 수집을 위한 Selenium 웹 드라이버 활용법 및 차단 우회 팁을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

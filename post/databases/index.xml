@@ -8,217 +8,39 @@
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 09:22:17 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/databases/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Database</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/database/</link>
+      <title>RDBMS vs NoSQL 차이점 비교: 대규모 서비스를 위한 데이터베이스 아키텍처 선택 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/</link>
       <pubDate>Thu, 20 Mar 2025 22:03:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/database/</guid>
-      <description>&lt;h1 id=&#34;database&#34;&gt;Database&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터를 효율적으로 저장하여 관리하는 시스템을 Database라고 한다.&lt;/li&gt;
-&lt;li&gt;Database 를 체계적으로 조작하기 위해서 DBMS(DataBase Management System) 을 사용한다.&lt;/li&gt;
-&lt;li&gt;Database는 형태에 따라 크게 Relational Database (관계형 DB), Non-Relational Database(비관계형 DB) 로 분류된다.
-&lt;ul&gt;
-&lt;li&gt;Relational Database : 테이블 형태로 데이터를 관리&lt;/li&gt;
-&lt;li&gt;Non-Relational Database : key-value 세트로 구성된 형태로 데이터를 관리(ex: json format)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;rdbms-relational-database-management-system&#34;&gt;RDBMS (Relational Database Management System)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Relational Database 조작을 위한 시스템을 의미한다.&lt;/li&gt;
-&lt;li&gt;Codds 에서 정의한 12가지 정의에 따르도록 설계된다. (보통은 선두의 2가지 규칙만 필수로 따른다.)&lt;/li&gt;
-&lt;li&gt;SQL (Structured Query Language) 이라는 쿼리 언어를 사용하여 Database를 조작한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;sql-structured-query-language&#34;&gt;SQL (Structured Query Language)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;RDBMS의 데이터를 정의하고 질의, 수정 등을 하기 위해 고안된 언어로, 다음 세가지 종류의 언어를 포함한다.
-&lt;ul&gt;
-&lt;li&gt;DDL (Data Definition Language) : 데이터를 정의하기 위한 언어로 데이터베이스의 생성/수정/삭제 등의 행위를 수행&lt;/li&gt;
-&lt;li&gt;DML (Data Manipulation Language) : 데이터를 조작하기 위한 언어로 실제 데이터베이스 내에 존재하는 데이터에 대해 조회/저장/수정/삭제 등의 행위를 수행&lt;/li&gt;
-&lt;li&gt;DCL(Data Control Language) : 접근 권한을 설정하기 위한 언어&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;nosql&#34;&gt;NoSQL&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Non-Relational Database&lt;/code&gt; 를 위한 언어로, &lt;code&gt;Non-Relational DBMS&lt;/code&gt; 라고도 불린다.&lt;/li&gt;
-&lt;li&gt;SQL를 사용하지 않고 복잡하지 않은 데이터를 저장해 단순 검색 및 추가 검색 작업을 위해 매우 최적화되었고, 저장공간이 크다는 것이 특징이다.&lt;/li&gt;
-&lt;li&gt;key-value 조합으로 데이터에 접근하기에 문법이 따로 없다는 것도 장점이다.&lt;/li&gt;
-&lt;li&gt;MongoDB, Redis, CouchDB 등이 해당된다.
-&lt;ul&gt;
-&lt;li&gt;MongoDB : Json 형태로 테이블 관리&lt;/li&gt;
-&lt;li&gt;Redis : 메모리 기반 DBMS로 속도가 빨라 임시데이터 캐싱 용도로 주로 사용&lt;/li&gt;
-&lt;li&gt;CouchDB : 이는 웹 기반의 DBMS로, REST API 형식으로 요청을 처리&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;문법&#34;&gt;문법&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;MongoDB 데이터 삽입&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/</guid>
+      <description>관계형 데이터베이스(RDBMS)의 ACID 트랜잭션과 NoSQL(MongoDB, Redis)의 분산 확장성을 실무 비용 및 쿼리 최적화 관점에서 비교 분석합니다.</description>
     </item>
     
     <item>
-      <title>Firebase_react</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/firebase_react/</link>
+      <title>React 프로젝트에 Firebase SDK 연동 및 실시간 데이터 바인딩 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</link>
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/firebase_react/</guid>
-      <description>&lt;h1 id=&#34;firebase-with-react&#34;&gt;Firebase with React&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;react에서 firebase를 활용하는 방법&lt;/li&gt;
-&lt;li&gt;firebase SDK를 설치하거나 웹상에서 설치없이 사용하는 방법은 firebase 기본을 참조&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;인증-auth&#34;&gt;인증 (Auth)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;firebase 로 계정 생성 및 로그인&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;firebase API를 import하여 사용&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;lt;AppFirebase.js&amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import firebase from &amp;#34;firebase/compat/app&amp;#34;;
-import &amp;#34;firebase/compat/auth&amp;#34;;
-
-const firebaseConfig = {
-apiKey: process.env.REACT_APP_API_KEY,
-authDomain: process.env.REACT_APP_AUTHDOMAIN,
-projectId: process.env.REACT_APP_PROJECTID,
-storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-appId: process.env.REACT_APP_APPID
-};
-
-export default firebase.initializeApp(firebaseConfig);
-export const authService = firebase.auth();
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;AppFirebase.js 를 활용하여 business logic에 필요한 로그인 / 회원가입 기능을 구현
-&amp;lt;Auth.js&amp;gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import { authService } from &amp;#34;../components/AppFirebase&amp;#34;;
-
-const data = await authService.createUserWithEmailAndPassword(email, password)  // email, passwd로 계정 생성
-const data = await authService.signInWithEmailAndPassword(email, password)  // email, passwd로 로그인
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;createUserWithEmailAndPassword / signInWithEmailAndPassword 실행 이후 authService.currentUser를 참조하면 user 정보를 받아올 수 있다.&lt;/li&gt;
-&lt;li&gt;하지만, authService.currentUser 정보를 갱신하는데는 시간이 걸린다. firebase API에서는 observer를 등록하여 currentUser의 변경 시점을 확인할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;currentUser 변경시점에 특정함수 동작&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;user 정보가 갱신된 시점에 특정 동작을 원한다면, 아래와 같이 onAuthStateChanged 함수를 사용하면 된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;authService.onAuthStateChanged((user) =&amp;gt; { /* something to do */ }});
-&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
-&lt;li&gt;로그아웃&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;authService.signOut()&lt;/code&gt; 함수를 호출하여 로그아웃이 가능하다.&lt;/li&gt;
-&lt;li&gt;참고로 크롬 웹 디버깅 화면에서 &amp;lsquo;Application&amp;rsquo;탭에 들어가서 IndexedDB -&amp;gt; firebaseLocalDb 안의 내용을 🚫버튼으로 삭제해 주면 로그인 정보가 사라진다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;에러&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;authService&lt;/code&gt;의 함수(&lt;code&gt;createUserWithEmailAndPassword&lt;/code&gt;, &lt;code&gt;signInWithEmailAndPassword&lt;/code&gt;, &amp;hellip;) 사용시 에러가 발생할 수 있으므로, try, catch문으로 묶어서 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;try {
-  let data
-  data = await authService.createUserWithEmailAndPassword(email, password)
-} catch(error) {
-  console.log(error.code) // 에러의 원인이 코드 형태로 출력된다.
-  console.log(error.message) // 에러의 원인이 메시지 형태로 출력된다.
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;ref) 오류발생 원인&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</guid>
+      <description>React 웹 애플리케이션에 Firebase v9&#43; 모듈러 SDK를 설치하고 환경변수 설정, Firestore 실시간 구독(onSnapshot), 소셜 로그인 구현법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>Firebase</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/firebase/</link>
+      <title>Firebase Authentication 및 Firestore 실전 연동과 보안 규칙(Rules) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</link>
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/firebase/</guid>
-      <description>&lt;h1 id=&#34;firebase&#34;&gt;firebase&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;firebase는 실시간 db로 유명하며, google에 인수되고 폭이 넓어졌다.&lt;/li&gt;
-&lt;li&gt;Amazon의 Amplify가 firebase와 유사하다.&lt;/li&gt;
-&lt;li&gt;일정 사용량 까지는 무료로 사용 가능하며, 이후에는 요금이 부가된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;설치-및-사용&#34;&gt;설치 및 사용&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;온라인으로 콘솔에 접속하여 프로젝트를 생성 및 설정하고, firebase sdk를 로컬에 다운받아 코드에 적용한다.&lt;/li&gt;
-&lt;li&gt;firebase는 다양한 운영체제에 설치 가능하며, 각각의 설치 방법을 따르면 된다.
-(웹에서는 설치하지 않고 url로 참조해 사용할 수도 있다.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;버전이 올라감에 따라 참조방법, 인터페이스 등 사용법이 바뀌는 경우가 많으니 항상 docs를 잘 살펴보자&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</guid>
+      <description>구글 Firebase를 활용한 사용자 인증 플로우, Cloud Firestore NoSQL 데이터베이스 CRUD 연동, 보안 규칙 작성 및 실시간 리스너 활용법을 설명합니다.</description>
     </item>
     
     <item>
-      <title>Mysql</title>
-      <link>https://aswinblue.github.io/Blog/post/databases/mysql/</link>
+      <title>MySQL 관계형 데이터베이스 기초: DDL, DML 쿼리 작성 및 계정 권한 관리</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</link>
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/databases/mysql/</guid>
-      <description>&lt;h1 id=&#34;mysql&#34;&gt;mysql&lt;/h1&gt;
-&lt;h2 id=&#34;명령어&#34;&gt;명령어&lt;/h2&gt;
-&lt;p&gt;문법 참조 : &lt;a href=&#34;http://tcpschool.com/mysql/mysql_basic_syntax&#34;&gt;http://tcpschool.com/mysql/mysql_basic_syntax&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;명령어에서 대소문자는 상관없다.&lt;/li&gt;
-&lt;li&gt;mysql에서 주석은 &lt;code&gt;#&lt;/code&gt;을 사용한다.&lt;/li&gt;
-&lt;li&gt;한줄 주속은 &lt;code&gt;--&lt;/code&gt; 을 사용한다.
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--&lt;/code&gt; 뒤에 공백 없이 바로 문자나 문자가 아닌 문자가 올 경우, SQL 엔진에 따라 주석으로 인식되지 않을 수도 있어서, 일반적으로 &lt;code&gt;-- &lt;/code&gt;(띄어쓰기 포함) 또는 &lt;code&gt;-- -&lt;/code&gt; 같이 공백이나 의미 없는 문자를 추가해서 주석임을 명확히 해준다. 이건 DBMS에 따라 차이가 있지만, 일부 엔진(MySQL 등)은 &lt;code&gt;--&lt;/code&gt; 뒤에 공백이 있어야 주석으로 인식한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;실행-및-로그인&#34;&gt;실행 및 로그인&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;mysql&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;mysql 실행, 기본으로 설정된 user로 로그인됨&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;code&gt;mysql -u 아이디 -p&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-u&lt;/code&gt;: 특정 아이디로 로그인&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;: 로그인시 비밀번호 입력하도록&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;데이터베이스-관리&#34;&gt;데이터베이스 관리&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;DB 생성
-&lt;ul&gt;
-&lt;li&gt;UTF8 로 문자열 저장하기
-&lt;code&gt;CREATE DATABASE 데이터베이스_이름 default CHARACTER SET UTF8&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DB 목록확인
-&lt;code&gt;show databases&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;DB 선택
-&lt;code&gt;use DB_NAME&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;종료
-&lt;code&gt;EXIT&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;로그인 &amp;amp; 데이터베이스 선택
-&lt;code&gt;$ mysql -p DB_NAME -u USER_NAME&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자 이름과 USER_NAME으로 DB_NAME 데이터베이스 실행&lt;/li&gt;
-&lt;li&gt;USER_NAME이 비어있으면 현재 로그인한 계정과 동일한 이름으로 로그인 시도&lt;/li&gt;
-&lt;li&gt;-u DB_NAME 옵션은 로그인 후 &lt;code&gt;$use DB_NAME&lt;/code&gt; 과 같은 효과&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;테이블-생성-및-관리-ddl&#34;&gt;테이블 생성 및 관리 (DDL)&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;TABLE_NAME 테이블의 스키마 확인
-&lt;code&gt;desc TABLE_NAME&lt;/code&gt;&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</guid>
+      <description>데이터베이스/테이블 생성, SELECT/INSERT/UPDATE/DELETE 핵심 질의문, 외래키 제약조건, 사용자 계정 생성과 GRANT 권한 부여 방법을 정리합니다.</description>
     </item>
     
   </channel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Realtime-Database on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/realtime-database/</link>
+    <description>Recent content in Realtime-Database on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Feb 2022 19:32:34 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/realtime-database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React 프로젝트에 Firebase SDK 연동 및 실시간 데이터 바인딩 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</link>
+      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</guid>
+      <description>React 웹 애플리케이션에 Firebase v9&#43; 모듈러 SDK를 설치하고 환경변수 설정, Firestore 실시간 구독(onSnapshot), 소셜 로그인 구현법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

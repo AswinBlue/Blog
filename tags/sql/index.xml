@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sql on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/sql/</link>
+    <description>Recent content in Sql on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL 관계형 데이터베이스 기초: DDL, DML 쿼리 작성 및 계정 권한 관리</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</guid>
+      <description>데이터베이스/테이블 생성, SELECT/INSERT/UPDATE/DELETE 핵심 질의문, 외래키 제약조건, 사용자 계정 생성과 GRANT 권한 부여 방법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

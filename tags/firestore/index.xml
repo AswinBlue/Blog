@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Firestore on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/firestore/</link>
+    <description>Recent content in Firestore on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Jan 2022 21:02:46 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/firestore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firebase Authentication 및 Firestore 실전 연동과 보안 규칙(Rules) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</link>
+      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</guid>
+      <description>구글 Firebase를 활용한 사용자 인증 플로우, Cloud Firestore NoSQL 데이터베이스 CRUD 연동, 보안 규칙 작성 및 실시간 리스너 활용법을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

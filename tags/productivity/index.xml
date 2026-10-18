@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Productivity on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/productivity/</link>
+    <description>Recent content in Productivity on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Apr 2022 09:07:48 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VS Code 생산성 극대화를 위한 단축키 및 필수 확장 플러그인 추천</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/vscode-productivity-shortcuts-and-extensions/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/vscode-productivity-shortcuts-and-extensions/</guid>
+      <description>Visual Studio Code의 멀티 커서 편집, 터미널 분할 단축키, Git Lens, Prettier, ESLint 등 개발 효율을 2배 이상 높여주는 환경 설정 팁입니다.</description>
+    </item>
+    
+    <item>
+      <title>Windows 환경 개발 생산성 향상을 위한 고급 설정 및 쉘 명령어 팁</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/</link>
+      <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/</guid>
+      <description>Windows Terminal, PowerShell 유용한 단축키, PATH 환경변수 빠른 편집 및 개발 친화적 윈도우 OS 튜닝 팁을 공유합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

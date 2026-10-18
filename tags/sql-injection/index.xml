@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sql-Injection on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/sql-injection/</link>
+    <description>Recent content in Sql-Injection on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 20:54:59 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/sql-injection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 취약점 분석과 SQL Injection 및 XSS 공격 메커니즘 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</link>
+      <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</guid>
+      <description>Error-based, Blind SQL 인젝션 공격 기법과 Stored/Reflected XSS 취약점 분석, 그리고 Prepared Statements를 통한 방어 대책을 체계적으로 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,289 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 | AswinBlue</title><meta name=keywords content="spring-boot,java,gradle,rest-api,backend"><meta name=description content="스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다."><meta name=author content="AswinBlue"><link rel=canonical href=https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/><meta name=google-site-verification content="XYZabc"><link crossorigin=anonymous href=https://aswinblue.github.io/Blog/assets/css/stylesheet.min.68a75ca1a367aadbb7d01ac5fec89ce7752bcafa78b1e74c78f45857bd5f930f.css integrity="sha256-aKdcoaNnqtu30BrF/sic53Uryvp4sedMePRYV71fkw8=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=https://aswinblue.github.io/Blog/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://aswinblue.github.io/Blog/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://aswinblue.github.io/Blog/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://aswinblue.github.io/Blog/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://aswinblue.github.io/Blog/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://aswinblue.github.io/Blog/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://aswinblue.github.io/Blog/ accesskey=h title="AswinBlue (Alt + H)">AswinBlue</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li>|</li></ul></div></div><ul id=menu><li><a href=https://aswinblue.github.io/Blog/archives title=Archive><span>Archive</span></a></li><li><a href=https://aswinblue.github.io/Blog/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://aswinblue.github.io/Blog/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://aswinblue.github.io/Blog/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><div class=grid-container><div style=float:left;margin:30px class=auto-hide-div><ul><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webhacking/>WebHacking</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/>웹 취약점 분석과 SQL Injection 및 XSS 공격 메커니즘 총정리</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/>웹 쿠키(Cookie)와 세션(Session) 동작 원리 및 보안 플래그(HttpOnly, Secure) 설정법</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/>웹 애플리케이션 아키텍처와 브라우저 렌더링 과정 및 네트워크 통신 기초</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/>HTTP 프로토콜 핵심 구조: 요청·응답 메시지, 메서드 및 상태 코드 총정리</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/systemhacking/>System Hacking</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/>리눅스 시스템 해킹과 메모리 커럽션(Buffer Overflow) 공격 기법 총정리</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/>Pwntools 라이브러리를 활용한 시스템 취약점 익스플로잇 자동화 스크립트 작성법</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/assembly/>Assembly</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-registers-instructions-stack/>x86-64 어셈블리어 기초 문법: 범용 레지스터, 명령어 세트 및 스택 분석</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/projects/>🔷Projects</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/>React Native와 Firebase 기반 사진 일기 앱 '하루기록' 개발기</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/>Flutter 기반 텍스트 단어 슬라이더 'FlickThrough' 개발 및 배포기</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/windowapp/>WindowApp</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/>Windows PE 파일 구조 및 Win32 API 기반 윈도우 시스템 프로그래밍 기초</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/>Python Kivy 프레임워크를 활용한 크로스 플랫폼 GUI 앱 개발 기초</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#1284ff><a href=https://aswinblue.github.io/Blog/post/webserver/>WebServer</a><ul><li style=list-style-position:inside;text-indent:30px;color:#1284ff;content:\25ba\00a0><a href=https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 AOP</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/>Node.js 비동기 이벤트 루프 아키텍처와 Express 웹 서버 구축 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/>WebApplication</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/>Spring Boot 환경에서 Thymeleaf 템플릿 엔진을 활용한 서버 사이드 렌더링(SSR)</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/>Tailwind CSS 유틸리티 클래스 기반 고속 UI 컴포넌트 스타일링 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/angular-basics-project-structure-template-syntax/>Angular 기본 개념 및 프로젝트 아키텍처와 템플릿 바인딩 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/>React 기초 입문: 컴포넌트 생명주기, State/Props 및 Hooks 핵심 완벽 정리</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/>Python CGI 스크립트를 활용한 레거시 웹 서버 데이터 처리와 보안 고려사항</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/modern-javascript-es6-async-await-guide/>모던 자바스크립트(ES6+) 핵심 문법과 비동기 프로그래밍(Promise / async-await)</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/>CSS3 핵심 레이아웃: Flexbox, Grid 및 미디어 쿼리 반응형 웹 디자인 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/>HTML5 웹 표준과 시맨틱 태그(Semantic Tag) 기반 검색 최적화(SEO) 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/python/>Python</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/python/python-pytest-unit-testing-and-tdd-guide/>Python pytest 프레임워크를 활용한 단위 테스트 및 TDD 실전 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/python/python-fast-io-buffer-flush-optimization/>Python 표준 입출력 속도 향상과 버퍼 플러시(Flush) 최적화 기법</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/mobileapp/>MobileApp</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/mobileapp/flutter-dart-mobile-app-widgets-lifecycle/>Flutter 및 Dart 기반 크로스 플랫폼 모바일 앱 개발 환경 구축과 위젯 라이프사이클</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/machinelearning/>MachineLearning</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-architecture-and-model-training/>TensorFlow 2.x 딥러닝 핵심 아키텍처 및 신경망 모델 학습 실전 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/java/>Java</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/java/jython-java-python-interoperability/>Jython을 활용한 Java 런타임 위 Python 코드 상호 운용 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/>Linux</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/>POSIX pthread를 활용한 멀티스레드 프로그래밍 및 동기화(Mutex) 기법</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/>리눅스 프로세스 생명주기(fork/exec) 및 시그널(Signal) 제어 기법</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/>리눅스 시스템 프로그래밍: POSIX 저수준 파일 I/O 및 디스크립터 제어</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/>리눅스 Bash 쉘 스크립트 프로그래밍 기초 문법 및 업무 자동화 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/>리눅스 기본 개념과 파일 시스템 계층 구조(FHS) 및 권한 관리 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/virtualbox-linux-vm-install-and-guest-additions/>VirtualBox 리눅스 가상머신 설치 및 게스트 확장(Guest Additions) 설정 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/hugo/>Hugo</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/>Hugo(PaperMod) 블로그 로컬 환경 구축부터 애드센스 연동 및 GitHub Actions 자동 배포까지</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/>Hugo 마크다운 포스트 서식 및 Shortcode 문법 샘플 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/golang/>GoLang</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/>Go 언어 핵심 기초 문법과 고루틴(Goroutine) 동시성 프로그래밍</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/git/>Git</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/git/github-actions-ci-cd-pipeline-automation-guide/>GitHub Actions CI/CD 파이프라인 구축 및 자동화 워크플로우 실전 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/git/git-submodule-management-and-troubleshooting/>Git 서브모듈(Submodule) 추가부터 재귀 클론 및 동기화 충돌 해결 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/git/git-already-exists-in-index-remove-cache/>Git 'already exists in the index' 오류 원인과 캐시(Cache) 안전하게 삭제하기</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/developtips/>DevelopTips</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/developtips/vscode-productivity-shortcuts-and-extensions/>VS Code 생산성 극대화를 위한 단축키 및 필수 확장 플러그인 추천</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/>Windows 환경 개발 생산성 향상을 위한 고급 설정 및 쉘 명령어 팁</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/>Python BeautifulSoup 및 Selenium 웹 스크래핑 크롤러 구축 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/databases/>DataBases</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/>RDBMS vs NoSQL 차이점 비교: 대규모 서비스를 위한 데이터베이스 아키텍처 선택 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/>React 프로젝트에 Firebase SDK 연동 및 실시간 데이터 바인딩 실전 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/>Firebase Authentication 및 Firestore 실전 연동과 보안 규칙(Rules) 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/>MySQL 관계형 데이터베이스 기초: DDL, DML 쿼리 작성 및 계정 권한 관리</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/crypto/>Crypto</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/crypto/blockchain-cryptocurrency-architecture-and-consensus/>블록체인 분산 원장 원리와 비트코인·이더리움 암호화폐 아키텍처 이해하기</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/computerscience/>ComputerScience</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/computerscience/computer-science-architecture-and-os-fundamentals/>컴퓨터 구조 및 운영체제 핵심 CS 기초 개념 총정리</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/cloud/>Cloud</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/>AWS 핵심 클라우드 인프라 서비스(EC2, S3, RDS, IAM) 아키텍처 및 실전 구축 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/ci_cd/>CI_CD</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/ci_cd/docker-architecture-dockerfile-production-guide/>Docker 핵심 아키텍처와 Dockerfile 최적화 작성부터 프로덕션 배포까지</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/algorithm/>Algorithm</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/algorithm/algorithms-data-structures-and-big-o-complexity/>핵심 알고리즘 및 시간 복잡도(Big-O) 분석 총정리 가이드</a></li></ul></li><li style=list-style-position:inside;text-indent:20px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/>C++</a><ul><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/googletest-cpp-unit-testing-framework/>GoogleTest 및 C++ 단위 테스트(Unit Test) 프레임워크 구축 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/gnu-make-makefile-build-automation/>GNU Make 및 Makefile 작성법: C/C++ 빌드 자동화 기초 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/gcc-compilation-process-and-options/>GCC 컴파일 과정과 핵심 옵션 및 정적·동적 라이브러리 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/cpp-stl-containers-and-algorithms/>C++ STL 핵심 컨테이너와 알고리즘 라이브러리 활용 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/gdb-debugger-basics-and-commands/>GDB 디버거 기본 사용법과 핵심 명령어 총정리</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/cpp-syntax-and-oop-fundamentals/>C++ 핵심 문법과 객체 지향 프로그래밍(OOP) 기초 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/cmake-basics-and-cross-platform-build/>CMake 기본 문법과 크로스 플랫폼 빌드 스크립트 작성 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/cpp-nlohmann-json-parsing-and-serialization/>nlohmann/json C++ 라이브러리를 활용한 JSON 파싱 및 직렬화 가이드</a></li><li style=list-style-position:inside;text-indent:30px;color:#fff><a href=https://aswinblue.github.io/Blog/post/c++/cpp-spdlog-high-performance-logging/>spdlog 라이브러리를 활용한 고성능 C++ 비동기 로깅 환경 구축 가이드</a></li></ul></li><ul></ul><ul></ul></ul></div><main class=main style=grid-row:1;grid-column:2;width:100%><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://aswinblue.github.io/Blog/>Home</a>&nbsp;»&nbsp;<a href=https://aswinblue.github.io/Blog/post/webserver/>WebServer</a></div><h1 class=post-title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</h1><div class=post-description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</div><div class=post-meta>&lt;span title='2022-05-30 19:20:23 +0900 KST'>May 30, 2022&lt;/span>&amp;nbsp;·&amp;nbsp;9 min&amp;nbsp;·&amp;nbsp;AswinBlue&nbsp;|&nbsp;<a href=https://github.com/AswinBlue/HugoBlog/tree/master/content/post/WebServer/spring_boot.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#spring-boot aria-label="Spring Boot">Spring Boot</a><ul><li><a href=#%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd aria-label=개발환경>개발환경</a><ul><li><a href=#%ea%b8%b0%eb%b3%b8-%ec%84%a4%ec%a0%95 aria-label="기본 설정">기본 설정</a></li></ul></li><li><a href=#%ec%9b%b9-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b0%9c%eb%b0%9c aria-label="웹 서비스 개발">웹 서비스 개발</a><ul><li><a href=#mvc-%eb%aa%a8%eb%8d%b8 aria-label="MVC 모델">MVC 모델</a></li><li><a href=#view-template aria-label="View template">View template</a></li><li><a href=#controller aria-label=Controller>Controller</a></li><li><a href=#jpa aria-label=JPA>JPA</a></li><li><a href=#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ea%b5%90%ed%99%98 aria-label="데이터 교환">데이터 교환</a></li><li><a href=#bean aria-label=Bean>Bean</a></li></ul></li><li><a href=#annotation-%eb%b0%8f-%ea%b8%b0%eb%8a%a5 aria-label="Annotation 및 기능">Annotation 및 기능</a><ul><li><a href=#value aria-label=Value>Value</a></li><li><a href=#scheduled aria-label=Scheduled>Scheduled</a></li><li><a href=#slf4j aria-label=SLF4J>SLF4J</a></li></ul></li><li><a href=#%ec%b0%b8%ec%a1%b0%ed%95%9c-%ec%82%ac%ec%9d%b4%ed%8a%b8 aria-label="참조한 사이트">참조한 사이트</a></li></ul></li></ul></div></details></div><div class=post-content><h1 id=spring-boot>Spring Boot<a hidden class=anchor aria-hidden=true href=#spring-boot>#</a></h1><ul><li>Spring boot는 서버 생성을 위한 도구로, spring 프레임워크에 편의성을 향상시킨 프레임워크이다.</li><li>Java, Kitlin, Groovy 등의 언어로 구현이 가능하다.</li></ul><h2 id=개발환경>개발환경<a hidden class=anchor aria-hidden=true href=#개발환경>#</a></h2><ol><li>java 기반으로 동작하기에 jdk 설치가 필요하다.<ul><li>(22년 기준) 11버전 이상을 다운받는것을 추천한다.</li></ul></li><li>IDE<ul><li>vs code를 사용한다면 확장패키지로 &lsquo;Java Extension Pack&rsquo; 과 &lsquo;Spring Boot Extension Pack&rsquo; 을 설치한다.</li><li>java 개발을 위한 eclips나 intelliJ를 사용해도 된다.</li></ul></li><li>spring 프로젝트 생성<ul><li><code>start.spring.io</code> 페이지에 들어가면 프로젝트를 생성할 수 있는 UI가 구성되어 있다. 원하는대로 설정 후 다운로드를 받아서 사용하면 된다.</li></ul></li><li>gradle 설치<ul><li><code>https://gradle.org/releases/</code> 주소에서 gradle 파일을 다운받는다.</li><li>이후 path 설정을 마친 후, 프로젝트 root directory에서 <code>gradle wrapper</code> 명령을 수행해 gradlew파일을 생성한다.</li></ul></li></ol><h3 id=기본-설정>기본 설정<a hidden class=anchor aria-hidden=true href=#기본-설정>#</a></h3><ol><li>포트 설정<ul><li><code>application.properties</code> (혹은 yml)파일을 열고, <code>server.port = 8080</code> 와 같이 기입하면 동작 포트를 8080으로 설정할 수 있다.</li></ul></li><li>devtools 설정</li></ol><ul><li><p>정적 파일들을 갱신했을 때, 서버 재실행 없이 explorer만 reload 해 주면 변경점이 반영될 수 있도록 한다.</p></li><li><p>이 외에 DB, 포트, mvc, thymleaf 등 각종 설정이 포함된 yml 파일 예시는 다음과 같다.</p><pre><code>```
+# web 서버 동작 설정
+server:
+  # 포트 설정
+  port: 8080
+# spring boot 설정
+spring:
+   config:
+     activate:
+       on-profile: deploy
+  # h2 database 설정
+  h2:
+    console:
+      enabled: true
+  # jpa 설정
+  jpa:
+    database: h2
+    generate-ddl: off
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MySQL;
+    username: SA
+    password:
+    initialization-mode: always
+    schema: classpath:schema-h2.sql
+    data: classpath:data-h2.sql
+  # spring의 MVC 모델 설정
+  mvc:
+    # view로 사용할 static resources의 위치 및 파일 확장자 설정
+    # thymeleaf가 view역할을 하기 때문에 본 프로젝트에서는 mvc 모듈 내용 활용 안됨
+    view:
+      prefix: /myApp/
+      suffix: .jsp
+
+  # thymeleaf 설정, MVC에서 view를 담당
+  thymeleaef:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  # web 서버 동작시 설정
+  web:
+    resources:
+      # resource 위치, html파일에서 참조시 연결될 root 디렉터리
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0
+
+  # devtools 설정, apply static resources instantly
+  devtools:
+    livereload:
+      enabled: true
+
+# SLF4J 설정, 로그 시스템
+logging:
+  file:
+    name: ${user.dir}/log/test.log  # Log file path
+    max-history: 7 # delete period
+    max-size: 10MB  # max size of single log file
+  level:  # set log level to each package
+    com.aswinblue.RankServer : debug
+  pattern:
+    console: &quot;%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&quot;
+    file: &quot;%d %p %c{1.} [%t] %m%n&quot;
+```
+</code></pre></li></ul><ol><li><p>빌드 설정</p><ul><li><p>gradle 프로젝트는 <code>./gradlew build</code> 명령으로 프로젝트를 빌드한다.</p></li><li><p>이때 <code>build.gralde</code> 파일 설정으로 하위 프로젝트의 빌드까지 함께 정의할 수 있다.</p></li><li><p>gradle 파일이 수정되면 <code>./gradlew build</code> 명령을 새로 돌려서 업데이트 해 준다.</p></li><li><p>아래는 React 프로젝트의 빌드 세팅이다.</p><pre tabindex=0><code>/*********************
+ * 기본 설정 및 dependency
+ *********************/
+plugins {
+	id &#39;org.springframework.boot&#39; version &#39;2.7.1&#39;
+	id &#39;io.spring.dependency-management&#39; version &#39;1.0.11.RELEASE&#39;
+	id &#39;java&#39;
+}
+
+group = &#39;com.aswinblue&#39;
+version = &#39;0.0.1-SNAPSHOT&#39;
+sourceCompatibility = &#39;18&#39;
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation &#39;org.springframework.boot:spring-boot-starter-data-jpa&#39;
+	implementation &#39;org.springframework.boot:spring-boot-starter-thymeleaf&#39;
+	implementation &#39;org.springframework.boot:spring-boot-starter-web&#39;
+  implementation &#39;com.h2database:h2&#39;
+	testImplementation &#39;org.springframework.boot:spring-boot-starter-test&#39;
+  implementation &#39;org.springframework.boot:spring-boot-devtools&#39; //devtools
+}
+
+tasks.named(&#39;test&#39;) {
+	useJUnitPlatform()
+}
+
+/*********************
+ * React 설정
+ *********************/
+def reactDir = &#34;$projectDir/src/main/webapp&#34;; // react 프로젝트 경로 설정
+sourceSets{
+  main{
+      resources{
+          srcDirs = [&#34;$projectDir/src/main/resources&#34;]
+      }
+  }
+}
+
+// 최초로 수행할 task 지정
+processResources{
+  dependsOn &#34;copyReactBuildFiles&#34;
+}
+
+// $reactDir 위치에서 `npm audit fix` 명령 실행
+task installReact(type:Exec){
+  workingDir &#34;$reactDir&#34;
+  inputs.dir &#34;$reactDir&#34;
+  group = BasePlugin.BUILD_GROUP
+
+  if(System.getProperty(&#39;os.name&#39;).toLowerCase(Locale.ROOT).contains(&#39;windows&#39;)){
+      commandLine &#34;npm.cmd&#34;, &#34;audit&#34;, &#34;fix&#34;
+      commandLine &#39;npm.cmd&#39;, &#39;install&#39;
+  }else{
+      commandLine &#34;npm&#34;, &#34;audit&#34;, &#34;fix&#34;
+      commandLine &#39;npm&#39;, &#39;install&#39;
+  }
+}
+
+// installReact task를 호출
+// $reactDir 위치에서 `npm run-script build` 실행
+// react 프로젝트의 `package.json` 파일에 적힌 build 스크립트가 실행됨.
+task buildReact(type:Exec){
+  dependsOn &#34;installReact&#34;
+  workingDir &#34;$reactDir&#34;
+  inputs.dir &#34;$reactDir&#34;
+  group = BasePlugin.BUILD_GROUP
+
+  if(System.getProperty(&#39;os.name&#39;).toLowerCase(Locale.ROOT).contains(&#39;windows&#39;)){
+      commandLine &#34;npm.cmd&#34;, &#34;run-script&#34;, &#34;build&#34;
+  }else{
+      commandLine &#34;npm&#34;, &#34;run-script&#34;, &#34;build&#34;
+  }
+}
+
+// buildReact task를 호출
+// 앞서 지정한 $reactDir 경로의 /build 위치에서 생성된 데이터를 $projectDir/src/main/resources/static 로 복사
+task copyReactBuildFiles(type:Copy) {
+  dependsOn &#34;buildReact&#34;
+  from &#34;$reactDir/build&#34;
+  into &#34;$projectDir/src/main/resources/static&#34;
+}
+</code></pre></li><li><p>각종 설정을 해주는 batch 파일 예시이다.</p><pre tabindex=0><code>gradle wrapper
+gradlew build
+@REM package.json에 script 작성 필요
+npm run build:postcss
+</code></pre></li></ul></li><li><p>폴더 설정</p></li></ol><ul><li><code>resources</code> : html, css 등 화면 구성을 위한 파일들의 root 디렉터리<ul><li><code>resources/static</code> : html파일에서 href로 참조하면 아래 디렉터리를 root로 경로 설정 가능</li><li><code>resources/template</code> : mustache 파일에서 root 디렉터리로 사용</li></ul></li></ul><h2 id=웹-서비스-개발>웹 서비스 개발<a hidden class=anchor aria-hidden=true href=#웹-서비스-개발>#</a></h2><ol><li>tomcat<ul><li>spring boot에서 web 패키지를 설치하면 tomcat을 사용하여 web server를 동작시킨다.</li><li>localhost:8080으로 default 주소가 처리되어 있고, <code>application.yml</code> 파일에서 아래와 같이 수정 가능하다.<pre tabindex=0><code>server:
+  port : 8081
+</code></pre></li></ul></li></ol><h3 id=mvc-모델>MVC 모델<a hidden class=anchor aria-hidden=true href=#mvc-모델>#</a></h3><ul><li>model, view, control 을 나누어 개발하는 형태를 MVC 모델이라고 한다.</li></ul><h3 id=view-template>View template<a hidden class=anchor aria-hidden=true href=#view-template>#</a></h3><ul><li>view template 은 controller와 model을 합친 개념으로, 화면을 구성하는 역할을 한다.</li><li>mustache 패키지를 설치하여 view template를 만들 수 있다.</li></ul><ol><li><p>jsp 활용</p><ul><li><p>Spring boot에는 jsp가 잘 어울리지 않는다고 한다. 대신 Thymleaf, mustache 등을 사용하는걸 권장한다?</p></li><li><p>jsp를 사용하여 model을 구성할 수도 있다.</p></li><li><p>jsp는 사용하기 전 <code>application.properties</code>(혹은 yml) 파일의 수정이 필요하다. 아래 내용을 추가한다.</p><pre tabindex=0><code>spring.mvc.view.prefix=/myApp/
+spring.mvc.view.suffix=.jsp
+</code></pre></li><li><p>위 내용을 적용하면 <code>src/main/webapp/myApp/</code> 경로 내부에서 jsp파일을 찾게 된다. &lsquo;webapp&rsquo; 폴더는 default로 필요하다.</p></li></ul></li><li><p>mustache 활용</p><ul><li><p>앞서 말헀듯 mustache는 view template용 패키지로 controller와 model을 관장한다.</p></li><li><p>controller는 기본 패키지 경로 하위에 배치한다.</p></li><li><p>controller는 다음과 같이 구성한다.</p><pre tabindex=0><code>package com.example.firstproject.controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
+
+@Controller  // controller를 정의하는 annotation
+public class FirstController {
+    @GetMapping(&#34;/index&#34;)  // 연결될 url을 지정하는 annotation, /index 로 연결하면
+    public String mainPage(Model model)  // model 을 통해 가변 인자 control
+    {
+        model.addAttribute(&#34;title&#34;, &#34;hello world&#34;); // title 이름으로 hello world 라는 문자열을 설정
+        return &#34;mainPage&#34;;  // mainPage.mustache 파일과 연동
+    }
+}
+</code></pre></li><li><p>model(.mustache .html 등)은 <code>resources/templates</code> 파일 경로 하위에 배치하고, 확장자를 <code>.mustache</code>로 지정한다.</p></li><li><p>html 파일은 사실 view에 가깝지만, mustache 파일은 view에 변수를 적용하여 model에 해당한다.</p></li><li><p>model은 다음과 같이 구성한다.</p><pre tabindex=0><code>&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;  &lt;!-- controller에서 정의한 title이 {{title}}에 치환됨 --&gt;
+&lt;/body&gt;
+</code></pre></li></ul></li><li><p>Layout</p><ul><li>model을 만들 때는 layout에 따라 화면에 보여지는 형태를 구성할 수 있다.</li><li>layout을 template화 하여 사용 가능하다. 재사용 되는 부분을 모듈화 하여 파일로 분리하고, 이를 다른 파일에서 불러올 수 있다.</li><li><code>{{>FILE_NAME}}</code> 형태로 다른 파일을 호출해 올 수 있다.</li></ul></li></ol><h3 id=controller>Controller<a hidden class=anchor aria-hidden=true href=#controller>#</a></h3><ul><li>Controller는 request를 받아 어떤 화면을 보여줄지 결정하는 routing 로직을 담당하게 된다.</li><li>controller class는 <code>@Controller</code> annotation을 붙여서 선언하며 routing 함수로는 <code>@GetMapping</code>, <code>@RequestMapping</code> annotation을 사용하여 정의한다.</li></ul><ol><li>에러 화면<ul><li>에러 화면도 controller에 의해 유도되며 BasicErrorController가 이를 담당한다.</li><li><code>application.yml</code> 파일에서 따로 설정을 하지 않았다면 <code>server.error.path=/error</code> 가 기본이다.</li></ul></li></ol><h3 id=jpa>JPA<a hidden class=anchor aria-hidden=true href=#jpa>#</a></h3><ul><li>spring은 mysql, postgress, M2 등 여러 DB를 적용할 수 있다.</li><li>controller는 Java로 구현되고, DB는 sql로 동작하기 때문에 java로 sql을 조작하기 위한 JPA라는 라이브러리가 필요하다.</li><li><code>Entity</code> : java 객체를 DB가 이해할 수 있게 재구성한 데이터<ul><li><code>@Entity</code> : 해당 class를 entity 로 선언</li><li><code>@Table(name="")</code> : 특정 table과 객체를 연동. 기본적으로는 calss 이름에 해당하는 DB의 table과 매핑 된다.</li><li><code>@Column</code> : 지정한 변수를 DB의 컬럼으로 선언</li></ul></li><li><code>Repository</code> : entity를 DB에 저장하는 역할을 수행하는 객체<ul><li><p><code>save(ENTITY)</code> : 저장, DB의 insert / update 에 해당</p></li><li><p><code>delete(ENTITY)</code> : 특정 Entity 삭제, DB의 delete에 해당</p></li><li><p>상세 내용은 링크를 참조한다.</p><details><summary>JPA Usage Links</summary><ul><li><a href=https://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#jpa.query-methods.query-creation>JPA Repository Query function</a></li><li><a href=https://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#repositories.query-streaming>JPA Repository Query annotation</a></li><li><a href=https://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#repositories.limit-query-result>JPA Repository get Top x result</a></li><li><a href=https://www.baeldung.com/spring-data-partial-update#1-mapping-strategy>JPA update data from DTO</a></li></ul></details></li></ul></li></ul><ol><li><p>DTO 정의</p><ul><li>서버의 Controller에서 이를 처리 가능하며, 사용자 입력을 Java Class로 대응시킨 형태를 DTO라 칭한다.</li><li>DTO를 다음과 같이 정의하였다고 하자</li></ul><pre tabindex=0><code>class DtoSample {
+  private String name;
+  public DtoSample(String name) {
+      this.name = name;
+  }
+}
+</code></pre></li><li><p>Entity 정의</p><ul><li>DTO에 해당하는 entity를 정의해야하며, 그 형태는 다음과 같다.<ul><li>entity는 <code>@Entity</code> annotation을 붙여야 한다.</li><li>Entity는 primary key를 가져야 하며, 이는 <code>@Id</code> annotation으로 지정한다.</li><li>DB의 column에 해당하는 값들은 <code>@Column</code> annotation을 붙여준다.</li><li><code>@GeneratedValue</code>는 자동으로 생성된 값이 들어가도록 한다.</li><li>&lsquo;실제 DB table&rsquo; ⊃ &lsquo;DTO에 정의된 column들&rsquo; 이 성립해야 한다.</li></ul></li></ul><pre tabindex=0><code>@Entity
+public class sampleEntity {
+    @Id // 대표값
+    @GeneratedValue // 자동생성
+    private Long id;
+    @Column
+    private String name;
+
+    public sampleEntity(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+}
+</code></pre></li><li><p>Repository 구현</p><ul><li>Entity를 DB에 저장하기 위한 Repository도 생성한다.</li><li>repository는 entity로 DB에 접근하는 방법을 정의하기 위한 객체이다.</li><li>spring에서 기본으로 제공하는 형태를 상속받아 사용도 가능하다.</li></ul><pre tabindex=0><code>// CrudRepository&lt;관리대상, 대표값의 type&gt;
+public interface searchNameRepository extends CrudRepository&lt;sampleEntity, Long&gt; {
+    // CrudRepository 의 기본값을 사용
+}
+</code></pre><ul><li><p>직접 구상한 쿼리를 사용하고 싶다면 camelcase로 구성된 함수 이름으로 쿼리를 추가할 수 있다.</p><details><summary>Tips</summary><pre><code>[no property ~ found for type ~ 오류 해결법](https://stackoverflow.com/questions/19733464/order-by-date-asc-with-spring-data)
+</code></pre></details><pre tabindex=0><code>public interface searchNameRepository extends CrudRepository&lt;SampleEntity, Long&gt; {
+    // select * from SampleEntity where name = ?1     
+    @Query(&#34;Select s From SampleEntity&#34;)
+    List&lt;sampleEntity&gt; findByName(String name);
+
+    // select * from SampleEntity where name = ?1 and id = 1
+    @Query(&#34;Select s From SampleEntity where s.id = 1&#34;)
+    List&lt;sampleEntity&gt; findByName(String name);
+ }
+</code></pre></li></ul></li><li><p>기타 추가작업</p><ul><li>이전에 만들었던 controller 에 내용을 추가한다. DTO로 받은 내용을 Entity로 변환시켜 repository를 통해 처리한다.</li></ul><pre tabindex=0><code>@Autowired // String boot가 알아서 new 해서 사용하는 annotation
+searchNameRepository snr;
+
+@PostMapping(&#34;/data/part1&#34;)
+public String handleForm(DtoSample dto) {
+  sampleEntity name = dto.toEntity(); // toEntity 구현 필요
+  name = snr.save(name); // &#39;save&#39;는 저장 및 저장된 데이터를 반환함
+  return &#34;returnView&#34;;
+}
+</code></pre><ul><li>contorller에서 받은 DTO 데이터를 entity로 변환시킬 때 사용한 <code>toEntity()</code> 함수를 구현해야 한다.</li><li>DTO 파일을 추가로 수정한다.</li></ul><pre tabindex=0><code>class DtoSample {
+  private String name;
+  public DtoSample(String name) {
+      this.name = name;
+  }
+  public sampleEntity toEntity() {
+      return new sampleEntity(null, this.name); // id에 null을 넣는다. @GeneratedValue에 의해 자동으로 생성된다.
+  }
+}
+</code></pre></li></ol><h3 id=데이터-교환>데이터 교환<a hidden class=anchor aria-hidden=true href=#데이터-교환>#</a></h3><ul><li>view에서 사용자 입력을 받아 처리하는 과정을 다룬다.</li><li>앞서 JPA를 통해 구현한 DB 시스템에 데이터를 넣을 수 있다.</li></ul><ol><li>view 구현<ul><li>view쪽에서는 <code>form</code> 태그를 사용하여 controller에 데이터를 전송할 수 있다.</li><li><code>form</code> 태그의 인자로 <code>action</code>, <code>method</code>를 적용 가능하다.<ul><li><code>action</code> : 데이터를 보낼 url을 설정. ex) action="/data/part1"</li><li><code>method</code> : 전송 방법을 설정한다. post 혹은 get 적용 가능</li></ul></li><li><code>form</code> 태그 안의 <code>input</code>태그를 두고, 인자로 <code>name</code>을 설정한다.<pre tabindex=0><code>&lt;form action=&#34;/data/userRank&#34; method=&#34;post&#34;&gt;
+  &lt;label&gt;type your character name&lt;/label&gt;
+  &lt;input type=&#34;text&#34; name=&#34;userName&#34;&gt;
+  &lt;br/&gt;
+  &lt;button&gt;see table&lt;/button&gt;
+  &lt;br/&gt;
+&lt;/form&gt;
+</code></pre></li></ul></li><li>controller 구현<ul><li>DTO로 사용할 class를 선언한다. (ex: DtoSample)</li><li>controller 를 구현한 java 파일에서 <code>@PostMapping</code> annotation을 달고, 인자로 위에서 선언한 DTO를 받는다.</li><li>return 값으로 지정한 이름의 view로 redirect 한다. (ex: returnView)<pre tabindex=0><code>@PostMapping(&#34;/data/part1&#34;)
+public String handleForm(DtoSample dto) {
+  return &#34;returnView&#34;;
+}
+</code></pre></li><li>parameter를 꼭 DTO 형태로 받지 않을 수도 있다.<ul><li><code>@RequestBody</code>, <code>@RequestParam</code> annotation을 이용하여 데이터를 받을 수 있다.<pre tabindex=0><code>  public String handleUserNameForm(@RequestBody String userName, Model model) {}
+  // userName = &#34;userName=TESTNAME&#34; 과 같이 데이터가 받아진다.
+</code></pre><pre tabindex=0><code>  public String handleUserNameForm(@RequestParam String userName, Model model) {}
+  // userName = &#34;TESTNAME&#34; 과 같이 데이터를 받을 수 있다.
+</code></pre></li></ul></li></ul></li></ol><h3 id=bean>Bean<a hidden class=anchor aria-hidden=true href=#bean>#</a></h3><ul><li>Spring boot를 실행하면 container가 동작하는데, 이 container가 관리하는 객체를 bean이라고 한다.</li></ul><ol><li><p>선언</p><ol><li>Component 사용<ul><li><code>@Component</code> annotation을 class에 붙여주면, 해당 class가 bean으로 등록된다.</li><li>직접 구현한 객체를 bean으로 적용할 떄 사용할 수 있다.</li><li><code>@AutoWired</code> annotation을 이용해 의존성을 정의할 수 있다.<pre tabindex=0><code>@Component
+class C {
+  // C가 bean으로 등록
+  public C() {
+    System.out.println(&#34;use C as bean&#34;);
+  }
+
+  @AutoWired
+  private D d; // D 라는 class에 대한 dependency 정의
+}
+</code></pre></li></ul></li><li>Bean 사용<ul><li><code>@Configuration</code> annotation을 class에 붙여주고, 해당 class에 선언된 함수에 <code>@Bean</code> annotation을 붙여준다.</li><li><code>@Bean</code> 이 붙은 함수에서 반환되는 값들은 모두 Bean으로 관리된다.</li><li>3rd party에서 구현된 객체를 bean으로 적용할 때 사용할 수 있다.</li><li>bean으로 반환할 객체 생성자에 인자를 넣어 의존성을 정의할 수 있다.<pre tabindex=0><code>class Foo {
+  public Foo() {
+    System.out.println(&#34;use Foo as bean&#34;);
+  }
+}
+class Bar {
+  public Bar() {
+    System.out.println(&#34;Bar as dependency&#34;);
+  }
+}
+
+@Configuration
+class configure {
+  @Bean
+  public Bar bar() {
+    return new Bar(); // Bar을 bean으로 선언
+  }
+  @Bean
+  public Foo foo() {
+    return new Foo(new Bar()); // Foo가 Bar의 의존성을 가짐을 표현
+  }
+}
+</code></pre></li></ul></li></ol><ul><li>spring은 <code>@ComponentScan</code> annotation이 붙은 class에서 component(bean)을 찾아가기 시작한다.<ul><li>spring 프로젝트를 생성하면 main 함수가 있는 class가 있는데, 이 clalss에 붙은 <code>@SpringBootApplication</code> annotation이 <code>@ComponentScan</code> annotation을 포함하고 있다.</li><li><code>@Configuration</code> annotation 도 <code>@Component</code> annotation을 포함하고 있어 scan 대상이 된다.</li><li><code>@Controller</code> 로 선언된 class들도 bean으로 관리되는데, 이는 <code>@Controller</code>가 <code>@Component</code> annotation을 포함하고 있기 때문이다.</li></ul></li></ul></li></ol><h2 id=annotation-및-기능>Annotation 및 기능<a hidden class=anchor aria-hidden=true href=#annotation-및-기능>#</a></h2><h3 id=value>Value<a hidden class=anchor aria-hidden=true href=#value>#</a></h3><ul><li><code>@Value</code> annotation을 변수에 선언하면 프로젝트 설정파일(application.yml) 에서 변수를 가져올 수 있다.<pre tabindex=0><code>@Value(${server.port})
+private int port;
+</code></pre></li></ul><h3 id=scheduled>Scheduled<a hidden class=anchor aria-hidden=true href=#scheduled>#</a></h3><ul><li>spring boot로 특정 주기마다 반복 동작을 수행하는 기능을 구현할 수 있다.</li></ul><ol><li>main 함수가 선언된 class에 <code>@EnableScheduling</code> 을 선언한다.</li><li>schedule을 관리할 class(Scheduler)를 선언하고, <code>@Component</code> annotation을 붙인다.</li><li>에서 생성한 Scheduler class에 함수를 선언하고, <code>@Scheduled</code> annotation을 붙인다.<ul><li><code>@Scheduled(cron = "1 2 3 4 5 ?")</code> : 매 5월4일3시2분1초 에 동작<ul><li>숫자대신 *을 하면 모든 값에 동작하도록 설정 가능</li><li>앞에서부터 초,분,시,일,월,요일이며 요일은 0이 일요일 6이 토요일, 7또한 일요일이다.</li><li><a href=https://spring.io/blog/2020/11/10/new-in-spring-5-3-improved-cron-expressions>상세 내용은 공식 document 참조</a></li></ul></li><li><code>fixedDelay=1000</code> : 매 1초마다 동작(함수 종료 시점부터 1초)</li><li><code>fixedRate=1000</code> : 매 1초마다 동작(함수 시작 시점부터 1초)</li></ul></li></ol><h3 id=slf4j>SLF4J<a hidden class=anchor aria-hidden=true href=#slf4j>#</a></h3><ul><li>로그를 쉽게 설정하기 위한 툴</li></ul><h2 id=참조한-사이트>참조한 사이트<a hidden class=anchor aria-hidden=true href=#참조한-사이트>#</a></h2><ol><li><a href=https://allonsyit.tistory.com/43>https://allonsyit.tistory.com/43</a></li><li><a href=https://galid1.tistory.com/494>https://galid1.tistory.com/494</a></li><li><a href=https://atoz-develop.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B9%88Bean%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%83%9D%EC%84%B1-%EC%9B%90%EB%A6%AC>https://atoz-develop.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B9%88Bean%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%83%9D%EC%84%B1-%EC%9B%90%EB%A6%AC</a></li><li><a href=https://goateedev.tistory.com/128>https://goateedev.tistory.com/128</a></li><li><a href=https://itworldyo.tistory.com/40>https://itworldyo.tistory.com/40</a></li><li><a href=https://docs.spring.io/spring-data/jpa/docs/current/reference/html/>https://docs.spring.io/spring-data/jpa/docs/current/reference/html/</a></li></ol></div><footer class=post-footer><ul class=post-tags><li><a href=https://aswinblue.github.io/Blog/tags/spring-boot/>Spring-Boot</a></li><li><a href=https://aswinblue.github.io/Blog/tags/java/>Java</a></li><li><a href=https://aswinblue.github.io/Blog/tags/gradle/>Gradle</a></li><li><a href=https://aswinblue.github.io/Blog/tags/rest-api/>Rest-Api</a></li><li><a href=https://aswinblue.github.io/Blog/tags/backend/>Backend</a></li></ul><nav class=paginav><a class=prev href=https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/><span class=title>« Prev</span><br><span>Tailwind CSS 유틸리티 클래스 기반 고속 UI 컴포넌트 스타일링 가이드</span>
+</a><a class=next href=https://aswinblue.github.io/Blog/post/algorithm/algorithms-data-structures-and-big-o-complexity/><span class=title>Next »</span><br><span>핵심 알고리즘 및 시간 복잡도(Big-O) 분석 총정리 가이드</span></a></nav><div class=share-buttons><a target=_blank rel="noopener noreferrer" aria-label="share Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 on twitter" href="https://twitter.com/intent/tweet/?text=Spring%20Boot%20%ec%8b%a4%ec%a0%84%20%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%3a%20Gradle%20%eb%b9%8c%eb%93%9c%2c%20REST%20API%20%ea%b5%ac%ec%b6%95%20%eb%b0%8f%20%eb%b0%b0%ed%8f%ac%20%ea%b0%80%ec%9d%b4%eb%93%9c&amp;url=https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f&amp;hashtags=spring-boot%2cjava%2cgradle%2crest-api%2cbackend"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a><a target=_blank rel="noopener noreferrer" aria-label="share Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f&amp;title=Spring%20Boot%20%ec%8b%a4%ec%a0%84%20%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%3a%20Gradle%20%eb%b9%8c%eb%93%9c%2c%20REST%20API%20%ea%b5%ac%ec%b6%95%20%eb%b0%8f%20%eb%b0%b0%ed%8f%ac%20%ea%b0%80%ec%9d%b4%eb%93%9c&amp;summary=Spring%20Boot%20%ec%8b%a4%ec%a0%84%20%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%3a%20Gradle%20%eb%b9%8c%eb%93%9c%2c%20REST%20API%20%ea%b5%ac%ec%b6%95%20%eb%b0%8f%20%eb%b0%b0%ed%8f%ac%20%ea%b0%80%ec%9d%b4%eb%93%9c&amp;source=https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a><a target=_blank rel="noopener noreferrer" aria-label="share Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f&title=Spring%20Boot%20%ec%8b%a4%ec%a0%84%20%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%3a%20Gradle%20%eb%b9%8c%eb%93%9c%2c%20REST%20API%20%ea%b5%ac%ec%b6%95%20%eb%b0%8f%20%eb%b0%b0%ed%8f%ac%20%ea%b0%80%ec%9d%b4%eb%93%9c"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a><a target=_blank rel="noopener noreferrer" aria-label="share Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a><a target=_blank rel="noopener noreferrer" aria-label="share Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 on whatsapp" href="https://api.whatsapp.com/send?text=Spring%20Boot%20%ec%8b%a4%ec%a0%84%20%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%3a%20Gradle%20%eb%b9%8c%eb%93%9c%2c%20REST%20API%20%ea%b5%ac%ec%b6%95%20%eb%b0%8f%20%eb%b0%b0%ed%8f%ac%20%ea%b0%80%ec%9d%b4%eb%93%9c%20-%20https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a><a target=_blank rel="noopener noreferrer" aria-label="share Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드 on telegram" href="https://telegram.me/share/url?text=Spring%20Boot%20%ec%8b%a4%ec%a0%84%20%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8%3a%20Gradle%20%eb%b9%8c%eb%93%9c%2c%20REST%20API%20%ea%b5%ac%ec%b6%95%20%eb%b0%8f%20%eb%b0%b0%ed%8f%ac%20%ea%b0%80%ec%9d%b4%eb%93%9c&amp;url=https%3a%2f%2faswinblue.github.io%2fBlog%2fpost%2fwebserver%2fspring-boot-gradle-rest-api-production-guide%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentColor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></div></footer></article></main><div class=auto-hide-div><ins class=kakao_ad_area style=display:none;position:fixed data-ad-unit=DAN-17Lk24lxFVgxtePU data-ad-width=160 data-ad-height=auto></ins></div><script type=text/javascript src=//t1.daumcdn.net/kas/static/ba.min.js async></script></div><footer class=footer><span>&copy; 2026 <a href=https://aswinblue.github.io/Blog/>AswinBlue</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

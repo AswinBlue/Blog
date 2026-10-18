@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Machine-Learning on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/machine-learning/</link>
+    <description>Recent content in Machine-Learning on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Nov 2021 08:15:42 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TensorFlow 2.x 딥러닝 핵심 아키텍처 및 신경망 모델 학습 실전 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-architecture-and-model-training/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-architecture-and-model-training/</guid>
+      <description>텐서플로우 Keras Sequential API를 활용한 다층 퍼셉트론(MLP) 및 합성곱 신경망(CNN) 구성, 손실 함수와 옵티마이저 최적화 기법을 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

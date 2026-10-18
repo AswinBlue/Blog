@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rdbms on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/rdbms/</link>
+    <description>Recent content in Rdbms on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Mar 2025 22:03:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/rdbms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RDBMS vs NoSQL 차이점 비교: 대규모 서비스를 위한 데이터베이스 아키텍처 선택 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/</link>
+      <pubDate>Thu, 20 Mar 2025 22:03:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/rdbms-vs-nosql-database-architecture-comparison/</guid>
+      <description>관계형 데이터베이스(RDBMS)의 ACID 트랜잭션과 NoSQL(MongoDB, Redis)의 분산 확장성을 실무 비용 및 쿼리 최적화 관점에서 비교 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>MySQL 관계형 데이터베이스 기초: DDL, DML 쿼리 작성 및 계정 권한 관리</title>
+      <link>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</link>
+      <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</guid>
+      <description>데이터베이스/테이블 생성, SELECT/INSERT/UPDATE/DELETE 핵심 질의문, 외래키 제약조건, 사용자 계정 생성과 GRANT 권한 부여 방법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WebApplication on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/webapplication/</link>
+    <description>Recent content in WebApplication on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Jun 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/webapplication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 환경에서 Thymeleaf 템플릿 엔진을 활용한 서버 사이드 렌더링(SSR)</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</link>
+      <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</guid>
+      <description>스프링 부트와 Thymeleaf의 th:text, th:each, th:if 문법과 Model 객체 바인딩, 레이아웃 컴포넌트 분리 및 URL 링크 처리법을 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Tailwind CSS 유틸리티 클래스 기반 고속 UI 컴포넌트 스타일링 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/</link>
+      <pubDate>Thu, 02 Jun 2022 21:55:38 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/tailwind-css-utility-first-ui-styling/</guid>
+      <description>유틸리티 퍼스트 CSS 프레임워크인 Tailwind CSS의 설치 및 tailwind.config.js 설정, PostCSS 연동 빌드, Flexbox 정렬 유틸리티 클래스, 반응형 접두사(sm/md/lg) 활용법을 체계적으로 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Angular 기본 개념 및 프로젝트 아키텍처와 템플릿 바인딩 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/angular-basics-project-structure-template-syntax/</link>
+      <pubDate>Mon, 23 Aug 2021 19:46:09 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/angular-basics-project-structure-template-syntax/</guid>
+      <description>Angular CLI를 활용한 개발 환경 구축부터 프로젝트 아키텍처, 컴포넌트 생명주기와 부모-자식 데이터 통신(@Input, @Output), 라우팅 파라미터 처리, 템플릿 바인딩 문법까지 핵심 개념을 체계적으로 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>React 기초 입문: 컴포넌트 생명주기, State/Props 및 Hooks 핵심 완벽 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/</link>
+      <pubDate>Mon, 23 Aug 2021 18:46:22 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/react-basics-components-state-props-hooks-guide/</guid>
+      <description>React의 기본 구조와 JSX 문법부터 클래스/함수형 컴포넌트 비교, Props와 State 관리, 핵심 Hooks(useState, useEffect, useRef), React Router 활용까지 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Python CGI 스크립트를 활용한 레거시 웹 서버 데이터 처리와 보안 고려사항</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</guid>
+      <description>공용 게이트웨이 인터페이스(CGI)의 동작 메커니즘과 파이썬 cgi 모듈을 통한 폼 데이터 파싱, 환경 변수 읽기 및 XSS/인젝션 방어법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>모던 자바스크립트(ES6&#43;) 핵심 문법과 비동기 프로그래밍(Promise / async-await)</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/modern-javascript-es6-async-await-guide/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:45 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/modern-javascript-es6-async-await-guide/</guid>
+      <description>let/const 스코프, 화살표 함수, 구조 분해 할당, 이벤트 루프(Event Loop) 동작 원리 및 Promise와 async/await를 활용한 비동기 흐름 제어를 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>CSS3 핵심 레이아웃: Flexbox, Grid 및 미디어 쿼리 반응형 웹 디자인 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/</link>
+      <pubDate>Tue, 23 Jun 2020 20:38:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/css3-flexbox-grid-responsive-layout-guide/</guid>
+      <description>모던 CSS 레이아웃의 양대 축인 Flexbox와 Grid 시스템의 정렬 축 원리, 박스 모델(box-sizing), 미디어 쿼리를 통한 반응형 웹 제작법을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 웹 표준과 시맨틱 태그(Semantic Tag) 기반 검색 최적화(SEO) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</link>
+      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</guid>
+      <description>header, nav, main, article, section 등 시맨틱 태그를 활용한 문서 구조화와 웹 접근성(A11y), 검색 엔진 크롤러 최적화 마크업 원칙을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

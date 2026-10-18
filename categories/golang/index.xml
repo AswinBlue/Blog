@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GoLang on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/golang/</link>
+    <description>Recent content in GoLang on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Jan 2022 21:52:14 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 언어 핵심 기초 문법과 고루틴(Goroutine) 동시성 프로그래밍</title>
+      <link>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</link>
+      <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</guid>
+      <description>Go 언어의 타입 시스템, 슬라이스, 맵, 구조체 및 고루틴과 채널을 활용한 경량 비동기 동시성 프로그래밍 기초를 체계적으로 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

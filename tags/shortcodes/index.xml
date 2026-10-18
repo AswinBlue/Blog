@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Shortcodes on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/shortcodes/</link>
+    <description>Recent content in Shortcodes on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 마크다운 포스트 서식 및 Shortcode 문법 샘플 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</guid>
+      <description>PaperMod 테마에서 지원하는 코드 블록 하이라이팅, 접기(collapse), 테이블, 이미지 캡션 및 인아티클 광고 Shortcode 작성 문법 샘플입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

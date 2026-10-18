@@ -6,45 +6,23 @@
     <description>Recent content in Gdb on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GDB</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</link>
+      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
+      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>GDB 디버거 기본 사용법과 핵심 명령어 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb/</guid>
-      <description>&lt;h1 id=&#34;gdb&#34;&gt;GDB&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;GNU Debugger의 약자&lt;/li&gt;
-&lt;li&gt;유닉스의 디버거는 오픈소스가 아니라 GNU에서 새로 개발한 디버거&lt;/li&gt;
-&lt;li&gt;디버깅을 위해서는 register(레지스터 값), disassem(rip 부근 주소를 디스어셈 한 값), stack(스택의 값), backtrace(현재 rip에 도달 할 때 까지 거쳐간 함수들) 을 파악해야 하며, 이를 context(맥락) 이라 한다.&lt;/li&gt;
-&lt;li&gt;pwndbg 플러그인을 설치하면 hacking에 관련된 내용을 디버깅하기 용이하다.
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;https://github.com/pwndbg/pwndbg&lt;/code&gt; 주소에서 git을 clone 받고, ./setup.sh를 실행시키면 이후 &lt;code&gt;gdb&lt;/code&gt; 명령을 칠 때 자동으로 pwndbg 플러그인이 적용된 gdb가 실행된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;컴파일&#34;&gt;컴파일&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;gcc로 컴파일시 옵션에 &lt;code&gt;-g&lt;/code&gt; 를 붙여야 소스를 보면서 디버깅이 가능&lt;/li&gt;
-&lt;li&gt;리눅스에서 컴파일한 파일은 ELF (Executable and Linkable Format) 의 실행 파일이 된다.
-&lt;ul&gt;
-&lt;li&gt;ELF 파일은 파일 실행에 필요한 정보가 든 헤더와 여러 섹션들로 구성된다.&lt;/li&gt;
-&lt;li&gt;섹션에는 기계어 코드 등의 정보들이 들어있다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;readelf -h [ELF파일]&lt;/code&gt; 명령으로 ELF 파일의 헤더 정보를 확인 할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;gdb-옵션&#34;&gt;gdb 옵션&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;gdb [파일이름]&lt;/code&gt; : 해당 파일이름 디버깅 실행&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--args [arg1] [arg2] [...]&lt;/code&gt; : 파일 실행에 필요한 argument를 전달&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;기타-명령어&#34;&gt;기타 명령어&lt;/h2&gt;
-&lt;h3 id=&#34;실행-전-설정사항&#34;&gt;실행 전 설정사항&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;coredumb 파일&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</guid>
+      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 모드 활용법을 정리합니다.</description>
     </item>
     
   </channel>

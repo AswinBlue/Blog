@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web-Standards on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/web-standards/</link>
+    <description>Recent content in Web-Standards on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Mar 2025 20:17:24 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-standards/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP 프로토콜 핵심 구조: 요청·응답 메시지, 메서드 및 상태 코드 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</link>
+      <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
+      <description>HTTP 1.1과 HTTP/2의 차이, Start Line, Header, Body 구조, GET/POST/PUT/DELETE 멱등성 및 2xx, 3xx, 4xx, 5xx 상태 코드의 의미를 설명합니다.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 웹 표준과 시맨틱 태그(Semantic Tag) 기반 검색 최적화(SEO) 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</link>
+      <pubDate>Tue, 23 Jun 2020 19:13:17 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/html5-web-standards-and-semantic-tags-seo/</guid>
+      <description>header, nav, main, article, section 등 시맨틱 태그를 활용한 문서 구조화와 웹 접근성(A11y), 검색 엔진 크롤러 최적화 마크업 원칙을 설명합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

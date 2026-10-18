@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web-Server on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/web-server/</link>
+    <description>Recent content in Web-Server on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Jul 2020 19:15:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python CGI 스크립트를 활용한 레거시 웹 서버 데이터 처리와 보안 고려사항</title>
+      <link>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</link>
+      <pubDate>Thu, 02 Jul 2020 19:15:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webapplication/python-cgi-web-server-and-security/</guid>
+      <description>공용 게이트웨이 인터페이스(CGI)의 동작 메커니즘과 파이썬 cgi 모듈을 통한 폼 데이터 파싱, 환경 변수 읽기 및 XSS/인젝션 방어법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,216 +8,48 @@
     <language>en</language>
     <lastBuildDate>Tue, 30 Jan 2024 21:11:39 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/post/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DailyNote</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/daily_note/</link>
+      <title>React Native와 Firebase 기반 사진 일기 앱 &#39;하루기록&#39; 개발기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</link>
       <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/daily_note/</guid>
-      <description>&lt;h1 id=&#34;daily-note&#34;&gt;Daily Note&lt;/h1&gt;
-&lt;p&gt;사진 일기 앱 &amp;ldquo;하루기록&amp;rdquo; (DailyNote) 개발 Document&lt;/p&gt;
-&lt;h2 id=&#34;기획서&#34;&gt;기획서&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;앱 개요 및 핵심 가치&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;하루기록&amp;rdquo;&lt;/strong&gt; 은 단순한 사진 기록을 넘어, 사용자의 감정과 경험을 데이터로 시각화하여 &amp;lsquo;더 나은 나&amp;rsquo;를 발견하도록 돕는 인터랙티브 사진 일기 앱입니다.&lt;/p&gt;
-&lt;p&gt;Target User: 자신의 일상을 의미 있게 기록하고 싶어 하는 사람, 감정의 변화나 생활 패턴을 객관적으로 파악하고 싶은 사람, 꾸준한 기록을 통해 성취감을 느끼고 싶은 사람.&lt;/p&gt;
-&lt;p&gt;Core Value (핵심 가치):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;간편한 기록: 사진 한 장으로 시작되는 쉽고 빠른 일기 작성.&lt;/li&gt;
-&lt;li&gt;데이터 기반의 성찰: 나의 감정, 활동 등을 그래프와 지도로 돌아보며 새로운 인사이트 발견.&lt;/li&gt;
-&lt;li&gt;완벽한 프라이버시: 민감한 기록을 안전하게 보관하는 기술적 선택.&lt;/li&gt;
-&lt;li&gt;동기 부여 시스템: 꾸준한 기록이 즐거워지는 게이미피케이션 요소.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;사용자들이 중요하게 여기는 점 (User Needs)&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</guid>
+      <description>React Native(Expo)와 Firebase 기반의 사진 일기 앱 &amp;#39;하루기록&amp;#39; 개발 기록입니다. MVP 기획부터 Google 소셜 로그인 연동, 로컬 및 EAS 빌드 환경 구축, Cloud Vision API 연동 전략까지의 설계와 구현 과정을 상세히 정리했습니다.</description>
     </item>
     
     <item>
-      <title>DevTool</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/dev_tools/</link>
+      <title>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</link>
       <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/dev_tools/</guid>
-      <description>&lt;h1 id=&#34;devtool&#34;&gt;DevTool&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;버전:&lt;/strong&gt; 1.0.0
-&lt;strong&gt;최종 수정일:&lt;/strong&gt; 2025년 7월 19일&lt;/p&gt;
-&lt;h2 id=&#34;1-프로젝트-개요&#34;&gt;1. 프로젝트 개요&lt;/h2&gt;
-&lt;h3 id=&#34;11-목적&#34;&gt;1.1. 목적&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;DevTool&lt;/strong&gt;은 개발자들이 일상적으로 사용하는 다양한 인코딩/디코딩, 포맷팅, 텍스트 비교 등의 작업을 하나의 통합된 웹 환경에서 빠르고 편리하게 수행할 수 있도록 설계된 온라인 유틸리티 모음입니다. 여러 웹사이트를 오가며 필요한 도구를 찾아야 하는 번거로움을 줄이고, 일관된 사용자 경험을 통해 개발 생산성을 높이는 것을 목표로 합니다.&lt;/p&gt;
-&lt;h3 id=&#34;12-핵심-가치-및-철학&#34;&gt;1.2. 핵심 가치 및 철학&lt;/h3&gt;
-&lt;p&gt;본 프로젝트는 다음의 핵심 가치를 기반으로 설계되었습니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;클라이언트 측 연산 (Client-Side Processing)&lt;/strong&gt;: 모든 데이터 변환 및 계산은 사용자의 브라우저 내에서만 이루어집니다. 이를 통해 민감한 데이터가 서버로 전송되지 않아 &lt;strong&gt;보안 및 프라이버시&lt;/strong&gt;를 보장하며, 서버 통신 없이 즉각적인 결과를 제공하여 &lt;strong&gt;최상의 속도&lt;/strong&gt;를 경험할 수 있습니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;반응형 및 모던 UI/UX&lt;/strong&gt;: 모든 기기에서 최적의 사용 경험을 제공하기 위해 반응형 디자인을 채택했습니다. 또한, 일관된 디자인 시스템과 직관적인 인터페이스를 통해 사용자가 별도의 학습 없이 즉시 도구를 사용할 수 있도록 설계되었습니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;성능 최적화&lt;/strong&gt;: React의 &lt;code&gt;useMemo&lt;/code&gt; 훅을 적극적으로 활용하여, 불필요한 리렌더링과 연산을 최소화했습니다. 사용자의 입력에만 반응하여 상태를 파생시키므로, 복잡한 연산에서도 높은 성능을 유지합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;13-주요-기능&#34;&gt;1.3. 주요 기능&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ASCII &amp;lt;&amp;gt; Hex Converter&lt;/strong&gt;: 아스키(ASCII) 문자열과 16진수(Hex) 값을 상호 변환합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Base64 Encoder / Decoder&lt;/strong&gt;: 문자열을 Base64로 인코딩하거나 디코딩하며, 유니코드(UTF-8)를 완벽하게 지원합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;URL Encoder / Decoder&lt;/strong&gt;: URL 문자열을 안전하게 인코딩/디코딩하며, 전체 URI와 URI 컴포넌트 인코딩 방식을 모두 지원합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;JSON Inspector &amp;amp; Formatter&lt;/strong&gt;: JSON 데이터의 유효성을 검사하고, 원하는 포맷으로 정렬하며, 계층 구조를 시각적으로 탐색할 수 있는 트리 뷰를 제공합니다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Text Diff Checker&lt;/strong&gt;: 두 개의 텍스트를 비교하여 차이점을 시각적으로 보여주며, 다양한 비교 옵션과 Patch 파일 생성 기능을 제공합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;14-기술-스택&#34;&gt;1.4. 기술 스택&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Frontend&lt;/strong&gt;: React.js&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Styling&lt;/strong&gt;: Tailwind CSS&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;State Management&lt;/strong&gt;: React Context API, React Hooks (&lt;code&gt;useState&lt;/code&gt;, &lt;code&gt;useMemo&lt;/code&gt;, &lt;code&gt;useEffect&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Routing&lt;/strong&gt;: React Router&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Core Logic Library&lt;/strong&gt;: &lt;code&gt;diff&lt;/code&gt; (for Text Diff Checker)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;: GitHub Pages (via GitHub Actions)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;2-시스템-아키텍처-및-설계&#34;&gt;2. 시스템 아키텍처 및 설계&lt;/h2&gt;
-&lt;p&gt;본 애플리케이션은 현대적인 프론트엔드 설계 원칙에 따라 구축되었습니다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</guid>
+      <description>Base64, JSON 포맷터, URL 인코더, 해시 생성기 등 개발에 필요한 편의 기능을 단일 웹 인터페이스로 제공하는 React 기반 웹 툴 제작기입니다.</description>
     </item>
     
     <item>
-      <title>Youtube Downloader</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/youtube_downloader/</link>
+      <title>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</link>
       <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/youtube_downloader/</guid>
-      <description>&lt;h1 id=&#34;youtoube-download&#34;&gt;Youtoube Download&lt;/h1&gt;
-&lt;p&gt;Window OS에서 Python으로 Youtube 영상을 다운로드 하는 방법&lt;/p&gt;
-&lt;h2 id=&#34;1-python-code-작성&#34;&gt;1. Python Code 작성&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;yt-dlp 패키지를 다운받는다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pip install yt-dlp&lt;/code&gt; 명령으로 손쉽게 다운로드 가능하다.&lt;/li&gt;
-&lt;li&gt;github 주소는 다음과 같다. : &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;https://github.com/yt-dlp/yt-dlp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;코드를 작성한다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;아래는 샘플 코드이다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;yt_dlp&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;time&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##########&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 설정&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##########&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 최대 재시도 횟수&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;MAX_RETRIES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 재시도 사이의 대기 시간 (초)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;RETRY_DELAY&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 다운로드 리스트&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;download_lists&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;FOLDER_NAME&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 다운로드 받을 폴더 이름&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.youtube.com/watch?v=CJuIRe_1c2g&amp;amp;list=RDMM&amp;amp;start_radio=1&amp;amp;rv=R4CecLdF11E&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 다운로드 할 playlist URL&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAMPLE2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.youtube.com/watch?v=66l5r_IEZrI&amp;amp;list=RDGMEMYH9CUrFO7CfLJpaD7UR85w&amp;amp;start_radio=1&amp;amp;rv=CJuIRe_1c2g&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##########&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 다운로드 시작&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##########&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download_lists&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# &amp;#39;폴더이름/영상제목.확장자&amp;#39; 형식으로 다운로드&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;output_dir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%(title)s&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%(ext)s&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;ydl_opt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s1&#34;&gt;&amp;#39;outtmpl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s1&#34;&gt;&amp;#39;format&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;bestaudio/best&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 다운로드할 포맷 지정&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;s1&#34;&gt;&amp;#39;download_archive&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;downloaded.txt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 다운로드 아카이브 파일 지정(미리 다운받은 항목들을 체크하여 중복으로 받지 않도록 하는 기록파일)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s1&#34;&gt;&amp;#39;postprocessors&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s1&#34;&gt;&amp;#39;key&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;FFmpegExtractAudio&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s1&#34;&gt;&amp;#39;preferredcodec&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;mp3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# mp3포멧으로 변환&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s1&#34;&gt;&amp;#39;preferredquality&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;192&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}],&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s1&#34;&gt;&amp;#39;verbose&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 자세한 디버깅 정보 출력&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s1&#34;&gt;&amp;#39;ignoreerrors&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 다운로드 오류 무시&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;attempt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MAX_RETRIES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;yt_dlp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;YoutubeDL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ydl_opt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ydl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;ydl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;:: 다운로드 완료&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;Exception&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;:: 다운로드 실패 (&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;attempt&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MAX_RETRIES&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;): &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;attempt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MAX_RETRIES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;:: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RETRY_DELAY&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;초 후 다시 시도합니다...&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RETRY_DELAY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;:: 최대 재시도 횟수를 초과했습니다. 다운로드를 중단합니다.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;모든 항목 다운로드 완료&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;다른것들은 수정할 필요 없고, &lt;code&gt;download_lists&lt;/code&gt; 에 다운로드 할 Youtube 재생목록을 넣어준다.&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</guid>
+      <description>pytube 라이브러리와 PyQt를 활용하여 유튜브 동영상 및 음원 추출을 안전하고 직관적으로 처리하는 데스크톱 다운로더 유틸리티 제작기입니다.</description>
     </item>
     
     <item>
-      <title>Delver</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/delver/</link>
+      <title>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</link>
       <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/delver/</guid>
-      <description>&lt;h1 id=&#34;delver&#34;&gt;Delver&lt;/h1&gt;
-&lt;p&gt;시작날짜: March 18, 2023&lt;br&gt;
-종료날짜: March 28, 2023&lt;/p&gt;
-&lt;h2 id=&#34;목표&#34;&gt;목표&lt;/h2&gt;
-&lt;p&gt;python 기반 웹 scrapping 및 결과를 slack 에 전송하는 slack bot&lt;/p&gt;
-&lt;h2 id=&#34;요구사항&#34;&gt;요구사항&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;AWS lambda를 사용하여 동작&lt;/li&gt;
-&lt;li&gt;매 시간마다 동작하도록 설정&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;delver-web-scrapper-작성&#34;&gt;[Delver]🔨 Web scrapper 작성&lt;/h1&gt;
-&lt;h2 id=&#34;1-구현-내용&#34;&gt;1. 구현 내용&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;beautiful soup를 사용하여 특정 web을 scrap
-(API 참조: &lt;a href=&#34;https://beautiful-soup-4.readthedocs.io/en/latest/&#34;&gt;https://beautiful-soup-4.readthedocs.io/en/latest/&lt;/a&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;여러 사이트에 호환되도록 구조를 설정&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://aswinblue.github.io/Blog/IMAGE_DELVER_WEB_SCRAPPER/Untitled.png&#34; alt=&#34;사이트별 속성을 json 형태로 기록&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;사이트별 속성을 json 형태로 기록&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://aswinblue.github.io/Blog/IMAGE_DELVER_WEB_SCRAPPER/Untitled1.png&#34; alt=&#34;json 형태를 읽어 코드 변경 없이 사이트 추가할 수 있는 구조로 작성&#34;  /&gt;
-&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</guid>
+      <description>다양한 채용 플랫폼의 공고 데이터를 비동기 웹 크롤러로 자동 수집하고 키워드 빈도를 분석하는 Delver 서비스의 아키텍처와 구현 기록입니다.</description>
     </item>
     
     <item>
-      <title>FlickThrough</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/flick_through/</link>
+      <title>Flutter 기반 텍스트 단어 슬라이더 &#39;FlickThrough&#39; 개발 및 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</link>
       <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/flick_through/</guid>
-      <description>&lt;h1 id=&#34;flick-through&#34;&gt;Flick Through&lt;/h1&gt;
-&lt;p&gt;github: &lt;a href=&#34;https://github.com/AswinBlue/FlickThrough&#34;&gt;https://github.com/AswinBlue/FlickThrough&lt;/a&gt;&lt;br&gt;
-Link : aswinblue.github.io/FlickThrough/&lt;br&gt;
-시작날짜: August 21, 2023&lt;/p&gt;
-&lt;h2 id=&#34;목표&#34;&gt;목표&lt;/h2&gt;
-&lt;p&gt;텍스트 파일을 읽어 단어 단위로 슬라이드 쇼를 수행하는 앱 제작&lt;/p&gt;
-&lt;h2 id=&#34;요구사항&#34;&gt;요구사항&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;텍스트 파일의 공백과 줄바꿈을 기준으로 단어를 나누고 이를 화면에 출력&lt;/li&gt;
-&lt;li&gt;출력은 한 단어씩 이루어 지며 분당 300개를 기본으로, 속도는 조절 가능&lt;/li&gt;
-&lt;li&gt;단어 자르는건 커스텀 가능&lt;/li&gt;
-&lt;li&gt;특정 문자마다 딜레이 다르게 줄 수 있도록 설정&lt;/li&gt;
-&lt;li&gt;스크린샷 혹은 클립보드의 내용도 사용할 수 있도록 함&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;기능-구현&#34;&gt;기능 구현&lt;/h1&gt;
-&lt;h2 id=&#34;1-구현-내용&#34;&gt;1. 구현 내용&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;UI 구성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;텍스트가 출력될 텍스트박스, 진행률 표시바, 시작/일시정지 버튼, 속도 조절 스크롤바, 파일 읽기 버튼을 구성&lt;/p&gt;</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</guid>
+      <description>Flutter로 개발한 단어 단위 슬라이드 쇼 앱 &amp;#39;FlickThrough&amp;#39;의 요구사항 분석, 크로스 플랫폼 파일 처리, 다국어 지원, GitHub Pages 및 Android Play Store 배포 전 과정을 다룹니다.</description>
     </item>
     
   </channel>

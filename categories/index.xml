@@ -8,110 +8,182 @@
     <language>en</language>
     <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Advertisement</title>
-      <link>https://aswinblue.github.io/Blog/categories/advertisement/</link>
+      <title>Projects</title>
+      <link>https://aswinblue.github.io/Blog/categories/projects/</link>
       <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/advertisement/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/projects/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Deploy</title>
-      <link>https://aswinblue.github.io/Blog/categories/deploy/</link>
-      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/categories/deploy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design</title>
-      <link>https://aswinblue.github.io/Blog/categories/design/</link>
-      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/categories/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dev</title>
-      <link>https://aswinblue.github.io/Blog/categories/dev/</link>
-      <pubDate>Wed, 30 Jul 2025 19:43:52 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/categories/dev/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://aswinblue.github.io/Blog/categories/test/</link>
+      <title>Python</title>
+      <link>https://aswinblue.github.io/Blog/categories/python/</link>
       <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/test/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>CI-CD</title>
-      <link>https://aswinblue.github.io/Blog/categories/ci-cd/</link>
+      <title>DevOps</title>
+      <link>https://aswinblue.github.io/Blog/categories/devops/</link>
       <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/ci-cd/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/devops/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Web</title>
-      <link>https://aswinblue.github.io/Blog/categories/web/</link>
-      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
+      <title>DataBases</title>
+      <link>https://aswinblue.github.io/Blog/categories/databases/</link>
+      <pubDate>Thu, 20 Mar 2025 22:03:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/web/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/databases/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hacking</title>
-      <link>https://aswinblue.github.io/Blog/categories/hacking/</link>
+      <title>Security</title>
+      <link>https://aswinblue.github.io/Blog/categories/security/</link>
+      <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://aswinblue.github.io/Blog/categories/c&#43;&#43;/</link>
+      <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WindowApp</title>
+      <link>https://aswinblue.github.io/Blog/categories/windowapp/</link>
       <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/hacking/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/windowapp/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Theory</title>
-      <link>https://aswinblue.github.io/Blog/categories/theory/</link>
+      <title>Assembly</title>
+      <link>https://aswinblue.github.io/Blog/categories/assembly/</link>
+      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/assembly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://aswinblue.github.io/Blog/categories/linux/</link>
+      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>https://aswinblue.github.io/Blog/categories/cloud/</link>
+      <pubDate>Wed, 12 Jul 2023 21:12:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MobileApp</title>
+      <link>https://aswinblue.github.io/Blog/categories/mobileapp/</link>
+      <pubDate>Thu, 19 Jan 2023 22:01:38 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/mobileapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ComputerScience</title>
+      <link>https://aswinblue.github.io/Blog/categories/computerscience/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/theory/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/computerscience/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Basic</title>
-      <link>https://aswinblue.github.io/Blog/categories/basic/</link>
-      <pubDate>Wed, 01 Sep 2021 18:49:18 +0900</pubDate>
+      <title>WebApplication</title>
+      <link>https://aswinblue.github.io/Blog/categories/webapplication/</link>
+      <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/basic/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/webapplication/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Syntax</title>
-      <link>https://aswinblue.github.io/Blog/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>WebServer</title>
+      <link>https://aswinblue.github.io/Blog/categories/webserver/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/syntax/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/webserver/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Themes</title>
-      <link>https://aswinblue.github.io/Blog/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Algorithm</title>
+      <link>https://aswinblue.github.io/Blog/categories/algorithm/</link>
+      <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/categories/themes/</guid>
+      <guid>https://aswinblue.github.io/Blog/categories/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevelopTips</title>
+      <link>https://aswinblue.github.io/Blog/categories/developtips/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/developtips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>https://aswinblue.github.io/Blog/categories/crypto/</link>
+      <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/crypto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GoLang</title>
+      <link>https://aswinblue.github.io/Blog/categories/golang/</link>
+      <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MachineLearning</title>
+      <link>https://aswinblue.github.io/Blog/categories/machinelearning/</link>
+      <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/machinelearning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://aswinblue.github.io/Blog/categories/java/</link>
+      <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/categories/java/</guid>
       <description></description>
     </item>
     

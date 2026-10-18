@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pthread on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/pthread/</link>
+    <description>Recent content in Pthread on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Jul 2023 15:05:46 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/pthread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>POSIX pthread를 활용한 멀티스레드 프로그래밍 및 동기화(Mutex) 기법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</link>
+      <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</guid>
+      <description>스레드 생성과 종료(pthread_create/join), 임계 영역 보호를 위한 뮤텍스(Mutex), 조건 변수(Condvar) 및 경쟁 상태(Race Condition) 방어법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>
