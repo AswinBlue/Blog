@@ -13,7 +13,16 @@
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
-      <description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</description>
+      <description>스프링 부트(Spring Boot)의 자동 구성(Auto-Configuration) 원리와 application.yml 설정, Gradle 멀티태스크 빌드, Spring Data JPA와 H2 연동, RESTful 컨트롤러 및 스케줄러 구현을 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 CLI 환경 구축</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-cli-setup-guide/</link>
+      <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-cli-setup-guide/</guid>
+      <description>자바 엔터프라이즈 개발의 표준인 Spring 프레임워크의 IoC(제어의 역전)와 DI(의존성 주입), ApplicationContext 빈 관리, Spring CLI 프로젝트 생성 및 Maven/Gradle 빌드 설정을 체계적으로 정리합니다.</description>
     </item>
     
   </channel>

@@ -22,7 +22,7 @@
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
-      <description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</description>
+      <description>스프링 부트(Spring Boot)의 자동 구성(Auto-Configuration) 원리와 application.yml 설정, Gradle 멀티태스크 빌드, Spring Data JPA와 H2 연동, RESTful 컨트롤러 및 스케줄러 구현을 총정리합니다.</description>
     </item>
     
     <item>

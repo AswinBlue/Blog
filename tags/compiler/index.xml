@@ -16,5 +16,14 @@
       <description>GCC 컴파일러의 4단계 빌드 과정(전처리, 컴파일, 어셈블, 링킹)과 핵심 옵션(-E, -S, -c, -g, -Wall), 정적 및 동적 라이브러리(ar, LD_LIBRARY_PATH, LD_PRELOAD) 생성과 활용법을 정리합니다.</description>
     </item>
     
+    <item>
+      <title>컴퓨터 시스템 핵심: CPU 메모리 세그먼트, x86-64 레지스터, ELF 컴파일과 ptmalloc</title>
+      <link>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</link>
+      <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</guid>
+      <description>CPU 메모리 세그먼트 구조, x86-64 레지스터 체계, SYSV 함수 호출 규약부터 C 언어 컴파일 과정(ELF/PLT/GOT) 및 Linux ptmalloc 메모리 관리 기법까지 핵심 원리를 정리합니다.</description>
+    </item>
+    
   </channel>
 </rss>

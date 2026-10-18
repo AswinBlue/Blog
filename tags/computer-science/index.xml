@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Thu, 19 Jan 2023 21:59:14 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>컴퓨터 구조 및 운영체제 핵심 CS 기초 개념 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/computerscience/computer-science-architecture-and-os-fundamentals/</link>
+      <title>컴퓨터 시스템 핵심: CPU 메모리 세그먼트, x86-64 레지스터, ELF 컴파일과 ptmalloc</title>
+      <link>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/computerscience/computer-science-architecture-and-os-fundamentals/</guid>
-      <description>폰 노이만 아키텍처, CPU 레지스터와 ALU, 메모리 계층 구조, 가상 메모리와 페이징 시스템 등 소프트웨어 엔지니어가 알아야 할 CS 기본기를 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</guid>
+      <description>CPU 메모리 세그먼트 구조, x86-64 레지스터 체계, SYSV 함수 호출 규약부터 C 언어 컴파일 과정(ELF/PLT/GOT) 및 Linux ptmalloc 메모리 관리 기법까지 핵심 원리를 정리합니다.</description>
     </item>
     
   </channel>

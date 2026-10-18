@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Daemon on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/daemon/</link>
+    <description>Recent content in Daemon on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Jul 2023 20:15:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 프로세스(Process) 심층 분석: 생명주기, fork·exec·wait 원리와 데몬 프로세스 구현</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-management-daemon/</link>
+      <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-management-daemon/</guid>
+      <description>리눅스 프로세스의 메모리 구조와 생명주기, fork()와 exec 계열 시스템 콜의 동작 원리, Copy-on-Write(COW), 좀비 및 고아 프로세스 방지 기법, 프로세스 그룹과 세션 제어, 데몬(Daemon) 프로세스 생성 단계까지 완벽하게 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

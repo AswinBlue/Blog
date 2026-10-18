@@ -22,7 +22,7 @@
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/react-firebase-sdk-realtime-database-integration/</guid>
-      <description>React 웹 애플리케이션에 Firebase v9&#43; 모듈러 SDK를 설치하고 환경변수 설정, Firestore 실시간 구독(onSnapshot), 소셜 로그인 구현법을 정리합니다.</description>
+      <description>React 웹 애플리케이션에 최신 Firebase 모듈러 SDK를 연동하여 사용자 인증 상태 감지(onAuthStateChanged), Google 소셜 팝업 로그인, 에러 예외 처리 및 실시간 데이터 바인딩 구현법을 정리합니다.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/firebase-authentication-and-firestore-security-rules/</guid>
-      <description>구글 Firebase를 활용한 사용자 인증 플로우, Cloud Firestore NoSQL 데이터베이스 CRUD 연동, 보안 규칙 작성 및 실시간 리스너 활용법을 설명합니다.</description>
+      <description>구글의 대표적인 BaaS 플랫폼인 Firebase의 프로젝트 설정부터 Authentication 사용자 인증, Cloud Firestore NoSQL 연동, 환경변수 보안 관리 및 보안 규칙(Security Rules) 작성법을 체계적으로 정리합니다.</description>
     </item>
     
   </channel>

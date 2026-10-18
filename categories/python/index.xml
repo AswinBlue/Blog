@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Mon, 28 Jul 2025 21:30:40 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python pytest 프레임워크를 활용한 단위 테스트 및 TDD 실전 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/python/python-pytest-unit-testing-and-tdd-guide/</link>
+      <title>Pytest와 pytest-mock 활용 가이드: Fixture, Mocking, 실전 트러블슈팅</title>
+      <link>https://aswinblue.github.io/Blog/post/python/python-pytest-mock-unit-test-troubleshooting/</link>
       <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/python/python-pytest-unit-testing-and-tdd-guide/</guid>
-      <description>간결한 assert 구문, fixture를 활용한 테스트 의존성 주입, parametrize 다중 파라미터 테스트 및 coverage 코드 커버리지 측정법을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/python/python-pytest-mock-unit-test-troubleshooting/</guid>
+      <description>파이썬 단위 테스트 프레임워크 pytest의 기본 사용법부터 Fixture, pytest-mock을 활용한 외부 의존성 분리, 무한루프 및 불변 객체 모킹 트러블슈팅 노하우를 정리합니다.</description>
     </item>
     
     <item>

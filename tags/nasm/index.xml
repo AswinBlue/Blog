@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nasm on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/nasm/</link>
+    <description>Recent content in Nasm on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Feb 2024 20:10:48 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/nasm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>x86-64 어셈블리어 기초: 핵심 명령어, 레지스터 구조, 스택 프레임 및 바이너리 빌드</title>
+      <link>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-instructions-registers-stack-frame/</link>
+      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-instructions-registers-stack-frame/</guid>
+      <description>x86-64 아키텍처 기반 어셈블리어의 핵심 명령어(mov, lea, push, pop), 범용 및 세그먼트 레지스터 구조, 함수 프롤로그/에필로그 스택 프레임 및 카나리 원리, nasm을 활용한 바이너리 컴파일 과정을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

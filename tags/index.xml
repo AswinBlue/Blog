@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>Mocking</title>
+      <link>https://aswinblue.github.io/Blog/tags/mocking/</link>
+      <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/mocking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pytest</title>
       <link>https://aswinblue.github.io/Blog/tags/pytest/</link>
       <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
@@ -80,11 +89,11 @@
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>https://aswinblue.github.io/Blog/tags/testing/</link>
+      <title>Test-Automation</title>
+      <link>https://aswinblue.github.io/Blog/tags/test-automation/</link>
       <pubDate>Mon, 28 Jul 2025 21:30:40 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/testing/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/test-automation/</guid>
       <description></description>
     </item>
     
@@ -134,11 +143,20 @@
     </item>
     
     <item>
-      <title>Workflow</title>
-      <link>https://aswinblue.github.io/Blog/tags/workflow/</link>
+      <title>Github-Pages</title>
+      <link>https://aswinblue.github.io/Blog/tags/github-pages/</link>
       <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/workflow/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://aswinblue.github.io/Blog/tags/react/</link>
+      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/react/</guid>
       <description></description>
     </item>
     
@@ -157,15 +175,6 @@
       <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>https://aswinblue.github.io/Blog/tags/react/</link>
-      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/react/</guid>
       <description></description>
     </item>
     
@@ -458,20 +467,20 @@
     </item>
     
     <item>
-      <title>C</title>
-      <link>https://aswinblue.github.io/Blog/tags/c/</link>
-      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Pe-Format</title>
       <link>https://aswinblue.github.io/Blog/tags/pe-format/</link>
       <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/pe-format/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reverse-Engineering</title>
+      <link>https://aswinblue.github.io/Blog/tags/reverse-engineering/</link>
+      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/reverse-engineering/</guid>
       <description></description>
     </item>
     
@@ -503,15 +512,6 @@
     </item>
     
     <item>
-      <title>Assembly</title>
-      <link>https://aswinblue.github.io/Blog/tags/assembly/</link>
-      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/assembly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Binary-Analysis</title>
       <link>https://aswinblue.github.io/Blog/tags/binary-analysis/</link>
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
@@ -521,20 +521,20 @@
     </item>
     
     <item>
-      <title>Gdb</title>
-      <link>https://aswinblue.github.io/Blog/tags/gdb/</link>
+      <title>Ghidra</title>
+      <link>https://aswinblue.github.io/Blog/tags/ghidra/</link>
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/gdb/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/ghidra/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Reverse-Engineering</title>
-      <link>https://aswinblue.github.io/Blog/tags/reverse-engineering/</link>
+      <title>Ida-Pro</title>
+      <link>https://aswinblue.github.io/Blog/tags/ida-pro/</link>
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/reverse-engineering/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/ida-pro/</guid>
       <description></description>
     </item>
     
@@ -566,11 +566,20 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://aswinblue.github.io/Blog/tags/linux/</link>
+      <title>Pwnable</title>
+      <link>https://aswinblue.github.io/Blog/tags/pwnable/</link>
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/linux/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/pwnable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rop</title>
+      <link>https://aswinblue.github.io/Blog/tags/rop/</link>
+      <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/rop/</guid>
       <description></description>
     </item>
     
@@ -593,20 +602,38 @@
     </item>
     
     <item>
-      <title>Architecture</title>
-      <link>https://aswinblue.github.io/Blog/tags/architecture/</link>
+      <title>Assembly</title>
+      <link>https://aswinblue.github.io/Blog/tags/assembly/</link>
       <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/architecture/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/assembly/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Low-Level</title>
-      <link>https://aswinblue.github.io/Blog/tags/low-level/</link>
+      <title>Nasm</title>
+      <link>https://aswinblue.github.io/Blog/tags/nasm/</link>
       <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/low-level/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/nasm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Register</title>
+      <link>https://aswinblue.github.io/Blog/tags/register/</link>
+      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/register/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stack-Frame</title>
+      <link>https://aswinblue.github.io/Blog/tags/stack-frame/</link>
+      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/stack-frame/</guid>
       <description></description>
     </item>
     
@@ -674,15 +701,6 @@
     </item>
     
     <item>
-      <title>Github-Pages</title>
-      <link>https://aswinblue.github.io/Blog/tags/github-pages/</link>
-      <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/github-pages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Play-Store</title>
       <link>https://aswinblue.github.io/Blog/tags/play-store/</link>
       <pubDate>Tue, 30 Jan 2024 21:12:32 +0900</pubDate>
@@ -697,6 +715,15 @@
       <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/ipc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://aswinblue.github.io/Blog/tags/linux/</link>
+      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -737,11 +764,11 @@
     </item>
     
     <item>
-      <title>Multithreading</title>
-      <link>https://aswinblue.github.io/Blog/tags/multithreading/</link>
+      <title>Mutex</title>
+      <link>https://aswinblue.github.io/Blog/tags/mutex/</link>
       <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/multithreading/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/mutex/</guid>
       <description></description>
     </item>
     
@@ -755,20 +782,29 @@
     </item>
     
     <item>
-      <title>Synchronization</title>
-      <link>https://aswinblue.github.io/Blog/tags/synchronization/</link>
+      <title>Thread</title>
+      <link>https://aswinblue.github.io/Blog/tags/thread/</link>
       <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/synchronization/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/thread/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Multiprocessing</title>
-      <link>https://aswinblue.github.io/Blog/tags/multiprocessing/</link>
+      <title>Daemon</title>
+      <link>https://aswinblue.github.io/Blog/tags/daemon/</link>
       <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/multiprocessing/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/daemon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fork</title>
+      <link>https://aswinblue.github.io/Blog/tags/fork/</link>
+      <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/fork/</guid>
       <description></description>
     </item>
     
@@ -791,20 +827,29 @@
     </item>
     
     <item>
+      <title>C</title>
+      <link>https://aswinblue.github.io/Blog/tags/c/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File-Descriptor</title>
+      <link>https://aswinblue.github.io/Blog/tags/file-descriptor/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/file-descriptor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Posix</title>
       <link>https://aswinblue.github.io/Blog/tags/posix/</link>
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/posix/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>System-Calls</title>
-      <link>https://aswinblue.github.io/Blog/tags/system-calls/</link>
-      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/system-calls/</guid>
       <description></description>
     </item>
     
@@ -841,6 +886,15 @@
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scripting</title>
+      <link>https://aswinblue.github.io/Blog/tags/scripting/</link>
+      <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/scripting/</guid>
       <description></description>
     </item>
     
@@ -926,20 +980,20 @@
     </item>
     
     <item>
-      <title>Basics</title>
-      <link>https://aswinblue.github.io/Blog/tags/basics/</link>
-      <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/basics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Filesystem</title>
       <link>https://aswinblue.github.io/Blog/tags/filesystem/</link>
       <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/filesystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kernel</title>
+      <link>https://aswinblue.github.io/Blog/tags/kernel/</link>
+      <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/kernel/</guid>
       <description></description>
     </item>
     
@@ -953,11 +1007,11 @@
     </item>
     
     <item>
-      <title>Permissions</title>
-      <link>https://aswinblue.github.io/Blog/tags/permissions/</link>
+      <title>Unix</title>
+      <link>https://aswinblue.github.io/Blog/tags/unix/</link>
       <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/permissions/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/unix/</guid>
       <description></description>
     </item>
     
@@ -989,20 +1043,20 @@
     </item>
     
     <item>
+      <title>Troubleshooting</title>
+      <link>https://aswinblue.github.io/Blog/tags/troubleshooting/</link>
+      <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Virtualbox</title>
       <link>https://aswinblue.github.io/Blog/tags/virtualbox/</link>
       <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/virtualbox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virtualization</title>
-      <link>https://aswinblue.github.io/Blog/tags/virtualization/</link>
-      <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/virtualization/</guid>
       <description></description>
     </item>
     
@@ -1034,29 +1088,11 @@
     </item>
     
     <item>
-      <title>Cpu</title>
-      <link>https://aswinblue.github.io/Blog/tags/cpu/</link>
+      <title>Memory-Management</title>
+      <link>https://aswinblue.github.io/Blog/tags/memory-management/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/cpu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hardware</title>
-      <link>https://aswinblue.github.io/Blog/tags/hardware/</link>
-      <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/hardware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Memory</title>
-      <link>https://aswinblue.github.io/Blog/tags/memory/</link>
-      <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/memory/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/memory-management/</guid>
       <description></description>
     </item>
     
@@ -1075,15 +1111,6 @@
       <pubDate>Sat, 09 Jul 2022 11:05:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Troubleshooting</title>
-      <link>https://aswinblue.github.io/Blog/tags/troubleshooting/</link>
-      <pubDate>Sat, 09 Jul 2022 11:05:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/troubleshooting/</guid>
       <description></description>
     </item>
     
@@ -1169,20 +1196,29 @@
     </item>
     
     <item>
-      <title>Backend</title>
-      <link>https://aswinblue.github.io/Blog/tags/backend/</link>
-      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/backend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Gradle</title>
       <link>https://aswinblue.github.io/Blog/tags/gradle/</link>
       <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/gradle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>H2-Database</title>
+      <link>https://aswinblue.github.io/Blog/tags/h2-database/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/h2-database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jpa</title>
+      <link>https://aswinblue.github.io/Blog/tags/jpa/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/jpa/</guid>
       <description></description>
     </item>
     
@@ -1196,15 +1232,6 @@
     </item>
     
     <item>
-      <title>Big-O</title>
-      <link>https://aswinblue.github.io/Blog/tags/big-o/</link>
-      <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/big-o/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data-Structures</title>
       <link>https://aswinblue.github.io/Blog/tags/data-structures/</link>
       <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
@@ -1214,47 +1241,74 @@
     </item>
     
     <item>
-      <title>Search</title>
-      <link>https://aswinblue.github.io/Blog/tags/search/</link>
+      <title>Dijkstra</title>
+      <link>https://aswinblue.github.io/Blog/tags/dijkstra/</link>
       <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/search/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/dijkstra/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Sorting</title>
-      <link>https://aswinblue.github.io/Blog/tags/sorting/</link>
+      <title>Dynamic-Programming</title>
+      <link>https://aswinblue.github.io/Blog/tags/dynamic-programming/</link>
       <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/sorting/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/dynamic-programming/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Development-Tools</title>
-      <link>https://aswinblue.github.io/Blog/tags/development-tools/</link>
-      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      <title>Graph-Search</title>
+      <link>https://aswinblue.github.io/Blog/tags/graph-search/</link>
+      <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/development-tools/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/graph-search/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ide</title>
-      <link>https://aswinblue.github.io/Blog/tags/ide/</link>
-      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      <title>Shortest-Path</title>
+      <link>https://aswinblue.github.io/Blog/tags/shortest-path/</link>
+      <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/ide/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/shortest-path/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Productivity</title>
-      <link>https://aswinblue.github.io/Blog/tags/productivity/</link>
+      <title>C-Plus-Plus</title>
+      <link>https://aswinblue.github.io/Blog/tags/c-plus-plus/</link>
       <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/productivity/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/c-plus-plus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debugging</title>
+      <link>https://aswinblue.github.io/Blog/tags/debugging/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/debugging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development-Tips</title>
+      <link>https://aswinblue.github.io/Blog/tags/development-tips/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/development-tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mingw</title>
+      <link>https://aswinblue.github.io/Blog/tags/mingw/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/mingw/</guid>
       <description></description>
     </item>
     
@@ -1268,6 +1322,24 @@
     </item>
     
     <item>
+      <title>Algorithms</title>
+      <link>https://aswinblue.github.io/Blog/tags/algorithms/</link>
+      <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Priority-Queue</title>
+      <link>https://aswinblue.github.io/Blog/tags/priority-queue/</link>
+      <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/priority-queue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Stl</title>
       <link>https://aswinblue.github.io/Blog/tags/stl/</link>
       <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
@@ -1277,29 +1349,47 @@
     </item>
     
     <item>
-      <title>Vector</title>
-      <link>https://aswinblue.github.io/Blog/tags/vector/</link>
-      <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
+      <title>Batch-Script</title>
+      <link>https://aswinblue.github.io/Blog/tags/batch-script/</link>
+      <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/vector/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/batch-script/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Command-Line</title>
-      <link>https://aswinblue.github.io/Blog/tags/command-line/</link>
+      <title>Environment-Variables</title>
+      <link>https://aswinblue.github.io/Blog/tags/environment-variables/</link>
       <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/command-line/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/environment-variables/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Os-Settings</title>
-      <link>https://aswinblue.github.io/Blog/tags/os-settings/</link>
+      <title>Scp</title>
+      <link>https://aswinblue.github.io/Blog/tags/scp/</link>
       <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/os-settings/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/scp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wsl2</title>
+      <link>https://aswinblue.github.io/Blog/tags/wsl2/</link>
+      <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/wsl2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>https://aswinblue.github.io/Blog/tags/authentication/</link>
+      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/authentication/</guid>
       <description></description>
     </item>
     
@@ -1309,15 +1399,6 @@
       <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/baas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Realtime-Database</title>
-      <link>https://aswinblue.github.io/Blog/tags/realtime-database/</link>
-      <pubDate>Sat, 12 Feb 2022 19:32:34 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/realtime-database/</guid>
       <description></description>
     </item>
     
@@ -1363,15 +1444,6 @@
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/proof-of-work/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Authentication</title>
-      <link>https://aswinblue.github.io/Blog/tags/authentication/</link>
-      <pubDate>Wed, 19 Jan 2022 21:02:46 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/authentication/</guid>
       <description></description>
     </item>
     
@@ -1556,11 +1628,11 @@
     </item>
     
     <item>
-      <title>Enterprise</title>
-      <link>https://aswinblue.github.io/Blog/tags/enterprise/</link>
+      <title>Backend</title>
+      <link>https://aswinblue.github.io/Blog/tags/backend/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/enterprise/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/backend/</guid>
       <description></description>
     </item>
     
@@ -1570,6 +1642,15 @@
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/ioc-di/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://aswinblue.github.io/Blog/tags/maven/</link>
+      <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/maven/</guid>
       <description></description>
     </item>
     
@@ -1601,15 +1682,6 @@
     </item>
     
     <item>
-      <title>Maven</title>
-      <link>https://aswinblue.github.io/Blog/tags/maven/</link>
-      <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/maven/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Crawler</title>
       <link>https://aswinblue.github.io/Blog/tags/crawler/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
@@ -1619,11 +1691,11 @@
     </item>
     
     <item>
-      <title>Selenium</title>
-      <link>https://aswinblue.github.io/Blog/tags/selenium/</link>
+      <title>Regex</title>
+      <link>https://aswinblue.github.io/Blog/tags/regex/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/selenium/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/regex/</guid>
       <description></description>
     </item>
     
@@ -1637,11 +1709,20 @@
     </item>
     
     <item>
-      <title>Debugging</title>
-      <link>https://aswinblue.github.io/Blog/tags/debugging/</link>
+      <title>Xpath</title>
+      <link>https://aswinblue.github.io/Blog/tags/xpath/</link>
+      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/xpath/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gdb</title>
+      <link>https://aswinblue.github.io/Blog/tags/gdb/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/debugging/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/gdb/</guid>
       <description></description>
     </item>
     
@@ -1682,11 +1763,11 @@
     </item>
     
     <item>
-      <title>Cpp-Basics</title>
-      <link>https://aswinblue.github.io/Blog/tags/cpp-basics/</link>
+      <title>Cpp-Macro</title>
+      <link>https://aswinblue.github.io/Blog/tags/cpp-macro/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/cpp-basics/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/cpp-macro/</guid>
       <description></description>
     </item>
     
@@ -1700,11 +1781,29 @@
     </item>
     
     <item>
+      <title>Format-String</title>
+      <link>https://aswinblue.github.io/Blog/tags/format-string/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/format-string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Header-Only</title>
       <link>https://aswinblue.github.io/Blog/tags/header-only/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/header-only/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Io-Optimization</title>
+      <link>https://aswinblue.github.io/Blog/tags/io-optimization/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/io-optimization/</guid>
       <description></description>
     </item>
     
@@ -1727,29 +1826,11 @@
     </item>
     
     <item>
-      <title>Oop</title>
-      <link>https://aswinblue.github.io/Blog/tags/oop/</link>
-      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/oop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Parser</title>
       <link>https://aswinblue.github.io/Blog/tags/parser/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/parser/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://aswinblue.github.io/Blog/tags/programming/</link>
-      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/tags/programming/</guid>
       <description></description>
     </item>
     
@@ -1786,6 +1867,15 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/spdlog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Standard-Library</title>
+      <link>https://aswinblue.github.io/Blog/tags/standard-library/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/standard-library/</guid>
       <description></description>
     </item>
     
@@ -1952,29 +2042,47 @@
     </item>
     
     <item>
-      <title>Blogging</title>
-      <link>https://aswinblue.github.io/Blog/tags/blogging/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Blog-Theme</title>
+      <link>https://aswinblue.github.io/Blog/tags/blog-theme/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/blogging/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/blog-theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Katex</title>
+      <link>https://aswinblue.github.io/Blog/tags/katex/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/katex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
       <link>https://aswinblue.github.io/Blog/tags/markdown/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Shortcodes</title>
-      <link>https://aswinblue.github.io/Blog/tags/shortcodes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Mermaid</title>
+      <link>https://aswinblue.github.io/Blog/tags/mermaid/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/tags/shortcodes/</guid>
+      <guid>https://aswinblue.github.io/Blog/tags/mermaid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syntax</title>
+      <link>https://aswinblue.github.io/Blog/tags/syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/tags/syntax/</guid>
       <description></description>
     </item>
     

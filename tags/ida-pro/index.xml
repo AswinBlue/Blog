@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ida-Pro on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/ida-pro/</link>
+    <description>Recent content in Ida-Pro on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/ida-pro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>x86-64 리버스 엔지니어링: 정적·동적 바이너리 분석과 IDA 및 Ghidra 활용법</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-ida-ghidra-guide/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-ida-ghidra-guide/</guid>
+      <description>바이너리 역공학을 위한 정적 및 동적 분석 방법론과 대표적인 디컴파일러 도구인 IDA Pro와 Ghidra의 필수 단축키, 화면 구성, 윈도우 API 패턴 분석, 바이너리 패치 및 스크립트 자동화 기법을 체계적으로 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

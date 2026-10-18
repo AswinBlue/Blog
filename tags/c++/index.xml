@@ -13,7 +13,7 @@
       <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-unit-test-googletest-and-googlemock-guide/</guid>
-      <description>C&#43;&#43; 소프트웨어 품질 향상을 위한 단위 테스트의 기본 원칙과 Google Test(gtest) 및 Google Mock(gmock) 프레임워크의 테스트 픽스처, 매크로, 테스트 대역 기법을 상세히 정리합니다.</description>
+      <description>C&#43;&#43; 소프트웨어 품질 향상을 위한 단위 테스트(Unit Test)의 기본 원칙과 Google Test(gtest) 및 Google Mock(gmock) 프레임워크의 테스트 픽스처, 검증 매크로, 테스트 대역 기법을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</guid>
-      <description>C/C&#43;&#43; 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 원리와 Makefile의 타깃·의존성 구조, 변수 치환, 내장 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 정리합니다.</description>
+      <description>C/C&#43;&#43; 대규모 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 동작 원리와 Makefile 타깃·의존성 구조, 변수 치환, 내장 자동 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -35,12 +35,12 @@
     </item>
     
     <item>
-      <title>C&#43;&#43; STL 핵심 컨테이너와 알고리즘 라이브러리 활용 가이드</title>
+      <title>C&#43;&#43; STL 핵심 컨테이너 및 알고리즘 완벽 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-stl-containers-and-algorithms/</link>
       <pubDate>Tue, 12 Apr 2022 19:17:21 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-stl-containers-and-algorithms/</guid>
-      <description>vector, list, deque, map, set 등 C&#43;&#43; 표준 템플릿 라이브러리(STL)의 핵심 자료구조 동작 원리와 효율적인 알고리즘 활용법을 정리합니다.</description>
+      <description>C&#43;&#43; 표준 템플릿 라이브러리(STL)의 핵심 자료구조인 map, unordered_map(hash map), priority_queue(heap), tuple의 기본 사용법과 stable_sort 정렬 알고리즘 활용법을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</guid>
-      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 모드 활용법을 정리합니다.</description>
+      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석 기법, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 텍스트 모드 인터페이스 활용법을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-rapidjson-library-overview/</guid>
-      <description>C&#43;&#43; 환경에서 고성능 JSON 파싱과 직렬화를 위해 널리 사용되는 텐센트의 RapidJSON 라이브러리 주요 특징, 헤더 온리 구성의 편의성 및 파싱 속도 장점을 정리합니다.</description>
+      <description>C&#43;&#43; 환경에서 초고속 JSON 데이터 파싱과 직렬화를 구현하기 위해 널리 사용되는 텐센트의 오픈소스 RapidJSON 라이브러리 핵심 특징, 헤더 온리 구성의 편의성 및 벤치마크 파싱 속도 장점을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -67,25 +67,25 @@
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-logging-library/</guid>
-      <description>C&#43;&#43; 고성능 비동기 및 동기 로깅 프레임워크인 spdlog의 주요 특징(빠른 속도, 헤더 온리 지원, 무의존성 구조)과 C&#43;&#43; 프로젝트에서의 활용 방안 및 공식 참조 문헌을 정리합니다.</description>
+      <description>C&#43;&#43; 고성능 비동기 및 동기 로깅 프레임워크인 spdlog의 주요 특징(초고속 처리 속도, 헤더 온리 지원, 외부 무의존성 구조)과 C&#43;&#43; 프로젝트에서의 싱크 설정 활용 방안 및 공식 참조 문헌을 상세히 정리합니다.</description>
     </item>
     
     <item>
-      <title>C&#43;&#43; 핵심 문법과 객체 지향 프로그래밍(OOP) 기초 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-syntax-and-oop-fundamentals/</link>
+      <title>C&#43;&#43; 핵심 기초 문법 및 표준 입출력 최적화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-basics-and-io-optimization/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-syntax-and-oop-fundamentals/</guid>
-      <description>C&#43;&#43; 언어의 기본 문법부터 클래스 설계, 생성자와 소멸자, 상속과 다형성, 가상 함수 테이블(vtable)까지 객체 지향 프로그래밍의 핵심 개념을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-basics-and-io-optimization/</guid>
+      <description>C&#43;&#43; 프로그래밍의 기초가 되는 전처리기 매크로 문법과 조건부 컴파일, cin과 cout 속도 최적화 방법, 그리고 printf와 scanf를 비롯한 표준 라이브러리 입출력 포맷 스트링 제어 기법을 상세히 정리합니다.</description>
     </item>
     
     <item>
-      <title>CMake 기본 문법과 크로스 플랫폼 빌드 스크립트 작성 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</link>
+      <title>CMake 기본 사용법과 CMakeLists.txt 핵심 문법 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-syntax-guide/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</guid>
-      <description>CMakeLists.txt를 활용하여 C/C&#43;&#43; 프로젝트를 플랫폼 독립적으로 빌드하고 외부 라이브러리 종속성을 연결하는 핵심 작성법을 설명합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-syntax-guide/</guid>
+      <description>C/C&#43;&#43; 대규모 프로젝트 빌드 자동화를 위한 CMake 기본 개념과 빌드 디렉터리 구성, add_executable, add_subdirectory, message, add_definitions 등 CMakeLists.txt 핵심 명령어 문법을 정리합니다.</description>
     </item>
     
   </channel>

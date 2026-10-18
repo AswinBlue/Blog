@@ -13,16 +13,16 @@
       <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</guid>
-      <description>윈도우 실행 파일의 표준 포맷인 PE(Portable Executable) 구조(DOS Header, NT Header, Section Table)와 Win32 API 핸들 및 윈도우 프로시저를 분석합니다.</description>
+      <description>윈도우 운영체제의 실행 파일 표준 포맷인 PE(Portable Executable) 구조(DOS/NT 헤더, 섹션 테이블)와 가상 메모리 매핑 원리, 섹션별 접근 권한(RX, RW, R) 및 Win32 시스템 프로그래밍 기초를 총정리합니다.</description>
     </item>
     
     <item>
-      <title>Windows 환경 개발 생산성 향상을 위한 고급 설정 및 쉘 명령어 팁</title>
-      <link>https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/</link>
+      <title>Windows 개발자 꿀팁 모음: WSL2 설치, 환경변수 즉시 반영, 배치 call, SCP 전송</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/windows-dev-tips-wsl2-env-batch-scp/</link>
       <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/developtips/windows-development-productivity-tips/</guid>
-      <description>Windows Terminal, PowerShell 유용한 단축키, PATH 환경변수 빠른 편집 및 개발 친화적 윈도우 OS 튜닝 팁을 공유합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/developtips/windows-dev-tips-wsl2-env-batch-scp/</guid>
+      <description>Windows 개발 환경에서 유용한 필수 팁 모음입니다. WSL2 설치 및 파일 공유, 재부팅 없는 환경변수 즉시 갱신, 배치 스크립트 call 명령어, 원격 Linux와의 SCP 파일 전송 방법을 다룹니다.</description>
     </item>
     
   </channel>

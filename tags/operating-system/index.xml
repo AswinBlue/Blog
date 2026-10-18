@@ -8,21 +8,21 @@
     <language>en</language>
     <lastBuildDate>Mon, 10 Jul 2023 21:31:47 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>리눅스 기본 개념과 파일 시스템 계층 구조(FHS) 및 권한 관리 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</link>
+      <title>리눅스(Linux) 운영체제 기초: 역사와 커널 계층, i-node 파일 시스템 및 디렉터리 구조</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-os-fundamentals-architecture-filesystem/</link>
       <pubDate>Mon, 10 Jul 2023 21:31:47 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</guid>
-      <description>리눅스 커널과 쉘의 역할, FHS 표준 디렉터리 구조(/bin, /etc, /var), chmod/chown 파일 퍼미션 설정 및 심볼릭 링크 개념을 총정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-os-fundamentals-architecture-filesystem/</guid>
+      <description>유닉스(Unix)와 GNU 프로젝트에서 시작된 리눅스의 탄생 배경과 계층 구조, i-node 및 슈퍼블록 중심의 파일 시스템 원리, 리눅스 표준 FHS 디렉터리 역할 및 엔디안(Endianness) 개념까지 운영체제 기초를 총정리합니다.</description>
     </item>
     
     <item>
-      <title>컴퓨터 구조 및 운영체제 핵심 CS 기초 개념 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/computerscience/computer-science-architecture-and-os-fundamentals/</link>
+      <title>컴퓨터 시스템 핵심: CPU 메모리 세그먼트, x86-64 레지스터, ELF 컴파일과 ptmalloc</title>
+      <link>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</link>
       <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/computerscience/computer-science-architecture-and-os-fundamentals/</guid>
-      <description>폰 노이만 아키텍처, CPU 레지스터와 ALU, 메모리 계층 구조, 가상 메모리와 페이징 시스템 등 소프트웨어 엔지니어가 알아야 할 CS 기본기를 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</guid>
+      <description>CPU 메모리 세그먼트 구조, x86-64 레지스터 체계, SYSV 함수 호출 규약부터 C 언어 컴파일 과정(ELF/PLT/GOT) 및 Linux ptmalloc 메모리 관리 기법까지 핵심 원리를 정리합니다.</description>
     </item>
     
   </channel>

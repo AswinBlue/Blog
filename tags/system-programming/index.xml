@@ -13,7 +13,7 @@
       <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</guid>
-      <description>윈도우 실행 파일의 표준 포맷인 PE(Portable Executable) 구조(DOS Header, NT Header, Section Table)와 Win32 API 핸들 및 윈도우 프로시저를 분석합니다.</description>
+      <description>윈도우 운영체제의 실행 파일 표준 포맷인 PE(Portable Executable) 구조(DOS/NT 헤더, 섹션 테이블)와 가상 메모리 매핑 원리, 섹션별 접근 권한(RX, RW, R) 및 Win32 시스템 프로그래밍 기초를 총정리합니다.</description>
     </item>
     
     <item>
@@ -26,21 +26,21 @@
     </item>
     
     <item>
-      <title>리눅스 프로세스 생명주기(fork/exec) 및 시그널(Signal) 제어 기법</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</link>
+      <title>리눅스 프로세스(Process) 심층 분석: 생명주기, fork·exec·wait 원리와 데몬 프로세스 구현</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-management-daemon/</link>
       <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</guid>
-      <description>프로세스 생성과 종료, 좀비/고아 프로세스 방지, fork와 exec 시스템 콜의 차이, kill 및 trap을 통한 비동기 시그널 핸들링을 상세히 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-management-daemon/</guid>
+      <description>리눅스 프로세스의 메모리 구조와 생명주기, fork()와 exec 계열 시스템 콜의 동작 원리, Copy-on-Write(COW), 좀비 및 고아 프로세스 방지 기법, 프로세스 그룹과 세션 제어, 데몬(Daemon) 프로세스 생성 단계까지 완벽하게 정리합니다.</description>
     </item>
     
     <item>
-      <title>리눅스 시스템 프로그래밍: POSIX 저수준 파일 I/O 및 디스크립터 제어</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</link>
+      <title>리눅스 C 시스템 프로그래밍: 파일 I/O, 디스크립터(FD), stat 속성 및 링크 구조</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-c-system-programming-file-io-and-attributes/</link>
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</guid>
-      <description>open, read, write, close, lseek 시스템 콜과 파일 디스크립터(FD), 표준 I/O 버퍼링과의 차이점, 파일 오프셋 제어를 깊이 있게 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-c-system-programming-file-io-and-attributes/</guid>
+      <description>리눅스 C 시스템 프로그래밍의 기초인 표준 I/O 라이브러리와 저수준 시스템 콜의 차이, 파일 디스크립터(FD)와 dup 리다이렉션 원리, struct stat 기반 퍼미션 분석 및 하드·심볼릭 링크 동작 메커니즘을 상세히 다룹니다.</description>
     </item>
     
   </channel>

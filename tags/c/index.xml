@@ -6,23 +6,14 @@
     <description>Recent content in C on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 May 2024 16:02:25 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/c/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Windows PE 파일 구조 및 Win32 API 기반 윈도우 시스템 프로그래밍 기초</title>
-      <link>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</link>
-      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</guid>
-      <description>윈도우 실행 파일의 표준 포맷인 PE(Portable Executable) 구조(DOS Header, NT Header, Section Table)와 Win32 API 핸들 및 윈도우 프로시저를 분석합니다.</description>
-    </item>
-    
-    <item>
-      <title>리눅스 시스템 프로그래밍: POSIX 저수준 파일 I/O 및 디스크립터 제어</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</link>
+      <title>리눅스 C 시스템 프로그래밍: 파일 I/O, 디스크립터(FD), stat 속성 및 링크 구조</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-c-system-programming-file-io-and-attributes/</link>
       <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-system-programming-posix-file-io/</guid>
-      <description>open, read, write, close, lseek 시스템 콜과 파일 디스크립터(FD), 표준 I/O 버퍼링과의 차이점, 파일 오프셋 제어를 깊이 있게 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-c-system-programming-file-io-and-attributes/</guid>
+      <description>리눅스 C 시스템 프로그래밍의 기초인 표준 I/O 라이브러리와 저수준 시스템 콜의 차이, 파일 디스크립터(FD)와 dup 리다이렉션 원리, struct stat 기반 퍼미션 분석 및 하드·심볼릭 링크 동작 메커니즘을 상세히 다룹니다.</description>
     </item>
     
     <item>
@@ -31,7 +22,7 @@
       <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</guid>
-      <description>C/C&#43;&#43; 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 원리와 Makefile의 타깃·의존성 구조, 변수 치환, 내장 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 정리합니다.</description>
+      <description>C/C&#43;&#43; 대규모 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 동작 원리와 Makefile 타깃·의존성 구조, 변수 치환, 내장 자동 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -49,7 +40,7 @@
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</guid>
-      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 모드 활용법을 정리합니다.</description>
+      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석 기법, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 텍스트 모드 인터페이스 활용법을 상세히 정리합니다.</description>
     </item>
     
   </channel>

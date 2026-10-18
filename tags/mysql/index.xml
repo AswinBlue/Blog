@@ -22,7 +22,7 @@
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</guid>
-      <description>데이터베이스/테이블 생성, SELECT/INSERT/UPDATE/DELETE 핵심 질의문, 외래키 제약조건, 사용자 계정 생성과 GRANT 권한 부여 방법을 정리합니다.</description>
+      <description>오픈소스 RDBMS인 MySQL의 기본 접속부터 데이터베이스 및 테이블 정의(DDL), CRUD 데이터 조작(DML), 조인(JOIN)과 서브쿼리, 스토리지 엔진(InnoDB vs MyISAM) 및 사용자 권한(GRANT) 관리를 총정리합니다.</description>
     </item>
     
   </channel>

@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Sat, 09 Mar 2024 10:09:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/pwntools/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pwntools 라이브러리를 활용한 시스템 취약점 익스플로잇 자동화 스크립트 작성법</title>
+      <title>Pwntools 기초 및 활용법: 바이너리 익스플로잇 자동화, ROPgadget, one_gadget 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</link>
       <pubDate>Sat, 09 Mar 2024 10:09:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</guid>
-      <description>파이썬 Pwntools 모듈의 로컬/원격 프로세스 I/O 통신, 페이로드 패킹(p64/u64), ELF 바이너리 심볼 파싱 및 대화형 쉘 획득 기법을 정리합니다.</description>
+      <description>시스템 해킹 및 CTF 취약점 익스플로잇 작성을 위한 파이썬 Pwntools 라이브러리의 설치부터 로컬·원격 프로세스 I/O 제어, ELF 심볼 분석, ROPgadget과 one_gadget을 활용한 페이로드 자동화 기법을 총정리합니다.</description>
     </item>
     
   </channel>

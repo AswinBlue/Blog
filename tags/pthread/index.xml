@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Sun, 23 Jul 2023 15:05:46 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/pthread/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>POSIX pthread를 활용한 멀티스레드 프로그래밍 및 동기화(Mutex) 기법</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</link>
+      <title>리눅스 멀티스레드 프로그래밍: POSIX pthread 동기화, Mutex, 조건 변수 및 TSD</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-multithread-programming-pthread-mutex/</link>
       <pubDate>Sun, 23 Jul 2023 15:05:46 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/posix-pthread-multithreading-and-mutex/</guid>
-      <description>스레드 생성과 종료(pthread_create/join), 임계 영역 보호를 위한 뮤텍스(Mutex), 조건 변수(Condvar) 및 경쟁 상태(Race Condition) 방어법을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-multithread-programming-pthread-mutex/</guid>
+      <description>리눅스 환경에서 POSIX pthread 라이브러리를 활용한 멀티스레드 프로그래밍의 기초부터 스핀락·슬립락 등 뮤텍스(Mutex) 동기화 원리, 조건 변수(Condvar), 데드락 방지, 재진입성(Reentrant)과 TSD 활용법까지 체계적으로 다룹니다.</description>
     </item>
     
   </channel>

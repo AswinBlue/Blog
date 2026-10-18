@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>File-Descriptor on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/file-descriptor/</link>
+    <description>Recent content in File-Descriptor on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jul 2023 08:35:21 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/file-descriptor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 C 시스템 프로그래밍: 파일 I/O, 디스크립터(FD), stat 속성 및 링크 구조</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-c-system-programming-file-io-and-attributes/</link>
+      <pubDate>Sat, 15 Jul 2023 08:35:21 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-c-system-programming-file-io-and-attributes/</guid>
+      <description>리눅스 C 시스템 프로그래밍의 기초인 표준 I/O 라이브러리와 저수준 시스템 콜의 차이, 파일 디스크립터(FD)와 dup 리다이렉션 원리, struct stat 기반 퍼미션 분석 및 하드·심볼릭 링크 동작 메커니즘을 상세히 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

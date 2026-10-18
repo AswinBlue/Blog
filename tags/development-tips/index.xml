@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Development-Tips on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/development-tips/</link>
+    <description>Recent content in Development-Tips on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Apr 2022 09:07:48 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/development-tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VS Code에서 C/C&#43;&#43; 개발 환경 구축 및 디버깅 단축키 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/vscode-cpp-environment-settings-debug-guide/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/vscode-cpp-environment-settings-debug-guide/</guid>
+      <description>Visual Studio Code에서 MinGW/GCC 컴파일러 연동, settings.json, launch.json, tasks.json 설정 및 빌드/실행 단축키 커스텀까지 C/C&#43;&#43; 개발 환경을 완벽 구축하는 방법입니다.</description>
+    </item>
+    
+    <item>
+      <title>Windows 개발자 꿀팁 모음: WSL2 설치, 환경변수 즉시 반영, 배치 call, SCP 전송</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/windows-dev-tips-wsl2-env-batch-scp/</link>
+      <pubDate>Sat, 19 Mar 2022 08:29:51 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/windows-dev-tips-wsl2-env-batch-scp/</guid>
+      <description>Windows 개발 환경에서 유용한 필수 팁 모음입니다. WSL2 설치 및 파일 공유, 재부팅 없는 환경변수 즉시 갱신, 배치 스크립트 call 명령어, 원격 Linux와의 SCP 파일 전송 방법을 다룹니다.</description>
+    </item>
+    
+    <item>
+      <title>웹 스크래핑 핵심 가이드: XPath 문법, 정규표현식, User-Agent 차단 우회</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/web-scraping-xpath-regex-user-agent-guide/</link>
+      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/web-scraping-xpath-regex-user-agent-guide/</guid>
+      <description>효율적인 웹 데이터 수집을 위한 XPath 경로 탐색 문법, 데이터 정제를 위한 정규표현식(Regex) 핵심 패턴, 그리고 봇 차단 방지를 위한 User-Agent 헤더 설정 팁을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

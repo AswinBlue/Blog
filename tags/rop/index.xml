@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rop on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/rop/</link>
+    <description>Recent content in Rop on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2024 20:46:33 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/rop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 시스템 해킹과 메모리 커럽션 익스플로잇 기법 총정리: BOF, ROP, Heap, Format String</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/linux-system-hacking-memory-corruption-exploit-guide/</link>
+      <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/linux-system-hacking-memory-corruption-exploit-guide/</guid>
+      <description>리눅스 바이너리 보안 및 시스템 해킹을 위한 스택 버퍼 오버플로우(BOF), ROP 가젯 체이닝, Hook Overwrite, 포맷 스트링 버그(FSB), Heap Tcache 오염, SROP 및 SECCOMP 우회 공격 기법과 방어 메커니즘을 심층 분석합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

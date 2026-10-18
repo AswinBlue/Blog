@@ -6,23 +6,14 @@
     <description>Recent content in Gdb on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
-      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
-      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 23 Aug 2021 18:49:15 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GDB 디버거 기본 사용법과 핵심 명령어 총정리</title>
       <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</link>
       <pubDate>Mon, 23 Aug 2021 18:49:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gdb-debugger-basics-and-commands/</guid>
-      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 모드 활용법을 정리합니다.</description>
+      <description>리눅스 환경에서 C/C&#43;&#43; 프로그램 디버깅을 위한 GNU Debugger(GDB)의 핵심 개념, coredump 분석 기법, 중단점 설정, 메모리 및 레지스터 검사 명령어와 TUI 텍스트 모드 인터페이스 활용법을 상세히 정리합니다.</description>
     </item>
     
   </channel>

@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Sun, 24 Apr 2022 18:16:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>핵심 알고리즘 및 시간 복잡도(Big-O) 분석 총정리 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/algorithm/algorithms-data-structures-and-big-o-complexity/</link>
+      <title>알고리즘 문제 해결 전략: 그래프 최단경로, 배낭 DP, 듀얼 힙과 규칙 탐색</title>
+      <link>https://aswinblue.github.io/Blog/post/algorithm/algorithm-shortest-path-knapsack-dp-dual-heap/</link>
       <pubDate>Sun, 24 Apr 2022 18:16:23 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/algorithm/algorithms-data-structures-and-big-o-complexity/</guid>
-      <description>정렬(Quick, Merge), 이진 탐색, 그래프 순회(DFS/BFS), 동적 계획법(DP)의 동작 원리와 공간/시간 복잡도 계산법을 체계적으로 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/algorithm/algorithm-shortest-path-knapsack-dp-dual-heap/</guid>
+      <description>코딩 테스트와 기술 면접을 위한 핵심 알고리즘 가이드입니다. DFS/BFS, 다익스트라 최단 경로, 0-1 배낭 문제 동적 계획법(DP), 듀얼 힙을 이용한 중앙값 탐색 및 규칙 발견 기법을 정리합니다.</description>
     </item>
     
   </channel>

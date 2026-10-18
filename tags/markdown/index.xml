@@ -6,14 +6,14 @@
     <description>Recent content in Markdown on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 마크다운 포스트 서식 및 Shortcode 문법 샘플 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Hugo 마크다운 문법 및 HTML 서식 완벽 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-formatting-guide/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</guid>
-      <description>PaperMod 테마에서 지원하는 코드 블록 하이라이팅, 접기(collapse), 테이블, 이미지 캡션 및 인아티클 광고 Shortcode 작성 문법 샘플입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-formatting-guide/</guid>
+      <description>Hugo 정적 블로그에서 지원하는 마크다운(Markdown) 기본 문법과 HTML 요소 서식, 코드 하이라이트, KaTeX 수식 및 Mermaid 다이어그램 렌더링 가이드입니다.</description>
     </item>
     
   </channel>

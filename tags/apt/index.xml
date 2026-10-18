@@ -13,7 +13,7 @@
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</guid>
-      <description>우분투(Ubuntu) 리눅스 환경에서 파이썬 바이너리 삭제나 의존성 충돌로 인해 발생하는 dpkg errorcode(1) 오류의 원인을 분석하고, /var/lib/dpkg/info 손상 파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 상세히 안내합니다.</description>
+      <description>우분투(Ubuntu) 환경에서 파이썬 바이너리 삭제로 인한 dpkg errorcode(1) 오류 원인을 분석하고, /var/lib/dpkg/info 손상 메타파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 안내합니다.</description>
     </item>
     
   </channel>

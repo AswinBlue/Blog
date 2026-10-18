@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Mon, 23 Aug 2021 19:00:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python BeautifulSoup 및 Selenium 웹 스크래핑 크롤러 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</link>
+      <title>웹 스크래핑 핵심 가이드: XPath 문법, 정규표현식, User-Agent 차단 우회</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/web-scraping-xpath-regex-user-agent-guide/</link>
       <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</guid>
-      <description>정적 HTML 파싱을 위한 BeautifulSoup4와 자바스크립트 동적 렌더링 수집을 위한 Selenium 웹 드라이버 활용법 및 차단 우회 팁을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/developtips/web-scraping-xpath-regex-user-agent-guide/</guid>
+      <description>효율적인 웹 데이터 수집을 위한 XPath 경로 탐색 문법, 데이터 정제를 위한 정규표현식(Regex) 핵심 패턴, 그리고 봇 차단 방지를 위한 User-Agent 헤더 설정 팁을 정리합니다.</description>
     </item>
     
   </channel>

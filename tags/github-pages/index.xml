@@ -6,7 +6,16 @@
     <description>Recent content in Github-Pages on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2024 21:12:32 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jul 2025 22:20:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions를 활용한 React 앱 GitHub Pages 자동 빌드 및 배포 파이프라인</title>
+      <link>https://aswinblue.github.io/Blog/post/git/github-actions-react-gh-pages-deploy-pipeline/</link>
+      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/git/github-actions-react-gh-pages-deploy-pipeline/</guid>
+      <description>React 웹 애플리케이션을 GitHub Actions CI/CD 파이프라인을 통해 외부 배포 저장소의 GitHub Pages로 자동 빌드 및 배포하는 단계별 설정과 트러블슈팅 가이드입니다.</description>
+    </item>
+    
     <item>
       <title>Flutter 기반 텍스트 단어 슬라이더 &#39;FlickThrough&#39; 개발 및 배포기</title>
       <link>https://aswinblue.github.io/Blog/post/projects/flutter-flick-through-speed-reader-app/</link>

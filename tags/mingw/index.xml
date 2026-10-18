@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mingw on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/mingw/</link>
+    <description>Recent content in Mingw on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Apr 2022 09:07:48 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/mingw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VS Code에서 C/C&#43;&#43; 개발 환경 구축 및 디버깅 단축키 설정 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/developtips/vscode-cpp-environment-settings-debug-guide/</link>
+      <pubDate>Sat, 16 Apr 2022 09:07:48 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/developtips/vscode-cpp-environment-settings-debug-guide/</guid>
+      <description>Visual Studio Code에서 MinGW/GCC 컴파일러 연동, settings.json, launch.json, tasks.json 설정 및 빌드/실행 단축키 커스텀까지 C/C&#43;&#43; 개발 환경을 완벽 구축하는 방법입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

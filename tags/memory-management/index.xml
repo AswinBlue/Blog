@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memory-Management on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/memory-management/</link>
+    <description>Recent content in Memory-Management on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Jan 2023 21:59:14 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/memory-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>컴퓨터 시스템 핵심: CPU 메모리 세그먼트, x86-64 레지스터, ELF 컴파일과 ptmalloc</title>
+      <link>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</link>
+      <pubDate>Thu, 19 Jan 2023 21:59:14 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/computerscience/computer-science-cpu-memory-compile-ptmalloc/</guid>
+      <description>CPU 메모리 세그먼트 구조, x86-64 레지스터 체계, SYSV 함수 호출 규약부터 C 언어 컴파일 과정(ELF/PLT/GOT) 및 Linux ptmalloc 메모리 관리 기법까지 핵심 원리를 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

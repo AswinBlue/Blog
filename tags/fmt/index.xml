@@ -13,7 +13,7 @@
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/golang/golang-environment-setup-and-fmt-printf/</guid>
-      <description>Go(Golang) 개발 환경 구축을 위한 설치 및 기본 작업 공간(GOPATH) 구조를 알아보고, fmt 패키지의 printf 서식 지정자(%v, %&#43;v)를 활용한 구조체와 변수 출력 문법을 정리합니다.</description>
+      <description>Go(Golang) 개발 환경 구축을 위한 설치 과정과 기본 작업 공간(GOPATH 및 Go Modules) 구조를 살펴보고, fmt 패키지의 printf 서식 지정자(%v, %&#43;v, %#v)를 활용한 변수 출력 문법을 상세히 정리합니다.</description>
     </item>
     
   </channel>

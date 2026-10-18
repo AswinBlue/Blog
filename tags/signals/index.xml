@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Tue, 18 Jul 2023 20:15:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/signals/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>리눅스 프로세스 생명주기(fork/exec) 및 시그널(Signal) 제어 기법</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</link>
+      <title>리눅스 프로세스(Process) 심층 분석: 생명주기, fork·exec·wait 원리와 데몬 프로세스 구현</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-management-daemon/</link>
       <pubDate>Tue, 18 Jul 2023 20:15:29 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-fork-exec-signals/</guid>
-      <description>프로세스 생성과 종료, 좀비/고아 프로세스 방지, fork와 exec 시스템 콜의 차이, kill 및 trap을 통한 비동기 시그널 핸들링을 상세히 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-process-lifecycle-management-daemon/</guid>
+      <description>리눅스 프로세스의 메모리 구조와 생명주기, fork()와 exec 계열 시스템 콜의 동작 원리, Copy-on-Write(COW), 좀비 및 고아 프로세스 방지 기법, 프로세스 그룹과 세션 제어, 데몬(Daemon) 프로세스 생성 단계까지 완벽하게 정리합니다.</description>
     </item>
     
   </channel>

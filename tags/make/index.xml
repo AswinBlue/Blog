@@ -13,7 +13,7 @@
       <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</guid>
-      <description>C/C&#43;&#43; 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 원리와 Makefile의 타깃·의존성 구조, 변수 치환, 내장 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 정리합니다.</description>
+      <description>C/C&#43;&#43; 대규모 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 동작 원리와 Makefile 타깃·의존성 구조, 변수 치환, 내장 자동 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 상세히 정리합니다.</description>
     </item>
     
   </channel>

@@ -6,23 +6,14 @@
     <description>Recent content in Backend on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 19:21:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/backend/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</link>
-      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
-      <description>스프링 부트의 자동 구성(Auto-Configuration), Starter 의존성, Gradle 빌드 도구, JPA 리포지토리 연동 및 프로덕션 JAR 배포 절차를 총정리합니다.</description>
-    </item>
-    
-    <item>
-      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 AOP</title>
-      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</link>
+      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 CLI 환경 구축</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-cli-setup-guide/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</guid>
-      <description>엔터프라이즈 자바 개발의 핵심인 스프링 컨테이너(ApplicationContext), 빈(Bean) 생명주기, 컴포넌트 스캔 및 관점 지향 프로그래밍(AOP)의 원리를 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-cli-setup-guide/</guid>
+      <description>자바 엔터프라이즈 개발의 표준인 Spring 프레임워크의 IoC(제어의 역전)와 DI(의존성 주입), ApplicationContext 빈 관리, Spring CLI 프로젝트 생성 및 Maven/Gradle 빌드 설정을 체계적으로 정리합니다.</description>
     </item>
     
     <item>
@@ -40,7 +31,7 @@
       <pubDate>Thu, 02 Jul 2020 20:29:29 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</guid>
-      <description>데이터베이스/테이블 생성, SELECT/INSERT/UPDATE/DELETE 핵심 질의문, 외래키 제약조건, 사용자 계정 생성과 GRANT 권한 부여 방법을 정리합니다.</description>
+      <description>오픈소스 RDBMS인 MySQL의 기본 접속부터 데이터베이스 및 테이블 정의(DDL), CRUD 데이터 조작(DML), 조인(JOIN)과 서브쿼리, 스토리지 엔진(InnoDB vs MyISAM) 및 사용자 권한(GRANT) 관리를 총정리합니다.</description>
     </item>
     
     <item>

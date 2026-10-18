@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Standard-Library on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/standard-library/</link>
+    <description>Recent content in Standard-Library on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/standard-library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; 핵심 기초 문법 및 표준 입출력 최적화 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-basics-and-io-optimization/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-basics-and-io-optimization/</guid>
+      <description>C&#43;&#43; 프로그래밍의 기초가 되는 전처리기 매크로 문법과 조건부 컴파일, cin과 cout 속도 최적화 방법, 그리고 printf와 scanf를 비롯한 표준 라이브러리 입출력 포맷 스트링 제어 기법을 상세히 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

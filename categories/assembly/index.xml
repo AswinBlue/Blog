@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Wed, 21 Feb 2024 20:10:48 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/assembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>x86-64 어셈블리어 기초 문법: 범용 레지스터, 명령어 세트 및 스택 분석</title>
-      <link>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-registers-instructions-stack/</link>
+      <title>x86-64 어셈블리어 기초: 핵심 명령어, 레지스터 구조, 스택 프레임 및 바이너리 빌드</title>
+      <link>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-instructions-registers-stack-frame/</link>
       <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-registers-instructions-stack/</guid>
-      <description>RAX, RBX, RSP, RBP 등 64비트 레지스터 구조와 MOV, LEA, PUSH, POP, CALL 등 핵심 어셈블리 명령어 및 함수 호출 규약(Calling Convention)을 총정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-instructions-registers-stack-frame/</guid>
+      <description>x86-64 아키텍처 기반 어셈블리어의 핵심 명령어(mov, lea, push, pop), 범용 및 세그먼트 레지스터 구조, 함수 프롤로그/에필로그 스택 프레임 및 카나리 원리, nasm을 활용한 바이너리 컴파일 과정을 총정리합니다.</description>
     </item>
     
   </channel>

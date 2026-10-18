@@ -8,21 +8,21 @@
     <language>en</language>
     <lastBuildDate>Mon, 11 Mar 2024 20:46:33 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/system-hacking/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>리눅스 시스템 해킹과 메모리 커럽션(Buffer Overflow) 공격 기법 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</link>
+      <title>리눅스 시스템 해킹과 메모리 커럽션 익스플로잇 기법 총정리: BOF, ROP, Heap, Format String</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/linux-system-hacking-memory-corruption-exploit-guide/</link>
       <pubDate>Mon, 11 Mar 2024 20:46:33 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/system-hacking-memory-corruption-bof-exploit/</guid>
-      <description>스택 기반 버퍼 오버플로우(BOF), 셸코드 주입, RTL(Return-to-Libc), ROP 가젯 체이닝 원리와 ASLR/NX 보안 방어 기법을 심층 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/linux-system-hacking-memory-corruption-exploit-guide/</guid>
+      <description>리눅스 바이너리 보안 및 시스템 해킹을 위한 스택 버퍼 오버플로우(BOF), ROP 가젯 체이닝, Hook Overwrite, 포맷 스트링 버그(FSB), Heap Tcache 오염, SROP 및 SECCOMP 우회 공격 기법과 방어 메커니즘을 심층 분석합니다.</description>
     </item>
     
     <item>
-      <title>Pwntools 라이브러리를 활용한 시스템 취약점 익스플로잇 자동화 스크립트 작성법</title>
+      <title>Pwntools 기초 및 활용법: 바이너리 익스플로잇 자동화, ROPgadget, one_gadget 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</link>
       <pubDate>Sat, 09 Mar 2024 10:09:44 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/systemhacking/pwntools-python-exploit-scripting-guide/</guid>
-      <description>파이썬 Pwntools 모듈의 로컬/원격 프로세스 I/O 통신, 페이로드 패킹(p64/u64), ELF 바이너리 심볼 파싱 및 대화형 쉘 획득 기법을 정리합니다.</description>
+      <description>시스템 해킹 및 CTF 취약점 익스플로잇 작성을 위한 파이썬 Pwntools 라이브러리의 설치부터 로컬·원격 프로세스 I/O 제어, ELF 심볼 분석, ROPgadget과 one_gadget을 활용한 페이로드 자동화 기법을 총정리합니다.</description>
     </item>
     
   </channel>

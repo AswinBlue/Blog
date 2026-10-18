@@ -13,7 +13,7 @@
       <pubDate>Thu, 09 Sep 2021 18:43:28 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/</guid>
-      <description>파이썬으로 윈도우, 안드로이드, iOS용 GUI 앱을 제작하는 Kivy의 위젯 레이아웃 시스템, 이벤트 바인딩, KV 언어 문법 및 빌드 절차를 다룹니다.</description>
+      <description>파이썬 기반 크로스 플랫폼 GUI 프레임워크인 Kivy의 핵심 아키텍처, KV 언어 선언 문법, 다양한 레이아웃(BoxLayout, GridLayout, StackLayout)과 위젯 배치, 크기/위치 힌트(size_hint, pos_hint) 활용법을 정리합니다.</description>
     </item>
     
   </channel>

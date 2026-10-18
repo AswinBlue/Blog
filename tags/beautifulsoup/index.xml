@@ -16,14 +16,5 @@
       <description>BeautifulSoup 기반 Python 웹 스크래퍼 Delver를 Docker 이미지로 빌드하고, AWS ECR/Lambda와 GitHub Actions를 통해 매일 자동 실행되도록 구현한 서버리스 구축기입니다.</description>
     </item>
     
-    <item>
-      <title>Python BeautifulSoup 및 Selenium 웹 스크래핑 크롤러 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</link>
-      <pubDate>Mon, 23 Aug 2021 19:00:44 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</guid>
-      <description>정적 HTML 파싱을 위한 BeautifulSoup4와 자바스크립트 동적 렌더링 수집을 위한 Selenium 웹 드라이버 활용법 및 차단 우회 팁을 정리합니다.</description>
-    </item>
-    
   </channel>
 </rss>

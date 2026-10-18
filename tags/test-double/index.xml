@@ -13,7 +13,7 @@
       <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-unit-test-googletest-and-googlemock-guide/</guid>
-      <description>C&#43;&#43; 소프트웨어 품질 향상을 위한 단위 테스트의 기본 원칙과 Google Test(gtest) 및 Google Mock(gmock) 프레임워크의 테스트 픽스처, 매크로, 테스트 대역 기법을 상세히 정리합니다.</description>
+      <description>C&#43;&#43; 소프트웨어 품질 향상을 위한 단위 테스트(Unit Test)의 기본 원칙과 Google Test(gtest) 및 Google Mock(gmock) 프레임워크의 테스트 픽스처, 검증 매크로, 테스트 대역 기법을 상세히 정리합니다.</description>
     </item>
     
   </channel>

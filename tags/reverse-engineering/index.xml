@@ -6,23 +6,23 @@
     <description>Recent content in Reverse-Engineering on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 16:02:25 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
-      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
+      <title>Windows PE 파일 구조 및 Win32 API 기반 윈도우 시스템 프로그래밍 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</link>
+      <pubDate>Sun, 12 May 2024 16:02:25 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
-      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/windowapp/windows-pe-format-and-win32-system-programming/</guid>
+      <description>윈도우 운영체제의 실행 파일 표준 포맷인 PE(Portable Executable) 구조(DOS/NT 헤더, 섹션 테이블)와 가상 메모리 매핑 원리, 섹션별 접근 권한(RX, RW, R) 및 Win32 시스템 프로그래밍 기초를 총정리합니다.</description>
     </item>
     
     <item>
-      <title>x86-64 어셈블리어 기초 문법: 범용 레지스터, 명령어 세트 및 스택 분석</title>
-      <link>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-registers-instructions-stack/</link>
-      <pubDate>Wed, 21 Feb 2024 20:10:48 +0900</pubDate>
+      <title>x86-64 리버스 엔지니어링: 정적·동적 바이너리 분석과 IDA 및 Ghidra 활용법</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-ida-ghidra-guide/</link>
+      <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/assembly/x86-64-assembly-registers-instructions-stack/</guid>
-      <description>RAX, RBX, RSP, RBP 등 64비트 레지스터 구조와 MOV, LEA, PUSH, POP, CALL 등 핵심 어셈블리 명령어 및 함수 호출 규약(Calling Convention)을 총정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-ida-ghidra-guide/</guid>
+      <description>바이너리 역공학을 위한 정적 및 동적 분석 방법론과 대표적인 디컴파일러 도구인 IDA Pro와 Ghidra의 필수 단축키, 화면 구성, 윈도우 API 패턴 분석, 바이너리 패치 및 스크립트 자동화 기법을 체계적으로 정리합니다.</description>
     </item>
     
   </channel>

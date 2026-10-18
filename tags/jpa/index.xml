@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jpa on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/jpa/</link>
+    <description>Recent content in Jpa on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 May 2022 19:20:23 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/jpa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 실전 프로젝트: Gradle 빌드, REST API 구축 및 배포 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</link>
+      <pubDate>Mon, 30 May 2022 19:20:23 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-boot-gradle-rest-api-production-guide/</guid>
+      <description>스프링 부트(Spring Boot)의 자동 구성(Auto-Configuration) 원리와 application.yml 설정, Gradle 멀티태스크 빌드, Spring Data JPA와 H2 연동, RESTful 컨트롤러 및 스케줄러 구현을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

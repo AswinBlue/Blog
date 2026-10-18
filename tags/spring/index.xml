@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Mon, 23 Aug 2021 19:21:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 AOP</title>
-      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</link>
+      <title>Spring 프레임워크 핵심 개념: IoC 제어의 역전, DI 의존성 주입 및 CLI 환경 구축</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-cli-setup-guide/</link>
       <pubDate>Mon, 23 Aug 2021 19:21:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-aop-core/</guid>
-      <description>엔터프라이즈 자바 개발의 핵심인 스프링 컨테이너(ApplicationContext), 빈(Bean) 생명주기, 컴포넌트 스캔 및 관점 지향 프로그래밍(AOP)의 원리를 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/webserver/spring-framework-ioc-di-and-cli-setup-guide/</guid>
+      <description>자바 엔터프라이즈 개발의 표준인 Spring 프레임워크의 IoC(제어의 역전)와 DI(의존성 주입), ApplicationContext 빈 관리, Spring CLI 프로젝트 생성 및 Maven/Gradle 빌드 설정을 체계적으로 정리합니다.</description>
     </item>
     
   </channel>

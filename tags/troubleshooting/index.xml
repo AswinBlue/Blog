@@ -6,7 +6,16 @@
     <description>Recent content in Troubleshooting on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 Jul 2022 11:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 20:03:24 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VirtualBox 우분투 가상머신 root 비밀번호 재설정 및 복구 모드 진입 방법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/virtualbox-ubuntu-root-password-reset-recovery/</link>
+      <pubDate>Sun, 02 Jul 2023 20:03:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/virtualbox-ubuntu-root-password-reset-recovery/</guid>
+      <description>VirtualBox에 설치된 우분투(Ubuntu) 가상머신에서 기본 사용자 계정의 sudo 권한 부재 시, GRUB 리커버리 모드로 부팅하여 root 쉘 프롬프트에서 비밀번호를 안전하게 재설정하고 관리자 권한을 복구하는 절차를 정리합니다.</description>
+    </item>
+    
     <item>
       <title>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</title>
       <link>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</link>
@@ -40,7 +49,7 @@
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</guid>
-      <description>우분투(Ubuntu) 리눅스 환경에서 파이썬 바이너리 삭제나 의존성 충돌로 인해 발생하는 dpkg errorcode(1) 오류의 원인을 분석하고, /var/lib/dpkg/info 손상 파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 상세히 안내합니다.</description>
+      <description>우분투(Ubuntu) 환경에서 파이썬 바이너리 삭제로 인한 dpkg errorcode(1) 오류 원인을 분석하고, /var/lib/dpkg/info 손상 메타파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 안내합니다.</description>
     </item>
     
   </channel>

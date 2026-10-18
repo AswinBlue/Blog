@@ -6,16 +6,7 @@
     <description>Recent content in DevOps on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Jul 2025 22:20:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/devops/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>GitHub Actions CI/CD 파이프라인 구축 및 자동화 워크플로우 실전 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/git/github-actions-ci-cd-pipeline-automation-guide/</link>
-      <pubDate>Sat, 19 Jul 2025 22:20:09 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/git/github-actions-ci-cd-pipeline-automation-guide/</guid>
-      <description>이벤트 트리거, 잡(Job)과 스텝(Step) 구성, secrets 환경변수 주입, 캐싱 액션을 활용한 빌드 속도 개선 및 자동 배포 파이프라인 구축법을 다룹니다.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 09 Jul 2022 11:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git core.autocrlf 설정과 윈도우·리눅스 개행 문자(CRLF/LF) 충돌 해결법</title>
       <link>https://aswinblue.github.io/Blog/post/git/git-core-autocrlf-newline-troubleshooting/</link>
@@ -59,15 +50,6 @@
       
       <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/</guid>
       <description>Go 및 Hugo Extended 버전 호환성 에러 해결, PaperMod 테마 커스텀, Google AdSense/AdFit 광고 슬롯 배치, GitHub Pages 자동 배포 CI/CD 파이프라인 구축 실전 가이드입니다.</description>
-    </item>
-    
-    <item>
-      <title>Hugo 마크다운 포스트 서식 및 Shortcode 문법 샘플 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/hugo/hugo-markdown-syntax-and-shortcodes-sample/</guid>
-      <description>PaperMod 테마에서 지원하는 코드 블록 하이라이팅, 접기(collapse), 테이블, 이미지 캡션 및 인아티클 광고 Shortcode 작성 문법 샘플입니다.</description>
     </item>
     
   </channel>

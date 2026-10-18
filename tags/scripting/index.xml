@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Scripting on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/scripting/</link>
+    <description>Recent content in Scripting on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 18:29:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/scripting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 Bash 셸 스크립트 프로그래밍 기초: 권한 설정, Shebang, 매개변수와 디버깅</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-script-programming-basics/</link>
+      <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-script-programming-basics/</guid>
+      <description>리눅스 환경에서 반복 작업을 자동화하기 위한 Bash 셸 스크립트(.sh) 기본 작성법과 chmod 실행 권한 부여, Shebang(#!/bin/bash)의 역할, 위치 매개변수($#, $@, $1), 디버깅 플래그(set -e, set -x) 활용법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

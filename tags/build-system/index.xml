@@ -13,16 +13,16 @@
       <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</guid>
-      <description>C/C&#43;&#43; 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 원리와 Makefile의 타깃·의존성 구조, 변수 치환, 내장 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 정리합니다.</description>
+      <description>C/C&#43;&#43; 대규모 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 동작 원리와 Makefile 타깃·의존성 구조, 변수 치환, 내장 자동 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 상세히 정리합니다.</description>
     </item>
     
     <item>
-      <title>CMake 기본 문법과 크로스 플랫폼 빌드 스크립트 작성 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</link>
+      <title>CMake 기본 사용법과 CMakeLists.txt 핵심 문법 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-syntax-guide/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-cross-platform-build/</guid>
-      <description>CMakeLists.txt를 활용하여 C/C&#43;&#43; 프로젝트를 플랫폼 독립적으로 빌드하고 외부 라이브러리 종속성을 연결하는 핵심 작성법을 설명합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cmake-basics-and-syntax-guide/</guid>
+      <description>C/C&#43;&#43; 대규모 프로젝트 빌드 자동화를 위한 CMake 기본 개념과 빌드 디렉터리 구성, add_executable, add_subdirectory, message, add_definitions 등 CMakeLists.txt 핵심 명령어 문법을 정리합니다.</description>
     </item>
     
   </channel>

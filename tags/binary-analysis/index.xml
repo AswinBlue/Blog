@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Sun, 12 May 2024 14:42:07 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/binary-analysis/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>x86-64 리버스 엔지니어링: 바이너리 정적/동적 분석 및 스택 프레임 분석</title>
-      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</link>
+      <title>x86-64 리버스 엔지니어링: 정적·동적 바이너리 분석과 IDA 및 Ghidra 활용법</title>
+      <link>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-ida-ghidra-guide/</link>
       <pubDate>Sun, 12 May 2024 14:42:07 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-binary-analysis/</guid>
-      <description>컴파일된 ELF 바이너리를 Ghidra, IDA, GDB로 역공학 분석하고 C언어 소스코드로 디컴파일 및 제어 흐름을 복원하는 핵심 방법론을 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/systemhacking/x86-64-reverse-engineering-ida-ghidra-guide/</guid>
+      <description>바이너리 역공학을 위한 정적 및 동적 분석 방법론과 대표적인 디컴파일러 도구인 IDA Pro와 Ghidra의 필수 단축키, 화면 구성, 윈도우 API 패턴 분석, 바이너리 패치 및 스크립트 자동화 기법을 체계적으로 정리합니다.</description>
     </item>
     
   </channel>

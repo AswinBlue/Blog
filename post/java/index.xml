@@ -13,7 +13,7 @@
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/java/java-jython-integration-guide/</guid>
-      <description>Java 가상 머신(JVM) 상에서 Python 코드를 실행할 수 있는 Jython 라이브러리의 Maven 의존성 설정 방법과 PythonInterpreter를 활용한 스크립트 실행 절차를 정리합니다.</description>
+      <description>Java 가상 머신(JVM) 상에서 Python 코드를 원활하게 실행할 수 있는 Jython 라이브러리의 Maven 의존성(pom.xml) 설정 방법과 PythonInterpreter를 활용한 스크립트 실행 절차를 상세히 정리합니다.</description>
     </item>
     
   </channel>
