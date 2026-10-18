@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Command-Injection on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/command-injection/</link>
+    <description>Recent content in Command-Injection on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 20:54:59 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/command-injection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 취약점 분석과 SQL Injection, XSS 및 인젝션 공격 메커니즘 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-xss-exploit-guide/</link>
+      <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-xss-exploit-guide/</guid>
+      <description>웹 취약점의 유형별 분류(SQL/NoSQL 인젝션, XSS, CSRF, SSRF, 커맨드 인젝션, 파일 취약점)와 실전 공격 메커니즘, Python 자동화 PoC 및 시큐어 코딩 방어 기법을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -34,12 +34,12 @@
     </item>
     
     <item>
-      <title>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</link>
+      <title>React와 Tailwind CSS로 만든 올인원 웹 개발자 유틸리티 &#39;DevTool&#39; 개발기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</link>
       <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</guid>
-      <description>Base64, JSON 포맷터, URL 인코더, 해시 생성기 등 개발에 필요한 편의 기능을 단일 웹 인터페이스로 제공하는 React 기반 웹 툴 제작기입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</guid>
+      <description>React와 Tailwind CSS를 활용해 클라이언트 사이드에서 안전하게 인코딩, 포맷팅, Diff 체크를 지원하는 올인원 웹 개발자 유틸리티 &amp;#39;DevTool&amp;#39;의 아키텍처와 최적화 기록입니다.</description>
     </item>
     
     <item>
@@ -52,21 +52,21 @@
     </item>
     
     <item>
-      <title>웹 취약점 분석과 SQL Injection 및 XSS 공격 메커니즘 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</link>
+      <title>웹 취약점 분석과 SQL Injection, XSS 및 인젝션 공격 메커니즘 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-xss-exploit-guide/</link>
       <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-and-xss/</guid>
-      <description>Error-based, Blind SQL 인젝션 공격 기법과 Stored/Reflected XSS 취약점 분석, 그리고 Prepared Statements를 통한 방어 대책을 체계적으로 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-xss-exploit-guide/</guid>
+      <description>웹 취약점의 유형별 분류(SQL/NoSQL 인젝션, XSS, CSRF, SSRF, 커맨드 인젝션, 파일 취약점)와 실전 공격 메커니즘, Python 자동화 PoC 및 시큐어 코딩 방어 기법을 총정리합니다.</description>
     </item>
     
     <item>
-      <title>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</link>
+      <title>Python yt-dlp와 FFmpeg를 활용한 YouTube 재생목록 음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</link>
       <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</guid>
-      <description>pytube 라이브러리와 PyQt를 활용하여 유튜브 동영상 및 음원 추출을 안전하고 직관적으로 처리하는 데스크톱 다운로더 유틸리티 제작기입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</guid>
+      <description>Windows 환경에서 Python yt-dlp 라이브러리와 FFmpeg를 활용하여 YouTube 재생목록의 음원을 MP3로 일괄 추출하고 중복 다운로드를 방지하는 자동화 스크립트 구현기입니다.</description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@
       <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</guid>
-      <description>상태 유지를 위한 쿠키와 세션의 차이점, 브라우저 스토리지 비교, XSS 및 CSRF 공격을 방어하기 위한 HttpOnly, Secure, SameSite 플래그 설정을 다룹니다.</description>
+      <description>무상태 프로토콜인 HTTP에서 상태 유지를 위한 쿠키(Cookie)와 세션(Session)의 동작 메커니즘, 보안 플래그(HttpOnly, Secure, SameSite), SOP와 CORS 정책 및 보호 기법을 총정리합니다.</description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@
       <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</guid>
-      <description>URL 입력부터 DNS 조회, TCP 핸드셰이크, HTML/CSS 파싱, DOM/CSSOM 트리 구축, 렌더 트리 및 Reflow/Repaint까지 브라우저 동작 전 과정을 분석합니다.</description>
+      <description>웹 애플리케이션의 동작 원리와 프론트엔드/백엔드 아키텍처, URL 구조와 DNS 조회, 브라우저의 중요 렌더링 경로(DOM/CSSOM 트리 생성, Layout, Paint) 및 CGI 연동 메커니즘을 상세히 분석합니다.</description>
     </item>
     
     <item>
@@ -93,16 +93,16 @@
       <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
-      <description>HTTP 1.1과 HTTP/2의 차이, Start Line, Header, Body 구조, GET/POST/PUT/DELETE 멱등성 및 2xx, 3xx, 4xx, 5xx 상태 코드의 의미를 설명합니다.</description>
+      <description>웹 통신의 근간인 HTTP 프로토콜의 동작 메커니즘, Start Line과 Header 및 Body 메시지 구조, REST API 핵심 메서드(GET, POST, PUT, DELETE)의 멱등성, 응답 상태 코드 및 HTTPS 보안 전송 원리를 정리합니다.</description>
     </item>
     
     <item>
-      <title>GoogleTest 및 C&#43;&#43; 단위 테스트(Unit Test) 프레임워크 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/googletest-cpp-unit-testing-framework/</link>
+      <title>C&#43;&#43; 단위 테스트 완벽 가이드: Google Test 및 Google Mock 활용법</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-unit-test-googletest-and-googlemock-guide/</link>
       <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/googletest-cpp-unit-testing-framework/</guid>
-      <description>GoogleTest(gtest) 기반의 테스트 픽스처(Fixture), Assertion 매크로, Mocking 기법을 적용하여 견고한 TDD 개발 환경을 구축하는 방법을 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-unit-test-googletest-and-googlemock-guide/</guid>
+      <description>C&#43;&#43; 소프트웨어 품질 향상을 위한 단위 테스트의 기본 원칙과 Google Test(gtest) 및 Google Mock(gmock) 프레임워크의 테스트 픽스처, 매크로, 테스트 대역 기법을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -151,12 +151,12 @@
     </item>
     
     <item>
-      <title>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</link>
+      <title>Python 웹 스크래퍼 Delver: AWS Lambda와 GitHub Actions 자동 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</link>
       <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</guid>
-      <description>다양한 채용 플랫폼의 공고 데이터를 비동기 웹 크롤러로 자동 수집하고 키워드 빈도를 분석하는 Delver 서비스의 아키텍처와 구현 기록입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</guid>
+      <description>BeautifulSoup 기반 Python 웹 스크래퍼 Delver를 Docker 이미지로 빌드하고, AWS ECR/Lambda와 GitHub Actions를 통해 매일 자동 실행되도록 구현한 서버리스 구축기입니다.</description>
     </item>
     
     <item>
@@ -169,12 +169,12 @@
     </item>
     
     <item>
-      <title>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</link>
+      <title>리눅스 프로세스 간 통신(IPC) 기법 총정리: 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</link>
       <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</guid>
-      <description>독립된 가상 주소 공간을 가진 프로세스 간 데이터 교환을 위한 익명/네임드 파이프, POSIX 공유 메모리, System V IPC 메커니즘을 상세히 비교 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</guid>
+      <description>리눅스 환경에서 독립적인 프로세스 간 데이터를 교환하고 동기화하기 위한 대표적인 IPC 기법인 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리의 핵심 동작 원리와 C 언어 시스템 콜 API 활용법을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -205,12 +205,12 @@
     </item>
     
     <item>
-      <title>GNU Make 및 Makefile 작성법: C/C&#43;&#43; 빌드 자동화 기초 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</link>
+      <title>GNU Make 기본 사용법과 Makefile 문법 및 내장 매크로 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</link>
       <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</guid>
-      <description>타겟, 의존성, 레시피 규칙을 바탕으로 변경된 소스코드만 선별 컴파일하는 증분 빌드 Makefile 문법과 매크로 변수 활용법을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</guid>
+      <description>C/C&#43;&#43; 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 원리와 Makefile의 타깃·의존성 구조, 변수 치환, 내장 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 정리합니다.</description>
     </item>
     
     <item>
@@ -223,12 +223,12 @@
     </item>
     
     <item>
-      <title>AWS 핵심 클라우드 인프라 서비스(EC2, S3, RDS, IAM) 아키텍처 및 실전 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/</link>
+      <title>AWS 핵심 인프라 구축 완벽 가이드: EC2, S3, VPC, RDS, ELB 실습 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-infrastructure-ec2-s3-vpc-guide/</link>
       <pubDate>Wed, 12 Jul 2023 21:12:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/</guid>
-      <description>아마존 웹 서비스(AWS)의 컴퓨팅(EC2), 오브젝트 스토리지(S3), 관리형 DB(RDS), 보안 권한(IAM)의 핵심 개념과 VPC 네트워크 구성법을 총정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-infrastructure-ec2-s3-vpc-guide/</guid>
+      <description>AWS 클라우드 인프라의 핵심인 EC2(Windows/Linux), S3, VPC 네트워크, RDS, Auto Scaling, Route 53 연동까지 실무 인프라 구축 전 과정을 단계별로 정리한 실습 가이드입니다.</description>
     </item>
     
     <item>
@@ -250,12 +250,12 @@
     </item>
     
     <item>
-      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
+      <title>리눅스 개발 환경 설정 및 네트워크 구성 가이드: .bashrc, Vim, Ctags부터 Netplan까지</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</link>
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
-      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</guid>
+      <description>리눅스(Ubuntu) 개발 환경 구축을 위한 .bashrc 프롬프트 커스텀, Vim 및 Ctags 소스 탐색 설정부터 ifconfig, netstat 네트워크 상태 진단, /etc/hosts 접근 제어 및 Netplan 정적 IP 설정법을 상세히 다룹니다.</description>
     </item>
     
     <item>
@@ -318,7 +318,7 @@
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</guid>
-      <description>스프링 부트와 Thymeleaf의 th:text, th:each, th:if 문법과 Model 객체 바인딩, 레이아웃 컴포넌트 분리 및 URL 링크 처리법을 총정리합니다.</description>
+      <description>스프링 부트(Spring Boot) 환경에서 Thymeleaf 템플릿 엔진의 th:text, th:each, th:if 문법, Model 객체 데이터 바인딩, 프래그먼트 레이아웃 모듈화 기법을 체계적으로 정리합니다.</description>
     </item>
     
     <item>
@@ -385,12 +385,12 @@
     </item>
     
     <item>
-      <title>블록체인 분산 원장 원리와 비트코인·이더리움 암호화폐 아키텍처 이해하기</title>
-      <link>https://aswinblue.github.io/Blog/post/crypto/blockchain-cryptocurrency-architecture-and-consensus/</link>
+      <title>암호학 기초부터 비트코인 합의 알고리즘까지: 가상자산 원리 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/crypto/cryptocurrency-blockchain-cryptography-consensus/</link>
       <pubDate>Wed, 02 Feb 2022 13:22:27 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/crypto/blockchain-cryptocurrency-architecture-and-consensus/</guid>
-      <description>P2P 네트워크, 작업 증명(PoW) 합의 알고리즘, 스마트 컨트랙트 동작 메커니즘 및 블록 해시 체이닝 구조를 암호학적 관점에서 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/crypto/cryptocurrency-blockchain-cryptography-consensus/</guid>
+      <description>암호학적 해시 함수, 해시 포인터, 전자 서명 등 암호학 기본 원리부터 이중 지불 방지, 비잔틴 합의, 분산 합의 및 작업 증명(PoW) 메커니즘까지 비트코인 기술 아키텍처를 정리합니다.</description>
     </item>
     
     <item>
@@ -403,21 +403,21 @@
     </item>
     
     <item>
-      <title>Go 언어 핵심 기초 문법과 고루틴(Goroutine) 동시성 프로그래밍</title>
-      <link>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</link>
+      <title>Go 언어 환경 설정 및 기본 포맷 출력 문법 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/golang/golang-environment-setup-and-fmt-printf/</link>
       <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</guid>
-      <description>Go 언어의 타입 시스템, 슬라이스, 맵, 구조체 및 고루틴과 채널을 활용한 경량 비동기 동시성 프로그래밍 기초를 체계적으로 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/golang/golang-environment-setup-and-fmt-printf/</guid>
+      <description>Go(Golang) 개발 환경 구축을 위한 설치 및 기본 작업 공간(GOPATH) 구조를 알아보고, fmt 패키지의 printf 서식 지정자(%v, %&#43;v)를 활용한 구조체와 변수 출력 문법을 정리합니다.</description>
     </item>
     
     <item>
-      <title>TensorFlow 2.x 딥러닝 핵심 아키텍처 및 신경망 모델 학습 실전 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-architecture-and-model-training/</link>
+      <title>TensorFlow 2.x 핵심 개념부터 CNN·RNN 딥러닝 모델 구현까지 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-core-guide/</link>
       <pubDate>Sat, 27 Nov 2021 08:15:42 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-architecture-and-model-training/</guid>
-      <description>텐서플로우 Keras Sequential API를 활용한 다층 퍼셉트론(MLP) 및 합성곱 신경망(CNN) 구성, 손실 함수와 옵티마이저 최적화 기법을 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/machinelearning/tensorflow-deep-learning-core-guide/</guid>
+      <description>TensorFlow의 텐서 연산 기초부터 선형·로지스틱 회귀, 역전파 알고리즘, 경사 하강법 옵티마이저, 그리고 CNN과 RNN·LSTM 신경망 모델 설계까지 딥러닝 핵심 이론과 실습 코드를 완벽 정리합니다.</description>
     </item>
     
     <item>
@@ -457,12 +457,12 @@
     </item>
     
     <item>
-      <title>Jython을 활용한 Java 런타임 위 Python 코드 상호 운용 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/java/jython-java-python-interoperability/</link>
+      <title>Java 환경에서 Python을 실행하는 Jython 연동 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/java/java-jython-integration-guide/</link>
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/java/jython-java-python-interoperability/</guid>
-      <description>JVM 위에서 동작하는 Python 구현체인 Jython의 환경 세팅과 Java 클래스를 Python에서 호출하거나 반대로 임베딩하는 연동법을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/java/java-jython-integration-guide/</guid>
+      <description>Java 가상 머신(JVM) 상에서 Python 코드를 실행할 수 있는 Jython 라이브러리의 Maven 의존성 설정 방법과 PythonInterpreter를 활용한 스크립트 실행 절차를 정리합니다.</description>
     </item>
     
     <item>
@@ -493,6 +493,24 @@
     </item>
     
     <item>
+      <title>C&#43;&#43; 고성능 JSON 라이브러리 RapidJSON 특징 및 장점</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-rapidjson-library-overview/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-rapidjson-library-overview/</guid>
+      <description>C&#43;&#43; 환경에서 고성능 JSON 파싱과 직렬화를 위해 널리 사용되는 텐센트의 RapidJSON 라이브러리 주요 특징, 헤더 온리 구성의 편의성 및 파싱 속도 장점을 정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 초고속 로깅 라이브러리 spdlog 소개 및 특징</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-logging-library/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-logging-library/</guid>
+      <description>C&#43;&#43; 고성능 비동기 및 동기 로깅 프레임워크인 spdlog의 주요 특징(빠른 속도, 헤더 온리 지원, 무의존성 구조)과 C&#43;&#43; 프로젝트에서의 활용 방안 및 공식 참조 문헌을 정리합니다.</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43; 핵심 문법과 객체 지향 프로그래밍(OOP) 기초 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-syntax-and-oop-fundamentals/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
@@ -520,30 +538,12 @@
     </item>
     
     <item>
-      <title>nlohmann/json C&#43;&#43; 라이브러리를 활용한 JSON 파싱 및 직렬화 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-nlohmann-json-parsing-and-serialization/</link>
+      <title>실무 리눅스 필수 명령어 가이드: sed·tr 텍스트 조작, tar 압축, ELF 바이너리 분석 및 리다이렉션</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-nlohmann-json-parsing-and-serialization/</guid>
-      <description>모던 C&#43;&#43;에서 가장 널리 쓰이는 nlohmann/json 헤더 온리 라이브러리를 통해 복잡한 JSON 데이터를 객체로 역직렬화하고 생성하는 방법을 정리합니다.</description>
-    </item>
-    
-    <item>
-      <title>spdlog 라이브러리를 활용한 고성능 C&#43;&#43; 비동기 로깅 환경 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</link>
-      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</guid>
-      <description>빠르고 간결한 C&#43;&#43; 헤더 온리 로깅 라이브러리 spdlog의 포맷팅 규칙, 파일 회전(Rotating), 비동기 큐 로깅 및 성능 튜닝 기법을 소개합니다.</description>
-    </item>
-    
-    <item>
-      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
-      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
-      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</guid>
+      <description>리눅스 서버 운영 및 개발 생산성을 높여주는 필수 명령어부터 sed와 tr을 활용한 텍스트 스트리밍 치환, tar 압축 아카이브 관리, readelf와 objdump를 이용한 바이너리 분석, 입출력 리다이렉션 기법까지 예제 중심으로 정리합니다.</description>
     </item>
     
     <item>
@@ -552,7 +552,7 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</guid>
-      <description>단일 스레드 논블로킹 I/O와 이벤트 루프의 동작 원리, npm 패키지 관리, Express 미들웨어 체인 및 RESTful API 엔드포인트 구현을 다룹니다.</description>
+      <description>V8 엔진 기반 Node.js의 논블로킹 I/O 동작 원리부터 npm 패키지 관리, Express 라우터와 미들웨어(세션, 정적 파일, 바디 파서), MySQL 데이터베이스 연동 및 EJS 템플릿 렌더링까지 총정리합니다.</description>
     </item>
     
     <item>
@@ -601,12 +601,12 @@
     </item>
     
     <item>
-      <title>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</link>
+      <title>우분투 apt 및 dpkg errorcode(1) 충돌 오류 원인과 복구 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</guid>
-      <description>데비안/우분투 계열 리눅스의 패키지 관리 도구인 apt, apt-get의 설치, 갱신, 의존성 충돌 해결 및 사용자 PPA 저장소 관리 팁을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</guid>
+      <description>우분투(Ubuntu) 리눅스 환경에서 파이썬 바이너리 삭제나 의존성 충돌로 인해 발생하는 dpkg errorcode(1) 오류의 원인을 분석하고, /var/lib/dpkg/info 손상 파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 상세히 안내합니다.</description>
     </item>
     
     <item>

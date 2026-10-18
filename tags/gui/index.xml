@@ -6,16 +6,7 @@
     <description>Recent content in Gui on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Mar 2025 20:40:01 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gui/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</link>
-      <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</guid>
-      <description>pytube 라이브러리와 PyQt를 활용하여 유튜브 동영상 및 음원 추출을 안전하고 직관적으로 처리하는 데스크톱 다운로더 유틸리티 제작기입니다.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 09 Sep 2021 18:43:28 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/gui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Kivy 프레임워크를 활용한 크로스 플랫폼 GUI 앱 개발 기초</title>
       <link>https://aswinblue.github.io/Blog/post/windowapp/python-kivy-cross-platform-gui-app-development/</link>

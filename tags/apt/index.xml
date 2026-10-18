@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Mon, 25 May 2020 18:30:15 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/apt/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</link>
+      <title>우분투 apt 및 dpkg errorcode(1) 충돌 오류 원인과 복구 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</guid>
-      <description>데비안/우분투 계열 리눅스의 패키지 관리 도구인 apt, apt-get의 설치, 갱신, 의존성 충돌 해결 및 사용자 PPA 저장소 관리 팁을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</guid>
+      <description>우분투(Ubuntu) 리눅스 환경에서 파이썬 바이너리 삭제나 의존성 충돌로 인해 발생하는 dpkg errorcode(1) 오류의 원인을 분석하고, /var/lib/dpkg/info 손상 파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 상세히 안내합니다.</description>
     </item>
     
   </channel>

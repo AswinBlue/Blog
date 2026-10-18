@@ -13,7 +13,7 @@
       <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</guid>
-      <description>단일 스레드 논블로킹 I/O와 이벤트 루프의 동작 원리, npm 패키지 관리, Express 미들웨어 체인 및 RESTful API 엔드포인트 구현을 다룹니다.</description>
+      <description>V8 엔진 기반 Node.js의 논블로킹 I/O 동작 원리부터 npm 패키지 관리, Express 라우터와 미들웨어(세션, 정적 파일, 바디 파서), MySQL 데이터베이스 연동 및 EJS 템플릿 렌더링까지 총정리합니다.</description>
     </item>
     
   </channel>

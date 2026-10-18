@@ -6,16 +6,7 @@
     <description>Recent content in Operating-System on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Jul 2023 20:37:08 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</link>
-      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</guid>
-      <description>독립된 가상 주소 공간을 가진 프로세스 간 데이터 교환을 위한 익명/네임드 파이프, POSIX 공유 메모리, System V IPC 메커니즘을 상세히 비교 분석합니다.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 10 Jul 2023 21:31:47 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>리눅스 기본 개념과 파일 시스템 계층 구조(FHS) 및 권한 관리 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/linux/linux-fundamentals-fhs-and-permissions/</link>

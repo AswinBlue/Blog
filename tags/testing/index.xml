@@ -16,14 +16,5 @@
       <description>간결한 assert 구문, fixture를 활용한 테스트 의존성 주입, parametrize 다중 파라미터 테스트 및 coverage 코드 커버리지 측정법을 정리합니다.</description>
     </item>
     
-    <item>
-      <title>GoogleTest 및 C&#43;&#43; 단위 테스트(Unit Test) 프레임워크 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/googletest-cpp-unit-testing-framework/</link>
-      <pubDate>Mon, 19 Aug 2024 04:00:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/googletest-cpp-unit-testing-framework/</guid>
-      <description>GoogleTest(gtest) 기반의 테스트 픽스처(Fixture), Assertion 매크로, Mocking 기법을 적용하여 견고한 TDD 개발 환경을 구축하는 방법을 다룹니다.</description>
-    </item>
-    
   </channel>
 </rss>

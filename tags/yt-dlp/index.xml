@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Yt-Dlp on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/yt-dlp/</link>
+    <description>Recent content in Yt-Dlp on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Mar 2025 20:40:01 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/yt-dlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python yt-dlp와 FFmpeg를 활용한 YouTube 재생목록 음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</link>
+      <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</guid>
+      <description>Windows 환경에서 Python yt-dlp 라이브러리와 FFmpeg를 활용하여 YouTube 재생목록의 음원을 MP3로 일괄 추출하고 중복 다운로드를 방지하는 자동화 스크립트 구현기입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

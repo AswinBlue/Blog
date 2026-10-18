@@ -17,30 +17,30 @@
     </item>
     
     <item>
-      <title>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</link>
+      <title>React와 Tailwind CSS로 만든 올인원 웹 개발자 유틸리티 &#39;DevTool&#39; 개발기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</link>
       <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</guid>
-      <description>Base64, JSON 포맷터, URL 인코더, 해시 생성기 등 개발에 필요한 편의 기능을 단일 웹 인터페이스로 제공하는 React 기반 웹 툴 제작기입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</guid>
+      <description>React와 Tailwind CSS를 활용해 클라이언트 사이드에서 안전하게 인코딩, 포맷팅, Diff 체크를 지원하는 올인원 웹 개발자 유틸리티 &amp;#39;DevTool&amp;#39;의 아키텍처와 최적화 기록입니다.</description>
     </item>
     
     <item>
-      <title>YouTube Downloader: 파이썬 기반 영상/음원 다운로더 제작기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</link>
+      <title>Python yt-dlp와 FFmpeg를 활용한 YouTube 재생목록 음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</link>
       <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-youtube-media-downloader/</guid>
-      <description>pytube 라이브러리와 PyQt를 활용하여 유튜브 동영상 및 음원 추출을 안전하고 직관적으로 처리하는 데스크톱 다운로더 유틸리티 제작기입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</guid>
+      <description>Windows 환경에서 Python yt-dlp 라이브러리와 FFmpeg를 활용하여 YouTube 재생목록의 음원을 MP3로 일괄 추출하고 중복 다운로드를 방지하는 자동화 스크립트 구현기입니다.</description>
     </item>
     
     <item>
-      <title>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</link>
+      <title>Python 웹 스크래퍼 Delver: AWS Lambda와 GitHub Actions 자동 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</link>
       <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</guid>
-      <description>다양한 채용 플랫폼의 공고 데이터를 비동기 웹 크롤러로 자동 수집하고 키워드 빈도를 분석하는 Delver 서비스의 아키텍처와 구현 기록입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</guid>
+      <description>BeautifulSoup 기반 Python 웹 스크래퍼 Delver를 Docker 이미지로 빌드하고, AWS ECR/Lambda와 GitHub Actions를 통해 매일 자동 실행되도록 구현한 서버리스 구축기입니다.</description>
     </item>
     
     <item>

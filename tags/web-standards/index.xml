@@ -13,7 +13,7 @@
       <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
-      <description>HTTP 1.1과 HTTP/2의 차이, Start Line, Header, Body 구조, GET/POST/PUT/DELETE 멱등성 및 2xx, 3xx, 4xx, 5xx 상태 코드의 의미를 설명합니다.</description>
+      <description>웹 통신의 근간인 HTTP 프로토콜의 동작 메커니즘, Start Line과 Header 및 Body 메시지 구조, REST API 핵심 메서드(GET, POST, PUT, DELETE)의 멱등성, 응답 상태 코드 및 HTTPS 보안 전송 원리를 정리합니다.</description>
     </item>
     
     <item>

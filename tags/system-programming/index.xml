@@ -17,12 +17,12 @@
     </item>
     
     <item>
-      <title>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</link>
+      <title>리눅스 프로세스 간 통신(IPC) 기법 총정리: 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</link>
       <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</guid>
-      <description>독립된 가상 주소 공간을 가진 프로세스 간 데이터 교환을 위한 익명/네임드 파이프, POSIX 공유 메모리, System V IPC 메커니즘을 상세히 비교 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</guid>
+      <description>리눅스 환경에서 독립적인 프로세스 간 데이터를 교환하고 동기화하기 위한 대표적인 IPC 기법인 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리의 핵심 동작 원리와 C 언어 시스템 콜 API 활용법을 상세히 정리합니다.</description>
     </item>
     
     <item>

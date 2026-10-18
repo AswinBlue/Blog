@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Mon, 23 Aug 2021 19:20:47 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jython을 활용한 Java 런타임 위 Python 코드 상호 운용 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/java/jython-java-python-interoperability/</link>
+      <title>Java 환경에서 Python을 실행하는 Jython 연동 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/java/java-jython-integration-guide/</link>
       <pubDate>Mon, 23 Aug 2021 19:20:47 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/java/jython-java-python-interoperability/</guid>
-      <description>JVM 위에서 동작하는 Python 구현체인 Jython의 환경 세팅과 Java 클래스를 Python에서 호출하거나 반대로 임베딩하는 연동법을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/java/java-jython-integration-guide/</guid>
+      <description>Java 가상 머신(JVM) 상에서 Python 코드를 실행할 수 있는 Jython 라이브러리의 Maven 의존성 설정 방법과 PythonInterpreter를 활용한 스크립트 실행 절차를 정리합니다.</description>
     </item>
     
   </channel>

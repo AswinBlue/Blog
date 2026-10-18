@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Thu, 13 Jul 2023 18:35:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/make/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GNU Make 및 Makefile 작성법: C/C&#43;&#43; 빌드 자동화 기초 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</link>
+      <title>GNU Make 기본 사용법과 Makefile 문법 및 내장 매크로 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</link>
       <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</guid>
-      <description>타겟, 의존성, 레시피 규칙을 바탕으로 변경된 소스코드만 선별 컴파일하는 증분 빌드 Makefile 문법과 매크로 변수 활용법을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-syntax-and-macros/</guid>
+      <description>C/C&#43;&#43; 프로젝트의 분할 컴파일과 빌드 자동화를 지원하는 GNU Make의 기본 원리와 Makefile의 타깃·의존성 구조, 변수 치환, 내장 매크로($&amp;lt;, $@, $^) 및 실행 옵션을 정리합니다.</description>
     </item>
     
   </channel>

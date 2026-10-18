@@ -16,14 +16,5 @@
       <description>스레드 생성과 종료(pthread_create/join), 임계 영역 보호를 위한 뮤텍스(Mutex), 조건 변수(Condvar) 및 경쟁 상태(Race Condition) 방어법을 정리합니다.</description>
     </item>
     
-    <item>
-      <title>Go 언어 핵심 기초 문법과 고루틴(Goroutine) 동시성 프로그래밍</title>
-      <link>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</link>
-      <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/golang/golang-core-syntax-and-concurrency/</guid>
-      <description>Go 언어의 타입 시스템, 슬라이스, 맵, 구조체 및 고루틴과 채널을 활용한 경량 비동기 동시성 프로그래밍 기초를 체계적으로 정리합니다.</description>
-    </item>
-    
   </channel>
 </rss>

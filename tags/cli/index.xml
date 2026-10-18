@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
+      <title>실무 리눅스 필수 명령어 가이드: sed·tr 텍스트 조작, tar 압축, ELF 바이너리 분석 및 리다이렉션</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
-      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</guid>
+      <description>리눅스 서버 운영 및 개발 생산성을 높여주는 필수 명령어부터 sed와 tr을 활용한 텍스트 스트리밍 치환, tar 압축 아카이브 관리, readelf와 objdump를 이용한 바이너리 분석, 입출력 리다이렉션 기법까지 예제 중심으로 정리합니다.</description>
     </item>
     
   </channel>

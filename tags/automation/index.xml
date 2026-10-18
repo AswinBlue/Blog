@@ -17,12 +17,12 @@
     </item>
     
     <item>
-      <title>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</link>
-      <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
+      <title>Python yt-dlp와 FFmpeg를 활용한 YouTube 재생목록 음원 다운로더 제작기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</link>
+      <pubDate>Sun, 09 Mar 2025 20:40:01 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</guid>
-      <description>다양한 채용 플랫폼의 공고 데이터를 비동기 웹 크롤러로 자동 수집하고 키워드 빈도를 분석하는 Delver 서비스의 아키텍처와 구현 기록입니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-yt-dlp-youtube-mp3-downloader/</guid>
+      <description>Windows 환경에서 Python yt-dlp 라이브러리와 FFmpeg를 활용하여 YouTube 재생목록의 음원을 MP3로 일괄 추출하고 중복 다운로드를 방지하는 자동화 스크립트 구현기입니다.</description>
     </item>
     
     <item>

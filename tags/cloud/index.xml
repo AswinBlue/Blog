@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Wed, 12 Jul 2023 21:12:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AWS 핵심 클라우드 인프라 서비스(EC2, S3, RDS, IAM) 아키텍처 및 실전 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/</link>
+      <title>AWS 핵심 인프라 구축 완벽 가이드: EC2, S3, VPC, RDS, ELB 실습 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-infrastructure-ec2-s3-vpc-guide/</link>
       <pubDate>Wed, 12 Jul 2023 21:12:55 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-core-services-architecture-guide/</guid>
-      <description>아마존 웹 서비스(AWS)의 컴퓨팅(EC2), 오브젝트 스토리지(S3), 관리형 DB(RDS), 보안 권한(IAM)의 핵심 개념과 VPC 네트워크 구성법을 총정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-infrastructure-ec2-s3-vpc-guide/</guid>
+      <description>AWS 클라우드 인프라의 핵심인 EC2(Windows/Linux), S3, VPC 네트워크, RDS, Auto Scaling, Route 53 연동까지 실무 인프라 구축 전 과정을 단계별로 정리한 실습 가이드입니다.</description>
     </item>
     
   </channel>

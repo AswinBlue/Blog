@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rendering on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/rendering/</link>
+    <description>Recent content in Rendering on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Mar 2025 22:46:50 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/rendering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 애플리케이션 아키텍처와 브라우저 렌더링 과정 및 네트워크 통신 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</link>
+      <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</guid>
+      <description>웹 애플리케이션의 동작 원리와 프론트엔드/백엔드 아키텍처, URL 구조와 DNS 조회, 브라우저의 중요 렌더링 경로(DOM/CSSOM 트리 생성, Layout, Paint) 및 CGI 연동 메커니즘을 상세히 분석합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

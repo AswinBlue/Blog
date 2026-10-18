@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Https on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/https/</link>
+    <description>Recent content in Https on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Mar 2025 20:17:24 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP 프로토콜 핵심 구조: 요청·응답 메시지, 메서드 및 상태 코드 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</link>
+      <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
+      <description>웹 통신의 근간인 HTTP 프로토콜의 동작 메커니즘, Start Line과 Header 및 Body 메시지 구조, REST API 핵심 메서드(GET, POST, PUT, DELETE)의 멱등성, 응답 상태 코드 및 HTTPS 보안 전송 원리를 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

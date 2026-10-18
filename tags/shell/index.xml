@@ -6,14 +6,14 @@
     <description>Recent content in Shell on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Jul 2023 21:04:56 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
-      <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
+      <title>실무 리눅스 필수 명령어 가이드: sed·tr 텍스트 조작, tar 압축, ELF 바이너리 분석 및 리다이렉션</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</link>
+      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
-      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</guid>
+      <description>리눅스 서버 운영 및 개발 생산성을 높여주는 필수 명령어부터 sed와 tr을 활용한 텍스트 스트리밍 치환, tar 압축 아카이브 관리, readelf와 objdump를 이용한 바이너리 분석, 입출력 리다이렉션 기법까지 예제 중심으로 정리합니다.</description>
     </item>
     
   </channel>

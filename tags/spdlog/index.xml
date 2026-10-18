@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/spdlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>spdlog 라이브러리를 활용한 고성능 C&#43;&#43; 비동기 로깅 환경 구축 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</link>
+      <title>C&#43;&#43; 초고속 로깅 라이브러리 spdlog 소개 및 특징</title>
+      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-logging-library/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-high-performance-logging/</guid>
-      <description>빠르고 간결한 C&#43;&#43; 헤더 온리 로깅 라이브러리 spdlog의 포맷팅 규칙, 파일 회전(Rotating), 비동기 큐 로깅 및 성능 튜닝 기법을 소개합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/cpp-spdlog-logging-library/</guid>
+      <description>C&#43;&#43; 고성능 비동기 및 동기 로깅 프레임워크인 spdlog의 주요 특징(빠른 속도, 헤더 온리 지원, 무의존성 구조)과 C&#43;&#43; 프로젝트에서의 활용 방안 및 공식 참조 문헌을 정리합니다.</description>
     </item>
     
   </channel>

@@ -6,7 +6,16 @@
     <description>Recent content in Mysql on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2020 20:29:29 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jul 2020 20:40:05 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node.js 비동기 이벤트 루프 아키텍처와 Express 웹 서버 구축 가이드</title>
+      <link>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</link>
+      <pubDate>Mon, 20 Jul 2020 20:40:05 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webserver/nodejs-event-loop-and-express-server-guide/</guid>
+      <description>V8 엔진 기반 Node.js의 논블로킹 I/O 동작 원리부터 npm 패키지 관리, Express 라우터와 미들웨어(세션, 정적 파일, 바디 파서), MySQL 데이터베이스 연동 및 EJS 템플릿 렌더링까지 총정리합니다.</description>
+    </item>
+    
     <item>
       <title>MySQL 관계형 데이터베이스 기초: DDL, DML 쿼리 작성 및 계정 권한 관리</title>
       <link>https://aswinblue.github.io/Blog/post/databases/mysql-rdbms-basics-sql-queries-permissions/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vpc on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/vpc/</link>
+    <description>Recent content in Vpc on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Jul 2023 21:12:55 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/vpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS 핵심 인프라 구축 완벽 가이드: EC2, S3, VPC, RDS, ELB 실습 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-infrastructure-ec2-s3-vpc-guide/</link>
+      <pubDate>Wed, 12 Jul 2023 21:12:55 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/cloud/aws-cloud-infrastructure-ec2-s3-vpc-guide/</guid>
+      <description>AWS 클라우드 인프라의 핵심인 EC2(Windows/Linux), S3, VPC 네트워크, RDS, Auto Scaling, Route 53 연동까지 실무 인프라 구축 전 과정을 단계별로 정리한 실습 가이드입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

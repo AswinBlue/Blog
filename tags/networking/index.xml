@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Networking on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/networking/</link>
+    <description>Recent content in Networking on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jul 2023 21:04:56 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 개발 환경 설정 및 네트워크 구성 가이드: .bashrc, Vim, Ctags부터 Netplan까지</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</link>
+      <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</guid>
+      <description>리눅스(Ubuntu) 개발 환경 구축을 위한 .bashrc 프롬프트 커스텀, Vim 및 Ctags 소스 탐색 설정부터 ifconfig, netstat 네트워크 상태 진단, /etc/hosts 접근 제어 및 Netplan 정적 IP 설정법을 상세히 다룹니다.</description>
+    </item>
+    
+  </channel>
+</rss>

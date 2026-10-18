@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WebHacking on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/categories/webhacking/</link>
+    <description>Recent content in WebHacking on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2025 20:54:59 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/categories/webhacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 취약점 분석과 SQL Injection, XSS 및 인젝션 공격 메커니즘 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-xss-exploit-guide/</link>
+      <pubDate>Tue, 11 Mar 2025 20:54:59 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-vulnerability-sql-injection-xss-exploit-guide/</guid>
+      <description>웹 취약점의 유형별 분류(SQL/NoSQL 인젝션, XSS, CSRF, SSRF, 커맨드 인젝션, 파일 취약점)와 실전 공격 메커니즘, Python 자동화 PoC 및 시큐어 코딩 방어 기법을 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>웹 쿠키(Cookie)와 세션(Session) 동작 원리 및 보안 플래그(HttpOnly, Secure) 설정법</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</link>
+      <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</guid>
+      <description>무상태 프로토콜인 HTTP에서 상태 유지를 위한 쿠키(Cookie)와 세션(Session)의 동작 메커니즘, 보안 플래그(HttpOnly, Secure, SameSite), SOP와 CORS 정책 및 보호 기법을 총정리합니다.</description>
+    </item>
+    
+    <item>
+      <title>웹 애플리케이션 아키텍처와 브라우저 렌더링 과정 및 네트워크 통신 기초</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</link>
+      <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</guid>
+      <description>웹 애플리케이션의 동작 원리와 프론트엔드/백엔드 아키텍처, URL 구조와 DNS 조회, 브라우저의 중요 렌더링 경로(DOM/CSSOM 트리 생성, Layout, Paint) 및 CGI 연동 메커니즘을 상세히 분석합니다.</description>
+    </item>
+    
+    <item>
+      <title>HTTP 프로토콜 핵심 구조: 요청·응답 메시지, 메서드 및 상태 코드 총정리</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</link>
+      <pubDate>Thu, 06 Mar 2025 20:17:24 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/http-protocol-structure-methods-status-codes/</guid>
+      <description>웹 통신의 근간인 HTTP 프로토콜의 동작 메커니즘, Start Line과 Header 및 Body 메시지 구조, REST API 핵심 메서드(GET, POST, PUT, DELETE)의 멱등성, 응답 상태 코드 및 HTTPS 보안 전송 원리를 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

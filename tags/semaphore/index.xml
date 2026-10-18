@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Semaphore on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/semaphore/</link>
+    <description>Recent content in Semaphore on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Jul 2023 20:37:08 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/semaphore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 프로세스 간 통신(IPC) 기법 총정리: 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</link>
+      <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</guid>
+      <description>리눅스 환경에서 독립적인 프로세스 간 데이터를 교환하고 동기화하기 위한 대표적인 IPC 기법인 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리의 핵심 동작 원리와 C 언어 시스템 콜 API 활용법을 상세히 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

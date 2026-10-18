@@ -16,14 +16,5 @@
       <description>Windows Terminal, PowerShell 유용한 단축키, PATH 환경변수 빠른 편집 및 개발 친화적 윈도우 OS 튜닝 팁을 공유합니다.</description>
     </item>
     
-    <item>
-      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
-      <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
-      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
-    </item>
-    
   </channel>
 </rss>

@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Python 웹 스크래퍼 Delver: AWS Lambda와 GitHub Actions 자동 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</link>
+      <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</guid>
+      <description>BeautifulSoup 기반 Python 웹 스크래퍼 Delver를 Docker 이미지로 빌드하고, AWS ECR/Lambda와 GitHub Actions를 통해 매일 자동 실행되도록 구현한 서버리스 구축기입니다.</description>
+    </item>
+    
+    <item>
       <title>Hugo(PaperMod) 블로그 로컬 환경 구축부터 애드센스 연동 및 GitHub Actions 자동 배포까지</title>
       <link>https://aswinblue.github.io/Blog/post/hugo/hugo-papermod-blog-setup-adsense-github-actions/</link>
       <pubDate>Sun, 10 May 2020 12:23:13 +0900</pubDate>

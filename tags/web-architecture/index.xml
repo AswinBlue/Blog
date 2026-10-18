@@ -13,7 +13,7 @@
       <pubDate>Thu, 06 Mar 2025 22:46:50 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webhacking/web-architecture-and-browser-rendering-process/</guid>
-      <description>URL 입력부터 DNS 조회, TCP 핸드셰이크, HTML/CSS 파싱, DOM/CSSOM 트리 구축, 렌더 트리 및 Reflow/Repaint까지 브라우저 동작 전 과정을 분석합니다.</description>
+      <description>웹 애플리케이션의 동작 원리와 프론트엔드/백엔드 아키텍처, URL 구조와 DNS 조회, 브라우저의 중요 렌더링 경로(DOM/CSSOM 트리 생성, Layout, Paint) 및 CGI 연동 메커니즘을 상세히 분석합니다.</description>
     </item>
     
   </channel>

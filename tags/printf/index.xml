@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Printf on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/printf/</link>
+    <description>Recent content in Printf on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Jan 2022 21:52:14 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/printf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 언어 환경 설정 및 기본 포맷 출력 문법 정리</title>
+      <link>https://aswinblue.github.io/Blog/post/golang/golang-environment-setup-and-fmt-printf/</link>
+      <pubDate>Fri, 14 Jan 2022 21:52:14 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/golang/golang-environment-setup-and-fmt-printf/</guid>
+      <description>Go(Golang) 개발 환경 구축을 위한 설치 및 기본 작업 공간(GOPATH) 구조를 알아보고, fmt 패키지의 printf 서식 지정자(%v, %&#43;v)를 활용한 구조체와 변수 출력 문법을 정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

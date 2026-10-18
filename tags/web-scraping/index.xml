@@ -6,16 +6,7 @@
     <description>Recent content in Web-Scraping on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2024 21:21:43 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Delver: 크롤러 기반 취업 공고 수집 및 분석 플랫폼 구축기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</link>
-      <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-delver-job-crawler-platform/</guid>
-      <description>다양한 채용 플랫폼의 공고 데이터를 비동기 웹 크롤러로 자동 수집하고 키워드 빈도를 분석하는 Delver 서비스의 아키텍처와 구현 기록입니다.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 23 Aug 2021 19:00:44 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python BeautifulSoup 및 Selenium 웹 스크래핑 크롤러 구축 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/developtips/python-web-scraping-beautifulsoup-selenium-crawler/</link>

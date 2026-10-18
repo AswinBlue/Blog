@@ -17,12 +17,12 @@
     </item>
     
     <item>
-      <title>리눅스 프로세스 간 통신(IPC) 기법: 파이프, 공유 메모리, 메시지 큐 총정리</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</link>
+      <title>리눅스 프로세스 간 통신(IPC) 기법 총정리: 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</link>
       <pubDate>Thu, 27 Jul 2023 20:37:08 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-pipe-shared-memory-message-queue/</guid>
-      <description>독립된 가상 주소 공간을 가진 프로세스 간 데이터 교환을 위한 익명/네임드 파이프, POSIX 공유 메모리, System V IPC 메커니즘을 상세히 비교 분석합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-ipc-mechanisms-overview/</guid>
+      <description>리눅스 환경에서 독립적인 프로세스 간 데이터를 교환하고 동기화하기 위한 대표적인 IPC 기법인 시그널, 파이프, 메시지 큐, 세마포어, 공유 메모리의 핵심 동작 원리와 C 언어 시스템 콜 API 활용법을 상세히 정리합니다.</description>
     </item>
     
     <item>
@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>GNU Make 및 Makefile 작성법: C/C&#43;&#43; 빌드 자동화 기초 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</link>
-      <pubDate>Thu, 13 Jul 2023 18:35:05 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/c&#43;&#43;/gnu-make-makefile-build-automation/</guid>
-      <description>타겟, 의존성, 레시피 규칙을 바탕으로 변경된 소스코드만 선별 컴파일하는 증분 빌드 Makefile 문법과 매크로 변수 활용법을 정리합니다.</description>
-    </item>
-    
-    <item>
       <title>리눅스 Bash 쉘 스크립트 프로그래밍 기초 문법 및 업무 자동화 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/linux/linux-bash-shell-scripting-automation/</link>
       <pubDate>Thu, 13 Jul 2023 18:29:44 +0900</pubDate>
@@ -80,12 +71,12 @@
     </item>
     
     <item>
-      <title>리눅스 환경 변수(Environment Variable) 설정 및 프로파일(.bashrc) 관리법</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</link>
+      <title>리눅스 개발 환경 설정 및 네트워크 구성 가이드: .bashrc, Vim, Ctags부터 Netplan까지</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</link>
       <pubDate>Mon, 10 Jul 2023 21:04:56 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/linux-environment-variables-and-bashrc-profile/</guid>
-      <description>export, env, printenv 명령어와 /etc/profile, ~/.bashrc 파일의 로딩 순서 및 영구 환경 변수 등록 방법을 체계적으로 설명합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</guid>
+      <description>리눅스(Ubuntu) 개발 환경 구축을 위한 .bashrc 프롬프트 커스텀, Vim 및 Ctags 소스 탐색 설정부터 ifconfig, netstat 네트워크 상태 진단, /etc/hosts 접근 제어 및 Netplan 정적 IP 설정법을 상세히 다룹니다.</description>
     </item>
     
     <item>
@@ -107,21 +98,21 @@
     </item>
     
     <item>
-      <title>실무에서 자주 쓰는 리눅스 필수 명령어 및 파일 시스템 탐색 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</link>
+      <title>실무 리눅스 필수 명령어 가이드: sed·tr 텍스트 조작, tar 압축, ELF 바이너리 분석 및 리다이렉션</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</link>
       <pubDate>Thu, 12 Aug 2021 10:41:00 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-and-shell-tips/</guid>
-      <description>ls, find, grep, awk, sed, tar, xargs 등 서버 운영 및 개발 생산성을 극대화하는 리눅스 핵심 쉘 명령어 활용법과 파이프라인 예제를 다룹니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/essential-linux-commands-text-binary-guide/</guid>
+      <description>리눅스 서버 운영 및 개발 생산성을 높여주는 필수 명령어부터 sed와 tr을 활용한 텍스트 스트리밍 치환, tar 압축 아카이브 관리, readelf와 objdump를 이용한 바이너리 분석, 입출력 리다이렉션 기법까지 예제 중심으로 정리합니다.</description>
     </item>
     
     <item>
-      <title>우분투 APT 패키지 관리자 핵심 명령어 및 저장소(PPA) 설정 가이드</title>
-      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</link>
+      <title>우분투 apt 및 dpkg errorcode(1) 충돌 오류 원인과 복구 해결법</title>
+      <link>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</link>
       <pubDate>Mon, 25 May 2020 18:30:15 +0900</pubDate>
       
-      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-package-manager-and-ppa-guide/</guid>
-      <description>데비안/우분투 계열 리눅스의 패키지 관리 도구인 apt, apt-get의 설치, 갱신, 의존성 충돌 해결 및 사용자 PPA 저장소 관리 팁을 정리합니다.</description>
+      <guid>https://aswinblue.github.io/Blog/post/linux/ubuntu-apt-dpkg-errorcode1-troubleshooting/</guid>
+      <description>우분투(Ubuntu) 리눅스 환경에서 파이썬 바이너리 삭제나 의존성 충돌로 인해 발생하는 dpkg errorcode(1) 오류의 원인을 분석하고, /var/lib/dpkg/info 손상 파일 정리 및 dpkg --configure -a 명령을 통한 복구 절차를 상세히 안내합니다.</description>
     </item>
     
   </channel>

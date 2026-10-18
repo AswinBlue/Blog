@@ -13,7 +13,7 @@
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
       
       <guid>https://aswinblue.github.io/Blog/post/webapplication/spring-boot-thymeleaf-ssr-template-guide/</guid>
-      <description>스프링 부트와 Thymeleaf의 th:text, th:each, th:if 문법과 Model 객체 바인딩, 레이아웃 컴포넌트 분리 및 URL 링크 처리법을 총정리합니다.</description>
+      <description>스프링 부트(Spring Boot) 환경에서 Thymeleaf 템플릿 엔진의 th:text, th:each, th:if 문법, Model 객체 데이터 바인딩, 프래그먼트 레이아웃 모듈화 기법을 체계적으로 정리합니다.</description>
     </item>
     
     <item>

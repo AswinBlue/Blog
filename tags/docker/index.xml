@@ -6,7 +6,16 @@
     <description>Recent content in Docker on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Aug 2021 10:41:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2024 21:21:43 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 웹 스크래퍼 Delver: AWS Lambda와 GitHub Actions 자동 배포기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</link>
+      <pubDate>Tue, 30 Jan 2024 21:21:43 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/python-web-scraper-delver-aws-lambda/</guid>
+      <description>BeautifulSoup 기반 Python 웹 스크래퍼 Delver를 Docker 이미지로 빌드하고, AWS ECR/Lambda와 GitHub Actions를 통해 매일 자동 실행되도록 구현한 서버리스 구축기입니다.</description>
+    </item>
+    
     <item>
       <title>Docker 핵심 아키텍처와 Dockerfile 최적화 작성부터 프로덕션 배포까지</title>
       <link>https://aswinblue.github.io/Blog/post/ci_cd/docker-architecture-dockerfile-production-guide/</link>

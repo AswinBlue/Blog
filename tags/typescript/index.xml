@@ -6,16 +6,7 @@
     <description>Recent content in Typescript on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Jul 2025 21:44:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DevTools: 개발자를 위한 올인원 웹 유틸리티 도구 제작기</title>
-      <link>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</link>
-      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
-      
-      <guid>https://aswinblue.github.io/Blog/post/projects/project-devtools-all-in-one-utility/</guid>
-      <description>Base64, JSON 포맷터, URL 인코더, 해시 생성기 등 개발에 필요한 편의 기능을 단일 웹 인터페이스로 제공하는 React 기반 웹 툴 제작기입니다.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 23 Aug 2021 19:46:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular 기본 개념 및 프로젝트 아키텍처와 템플릿 바인딩 가이드</title>
       <link>https://aswinblue.github.io/Blog/post/webapplication/angular-basics-project-structure-template-syntax/</link>

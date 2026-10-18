@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cors on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/cors/</link>
+    <description>Recent content in Cors on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Mar 2025 16:10:13 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/cors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>웹 쿠키(Cookie)와 세션(Session) 동작 원리 및 보안 플래그(HttpOnly, Secure) 설정법</title>
+      <link>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</link>
+      <pubDate>Sun, 09 Mar 2025 16:10:13 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/webhacking/web-cookie-session-and-security-flags/</guid>
+      <description>무상태 프로토콜인 HTTP에서 상태 유지를 위한 쿠키(Cookie)와 세션(Session)의 동작 메커니즘, 보안 플래그(HttpOnly, Secure, SameSite), SOP와 CORS 정책 및 보호 기법을 총정리합니다.</description>
+    </item>
+    
+  </channel>
+</rss>
