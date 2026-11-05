@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Agent-Harnessing on AswinBlue</title>
+    <link>https://aswinblue.github.io/Blog/tags/agent-harnessing/</link>
+    <description>Recent content in Agent-Harnessing on AswinBlue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Nov 2026 21:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/agent-harnessing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>100% AI 에이전트로 완성한 무비용 실시간 대기열 &#39;JullSir(줄서)&#39; 개발 회고: Agent Harnessing과 파이프라인 구축기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/ai-agent-harnessing-jullsir-queue-system/</link>
+      <pubDate>Thu, 05 Nov 2026 21:05:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/ai-agent-harnessing-jullsir-queue-system/</guid>
+      <description>React 18, Supabase Realtime, GitHub Pages 기반 무비용 실시간 큐잉 웹앱 JullSir(줄서)의 라이브 서비스(https://aswinblue.github.io/JullSir) 구축 과정을 AI Agent Harnessing, 요구조건 체계화, 자가 치유 관점에서 분석합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

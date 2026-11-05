@@ -6,7 +6,16 @@
     <description>Recent content in 프로젝트 개발기 on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Jul 2025 19:43:52 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2026 21:05:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>100% AI 에이전트로 완성한 무비용 실시간 대기열 &#39;JullSir(줄서)&#39; 개발 회고: Agent Harnessing과 파이프라인 구축기</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/ai-agent-harnessing-jullsir-queue-system/</link>
+      <pubDate>Thu, 05 Nov 2026 21:05:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/ai-agent-harnessing-jullsir-queue-system/</guid>
+      <description>React 18, Supabase Realtime, GitHub Pages 기반 무비용 실시간 큐잉 웹앱 JullSir(줄서)의 라이브 서비스(https://aswinblue.github.io/JullSir) 구축 과정을 AI Agent Harnessing, 요구조건 체계화, 자가 치유 관점에서 분석합니다.</description>
+    </item>
+    
     <item>
       <title>React Native와 Firebase 기반 사진 일기 앱 &#39;하루기록&#39; 개발기</title>
       <link>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</link>

@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://aswinblue.github.io/Blog/post/projects/ai-agent-harnessing-jullsir-queue-system/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/tags/agent-harnessing/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/tags/ai-agent/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
     <loc>https://aswinblue.github.io/Blog/categories/</loc>
-    <lastmod>2026-10-18T19:05:19+09:00</lastmod>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/tags/portfolio/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/categories/projects/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/tags/react/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/series/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/tags/supabase/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/tags/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aswinblue.github.io/Blog/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</loc>
+    <lastmod>2026-11-05T22:45:00+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/Blog/tags/expo/</loc>
     <lastmod>2026-10-18T18:56:40+09:00</lastmod>
@@ -14,25 +44,10 @@
     <loc>https://aswinblue.github.io/Blog/tags/mobile-app/</loc>
     <lastmod>2026-10-18T18:56:40+09:00</lastmod>
   </url><url>
-    <loc>https://aswinblue.github.io/Blog/tags/portfolio/</loc>
-    <lastmod>2026-10-18T18:56:40+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/Blog/categories/projects/</loc>
-    <lastmod>2026-10-18T18:56:40+09:00</lastmod>
-  </url><url>
     <loc>https://aswinblue.github.io/Blog/post/projects/react-native-firebase-daily-note-app/</loc>
     <lastmod>2026-10-18T18:56:40+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/Blog/tags/react-native/</loc>
-    <lastmod>2026-10-18T18:56:40+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/Blog/series/</loc>
-    <lastmod>2026-10-18T18:56:40+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/Blog/tags/</loc>
-    <lastmod>2026-10-18T19:05:19+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/Blog/series/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</loc>
     <lastmod>2026-10-18T18:56:40+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/Blog/tags/mocking/</loc>
@@ -78,9 +93,6 @@
     <lastmod>2026-10-18T19:05:19+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/Blog/tags/github-pages/</loc>
-    <lastmod>2026-10-18T19:05:19+09:00</lastmod>
-  </url><url>
-    <loc>https://aswinblue.github.io/Blog/tags/react/</loc>
     <lastmod>2026-10-18T19:05:19+09:00</lastmod>
   </url><url>
     <loc>https://aswinblue.github.io/Blog/tags/diff-checker/</loc>
