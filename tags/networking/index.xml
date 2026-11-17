@@ -6,7 +6,16 @@
     <description>Recent content in Networking on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Jul 2023 21:04:56 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jul 2025 21:44:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IoT·네트워크 엔지니어를 위한 React 기반 올인원 웹 유틸리티 &#39;DevTools&#39; 구축기: 클라이언트 사이드 파이프라인과 자율 에이전트 하네싱</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</link>
+      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</guid>
+      <description>React 18, Tailwind CSS, Web Crypto API 기반 무설치 올인원 개발자 웹 유틸리티 DevTools(https://aswinblue.github.io/DevTool) 구축 과정을 IoT·네트워크 패킷 분석, 클라이언트 파이프라인, AI 에이전트 하네싱 관점에서 분석합니다.</description>
+    </item>
+    
     <item>
       <title>리눅스 개발 환경 설정 및 네트워크 구성 가이드: .bashrc, Vim, Ctags부터 Netplan까지</title>
       <link>https://aswinblue.github.io/Blog/post/linux/linux-development-environment-setup-and-network/</link>

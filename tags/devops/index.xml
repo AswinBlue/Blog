@@ -6,7 +6,16 @@
     <description>Recent content in Devops on AswinBlue</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Jul 2025 22:20:09 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2026 20:00:00 +0900</lastBuildDate><atom:link href="https://aswinblue.github.io/Blog/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions 기반 무과금 멀티 프로젝트 Keep-Alive &amp; 헬스체크 시스템 구축기: Zero-Cost 클라우드 인프라 방어선</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/github-actions-central-keepalive-healthcheck-system/</link>
+      <pubDate>Tue, 17 Nov 2026 20:00:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/github-actions-central-keepalive-healthcheck-system/</guid>
+      <description>Supabase, Neon, Render 등 클라우드 무료 티어 데이터베이스의 7일 비활성 자동 슬립(Inactivity Pause)을 영구 방지하고, 멀티 프로젝트 헬스체크 결과를 GitHub Issues와 네이티브 이메일로 무과금 자동 수신하는 중앙 집중식 모니터링 시스템 구축 회고입니다.</description>
+    </item>
+    
     <item>
       <title>GitHub Actions를 활용한 React 앱 GitHub Pages 자동 빌드 및 배포 파이프라인</title>
       <link>https://aswinblue.github.io/Blog/post/git/github-actions-react-gh-pages-deploy-pipeline/</link>

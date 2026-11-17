@@ -16,5 +16,14 @@
       <description>React 18, Supabase Realtime, GitHub Pages 기반 무비용 실시간 큐잉 웹앱 JullSir(줄서)의 라이브 서비스(https://aswinblue.github.io/JullSir) 구축 과정을 AI Agent Harnessing, 요구조건 체계화, 자가 치유 관점에서 분석합니다.</description>
     </item>
     
+    <item>
+      <title>IoT·네트워크 엔지니어를 위한 React 기반 올인원 웹 유틸리티 &#39;DevTools&#39; 구축기: 클라이언트 사이드 파이프라인과 자율 에이전트 하네싱</title>
+      <link>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</link>
+      <pubDate>Sat, 19 Jul 2025 21:44:00 +0900</pubDate>
+      
+      <guid>https://aswinblue.github.io/Blog/post/projects/react-developer-utility-dev-tools/</guid>
+      <description>React 18, Tailwind CSS, Web Crypto API 기반 무설치 올인원 개발자 웹 유틸리티 DevTools(https://aswinblue.github.io/DevTool) 구축 과정을 IoT·네트워크 패킷 분석, 클라이언트 파이프라인, AI 에이전트 하네싱 관점에서 분석합니다.</description>
+    </item>
+    
   </channel>
 </rss>
